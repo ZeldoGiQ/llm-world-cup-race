@@ -1,95 +1,2189 @@
 {
-  "updatedAt": "2026-06-11T17:30:00Z",
+  "updatedAt": "2026-06-11T17:10:23.153Z",
   "matches": [
     {
-      "id": 700001,
+      "id": 537327,
       "stage": "GROUP_STAGE",
       "group": "A",
-      "utcDate": "2026-06-11T16:00:00Z",
-      "status": "FINISHED",
-      "home": { "id": 769, "name": "Mexico", "tla": "MEX" },
-      "away": { "id": 801, "name": "South Africa", "tla": "RSA" },
-      "score": { "home": 2, "away": 1 }
+      "utcDate": "2026-06-11T19:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 769,
+        "name": "Mexico",
+        "tla": "MEX"
+      },
+      "away": {
+        "id": 774,
+        "name": "South Africa",
+        "tla": "RSA"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
     },
     {
-      "id": 700002,
+      "id": 537328,
+      "stage": "GROUP_STAGE",
+      "group": "A",
+      "utcDate": "2026-06-12T02:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 772,
+        "name": "South Korea",
+        "tla": "KOR"
+      },
+      "away": {
+        "id": 798,
+        "name": "Czechia",
+        "tla": "CZE"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537333,
       "stage": "GROUP_STAGE",
       "group": "B",
-      "utcDate": "2026-06-11T20:00:00Z",
-      "status": "LIVE",
-      "home": { "id": 772, "name": "United States", "tla": "USA" },
-      "away": { "id": 794, "name": "Paraguay", "tla": "PAR" },
-      "score": { "home": 1, "away": 0 }
-    },
-    {
-      "id": 700003,
-      "stage": "GROUP_STAGE",
-      "group": "C",
-      "utcDate": "2026-06-12T16:00:00Z",
-      "status": "UPCOMING",
-      "home": { "id": 759, "name": "Germany", "tla": "GER" },
-      "away": { "id": 796, "name": "Ivory Coast", "tla": "CIV" },
-      "score": { "home": null, "away": null }
-    },
-    {
-      "id": 700004,
-      "stage": "GROUP_STAGE",
-      "group": "C",
       "utcDate": "2026-06-12T19:00:00Z",
       "status": "UPCOMING",
-      "home": { "id": 773, "name": "France", "tla": "FRA" },
-      "away": { "id": 805, "name": "Senegal", "tla": "SEN" },
-      "score": { "home": null, "away": null }
+      "home": {
+        "id": 828,
+        "name": "Canada",
+        "tla": "CAN"
+      },
+      "away": {
+        "id": 1060,
+        "name": "Bosnia-Herzegovina",
+        "tla": "BIH"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
     },
     {
-      "id": 700005,
+      "id": 537345,
       "stage": "GROUP_STAGE",
       "group": "D",
-      "utcDate": "2026-06-12T22:00:00Z",
+      "utcDate": "2026-06-13T01:00:00Z",
       "status": "UPCOMING",
-      "home": { "id": 764, "name": "Brazil", "tla": "BRA" },
-      "away": { "id": 815, "name": "Morocco", "tla": "MAR" },
-      "score": { "home": null, "away": null }
+      "home": {
+        "id": 771,
+        "name": "United States",
+        "tla": "USA"
+      },
+      "away": {
+        "id": 761,
+        "name": "Paraguay",
+        "tla": "PAR"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
     },
     {
-      "id": 700006,
+      "id": 537334,
       "stage": "GROUP_STAGE",
-      "group": "D",
-      "utcDate": "2026-06-13T16:00:00Z",
-      "status": "UPCOMING",
-      "home": { "id": 762, "name": "Argentina", "tla": "ARG" },
-      "away": { "id": 766, "name": "Japan", "tla": "JPN" },
-      "score": { "home": null, "away": null }
-    },
-    {
-      "id": 700007,
-      "stage": "GROUP_STAGE",
-      "group": "E",
+      "group": "B",
       "utcDate": "2026-06-13T19:00:00Z",
       "status": "UPCOMING",
-      "home": { "id": 760, "name": "Spain", "tla": "ESP" },
-      "away": { "id": 779, "name": "Australia", "tla": "AUS" },
-      "score": { "home": null, "away": null }
+      "home": {
+        "id": 8030,
+        "name": "Qatar",
+        "tla": "QAT"
+      },
+      "away": {
+        "id": 788,
+        "name": "Switzerland",
+        "tla": "SUI"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
     },
     {
-      "id": 700008,
+      "id": 537339,
       "stage": "GROUP_STAGE",
-      "group": "F",
+      "group": "C",
       "utcDate": "2026-06-13T22:00:00Z",
       "status": "UPCOMING",
-      "home": { "id": 765, "name": "Portugal", "tla": "POR" },
-      "away": { "id": 820, "name": "Saudi Arabia", "tla": "KSA" },
-      "score": { "home": null, "away": null }
+      "home": {
+        "id": 764,
+        "name": "Brazil",
+        "tla": "BRA"
+      },
+      "away": {
+        "id": 815,
+        "name": "Morocco",
+        "tla": "MAR"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
     },
     {
-      "id": 700009,
+      "id": 537340,
+      "stage": "GROUP_STAGE",
+      "group": "C",
+      "utcDate": "2026-06-14T01:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 836,
+        "name": "Haiti",
+        "tla": "HAI"
+      },
+      "away": {
+        "id": 8873,
+        "name": "Scotland",
+        "tla": "SCO"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537346,
+      "stage": "GROUP_STAGE",
+      "group": "D",
+      "utcDate": "2026-06-14T04:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 779,
+        "name": "Australia",
+        "tla": "AUS"
+      },
+      "away": {
+        "id": 803,
+        "name": "Turkey",
+        "tla": "TUR"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537351,
+      "stage": "GROUP_STAGE",
+      "group": "E",
+      "utcDate": "2026-06-14T17:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 759,
+        "name": "Germany",
+        "tla": "GER"
+      },
+      "away": {
+        "id": 9460,
+        "name": "Curaçao",
+        "tla": "CUW"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537357,
       "stage": "GROUP_STAGE",
       "group": "F",
-      "utcDate": "2026-06-14T16:00:00Z",
-      "status": "OTHER",
-      "home": { "id": 8601, "name": "Netherlands", "tla": "NED" },
-      "away": { "id": 786, "name": "Poland", "tla": "POL" },
-      "score": { "home": null, "away": null }
+      "utcDate": "2026-06-14T20:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 8601,
+        "name": "Netherlands",
+        "tla": "NED"
+      },
+      "away": {
+        "id": 766,
+        "name": "Japan",
+        "tla": "JPN"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537352,
+      "stage": "GROUP_STAGE",
+      "group": "E",
+      "utcDate": "2026-06-14T23:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 1935,
+        "name": "Ivory Coast",
+        "tla": "CIV"
+      },
+      "away": {
+        "id": 791,
+        "name": "Ecuador",
+        "tla": "ECU"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537358,
+      "stage": "GROUP_STAGE",
+      "group": "F",
+      "utcDate": "2026-06-15T02:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 792,
+        "name": "Sweden",
+        "tla": "SWE"
+      },
+      "away": {
+        "id": 802,
+        "name": "Tunisia",
+        "tla": "TUN"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537369,
+      "stage": "GROUP_STAGE",
+      "group": "H",
+      "utcDate": "2026-06-15T16:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 760,
+        "name": "Spain",
+        "tla": "ESP"
+      },
+      "away": {
+        "id": 1930,
+        "name": "Cape Verde Islands",
+        "tla": "CPV"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537363,
+      "stage": "GROUP_STAGE",
+      "group": "G",
+      "utcDate": "2026-06-15T19:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 805,
+        "name": "Belgium",
+        "tla": "BEL"
+      },
+      "away": {
+        "id": 825,
+        "name": "Egypt",
+        "tla": "EGY"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537370,
+      "stage": "GROUP_STAGE",
+      "group": "H",
+      "utcDate": "2026-06-15T22:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 801,
+        "name": "Saudi Arabia",
+        "tla": "KSA"
+      },
+      "away": {
+        "id": 758,
+        "name": "Uruguay",
+        "tla": "URY"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537364,
+      "stage": "GROUP_STAGE",
+      "group": "G",
+      "utcDate": "2026-06-16T01:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 840,
+        "name": "Iran",
+        "tla": "IRN"
+      },
+      "away": {
+        "id": 783,
+        "name": "New Zealand",
+        "tla": "NZL"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537391,
+      "stage": "GROUP_STAGE",
+      "group": "I",
+      "utcDate": "2026-06-16T19:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 773,
+        "name": "France",
+        "tla": "FRA"
+      },
+      "away": {
+        "id": 804,
+        "name": "Senegal",
+        "tla": "SEN"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537392,
+      "stage": "GROUP_STAGE",
+      "group": "I",
+      "utcDate": "2026-06-16T22:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 8062,
+        "name": "Iraq",
+        "tla": "IRQ"
+      },
+      "away": {
+        "id": 8872,
+        "name": "Norway",
+        "tla": "NOR"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537397,
+      "stage": "GROUP_STAGE",
+      "group": "J",
+      "utcDate": "2026-06-17T01:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 762,
+        "name": "Argentina",
+        "tla": "ARG"
+      },
+      "away": {
+        "id": 778,
+        "name": "Algeria",
+        "tla": "ALG"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537398,
+      "stage": "GROUP_STAGE",
+      "group": "J",
+      "utcDate": "2026-06-17T04:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 816,
+        "name": "Austria",
+        "tla": "AUT"
+      },
+      "away": {
+        "id": 8049,
+        "name": "Jordan",
+        "tla": "JOR"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537403,
+      "stage": "GROUP_STAGE",
+      "group": "K",
+      "utcDate": "2026-06-17T17:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 765,
+        "name": "Portugal",
+        "tla": "POR"
+      },
+      "away": {
+        "id": 1934,
+        "name": "Congo DR",
+        "tla": "COD"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537409,
+      "stage": "GROUP_STAGE",
+      "group": "L",
+      "utcDate": "2026-06-17T20:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 770,
+        "name": "England",
+        "tla": "ENG"
+      },
+      "away": {
+        "id": 799,
+        "name": "Croatia",
+        "tla": "CRO"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537410,
+      "stage": "GROUP_STAGE",
+      "group": "L",
+      "utcDate": "2026-06-17T23:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 763,
+        "name": "Ghana",
+        "tla": "GHA"
+      },
+      "away": {
+        "id": 1836,
+        "name": "Panama",
+        "tla": "PAN"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537404,
+      "stage": "GROUP_STAGE",
+      "group": "K",
+      "utcDate": "2026-06-18T02:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 8070,
+        "name": "Uzbekistan",
+        "tla": "UZB"
+      },
+      "away": {
+        "id": 818,
+        "name": "Colombia",
+        "tla": "COL"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537329,
+      "stage": "GROUP_STAGE",
+      "group": "A",
+      "utcDate": "2026-06-18T16:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 798,
+        "name": "Czechia",
+        "tla": "CZE"
+      },
+      "away": {
+        "id": 774,
+        "name": "South Africa",
+        "tla": "RSA"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537335,
+      "stage": "GROUP_STAGE",
+      "group": "B",
+      "utcDate": "2026-06-18T19:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 788,
+        "name": "Switzerland",
+        "tla": "SUI"
+      },
+      "away": {
+        "id": 1060,
+        "name": "Bosnia-Herzegovina",
+        "tla": "BIH"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537336,
+      "stage": "GROUP_STAGE",
+      "group": "B",
+      "utcDate": "2026-06-18T22:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 828,
+        "name": "Canada",
+        "tla": "CAN"
+      },
+      "away": {
+        "id": 8030,
+        "name": "Qatar",
+        "tla": "QAT"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537330,
+      "stage": "GROUP_STAGE",
+      "group": "A",
+      "utcDate": "2026-06-19T01:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 769,
+        "name": "Mexico",
+        "tla": "MEX"
+      },
+      "away": {
+        "id": 772,
+        "name": "South Korea",
+        "tla": "KOR"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537348,
+      "stage": "GROUP_STAGE",
+      "group": "D",
+      "utcDate": "2026-06-19T19:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 771,
+        "name": "United States",
+        "tla": "USA"
+      },
+      "away": {
+        "id": 779,
+        "name": "Australia",
+        "tla": "AUS"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537342,
+      "stage": "GROUP_STAGE",
+      "group": "C",
+      "utcDate": "2026-06-19T22:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 8873,
+        "name": "Scotland",
+        "tla": "SCO"
+      },
+      "away": {
+        "id": 815,
+        "name": "Morocco",
+        "tla": "MAR"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537341,
+      "stage": "GROUP_STAGE",
+      "group": "C",
+      "utcDate": "2026-06-20T00:30:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 764,
+        "name": "Brazil",
+        "tla": "BRA"
+      },
+      "away": {
+        "id": 836,
+        "name": "Haiti",
+        "tla": "HAI"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537347,
+      "stage": "GROUP_STAGE",
+      "group": "D",
+      "utcDate": "2026-06-20T03:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 803,
+        "name": "Turkey",
+        "tla": "TUR"
+      },
+      "away": {
+        "id": 761,
+        "name": "Paraguay",
+        "tla": "PAR"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537359,
+      "stage": "GROUP_STAGE",
+      "group": "F",
+      "utcDate": "2026-06-20T17:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 8601,
+        "name": "Netherlands",
+        "tla": "NED"
+      },
+      "away": {
+        "id": 792,
+        "name": "Sweden",
+        "tla": "SWE"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537353,
+      "stage": "GROUP_STAGE",
+      "group": "E",
+      "utcDate": "2026-06-20T20:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 759,
+        "name": "Germany",
+        "tla": "GER"
+      },
+      "away": {
+        "id": 1935,
+        "name": "Ivory Coast",
+        "tla": "CIV"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537354,
+      "stage": "GROUP_STAGE",
+      "group": "E",
+      "utcDate": "2026-06-21T00:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 791,
+        "name": "Ecuador",
+        "tla": "ECU"
+      },
+      "away": {
+        "id": 9460,
+        "name": "Curaçao",
+        "tla": "CUW"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537360,
+      "stage": "GROUP_STAGE",
+      "group": "F",
+      "utcDate": "2026-06-21T04:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 802,
+        "name": "Tunisia",
+        "tla": "TUN"
+      },
+      "away": {
+        "id": 766,
+        "name": "Japan",
+        "tla": "JPN"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537371,
+      "stage": "GROUP_STAGE",
+      "group": "H",
+      "utcDate": "2026-06-21T16:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 760,
+        "name": "Spain",
+        "tla": "ESP"
+      },
+      "away": {
+        "id": 801,
+        "name": "Saudi Arabia",
+        "tla": "KSA"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537365,
+      "stage": "GROUP_STAGE",
+      "group": "G",
+      "utcDate": "2026-06-21T19:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 805,
+        "name": "Belgium",
+        "tla": "BEL"
+      },
+      "away": {
+        "id": 840,
+        "name": "Iran",
+        "tla": "IRN"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537372,
+      "stage": "GROUP_STAGE",
+      "group": "H",
+      "utcDate": "2026-06-21T22:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 758,
+        "name": "Uruguay",
+        "tla": "URY"
+      },
+      "away": {
+        "id": 1930,
+        "name": "Cape Verde Islands",
+        "tla": "CPV"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537366,
+      "stage": "GROUP_STAGE",
+      "group": "G",
+      "utcDate": "2026-06-22T01:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 783,
+        "name": "New Zealand",
+        "tla": "NZL"
+      },
+      "away": {
+        "id": 825,
+        "name": "Egypt",
+        "tla": "EGY"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537399,
+      "stage": "GROUP_STAGE",
+      "group": "J",
+      "utcDate": "2026-06-22T17:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 762,
+        "name": "Argentina",
+        "tla": "ARG"
+      },
+      "away": {
+        "id": 816,
+        "name": "Austria",
+        "tla": "AUT"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537393,
+      "stage": "GROUP_STAGE",
+      "group": "I",
+      "utcDate": "2026-06-22T21:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 773,
+        "name": "France",
+        "tla": "FRA"
+      },
+      "away": {
+        "id": 8062,
+        "name": "Iraq",
+        "tla": "IRQ"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537394,
+      "stage": "GROUP_STAGE",
+      "group": "I",
+      "utcDate": "2026-06-23T00:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 8872,
+        "name": "Norway",
+        "tla": "NOR"
+      },
+      "away": {
+        "id": 804,
+        "name": "Senegal",
+        "tla": "SEN"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537400,
+      "stage": "GROUP_STAGE",
+      "group": "J",
+      "utcDate": "2026-06-23T03:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 8049,
+        "name": "Jordan",
+        "tla": "JOR"
+      },
+      "away": {
+        "id": 778,
+        "name": "Algeria",
+        "tla": "ALG"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537405,
+      "stage": "GROUP_STAGE",
+      "group": "K",
+      "utcDate": "2026-06-23T17:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 765,
+        "name": "Portugal",
+        "tla": "POR"
+      },
+      "away": {
+        "id": 8070,
+        "name": "Uzbekistan",
+        "tla": "UZB"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537411,
+      "stage": "GROUP_STAGE",
+      "group": "L",
+      "utcDate": "2026-06-23T20:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 770,
+        "name": "England",
+        "tla": "ENG"
+      },
+      "away": {
+        "id": 763,
+        "name": "Ghana",
+        "tla": "GHA"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537412,
+      "stage": "GROUP_STAGE",
+      "group": "L",
+      "utcDate": "2026-06-23T23:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 1836,
+        "name": "Panama",
+        "tla": "PAN"
+      },
+      "away": {
+        "id": 799,
+        "name": "Croatia",
+        "tla": "CRO"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537406,
+      "stage": "GROUP_STAGE",
+      "group": "K",
+      "utcDate": "2026-06-24T02:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 818,
+        "name": "Colombia",
+        "tla": "COL"
+      },
+      "away": {
+        "id": 1934,
+        "name": "Congo DR",
+        "tla": "COD"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537337,
+      "stage": "GROUP_STAGE",
+      "group": "B",
+      "utcDate": "2026-06-24T19:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 788,
+        "name": "Switzerland",
+        "tla": "SUI"
+      },
+      "away": {
+        "id": 828,
+        "name": "Canada",
+        "tla": "CAN"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537338,
+      "stage": "GROUP_STAGE",
+      "group": "B",
+      "utcDate": "2026-06-24T19:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 1060,
+        "name": "Bosnia-Herzegovina",
+        "tla": "BIH"
+      },
+      "away": {
+        "id": 8030,
+        "name": "Qatar",
+        "tla": "QAT"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537343,
+      "stage": "GROUP_STAGE",
+      "group": "C",
+      "utcDate": "2026-06-24T22:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 8873,
+        "name": "Scotland",
+        "tla": "SCO"
+      },
+      "away": {
+        "id": 764,
+        "name": "Brazil",
+        "tla": "BRA"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537344,
+      "stage": "GROUP_STAGE",
+      "group": "C",
+      "utcDate": "2026-06-24T22:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 815,
+        "name": "Morocco",
+        "tla": "MAR"
+      },
+      "away": {
+        "id": 836,
+        "name": "Haiti",
+        "tla": "HAI"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537331,
+      "stage": "GROUP_STAGE",
+      "group": "A",
+      "utcDate": "2026-06-25T01:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 798,
+        "name": "Czechia",
+        "tla": "CZE"
+      },
+      "away": {
+        "id": 769,
+        "name": "Mexico",
+        "tla": "MEX"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537332,
+      "stage": "GROUP_STAGE",
+      "group": "A",
+      "utcDate": "2026-06-25T01:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 774,
+        "name": "South Africa",
+        "tla": "RSA"
+      },
+      "away": {
+        "id": 772,
+        "name": "South Korea",
+        "tla": "KOR"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537355,
+      "stage": "GROUP_STAGE",
+      "group": "E",
+      "utcDate": "2026-06-25T20:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 791,
+        "name": "Ecuador",
+        "tla": "ECU"
+      },
+      "away": {
+        "id": 759,
+        "name": "Germany",
+        "tla": "GER"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537356,
+      "stage": "GROUP_STAGE",
+      "group": "E",
+      "utcDate": "2026-06-25T20:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 9460,
+        "name": "Curaçao",
+        "tla": "CUW"
+      },
+      "away": {
+        "id": 1935,
+        "name": "Ivory Coast",
+        "tla": "CIV"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537361,
+      "stage": "GROUP_STAGE",
+      "group": "F",
+      "utcDate": "2026-06-25T23:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 802,
+        "name": "Tunisia",
+        "tla": "TUN"
+      },
+      "away": {
+        "id": 8601,
+        "name": "Netherlands",
+        "tla": "NED"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537362,
+      "stage": "GROUP_STAGE",
+      "group": "F",
+      "utcDate": "2026-06-25T23:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 766,
+        "name": "Japan",
+        "tla": "JPN"
+      },
+      "away": {
+        "id": 792,
+        "name": "Sweden",
+        "tla": "SWE"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537349,
+      "stage": "GROUP_STAGE",
+      "group": "D",
+      "utcDate": "2026-06-26T02:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 803,
+        "name": "Turkey",
+        "tla": "TUR"
+      },
+      "away": {
+        "id": 771,
+        "name": "United States",
+        "tla": "USA"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537350,
+      "stage": "GROUP_STAGE",
+      "group": "D",
+      "utcDate": "2026-06-26T02:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 761,
+        "name": "Paraguay",
+        "tla": "PAR"
+      },
+      "away": {
+        "id": 779,
+        "name": "Australia",
+        "tla": "AUS"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537395,
+      "stage": "GROUP_STAGE",
+      "group": "I",
+      "utcDate": "2026-06-26T19:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 8872,
+        "name": "Norway",
+        "tla": "NOR"
+      },
+      "away": {
+        "id": 773,
+        "name": "France",
+        "tla": "FRA"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537396,
+      "stage": "GROUP_STAGE",
+      "group": "I",
+      "utcDate": "2026-06-26T19:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 804,
+        "name": "Senegal",
+        "tla": "SEN"
+      },
+      "away": {
+        "id": 8062,
+        "name": "Iraq",
+        "tla": "IRQ"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537373,
+      "stage": "GROUP_STAGE",
+      "group": "H",
+      "utcDate": "2026-06-27T00:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 758,
+        "name": "Uruguay",
+        "tla": "URY"
+      },
+      "away": {
+        "id": 760,
+        "name": "Spain",
+        "tla": "ESP"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537374,
+      "stage": "GROUP_STAGE",
+      "group": "H",
+      "utcDate": "2026-06-27T00:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 1930,
+        "name": "Cape Verde Islands",
+        "tla": "CPV"
+      },
+      "away": {
+        "id": 801,
+        "name": "Saudi Arabia",
+        "tla": "KSA"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537367,
+      "stage": "GROUP_STAGE",
+      "group": "G",
+      "utcDate": "2026-06-27T03:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 783,
+        "name": "New Zealand",
+        "tla": "NZL"
+      },
+      "away": {
+        "id": 805,
+        "name": "Belgium",
+        "tla": "BEL"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537368,
+      "stage": "GROUP_STAGE",
+      "group": "G",
+      "utcDate": "2026-06-27T03:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 825,
+        "name": "Egypt",
+        "tla": "EGY"
+      },
+      "away": {
+        "id": 840,
+        "name": "Iran",
+        "tla": "IRN"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537413,
+      "stage": "GROUP_STAGE",
+      "group": "L",
+      "utcDate": "2026-06-27T21:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 1836,
+        "name": "Panama",
+        "tla": "PAN"
+      },
+      "away": {
+        "id": 770,
+        "name": "England",
+        "tla": "ENG"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537414,
+      "stage": "GROUP_STAGE",
+      "group": "L",
+      "utcDate": "2026-06-27T21:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 799,
+        "name": "Croatia",
+        "tla": "CRO"
+      },
+      "away": {
+        "id": 763,
+        "name": "Ghana",
+        "tla": "GHA"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537407,
+      "stage": "GROUP_STAGE",
+      "group": "K",
+      "utcDate": "2026-06-27T23:30:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 818,
+        "name": "Colombia",
+        "tla": "COL"
+      },
+      "away": {
+        "id": 765,
+        "name": "Portugal",
+        "tla": "POR"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537408,
+      "stage": "GROUP_STAGE",
+      "group": "K",
+      "utcDate": "2026-06-27T23:30:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 1934,
+        "name": "Congo DR",
+        "tla": "COD"
+      },
+      "away": {
+        "id": 8070,
+        "name": "Uzbekistan",
+        "tla": "UZB"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537401,
+      "stage": "GROUP_STAGE",
+      "group": "J",
+      "utcDate": "2026-06-28T02:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 8049,
+        "name": "Jordan",
+        "tla": "JOR"
+      },
+      "away": {
+        "id": 762,
+        "name": "Argentina",
+        "tla": "ARG"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537402,
+      "stage": "GROUP_STAGE",
+      "group": "J",
+      "utcDate": "2026-06-28T02:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": 778,
+        "name": "Algeria",
+        "tla": "ALG"
+      },
+      "away": {
+        "id": 816,
+        "name": "Austria",
+        "tla": "AUT"
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537417,
+      "stage": "LAST_32",
+      "group": null,
+      "utcDate": "2026-06-28T19:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537423,
+      "stage": "LAST_32",
+      "group": null,
+      "utcDate": "2026-06-29T17:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537415,
+      "stage": "LAST_32",
+      "group": null,
+      "utcDate": "2026-06-29T20:30:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537418,
+      "stage": "LAST_32",
+      "group": null,
+      "utcDate": "2026-06-30T01:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537424,
+      "stage": "LAST_32",
+      "group": null,
+      "utcDate": "2026-06-30T17:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537416,
+      "stage": "LAST_32",
+      "group": null,
+      "utcDate": "2026-06-30T21:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537425,
+      "stage": "LAST_32",
+      "group": null,
+      "utcDate": "2026-07-01T01:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537426,
+      "stage": "LAST_32",
+      "group": null,
+      "utcDate": "2026-07-01T16:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537422,
+      "stage": "LAST_32",
+      "group": null,
+      "utcDate": "2026-07-01T20:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537421,
+      "stage": "LAST_32",
+      "group": null,
+      "utcDate": "2026-07-02T00:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537420,
+      "stage": "LAST_32",
+      "group": null,
+      "utcDate": "2026-07-02T19:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537419,
+      "stage": "LAST_32",
+      "group": null,
+      "utcDate": "2026-07-02T23:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537429,
+      "stage": "LAST_32",
+      "group": null,
+      "utcDate": "2026-07-03T03:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537428,
+      "stage": "LAST_32",
+      "group": null,
+      "utcDate": "2026-07-03T18:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537427,
+      "stage": "LAST_32",
+      "group": null,
+      "utcDate": "2026-07-03T22:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537430,
+      "stage": "LAST_32",
+      "group": null,
+      "utcDate": "2026-07-04T01:30:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537376,
+      "stage": "LAST_16",
+      "group": null,
+      "utcDate": "2026-07-04T17:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537375,
+      "stage": "LAST_16",
+      "group": null,
+      "utcDate": "2026-07-04T21:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537377,
+      "stage": "LAST_16",
+      "group": null,
+      "utcDate": "2026-07-05T20:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537378,
+      "stage": "LAST_16",
+      "group": null,
+      "utcDate": "2026-07-06T00:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537379,
+      "stage": "LAST_16",
+      "group": null,
+      "utcDate": "2026-07-06T19:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537380,
+      "stage": "LAST_16",
+      "group": null,
+      "utcDate": "2026-07-07T00:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537381,
+      "stage": "LAST_16",
+      "group": null,
+      "utcDate": "2026-07-07T16:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537382,
+      "stage": "LAST_16",
+      "group": null,
+      "utcDate": "2026-07-07T20:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537383,
+      "stage": "QUARTER_FINALS",
+      "group": null,
+      "utcDate": "2026-07-09T20:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537384,
+      "stage": "QUARTER_FINALS",
+      "group": null,
+      "utcDate": "2026-07-10T19:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537385,
+      "stage": "QUARTER_FINALS",
+      "group": null,
+      "utcDate": "2026-07-11T21:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537386,
+      "stage": "QUARTER_FINALS",
+      "group": null,
+      "utcDate": "2026-07-12T01:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537387,
+      "stage": "SEMI_FINALS",
+      "group": null,
+      "utcDate": "2026-07-14T19:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537388,
+      "stage": "SEMI_FINALS",
+      "group": null,
+      "utcDate": "2026-07-15T19:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537389,
+      "stage": "THIRD_PLACE",
+      "group": null,
+      "utcDate": "2026-07-18T21:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "id": 537390,
+      "stage": "FINAL",
+      "group": null,
+      "utcDate": "2026-07-19T19:00:00Z",
+      "status": "UPCOMING",
+      "home": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "away": {
+        "id": null,
+        "name": "TBD",
+        "tla": null
+      },
+      "score": {
+        "home": null,
+        "away": null
+      }
     }
   ]
 }
