@@ -48,3 +48,12 @@
 .tabular {
   font-variant-numeric: tabular-nums;
 }
+
+/*
+ * Browser ohne Flaggen-Emojis (v. a. Windows) zeigen statt Flaggen nur
+ * Buchstabenpaare – dann Flaggen ausblenden, der TLA steht ja daneben.
+ * Die Klasse setzt App.tsx nach Canvas-Detection (siehe lib/flagSupport.ts).
+ */
+.no-flag-emoji .emoji-flag {
+  display: none;
+}
