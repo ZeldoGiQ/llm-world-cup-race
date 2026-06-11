@@ -17,6 +17,63 @@ const models = modelsJson as Model[];
     </div>
 
     <header class="mx-auto max-w-6xl px-4 pb-10 pt-12 sm:pt-16">
+      {/* Creator-Leiste: Foto + YouTube-Kanal (Branding) */}
+      <div
+        class="mb-8 flex flex-wrap items-center gap-x-4 gap-y-3 rounded-2xl border border-ink-700/70 bg-ink-900/60 p-3 sm:p-4"
+      >
+        <a
+          href="https://www.youtube.com/@zeldogiq"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative h-16 w-16 shrink-0 overflow-hidden rounded-full ring-2 ring-clay-500/60 ring-offset-2 ring-offset-ink-950 transition hover:ring-clay-400 sm:h-[4.5rem] sm:w-[4.5rem]"
+          aria-label="ZELDOgiq auf YouTube"
+        >
+          <span
+            class="flex h-full w-full items-center justify-center bg-clay-500 font-display text-2xl font-bold text-ink-950"
+            >Z</span
+          >
+          <img
+            src="/zeldo.jpg"
+            alt="ZELDOgiq"
+            width="144"
+            height="144"
+            loading="eager"
+            class="absolute inset-0 h-full w-full object-cover [object-position:50%_22%] transition group-hover:scale-105"
+            onerror="this.remove()"
+          />
+        </a>
+
+        <div class="min-w-0 flex-1">
+          <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-ink-400">
+            Dein Host
+          </p>
+          <a
+            href="https://www.youtube.com/@zeldogiq"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-display text-xl font-semibold text-ink-50 transition hover:text-clay-300"
+            >ZELDOgiq</a
+          >
+          <p class="text-xs text-ink-400">
+            @zeldogiq<span class="hidden sm:inline"> · KI, Tech &amp; Experimente</span>
+          </p>
+        </div>
+
+        <a
+          href="https://www.youtube.com/@zeldogiq"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#FF0000] px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-red-900/30 transition hover:bg-[#e60000] active:scale-95"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4" aria-hidden="true">
+            <path
+              d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.5 15.5v-7l6.5 3.5-6.5 3.5Z"
+            ></path>
+          </svg>
+          Abonnieren
+        </a>
+      </div>
+
       <p class="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.25em] text-clay-400">
         Ein ZELDOgiq-Experiment
       </p>
@@ -24,9 +81,9 @@ const models = modelsJson as Model[];
         LLM WM-Tipprunde <span class="text-signal-400">2026</span>
       </h1>
       <p class="mt-4 max-w-2xl text-base text-ink-300 sm:text-lg">
-        Fünf KI-Modelle tippen jedes Spiel der Fußball-WM 2026 – alle Tipps sind vor Anpfiff
-        öffentlich, die Ergebnisse kommen automatisch, und hier siehst du live, wer den besten
-        Riecher hat.
+        {models.length} KI-Modelle tippen jedes Spiel der Fußball-WM 2026 – alle Tipps sind vor
+        Anpfiff öffentlich, die Ergebnisse kommen automatisch, und hier siehst du live, wer den
+        besten Riecher hat.
       </p>
       <ul class="mt-6 flex flex-wrap items-center gap-2" aria-label="Teilnehmende Modelle">
         {
@@ -51,7 +108,13 @@ const models = modelsJson as Model[];
     <footer class="border-t border-ink-800 py-8">
       <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 text-xs text-ink-400">
         <p>
-          Ein Projekt von <span class="font-semibold text-clay-400">ZELDOgiq</span> · Spieldaten:
+          Ein Projekt von
+          <a
+            class="font-semibold text-clay-400 underline decoration-ink-600 underline-offset-2 transition-colors hover:text-clay-300"
+            href="https://www.youtube.com/@zeldogiq"
+            rel="noopener noreferrer"
+            target="_blank">ZELDOgiq auf YouTube</a
+          > · Spieldaten:
           <a
             class="underline decoration-ink-600 underline-offset-2 transition-colors hover:text-signal-300"
             href="https://www.football-data.org/"
