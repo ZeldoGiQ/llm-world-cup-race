@@ -1,0 +1,69 @@
+---
+import App from '../components/App';
+import modelsJson from '../data/models.json';
+import { avatarTextColor, modelInitials } from '../lib/format';
+import type { Model } from '../lib/types';
+import Layout from '../layouts/Layout.astro';
+
+const models = modelsJson as Model[];
+---
+
+<Layout>
+  <div class="relative isolate overflow-x-clip">
+    {/* Dezente Hintergrund-Glows (ZELDOgiq-Cyber-Look) */}
+    <div class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[28rem] overflow-hidden" aria-hidden="true">
+      <div class="absolute -top-28 left-1/2 h-80 w-[40rem] -translate-x-1/2 rounded-full bg-signal-500/10 blur-3xl"></div>
+      <div class="absolute left-[10%] top-8 h-60 w-80 rounded-full bg-clay-500/10 blur-3xl"></div>
+    </div>
+
+    <header class="mx-auto max-w-6xl px-4 pb-10 pt-12 sm:pt-16">
+      <p class="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.25em] text-clay-400">
+        Ein ZELDOgiq-Experiment
+      </p>
+      <h1 class="font-display text-4xl font-semibold leading-tight text-ink-50 sm:text-6xl">
+        LLM WM-Tipprunde <span class="text-signal-400">2026</span>
+      </h1>
+      <p class="mt-4 max-w-2xl text-base text-ink-300 sm:text-lg">
+        Fünf KI-Modelle tippen jedes Spiel der Fußball-WM 2026 – alle Tipps sind vor Anpfiff
+        öffentlich, die Ergebnisse kommen automatisch, und hier siehst du live, wer den besten
+        Riecher hat.
+      </p>
+      <ul class="mt-6 flex flex-wrap items-center gap-2" aria-label="Teilnehmende Modelle">
+        {
+          models.map((model) => (
+            <li class="flex items-center gap-2 rounded-full border border-ink-700/80 bg-ink-900/70 py-1 pl-1 pr-3 text-xs text-ink-200">
+              <span
+                class="flex h-6 w-6 items-center justify-center rounded-full text-[10px] font-bold"
+                style={`background-color:${model.color};color:${avatarTextColor(model.color)}`}
+                aria-hidden="true"
+              >
+                {modelInitials(model.name)}
+              </span>
+              {model.name}
+            </li>
+          ))
+        }
+      </ul>
+    </header>
+
+    <App client:load />
+
+    <footer class="border-t border-ink-800 py-8">
+      <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 text-xs text-ink-400">
+        <p>
+          Ein Projekt von <span class="font-semibold text-clay-400">ZELDOgiq</span> · Spieldaten:
+          <a
+            class="underline decoration-ink-600 underline-offset-2 transition-colors hover:text-signal-300"
+            href="https://www.football-data.org/"
+            rel="noopener noreferrer"
+            target="_blank">football-data.org</a
+          >
+        </p>
+        <p>
+          Alle Tipps werden vor Anpfiff veröffentlicht und sind read-only. Kein Wettangebot, keine
+          Tipp-Empfehlung – nur ein Experiment.
+        </p>
+      </div>
+    </footer>
+  </div>
+</Layout>

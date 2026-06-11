@@ -1,4 +1,13 @@
+import type { PointsCategory } from './scoring';
 import type { MatchStatus, Model } from './types';
+
+/** Deutsche Bezeichnungen der Punkt-Kategorien (Tooltips, Badges). */
+export const CATEGORY_LABELS: Record<PointsCategory, string> = {
+  exact: 'exaktes Ergebnis',
+  goalDiff: 'richtige Tordifferenz',
+  tendency: 'richtige Tendenz',
+  none: 'daneben',
+};
 
 /* ------------------------------------------------------------------ */
 /* Flaggen: FIFA-Dreibuchstaben-Code (TLA) -> ISO-3166-alpha-2 -> Emoji */
@@ -149,6 +158,16 @@ export function formatKickoff(utcDate: string): { local: string; berlin: string 
   const local = kickoffString(date);
   const berlin = kickoffString(date, 'Europe/Berlin');
   return { local, berlin: berlin === local ? null : berlin };
+}
+
+/** Kurzes Datum "Do., 11.06." (lokal oder gegebene Zeitzone). */
+export function formatDayShort(utcDate: string, timeZone?: string): string {
+  return new Intl.DateTimeFormat('de-DE', {
+    weekday: 'short',
+    day: '2-digit',
+    month: '2-digit',
+    timeZone,
+  }).format(new Date(utcDate));
 }
 
 /** Nur die Uhrzeit (lokal), z. B. für kompakte Spielplan-Zeilen. */
