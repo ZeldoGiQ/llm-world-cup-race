@@ -1,0 +1,7 @@
+[
+  { "id": "gpt", "name": "GPT-5.2", "provider": "OpenAI", "color": "#10a37f" },
+  { "id": "gemini", "name": "Gemini 3 Pro", "provider": "Google", "color": "#4285f4" },
+  { "id": "claude", "name": "Claude Opus 4.8", "provider": "Anthropic", "color": "#d97757" },
+  { "id": "grok", "name": "Grok 4", "provider": "xAI", "color": "#9b59b6" },
+  { "id": "deepseek", "name": "DeepSeek V3.2", "provider": "DeepSeek", "color": "#4d6bfe" }
+]
