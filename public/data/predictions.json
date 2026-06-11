@@ -1,3 +1,2308 @@
 {
-  "predictions": {}
+  "predictions": {
+    "537327": {
+      "gpt": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537328": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537329": {
+      "gpt": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537330": {
+      "gpt": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537331": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537332": {
+      "gpt": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537333": {
+      "gpt": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537334": {
+      "gpt": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 0,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537335": {
+      "gpt": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537336": {
+      "gpt": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 3,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537337": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537338": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537339": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537340": {
+      "gpt": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537341": {
+      "gpt": {
+        "home": 4,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 5,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 4,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537342": {
+      "gpt": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537343": {
+      "gpt": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537344": {
+      "gpt": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537345": {
+      "gpt": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537346": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537347": {
+      "gpt": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537348": {
+      "gpt": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537349": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537350": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537351": {
+      "gpt": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 5,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 4,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 4,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 5,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 5,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537352": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537353": {
+      "gpt": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 3,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 3,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537354": {
+      "gpt": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 4,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 4,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537355": {
+      "gpt": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537356": {
+      "gpt": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537357": {
+      "gpt": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537358": {
+      "gpt": {
+        "home": 1,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537359": {
+      "gpt": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 3,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537360": {
+      "gpt": {
+        "home": 0,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 0,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537361": {
+      "gpt": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537362": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537363": {
+      "gpt": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537364": {
+      "gpt": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537365": {
+      "gpt": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537366": {
+      "gpt": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 0,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537367": {
+      "gpt": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 0,
+        "away": 4,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537368": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537369": {
+      "gpt": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 4,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537370": {
+      "gpt": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537371": {
+      "gpt": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537372": {
+      "gpt": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537373": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537374": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537391": {
+      "gpt": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537392": {
+      "gpt": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537393": {
+      "gpt": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 4,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 5,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537394": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537395": {
+      "gpt": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537396": {
+      "gpt": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537397": {
+      "gpt": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537398": {
+      "gpt": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537399": {
+      "gpt": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537400": {
+      "gpt": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 0,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537401": {
+      "gpt": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 0,
+        "away": 5,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537402": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537403": {
+      "gpt": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537404": {
+      "gpt": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537405": {
+      "gpt": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537406": {
+      "gpt": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 3,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537407": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537408": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537409": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537410": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537411": {
+      "gpt": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 3,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 3,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537412": {
+      "gpt": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 0,
+        "away": 2,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537413": {
+      "gpt": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 0,
+        "away": 4,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 0,
+        "away": 3,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537414": {
+      "gpt": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    }
+  }
 }
