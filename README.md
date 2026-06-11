@@ -45,10 +45,13 @@ Einmalige Voraussetzungen: GitHub-Account mit [GitHub CLI](https://cli.github.co
 
 ### 1. Repo anlegen & pushen
 
+Dieses Projekt liegt unter **<https://github.com/ZeldoGiQ/llm-world-cup-race>**.
+Für einen eigenen Fork/Neuaufbau:
+
 ```bash
 git init                                   # falls noch kein Repo
 git add -A && git commit -m "init: LLM WM-Tipprunde"
-gh repo create llm-wm-tipprunde --public --source=. --push
+gh repo create <repo-name> --public --source=. --push
 ```
 
 ### 2. API-Key als Secret hinterlegen
@@ -76,7 +79,7 @@ Danach committen & pushen – die Demo-Daten sind ersetzt.
 
 ### 4. Auf Vercel deployen – zwei Wege
 
-- **Dashboard:** vercel.com → „Add New… → Project" → Repo `llm-wm-tipprunde` importieren →
+- **Dashboard:** vercel.com → „Add New… → Project" → Repo `llm-world-cup-race` importieren →
   Deploy. Astro wird automatisch erkannt, keine weiteren Einstellungen nötig.
   Ab jetzt deployt **jeder Push automatisch** – auch die Auto-Commits der GitHub Action.
 - **CLI:** `npm i -g vercel && vercel link && vercel --prod`
