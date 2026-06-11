@@ -1,0 +1,50 @@
+@import 'tailwindcss';
+
+/*
+ * ZELDOgiq Design-Tokens – dunkle Cyber-Ästhetik.
+ * ink    = Graphite-Skala (dunkler Grund, Flächen, Text)
+ * clay   = warmer Akzent (LIVE, Highlights)
+ * signal = Signal-Cyan (Primär-Highlight, Punkte)
+ * success= Grün (korrekte Tipps)
+ */
+@theme {
+  --color-ink-950: #0a0c10;
+  --color-ink-900: #0f1217;
+  --color-ink-800: #161a21;
+  --color-ink-700: #1f242e;
+  --color-ink-600: #2a3140;
+  --color-ink-500: #3d4555;
+  --color-ink-400: #5b6577;
+  --color-ink-300: #8b94a7;
+  --color-ink-200: #aeb6c6;
+  --color-ink-100: #dde2ec;
+  --color-ink-50: #f2f4f9;
+
+  --color-clay-300: #eba283;
+  --color-clay-400: #e08a64;
+  --color-clay-500: #d97757;
+  --color-clay-600: #b85c3e;
+
+  --color-signal-300: #67e8f9;
+  --color-signal-400: #22d3ee;
+  --color-signal-500: #06b6d4;
+
+  --color-success-300: #6ee7b7;
+  --color-success-400: #34d399;
+  --color-success-500: #10b981;
+
+  --font-display: 'Fraunces Variable', Georgia, serif;
+  --font-sans: 'Inter Variable', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, 'Cascadia Mono', monospace;
+}
+
+/* Dezente Scrollbar auf dunklem Grund */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-ink-600) transparent;
+}
+
+/* Tabellenzahlen sauber ausrichten */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
