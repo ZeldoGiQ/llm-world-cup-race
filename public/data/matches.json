@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-12T20:38:39.125Z",
+  "updatedAt": "2026-06-12T22:12:31.799Z",
   "matches": [
     {
       "id": 537327,
@@ -48,7 +48,7 @@
       "stage": "GROUP_STAGE",
       "group": "B",
       "utcDate": "2026-06-12T19:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 828,
         "name": "Canada",
@@ -60,7 +60,7 @@
         "tla": "BIH"
       },
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 1
       }
     },
