@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-13T17:57:41.770Z",
+  "updatedAt": "2026-06-13T19:17:23.414Z",
   "matches": [
     {
       "id": 537327,
@@ -90,7 +90,7 @@
       "stage": "GROUP_STAGE",
       "group": "B",
       "utcDate": "2026-06-13T19:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 8030,
         "name": "Qatar",
@@ -102,8 +102,8 @@
         "tla": "SUI"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
