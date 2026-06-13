@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-13T02:03:27.604Z",
+  "updatedAt": "2026-06-13T06:24:45.751Z",
   "matches": [
     {
       "id": 537327,
@@ -69,7 +69,7 @@
       "stage": "GROUP_STAGE",
       "group": "D",
       "utcDate": "2026-06-13T01:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 771,
         "name": "United States",
@@ -81,8 +81,8 @@
         "tla": "PAR"
       },
       "score": {
-        "home": 3,
-        "away": 0
+        "home": 4,
+        "away": 1
       }
     },
     {
