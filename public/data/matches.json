@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-14T02:28:59.823Z",
+  "updatedAt": "2026-06-14T07:06:06.385Z",
   "matches": [
     {
       "id": 537327,
@@ -132,7 +132,7 @@
       "stage": "GROUP_STAGE",
       "group": "C",
       "utcDate": "2026-06-14T01:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 836,
         "name": "Haiti",
@@ -153,7 +153,7 @@
       "stage": "GROUP_STAGE",
       "group": "D",
       "utcDate": "2026-06-14T04:00:00Z",
-      "status": "UPCOMING",
+      "status": "FINISHED",
       "home": {
         "id": 779,
         "name": "Australia",
@@ -165,8 +165,8 @@
         "tla": "TUR"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 0
       }
     },
     {
