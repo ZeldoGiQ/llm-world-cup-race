@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-14T07:06:06.385Z",
+  "updatedAt": "2026-06-14T14:37:06.462Z",
   "matches": [
     {
       "id": 537327,
@@ -183,7 +183,7 @@
       "away": {
         "id": 9460,
         "name": "Curaçao",
-        "tla": "CUW"
+        "tla": "CUR"
       },
       "score": {
         "home": null,
@@ -729,7 +729,7 @@
       "away": {
         "id": 9460,
         "name": "Curaçao",
-        "tla": "CUW"
+        "tla": "CUR"
       },
       "score": {
         "home": null,
@@ -1165,7 +1165,7 @@
       "home": {
         "id": 9460,
         "name": "Curaçao",
-        "tla": "CUW"
+        "tla": "CUR"
       },
       "away": {
         "id": 1935,
