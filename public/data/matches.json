@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-14T16:09:21.773Z",
+  "updatedAt": "2026-06-14T17:42:41.027Z",
   "matches": [
     {
       "id": 537327,
@@ -174,7 +174,7 @@
       "stage": "GROUP_STAGE",
       "group": "E",
       "utcDate": "2026-06-14T17:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 759,
         "name": "Germany",
@@ -186,8 +186,8 @@
         "tla": "CUW"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       }
     },
     {
