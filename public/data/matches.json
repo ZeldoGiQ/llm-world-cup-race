@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-13T22:52:15.463Z",
+  "updatedAt": "2026-06-14T02:28:59.823Z",
   "matches": [
     {
       "id": 537327,
@@ -111,7 +111,7 @@
       "stage": "GROUP_STAGE",
       "group": "C",
       "utcDate": "2026-06-13T22:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 764,
         "name": "Brazil",
@@ -132,7 +132,7 @@
       "stage": "GROUP_STAGE",
       "group": "C",
       "utcDate": "2026-06-14T01:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 836,
         "name": "Haiti",
@@ -144,8 +144,8 @@
         "tla": "SCO"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       }
     },
     {
