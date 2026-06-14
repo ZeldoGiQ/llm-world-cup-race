@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-14T21:40:41.967Z",
+  "updatedAt": "2026-06-14T22:51:00.811Z",
   "matches": [
     {
       "id": 537327,
@@ -195,7 +195,7 @@
       "stage": "GROUP_STAGE",
       "group": "F",
       "utcDate": "2026-06-14T20:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 8601,
         "name": "Netherlands",
@@ -208,7 +208,7 @@
       },
       "score": {
         "home": 2,
-        "away": 1
+        "away": 2
       }
     },
     {
