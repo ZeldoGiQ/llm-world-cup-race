@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-15T19:54:32.195Z",
+  "updatedAt": "2026-06-15T22:08:58.428Z",
   "matches": [
     {
       "id": 537327,
@@ -279,7 +279,7 @@
       "stage": "GROUP_STAGE",
       "group": "G",
       "utcDate": "2026-06-15T19:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 805,
         "name": "Belgium",
@@ -291,7 +291,7 @@
         "tla": "EGY"
       },
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 1
       }
     },
@@ -300,7 +300,7 @@
       "stage": "GROUP_STAGE",
       "group": "H",
       "utcDate": "2026-06-15T22:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 801,
         "name": "Saudi Arabia",
@@ -312,8 +312,8 @@
         "tla": "URY"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
