@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-15T10:30:46.147Z",
+  "updatedAt": "2026-06-15T16:08:48.293Z",
   "matches": [
     {
       "id": 537327,
@@ -258,7 +258,7 @@
       "stage": "GROUP_STAGE",
       "group": "H",
       "utcDate": "2026-06-15T16:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 760,
         "name": "Spain",
@@ -270,8 +270,8 @@
         "tla": "CPV"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
