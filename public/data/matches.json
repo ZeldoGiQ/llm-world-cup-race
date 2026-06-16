@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-15T23:59:01.623Z",
+  "updatedAt": "2026-06-16T03:56:22.842Z",
   "matches": [
     {
       "id": 537327,
@@ -60,8 +60,8 @@
         "tla": "BIH"
       },
       "score": {
-        "home": 1,
-        "away": 1
+        "home": null,
+        "away": null
       }
     },
     {
@@ -300,7 +300,7 @@
       "stage": "GROUP_STAGE",
       "group": "H",
       "utcDate": "2026-06-15T22:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 801,
         "name": "Saudi Arabia",
@@ -321,7 +321,7 @@
       "stage": "GROUP_STAGE",
       "group": "G",
       "utcDate": "2026-06-16T01:00:00Z",
-      "status": "UPCOMING",
+      "status": "FINISHED",
       "home": {
         "id": 840,
         "name": "Iran",
@@ -333,8 +333,8 @@
         "tla": "NZL"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 2
       }
     },
     {
