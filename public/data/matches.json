@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-16T14:26:48.851Z",
+  "updatedAt": "2026-06-16T18:42:18.213Z",
   "matches": [
     {
       "id": 537327,
@@ -309,7 +309,7 @@
       "away": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URU"
+        "tla": "URY"
       },
       "score": {
         "home": 1,
@@ -808,7 +808,7 @@
       "home": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URU"
+        "tla": "URY"
       },
       "away": {
         "id": 1930,
@@ -1312,7 +1312,7 @@
       "home": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URU"
+        "tla": "URY"
       },
       "away": {
         "id": 760,
