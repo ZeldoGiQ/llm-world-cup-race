@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-16T18:42:18.213Z",
+  "updatedAt": "2026-06-16T21:35:37.271Z",
   "matches": [
     {
       "id": 537327,
@@ -342,7 +342,7 @@
       "stage": "GROUP_STAGE",
       "group": "I",
       "utcDate": "2026-06-16T19:00:00Z",
-      "status": "UPCOMING",
+      "status": "FINISHED",
       "home": {
         "id": 773,
         "name": "France",
@@ -354,8 +354,8 @@
         "tla": "SEN"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 1
       }
     },
     {
