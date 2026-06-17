@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-17T19:38:43.897Z",
+  "updatedAt": "2026-06-17T21:32:27.611Z",
   "matches": [
     {
       "id": 537327,
@@ -447,7 +447,7 @@
       "stage": "GROUP_STAGE",
       "group": "L",
       "utcDate": "2026-06-17T20:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 770,
         "name": "England",
@@ -459,8 +459,8 @@
         "tla": "CRO"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 2
       }
     },
     {
