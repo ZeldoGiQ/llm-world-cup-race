@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-17T06:50:58.849Z",
+  "updatedAt": "2026-06-17T17:33:54.106Z",
   "matches": [
     {
       "id": 537327,
@@ -426,7 +426,7 @@
       "stage": "GROUP_STAGE",
       "group": "K",
       "utcDate": "2026-06-17T17:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 765,
         "name": "Portugal",
@@ -438,8 +438,8 @@
         "tla": "COD"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       }
     },
     {
