@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-18T18:37:02.679Z",
+  "updatedAt": "2026-06-18T21:08:07.183Z",
   "matches": [
     {
       "id": 537327,
@@ -183,7 +183,7 @@
       "away": {
         "id": 9460,
         "name": "Curaçao",
-        "tla": "CUW"
+        "tla": "CUR"
       },
       "score": {
         "home": 7,
@@ -309,7 +309,7 @@
       "away": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URU"
+        "tla": "URY"
       },
       "score": {
         "home": 1,
@@ -531,7 +531,7 @@
       "stage": "GROUP_STAGE",
       "group": "B",
       "utcDate": "2026-06-18T19:00:00Z",
-      "status": "UPCOMING",
+      "status": "FINISHED",
       "home": {
         "id": 788,
         "name": "Switzerland",
@@ -543,8 +543,8 @@
         "tla": "BIH"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 4,
+        "away": 1
       }
     },
     {
@@ -729,7 +729,7 @@
       "away": {
         "id": 9460,
         "name": "Curaçao",
-        "tla": "CUW"
+        "tla": "CUR"
       },
       "score": {
         "home": null,
@@ -808,7 +808,7 @@
       "home": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URU"
+        "tla": "URY"
       },
       "away": {
         "id": 1930,
@@ -1165,7 +1165,7 @@
       "home": {
         "id": 9460,
         "name": "Curaçao",
-        "tla": "CUW"
+        "tla": "CUR"
       },
       "away": {
         "id": 1935,
@@ -1312,7 +1312,7 @@
       "home": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URU"
+        "tla": "URY"
       },
       "away": {
         "id": 760,
