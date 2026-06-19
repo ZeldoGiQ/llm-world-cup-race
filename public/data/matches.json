@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19T21:35:30.808Z",
+  "updatedAt": "2026-06-19T22:32:31.036Z",
   "matches": [
     {
       "id": 537327,
@@ -615,7 +615,7 @@
       "stage": "GROUP_STAGE",
       "group": "C",
       "utcDate": "2026-06-19T22:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 8873,
         "name": "Scotland",
@@ -627,8 +627,8 @@
         "tla": "MAR"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       }
     },
     {
