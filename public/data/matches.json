@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19T18:22:45.307Z",
+  "updatedAt": "2026-06-19T20:10:19.847Z",
   "matches": [
     {
       "id": 537327,
@@ -309,7 +309,7 @@
       "away": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URY"
+        "tla": "URU"
       },
       "score": {
         "home": 1,
@@ -594,7 +594,7 @@
       "stage": "GROUP_STAGE",
       "group": "D",
       "utcDate": "2026-06-19T19:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 771,
         "name": "United States",
@@ -606,8 +606,8 @@
         "tla": "AUS"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 0
       }
     },
     {
@@ -808,7 +808,7 @@
       "home": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URY"
+        "tla": "URU"
       },
       "away": {
         "id": 1930,
@@ -1312,7 +1312,7 @@
       "home": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URY"
+        "tla": "URU"
       },
       "away": {
         "id": 760,
