@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-18T23:01:25.929Z",
+  "updatedAt": "2026-06-19T01:49:22.370Z",
   "matches": [
     {
       "id": 537327,
@@ -552,7 +552,7 @@
       "stage": "GROUP_STAGE",
       "group": "B",
       "utcDate": "2026-06-18T22:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 828,
         "name": "Canada",
@@ -564,7 +564,7 @@
         "tla": "QAT"
       },
       "score": {
-        "home": 3,
+        "home": 6,
         "away": 0
       }
     },
@@ -573,7 +573,7 @@
       "stage": "GROUP_STAGE",
       "group": "A",
       "utcDate": "2026-06-19T01:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 769,
         "name": "Mexico",
@@ -585,8 +585,8 @@
         "tla": "KOR"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
