@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19T01:49:22.370Z",
+  "updatedAt": "2026-06-19T06:51:38.785Z",
   "matches": [
     {
       "id": 537327,
@@ -183,7 +183,7 @@
       "away": {
         "id": 9460,
         "name": "Curaçao",
-        "tla": "CUW"
+        "tla": "CUR"
       },
       "score": {
         "home": 7,
@@ -573,7 +573,7 @@
       "stage": "GROUP_STAGE",
       "group": "A",
       "utcDate": "2026-06-19T01:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 769,
         "name": "Mexico",
@@ -585,7 +585,7 @@
         "tla": "KOR"
       },
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       }
     },
@@ -729,7 +729,7 @@
       "away": {
         "id": 9460,
         "name": "Curaçao",
-        "tla": "CUW"
+        "tla": "CUR"
       },
       "score": {
         "home": null,
@@ -1165,7 +1165,7 @@
       "home": {
         "id": 9460,
         "name": "Curaçao",
-        "tla": "CUW"
+        "tla": "CUR"
       },
       "away": {
         "id": 1935,
