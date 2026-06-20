@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19T23:42:43.864Z",
+  "updatedAt": "2026-06-20T01:52:16.974Z",
   "matches": [
     {
       "id": 537327,
@@ -615,7 +615,7 @@
       "stage": "GROUP_STAGE",
       "group": "C",
       "utcDate": "2026-06-19T22:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 8873,
         "name": "Scotland",
@@ -636,7 +636,7 @@
       "stage": "GROUP_STAGE",
       "group": "C",
       "utcDate": "2026-06-20T00:30:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 764,
         "name": "Brazil",
@@ -648,8 +648,8 @@
         "tla": "HAI"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 0
       }
     },
     {
