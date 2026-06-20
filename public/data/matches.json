@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-20T01:52:16.974Z",
+  "updatedAt": "2026-06-20T06:08:14.255Z",
   "matches": [
     {
       "id": 537327,
@@ -636,7 +636,7 @@
       "stage": "GROUP_STAGE",
       "group": "C",
       "utcDate": "2026-06-20T00:30:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 764,
         "name": "Brazil",
@@ -657,7 +657,7 @@
       "stage": "GROUP_STAGE",
       "group": "D",
       "utcDate": "2026-06-20T03:00:00Z",
-      "status": "UPCOMING",
+      "status": "FINISHED",
       "home": {
         "id": 803,
         "name": "Turkey",
@@ -669,8 +669,8 @@
         "tla": "PAR"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       }
     },
     {
