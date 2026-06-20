@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-20T11:31:46.345Z",
+  "updatedAt": "2026-06-20T13:08:34.307Z",
   "matches": [
     {
       "id": 537327,
@@ -183,7 +183,7 @@
       "away": {
         "id": 9460,
         "name": "Curaçao",
-        "tla": "CUR"
+        "tla": "CUW"
       },
       "score": {
         "home": 7,
@@ -309,7 +309,7 @@
       "away": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URY"
+        "tla": "URU"
       },
       "score": {
         "home": 1,
@@ -729,7 +729,7 @@
       "away": {
         "id": 9460,
         "name": "Curaçao",
-        "tla": "CUR"
+        "tla": "CUW"
       },
       "score": {
         "home": null,
@@ -808,7 +808,7 @@
       "home": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URY"
+        "tla": "URU"
       },
       "away": {
         "id": 1930,
@@ -1165,7 +1165,7 @@
       "home": {
         "id": 9460,
         "name": "Curaçao",
-        "tla": "CUR"
+        "tla": "CUW"
       },
       "away": {
         "id": 1935,
@@ -1312,7 +1312,7 @@
       "home": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URY"
+        "tla": "URU"
       },
       "away": {
         "id": 760,
