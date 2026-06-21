@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T02:01:59.340Z",
+  "updatedAt": "2026-06-21T07:00:36.577Z",
   "matches": [
     {
       "id": 537327,
@@ -60,8 +60,8 @@
         "tla": "BIH"
       },
       "score": {
-        "home": 1,
-        "away": 1
+        "home": null,
+        "away": null
       }
     },
     {
@@ -741,7 +741,7 @@
       "stage": "GROUP_STAGE",
       "group": "F",
       "utcDate": "2026-06-21T04:00:00Z",
-      "status": "UPCOMING",
+      "status": "FINISHED",
       "home": {
         "id": 802,
         "name": "Tunisia",
@@ -753,8 +753,8 @@
         "tla": "JPN"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 4
       }
     },
     {
