@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T07:00:36.577Z",
+  "updatedAt": "2026-06-21T10:39:10.795Z",
   "matches": [
     {
       "id": 537327,
@@ -60,8 +60,8 @@
         "tla": "BIH"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       }
     },
     {
