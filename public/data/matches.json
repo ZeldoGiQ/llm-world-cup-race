@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T20:47:07.471Z",
+  "updatedAt": "2026-06-21T22:02:41.480Z",
   "matches": [
     {
       "id": 537327,
@@ -783,7 +783,7 @@
       "stage": "GROUP_STAGE",
       "group": "G",
       "utcDate": "2026-06-21T19:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 805,
         "name": "Belgium",
@@ -804,7 +804,7 @@
       "stage": "GROUP_STAGE",
       "group": "H",
       "utcDate": "2026-06-21T22:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 758,
         "name": "Uruguay",
@@ -816,8 +816,8 @@
         "tla": "CPV"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
