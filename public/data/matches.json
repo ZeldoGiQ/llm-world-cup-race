@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T17:55:57.162Z",
+  "updatedAt": "2026-06-21T19:14:06.792Z",
   "matches": [
     {
       "id": 537327,
@@ -762,7 +762,7 @@
       "stage": "GROUP_STAGE",
       "group": "H",
       "utcDate": "2026-06-21T16:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 760,
         "name": "Spain",
@@ -774,7 +774,7 @@
         "tla": "KSA"
       },
       "score": {
-        "home": 4,
+        "home": 5,
         "away": 0
       }
     },
@@ -783,7 +783,7 @@
       "stage": "GROUP_STAGE",
       "group": "G",
       "utcDate": "2026-06-21T19:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 805,
         "name": "Belgium",
@@ -795,8 +795,8 @@
         "tla": "IRN"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
