@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-20T23:37:32.778Z",
+  "updatedAt": "2026-06-21T02:01:59.340Z",
   "matches": [
     {
       "id": 537327,
@@ -309,7 +309,7 @@
       "away": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URU"
+        "tla": "URY"
       },
       "score": {
         "home": 1,
@@ -720,7 +720,7 @@
       "stage": "GROUP_STAGE",
       "group": "E",
       "utcDate": "2026-06-21T00:00:00Z",
-      "status": "UPCOMING",
+      "status": "FINISHED",
       "home": {
         "id": 791,
         "name": "Ecuador",
@@ -732,8 +732,8 @@
         "tla": "CUW"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
@@ -808,7 +808,7 @@
       "home": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URU"
+        "tla": "URY"
       },
       "away": {
         "id": 1930,
@@ -1312,7 +1312,7 @@
       "home": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URU"
+        "tla": "URY"
       },
       "away": {
         "id": 760,
