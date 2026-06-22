@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-22T02:05:48.365Z",
+  "updatedAt": "2026-06-22T07:35:49.328Z",
   "matches": [
     {
       "id": 537327,
@@ -825,7 +825,7 @@
       "stage": "GROUP_STAGE",
       "group": "G",
       "utcDate": "2026-06-22T01:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 783,
         "name": "New Zealand",
@@ -838,7 +838,7 @@
       },
       "score": {
         "home": 1,
-        "away": 0
+        "away": 3
       }
     },
     {
