@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-22T07:35:49.328Z",
+  "updatedAt": "2026-06-22T17:51:09.456Z",
   "matches": [
     {
       "id": 537327,
@@ -846,7 +846,7 @@
       "stage": "GROUP_STAGE",
       "group": "J",
       "utcDate": "2026-06-22T17:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 762,
         "name": "Argentina",
@@ -858,8 +858,8 @@
         "tla": "AUT"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       }
     },
     {
