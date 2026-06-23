@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T05:53:10.306Z",
+  "updatedAt": "2026-06-23T11:50:36.240Z",
   "matches": [
     {
       "id": 537327,
@@ -1562,9 +1562,9 @@
       "utcDate": "2026-06-29T20:30:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 759,
+        "name": "Germany",
+        "tla": "GER"
       },
       "away": {
         "id": null,
@@ -1646,9 +1646,9 @@
       "utcDate": "2026-07-01T01:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 769,
+        "name": "Mexico",
+        "tla": "MEX"
       },
       "away": {
         "id": null,
@@ -1709,9 +1709,9 @@
       "utcDate": "2026-07-02T00:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 771,
+        "name": "United States",
+        "tla": "USA"
       },
       "away": {
         "id": null,
