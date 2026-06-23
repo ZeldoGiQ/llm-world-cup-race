@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T14:16:04.314Z",
+  "updatedAt": "2026-06-23T18:31:51.591Z",
   "matches": [
     {
       "id": 537327,
@@ -309,7 +309,7 @@
       "away": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URU"
+        "tla": "URY"
       },
       "score": {
         "home": 1,
@@ -808,7 +808,7 @@
       "home": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URU"
+        "tla": "URY"
       },
       "away": {
         "id": 1930,
@@ -930,7 +930,7 @@
       "stage": "GROUP_STAGE",
       "group": "K",
       "utcDate": "2026-06-23T17:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 765,
         "name": "Portugal",
@@ -942,8 +942,8 @@
         "tla": "UZB"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 4,
+        "away": 0
       }
     },
     {
@@ -1312,7 +1312,7 @@
       "home": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URU"
+        "tla": "URY"
       },
       "away": {
         "id": 760,
