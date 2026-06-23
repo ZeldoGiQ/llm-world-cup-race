@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-23T22:01:28.527Z",
+  "updatedAt": "2026-06-23T23:16:44.883Z",
   "matches": [
     {
       "id": 537327,
@@ -951,7 +951,7 @@
       "stage": "GROUP_STAGE",
       "group": "L",
       "utcDate": "2026-06-23T20:00:00Z",
-      "status": "OTHER",
+      "status": "FINISHED",
       "home": {
         "id": 770,
         "name": "England",
@@ -972,7 +972,7 @@
       "stage": "GROUP_STAGE",
       "group": "L",
       "utcDate": "2026-06-23T23:00:00Z",
-      "status": "UPCOMING",
+      "status": "OTHER",
       "home": {
         "id": 1836,
         "name": "Panama",
@@ -984,8 +984,8 @@
         "tla": "CRO"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
