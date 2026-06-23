@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-22T22:21:25.881Z",
+  "updatedAt": "2026-06-23T01:48:33.456Z",
   "matches": [
     {
       "id": 537327,
@@ -309,7 +309,7 @@
       "away": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URU"
+        "tla": "URY"
       },
       "score": {
         "home": 1,
@@ -808,7 +808,7 @@
       "home": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URU"
+        "tla": "URY"
       },
       "away": {
         "id": 1930,
@@ -867,7 +867,7 @@
       "stage": "GROUP_STAGE",
       "group": "I",
       "utcDate": "2026-06-22T21:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 773,
         "name": "France",
@@ -879,7 +879,7 @@
         "tla": "IRQ"
       },
       "score": {
-        "home": 1,
+        "home": 3,
         "away": 0
       }
     },
@@ -888,7 +888,7 @@
       "stage": "GROUP_STAGE",
       "group": "I",
       "utcDate": "2026-06-23T00:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 8872,
         "name": "Norway",
@@ -900,8 +900,8 @@
         "tla": "SEN"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 1
       }
     },
     {
@@ -1312,7 +1312,7 @@
       "home": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URU"
+        "tla": "URY"
       },
       "away": {
         "id": 760,
