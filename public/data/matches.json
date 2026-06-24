@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-24T13:28:23.787Z",
+  "updatedAt": "2026-06-24T19:14:59.023Z",
   "matches": [
     {
       "id": 537327,
@@ -1014,7 +1014,7 @@
       "stage": "GROUP_STAGE",
       "group": "B",
       "utcDate": "2026-06-24T19:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 788,
         "name": "Switzerland",
@@ -1026,8 +1026,8 @@
         "tla": "CAN"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
@@ -1035,7 +1035,7 @@
       "stage": "GROUP_STAGE",
       "group": "B",
       "utcDate": "2026-06-24T19:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 1060,
         "name": "Bosnia-Herzegovina",
@@ -1047,8 +1047,8 @@
         "tla": "QAT"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
