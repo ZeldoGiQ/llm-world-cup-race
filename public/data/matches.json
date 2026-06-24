@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-24T20:56:24.773Z",
+  "updatedAt": "2026-06-24T22:08:08.569Z",
   "matches": [
     {
       "id": 537327,
@@ -309,7 +309,7 @@
       "away": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URY"
+        "tla": "URU"
       },
       "score": {
         "home": 1,
@@ -808,7 +808,7 @@
       "home": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URY"
+        "tla": "URU"
       },
       "away": {
         "id": 1930,
@@ -1014,7 +1014,7 @@
       "stage": "GROUP_STAGE",
       "group": "B",
       "utcDate": "2026-06-24T19:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 788,
         "name": "Switzerland",
@@ -1035,7 +1035,7 @@
       "stage": "GROUP_STAGE",
       "group": "B",
       "utcDate": "2026-06-24T19:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 1060,
         "name": "Bosnia-Herzegovina",
@@ -1056,7 +1056,7 @@
       "stage": "GROUP_STAGE",
       "group": "C",
       "utcDate": "2026-06-24T22:00:00Z",
-      "status": "UPCOMING",
+      "status": "OTHER",
       "home": {
         "id": 8873,
         "name": "Scotland",
@@ -1068,8 +1068,8 @@
         "tla": "BRA"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
@@ -1077,7 +1077,7 @@
       "stage": "GROUP_STAGE",
       "group": "C",
       "utcDate": "2026-06-24T22:00:00Z",
-      "status": "UPCOMING",
+      "status": "OTHER",
       "home": {
         "id": 815,
         "name": "Morocco",
@@ -1089,8 +1089,8 @@
         "tla": "HAI"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
@@ -1312,7 +1312,7 @@
       "home": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URY"
+        "tla": "URU"
       },
       "away": {
         "id": 760,
