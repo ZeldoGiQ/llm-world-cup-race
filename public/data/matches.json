@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T01:28:52.804Z",
+  "updatedAt": "2026-06-25T05:39:21.920Z",
   "matches": [
     {
       "id": 537327,
@@ -1098,7 +1098,7 @@
       "stage": "GROUP_STAGE",
       "group": "A",
       "utcDate": "2026-06-25T01:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 798,
         "name": "Czechia",
@@ -1111,7 +1111,7 @@
       },
       "score": {
         "home": 0,
-        "away": 0
+        "away": 3
       }
     },
     {
@@ -1119,7 +1119,7 @@
       "stage": "GROUP_STAGE",
       "group": "A",
       "utcDate": "2026-06-25T01:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 774,
         "name": "South Africa",
@@ -1131,7 +1131,7 @@
         "tla": "KOR"
       },
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       }
     },
@@ -1562,9 +1562,9 @@
       "utcDate": "2026-06-29T20:30:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": 759,
-        "name": "Germany",
-        "tla": "GER"
+        "id": null,
+        "name": "TBD",
+        "tla": null
       },
       "away": {
         "id": null,
@@ -1646,9 +1646,9 @@
       "utcDate": "2026-07-01T01:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": 769,
-        "name": "Mexico",
-        "tla": "MEX"
+        "id": null,
+        "name": "TBD",
+        "tla": null
       },
       "away": {
         "id": null,
@@ -1709,9 +1709,9 @@
       "utcDate": "2026-07-02T00:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": 771,
-        "name": "United States",
-        "tla": "USA"
+        "id": null,
+        "name": "TBD",
+        "tla": null
       },
       "away": {
         "id": null,
@@ -1814,9 +1814,9 @@
       "utcDate": "2026-07-03T22:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": 762,
-        "name": "Argentina",
-        "tla": "ARG"
+        "id": null,
+        "name": "TBD",
+        "tla": null
       },
       "away": {
         "id": null,
