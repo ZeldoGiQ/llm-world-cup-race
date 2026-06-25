@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-24T23:19:12.167Z",
+  "updatedAt": "2026-06-25T01:28:52.804Z",
   "matches": [
     {
       "id": 537327,
@@ -309,7 +309,7 @@
       "away": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URY"
+        "tla": "URU"
       },
       "score": {
         "home": 1,
@@ -808,7 +808,7 @@
       "home": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URY"
+        "tla": "URU"
       },
       "away": {
         "id": 1930,
@@ -1056,7 +1056,7 @@
       "stage": "GROUP_STAGE",
       "group": "C",
       "utcDate": "2026-06-24T22:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 8873,
         "name": "Scotland",
@@ -1069,7 +1069,7 @@
       },
       "score": {
         "home": 0,
-        "away": 2
+        "away": 3
       }
     },
     {
@@ -1077,7 +1077,7 @@
       "stage": "GROUP_STAGE",
       "group": "C",
       "utcDate": "2026-06-24T22:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 815,
         "name": "Morocco",
@@ -1089,7 +1089,7 @@
         "tla": "HAI"
       },
       "score": {
-        "home": 2,
+        "home": 4,
         "away": 2
       }
     },
@@ -1098,7 +1098,7 @@
       "stage": "GROUP_STAGE",
       "group": "A",
       "utcDate": "2026-06-25T01:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 798,
         "name": "Czechia",
@@ -1110,8 +1110,8 @@
         "tla": "MEX"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
@@ -1119,7 +1119,7 @@
       "stage": "GROUP_STAGE",
       "group": "A",
       "utcDate": "2026-06-25T01:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 774,
         "name": "South Africa",
@@ -1131,8 +1131,8 @@
         "tla": "KOR"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
@@ -1312,7 +1312,7 @@
       "home": {
         "id": 758,
         "name": "Uruguay",
-        "tla": "URY"
+        "tla": "URU"
       },
       "away": {
         "id": 760,
@@ -1562,9 +1562,9 @@
       "utcDate": "2026-06-29T20:30:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 759,
+        "name": "Germany",
+        "tla": "GER"
       },
       "away": {
         "id": null,
@@ -1646,9 +1646,9 @@
       "utcDate": "2026-07-01T01:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 769,
+        "name": "Mexico",
+        "tla": "MEX"
       },
       "away": {
         "id": null,
@@ -1709,9 +1709,9 @@
       "utcDate": "2026-07-02T00:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 771,
+        "name": "United States",
+        "tla": "USA"
       },
       "away": {
         "id": null,
@@ -1814,9 +1814,9 @@
       "utcDate": "2026-07-03T22:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 762,
+        "name": "Argentina",
+        "tla": "ARG"
       },
       "away": {
         "id": null,
