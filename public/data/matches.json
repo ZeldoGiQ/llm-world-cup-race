@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26T11:32:40.303Z",
+  "updatedAt": "2026-06-26T19:16:54.306Z",
   "matches": [
     {
       "id": 537327,
@@ -1266,7 +1266,7 @@
       "stage": "GROUP_STAGE",
       "group": "I",
       "utcDate": "2026-06-26T19:00:00Z",
-      "status": "UPCOMING",
+      "status": "OTHER",
       "home": {
         "id": 8872,
         "name": "Norway",
@@ -1278,8 +1278,8 @@
         "tla": "FRA"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       }
     },
     {
@@ -1287,7 +1287,7 @@
       "stage": "GROUP_STAGE",
       "group": "I",
       "utcDate": "2026-06-26T19:00:00Z",
-      "status": "UPCOMING",
+      "status": "OTHER",
       "home": {
         "id": 804,
         "name": "Senegal",
@@ -1299,8 +1299,8 @@
         "tla": "IRQ"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       }
     },
     {
