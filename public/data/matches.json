@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26T20:56:09.053Z",
+  "updatedAt": "2026-06-26T22:02:38.597Z",
   "matches": [
     {
       "id": 537327,
@@ -1266,7 +1266,7 @@
       "stage": "GROUP_STAGE",
       "group": "I",
       "utcDate": "2026-06-26T19:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 8872,
         "name": "Norway",
@@ -1279,7 +1279,7 @@
       },
       "score": {
         "home": 1,
-        "away": 3
+        "away": 4
       }
     },
     {
@@ -1287,7 +1287,7 @@
       "stage": "GROUP_STAGE",
       "group": "I",
       "utcDate": "2026-06-26T19:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 804,
         "name": "Senegal",
