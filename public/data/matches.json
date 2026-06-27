@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T22:16:22.087Z",
+  "updatedAt": "2026-06-27T23:17:55.577Z",
   "matches": [
     {
       "id": 537327,
@@ -1392,7 +1392,7 @@
       "stage": "GROUP_STAGE",
       "group": "L",
       "utcDate": "2026-06-27T21:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 1836,
         "name": "Panama",
@@ -1405,7 +1405,7 @@
       },
       "score": {
         "home": 0,
-        "away": 0
+        "away": 2
       }
     },
     {
@@ -1413,7 +1413,7 @@
       "stage": "GROUP_STAGE",
       "group": "L",
       "utcDate": "2026-06-27T21:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 799,
         "name": "Croatia",
@@ -1425,8 +1425,8 @@
         "tla": "GHA"
       },
       "score": {
-        "home": 1,
-        "away": 0
+        "home": 2,
+        "away": 1
       }
     },
     {
