@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26T22:02:38.597Z",
+  "updatedAt": "2026-06-27T01:24:27.650Z",
   "matches": [
     {
       "id": 537327,
@@ -1308,7 +1308,7 @@
       "stage": "GROUP_STAGE",
       "group": "H",
       "utcDate": "2026-06-27T00:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 758,
         "name": "Uruguay",
@@ -1320,8 +1320,8 @@
         "tla": "ESP"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       }
     },
     {
@@ -1329,7 +1329,7 @@
       "stage": "GROUP_STAGE",
       "group": "H",
       "utcDate": "2026-06-27T00:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 1930,
         "name": "Cape Verde Islands",
@@ -1341,8 +1341,8 @@
         "tla": "KSA"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
@@ -1520,14 +1520,14 @@
       "utcDate": "2026-06-28T19:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": 774,
-        "name": "South Africa",
-        "tla": "RSA"
+        "id": null,
+        "name": "TBD",
+        "tla": null
       },
       "away": {
-        "id": 828,
-        "name": "Canada",
-        "tla": "CAN"
+        "id": null,
+        "name": "TBD",
+        "tla": null
       },
       "score": {
         "home": null,
@@ -1541,14 +1541,14 @@
       "utcDate": "2026-06-29T17:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": 764,
-        "name": "Brazil",
-        "tla": "BRA"
+        "id": null,
+        "name": "TBD",
+        "tla": null
       },
       "away": {
-        "id": 766,
-        "name": "Japan",
-        "tla": "JPN"
+        "id": null,
+        "name": "TBD",
+        "tla": null
       },
       "score": {
         "home": null,
@@ -1562,9 +1562,9 @@
       "utcDate": "2026-06-29T20:30:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": 759,
-        "name": "Germany",
-        "tla": "GER"
+        "id": null,
+        "name": "TBD",
+        "tla": null
       },
       "away": {
         "id": null,
@@ -1583,14 +1583,14 @@
       "utcDate": "2026-06-30T01:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": 8601,
-        "name": "Netherlands",
-        "tla": "NED"
+        "id": null,
+        "name": "TBD",
+        "tla": null
       },
       "away": {
-        "id": 815,
-        "name": "Morocco",
-        "tla": "MAR"
+        "id": null,
+        "name": "TBD",
+        "tla": null
       },
       "score": {
         "home": null,
@@ -1646,9 +1646,9 @@
       "utcDate": "2026-07-01T01:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": 769,
-        "name": "Mexico",
-        "tla": "MEX"
+        "id": null,
+        "name": "TBD",
+        "tla": null
       },
       "away": {
         "id": null,
@@ -1709,14 +1709,14 @@
       "utcDate": "2026-07-02T00:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": 771,
-        "name": "United States",
-        "tla": "USA"
+        "id": null,
+        "name": "TBD",
+        "tla": null
       },
       "away": {
-        "id": 1060,
-        "name": "Bosnia-Herzegovina",
-        "tla": "BIH"
+        "id": null,
+        "name": "TBD",
+        "tla": null
       },
       "score": {
         "home": null,
@@ -1772,9 +1772,9 @@
       "utcDate": "2026-07-03T03:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": 788,
-        "name": "Switzerland",
-        "tla": "SUI"
+        "id": null,
+        "name": "TBD",
+        "tla": null
       },
       "away": {
         "id": null,
@@ -1793,9 +1793,9 @@
       "utcDate": "2026-07-03T18:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": 779,
-        "name": "Australia",
-        "tla": "AUS"
+        "id": null,
+        "name": "TBD",
+        "tla": null
       },
       "away": {
         "id": null,
@@ -1814,9 +1814,9 @@
       "utcDate": "2026-07-03T22:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": 762,
-        "name": "Argentina",
-        "tla": "ARG"
+        "id": null,
+        "name": "TBD",
+        "tla": null
       },
       "away": {
         "id": null,
