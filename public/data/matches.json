@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T05:06:11.427Z",
+  "updatedAt": "2026-06-27T08:00:21.450Z",
   "matches": [
     {
       "id": 537327,
@@ -1371,7 +1371,7 @@
       "stage": "GROUP_STAGE",
       "group": "G",
       "utcDate": "2026-06-27T03:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 825,
         "name": "Egypt",
@@ -1384,7 +1384,7 @@
       },
       "score": {
         "home": 1,
-        "away": 2
+        "away": 1
       }
     },
     {
@@ -1604,9 +1604,9 @@
       "utcDate": "2026-06-30T17:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 1935,
+        "name": "Ivory Coast",
+        "tla": "CIV"
       },
       "away": {
         "id": null,
