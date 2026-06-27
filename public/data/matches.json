@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T21:15:28.456Z",
+  "updatedAt": "2026-06-27T22:16:22.087Z",
   "matches": [
     {
       "id": 537327,
@@ -1413,7 +1413,7 @@
       "stage": "GROUP_STAGE",
       "group": "L",
       "utcDate": "2026-06-27T21:00:00Z",
-      "status": "OTHER",
+      "status": "LIVE",
       "home": {
         "id": 799,
         "name": "Croatia",
@@ -1425,7 +1425,7 @@
         "tla": "GHA"
       },
       "score": {
-        "home": 0,
+        "home": 1,
         "away": 0
       }
     },
