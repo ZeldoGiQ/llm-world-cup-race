@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T04:52:47.868Z",
+  "updatedAt": "2026-06-28T08:15:04.322Z",
   "matches": [
     {
       "id": 537327,
@@ -1567,9 +1567,9 @@
         "tla": "GER"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 761,
+        "name": "Paraguay",
+        "tla": "PAR"
       },
       "score": {
         "home": null,
@@ -1609,9 +1609,9 @@
         "tla": "CIV"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 8872,
+        "name": "Norway",
+        "tla": "NOR"
       },
       "score": {
         "home": null,
@@ -1625,14 +1625,14 @@
       "utcDate": "2026-06-30T21:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 773,
+        "name": "France",
+        "tla": "FRA"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 792,
+        "name": "Sweden",
+        "tla": "SWE"
       },
       "score": {
         "home": null,
@@ -1651,9 +1651,9 @@
         "tla": "MEX"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 791,
+        "name": "Ecuador",
+        "tla": "ECU"
       },
       "score": {
         "home": null,
@@ -1667,14 +1667,14 @@
       "utcDate": "2026-07-01T16:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 770,
+        "name": "England",
+        "tla": "ENG"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 1934,
+        "name": "Congo DR",
+        "tla": "COD"
       },
       "score": {
         "home": null,
@@ -1688,14 +1688,14 @@
       "utcDate": "2026-07-01T20:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 805,
+        "name": "Belgium",
+        "tla": "BEL"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 804,
+        "name": "Senegal",
+        "tla": "SEN"
       },
       "score": {
         "home": null,
@@ -1730,14 +1730,14 @@
       "utcDate": "2026-07-02T19:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 760,
+        "name": "Spain",
+        "tla": "ESP"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 816,
+        "name": "Austria",
+        "tla": "AUT"
       },
       "score": {
         "home": null,
@@ -1751,14 +1751,14 @@
       "utcDate": "2026-07-02T23:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 765,
+        "name": "Portugal",
+        "tla": "POR"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 799,
+        "name": "Croatia",
+        "tla": "CRO"
       },
       "score": {
         "home": null,
@@ -1777,9 +1777,9 @@
         "tla": "SUI"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 778,
+        "name": "Algeria",
+        "tla": "ALG"
       },
       "score": {
         "home": null,
@@ -1798,9 +1798,9 @@
         "tla": "AUS"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 825,
+        "name": "Egypt",
+        "tla": "EGY"
       },
       "score": {
         "home": null,
@@ -1819,9 +1819,9 @@
         "tla": "ARG"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 1930,
+        "name": "Cape Verde Islands",
+        "tla": "CPV"
       },
       "score": {
         "home": null,
@@ -1835,14 +1835,14 @@
       "utcDate": "2026-07-04T01:30:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 818,
+        "name": "Colombia",
+        "tla": "COL"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 763,
+        "name": "Ghana",
+        "tla": "GHA"
       },
       "score": {
         "home": null,
