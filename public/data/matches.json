@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T20:04:13.886Z",
+  "updatedAt": "2026-06-28T21:13:46.315Z",
   "matches": [
     {
       "id": 537327,
@@ -1518,7 +1518,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-06-28T19:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 774,
         "name": "South Africa",
@@ -1531,7 +1531,7 @@
       },
       "score": {
         "home": 0,
-        "away": 0
+        "away": 1
       }
     },
     {
