@@ -2417,115 +2417,515 @@
       }
     },
     "537415": {
-      "qwen": {
-        "home": 1,
+      "gpt": {
+        "home": 2,
         "away": 0,
-        "createdAt": "2026-06-16T08:22:37.162Z"
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "home": 3,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
       }
     },
     "537416": {
-      "qwen": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "home": 3,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
         "home": 2,
-        "away": 0,
-        "createdAt": "2026-06-16T08:22:37.162Z"
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "home": 3,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "home": 3,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
       }
     },
     "537417": {
+      "gpt": {
+        "home": 3,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
       "qwen": {
         "home": 1,
-        "away": 0,
-        "createdAt": "2026-06-16T08:22:37.162Z"
+        "away": 2,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-28T16:12:54.791Z"
       }
     },
     "537418": {
+      "gpt": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
       "qwen": {
         "home": 2,
         "away": 1,
         "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
       }
     },
     "537419": {
+      "gpt": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
       "qwen": {
         "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "home": 1,
         "away": 0,
-        "createdAt": "2026-06-16T08:22:37.162Z"
+        "createdAt": "2026-06-28T16:12:54.791Z"
       }
     },
     "537420": {
-      "qwen": {
+      "gpt": {
+        "home": 1,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
         "home": 2,
         "away": 1,
-        "createdAt": "2026-06-16T08:22:37.162Z"
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
       }
     },
     "537421": {
-      "qwen": {
-        "home": 0,
+      "gpt": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "home": 2,
         "away": 0,
-        "createdAt": "2026-06-16T08:22:37.162Z"
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "home": 3,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
       }
     },
     "537422": {
-      "qwen": {
-        "home": 1,
+      "gpt": {
+        "home": 3,
         "away": 0,
-        "createdAt": "2026-06-16T08:22:37.162Z"
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
       }
     },
     "537423": {
-      "qwen": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
         "home": 2,
         "away": 1,
-        "createdAt": "2026-06-16T08:22:37.162Z"
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
       }
     },
     "537424": {
-      "qwen": {
+      "gpt": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "home": 3,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
         "home": 1,
         "away": 1,
-        "createdAt": "2026-06-16T08:22:37.162Z"
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "home": 1,
+        "away": 2,
+        "createdAt": "2026-06-28T16:12:54.791Z"
       }
     },
     "537425": {
-      "qwen": {
-        "home": 1,
+      "gpt": {
+        "home": 2,
         "away": 0,
-        "createdAt": "2026-06-16T08:22:37.162Z"
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
       }
     },
     "537426": {
+      "gpt": {
+        "home": 1,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "home": 3,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
       "qwen": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
         "home": 2,
         "away": 1,
-        "createdAt": "2026-06-16T08:22:37.162Z"
+        "createdAt": "2026-06-28T16:12:54.791Z"
       }
     },
     "537427": {
-      "qwen": {
-        "home": 1,
+      "gpt": {
+        "home": 3,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "home": 3,
         "away": 0,
-        "createdAt": "2026-06-16T08:22:37.162Z"
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "home": 4,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "home": 3,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
       }
     },
     "537428": {
-      "qwen": {
+      "gpt": {
+        "home": 2,
+        "away": 2,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "home": 3,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
         "home": 1,
         "away": 1,
-        "createdAt": "2026-06-16T08:22:37.162Z"
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "home": 0,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "home": 0,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
       }
     },
     "537429": {
+      "gpt": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
       "qwen": {
         "home": 2,
         "away": 0,
         "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
       }
     },
     "537430": {
+      "gpt": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "home": 1,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "home": 2,
+        "away": 1,
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
       "qwen": {
         "home": 2,
         "away": 1,
         "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "home": 2,
+        "away": 0,
+        "createdAt": "2026-06-28T16:12:54.791Z"
       }
     }
   }
