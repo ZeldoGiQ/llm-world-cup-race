@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-29T19:23:07.016Z",
+  "updatedAt": "2026-06-29T21:02:28.880Z",
   "matches": [
     {
       "id": 537327,
@@ -1560,7 +1560,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-06-29T20:30:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 759,
         "name": "Germany",
@@ -1572,8 +1572,8 @@
         "tla": "PAR"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
