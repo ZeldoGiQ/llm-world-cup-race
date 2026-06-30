@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T01:26:20.846Z",
+  "updatedAt": "2026-06-30T05:37:29.100Z",
   "matches": [
     {
       "id": 537327,
@@ -1581,7 +1581,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-06-30T01:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 8601,
         "name": "Netherlands",
@@ -1593,8 +1593,8 @@
         "tla": "MAR"
       },
       "score": {
-        "home": 0,
-        "away": 0
+        "home": 4,
+        "away": 4
       }
     },
     {
