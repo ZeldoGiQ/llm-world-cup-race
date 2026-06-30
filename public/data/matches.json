@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T08:43:46.491Z",
+  "updatedAt": "2026-06-30T17:51:51.242Z",
   "matches": [
     {
       "id": 537327,
@@ -1602,7 +1602,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-06-30T17:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 1935,
         "name": "Ivory Coast",
@@ -1614,8 +1614,8 @@
         "tla": "NOR"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       }
     },
     {
