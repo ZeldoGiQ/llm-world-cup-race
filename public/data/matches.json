@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-29T23:17:17.126Z",
+  "updatedAt": "2026-06-30T01:26:20.846Z",
   "matches": [
     {
       "id": 537327,
@@ -1560,7 +1560,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-06-29T20:30:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 759,
         "name": "Germany",
@@ -1572,8 +1572,8 @@
         "tla": "PAR"
       },
       "score": {
-        "home": 2,
-        "away": 1
+        "home": 4,
+        "away": 5
       }
     },
     {
@@ -1581,7 +1581,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-06-30T01:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 8601,
         "name": "Netherlands",
@@ -1593,8 +1593,8 @@
         "tla": "MAR"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
