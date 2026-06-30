@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T05:37:29.100Z",
+  "updatedAt": "2026-06-30T08:43:46.491Z",
   "matches": [
     {
       "id": 537327,
@@ -1593,7 +1593,7 @@
         "tla": "MAR"
       },
       "score": {
-        "home": 4,
+        "home": 3,
         "away": 4
       }
     },
@@ -1861,9 +1861,9 @@
         "tla": "CAN"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 815,
+        "name": "Morocco",
+        "tla": "MAR"
       },
       "score": {
         "home": null,
@@ -1877,9 +1877,9 @@
       "utcDate": "2026-07-04T21:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 761,
+        "name": "Paraguay",
+        "tla": "PAR"
       },
       "away": {
         "id": null,
@@ -1898,9 +1898,9 @@
       "utcDate": "2026-07-05T20:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 764,
+        "name": "Brazil",
+        "tla": "BRA"
       },
       "away": {
         "id": null,
