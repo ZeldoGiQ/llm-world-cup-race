@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T19:28:43.045Z",
+  "updatedAt": "2026-06-30T21:13:22.835Z",
   "matches": [
     {
       "id": 537327,
@@ -1623,7 +1623,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-06-30T21:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 773,
         "name": "France",
@@ -1635,8 +1635,8 @@
         "tla": "SWE"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
