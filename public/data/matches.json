@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-01T02:07:05.461Z",
+  "updatedAt": "2026-07-01T06:42:25.224Z",
   "matches": [
     {
       "id": 537327,
@@ -1644,7 +1644,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-01T01:00:00Z",
-      "status": "OTHER",
+      "status": "FINISHED",
       "home": {
         "id": 769,
         "name": "Mexico",
@@ -1656,7 +1656,7 @@
         "tla": "ECU"
       },
       "score": {
-        "home": 0,
+        "home": 2,
         "away": 0
       }
     },
@@ -1882,9 +1882,9 @@
         "tla": "PAR"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 773,
+        "name": "France",
+        "tla": "FRA"
       },
       "score": {
         "home": null,
@@ -1903,9 +1903,9 @@
         "tla": "BRA"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 8872,
+        "name": "Norway",
+        "tla": "NOR"
       },
       "score": {
         "home": null,
