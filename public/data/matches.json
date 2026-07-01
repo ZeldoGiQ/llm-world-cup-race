@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-01T17:49:38.031Z",
+  "updatedAt": "2026-07-01T19:24:50.929Z",
   "matches": [
     {
       "id": 537327,
@@ -1665,7 +1665,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-01T16:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 770,
         "name": "England",
@@ -1677,7 +1677,7 @@
         "tla": "COD"
       },
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 1
       }
     },
