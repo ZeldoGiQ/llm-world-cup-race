@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-01T19:24:50.929Z",
+  "updatedAt": "2026-07-01T20:59:23.900Z",
   "matches": [
     {
       "id": 537327,
@@ -1686,7 +1686,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-01T20:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 805,
         "name": "Belgium",
@@ -1698,8 +1698,8 @@
         "tla": "SEN"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       }
     },
     {
