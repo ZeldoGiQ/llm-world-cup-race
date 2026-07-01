@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T23:50:28.935Z",
+  "updatedAt": "2026-07-01T02:07:05.461Z",
   "matches": [
     {
       "id": 537327,
@@ -1644,7 +1644,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-01T01:00:00Z",
-      "status": "UPCOMING",
+      "status": "OTHER",
       "home": {
         "id": 769,
         "name": "Mexico",
@@ -1656,8 +1656,8 @@
         "tla": "ECU"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
