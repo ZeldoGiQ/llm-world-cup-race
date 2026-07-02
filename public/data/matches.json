@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-02T08:33:57.562Z",
+  "updatedAt": "2026-07-02T20:07:47.248Z",
   "matches": [
     {
       "id": 537327,
@@ -1728,7 +1728,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-02T19:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 760,
         "name": "Spain",
@@ -1740,8 +1740,8 @@
         "tla": "AUT"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       }
     },
     {
