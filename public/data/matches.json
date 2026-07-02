@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-02T01:50:00.110Z",
+  "updatedAt": "2026-07-02T05:44:18.073Z",
   "matches": [
     {
       "id": 537327,
@@ -1643,7 +1643,7 @@
       "id": 537425,
       "stage": "LAST_32",
       "group": null,
-      "utcDate": "2026-07-01T01:00:00Z",
+      "utcDate": "2026-07-01T02:00:00Z",
       "status": "FINISHED",
       "home": {
         "id": 769,
@@ -1707,7 +1707,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-02T00:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 771,
         "name": "United States",
@@ -1719,7 +1719,7 @@
         "tla": "BIH"
       },
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 0
       }
     },
