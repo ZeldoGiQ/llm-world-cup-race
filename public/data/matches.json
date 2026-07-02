@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-01T23:45:00.968Z",
+  "updatedAt": "2026-07-02T01:50:00.110Z",
   "matches": [
     {
       "id": 537327,
@@ -1707,7 +1707,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-02T00:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 771,
         "name": "United States",
@@ -1719,8 +1719,8 @@
         "tla": "BIH"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       }
     },
     {
