@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T01:17:25.421Z",
+  "updatedAt": "2026-07-03T04:59:30.738Z",
   "matches": [
     {
       "id": 537327,
@@ -1762,7 +1762,7 @@
       },
       "score": {
         "home": 2,
-        "away": 2
+        "away": 1
       }
     },
     {
@@ -1770,7 +1770,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-03T03:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 788,
         "name": "Switzerland",
@@ -1782,8 +1782,8 @@
         "tla": "ALG"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 0
       }
     },
     {
