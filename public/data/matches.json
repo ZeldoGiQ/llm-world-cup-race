@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T04:59:30.738Z",
+  "updatedAt": "2026-07-03T08:08:22.764Z",
   "matches": [
     {
       "id": 537327,
@@ -1770,7 +1770,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-03T03:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 788,
         "name": "Switzerland",
