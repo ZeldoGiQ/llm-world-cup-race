@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T08:08:22.764Z",
+  "updatedAt": "2026-07-03T18:57:47.385Z",
   "matches": [
     {
       "id": 537327,
@@ -1791,7 +1791,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-03T18:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 779,
         "name": "Australia",
@@ -1803,8 +1803,8 @@
         "tla": "EGY"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       }
     },
     {
