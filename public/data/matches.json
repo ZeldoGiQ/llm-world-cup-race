@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T17:19:33.422Z",
+  "updatedAt": "2026-07-04T19:37:13.809Z",
   "matches": [
     {
       "id": 537327,
@@ -1854,7 +1854,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-04T17:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 828,
         "name": "Canada",
@@ -1867,7 +1867,7 @@
       },
       "score": {
         "home": 0,
-        "away": 0
+        "away": 3
       }
     },
     {
