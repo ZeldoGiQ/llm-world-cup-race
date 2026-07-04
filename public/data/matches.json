@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T04:51:38.431Z",
+  "updatedAt": "2026-07-04T07:34:42.441Z",
   "matches": [
     {
       "id": 537327,
@@ -1940,14 +1940,14 @@
       "utcDate": "2026-07-06T19:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 765,
+        "name": "Portugal",
+        "tla": "POR"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 760,
+        "name": "Spain",
+        "tla": "ESP"
       },
       "score": {
         "home": null,
@@ -1982,14 +1982,14 @@
       "utcDate": "2026-07-07T16:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 762,
+        "name": "Argentina",
+        "tla": "ARG"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 825,
+        "name": "Egypt",
+        "tla": "EGY"
       },
       "score": {
         "home": null,
@@ -2003,14 +2003,14 @@
       "utcDate": "2026-07-07T20:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 788,
+        "name": "Switzerland",
+        "tla": "SUI"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 818,
+        "name": "Colombia",
+        "tla": "COL"
       },
       "score": {
         "home": null,
