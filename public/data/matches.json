@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T23:38:38.478Z",
+  "updatedAt": "2026-07-04T01:12:55.597Z",
   "matches": [
     {
       "id": 537327,
@@ -1812,7 +1812,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-03T22:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 762,
         "name": "Argentina",
@@ -1824,8 +1824,8 @@
         "tla": "CPV"
       },
       "score": {
-        "home": 1,
-        "away": 1
+        "home": 3,
+        "away": 2
       }
     },
     {
