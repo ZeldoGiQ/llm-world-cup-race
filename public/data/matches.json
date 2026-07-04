@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T01:12:55.597Z",
+  "updatedAt": "2026-07-04T04:51:38.431Z",
   "matches": [
     {
       "id": 537327,
@@ -1833,7 +1833,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-04T01:30:00Z",
-      "status": "UPCOMING",
+      "status": "FINISHED",
       "home": {
         "id": 818,
         "name": "Colombia",
@@ -1845,8 +1845,8 @@
         "tla": "GHA"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       }
     },
     {
