@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T19:37:13.809Z",
+  "updatedAt": "2026-07-04T21:32:30.966Z",
   "matches": [
     {
       "id": 537327,
@@ -1875,7 +1875,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-04T21:00:00Z",
-      "status": "UPCOMING",
+      "status": "OTHER",
       "home": {
         "id": 761,
         "name": "Paraguay",
@@ -1887,8 +1887,8 @@
         "tla": "FRA"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
