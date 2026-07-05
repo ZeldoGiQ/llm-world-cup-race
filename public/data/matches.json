@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-05T08:17:55.954Z",
+  "updatedAt": "2026-07-05T20:06:07.932Z",
   "matches": [
     {
       "id": 537327,
@@ -1896,7 +1896,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-05T20:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 764,
         "name": "Brazil",
@@ -1908,8 +1908,8 @@
         "tla": "NOR"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
