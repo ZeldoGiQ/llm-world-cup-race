@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T23:36:09.528Z",
+  "updatedAt": "2026-07-05T08:17:55.954Z",
   "matches": [
     {
       "id": 537327,
@@ -2024,14 +2024,14 @@
       "utcDate": "2026-07-09T20:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 773,
+        "name": "France",
+        "tla": "FRA"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 815,
+        "name": "Morocco",
+        "tla": "MAR"
       },
       "score": {
         "home": null,
