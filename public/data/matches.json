@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T04:42:49.673Z",
+  "updatedAt": "2026-07-06T08:51:06.690Z",
   "matches": [
     {
       "id": 537327,
@@ -2066,14 +2066,14 @@
       "utcDate": "2026-07-11T21:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 8872,
+        "name": "Norway",
+        "tla": "NOR"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 770,
+        "name": "England",
+        "tla": "ENG"
       },
       "score": {
         "home": null,
