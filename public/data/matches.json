@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T18:14:44.982Z",
+  "updatedAt": "2026-07-07T20:14:53.998Z",
   "matches": [
     {
       "id": 537327,
@@ -2001,7 +2001,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-07T20:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 788,
         "name": "Switzerland",
@@ -2013,8 +2013,8 @@
         "tla": "COL"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
