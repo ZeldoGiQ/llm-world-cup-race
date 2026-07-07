@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T05:14:21.049Z",
+  "updatedAt": "2026-07-07T08:43:36.019Z",
   "matches": [
     {
       "id": 537327,
@@ -2045,14 +2045,14 @@
       "utcDate": "2026-07-10T19:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 760,
+        "name": "Spain",
+        "tla": "ESP"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 805,
+        "name": "Belgium",
+        "tla": "BEL"
       },
       "score": {
         "home": null,
