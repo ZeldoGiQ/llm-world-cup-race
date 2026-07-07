@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T16:08:04.501Z",
+  "updatedAt": "2026-07-07T18:14:44.982Z",
   "matches": [
     {
       "id": 537327,
@@ -1980,7 +1980,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-07T16:00:00Z",
-      "status": "OTHER",
+      "status": "FINISHED",
       "home": {
         "id": 762,
         "name": "Argentina",
@@ -1992,8 +1992,8 @@
         "tla": "EGY"
       },
       "score": {
-        "home": 0,
-        "away": 0
+        "home": 3,
+        "away": 2
       }
     },
     {
