@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T23:37:28.912Z",
+  "updatedAt": "2026-07-08T06:43:27.343Z",
   "matches": [
     {
       "id": 537327,
@@ -2087,14 +2087,14 @@
       "utcDate": "2026-07-12T01:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 762,
+        "name": "Argentina",
+        "tla": "ARG"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 788,
+        "name": "Switzerland",
+        "tla": "SUI"
       },
       "score": {
         "home": null,
