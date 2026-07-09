@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-09T15:12:04.975Z",
+  "updatedAt": "2026-07-09T20:55:01.184Z",
   "matches": [
     {
       "id": 537327,
@@ -2044,7 +2044,7 @@
       "stage": "QUARTER_FINALS",
       "group": null,
       "utcDate": "2026-07-09T20:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 773,
         "name": "France",
@@ -2056,8 +2056,8 @@
         "tla": "MAR"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
