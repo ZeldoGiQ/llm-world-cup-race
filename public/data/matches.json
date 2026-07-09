@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08T06:43:27.343Z",
+  "updatedAt": "2026-07-09T15:12:04.975Z",
   "matches": [
     {
       "id": 537327,
@@ -1572,8 +1572,13 @@
         "tla": "PAR"
       },
       "score": {
-        "home": 4,
-        "away": 5
+        "home": 1,
+        "away": 1
+      },
+      "duration": "PENALTY_SHOOTOUT",
+      "penalties": {
+        "home": 3,
+        "away": 4
       }
     },
     {
@@ -1593,8 +1598,13 @@
         "tla": "MAR"
       },
       "score": {
-        "home": 3,
-        "away": 4
+        "home": 1,
+        "away": 1
+      },
+      "duration": "PENALTY_SHOOTOUT",
+      "penalties": {
+        "home": 2,
+        "away": 3
       }
     },
     {
@@ -1700,7 +1710,8 @@
       "score": {
         "home": 3,
         "away": 2
-      }
+      },
+      "duration": "EXTRA_TIME"
     },
     {
       "id": 537421,
@@ -1803,8 +1814,13 @@
         "tla": "EGY"
       },
       "score": {
-        "home": 3,
-        "away": 5
+        "home": 1,
+        "away": 1
+      },
+      "duration": "PENALTY_SHOOTOUT",
+      "penalties": {
+        "home": 2,
+        "away": 4
       }
     },
     {
@@ -1826,7 +1842,8 @@
       "score": {
         "home": 3,
         "away": 2
-      }
+      },
+      "duration": "EXTRA_TIME"
     },
     {
       "id": 537430,
@@ -2013,6 +2030,11 @@
         "tla": "COL"
       },
       "score": {
+        "home": 0,
+        "away": 0
+      },
+      "duration": "PENALTY_SHOOTOUT",
+      "penalties": {
         "home": 4,
         "away": 3
       }
