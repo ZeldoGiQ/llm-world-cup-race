@@ -146,9 +146,13 @@ Pro Modell und beendetem Spiel:
 - Punktwerte zentral konfigurierbar in [`src/lib/config.ts`](src/lib/config.ts) (`SCORING`).
 - Gewertet werden **nur Spiele mit Status FINISHED**; bei Live-Spielen zeigt das UI eine
   vorläufige Wertung.
-- K.-o.-Spiele: Es zählt das reguläre Ergebnis (`fullTime`, inkl. Verlängerung).
+- K.-o.-Spiele: Es zählt das **Ergebnis nach 120 Minuten** (reguläre Zeit + Verlängerung).
   **Elfmeterschießen wird ignoriert** – endet ein Spiel nach Verlängerung remis, wird das
-  Remis gewertet, egal wer das Elfmeterschießen gewinnt.
+  Remis gewertet, egal wer das Elfmeterschießen gewinnt. Achtung API-Detail: `fullTime`
+  von football-data.org enthält bei `duration=PENALTY_SHOOTOUT` auch die Elfmeter-Tore;
+  `fetch-results.mjs` rechnet deshalb auf den 120-Minuten-Stand zurück
+  (`regularTime + extraTime`) und legt das Elfmeterschießen separat als `penalties` ab
+  (UI zeigt es klein unter dem Ergebnis, z. B. „i. E. 6:5").
 - Leaderboard-Sortierung: Punkte, dann mehr exakte Treffer, dann mehr gewertete Spiele.
 - Die Scoring-Funktion ist isoliert in [`src/lib/scoring.ts`](src/lib/scoring.ts) und mit
   Unit-Tests abgedeckt (`npm test`).

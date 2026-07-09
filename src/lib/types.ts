@@ -33,8 +33,15 @@ export interface Match {
   status: MatchStatus;
   home: Team;
   away: Team;
-  /** Reguläres Endergebnis (fullTime). Elfmeterschiessen wird ignoriert. */
+  /**
+   * Ergebnis nach 120 Minuten (reguläre Zeit + Verlängerung).
+   * Elfmeterschiessen ist NICHT enthalten - nur dieses Ergebnis wird gewertet.
+   */
   score: Score;
+  /** Wie das Spiel endete; fehlt bei Ende nach regulärer Spielzeit. */
+  duration?: 'EXTRA_TIME' | 'PENALTY_SHOOTOUT';
+  /** Ergebnis des Elfmeterschiessens (nur bei duration = PENALTY_SHOOTOUT, rein informativ). */
+  penalties?: Score;
 }
 
 export interface MatchesFile {

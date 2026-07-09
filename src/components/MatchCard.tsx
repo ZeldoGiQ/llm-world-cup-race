@@ -62,6 +62,21 @@ function CenterBlock({ match }: { match: Match }) {
         <span className="font-mono tabular text-3xl font-bold text-ink-50">
           {formatScore(match.score.home!, match.score.away!)}
         </span>
+        {match.duration === 'PENALTY_SHOOTOUT' &&
+          typeof match.penalties?.home === 'number' &&
+          typeof match.penalties?.away === 'number' && (
+            <span
+              className="mt-0.5 text-[10px] font-medium text-ink-400"
+              title="Entscheidung im Elfmeterschießen – gewertet wird das Ergebnis nach 120 Minuten"
+            >
+              i. E. {formatScore(match.penalties.home, match.penalties.away)}
+            </span>
+          )}
+        {match.duration === 'EXTRA_TIME' && (
+          <span className="mt-0.5 text-[10px] font-medium text-ink-400" title="nach Verlängerung">
+            n. V.
+          </span>
+        )}
         {match.status === 'LIVE' && (
           <span className="mt-0.5 text-[10px] font-medium text-clay-300">vorläufig</span>
         )}

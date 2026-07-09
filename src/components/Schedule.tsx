@@ -142,7 +142,15 @@ function resultLine(match: Match): string {
   const names = `${germanTeamName(match.home.name)} – ${germanTeamName(match.away.name)}`;
   const hasScore = typeof match.score.home === 'number' && typeof match.score.away === 'number';
   if (match.status === 'FINISHED' && hasScore) {
-    return `Endstand ${formatScore(match.score.home!, match.score.away!)} · ${names}`;
+    const extra =
+      match.duration === 'PENALTY_SHOOTOUT' &&
+      typeof match.penalties?.home === 'number' &&
+      typeof match.penalties?.away === 'number'
+        ? ` n. V. (${formatScore(match.penalties.home, match.penalties.away)} i. E.)`
+        : match.duration === 'EXTRA_TIME'
+          ? ' n. V.'
+          : '';
+    return `Endstand ${formatScore(match.score.home!, match.score.away!)}${extra} · ${names}`;
   }
   if (match.status === 'LIVE' && hasScore) {
     return `Live ${formatScore(match.score.home!, match.score.away!)} · ${names}`;
@@ -194,12 +202,30 @@ function ScheduleRow({
               {flagEmoji(match.home.tla)}
             </span>
           </span>
-          <span
-            className={`shrink-0 px-0.5 font-mono tabular text-sm font-bold ${
-              showScore ? 'text-ink-50' : 'text-ink-500'
-            }`}
-          >
-            {showScore ? formatScore(match.score.home!, match.score.away!) : '–:–'}
+          <span className="flex shrink-0 flex-col items-center px-0.5">
+            <span
+              className={`font-mono tabular text-sm font-bold ${
+                showScore ? 'text-ink-50' : 'text-ink-500'
+              }`}
+            >
+              {showScore ? formatScore(match.score.home!, match.score.away!) : '–:–'}
+            </span>
+            {showScore &&
+              match.duration === 'PENALTY_SHOOTOUT' &&
+              typeof match.penalties?.home === 'number' &&
+              typeof match.penalties?.away === 'number' && (
+                <span
+                  className="text-[9px] leading-tight text-ink-400"
+                  title="Entscheidung im Elfmeterschießen – gewertet wird das Ergebnis nach 120 Minuten"
+                >
+                  i. E. {formatScore(match.penalties.home, match.penalties.away)}
+                </span>
+              )}
+            {showScore && match.duration === 'EXTRA_TIME' && (
+              <span className="text-[9px] leading-tight text-ink-400" title="nach Verlängerung">
+                n. V.
+              </span>
+            )}
           </span>
           <span className="flex min-w-0 flex-1 items-center gap-1.5">
             <span className="emoji-flag shrink-0" aria-hidden="true">

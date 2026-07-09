@@ -14,7 +14,7 @@
  */
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const OUT_FILE = path.resolve(SCRIPT_DIR, '../public/data/matches.json');
@@ -49,7 +49,59 @@ function mapTeam(team) {
   };
 }
 
-function mapMatch(match) {
+/** {home, away} aus einem API-Score-Paar lesen (defensiv, v2-Altschreibweise inkl.). */
+function scorePair(pair) {
+  const home = pair?.home ?? pair?.homeTeam ?? null;
+  const away = pair?.away ?? pair?.awayTeam ?? null;
+  return typeof home === 'number' && typeof away === 'number' ? { home, away } : null;
+}
+
+/**
+ * Ergebnis nach 120 Minuten bestimmen (fürs Tippspiel zählt NUR das).
+ *
+ * Laut API-Doku (docs.football-data.org/general/v4/overtime.html) enthält
+ * fullTime bei duration=PENALTY_SHOOTOUT auch die Elfmeter-Tore
+ * (Beispiel: 1:1 n. V., 6:5 i. E. -> fullTime 7:6). Deshalb:
+ *   - PENALTY_SHOOTOUT: score = regularTime + extraTime
+ *                       (Fallback: fullTime - penalties), Elfmeter separat.
+ *   - EXTRA_TIME:       fullTime ist bereits der 120-Minuten-Stand.
+ *   - REGULAR:          fullTime unverändert.
+ */
+function mapScore(apiScore, matchId) {
+  const fullTime = scorePair(apiScore?.fullTime) ?? { home: null, away: null };
+  const duration = apiScore?.duration ?? 'REGULAR';
+
+  if (duration === 'EXTRA_TIME') {
+    return { score: fullTime, duration: 'EXTRA_TIME', penalties: null };
+  }
+  if (duration !== 'PENALTY_SHOOTOUT') {
+    return { score: fullTime, duration: null, penalties: null };
+  }
+
+  const regular = scorePair(apiScore?.regularTime);
+  const extra = scorePair(apiScore?.extraTime);
+  const penalties = scorePair(apiScore?.penalties);
+
+  let after120 = null;
+  if (regular && extra) {
+    after120 = { home: regular.home + extra.home, away: regular.away + extra.away };
+  } else if (scorePair(apiScore?.fullTime) && penalties) {
+    after120 = { home: fullTime.home - penalties.home, away: fullTime.away - penalties.away };
+  }
+  if (!after120) {
+    // Sollte nicht vorkommen - lieber fullTime anzeigen als gar nichts,
+    // aber laut ins Log, damit es in den Action-Logs auffällt.
+    console.warn(
+      `WARNUNG: Match ${matchId} endete im Elfmeterschiessen, aber der 120-Minuten-Stand ` +
+        `ist aus der API-Antwort nicht ableitbar (regularTime/extraTime/penalties fehlen).`,
+    );
+    return { score: fullTime, duration: 'PENALTY_SHOOTOUT', penalties };
+  }
+  return { score: after120, duration: 'PENALTY_SHOOTOUT', penalties };
+}
+
+export function mapMatch(match) {
+  const { score, duration, penalties } = mapScore(match.score, match.id);
   return {
     id: match.id,
     stage: match.stage ?? 'UNKNOWN',
@@ -58,14 +110,11 @@ function mapMatch(match) {
     status: STATUS_MAP[match.status] ?? 'OTHER',
     home: mapTeam(match.homeTeam),
     away: mapTeam(match.awayTeam),
-    // fullTime = Endstand der regulären Spielzeit inkl. Verlängerung.
-    // Ein Elfmeterschiessen (score.penalties) wird bewusst IGNORIERT:
-    // gewertet wird das reguläre Ergebnis, d. h. bei Entscheidung im
-    // Elfmeterschiessen zählt das Remis (siehe Scoring-Doku im README).
-    score: {
-      home: match.score?.fullTime?.home ?? null,
-      away: match.score?.fullTime?.away ?? null,
-    },
+    // Ergebnis nach 120 Minuten (regulär + Verlängerung), OHNE Elfmeterschiessen.
+    score,
+    // Nur gesetzt, wenn das Spiel über die reguläre Zeit hinausging:
+    ...(duration ? { duration } : {}),
+    ...(penalties ? { penalties } : {}),
   };
 }
 
@@ -118,4 +167,7 @@ async function main() {
   console.log(`matches.json aktualisiert: ${matches.length} Spiele.`);
 }
 
-main();
+// Nur ausführen, wenn direkt gestartet (erlaubt Import von mapMatch in Tests).
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main();
+}
