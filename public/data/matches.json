@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-09T22:12:21.690Z",
+  "updatedAt": "2026-07-10T08:33:41.368Z",
   "matches": [
     {
       "id": 537327,
@@ -2130,9 +2130,9 @@
       "utcDate": "2026-07-14T19:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 773,
+        "name": "France",
+        "tla": "FRA"
       },
       "away": {
         "id": null,
