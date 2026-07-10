@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-10T20:16:13.186Z",
+  "updatedAt": "2026-07-10T21:28:24.160Z",
   "matches": [
     {
       "id": 537327,
@@ -2065,7 +2065,7 @@
       "stage": "QUARTER_FINALS",
       "group": null,
       "utcDate": "2026-07-10T19:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 760,
         "name": "Spain",
@@ -2077,7 +2077,7 @@
         "tla": "BEL"
       },
       "score": {
-        "home": 1,
+        "home": 2,
         "away": 1
       }
     },
