@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-10T21:28:24.160Z",
+  "updatedAt": "2026-07-11T06:31:31.383Z",
   "matches": [
     {
       "id": 537327,
@@ -2135,9 +2135,9 @@
         "tla": "FRA"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 760,
+        "name": "Spain",
+        "tla": "ESP"
       },
       "score": {
         "home": null,
