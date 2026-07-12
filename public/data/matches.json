@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12T00:04:34.193Z",
+  "updatedAt": "2026-07-12T03:47:10.772Z",
   "matches": [
     {
       "id": 537327,
@@ -2108,7 +2108,7 @@
       "stage": "QUARTER_FINALS",
       "group": null,
       "utcDate": "2026-07-12T01:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 762,
         "name": "Argentina",
@@ -2120,9 +2120,10 @@
         "tla": "SUI"
       },
       "score": {
-        "home": null,
-        "away": null
-      }
+        "home": 2,
+        "away": 1
+      },
+      "duration": "EXTRA_TIME"
     },
     {
       "id": 537387,
