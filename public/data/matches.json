@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-11T23:00:56.856Z",
+  "updatedAt": "2026-07-12T00:04:34.193Z",
   "matches": [
     {
       "id": 537327,
@@ -2086,7 +2086,7 @@
       "stage": "QUARTER_FINALS",
       "group": null,
       "utcDate": "2026-07-11T21:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 8872,
         "name": "Norway",
@@ -2098,9 +2098,10 @@
         "tla": "ENG"
       },
       "score": {
-        "home": 2,
-        "away": 1
-      }
+        "home": 1,
+        "away": 2
+      },
+      "duration": "EXTRA_TIME"
     },
     {
       "id": 537386,
