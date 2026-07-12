@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12T03:47:10.772Z",
+  "updatedAt": "2026-07-12T06:20:14.785Z",
   "matches": [
     {
       "id": 537327,
@@ -1934,7 +1934,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-06T01:00:00Z",
-      "status": "OTHER",
+      "status": "FINISHED",
       "home": {
         "id": 769,
         "name": "Mexico",
@@ -2108,7 +2108,7 @@
       "stage": "QUARTER_FINALS",
       "group": null,
       "utcDate": "2026-07-12T01:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 762,
         "name": "Argentina",
@@ -2120,7 +2120,7 @@
         "tla": "SUI"
       },
       "score": {
-        "home": 2,
+        "home": 3,
         "away": 1
       },
       "duration": "EXTRA_TIME"
@@ -2153,14 +2153,14 @@
       "utcDate": "2026-07-15T19:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 770,
+        "name": "England",
+        "tla": "ENG"
       },
       "away": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 762,
+        "name": "Argentina",
+        "tla": "ARG"
       },
       "score": {
         "home": null,
