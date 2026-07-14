@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12T06:20:14.785Z",
+  "updatedAt": "2026-07-14T20:06:47.547Z",
   "matches": [
     {
       "id": 537327,
@@ -2130,7 +2130,7 @@
       "stage": "SEMI_FINALS",
       "group": null,
       "utcDate": "2026-07-14T19:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 773,
         "name": "France",
@@ -2142,8 +2142,8 @@
         "tla": "ESP"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       }
     },
     {
