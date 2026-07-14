@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T20:06:47.547Z",
+  "updatedAt": "2026-07-14T21:10:57.997Z",
   "matches": [
     {
       "id": 537327,
@@ -2130,7 +2130,7 @@
       "stage": "SEMI_FINALS",
       "group": null,
       "utcDate": "2026-07-14T19:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "id": 773,
         "name": "France",
@@ -2143,7 +2143,7 @@
       },
       "score": {
         "home": 0,
-        "away": 1
+        "away": 2
       }
     },
     {
