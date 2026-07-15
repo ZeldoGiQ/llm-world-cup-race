@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-15T07:32:42.525Z",
+  "updatedAt": "2026-07-15T19:39:35.517Z",
   "matches": [
     {
       "id": 537327,
@@ -2151,7 +2151,7 @@
       "stage": "SEMI_FINALS",
       "group": null,
       "utcDate": "2026-07-15T19:00:00Z",
-      "status": "UPCOMING",
+      "status": "LIVE",
       "home": {
         "id": 770,
         "name": "England",
@@ -2163,8 +2163,8 @@
         "tla": "ARG"
       },
       "score": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       }
     },
     {
