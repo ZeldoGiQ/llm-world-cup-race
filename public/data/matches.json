@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T21:10:57.997Z",
+  "updatedAt": "2026-07-15T07:32:42.525Z",
   "matches": [
     {
       "id": 537327,
@@ -2174,9 +2174,9 @@
       "utcDate": "2026-07-18T21:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 773,
+        "name": "France",
+        "tla": "FRA"
       },
       "away": {
         "id": null,
@@ -2195,9 +2195,9 @@
       "utcDate": "2026-07-19T19:00:00Z",
       "status": "UPCOMING",
       "home": {
-        "id": null,
-        "name": "TBD",
-        "tla": null
+        "id": 760,
+        "name": "Spain",
+        "tla": "ESP"
       },
       "away": {
         "id": null,
