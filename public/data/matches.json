@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19T22:13:02.093Z",
+  "updatedAt": "2026-07-19T23:11:57.018Z",
   "matches": [
     {
       "id": 537327,
@@ -2207,7 +2207,8 @@
       "score": {
         "home": 1,
         "away": 0
-      }
+      },
+      "duration": "EXTRA_TIME"
     }
   ]
 }
