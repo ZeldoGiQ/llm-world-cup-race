@@ -16,9 +16,13 @@ node_modules/
 # os / editor
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # lokale Claude-Code-Einstellungen
 .claude/
 
 # generierte Arbeitsdateien (Predictions-Workflow)
 predictions-template*.csv
+
+# Design-System-Quelldateien (leben in Claude Design, nicht im App-Deploy)
+design-system/
