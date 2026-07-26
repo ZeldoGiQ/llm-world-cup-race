@@ -35,7 +35,7 @@ const EXPECTED = [
 ];
 
 describe('WM-Parität der generischen Engine', () => {
-  const standings = computeStandings(models, events, predictions, footballWorldCup);
+  const standings = computeStandings(models, events, predictions, footballWorldCup, 'en');
   const byId = new Map(standings.rows.map((row) => [row.model.id, row]));
 
   it('wertet alle 104 Spiele', () => {

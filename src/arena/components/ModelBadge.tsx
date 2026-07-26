@@ -1,4 +1,6 @@
 import { avatarTextColor, modelInitials } from '../../lib/format';
+import { modelName, modelProvider, type Locale } from '../lib/i18n/locales';
+import { t } from '../lib/i18n/messages';
 import type { ArenaModel } from '../lib/types';
 
 const SIZES = {
@@ -10,7 +12,7 @@ const SIZES = {
 /**
  * Initialen-Avatar eines Modells. Nutzt dieselben reinen Helfer wie das
  * WM-Tippspiel (modelInitials/avatarTextColor), damit ein Modell überall
- * identisch aussieht.
+ * identisch aussieht. Sprachneutral – Initialen und Farbe kommen aus den Daten.
  */
 export function ModelAvatar({
   model,
@@ -33,19 +35,24 @@ export function ModelAvatar({
 /** Avatar + Name + Provider, mit Kennzeichnung für Baseline und Early Access. */
 export default function ModelBadge({
   model,
+  locale,
   size = 'sm',
   showProvider = true,
 }: {
   model: ArenaModel;
+  locale: Locale;
   size?: keyof typeof SIZES;
   showProvider?: boolean;
 }) {
+  const translate = t(locale);
   return (
     <span className="flex min-w-0 items-center gap-2.5">
       <ModelAvatar model={model} size={size} />
       <span className="flex min-w-0 flex-col leading-tight">
         <span className="flex items-center gap-1.5">
-          <span className="truncate text-sm font-medium text-ink-50">{model.name}</span>
+          <span className="truncate text-sm font-medium text-ink-50">
+            {modelName(model, locale)}
+          </span>
           {model.access === 'early-access' && (
             <span
               className="shrink-0 rounded-full border px-1.5 py-px text-[9px] font-semibold uppercase tracking-wider"
@@ -54,21 +61,23 @@ export default function ModelBadge({
                 backgroundColor: 'color-mix(in srgb, var(--arena-prerelease) 12%, transparent)',
                 color: 'var(--arena-prerelease)',
               }}
-              title="Vor Veröffentlichung getestet – Werte vorläufig"
+              title={translate('model.preReleaseTitle')}
             >
-              Pre-release
+              {translate('model.preRelease')}
             </span>
           )}
           {model.baseline && (
             <span
               className="shrink-0 rounded-full border border-ink-600 px-1.5 py-px text-[9px] font-semibold uppercase tracking-wider text-ink-300"
-              title="Referenzwert, kein Sprachmodell"
+              title={translate('model.baselineTitle')}
             >
-              Baseline
+              {translate('model.baseline')}
             </span>
           )}
         </span>
-        {showProvider && <span className="truncate text-[11px] text-ink-400">{model.provider}</span>}
+        {showProvider && (
+          <span className="truncate text-[11px] text-ink-400">{modelProvider(model, locale)}</span>
+        )}
       </span>
     </span>
   );

@@ -6,13 +6,29 @@
  * verliert – wer overconfident 0.99 sagt und falsch liegt, verliert stärker.
  * Genau deshalb ist dieser Typ für ein zitierfähiges Benchmark der wertvollste.
  */
+import { formatFixed, formatPercent } from '../i18n/format';
+import type { Locale } from '../i18n/locales';
 import type { PredictionValue, Resolution } from '../types';
-import { isFiniteNumber, predictionTypes, type PredictionTypeHandler } from './index';
+import {
+  isFiniteNumber,
+  predictionTypes,
+  type OutcomeDescription,
+  type PredictionTypeHandler,
+} from './index';
 
-const PERCENT_FORMAT = new Intl.NumberFormat('de-DE', {
-  style: 'percent',
-  maximumFractionDigits: 1,
-});
+const OUTCOME_WORDS: Record<Locale, { yes: string; no: string }> = {
+  en: { yes: 'occurred', no: 'did not occur' },
+  de: { yes: 'eingetreten', no: 'nicht eingetreten' },
+  es: { yes: 'ocurrió', no: 'no ocurrió' },
+};
+
+const BRIER_CONTRIBUTION: Record<Locale, string> = {
+  en: 'Brier contribution',
+  de: 'Brier-Beitrag',
+  es: 'Aporte al Brier',
+};
+
+const RESULT_WORD: Record<Locale, string> = { en: 'Outcome', de: 'Ergebnis', es: 'Resultado' };
 
 function isProbability(value: unknown): value is number {
   return isFiniteNumber(value) && value >= 0 && value <= 1;
@@ -20,8 +36,12 @@ function isProbability(value: unknown): value is number {
 
 export const binaryHandler: PredictionTypeHandler = {
   id: 'binary',
-  label: 'Wahrscheinlichkeit (Ja/Nein)',
-  cellHint: '0.70 oder 70%',
+  label: {
+    en: 'Probability (yes/no)',
+    de: 'Wahrscheinlichkeit (Ja/Nein)',
+    es: 'Probabilidad (sí/no)',
+  },
+  cellHint: '0.70 / 70%',
 
   validate(value: unknown): value is PredictionValue {
     if (typeof value !== 'object' || value === null) return false;
@@ -48,13 +68,14 @@ export const binaryHandler: PredictionTypeHandler = {
     return isProbability(probability) ? { kind: 'binary', probability } : null;
   },
 
-  formatValue(value: PredictionValue): string {
-    return value.kind === 'binary' ? PERCENT_FORMAT.format(value.probability) : '—';
+  formatValue(value: PredictionValue, locale: Locale): string {
+    return value.kind === 'binary' ? formatPercent(value.probability, locale, 0) : '—';
   },
 
-  formatResolution(resolution: Resolution): string {
+  formatResolution(resolution: Resolution, locale: Locale): string {
     if (resolution.kind !== 'binary') return '—';
-    return resolution.outcome ? 'eingetreten' : 'nicht eingetreten';
+    const words = OUTCOME_WORDS[locale];
+    return resolution.outcome ? words.yes : words.no;
   },
 
   /**
@@ -62,7 +83,7 @@ export const binaryHandler: PredictionTypeHandler = {
    * zurückhaltende, aber richtige Aussage besser bewertet als eine
    * overconfidente falsche – konsistent mit dem Ranking der Kategorie.
    */
-  describeOutcome(prediction, resolution) {
+  describeOutcome(prediction, resolution, locale): OutcomeDescription | null {
     if (prediction.kind !== 'binary' || resolution.kind !== 'binary') return null;
     const target = resolution.outcome ? 1 : 0;
     const squaredError = (prediction.probability - target) ** 2;
@@ -77,17 +98,15 @@ export const binaryHandler: PredictionTypeHandler = {
     const correctSide =
       (prediction.probability > 0.5 && resolution.outcome) ||
       (prediction.probability < 0.5 && !resolution.outcome);
+    const words = OUTCOME_WORDS[locale];
     // Bewusst NICHT die Wahrscheinlichkeit wiederholen – die steht schon in der
     // Wert-Spalte. Stattdessen der Brier-Beitrag: die Zahl, die ins Ranking eingeht.
     return {
-      label: `${correctSide ? '✓' : '✗'} ${squaredError.toLocaleString('de-DE', {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-      })}`,
+      label: `${correctSide ? '✓' : '✗'} ${formatFixed(squaredError, locale, 2)}`,
       quality,
-      detail: `Brier-Beitrag ${squaredError.toLocaleString('de-DE', { maximumFractionDigits: 3 })} · Ergebnis: ${
-        resolution.outcome ? 'eingetreten' : 'nicht eingetreten'
-      }`,
+      detail: `${BRIER_CONTRIBUTION[locale]} ${formatFixed(squaredError, locale, 3)} · ${
+        RESULT_WORD[locale]
+      }: ${resolution.outcome ? words.yes : words.no}`,
     };
   },
 };

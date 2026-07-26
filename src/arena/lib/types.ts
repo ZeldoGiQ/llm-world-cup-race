@@ -39,7 +39,19 @@ export interface Prediction {
 export interface ArenaEvent<M = Record<string, unknown>> {
   /** innerhalb der Kategorie eindeutig */
   id: string;
+  /**
+   * Kanonischer Titel in der Standardsprache (Englisch).
+   * Bei Kategorien, deren Titel aus Metadaten entstehen (Teamnamen, Ticker,
+   * Datum), dient er nur als Rückfall.
+   */
   title: string;
+  /**
+   * Übersetzungen des Titels, soweit die Datenquelle sie liefert.
+   * Fehlt eine Sprache, wird `title` angezeigt – eine Kategorie mit
+   * Prosa-Fragen (z. B. Wahlen) kann so schrittweise lokalisiert werden,
+   * ohne das Schema zu brechen.
+   */
+  titles?: Partial<Record<'en' | 'de' | 'es', string>>;
   /** Anstoss-/Auflösungszeitpunkt in UTC; nach diesem Zeitpunkt ist der Tipp gesperrt */
   utcDate: string;
   status: EventStatus;
@@ -66,8 +78,19 @@ export interface PredictionsFile {
 
 export interface ArenaModel {
   id: string;
+  /**
+   * Kanonischer Name in der Standardsprache.
+   * Bei echten Sprachmodellen ein Eigenname, der nie übersetzt wird.
+   */
   name: string;
+  /**
+   * Übersetzungen des Namens – nur für Referenz-Teilnehmer nötig
+   * („Random walk" / „Random-Walk" / „Camino aleatorio").
+   */
+  names?: Partial<Record<'en' | 'de' | 'es', string>>;
   provider: string;
+  /** Übersetzungen des Anbieters, z. B. „Reference" / „Referenz". */
+  providers?: Partial<Record<'en' | 'de' | 'es', string>>;
   /** Akzentfarbe für Avatar/Chips (Hex) */
   color: string;
   version?: string;

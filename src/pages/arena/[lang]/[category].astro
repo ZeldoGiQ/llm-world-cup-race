@@ -1,0 +1,31 @@
+---
+// Kategorieseiten in den Alternativsprachen (/arena/de/<category> usw.).
+import CategoryView from '../../../arena/views/CategoryView.astro';
+import { categories } from '../../../arena/lib/plugins';
+import {
+  assertNoReservedCategoryId,
+  isLocale,
+  PREFIXED_LOCALES,
+  type Locale,
+} from '../../../arena/lib/i18n/locales';
+import registry from '../../../../public/arena-data/registry.json';
+import type { ArenaRegistryFile } from '../../../arena/lib/types';
+
+/** Kreuzprodukt aus Alternativsprachen und Kategorien. */
+export function getStaticPaths() {
+  const file = registry as ArenaRegistryFile;
+  const active = file.categories.filter((entry) => categories.has(entry.id));
+  return PREFIXED_LOCALES.flatMap((lang) =>
+    active.map((entry) => {
+      assertNoReservedCategoryId(entry.id);
+      return { params: { lang, category: entry.id } };
+    }),
+  );
+}
+
+const { lang, category } = Astro.params;
+if (!isLocale(lang)) throw new Error(`Unbekannte Sprache "${lang}".`);
+const locale: Locale = lang;
+---
+
+<CategoryView locale={locale} categoryId={category!} />

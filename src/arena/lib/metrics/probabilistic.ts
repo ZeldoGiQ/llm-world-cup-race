@@ -21,9 +21,12 @@ import {
 /** Brier-Score: mittlerer quadratischer Fehler der Wahrscheinlichkeit. 0 = perfekt, 1 = maximal falsch. */
 export const brier: Metric = {
   id: 'brier',
-  label: 'Brier',
-  description:
-    'Brier-Score: mittlerer quadratischer Abstand zwischen genannter Wahrscheinlichkeit und tatsächlichem Ausgang (0 = perfekt, 0,25 = uninformiertes 50/50, 1 = mit voller Überzeugung falsch). Proper Scoring Rule – belohnt ehrliche Wahrscheinlichkeiten statt Overconfidence.',
+  label: { en: 'Brier', de: 'Brier', es: 'Brier' },
+  description: {
+    en: 'Brier score: the mean squared distance between the stated probability and the actual outcome (0 = perfect, 0.25 = uninformative 50/50, 1 = confidently wrong). A proper scoring rule — it rewards honest probabilities instead of overconfidence.',
+    de: 'Brier-Score: mittlerer quadratischer Abstand zwischen genannter Wahrscheinlichkeit und tatsächlichem Ausgang (0 = perfekt, 0,25 = uninformiertes 50/50, 1 = mit voller Überzeugung falsch). Proper Scoring Rule – belohnt ehrliche Wahrscheinlichkeiten statt Overconfidence.',
+    es: 'Puntuación de Brier: distancia cuadrática media entre la probabilidad declarada y el resultado real (0 = perfecto, 0,25 = un 50/50 sin información, 1 = equivocado con plena convicción). Es una regla de puntuación propia: premia las probabilidades honestas en lugar del exceso de confianza.',
+  },
   appliesTo: ['binary'],
   betterDirection: 'lower',
   compute(samples: Sample[]): MetricValue | null {
@@ -34,7 +37,7 @@ export const brier: Metric = {
     );
     return average === null ? null : { value: average, n: pairs.length };
   },
-  format: (v) => formatFixed(v.value, 3),
+  format: (v, locale) => formatFixed(v.value, locale, 3),
 };
 
 /**
@@ -46,9 +49,12 @@ const EPSILON = 1e-15;
 
 export const logLoss: Metric = {
   id: 'log-loss',
-  label: 'Log-Loss',
-  description:
-    'Negative Log-Likelihood: bestraft mit hoher Überzeugung abgegebene Fehlprognosen drastisch stärker als der Brier-Score. Wahrscheinlichkeiten werden minimal von 0 und 1 weggeklemmt, damit ein einzelner Totalirrer den Wert nicht auf unendlich treibt.',
+  label: { en: 'Log loss', de: 'Log-Loss', es: 'Pérdida log.' },
+  description: {
+    en: 'Negative log-likelihood: penalises confidently wrong forecasts far more sharply than the Brier score. Probabilities are clipped marginally away from 0 and 1 so that a single total miss cannot drive the value to infinity.',
+    de: 'Negative Log-Likelihood: bestraft mit hoher Überzeugung abgegebene Fehlprognosen drastisch stärker als der Brier-Score. Wahrscheinlichkeiten werden minimal von 0 und 1 weggeklemmt, damit ein einzelner Totalirrtum den Wert nicht auf unendlich treibt.',
+    es: 'Pérdida logarítmica (log-loss): penaliza los pronósticos equivocados con alta convicción mucho más que la puntuación de Brier. Las probabilidades se recortan mínimamente respecto de 0 y 1 para que un único error total no lleve el valor al infinito.',
+  },
   appliesTo: ['binary'],
   betterDirection: 'lower',
   compute(samples: Sample[]): MetricValue | null {
@@ -62,7 +68,7 @@ export const logLoss: Metric = {
     );
     return average === null ? null : { value: average, n: pairs.length };
   },
-  format: (v) => formatFixed(v.value, 3),
+  format: (v, locale) => formatFixed(v.value, locale, 3),
 };
 
 /**
@@ -71,9 +77,12 @@ export const logLoss: Metric = {
  */
 export const accuracyAtHalf: Metric = {
   id: 'accuracy-50',
-  label: 'Trefferquote',
-  description:
-    'Anteil richtiger Ja/Nein-Aussagen bei Schwelle 50 %. Nur zur Einordnung – für das Ranking sind Brier und Log-Loss maßgeblich, weil Trefferquote Overconfidence nicht bestraft.',
+  label: { en: 'Hit rate', de: 'Trefferquote', es: 'Acierto' },
+  description: {
+    en: 'Share of correct yes/no calls at a 50 % threshold. Shown for orientation only — the ranking uses Brier and log loss, because hit rate does not penalise overconfidence.',
+    de: 'Anteil richtiger Ja/Nein-Aussagen bei Schwelle 50 %. Nur zur Einordnung – für das Ranking sind Brier und Log-Loss maßgeblich, weil die Trefferquote Overconfidence nicht bestraft.',
+    es: 'Proporción de aciertos en decisiones sí/no con umbral del 50 %. Se muestra solo como referencia: la clasificación usa Brier y pérdida logarítmica, porque el acierto no penaliza el exceso de confianza.',
+  },
   appliesTo: ['binary'],
   betterDirection: 'higher',
   compute(samples: Sample[]): MetricValue | null {
@@ -86,7 +95,7 @@ export const accuracyAtHalf: Metric = {
     ).length;
     return { value: hits / pairs.length, n: pairs.length };
   },
-  format: (v) => formatPercent(v.value),
+  format: (v, locale) => formatPercent(v.value, locale),
 };
 
 metrics.register(brier);

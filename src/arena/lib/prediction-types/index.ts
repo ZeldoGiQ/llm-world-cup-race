@@ -8,7 +8,11 @@
  * Bewusst NICHT hier: welche Metriken zu einem Typ passen. Das deklarieren die
  * Metriken selbst über `appliesTo` – eine Quelle der Wahrheit statt doppelter
  * Buchführung an beiden Enden.
+ *
+ * Alle anzeigenden Funktionen erhalten die Sprache explizit, damit Zahlen und
+ * Texte je Locale korrekt erscheinen (1,234.5 vs. 1.234,5).
  */
+import type { Locale, Localized } from '../i18n/locales';
 import { Registry } from '../registry';
 import type { PredictionValue, Resolution } from '../types';
 
@@ -19,7 +23,7 @@ import type { PredictionValue, Resolution } from '../types';
 export type OutcomeQuality = 'exact' | 'close' | 'fair' | 'miss';
 
 export interface OutcomeDescription {
-  /** Kurzlabel, z. B. '+4', 'Δ 12,40', '92 % ✓' */
+  /** Kurzlabel, z. B. '+4', 'Δ 12.40', '✓ 0.04' */
   label: string;
   quality: OutcomeQuality;
   /** Ausführliche Erklärung für den Tooltip */
@@ -29,7 +33,7 @@ export interface OutcomeDescription {
 export interface PredictionTypeHandler {
   id: string;
   /** Klartext für Methodik-Seite und Tooltips */
-  label: string;
+  label: Localized<string>;
   /** Erwartetes Zellformat für den späteren CSV-Import, z. B. '2-1' */
   cellHint: string;
 
@@ -40,14 +44,18 @@ export interface PredictionTypeHandler {
   /** CSV-Zelle -> Wert; null bei ungültiger Eingabe (nie werfen). */
   parseCell(cell: string): PredictionValue | null;
 
-  formatValue(value: PredictionValue): string;
-  formatResolution(resolution: Resolution): string;
+  formatValue(value: PredictionValue, locale: Locale): string;
+  formatResolution(resolution: Resolution, locale: Locale): string;
 
   /**
    * Bewertung eines Tipps gegen das Ergebnis für die Anzeige.
    * null, wenn Typ von Tipp und Ergebnis nicht zusammenpassen.
    */
-  describeOutcome(prediction: PredictionValue, resolution: Resolution): OutcomeDescription | null;
+  describeOutcome(
+    prediction: PredictionValue,
+    resolution: Resolution,
+    locale: Locale,
+  ): OutcomeDescription | null;
 }
 
 export const predictionTypes = new Registry<PredictionTypeHandler>('PredictionType');

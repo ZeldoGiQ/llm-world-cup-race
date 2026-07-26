@@ -10,7 +10,8 @@
  * deshalb erscheint hier keine, und die Spalte fehlt schlicht. Genau dafür sind
  * die Metrik-Spalten pro Kategorie konfigurierbar.
  */
-import { flagEmoji, germanTeamName, stageLabel } from '../../../lib/format';
+import { flagEmoji } from '../../../lib/format';
+import { groupName, stageName, teamName } from '../i18n/football-terms';
 import type { ArenaEvent } from '../types';
 import { categories, type CategoryDescriptor } from './index';
 
@@ -25,49 +26,43 @@ function meta(event: ArenaEvent): WorldCupMetadata {
   return event.metadata as unknown as WorldCupMetadata;
 }
 
-/**
- * Ergänzung zur geteilten Übersetzungstabelle in src/lib/format.ts: Diese drei
- * Schreibweisen liefert die Datenquelle abweichend, alle übrigen Teamnamen sind
- * im Deutschen identisch. Bewusst hier lokal statt im WM-Code ergänzt, damit der
- * Bestand unangetastet bleibt.
- */
-const NAME_SUPPLEMENT: Record<string, string> = {
-  'Bosnia-Herzegovina': 'Bosnien-Herzegowina',
-  'Cape Verde Islands': 'Kap Verde',
-  'Congo DR': 'DR Kongo',
-};
-
-function teamName(apiName: string | null | undefined): string {
-  if (!apiName) return germanTeamName(apiName);
-  return NAME_SUPPLEMENT[apiName] ?? germanTeamName(apiName);
-}
-
 export const footballWorldCup: CategoryDescriptor = {
   id: 'football-worldcup',
-  label: 'Fussball-WM 2026',
-  blurb:
-    'Alle 104 Spiele der Weltmeisterschaft. Sechs Modelle haben jedes Spiel vor Anpfiff getippt – die Ergebnisse sind vollständig, das Turnier ist abgeschlossen.',
-  question: 'Endstand nach 120 Minuten (ohne Elfmeterschiessen)',
+  label: {
+    en: 'FIFA World Cup 2026',
+    de: 'Fußball-WM 2026',
+    es: 'Mundial 2026',
+  },
+  blurb: {
+    en: 'All 104 matches of the World Cup. Six models predicted every match before kick-off — the results are complete and the tournament is over.',
+    de: 'Alle 104 Spiele der Weltmeisterschaft. Sechs Modelle haben jedes Spiel vor Anpfiff getippt – die Ergebnisse sind vollständig, das Turnier ist abgeschlossen.',
+    es: 'Los 104 partidos del Mundial. Seis modelos predijeron cada partido antes del inicio; los resultados están completos y el torneo ha finalizado.',
+  },
+  question: {
+    en: 'Score after 120 minutes (penalty shootouts excluded)',
+    de: 'Endstand nach 120 Minuten (ohne Elfmeterschießen)',
+    es: 'Resultado tras 120 minutos (sin tanda de penales)',
+  },
   accent: '#34d399',
   predictionType: 'scoreline',
   metricIds: ['kicktipp-points', 'points-per-event', 'exact-acc', 'tendency-acc'],
   primaryMetric: 'kicktipp-points',
 
-  eventTitle(event) {
+  eventTitle(event, locale) {
     const { home, away } = meta(event);
     const homeTla = home?.tla ?? '???';
     const awayTla = away?.tla ?? '???';
     return {
       primary: `${homeTla} – ${awayTla}`,
-      secondary: `${teamName(home?.name)} – ${teamName(away?.name)}`,
+      secondary: `${teamName(home?.name, locale)} – ${teamName(away?.name, locale)}`,
       leading: [flagEmoji(home?.tla), flagEmoji(away?.tla)],
     };
   },
 
-  groupOf(event) {
+  groupOf(event, locale) {
     const { stage, group } = meta(event);
-    if (group) return `Gruppe ${group}`;
-    return stage ? stageLabel(stage) : 'Sonstige';
+    if (group) return groupName(group, locale);
+    return stageName(stage, locale);
   },
 };
 

@@ -1,0 +1,15 @@
+---
+// Methodik in den Alternativsprachen (/arena/de/methodology, /arena/es/methodology).
+import MethodologyView from '../../../arena/views/MethodologyView.astro';
+import { isLocale, PREFIXED_LOCALES, type Locale } from '../../../arena/lib/i18n/locales';
+
+export function getStaticPaths() {
+  return PREFIXED_LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+if (!isLocale(lang)) throw new Error(`Unbekannte Sprache "${lang}".`);
+const locale: Locale = lang;
+---
+
+<MethodologyView locale={locale} />

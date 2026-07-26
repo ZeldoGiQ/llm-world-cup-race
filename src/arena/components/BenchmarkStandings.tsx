@@ -1,16 +1,26 @@
+import type { Locale } from '../lib/i18n/locales';
+import { t, type Translate } from '../lib/i18n/messages';
 import type { StandingRow, Standings } from '../lib/scoring/standings';
 import ModelBadge from './ModelBadge';
 
 /** Podest-Medaille für die ersten drei Ränge, sonst neutraler Kreis. */
-function RankMedallion({ rank, provisional }: { rank: number; provisional?: boolean }) {
+function RankMedallion({
+  rank,
+  provisional,
+  translate,
+}: {
+  rank: number;
+  provisional?: boolean;
+  translate: Translate;
+}) {
   if (rank === 0) {
     return (
       <span
         className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-dashed border-ink-700 font-mono text-[11px] text-ink-500"
         title={
           provisional
-            ? 'Zu wenige gewertete Events für einen belastbaren Rang – Werte vorläufig'
-            : 'Ohne Wertung – keine gewerteten Events'
+            ? translate('standings.provisionalRankTitle')
+            : translate('standings.noRankTitle')
         }
       >
         {provisional ? '?' : '–'}
@@ -28,7 +38,17 @@ function RankMedallion({ rank, provisional }: { rank: number; provisional?: bool
 }
 
 /** Zahlenzelle; die Ranking-Metrik wird hervorgehoben. */
-function ValueCell({ row, metricId, isPrimary }: { row: StandingRow; metricId: string; isPrimary: boolean }) {
+function ValueCell({
+  row,
+  metricId,
+  isPrimary,
+  translate,
+}: {
+  row: StandingRow;
+  metricId: string;
+  isPrimary: boolean;
+  translate: Translate;
+}) {
   const cell = row.cells.find((c) => c.metricId === metricId);
   if (!cell) return <td className="px-4 py-3 text-right font-mono text-ink-500">—</td>;
   return (
@@ -36,7 +56,11 @@ function ValueCell({ row, metricId, isPrimary }: { row: StandingRow; metricId: s
       className={`px-4 py-3 text-right font-mono tabular ${
         isPrimary ? 'text-base font-bold text-signal-300' : 'text-ink-200'
       }`}
-      title={cell.value ? `${cell.label} · n = ${cell.value.n}` : `${cell.label} · nicht berechenbar`}
+      title={
+        cell.value
+          ? translate('standings.metricTitle', { label: cell.label, n: cell.value.n })
+          : translate('standings.metricUncomputable', { label: cell.label })
+      }
     >
       {cell.formatted}
     </td>
@@ -46,25 +70,27 @@ function ValueCell({ row, metricId, isPrimary }: { row: StandingRow; metricId: s
 interface Props {
   standings: Standings;
   primaryMetric: string;
-  /** Einheit der Ranking-Metrik, z. B. "Indexpunkte" */
+  locale: Locale;
+  /** Einheit der Ranking-Metrik, z. B. "index points" */
   unit?: string;
 }
 
 /**
  * Leaderboard einer Kategorie – vollständig spaltengetrieben.
  *
- * Die Spalten kommen aus `standings.columns` (also aus `descriptor.metricIds`).
- * Diese Komponente kennt keine einzige konkrete Metrik: eine neue Metrik in der
- * Kategorie erscheint hier automatisch, ohne Änderung an dieser Datei.
+ * Die Spalten kommen aus `standings.columns` (also aus `descriptor.metricIds`)
+ * und sind dort bereits in der aktiven Sprache aufgelöst. Diese Komponente kennt
+ * keine einzige konkrete Metrik: eine neue Metrik erscheint automatisch.
  */
-export default function BenchmarkStandings({ standings, primaryMetric, unit }: Props) {
+export default function BenchmarkStandings({ standings, primaryMetric, locale, unit }: Props) {
+  const translate = t(locale);
   const { rows, baselineRows, columns } = standings;
   const hasScores = rows.some((row) => row.scored > 0);
 
   if (!hasScores) {
     return (
       <div className="rounded-2xl border border-ink-700/70 bg-ink-900/60 p-8 text-center text-sm text-ink-300">
-        Noch keine aufgelösten Events – Werte erscheinen, sobald das erste Ergebnis feststeht.
+        {translate('standings.empty')}
       </div>
     );
   }
@@ -80,17 +106,17 @@ export default function BenchmarkStandings({ standings, primaryMetric, unit }: P
         {isBaseline ? (
           <span
             className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-ink-700 font-mono text-[10px] text-ink-400"
-            title="Referenzwert"
+            title={translate('standings.baselineMark')}
           >
             ø
           </span>
         ) : (
-          <RankMedallion rank={row.rank} provisional={row.provisional} />
+          <RankMedallion rank={row.rank} provisional={row.provisional} translate={translate} />
         )}
       </td>
       <td className="px-4 py-3">
         <div className="flex items-center gap-2">
-          <ModelBadge model={row.model} />
+          <ModelBadge model={row.model} locale={locale} />
           {row.provisional && (
             <span
               className="shrink-0 rounded-full border px-1.5 py-px text-[9px] font-semibold uppercase tracking-wider"
@@ -98,9 +124,9 @@ export default function BenchmarkStandings({ standings, primaryMetric, unit }: P
                 borderColor: 'color-mix(in srgb, var(--arena-live) 45%, transparent)',
                 color: 'var(--arena-live)',
               }}
-              title={`Nur ${row.scored} gewertete Events – zu wenig für einen belastbaren Vergleich`}
+              title={translate.plural('standings.provisionalTitle', row.scored)}
             >
-              vorläufig
+              {translate('standings.provisional')}
             </span>
           )}
         </div>
@@ -111,6 +137,7 @@ export default function BenchmarkStandings({ standings, primaryMetric, unit }: P
           row={row}
           metricId={column.metricId}
           isPrimary={column.metricId === primaryMetric}
+          translate={translate}
         />
       ))}
       <td className="px-4 py-3 text-right font-mono tabular text-ink-400">{row.scored}</td>
@@ -125,10 +152,10 @@ export default function BenchmarkStandings({ standings, primaryMetric, unit }: P
           <thead>
             <tr className="text-left text-[11px] uppercase tracking-wider text-ink-400">
               <th scope="col" className="px-4 py-3 font-medium">
-                Rang
+                {translate('standings.rank')}
               </th>
               <th scope="col" className="px-4 py-3 font-medium">
-                Modell
+                {translate('standings.model')}
               </th>
               {columns.map((column) => (
                 <th
@@ -143,8 +170,12 @@ export default function BenchmarkStandings({ standings, primaryMetric, unit }: P
                   ) : null}
                 </th>
               ))}
-              <th scope="col" className="px-4 py-3 text-right font-medium" title="Gewertete Events">
-                Gewertet
+              <th
+                scope="col"
+                className="px-4 py-3 text-right font-medium"
+                title={translate('standings.scoredTitle')}
+              >
+                {translate('standings.scored')}
               </th>
             </tr>
           </thead>
@@ -171,13 +202,13 @@ export default function BenchmarkStandings({ standings, primaryMetric, unit }: P
                     ø
                   </span>
                 ) : (
-                  <RankMedallion rank={row.rank} provisional={row.provisional} />
+                  <RankMedallion rank={row.rank} provisional={row.provisional} translate={translate} />
                 )}
                 <div className="min-w-0 flex-1">
-                  <ModelBadge model={row.model} />
+                  <ModelBadge model={row.model} locale={locale} />
                   {row.provisional && (
                     <span className="mt-0.5 block text-[10px]" style={{ color: 'var(--arena-live)' }}>
-                      vorläufig · nur {row.scored} Events
+                      {translate.plural('standings.provisionalShort', row.scored)}
                     </span>
                   )}
                 </div>
@@ -192,7 +223,8 @@ export default function BenchmarkStandings({ standings, primaryMetric, unit }: P
                   </span>
                 ))}
                 <span>
-                  Gewertet <span className="font-mono text-ink-200">{row.scored}</span>
+                  {translate('standings.scored')}{' '}
+                  <span className="font-mono text-ink-200">{row.scored}</span>
                 </span>
               </p>
             </li>
@@ -200,13 +232,7 @@ export default function BenchmarkStandings({ standings, primaryMetric, unit }: P
         })}
       </ul>
 
-      <p className="mt-3 text-xs text-ink-400">
-        Gewertet werden nur aufgelöste Events. Spalten mit „—" sind für dieses Modell nicht
-        berechenbar (keine Tipps oder keine Baseline). Modelle, die weniger als die Hälfte der
-        aufgelösten Events getippt haben, gelten als{' '}
-        <span style={{ color: 'var(--arena-live)' }}>vorläufig</span> und erhalten keinen Rang –
-        Werte über unterschiedlich grosse Event-Mengen sind nicht vergleichbar.
-      </p>
+      <p className="mt-3 text-xs text-ink-400">{translate('standings.footnote')}</p>
     </div>
   );
 }

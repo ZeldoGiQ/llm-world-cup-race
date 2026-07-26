@@ -18,8 +18,9 @@
  */
 import { scorePrediction } from '../../../lib/scoring';
 import { SCORING } from '../../../lib/config';
+import { formatSigned } from '../i18n/format';
 import type { Sample } from '../types';
-import { formatFixed, mean, metrics, type Metric, type MetricValue } from './index';
+import { mean, metrics, type Metric, type MetricValue } from './index';
 
 /**
  * Verlust eines einzelnen Paares, klein = gut.
@@ -54,9 +55,12 @@ function averageLoss(samples: Sample[]): number | null {
 
 export const skillScore: Metric = {
   id: 'skill-score',
-  label: 'Skill',
-  description:
-    'Skill-Score gegenüber der Baseline: 1 − Verlust(Modell) / Verlust(Baseline). Über 0 heisst besser als die Referenz (Buchmacher-Konsens, Random-Walk bzw. letzte Umfrage), 0 gleich gut, negativ schlechter. Der Quotient kürzt die Einheit weg – deshalb ist diese Zahl auch über Kategorien hinweg vergleichbar und die Grundlage des Gesamt-Leaderboards.',
+  label: { en: 'Skill', de: 'Skill', es: 'Habilidad' },
+  description: {
+    en: 'Skill score against the baseline: 1 − loss(model) / loss(baseline). Above 0 means better than the reference (bookmaker consensus, random walk or latest poll), 0 means equal, negative means worse. The ratio cancels out the unit, which makes this figure comparable across categories and the basis of the overall leaderboard.',
+    de: 'Skill-Score gegenüber der Baseline: 1 − Verlust(Modell) / Verlust(Baseline). Über 0 heißt besser als die Referenz (Buchmacher-Konsens, Random-Walk bzw. letzte Umfrage), 0 gleich gut, negativ schlechter. Der Quotient kürzt die Einheit weg – deshalb ist diese Zahl auch über Kategorien hinweg vergleichbar und die Grundlage des Gesamt-Leaderboards.',
+    es: 'Puntuación de habilidad frente a la línea base: 1 − pérdida(modelo) / pérdida(línea base). Por encima de 0 significa mejor que la referencia (consenso de casas de apuestas, camino aleatorio o última encuesta), 0 igual y negativo peor. El cociente elimina la unidad, por lo que esta cifra es comparable entre categorías y sirve de base para la clasificación general.',
+  },
   appliesTo: ['*'],
   requiresBaseline: true,
   betterDirection: 'higher',
@@ -72,7 +76,10 @@ export const skillScore: Metric = {
 
     return { value: 1 - modelLoss / baselineLoss, n: samples.length };
   },
-  format: (v) => (v.value > 0 ? `+${formatFixed(v.value, 3)}` : formatFixed(v.value, 3)),
+  // Vorzeichen explizit über Intl (signDisplay), damit "+0,42" bzw. "+0.42" auf
+  // den ersten Blick zeigt, dass die Baseline geschlagen wurde – und die
+  // Vorzeichenstellung der jeweiligen Sprache folgt.
+  format: (v, locale) => formatSigned(v.value, locale, 3),
 };
 
 metrics.register(skillScore);

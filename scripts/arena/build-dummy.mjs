@@ -91,7 +91,9 @@ async function buildStocks() {
 
     events.push({
       id,
-      title: `S&P 500 – Schlusskurs ${date.toLocaleDateString('de-DE', { timeZone: 'UTC' })}`,
+      // Rückfall-Titel in der Standardsprache; angezeigt wird der aus
+      // Symbol + Datum gebaute Titel des Kategorie-Deskriptors.
+      title: `S&P 500 closing price, ${date.toISOString().slice(0, 10)}`,
       utcDate: date.toISOString(),
       status: resolved ? 'RESOLVED' : 'UPCOMING',
       predictionType: 'numeric',
@@ -132,21 +134,107 @@ async function buildStocks() {
 
 async function buildElections() {
   const random = rng(1312026);
+  // Englisch ist der kanonische Titel; de/es kommen als Übersetzungen mit.
+  // Ein echter Resolver liefert später genau dieselbe Struktur.
   const questions = [
-    ['Amtsinhaber gewinnt die Präsidentschaftswahl', 0.62, '2026-05-10'],
-    ['Wahlbeteiligung über 70 Prozent', 0.44, '2026-05-10'],
-    ['Regierungspartei verliert die absolute Mehrheit', 0.71, '2026-05-24'],
-    ['Koalitionsverhandlungen dauern über 60 Tage', 0.38, '2026-06-02'],
-    ['Grüne erreichen über 15 Prozent', 0.29, '2026-06-07'],
-    ['Kandidatin X tritt vor der Wahl zurück', 0.12, '2026-06-14'],
-    ['Zweiter Wahlgang wird nötig', 0.55, '2026-06-21'],
-    ['Neue Partei zieht ins Parlament ein', 0.47, '2026-06-28'],
-    ['Referendum wird angenommen', 0.66, '2026-07-05'],
-    ['Rücktritt des Finanzministers bis Monatsende', 0.21, '2026-07-12'],
-    ['Parlament beschliesst Neuwahlen', 0.33, '2026-08-16'],
-    ['Umfragevorsprung schrumpft unter 3 Punkte', 0.58, '2026-08-23'],
-    ['Kandidat Y gewinnt die Vorwahl', 0.49, '2026-09-06'],
-    ['Wahlrechtsreform passiert die zweite Kammer', 0.4, '2026-09-13'],
+    {
+      en: 'Incumbent wins the presidential election',
+      de: 'Amtsinhaber gewinnt die Präsidentschaftswahl',
+      es: 'El titular gana la elección presidencial',
+      p: 0.62,
+      date: '2026-05-10',
+    },
+    {
+      en: 'Turnout exceeds 70 percent',
+      de: 'Wahlbeteiligung über 70 Prozent',
+      es: 'La participación supera el 70 por ciento',
+      p: 0.44,
+      date: '2026-05-10',
+    },
+    {
+      en: 'Governing party loses its absolute majority',
+      de: 'Regierungspartei verliert die absolute Mehrheit',
+      es: 'El partido gobernante pierde la mayoría absoluta',
+      p: 0.71,
+      date: '2026-05-24',
+    },
+    {
+      en: 'Coalition talks last more than 60 days',
+      de: 'Koalitionsverhandlungen dauern über 60 Tage',
+      es: 'Las negociaciones de coalición duran más de 60 días',
+      p: 0.38,
+      date: '2026-06-02',
+    },
+    {
+      en: 'Green party reaches more than 15 percent',
+      de: 'Grüne erreichen über 15 Prozent',
+      es: 'Los verdes superan el 15 por ciento',
+      p: 0.29,
+      date: '2026-06-07',
+    },
+    {
+      en: 'Candidate X withdraws before the election',
+      de: 'Kandidatin X tritt vor der Wahl zurück',
+      es: 'La candidata X se retira antes de la elección',
+      p: 0.12,
+      date: '2026-06-14',
+    },
+    {
+      en: 'A run-off round becomes necessary',
+      de: 'Zweiter Wahlgang wird nötig',
+      es: 'Se hace necesaria una segunda vuelta',
+      p: 0.55,
+      date: '2026-06-21',
+    },
+    {
+      en: 'A new party enters parliament',
+      de: 'Neue Partei zieht ins Parlament ein',
+      es: 'Un nuevo partido entra en el parlamento',
+      p: 0.47,
+      date: '2026-06-28',
+    },
+    {
+      en: 'The referendum passes',
+      de: 'Referendum wird angenommen',
+      es: 'El referéndum es aprobado',
+      p: 0.66,
+      date: '2026-07-05',
+    },
+    {
+      en: 'Finance minister resigns by month end',
+      de: 'Rücktritt des Finanzministers bis Monatsende',
+      es: 'El ministro de Finanzas renuncia antes de fin de mes',
+      p: 0.21,
+      date: '2026-07-12',
+    },
+    {
+      en: 'Parliament calls a snap election',
+      de: 'Parlament beschließt Neuwahlen',
+      es: 'El parlamento convoca elecciones anticipadas',
+      p: 0.33,
+      date: '2026-08-16',
+    },
+    {
+      en: 'Polling lead narrows to under 3 points',
+      de: 'Umfragevorsprung schrumpft unter 3 Punkte',
+      es: 'La ventaja en las encuestas baja de 3 puntos',
+      p: 0.58,
+      date: '2026-08-23',
+    },
+    {
+      en: 'Candidate Y wins the primary',
+      de: 'Kandidat Y gewinnt die Vorwahl',
+      es: 'El candidato Y gana las primarias',
+      p: 0.49,
+      date: '2026-09-06',
+    },
+    {
+      en: 'Electoral reform passes the second chamber',
+      de: 'Wahlrechtsreform passiert die zweite Kammer',
+      es: 'La reforma electoral se aprueba en la segunda cámara',
+      p: 0.4,
+      date: '2026-09-13',
+    },
   ];
   const RESOLVED_COUNT = 10;
 
@@ -163,8 +251,9 @@ async function buildElections() {
   const events = [];
   const predictions = {};
 
-  questions.forEach(([title, trueProbability, dateOnly], index) => {
-    const date = new Date(`${dateOnly}T18:00:00Z`);
+  questions.forEach((question, index) => {
+    const trueProbability = question.p;
+    const date = new Date(`${question.date}T18:00:00Z`);
     const resolved = index < RESOLVED_COUNT;
     // Ausgang deterministisch aus der wahren Wahrscheinlichkeit ziehen.
     const outcome = random() < trueProbability;
@@ -172,12 +261,14 @@ async function buildElections() {
 
     events.push({
       id,
-      title,
+      title: question.en,
+      titles: { en: question.en, de: question.de, es: question.es },
       utcDate: date.toISOString(),
       status: resolved ? 'RESOLVED' : 'UPCOMING',
       predictionType: 'binary',
       resolution: resolved ? { kind: 'binary', outcome } : null,
-      metadata: { region: 'DACH', topic: 'Wahlen', source: 'Beispieldaten' },
+      // topicKey statt Klartext, damit das Thema lokalisiert werden kann.
+      metadata: { region: 'DACH', topicKey: 'elections', source: 'sample data' },
     });
 
     const createdAt = new Date(date.getTime() - 14 * 24 * 3600 * 1000).toISOString();

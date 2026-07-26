@@ -1,42 +1,79 @@
 ---
 /**
- * Eigenes Layout der Arena.
+ * Eigenes Layout der Arena – mehrsprachig.
  *
- * Absichtlich getrennt vom WM-Layout (src/layouts/Layout.astro): Jenes hat fest
- * verdrahtete Titel/Body-Klassen und keinen head-Slot. Ein eigenes Layout lässt
- * den WM-Bestand vollständig unberührt und erlaubt eigene Meta-Daten.
+ * Absichtlich getrennt vom WM-Layout (src/layouts/Layout.astro): Jenes ist fest
+ * auf Deutsch verdrahtet und hat keinen head-Slot. Ein eigenes Layout lässt den
+ * WM-Bestand vollständig unberührt.
+ *
+ * SEO: lang-Attribut je Sprache, hreflang-Alternates für alle Sprachen plus
+ * x-default auf die Standardsprache, canonical auf die eigene Adresse.
  */
 import '@fontsource-variable/inter';
 import '@fontsource-variable/fraunces';
 import '@fontsource-variable/jetbrains-mono';
 import '../../styles/global.css';
 import '../styles/arena.css';
+import {
+  arenaPath,
+  arenaUrl,
+  DEFAULT_LOCALE,
+  INTL_LOCALE,
+  LOCALES,
+  LOCALE_NAMES,
+  LOCALE_SHORT,
+  OG_LOCALE,
+  type Locale,
+} from '../lib/i18n/locales';
+import { t } from '../lib/i18n/messages';
 
 interface Props {
+  locale: Locale;
+  /** Unterpfad ohne Sprache, z. B. '' | 'methodology' | 'stocks-index' */
+  sub?: string;
   title?: string;
   description?: string;
 }
 
-const {
-  title = 'Prediction Benchmarks Arena',
-  description = 'Welches KI-Modell prognostiziert die Zukunft am besten? Ein offenes Benchmark über Sport, Aktienmärkte und Wahlen – alle Vorhersagen vor dem Ereignis veröffentlicht.',
-} = Astro.props;
+const { locale, sub = '', title, description } = Astro.props;
+const translate = t(locale);
 
-const fullTitle = title === 'Prediction Benchmarks Arena' ? title : `${title} · Arena`;
+const siteTitle = translate('meta.siteTitle');
+const pageTitle = title ? `${title} · ${siteTitle}` : siteTitle;
+const pageDescription = description ?? translate('meta.siteDescription');
+// Absolute Adressen: Suchmaschinen erwarten bei canonical und hreflang volle
+// URLs. Konsequent ohne abschliessenden Schrägstrich, damit sich canonical und
+// hreflang auf genau eine Schreibweise festlegen.
+const currentUrl = arenaUrl(locale, sub);
 ---
 
 <!doctype html>
-<html lang="de" class="scroll-smooth">
+<html lang={INTL_LOCALE[locale]} class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{fullTitle}</title>
-    <meta name="description" content={description} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
     <meta name="theme-color" content="#0a0c10" />
-    <meta property="og:title" content={fullTitle} />
-    <meta property="og:description" content={description} />
+
+    <link rel="canonical" href={currentUrl} />
+    {
+      LOCALES.map((alternate) => (
+        <link rel="alternate" hreflang={alternate} href={arenaUrl(alternate, sub)} />
+      ))
+    }
+    <link rel="alternate" hreflang="x-default" href={arenaUrl(DEFAULT_LOCALE, sub)} />
+
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={currentUrl} />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="de_DE" />
+    <meta property="og:locale" content={OG_LOCALE[locale]} />
+    {
+      LOCALES.filter((alternate) => alternate !== locale).map((alternate) => (
+        <meta property="og:locale:alternate" content={OG_LOCALE[alternate]} />
+      ))
+    }
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body
@@ -55,23 +92,63 @@ const fullTitle = title === 'Prediction Benchmarks Arena' ? title : `${title} ·
       </div>
 
       <header class="mx-auto max-w-6xl px-4 pt-8">
-        <nav class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm" aria-label="Arena">
+        <nav
+          class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm"
+          aria-label={siteTitle}
+        >
           <a
-            href="/arena"
+            href={arenaPath(locale)}
             class="font-display text-base font-semibold text-ink-50 transition-colors hover:text-signal-300"
           >
-            Benchmarks<span class="text-signal-400">.</span>Arena
+            {translate('nav.brand')}<span class="text-signal-400">.</span>Arena
           </a>
-          <a href="/arena" class="text-ink-300 transition-colors hover:text-ink-100">Kategorien</a>
-          <a href="/arena/methodology" class="text-ink-300 transition-colors hover:text-ink-100">
-            Methodik
+          <a href={arenaPath(locale)} class="text-ink-300 transition-colors hover:text-ink-100">
+            {translate('nav.categories')}
           </a>
-          <span
-            class="ml-auto rounded-full border border-ink-700 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-ink-400"
-            title="Diese Seite ist ein Prototyp: Ausser der Fussball-WM sind alle Daten Beispieldaten."
+          <a
+            href={arenaPath(locale, 'methodology')}
+            class="text-ink-300 transition-colors hover:text-ink-100"
           >
-            Prototyp
-          </span>
+            {translate('nav.methodology')}
+          </a>
+
+          <div class="ml-auto flex items-center gap-2">
+            <span
+              class="rounded-full border border-ink-700 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-ink-400"
+              title={translate('nav.prototypeTitle')}
+            >
+              {translate('nav.prototype')}
+            </span>
+
+            {/* Sprachumschalter: reine Links, funktioniert ohne JavaScript und
+                verweist auf genau dieselbe Seite in der anderen Sprache. */}
+            <ul
+              class="flex items-center overflow-hidden rounded-full border border-ink-700 bg-ink-900/80"
+              aria-label={translate('nav.language')}
+            >
+              {
+                LOCALES.map((alternate) => (
+                  <li>
+                    <a
+                      href={arenaPath(alternate, sub)}
+                      hreflang={alternate}
+                      lang={alternate}
+                      aria-current={alternate === locale ? 'true' : undefined}
+                      title={LOCALE_NAMES[alternate]}
+                      class={`block px-2.5 py-1 font-mono text-[11px] font-semibold transition-colors ${
+                        alternate === locale
+                          ? 'bg-ink-700 text-ink-50'
+                          : 'text-ink-400 hover:text-ink-100'
+                      }`}
+                    >
+                      {LOCALE_SHORT[alternate]}
+                      <span class="sr-only"> — {LOCALE_NAMES[alternate]}</span>
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
         </nav>
       </header>
 
@@ -80,17 +157,15 @@ const fullTitle = title === 'Prediction Benchmarks Arena' ? title : `${title} ·
       <footer class="mt-16 border-t border-ink-800 py-8">
         <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 text-xs text-ink-400">
           <p>
-            Ein Projekt von <a
+            {translate('footer.projectBy')}{' '}
+            <a
               class="font-semibold text-clay-400 underline decoration-ink-600 underline-offset-2 transition-colors hover:text-clay-300"
               href="https://www.youtube.com/@zeldogiq"
               rel="noopener noreferrer"
               target="_blank">ZELDOgiq</a
             >
           </p>
-          <p>
-            Prototyp-Hinweis: Nur die Kategorie „Fussball-WM 2026" enthält echte Daten. Aktien,
-            Wahlen und Sport-Mix sind Beispieldaten zum Aufbau der Oberfläche.
-          </p>
+          <p>{translate('footer.prototypeNote')}</p>
         </div>
       </footer>
     </div>

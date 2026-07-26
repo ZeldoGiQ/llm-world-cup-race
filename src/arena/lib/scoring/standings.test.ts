@@ -49,11 +49,13 @@ function predictionsFile(
   return { category: 'test', predictions };
 }
 
+const three = (value: string) => ({ en: value, de: value, es: value });
+
 const DESCRIPTOR: CategoryDescriptor = {
   id: 'test',
-  label: 'Test',
-  blurb: '',
-  question: '',
+  label: three('Test'),
+  blurb: three(''),
+  question: three(''),
   accent: '#22d3ee',
   predictionType: 'scoreline',
   metricIds: ['kicktipp-points', 'exact-acc'],
@@ -69,7 +71,7 @@ describe('computeStandings (datengetrieben)', () => {
       e2: { a: { home: 1, away: 0 }, b: { home: 2, away: 1 }, c: { home: 1, away: 1 } },
     });
 
-    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR);
+    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR, 'en');
 
     expect(standings.columns.map((c) => c.metricId)).toEqual(['kicktipp-points', 'exact-acc']);
     expect(standings.resolvedEvents).toBe(2);
@@ -82,7 +84,7 @@ describe('computeStandings (datengetrieben)', () => {
       ['c', 0],
     ]);
     expect(standings.rows.map((r) => r.rank)).toEqual([1, 2, 3]);
-    expect(standings.rows[0]!.cells[1]!.formatted).toBe('100,0 %');
+    expect(standings.rows[0]!.cells[1]!.formatted).toBe('100.0%');
   });
 
   it('wertet nur aufgelöste Events, keine offenen', () => {
@@ -99,7 +101,7 @@ describe('computeStandings (datengetrieben)', () => {
       e4: { a: { home: 1, away: 0 } },
     });
 
-    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR);
+    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR, 'en');
     const a = standings.rows.find((r) => r.model.id === 'a')!;
     expect(standings.resolvedEvents).toBe(1);
     expect(standings.openEvents).toBe(2);
@@ -112,7 +114,7 @@ describe('computeStandings (datengetrieben)', () => {
     const events = eventsFile([scorelineEvent('e1', 2, 1), scorelineEvent('e2', 1, 0)]);
     const predictions = predictionsFile({ e1: { a: { home: 2, away: 1 } } });
 
-    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR);
+    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR, 'en');
     const a = standings.rows.find((r) => r.model.id === 'a')!;
     const b = standings.rows.find((r) => r.model.id === 'b')!;
     expect(a.scored).toBe(1);
@@ -125,7 +127,7 @@ describe('computeStandings (datengetrieben)', () => {
     const events = eventsFile([scorelineEvent('e1', 2, 1)]);
     const predictions = predictionsFile({ e1: { c: { home: 2, away: 1 } } });
 
-    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR);
+    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR, 'en');
     expect(standings.rows[0]!.model.id).toBe('c');
     expect(standings.rows[0]!.rank).toBe(1);
     expect(standings.rows.slice(1).every((r) => r.rank === 0)).toBe(true);
@@ -135,7 +137,7 @@ describe('computeStandings (datengetrieben)', () => {
     const events = eventsFile([scorelineEvent('e1', 2, 1)]);
     const predictions = predictionsFile({ e1: { unbekannt: { home: 2, away: 1 } } });
 
-    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR);
+    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR, 'en');
     expect(standings.rows).toHaveLength(3); // a, b, c – Baseline separat
     expect(standings.rows.every((r) => r.primaryValue === null)).toBe(true);
   });
@@ -146,7 +148,7 @@ describe('computeStandings (datengetrieben)', () => {
       e1: { a: { home: 1, away: 0 }, b: { home: 1, away: 0 }, c: { home: 0, away: 3 } },
     });
 
-    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR);
+    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR, 'en');
     expect(standings.rows.map((r) => r.rank)).toEqual([1, 1, 3]);
   });
 
@@ -157,7 +159,7 @@ describe('computeStandings (datengetrieben)', () => {
       e1: { a: { home: 2, away: 1 }, base: { home: 1, away: 0 } },
     });
 
-    const standings = computeStandings(MODELS, events, predictions, withBaseline);
+    const standings = computeStandings(MODELS, events, predictions, withBaseline, 'en');
     expect(standings.rows.map((r) => r.model.id)).not.toContain('base');
     expect(standings.baselineRows).toHaveLength(1);
     expect(standings.baselineRows[0]!.model.id).toBe('base');
@@ -172,7 +174,7 @@ describe('computeStandings (datengetrieben)', () => {
       e1: { a: { home: 2, away: 1 }, base: { home: 1, away: 0 } },
     });
 
-    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR);
+    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR, 'en');
     expect(standings.baselineRows).toHaveLength(0);
     expect(standings.rows.map((r) => r.model.id)).toEqual(
       expect.not.arrayContaining(['base']),
@@ -211,7 +213,7 @@ describe('computeStandings (datengetrieben)', () => {
       },
     };
 
-    const standings = computeStandings(MODELS, events, predictions, numericDescriptor);
+    const standings = computeStandings(MODELS, events, predictions, numericDescriptor, 'en');
     expect(standings.rows[0]!.model.id).toBe('b'); // kleinerer Fehler zuerst
     expect(standings.rows[0]!.primaryValue).toBe(2);
   });
@@ -230,7 +232,7 @@ describe('computeStandings (datengetrieben)', () => {
       e2: { a: { home: 1, away: 0 }, base: { home: 0, away: 3 } },
     });
 
-    const standings = computeStandings(MODELS, events, predictions, skillDescriptor);
+    const standings = computeStandings(MODELS, events, predictions, skillDescriptor, 'en');
     const a = standings.rows.find((r) => r.model.id === 'a')!;
     const skill = a.cells.find((c) => c.metricId === 'skill-score')!;
     expect(skill.value?.value).toBe(1); // perfekt gegenüber komplett falscher Baseline
@@ -245,7 +247,7 @@ describe('computeStandings (datengetrieben)', () => {
     const events = eventsFile([scorelineEvent('e1', 2, 1)]);
     const predictions = predictionsFile({ e1: { a: { home: 2, away: 1 } } });
 
-    const standings = computeStandings(MODELS, events, predictions, noBaseline);
+    const standings = computeStandings(MODELS, events, predictions, noBaseline, 'en');
     const a = standings.rows.find((r) => r.model.id === 'a')!;
     expect(a.cells.find((c) => c.metricId === 'skill-score')!.formatted).toBe('—');
   });
@@ -258,7 +260,7 @@ describe('computeStandings (datengetrieben)', () => {
     const events = eventsFile([scorelineEvent('e1', 2, 1)]);
     const predictions = predictionsFile({ e1: { a: { home: 2, away: 1 } } });
 
-    const standings = computeStandings(MODELS, events, predictions, withGhost);
+    const standings = computeStandings(MODELS, events, predictions, withGhost, 'en');
     expect(standings.columns.map((c) => c.metricId)).toEqual(['kicktipp-points']);
   });
 
@@ -278,7 +280,7 @@ describe('computeStandings (datengetrieben)', () => {
       e4: { a: { home: 2, away: 0 } },
     });
 
-    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR);
+    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR, 'en');
     const a = standings.rows.find((r) => r.model.id === 'a')!;
     const c = standings.rows.find((r) => r.model.id === 'c')!;
 
@@ -307,7 +309,7 @@ describe('computeStandings (datengetrieben)', () => {
       e4: { a: { home: 3, away: 1 }, b: { home: 2, away: 0 } },
     });
 
-    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR);
+    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR, 'en');
     const ranked = standings.rows.filter((row) => row.rank > 0);
     expect(ranked.map((row) => row.model.id)).toEqual(['a', 'b']);
     expect(ranked.map((row) => row.rank)).toEqual([1, 2]);
@@ -322,12 +324,12 @@ describe('computeStandings (datengetrieben)', () => {
       e2: { a: { home: 1, away: 0 }, b: { home: 2, away: 1 } },
     });
 
-    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR);
+    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR, 'en');
     expect(standings.rows.filter((row) => row.rank > 0).map((row) => row.rank)).toEqual([1, 2, 3]);
   });
 
   it('überlebt leere Daten', () => {
-    const empty = computeStandings(MODELS, eventsFile([]), { category: 't', predictions: {} }, DESCRIPTOR);
+    const empty = computeStandings(MODELS, eventsFile([]), { category: 't', predictions: {} }, DESCRIPTOR, 'en');
     expect(empty.rows).toHaveLength(3);
     expect(empty.resolvedEvents).toBe(0);
     expect(empty.rows.every((r) => r.primaryValue === null && r.rank === 0)).toBe(true);
@@ -345,7 +347,7 @@ describe('computeStandings (datengetrieben)', () => {
       },
     };
 
-    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR);
+    const standings = computeStandings(MODELS, events, predictions, DESCRIPTOR, 'en');
     expect(standings.rows.find((r) => r.model.id === 'a')!.scored).toBe(0);
     expect(standings.rows.find((r) => r.model.id === 'b')!.scored).toBe(1);
   });

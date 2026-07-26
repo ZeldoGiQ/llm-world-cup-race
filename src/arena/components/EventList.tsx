@@ -1,16 +1,13 @@
 import { useMemo, useState } from 'react';
-import { formatKickoff } from '../../lib/format';
 import type { CategoryDescriptor } from '../lib/categories/index';
+import { formatDateTime, formatEventTime } from '../lib/i18n/format';
+import { modelName, type Locale } from '../lib/i18n/locales';
+import { t, type Translate } from '../lib/i18n/messages';
 import { predictionTypes, type OutcomeQuality } from '../lib/prediction-types/index';
 import type { ArenaEvent, ArenaModel, EventStatus, PredictionsFile } from '../lib/types';
 import { ModelAvatar } from './ModelBadge';
 
-const STATUS_LABELS: Record<EventStatus, string> = {
-  UPCOMING: 'Offen',
-  LIVE: 'Läuft',
-  RESOLVED: 'Aufgelöst',
-  VOID: 'Ungültig',
-};
+const STATUS_ORDER: EventStatus[] = ['RESOLVED', 'LIVE', 'UPCOMING', 'VOID'];
 
 /** Farbcode der Tipp-Qualität – einheitlich über alle Vorhersage-Typen. */
 const QUALITY_CLASSES: Record<OutcomeQuality, string> = {
@@ -20,7 +17,8 @@ const QUALITY_CLASSES: Record<OutcomeQuality, string> = {
   miss: 'border-ink-700 text-ink-500',
 };
 
-function StatusPill({ status }: { status: EventStatus }) {
+function StatusPill({ status, translate }: { status: EventStatus; translate: Translate }) {
+  const label = translate(`status.${status}`);
   if (status === 'LIVE') {
     return (
       <span
@@ -35,21 +33,17 @@ function StatusPill({ status }: { status: EventStatus }) {
           className="h-1.5 w-1.5 rounded-full motion-safe:animate-pulse"
           style={{ backgroundColor: 'var(--arena-live)' }}
         />
-        Läuft
+        {label}
       </span>
     );
   }
   const styles =
-    status === 'RESOLVED'
-      ? 'border-ink-700 text-ink-300'
-      : status === 'VOID'
-        ? 'border-dashed border-ink-600 text-ink-400'
-        : 'border-ink-700 text-ink-300';
+    status === 'VOID' ? 'border-dashed border-ink-600 text-ink-400' : 'border-ink-700 text-ink-300';
   return (
     <span
       className={`shrink-0 rounded-full border px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider ${styles}`}
     >
-      {STATUS_LABELS[status]}
+      {label}
     </span>
   );
 }
@@ -59,6 +53,7 @@ interface Props {
   models: ArenaModel[];
   predictionsFile: PredictionsFile;
   descriptor: CategoryDescriptor;
+  locale: Locale;
 }
 
 const ALL = 'ALL';
@@ -66,11 +61,12 @@ const ALL = 'ALL';
 /**
  * Event-Liste mit Filtern und aufklappbaren Tipp-Details.
  *
- * Vollständig typ-agnostisch: Titel kommen aus `descriptor.eventTitle`,
- * Werte und Bewertung aus dem PredictionType-Handler. Eine neue Kategorie
- * braucht hier keine Änderung.
+ * Vollständig typ- und sprachagnostisch: Titel kommen aus
+ * `descriptor.eventTitle(event, locale)`, Werte und Bewertung aus dem
+ * PredictionType-Handler. Eine neue Kategorie braucht hier keine Änderung.
  */
-export default function EventList({ events, models, predictionsFile, descriptor }: Props) {
+export default function EventList({ events, models, predictionsFile, descriptor, locale }: Props) {
+  const translate = t(locale);
   const [status, setStatus] = useState(ALL);
   const [modelId, setModelId] = useState(ALL);
   const [query, setQuery] = useState('');
@@ -85,7 +81,7 @@ export default function EventList({ events, models, predictionsFile, descriptor 
         if (status !== ALL && event.status !== status) return false;
         if (modelId !== ALL && !predictionsFile.predictions[event.id]?.[modelId]) return false;
         if (needle) {
-          const title = descriptor.eventTitle(event);
+          const title = descriptor.eventTitle(event, locale);
           const haystack = [event.title, title.primary, title.secondary ?? '']
             .join(' ')
             .toLowerCase();
@@ -94,18 +90,19 @@ export default function EventList({ events, models, predictionsFile, descriptor 
         return true;
       })
       .sort((a, b) => a.utcDate.localeCompare(b.utcDate) || a.id.localeCompare(b.id));
-  }, [events, predictionsFile, descriptor, status, modelId, query]);
+  }, [events, predictionsFile, descriptor, locale, status, modelId, query]);
 
   const groups = useMemo(() => {
     const map = new Map<string, ArenaEvent[]>();
     for (const event of filtered) {
-      const key = descriptor.groupOf?.(event) ?? 'Alle Events';
+      const key = descriptor.groupOf?.(event, locale) ?? translate('events.groupFallback');
       const bucket = map.get(key);
       if (bucket) bucket.push(event);
       else map.set(key, [event]);
     }
     return [...map.entries()];
-  }, [filtered, descriptor]);
+    // translate ist aus locale abgeleitet und damit stabil, solange locale gleich bleibt
+  }, [filtered, descriptor, locale]);
 
   const visibleModels = modelId === ALL ? models : models.filter((m) => m.id === modelId);
   const isFiltered = status !== ALL || modelId !== ALL || query !== '';
@@ -123,7 +120,7 @@ export default function EventList({ events, models, predictionsFile, descriptor 
       return next;
     });
 
-  const selectClasses =
+  const controlClasses =
     'w-full rounded-lg border border-ink-700 bg-ink-800/80 px-3 py-2 text-sm text-ink-100 transition-colors focus:border-signal-400 focus:outline-none';
 
   return (
@@ -133,33 +130,33 @@ export default function EventList({ events, models, predictionsFile, descriptor 
           type="search"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="Event suchen …"
-          aria-label="Event suchen"
-          className={`${selectClasses} placeholder:text-ink-400`}
+          placeholder={translate('events.search')}
+          aria-label={translate('events.searchLabel')}
+          className={`${controlClasses} placeholder:text-ink-400`}
         />
         <select
-          aria-label="Status filtern"
+          aria-label={translate('events.filterStatus')}
           value={status}
           onChange={(event) => setStatus(event.target.value)}
-          className={selectClasses}
+          className={controlClasses}
         >
-          <option value={ALL}>Alle Status</option>
-          {(['RESOLVED', 'LIVE', 'UPCOMING', 'VOID'] as EventStatus[]).map((value) => (
+          <option value={ALL}>{translate('events.allStatuses')}</option>
+          {STATUS_ORDER.map((value) => (
             <option key={value} value={value}>
-              {STATUS_LABELS[value]}
+              {translate(`status.${value}`)}
             </option>
           ))}
         </select>
         <select
-          aria-label="Modell filtern"
+          aria-label={translate('events.filterModel')}
           value={modelId}
           onChange={(event) => setModelId(event.target.value)}
-          className={selectClasses}
+          className={controlClasses}
         >
-          <option value={ALL}>Alle Modelle</option>
+          <option value={ALL}>{translate('events.allModels')}</option>
           {models.map((model) => (
             <option key={model.id} value={model.id}>
-              {model.name}
+              {modelName(model, locale)}
             </option>
           ))}
         </select>
@@ -167,7 +164,7 @@ export default function EventList({ events, models, predictionsFile, descriptor 
 
       <div className="mb-4 flex items-center justify-between text-xs text-ink-400">
         <span aria-live="polite">
-          {filtered.length} von {events.length} Events
+          {translate('events.count', { shown: filtered.length, total: events.length })}
         </span>
         {isFiltered && (
           <button
@@ -175,14 +172,14 @@ export default function EventList({ events, models, predictionsFile, descriptor 
             onClick={reset}
             className="font-medium text-signal-300 transition-colors hover:text-signal-400"
           >
-            Filter zurücksetzen
+            {translate('events.resetFilters')}
           </button>
         )}
       </div>
 
       {groups.length === 0 ? (
         <div className="rounded-2xl border border-ink-700/70 bg-ink-900/60 p-8 text-center text-sm text-ink-300">
-          Keine Events gefunden.
+          {translate('events.none')}
         </div>
       ) : (
         groups.map(([groupName, groupEvents]) => (
@@ -192,11 +189,11 @@ export default function EventList({ events, models, predictionsFile, descriptor 
             </h3>
             <ul className="flex flex-col gap-2">
               {groupEvents.map((event) => {
-                const title = descriptor.eventTitle(event);
+                const title = descriptor.eventTitle(event, locale);
                 const open = openIds.has(event.id);
                 const eventPredictions = predictionsFile.predictions[event.id] ?? {};
                 const tipCount = visibleModels.filter((m) => eventPredictions[m.id]).length;
-                const kickoff = formatKickoff(event.utcDate);
+                const when = formatEventTime(event.utcDate, locale);
 
                 return (
                   <li
@@ -225,14 +222,14 @@ export default function EventList({ events, models, predictionsFile, descriptor 
                         )}
                       </span>
                       <span className="hidden shrink-0 font-mono tabular text-xs text-ink-400 sm:inline">
-                        {kickoff.local}
+                        {when.local}
                       </span>
                       <span className="shrink-0 font-mono tabular text-sm font-bold text-ink-50">
                         {event.resolution && handler
-                          ? handler.formatResolution(event.resolution)
+                          ? handler.formatResolution(event.resolution, locale)
                           : '–'}
                       </span>
-                      <StatusPill status={event.status} />
+                      <StatusPill status={event.status} translate={translate} />
                       <svg
                         viewBox="0 0 16 16"
                         className={`h-3.5 w-3.5 shrink-0 text-ink-400 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
@@ -246,19 +243,22 @@ export default function EventList({ events, models, predictionsFile, descriptor 
                     {open && (
                       <div className="border-t border-ink-700/60 bg-ink-950/40 px-3 py-3">
                         <p className="mb-2 text-xs text-ink-300">
-                          {descriptor.question}
+                          {descriptor.question[locale]}
                           {' · '}
-                          {kickoff.local}
-                          {kickoff.berlin ? ` (Berlin: ${kickoff.berlin})` : ''}
+                          {when.local}
+                          {when.utc ? ` (${translate('events.utcHint', { time: when.utc })})` : ''}
                           {' · '}
-                          {tipCount}/{visibleModels.length} Tipps
+                          {translate('events.tipCount', {
+                            count: tipCount,
+                            total: visibleModels.length,
+                          })}
                         </p>
                         <ul className="flex flex-col divide-y divide-ink-800/80">
                           {visibleModels.map((model) => {
                             const prediction = eventPredictions[model.id];
                             const outcome =
                               prediction && event.resolution && handler
-                                ? handler.describeOutcome(prediction.value, event.resolution)
+                                ? handler.describeOutcome(prediction.value, event.resolution, locale)
                                 : null;
                             const lockedBeforeEvent =
                               !!prediction?.createdAt &&
@@ -269,19 +269,21 @@ export default function EventList({ events, models, predictionsFile, descriptor 
                               <li key={model.id} className="flex items-center gap-2.5 py-2 text-sm">
                                 <ModelAvatar model={model} size="xs" />
                                 <span className="min-w-0 flex-1 truncate text-ink-100">
-                                  {model.name}
+                                  {modelName(model, locale)}
                                 </span>
                                 {lockedBeforeEvent && (
                                   <span
                                     className="shrink-0 text-[10px] text-success-300/80"
-                                    title={`Tipp abgegeben vor dem Event (${new Date(prediction!.createdAt).toLocaleString('de-DE')})`}
+                                    title={translate('events.lockedBeforeTitle', {
+                                      time: formatDateTime(prediction!.createdAt, locale),
+                                    })}
                                   >
-                                    ✓ vorab
+                                    {translate('events.lockedBefore')}
                                   </span>
                                 )}
                                 <span className="w-24 shrink-0 text-right font-mono tabular text-ink-100">
                                   {prediction && handler
-                                    ? handler.formatValue(prediction.value)
+                                    ? handler.formatValue(prediction.value, locale)
                                     : '—'}
                                 </span>
                                 <span className="w-24 shrink-0 text-right">

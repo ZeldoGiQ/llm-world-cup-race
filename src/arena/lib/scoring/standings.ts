@@ -12,6 +12,7 @@
  * unbekannte Modell-IDs in den Daten werden ignoriert.
  */
 import type { CategoryDescriptor } from '../categories/index';
+import { pick, type Locale } from '../i18n/locales';
 import { metrics, type Metric, type MetricValue } from '../metrics/index';
 import { predictionTypes } from '../prediction-types/index';
 import type { ArenaEvent, ArenaModel, EventsFile, PredictionsFile, Sample } from '../types';
@@ -110,6 +111,7 @@ export function computeStandings(
   eventsFile: EventsFile,
   predictionsFile: PredictionsFile,
   descriptor: CategoryDescriptor,
+  locale: Locale,
 ): Standings {
   const events = eventsFile?.events ?? [];
   const predictions = predictionsFile?.predictions ?? {};
@@ -152,9 +154,9 @@ export function computeStandings(
       const value = metric.compute(samples, { baselineSamples, baselineModel });
       return {
         metricId: metric.id,
-        label: metric.label,
+        label: pick(metric.label, locale),
         value,
-        formatted: value === null ? '—' : metric.format(value),
+        formatted: value === null ? '—' : metric.format(value, locale),
         betterDirection: metric.betterDirection,
       };
     });
@@ -218,8 +220,8 @@ export function computeStandings(
     baselineRows,
     columns: columnMetrics.map((m) => ({
       metricId: m.id,
-      label: m.label,
-      description: m.description,
+      label: pick(m.label, locale),
+      description: pick(m.description, locale),
     })),
     resolvedEvents: resolved.length,
     openEvents,

@@ -28,8 +28,12 @@ import type { ArenaModel, EventsFile, PredictionsFile, Sample } from './types';
 /** Anteil der Schätzungen, die den Ist-Wert unterschätzen (Bias-Indikator). */
 const underestimationRate: Metric = {
   id: 'underestimation-rate',
-  label: 'Zu niedrig',
-  description: 'Anteil der Schätzungen unterhalb des tatsächlichen Werts – zeigt systematischen Bias.',
+  label: { en: 'Too low', de: 'Zu niedrig', es: 'Demasiado bajo' },
+  description: {
+    en: 'Share of estimates below the actual value — reveals systematic bias.',
+    de: 'Anteil der Schätzungen unterhalb des tatsächlichen Werts – zeigt systematischen Bias.',
+    es: 'Proporción de estimaciones por debajo del valor real: revela un sesgo sistemático.',
+  },
   appliesTo: ['numeric'],
   betterDirection: 'lower',
   compute(samples: Sample[]) {
@@ -45,7 +49,7 @@ const underestimationRate: Metric = {
     ).length;
     return { value: below / usable.length, n: usable.length };
   },
-  format: (v) => formatFixed(v.value, 2),
+  format: (v, locale) => formatFixed(v.value, locale, 2),
 };
 
 metrics.register(underestimationRate);
@@ -54,15 +58,23 @@ metrics.register(underestimationRate);
 
 const rainfallCategory: CategoryDescriptor = {
   id: 'weather-rainfall',
-  label: 'Niederschlag',
-  blurb: 'Erfundene Kategorie, die ausschliesslich diesen Test bedient.',
-  question: 'Regenmenge in Millimetern',
+  label: { en: 'Rainfall', de: 'Niederschlag', es: 'Precipitación' },
+  blurb: {
+    en: 'Invented category that exists purely to serve this test.',
+    de: 'Erfundene Kategorie, die ausschließlich diesen Test bedient.',
+    es: 'Categoría inventada que existe solo para este test.',
+  },
+  question: {
+    en: 'Rainfall in millimetres',
+    de: 'Regenmenge in Millimetern',
+    es: 'Precipitación en milímetros',
+  },
   accent: '#22d3ee',
   predictionType: 'numeric',
   // Mischung aus bestehenden Metriken und der oben neu erfundenen:
   metricIds: ['mae', 'underestimation-rate'],
   primaryMetric: 'mae',
-  eventTitle: (event) => ({ primary: event.title, secondary: 'Testkategorie' }),
+  eventTitle: (event) => ({ primary: event.title, secondary: 'Test category' }),
 };
 
 categories.register(rainfallCategory);
@@ -107,11 +119,11 @@ const predictions: PredictionsFile = {
 };
 
 describe('Erweiterbarkeit ohne Core-Änderung', () => {
-  const standings = computeStandings(MODELS, events, predictions, rainfallCategory);
+  const standings = computeStandings(MODELS, events, predictions, rainfallCategory, 'en');
 
   it('nimmt die neue Kategorie in die Registry auf', () => {
     expect(categories.has('weather-rainfall')).toBe(true);
-    expect(categories.get('weather-rainfall').label).toBe('Niederschlag');
+    expect(categories.get('weather-rainfall').label.de).toBe('Niederschlag');
   });
 
   it('macht die neue Metrik über die Typ-Zuordnung auffindbar', () => {
@@ -122,7 +134,7 @@ describe('Erweiterbarkeit ohne Core-Änderung', () => {
 
   it('erzeugt die Tabellenspalten allein aus metricIds', () => {
     expect(standings.columns.map((c) => c.metricId)).toEqual(['mae', 'underestimation-rate']);
-    expect(standings.columns[1]!.label).toBe('Zu niedrig');
+    expect(standings.columns[1]!.label).toBe('Too low');
   });
 
   it('berechnet die neue Metrik korrekt und rankt nach der Wunschmetrik', () => {

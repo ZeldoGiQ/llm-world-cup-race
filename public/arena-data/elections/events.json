@@ -4,7 +4,12 @@
   "events": [
     {
       "id": "pol-01",
-      "title": "Amtsinhaber gewinnt die Präsidentschaftswahl",
+      "title": "Incumbent wins the presidential election",
+      "titles": {
+        "en": "Incumbent wins the presidential election",
+        "de": "Amtsinhaber gewinnt die Präsidentschaftswahl",
+        "es": "El titular gana la elección presidencial"
+      },
       "utcDate": "2026-05-10T18:00:00.000Z",
       "status": "RESOLVED",
       "predictionType": "binary",
@@ -14,13 +19,18 @@
       },
       "metadata": {
         "region": "DACH",
-        "topic": "Wahlen",
-        "source": "Beispieldaten"
+        "topicKey": "elections",
+        "source": "sample data"
       }
     },
     {
       "id": "pol-02",
-      "title": "Wahlbeteiligung über 70 Prozent",
+      "title": "Turnout exceeds 70 percent",
+      "titles": {
+        "en": "Turnout exceeds 70 percent",
+        "de": "Wahlbeteiligung über 70 Prozent",
+        "es": "La participación supera el 70 por ciento"
+      },
       "utcDate": "2026-05-10T18:00:00.000Z",
       "status": "RESOLVED",
       "predictionType": "binary",
@@ -30,13 +40,18 @@
       },
       "metadata": {
         "region": "DACH",
-        "topic": "Wahlen",
-        "source": "Beispieldaten"
+        "topicKey": "elections",
+        "source": "sample data"
       }
     },
     {
       "id": "pol-03",
-      "title": "Regierungspartei verliert die absolute Mehrheit",
+      "title": "Governing party loses its absolute majority",
+      "titles": {
+        "en": "Governing party loses its absolute majority",
+        "de": "Regierungspartei verliert die absolute Mehrheit",
+        "es": "El partido gobernante pierde la mayoría absoluta"
+      },
       "utcDate": "2026-05-24T18:00:00.000Z",
       "status": "RESOLVED",
       "predictionType": "binary",
@@ -46,13 +61,18 @@
       },
       "metadata": {
         "region": "DACH",
-        "topic": "Wahlen",
-        "source": "Beispieldaten"
+        "topicKey": "elections",
+        "source": "sample data"
       }
     },
     {
       "id": "pol-04",
-      "title": "Koalitionsverhandlungen dauern über 60 Tage",
+      "title": "Coalition talks last more than 60 days",
+      "titles": {
+        "en": "Coalition talks last more than 60 days",
+        "de": "Koalitionsverhandlungen dauern über 60 Tage",
+        "es": "Las negociaciones de coalición duran más de 60 días"
+      },
       "utcDate": "2026-06-02T18:00:00.000Z",
       "status": "RESOLVED",
       "predictionType": "binary",
@@ -62,13 +82,18 @@
       },
       "metadata": {
         "region": "DACH",
-        "topic": "Wahlen",
-        "source": "Beispieldaten"
+        "topicKey": "elections",
+        "source": "sample data"
       }
     },
     {
       "id": "pol-05",
-      "title": "Grüne erreichen über 15 Prozent",
+      "title": "Green party reaches more than 15 percent",
+      "titles": {
+        "en": "Green party reaches more than 15 percent",
+        "de": "Grüne erreichen über 15 Prozent",
+        "es": "Los verdes superan el 15 por ciento"
+      },
       "utcDate": "2026-06-07T18:00:00.000Z",
       "status": "RESOLVED",
       "predictionType": "binary",
@@ -78,13 +103,18 @@
       },
       "metadata": {
         "region": "DACH",
-        "topic": "Wahlen",
-        "source": "Beispieldaten"
+        "topicKey": "elections",
+        "source": "sample data"
       }
     },
     {
       "id": "pol-06",
-      "title": "Kandidatin X tritt vor der Wahl zurück",
+      "title": "Candidate X withdraws before the election",
+      "titles": {
+        "en": "Candidate X withdraws before the election",
+        "de": "Kandidatin X tritt vor der Wahl zurück",
+        "es": "La candidata X se retira antes de la elección"
+      },
       "utcDate": "2026-06-14T18:00:00.000Z",
       "status": "RESOLVED",
       "predictionType": "binary",
@@ -94,13 +124,18 @@
       },
       "metadata": {
         "region": "DACH",
-        "topic": "Wahlen",
-        "source": "Beispieldaten"
+        "topicKey": "elections",
+        "source": "sample data"
       }
     },
     {
       "id": "pol-07",
-      "title": "Zweiter Wahlgang wird nötig",
+      "title": "A run-off round becomes necessary",
+      "titles": {
+        "en": "A run-off round becomes necessary",
+        "de": "Zweiter Wahlgang wird nötig",
+        "es": "Se hace necesaria una segunda vuelta"
+      },
       "utcDate": "2026-06-21T18:00:00.000Z",
       "status": "RESOLVED",
       "predictionType": "binary",
@@ -110,13 +145,18 @@
       },
       "metadata": {
         "region": "DACH",
-        "topic": "Wahlen",
-        "source": "Beispieldaten"
+        "topicKey": "elections",
+        "source": "sample data"
       }
     },
     {
       "id": "pol-08",
-      "title": "Neue Partei zieht ins Parlament ein",
+      "title": "A new party enters parliament",
+      "titles": {
+        "en": "A new party enters parliament",
+        "de": "Neue Partei zieht ins Parlament ein",
+        "es": "Un nuevo partido entra en el parlamento"
+      },
       "utcDate": "2026-06-28T18:00:00.000Z",
       "status": "RESOLVED",
       "predictionType": "binary",
@@ -126,13 +166,18 @@
       },
       "metadata": {
         "region": "DACH",
-        "topic": "Wahlen",
-        "source": "Beispieldaten"
+        "topicKey": "elections",
+        "source": "sample data"
       }
     },
     {
       "id": "pol-09",
-      "title": "Referendum wird angenommen",
+      "title": "The referendum passes",
+      "titles": {
+        "en": "The referendum passes",
+        "de": "Referendum wird angenommen",
+        "es": "El referéndum es aprobado"
+      },
       "utcDate": "2026-07-05T18:00:00.000Z",
       "status": "RESOLVED",
       "predictionType": "binary",
@@ -142,13 +187,18 @@
       },
       "metadata": {
         "region": "DACH",
-        "topic": "Wahlen",
-        "source": "Beispieldaten"
+        "topicKey": "elections",
+        "source": "sample data"
       }
     },
     {
       "id": "pol-10",
-      "title": "Rücktritt des Finanzministers bis Monatsende",
+      "title": "Finance minister resigns by month end",
+      "titles": {
+        "en": "Finance minister resigns by month end",
+        "de": "Rücktritt des Finanzministers bis Monatsende",
+        "es": "El ministro de Finanzas renuncia antes de fin de mes"
+      },
       "utcDate": "2026-07-12T18:00:00.000Z",
       "status": "RESOLVED",
       "predictionType": "binary",
@@ -158,60 +208,80 @@
       },
       "metadata": {
         "region": "DACH",
-        "topic": "Wahlen",
-        "source": "Beispieldaten"
+        "topicKey": "elections",
+        "source": "sample data"
       }
     },
     {
       "id": "pol-11",
-      "title": "Parlament beschliesst Neuwahlen",
+      "title": "Parliament calls a snap election",
+      "titles": {
+        "en": "Parliament calls a snap election",
+        "de": "Parlament beschließt Neuwahlen",
+        "es": "El parlamento convoca elecciones anticipadas"
+      },
       "utcDate": "2026-08-16T18:00:00.000Z",
       "status": "UPCOMING",
       "predictionType": "binary",
       "resolution": null,
       "metadata": {
         "region": "DACH",
-        "topic": "Wahlen",
-        "source": "Beispieldaten"
+        "topicKey": "elections",
+        "source": "sample data"
       }
     },
     {
       "id": "pol-12",
-      "title": "Umfragevorsprung schrumpft unter 3 Punkte",
+      "title": "Polling lead narrows to under 3 points",
+      "titles": {
+        "en": "Polling lead narrows to under 3 points",
+        "de": "Umfragevorsprung schrumpft unter 3 Punkte",
+        "es": "La ventaja en las encuestas baja de 3 puntos"
+      },
       "utcDate": "2026-08-23T18:00:00.000Z",
       "status": "UPCOMING",
       "predictionType": "binary",
       "resolution": null,
       "metadata": {
         "region": "DACH",
-        "topic": "Wahlen",
-        "source": "Beispieldaten"
+        "topicKey": "elections",
+        "source": "sample data"
       }
     },
     {
       "id": "pol-13",
-      "title": "Kandidat Y gewinnt die Vorwahl",
+      "title": "Candidate Y wins the primary",
+      "titles": {
+        "en": "Candidate Y wins the primary",
+        "de": "Kandidat Y gewinnt die Vorwahl",
+        "es": "El candidato Y gana las primarias"
+      },
       "utcDate": "2026-09-06T18:00:00.000Z",
       "status": "UPCOMING",
       "predictionType": "binary",
       "resolution": null,
       "metadata": {
         "region": "DACH",
-        "topic": "Wahlen",
-        "source": "Beispieldaten"
+        "topicKey": "elections",
+        "source": "sample data"
       }
     },
     {
       "id": "pol-14",
-      "title": "Wahlrechtsreform passiert die zweite Kammer",
+      "title": "Electoral reform passes the second chamber",
+      "titles": {
+        "en": "Electoral reform passes the second chamber",
+        "de": "Wahlrechtsreform passiert die zweite Kammer",
+        "es": "La reforma electoral se aprueba en la segunda cámara"
+      },
       "utcDate": "2026-09-13T18:00:00.000Z",
       "status": "UPCOMING",
       "predictionType": "binary",
       "resolution": null,
       "metadata": {
         "region": "DACH",
-        "topic": "Wahlen",
-        "source": "Beispieldaten"
+        "topicKey": "elections",
+        "source": "sample data"
       }
     }
   ]

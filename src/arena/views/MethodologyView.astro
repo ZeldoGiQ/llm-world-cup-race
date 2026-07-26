@@ -1,0 +1,171 @@
+---
+/**
+ * Methodik-Seite – eine Quelle für alle Sprachen.
+ *
+ * Metriken, Vorhersagearten und Baselines werden vollständig aus den Registries
+ * generiert. Es gibt keine zweite Stelle, an der Formeln gepflegt werden.
+ */
+import { categories, metrics } from '../lib/plugins';
+import { predictionTypes } from '../lib/prediction-types/index';
+import { pick, type Locale } from '../lib/i18n/locales';
+import { t } from '../lib/i18n/messages';
+import ArenaLayout from '../layouts/ArenaLayout.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const translate = t(locale);
+
+const allMetrics = metrics.list();
+const allCategories = categories.list();
+const allTypes = predictionTypes.list();
+---
+
+<ArenaLayout
+  locale={locale}
+  sub="methodology"
+  title={translate('methodology.title')}
+  description={translate('meta.methodologyDescription')}
+>
+  <main class="mx-auto max-w-4xl px-4 pb-8 pt-10">
+    <h1 class="font-display text-3xl font-semibold leading-tight text-ink-50 sm:text-5xl">
+      {translate('methodology.title')}
+    </h1>
+    <p class="mt-4 text-base text-ink-300">{translate('methodology.intro')}</p>
+
+    <section class="mt-12" aria-labelledby="m-lock">
+      <h2 id="m-lock" class="font-display text-2xl font-semibold text-ink-50">
+        {translate('methodology.lock.heading')}
+      </h2>
+      <p class="mt-3 text-sm leading-relaxed text-ink-300">{translate('methodology.lock.p1')}</p>
+      <p class="mt-3 text-sm leading-relaxed text-ink-300">{translate('methodology.lock.p2')}</p>
+    </section>
+
+    <section class="mt-12" aria-labelledby="m-types">
+      <h2 id="m-types" class="font-display text-2xl font-semibold text-ink-50">
+        {translate('methodology.types.heading')}
+      </h2>
+      <dl class="mt-4 flex flex-col gap-3">
+        {
+          allTypes.map((type) => (
+            <div class="rounded-xl border border-ink-700/70 bg-ink-900/70 p-4">
+              <dt class="font-medium text-ink-100">
+                {pick(type.label, locale)}
+                <span class="ml-2 font-mono text-xs text-ink-400">{type.id}</span>
+              </dt>
+              <dd class="mt-1 text-sm text-ink-300">
+                {translate('methodology.types.format')}{' '}
+                <span class="font-mono text-ink-200">{type.cellHint}</span>
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+
+    <section class="mt-12" aria-labelledby="m-metrics">
+      <h2 id="m-metrics" class="font-display text-2xl font-semibold text-ink-50">
+        {translate('methodology.metrics.heading')}
+      </h2>
+      <p class="mt-3 text-sm text-ink-300">{translate('methodology.metrics.intro')}</p>
+      <div class="mt-4 flex flex-col gap-3">
+        {
+          allMetrics.map((metric) => (
+            <div class="rounded-xl border border-ink-700/70 bg-ink-900/70 p-4">
+              <div class="flex flex-wrap items-center gap-2">
+                <h3 class="font-medium text-ink-100">{pick(metric.label, locale)}</h3>
+                <span class="font-mono text-xs text-ink-400">{metric.id}</span>
+                <span class="rounded-full border border-ink-700 px-2 py-0.5 text-[10px] uppercase tracking-wider text-ink-400">
+                  {metric.betterDirection === 'lower'
+                    ? translate('methodology.metrics.lower')
+                    : translate('methodology.metrics.higher')}
+                </span>
+                {metric.requiresBaseline && (
+                  <span class="rounded-full border border-ink-700 px-2 py-0.5 text-[10px] uppercase tracking-wider text-ink-400">
+                    {translate('methodology.metrics.needsBaseline')}
+                  </span>
+                )}
+              </div>
+              <p class="mt-2 text-sm leading-relaxed text-ink-300">
+                {pick(metric.description, locale)}
+              </p>
+              <p class="mt-2 font-mono text-[11px] text-ink-500">
+                {translate('methodology.metrics.appliesTo')}{' '}
+                {metric.appliesTo.includes('*')
+                  ? translate('methodology.metrics.allTypes')
+                  : metric.appliesTo.join(', ')}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="mt-12" aria-labelledby="m-baselines">
+      <h2 id="m-baselines" class="font-display text-2xl font-semibold text-ink-50">
+        {translate('methodology.baselines.heading')}
+      </h2>
+      <p class="mt-3 text-sm text-ink-300">{translate('methodology.baselines.intro')}</p>
+      <div class="mt-4 flex flex-col gap-3">
+        {
+          allCategories.map((category) => {
+            const rankingMetric = metrics.find(category.primaryMetric);
+            return (
+              <div class="rounded-xl border border-ink-700/70 bg-ink-900/70 p-4">
+                <div class="flex items-center gap-2">
+                  <span
+                    class="h-2.5 w-2.5 rounded-full"
+                    style={`background-color:${category.accent}`}
+                    aria-hidden="true"
+                  />
+                  <h3 class="font-medium text-ink-100">{pick(category.label, locale)}</h3>
+                </div>
+                <p class="mt-2 text-sm text-ink-300">
+                  {translate('methodology.baselines.scored')}{' '}
+                  <span class="text-ink-200">{pick(category.question, locale)}</span>
+                </p>
+                <p class="mt-1 text-sm text-ink-300">
+                  {translate('methodology.baselines.rankedBy')}{' '}
+                  <span class="text-ink-200">
+                    {rankingMetric ? pick(rankingMetric.label, locale) : category.primaryMetric}
+                  </span>
+                </p>
+                <p class="mt-1 text-sm text-ink-300">
+                  {category.baselineNote
+                    ? pick(category.baselineNote, locale)
+                    : translate('methodology.baselines.none')}
+                </p>
+              </div>
+            );
+          })
+        }
+      </div>
+    </section>
+
+    <section class="mt-12" aria-labelledby="m-limits">
+      <h2 id="m-limits" class="font-display text-2xl font-semibold text-ink-50">
+        {translate('methodology.limits.heading')}
+      </h2>
+      <ul class="mt-3 flex flex-col gap-2 text-sm leading-relaxed text-ink-300">
+        <li>
+          <span class="text-ink-100">{translate('methodology.limits.sample.lead')}</span>{' '}
+          {translate('methodology.limits.sample.body')}
+        </li>
+        <li>
+          <span class="text-ink-100">{translate('methodology.limits.compare.lead')}</span>{' '}
+          {translate('methodology.limits.compare.body')}
+        </li>
+        <li>
+          <span class="text-ink-100">{translate('methodology.limits.proper.lead')}</span>{' '}
+          {translate('methodology.limits.proper.body')}
+        </li>
+        <li>
+          <span class="text-ink-100">{translate('methodology.limits.prototype.lead')}</span>{' '}
+          {translate('methodology.limits.prototype.body')}
+        </li>
+      </ul>
+    </section>
+  </main>
+</ArenaLayout>

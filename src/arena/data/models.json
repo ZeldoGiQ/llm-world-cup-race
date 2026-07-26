@@ -56,29 +56,39 @@
   {
     "id": "nova",
     "name": "Nova Preview",
-    "provider": "Beispiel-Labor",
+    "provider": "Example Lab",
     "color": "#a78bfa",
     "version": "nova-preview-0.9",
     "access": "early-access"
   },
   {
     "id": "baseline-market",
-    "name": "Buchmacher-Konsens",
-    "provider": "Referenz",
+    "name": "Bookmaker consensus",
+    "names": {
+      "en": "Bookmaker consensus",
+      "de": "Buchmacher-Konsens",
+      "es": "Consenso de apuestas"
+    },
+    "provider": "Reference",
+    "providers": { "en": "Reference", "de": "Referenz", "es": "Referencia" },
     "color": "#8b94a7",
     "baseline": true
   },
   {
     "id": "baseline-randomwalk",
-    "name": "Random-Walk",
-    "provider": "Referenz",
+    "name": "Random walk",
+    "names": { "en": "Random walk", "de": "Random-Walk", "es": "Camino aleatorio" },
+    "provider": "Reference",
+    "providers": { "en": "Reference", "de": "Referenz", "es": "Referencia" },
     "color": "#8b94a7",
     "baseline": true
   },
   {
     "id": "baseline-poll",
-    "name": "Letzte Umfrage",
-    "provider": "Referenz",
+    "name": "Latest poll",
+    "names": { "en": "Latest poll", "de": "Letzte Umfrage", "es": "Última encuesta" },
+    "provider": "Reference",
+    "providers": { "en": "Reference", "de": "Referenz", "es": "Referencia" },
     "color": "#8b94a7",
     "baseline": true
   }
