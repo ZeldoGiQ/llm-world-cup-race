@@ -1,0 +1,5205 @@
+{
+  "category": "football-worldcup",
+  "predictions": {
+    "537327": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537328": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537329": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537330": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537331": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537332": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537333": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537334": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 3
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537335": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537336": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537337": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537338": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537339": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537340": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537341": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 4,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 4,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 4,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537342": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537343": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537344": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537345": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537346": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537347": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537348": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537349": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537350": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537351": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 5,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 4,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 4,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 5,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 5,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537352": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537353": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537354": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537355": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537356": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 4
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537357": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537358": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537359": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537360": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537361": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 3
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537362": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537363": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537364": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537365": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537366": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537367": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537368": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537369": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 4,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537370": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 3
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537371": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537372": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537373": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537374": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537375": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:29:28.215Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      }
+    },
+    "537376": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:29:28.215Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      }
+    },
+    "537377": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-07-04T16:29:28.215Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      }
+    },
+    "537378": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:29:28.215Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      }
+    },
+    "537379": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:29:28.215Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      }
+    },
+    "537380": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:29:28.215Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      }
+    },
+    "537381": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-07-04T16:29:28.215Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      }
+    },
+    "537382": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:29:28.215Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 0
+        },
+        "createdAt": "2026-07-04T16:26:54.633Z"
+      }
+    },
+    "537383": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      }
+    },
+    "537384": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      }
+    },
+    "537385": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 2
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      }
+    },
+    "537386": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-07-09T15:20:13.571Z"
+      }
+    },
+    "537387": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-14T18:39:34.048Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-14T18:39:34.048Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-14T18:39:34.048Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-14T18:39:34.048Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-14T18:39:34.048Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-14T18:39:34.048Z"
+      }
+    },
+    "537388": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-14T18:39:34.048Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-14T18:39:34.048Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-14T18:39:34.048Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-14T18:39:34.048Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-14T18:39:34.048Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-14T18:39:34.048Z"
+      }
+    },
+    "537389": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 2
+        },
+        "createdAt": "2026-07-18T19:47:26.267Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 2
+        },
+        "createdAt": "2026-07-18T19:47:26.267Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-07-18T19:47:26.267Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-18T19:47:26.267Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 2
+        },
+        "createdAt": "2026-07-18T19:47:26.267Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-07-18T19:47:26.267Z"
+      }
+    },
+    "537390": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-18T19:47:26.267Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-18T19:47:26.267Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-18T19:47:26.267Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-18T19:47:26.267Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-18T19:47:26.267Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-18T19:47:26.267Z"
+      }
+    },
+    "537391": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537392": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 3
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537393": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 4,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 4,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 4,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537394": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537395": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537396": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537397": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537398": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537399": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537400": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      }
+    },
+    "537401": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 4
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537402": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537403": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 4,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537404": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537405": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537406": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537407": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537408": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537409": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537410": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537411": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537412": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537413": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 4
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537414": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-11T17:33:43.177Z"
+      }
+    },
+    "537415": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      }
+    },
+    "537416": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      }
+    },
+    "537417": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      }
+    },
+    "537418": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      }
+    },
+    "537419": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      }
+    },
+    "537420": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      }
+    },
+    "537421": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      }
+    },
+    "537422": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      }
+    },
+    "537423": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      }
+    },
+    "537424": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      }
+    },
+    "537425": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      }
+    },
+    "537426": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      }
+    },
+    "537427": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 4,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      }
+    },
+    "537428": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 2
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      }
+    },
+    "537429": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      }
+    },
+    "537430": {
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-06-16T08:22:37.162Z"
+      },
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-06-28T16:12:54.791Z"
+      }
+    }
+  }
+}

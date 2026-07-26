@@ -1,0 +1,85 @@
+[
+  {
+    "id": "gpt",
+    "name": "GPT-5.5",
+    "provider": "OpenAI",
+    "color": "#10a37f",
+    "version": "gpt-5.5",
+    "releaseDate": "2026-04-18",
+    "access": "public"
+  },
+  {
+    "id": "gemini",
+    "name": "Gemini 3.5",
+    "provider": "Google",
+    "color": "#4285f4",
+    "version": "gemini-3.5-pro",
+    "releaseDate": "2026-03-27",
+    "access": "public"
+  },
+  {
+    "id": "claude",
+    "name": "Claude Fable 5",
+    "provider": "Anthropic",
+    "color": "#d97757",
+    "version": "claude-fable-5",
+    "releaseDate": "2026-05-06",
+    "access": "public"
+  },
+  {
+    "id": "grok",
+    "name": "Grok 4.3",
+    "provider": "xAI",
+    "color": "#9b59b6",
+    "version": "grok-4.3",
+    "releaseDate": "2026-02-11",
+    "access": "public"
+  },
+  {
+    "id": "qwen",
+    "name": "Qwen 3.7 Max",
+    "provider": "Alibaba",
+    "color": "#eab308",
+    "version": "qwen-3.7-max",
+    "releaseDate": "2026-05-22",
+    "access": "public"
+  },
+  {
+    "id": "kimi",
+    "name": "Kimi K2.6",
+    "provider": "Moonshot AI",
+    "color": "#ec4899",
+    "version": "kimi-k2.6",
+    "releaseDate": "2026-04-02",
+    "access": "public"
+  },
+  {
+    "id": "nova",
+    "name": "Nova Preview",
+    "provider": "Beispiel-Labor",
+    "color": "#a78bfa",
+    "version": "nova-preview-0.9",
+    "access": "early-access"
+  },
+  {
+    "id": "baseline-market",
+    "name": "Buchmacher-Konsens",
+    "provider": "Referenz",
+    "color": "#8b94a7",
+    "baseline": true
+  },
+  {
+    "id": "baseline-randomwalk",
+    "name": "Random-Walk",
+    "provider": "Referenz",
+    "color": "#8b94a7",
+    "baseline": true
+  },
+  {
+    "id": "baseline-poll",
+    "name": "Letzte Umfrage",
+    "provider": "Referenz",
+    "color": "#8b94a7",
+    "baseline": true
+  }
+]

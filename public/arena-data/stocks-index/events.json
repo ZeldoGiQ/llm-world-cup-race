@@ -1,0 +1,250 @@
+{
+  "category": "stocks-index",
+  "updatedAt": "2026-07-19T21:00:00Z",
+  "events": [
+    {
+      "id": "spx-2026-04-03",
+      "title": "S&P 500 – Schlusskurs 3.4.2026",
+      "utcDate": "2026-04-03T20:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "numeric",
+      "resolution": {
+        "kind": "numeric",
+        "value": 6148.63
+      },
+      "metadata": {
+        "symbol": "SPX",
+        "previousClose": 6180.42,
+        "period": "Wochenschluss"
+      }
+    },
+    {
+      "id": "spx-2026-04-10",
+      "title": "S&P 500 – Schlusskurs 10.4.2026",
+      "utcDate": "2026-04-10T20:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "numeric",
+      "resolution": {
+        "kind": "numeric",
+        "value": 6170.8
+      },
+      "metadata": {
+        "symbol": "SPX",
+        "previousClose": 6148.63,
+        "period": "Wochenschluss"
+      }
+    },
+    {
+      "id": "spx-2026-04-17",
+      "title": "S&P 500 – Schlusskurs 17.4.2026",
+      "utcDate": "2026-04-17T20:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "numeric",
+      "resolution": {
+        "kind": "numeric",
+        "value": 6203.42
+      },
+      "metadata": {
+        "symbol": "SPX",
+        "previousClose": 6170.8,
+        "period": "Wochenschluss"
+      }
+    },
+    {
+      "id": "spx-2026-04-24",
+      "title": "S&P 500 – Schlusskurs 24.4.2026",
+      "utcDate": "2026-04-24T20:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "numeric",
+      "resolution": {
+        "kind": "numeric",
+        "value": 6223.1
+      },
+      "metadata": {
+        "symbol": "SPX",
+        "previousClose": 6203.42,
+        "period": "Wochenschluss"
+      }
+    },
+    {
+      "id": "spx-2026-05-01",
+      "title": "S&P 500 – Schlusskurs 1.5.2026",
+      "utcDate": "2026-05-01T20:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "numeric",
+      "resolution": {
+        "kind": "numeric",
+        "value": 6187.11
+      },
+      "metadata": {
+        "symbol": "SPX",
+        "previousClose": 6223.1,
+        "period": "Wochenschluss"
+      }
+    },
+    {
+      "id": "spx-2026-05-08",
+      "title": "S&P 500 – Schlusskurs 8.5.2026",
+      "utcDate": "2026-05-08T20:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "numeric",
+      "resolution": {
+        "kind": "numeric",
+        "value": 6135.2
+      },
+      "metadata": {
+        "symbol": "SPX",
+        "previousClose": 6187.11,
+        "period": "Wochenschluss"
+      }
+    },
+    {
+      "id": "spx-2026-05-15",
+      "title": "S&P 500 – Schlusskurs 15.5.2026",
+      "utcDate": "2026-05-15T20:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "numeric",
+      "resolution": {
+        "kind": "numeric",
+        "value": 6139.3
+      },
+      "metadata": {
+        "symbol": "SPX",
+        "previousClose": 6135.2,
+        "period": "Wochenschluss"
+      }
+    },
+    {
+      "id": "spx-2026-05-22",
+      "title": "S&P 500 – Schlusskurs 22.5.2026",
+      "utcDate": "2026-05-22T20:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "numeric",
+      "resolution": {
+        "kind": "numeric",
+        "value": 6067.18
+      },
+      "metadata": {
+        "symbol": "SPX",
+        "previousClose": 6139.3,
+        "period": "Wochenschluss"
+      }
+    },
+    {
+      "id": "spx-2026-05-29",
+      "title": "S&P 500 – Schlusskurs 29.5.2026",
+      "utcDate": "2026-05-29T20:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "numeric",
+      "resolution": {
+        "kind": "numeric",
+        "value": 6039.01
+      },
+      "metadata": {
+        "symbol": "SPX",
+        "previousClose": 6067.18,
+        "period": "Wochenschluss"
+      }
+    },
+    {
+      "id": "spx-2026-06-05",
+      "title": "S&P 500 – Schlusskurs 5.6.2026",
+      "utcDate": "2026-06-05T20:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "numeric",
+      "resolution": {
+        "kind": "numeric",
+        "value": 6087.95
+      },
+      "metadata": {
+        "symbol": "SPX",
+        "previousClose": 6039.01,
+        "period": "Wochenschluss"
+      }
+    },
+    {
+      "id": "spx-2026-06-12",
+      "title": "S&P 500 – Schlusskurs 12.6.2026",
+      "utcDate": "2026-06-12T20:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "numeric",
+      "resolution": {
+        "kind": "numeric",
+        "value": 5976.72
+      },
+      "metadata": {
+        "symbol": "SPX",
+        "previousClose": 6087.95,
+        "period": "Wochenschluss"
+      }
+    },
+    {
+      "id": "spx-2026-06-19",
+      "title": "S&P 500 – Schlusskurs 19.6.2026",
+      "utcDate": "2026-06-19T20:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "numeric",
+      "resolution": {
+        "kind": "numeric",
+        "value": 6003.21
+      },
+      "metadata": {
+        "symbol": "SPX",
+        "previousClose": 5976.72,
+        "period": "Wochenschluss"
+      }
+    },
+    {
+      "id": "spx-2026-06-26",
+      "title": "S&P 500 – Schlusskurs 26.6.2026",
+      "utcDate": "2026-06-26T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "numeric",
+      "resolution": null,
+      "metadata": {
+        "symbol": "SPX",
+        "previousClose": 6003.21,
+        "period": "Wochenschluss"
+      }
+    },
+    {
+      "id": "spx-2026-07-03",
+      "title": "S&P 500 – Schlusskurs 3.7.2026",
+      "utcDate": "2026-07-03T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "numeric",
+      "resolution": null,
+      "metadata": {
+        "symbol": "SPX",
+        "previousClose": 6002.78,
+        "period": "Wochenschluss"
+      }
+    },
+    {
+      "id": "spx-2026-07-10",
+      "title": "S&P 500 – Schlusskurs 10.7.2026",
+      "utcDate": "2026-07-10T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "numeric",
+      "resolution": null,
+      "metadata": {
+        "symbol": "SPX",
+        "previousClose": 6109.29,
+        "period": "Wochenschluss"
+      }
+    },
+    {
+      "id": "spx-2026-07-17",
+      "title": "S&P 500 – Schlusskurs 17.7.2026",
+      "utcDate": "2026-07-17T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "numeric",
+      "resolution": null,
+      "metadata": {
+        "symbol": "SPX",
+        "previousClose": 6125.16,
+        "period": "Wochenschluss"
+      }
+    }
+  ]
+}

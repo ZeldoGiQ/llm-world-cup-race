@@ -1,0 +1,218 @@
+{
+  "category": "elections",
+  "updatedAt": "2026-07-19T21:00:00Z",
+  "events": [
+    {
+      "id": "pol-01",
+      "title": "Amtsinhaber gewinnt die Präsidentschaftswahl",
+      "utcDate": "2026-05-10T18:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "binary",
+      "resolution": {
+        "kind": "binary",
+        "outcome": true
+      },
+      "metadata": {
+        "region": "DACH",
+        "topic": "Wahlen",
+        "source": "Beispieldaten"
+      }
+    },
+    {
+      "id": "pol-02",
+      "title": "Wahlbeteiligung über 70 Prozent",
+      "utcDate": "2026-05-10T18:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "binary",
+      "resolution": {
+        "kind": "binary",
+        "outcome": true
+      },
+      "metadata": {
+        "region": "DACH",
+        "topic": "Wahlen",
+        "source": "Beispieldaten"
+      }
+    },
+    {
+      "id": "pol-03",
+      "title": "Regierungspartei verliert die absolute Mehrheit",
+      "utcDate": "2026-05-24T18:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "binary",
+      "resolution": {
+        "kind": "binary",
+        "outcome": false
+      },
+      "metadata": {
+        "region": "DACH",
+        "topic": "Wahlen",
+        "source": "Beispieldaten"
+      }
+    },
+    {
+      "id": "pol-04",
+      "title": "Koalitionsverhandlungen dauern über 60 Tage",
+      "utcDate": "2026-06-02T18:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "binary",
+      "resolution": {
+        "kind": "binary",
+        "outcome": true
+      },
+      "metadata": {
+        "region": "DACH",
+        "topic": "Wahlen",
+        "source": "Beispieldaten"
+      }
+    },
+    {
+      "id": "pol-05",
+      "title": "Grüne erreichen über 15 Prozent",
+      "utcDate": "2026-06-07T18:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "binary",
+      "resolution": {
+        "kind": "binary",
+        "outcome": true
+      },
+      "metadata": {
+        "region": "DACH",
+        "topic": "Wahlen",
+        "source": "Beispieldaten"
+      }
+    },
+    {
+      "id": "pol-06",
+      "title": "Kandidatin X tritt vor der Wahl zurück",
+      "utcDate": "2026-06-14T18:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "binary",
+      "resolution": {
+        "kind": "binary",
+        "outcome": false
+      },
+      "metadata": {
+        "region": "DACH",
+        "topic": "Wahlen",
+        "source": "Beispieldaten"
+      }
+    },
+    {
+      "id": "pol-07",
+      "title": "Zweiter Wahlgang wird nötig",
+      "utcDate": "2026-06-21T18:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "binary",
+      "resolution": {
+        "kind": "binary",
+        "outcome": false
+      },
+      "metadata": {
+        "region": "DACH",
+        "topic": "Wahlen",
+        "source": "Beispieldaten"
+      }
+    },
+    {
+      "id": "pol-08",
+      "title": "Neue Partei zieht ins Parlament ein",
+      "utcDate": "2026-06-28T18:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "binary",
+      "resolution": {
+        "kind": "binary",
+        "outcome": true
+      },
+      "metadata": {
+        "region": "DACH",
+        "topic": "Wahlen",
+        "source": "Beispieldaten"
+      }
+    },
+    {
+      "id": "pol-09",
+      "title": "Referendum wird angenommen",
+      "utcDate": "2026-07-05T18:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "binary",
+      "resolution": {
+        "kind": "binary",
+        "outcome": true
+      },
+      "metadata": {
+        "region": "DACH",
+        "topic": "Wahlen",
+        "source": "Beispieldaten"
+      }
+    },
+    {
+      "id": "pol-10",
+      "title": "Rücktritt des Finanzministers bis Monatsende",
+      "utcDate": "2026-07-12T18:00:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "binary",
+      "resolution": {
+        "kind": "binary",
+        "outcome": false
+      },
+      "metadata": {
+        "region": "DACH",
+        "topic": "Wahlen",
+        "source": "Beispieldaten"
+      }
+    },
+    {
+      "id": "pol-11",
+      "title": "Parlament beschliesst Neuwahlen",
+      "utcDate": "2026-08-16T18:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "binary",
+      "resolution": null,
+      "metadata": {
+        "region": "DACH",
+        "topic": "Wahlen",
+        "source": "Beispieldaten"
+      }
+    },
+    {
+      "id": "pol-12",
+      "title": "Umfragevorsprung schrumpft unter 3 Punkte",
+      "utcDate": "2026-08-23T18:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "binary",
+      "resolution": null,
+      "metadata": {
+        "region": "DACH",
+        "topic": "Wahlen",
+        "source": "Beispieldaten"
+      }
+    },
+    {
+      "id": "pol-13",
+      "title": "Kandidat Y gewinnt die Vorwahl",
+      "utcDate": "2026-09-06T18:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "binary",
+      "resolution": null,
+      "metadata": {
+        "region": "DACH",
+        "topic": "Wahlen",
+        "source": "Beispieldaten"
+      }
+    },
+    {
+      "id": "pol-14",
+      "title": "Wahlrechtsreform passiert die zweite Kammer",
+      "utcDate": "2026-09-13T18:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "binary",
+      "resolution": null,
+      "metadata": {
+        "region": "DACH",
+        "topic": "Wahlen",
+        "source": "Beispieldaten"
+      }
+    }
+  ]
+}

@@ -1,0 +1,577 @@
+{
+  "category": "sports-mixed",
+  "predictions": {
+    "mix-01": {
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-07-23T18:30:00.000Z"
+      },
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-07-23T18:30:00.000Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-07-23T18:30:00.000Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 4,
+          "away": 1
+        },
+        "createdAt": "2026-07-23T18:30:00.000Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-07-23T18:30:00.000Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 2
+        },
+        "createdAt": "2026-07-23T18:30:00.000Z"
+      },
+      "baseline-market": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 0
+        },
+        "createdAt": "2026-07-23T18:30:00.000Z"
+      }
+    },
+    "mix-02": {
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 2
+        },
+        "createdAt": "2026-07-24T20:30:00.000Z"
+      },
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 2
+        },
+        "createdAt": "2026-07-24T20:30:00.000Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-24T20:30:00.000Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 0
+        },
+        "createdAt": "2026-07-24T20:30:00.000Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 1
+        },
+        "createdAt": "2026-07-24T20:30:00.000Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-24T20:30:00.000Z"
+      },
+      "baseline-market": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-24T20:30:00.000Z"
+      }
+    },
+    "mix-03": {
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 4
+        },
+        "createdAt": "2026-07-25T22:30:00.000Z"
+      },
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 4
+        },
+        "createdAt": "2026-07-25T22:30:00.000Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 3
+        },
+        "createdAt": "2026-07-25T22:30:00.000Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 4,
+          "away": 3
+        },
+        "createdAt": "2026-07-25T22:30:00.000Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 4
+        },
+        "createdAt": "2026-07-25T22:30:00.000Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 2
+        },
+        "createdAt": "2026-07-25T22:30:00.000Z"
+      },
+      "baseline-market": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 2
+        },
+        "createdAt": "2026-07-25T22:30:00.000Z"
+      }
+    },
+    "mix-04": {
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-27T00:30:00.000Z"
+      },
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 2
+        },
+        "createdAt": "2026-07-27T00:30:00.000Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-27T00:30:00.000Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-07-27T00:30:00.000Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 0
+        },
+        "createdAt": "2026-07-27T00:30:00.000Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 3
+        },
+        "createdAt": "2026-07-27T00:30:00.000Z"
+      },
+      "baseline-market": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-07-27T00:30:00.000Z"
+      }
+    },
+    "mix-05": {
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 4,
+          "away": 0
+        },
+        "createdAt": "2026-07-28T02:30:00.000Z"
+      },
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 4,
+          "away": 1
+        },
+        "createdAt": "2026-07-28T02:30:00.000Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 5,
+          "away": 3
+        },
+        "createdAt": "2026-07-28T02:30:00.000Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-07-28T02:30:00.000Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 5,
+          "away": 0
+        },
+        "createdAt": "2026-07-28T02:30:00.000Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-07-28T02:30:00.000Z"
+      },
+      "baseline-market": {
+        "value": {
+          "kind": "scoreline",
+          "home": 4,
+          "away": 0
+        },
+        "createdAt": "2026-07-28T02:30:00.000Z"
+      }
+    },
+    "mix-06": {
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 2
+        },
+        "createdAt": "2026-07-29T04:30:00.000Z"
+      },
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 2
+        },
+        "createdAt": "2026-07-29T04:30:00.000Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 3
+        },
+        "createdAt": "2026-07-29T04:30:00.000Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-07-29T04:30:00.000Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-29T04:30:00.000Z"
+      },
+      "baseline-market": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-29T04:30:00.000Z"
+      }
+    },
+    "mix-07": {
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 0
+        },
+        "createdAt": "2026-07-30T06:30:00.000Z"
+      },
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 1
+        },
+        "createdAt": "2026-07-30T06:30:00.000Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-07-30T06:30:00.000Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-30T06:30:00.000Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 0
+        },
+        "createdAt": "2026-07-30T06:30:00.000Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-07-30T06:30:00.000Z"
+      },
+      "baseline-market": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 0
+        },
+        "createdAt": "2026-07-30T06:30:00.000Z"
+      }
+    },
+    "mix-08": {
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 0
+        },
+        "createdAt": "2026-07-31T08:30:00.000Z"
+      },
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 0
+        },
+        "createdAt": "2026-07-31T08:30:00.000Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 0
+        },
+        "createdAt": "2026-07-31T08:30:00.000Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 0
+        },
+        "createdAt": "2026-07-31T08:30:00.000Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 0
+        },
+        "createdAt": "2026-07-31T08:30:00.000Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-07-31T08:30:00.000Z"
+      },
+      "baseline-market": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 0
+        },
+        "createdAt": "2026-07-31T08:30:00.000Z"
+      }
+    },
+    "mix-09": {
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 1
+        },
+        "createdAt": "2026-08-01T10:30:00.000Z"
+      },
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 3,
+          "away": 1
+        },
+        "createdAt": "2026-08-01T10:30:00.000Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-08-01T10:30:00.000Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-08-01T10:30:00.000Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 1
+        },
+        "createdAt": "2026-08-01T10:30:00.000Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-08-01T10:30:00.000Z"
+      },
+      "baseline-market": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-08-01T10:30:00.000Z"
+      }
+    },
+    "mix-10": {
+      "kimi": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 2
+        },
+        "createdAt": "2026-08-02T12:30:00.000Z"
+      },
+      "gpt": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 3
+        },
+        "createdAt": "2026-08-02T12:30:00.000Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 0
+        },
+        "createdAt": "2026-08-02T12:30:00.000Z"
+      },
+      "grok": {
+        "value": {
+          "kind": "scoreline",
+          "home": 0,
+          "away": 1
+        },
+        "createdAt": "2026-08-02T12:30:00.000Z"
+      },
+      "gemini": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-08-02T12:30:00.000Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "scoreline",
+          "home": 1,
+          "away": 1
+        },
+        "createdAt": "2026-08-02T12:30:00.000Z"
+      },
+      "baseline-market": {
+        "value": {
+          "kind": "scoreline",
+          "home": 2,
+          "away": 1
+        },
+        "createdAt": "2026-08-02T12:30:00.000Z"
+      }
+    }
+  }
+}

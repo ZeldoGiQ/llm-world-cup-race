@@ -1,0 +1,200 @@
+{
+  "category": "sports-mixed",
+  "updatedAt": "2026-07-26T12:00:00Z",
+  "events": [
+    {
+      "id": "mix-01",
+      "title": "Bayern München – Bayer Leverkusen",
+      "utcDate": "2026-07-25T18:30:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 3,
+        "away": 1
+      },
+      "metadata": {
+        "league": "Bundesliga",
+        "home": {
+          "name": "Bayern München"
+        },
+        "away": {
+          "name": "Bayer Leverkusen"
+        }
+      }
+    },
+    {
+      "id": "mix-02",
+      "title": "Manchester City – Arsenal",
+      "utcDate": "2026-07-26T20:30:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 1
+      },
+      "metadata": {
+        "league": "Premier League",
+        "home": {
+          "name": "Manchester City"
+        },
+        "away": {
+          "name": "Arsenal"
+        }
+      }
+    },
+    {
+      "id": "mix-03",
+      "title": "Real Madrid – FC Barcelona",
+      "utcDate": "2026-07-27T22:30:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 3
+      },
+      "metadata": {
+        "league": "LaLiga",
+        "home": {
+          "name": "Real Madrid"
+        },
+        "away": {
+          "name": "FC Barcelona"
+        }
+      }
+    },
+    {
+      "id": "mix-04",
+      "title": "Inter Mailand – Juventus Turin",
+      "utcDate": "2026-07-29T00:30:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 0
+      },
+      "metadata": {
+        "league": "Serie A",
+        "home": {
+          "name": "Inter Mailand"
+        },
+        "away": {
+          "name": "Juventus Turin"
+        }
+      }
+    },
+    {
+      "id": "mix-05",
+      "title": "Paris Saint-Germain – Olympique Marseille",
+      "utcDate": "2026-07-30T02:30:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 4,
+        "away": 0
+      },
+      "metadata": {
+        "league": "Ligue 1",
+        "home": {
+          "name": "Paris Saint-Germain"
+        },
+        "away": {
+          "name": "Olympique Marseille"
+        }
+      }
+    },
+    {
+      "id": "mix-06",
+      "title": "Borussia Dortmund – RB Leipzig",
+      "utcDate": "2026-07-31T04:30:00.000Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 2
+      },
+      "metadata": {
+        "league": "Bundesliga",
+        "home": {
+          "name": "Borussia Dortmund"
+        },
+        "away": {
+          "name": "RB Leipzig"
+        }
+      }
+    },
+    {
+      "id": "mix-07",
+      "title": "Liverpool – Chelsea",
+      "utcDate": "2026-08-01T06:30:00.000Z",
+      "status": "LIVE",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "league": "Premier League",
+        "home": {
+          "name": "Liverpool"
+        },
+        "away": {
+          "name": "Chelsea"
+        }
+      }
+    },
+    {
+      "id": "mix-08",
+      "title": "Atlético Madrid – Sevilla",
+      "utcDate": "2026-08-02T08:30:00.000Z",
+      "status": "LIVE",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "league": "LaLiga",
+        "home": {
+          "name": "Atlético Madrid"
+        },
+        "away": {
+          "name": "Sevilla"
+        }
+      }
+    },
+    {
+      "id": "mix-09",
+      "title": "AC Mailand – SSC Neapel",
+      "utcDate": "2026-08-03T10:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "league": "Serie A",
+        "home": {
+          "name": "AC Mailand"
+        },
+        "away": {
+          "name": "SSC Neapel"
+        }
+      }
+    },
+    {
+      "id": "mix-10",
+      "title": "Ajax Amsterdam – PSV Eindhoven",
+      "utcDate": "2026-08-04T12:30:00.000Z",
+      "status": "VOID",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "league": "Eredivisie",
+        "home": {
+          "name": "Ajax Amsterdam"
+        },
+        "away": {
+          "name": "PSV Eindhoven"
+        }
+      }
+    }
+  ]
+}

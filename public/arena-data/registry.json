@@ -1,0 +1,20 @@
+{
+  "categories": [
+    {
+      "id": "football-worldcup",
+      "label": "Fussball-WM 2026"
+    },
+    {
+      "id": "stocks-index",
+      "label": "Aktienindex"
+    },
+    {
+      "id": "elections",
+      "label": "Wahlen & Politik"
+    },
+    {
+      "id": "sports-mixed",
+      "label": "Sport-Mix"
+    }
+  ]
+}

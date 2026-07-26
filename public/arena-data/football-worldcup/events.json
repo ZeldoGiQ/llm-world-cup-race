@@ -1,0 +1,2735 @@
+{
+  "category": "football-worldcup",
+  "updatedAt": "2026-07-19T23:11:57.018Z",
+  "events": [
+    {
+      "id": "537327",
+      "title": "Mexico – South Africa",
+      "utcDate": "2026-06-11T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "A",
+        "home": {
+          "id": 769,
+          "name": "Mexico",
+          "tla": "MEX"
+        },
+        "away": {
+          "id": 774,
+          "name": "South Africa",
+          "tla": "RSA"
+        }
+      }
+    },
+    {
+      "id": "537328",
+      "title": "South Korea – Czechia",
+      "utcDate": "2026-06-12T02:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "A",
+        "home": {
+          "id": 772,
+          "name": "South Korea",
+          "tla": "KOR"
+        },
+        "away": {
+          "id": 798,
+          "name": "Czechia",
+          "tla": "CZE"
+        }
+      }
+    },
+    {
+      "id": "537333",
+      "title": "Canada – Bosnia-Herzegovina",
+      "utcDate": "2026-06-12T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "B",
+        "home": {
+          "id": 828,
+          "name": "Canada",
+          "tla": "CAN"
+        },
+        "away": {
+          "id": 1060,
+          "name": "Bosnia-Herzegovina",
+          "tla": "BIH"
+        }
+      }
+    },
+    {
+      "id": "537345",
+      "title": "United States – Paraguay",
+      "utcDate": "2026-06-13T01:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 4,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "D",
+        "home": {
+          "id": 771,
+          "name": "United States",
+          "tla": "USA"
+        },
+        "away": {
+          "id": 761,
+          "name": "Paraguay",
+          "tla": "PAR"
+        }
+      }
+    },
+    {
+      "id": "537334",
+      "title": "Qatar – Switzerland",
+      "utcDate": "2026-06-13T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "B",
+        "home": {
+          "id": 8030,
+          "name": "Qatar",
+          "tla": "QAT"
+        },
+        "away": {
+          "id": 788,
+          "name": "Switzerland",
+          "tla": "SUI"
+        }
+      }
+    },
+    {
+      "id": "537339",
+      "title": "Brazil – Morocco",
+      "utcDate": "2026-06-13T22:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "C",
+        "home": {
+          "id": 764,
+          "name": "Brazil",
+          "tla": "BRA"
+        },
+        "away": {
+          "id": 815,
+          "name": "Morocco",
+          "tla": "MAR"
+        }
+      }
+    },
+    {
+      "id": "537340",
+      "title": "Haiti – Scotland",
+      "utcDate": "2026-06-14T01:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "C",
+        "home": {
+          "id": 836,
+          "name": "Haiti",
+          "tla": "HAI"
+        },
+        "away": {
+          "id": 8873,
+          "name": "Scotland",
+          "tla": "SCO"
+        }
+      }
+    },
+    {
+      "id": "537346",
+      "title": "Australia – Turkey",
+      "utcDate": "2026-06-14T04:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "D",
+        "home": {
+          "id": 779,
+          "name": "Australia",
+          "tla": "AUS"
+        },
+        "away": {
+          "id": 803,
+          "name": "Turkey",
+          "tla": "TUR"
+        }
+      }
+    },
+    {
+      "id": "537351",
+      "title": "Germany – Curaçao",
+      "utcDate": "2026-06-14T17:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 7,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "E",
+        "home": {
+          "id": 759,
+          "name": "Germany",
+          "tla": "GER"
+        },
+        "away": {
+          "id": 9460,
+          "name": "Curaçao",
+          "tla": "CUW"
+        }
+      }
+    },
+    {
+      "id": "537357",
+      "title": "Netherlands – Japan",
+      "utcDate": "2026-06-14T20:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 2
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "F",
+        "home": {
+          "id": 8601,
+          "name": "Netherlands",
+          "tla": "NED"
+        },
+        "away": {
+          "id": 766,
+          "name": "Japan",
+          "tla": "JPN"
+        }
+      }
+    },
+    {
+      "id": "537352",
+      "title": "Ivory Coast – Ecuador",
+      "utcDate": "2026-06-14T23:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "E",
+        "home": {
+          "id": 1935,
+          "name": "Ivory Coast",
+          "tla": "CIV"
+        },
+        "away": {
+          "id": 791,
+          "name": "Ecuador",
+          "tla": "ECU"
+        }
+      }
+    },
+    {
+      "id": "537358",
+      "title": "Sweden – Tunisia",
+      "utcDate": "2026-06-15T02:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 5,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "F",
+        "home": {
+          "id": 792,
+          "name": "Sweden",
+          "tla": "SWE"
+        },
+        "away": {
+          "id": 802,
+          "name": "Tunisia",
+          "tla": "TUN"
+        }
+      }
+    },
+    {
+      "id": "537369",
+      "title": "Spain – Cape Verde Islands",
+      "utcDate": "2026-06-15T16:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "H",
+        "home": {
+          "id": 760,
+          "name": "Spain",
+          "tla": "ESP"
+        },
+        "away": {
+          "id": 1930,
+          "name": "Cape Verde Islands",
+          "tla": "CPV"
+        }
+      }
+    },
+    {
+      "id": "537363",
+      "title": "Belgium – Egypt",
+      "utcDate": "2026-06-15T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "G",
+        "home": {
+          "id": 805,
+          "name": "Belgium",
+          "tla": "BEL"
+        },
+        "away": {
+          "id": 825,
+          "name": "Egypt",
+          "tla": "EGY"
+        }
+      }
+    },
+    {
+      "id": "537370",
+      "title": "Saudi Arabia – Uruguay",
+      "utcDate": "2026-06-15T22:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "H",
+        "home": {
+          "id": 801,
+          "name": "Saudi Arabia",
+          "tla": "KSA"
+        },
+        "away": {
+          "id": 758,
+          "name": "Uruguay",
+          "tla": "URU"
+        }
+      }
+    },
+    {
+      "id": "537364",
+      "title": "Iran – New Zealand",
+      "utcDate": "2026-06-16T01:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 2
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "G",
+        "home": {
+          "id": 840,
+          "name": "Iran",
+          "tla": "IRN"
+        },
+        "away": {
+          "id": 783,
+          "name": "New Zealand",
+          "tla": "NZL"
+        }
+      }
+    },
+    {
+      "id": "537391",
+      "title": "France – Senegal",
+      "utcDate": "2026-06-16T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 3,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "I",
+        "home": {
+          "id": 773,
+          "name": "France",
+          "tla": "FRA"
+        },
+        "away": {
+          "id": 804,
+          "name": "Senegal",
+          "tla": "SEN"
+        }
+      }
+    },
+    {
+      "id": "537392",
+      "title": "Iraq – Norway",
+      "utcDate": "2026-06-16T22:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 4
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "I",
+        "home": {
+          "id": 8062,
+          "name": "Iraq",
+          "tla": "IRQ"
+        },
+        "away": {
+          "id": 8872,
+          "name": "Norway",
+          "tla": "NOR"
+        }
+      }
+    },
+    {
+      "id": "537397",
+      "title": "Argentina – Algeria",
+      "utcDate": "2026-06-17T01:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 3,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "J",
+        "home": {
+          "id": 762,
+          "name": "Argentina",
+          "tla": "ARG"
+        },
+        "away": {
+          "id": 778,
+          "name": "Algeria",
+          "tla": "ALG"
+        }
+      }
+    },
+    {
+      "id": "537398",
+      "title": "Austria – Jordan",
+      "utcDate": "2026-06-17T04:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 3,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "J",
+        "home": {
+          "id": 816,
+          "name": "Austria",
+          "tla": "AUT"
+        },
+        "away": {
+          "id": 8049,
+          "name": "Jordan",
+          "tla": "JOR"
+        }
+      }
+    },
+    {
+      "id": "537403",
+      "title": "Portugal – Congo DR",
+      "utcDate": "2026-06-17T17:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "K",
+        "home": {
+          "id": 765,
+          "name": "Portugal",
+          "tla": "POR"
+        },
+        "away": {
+          "id": 1934,
+          "name": "Congo DR",
+          "tla": "COD"
+        }
+      }
+    },
+    {
+      "id": "537409",
+      "title": "England – Croatia",
+      "utcDate": "2026-06-17T20:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 4,
+        "away": 2
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "L",
+        "home": {
+          "id": 770,
+          "name": "England",
+          "tla": "ENG"
+        },
+        "away": {
+          "id": 799,
+          "name": "Croatia",
+          "tla": "CRO"
+        }
+      }
+    },
+    {
+      "id": "537410",
+      "title": "Ghana – Panama",
+      "utcDate": "2026-06-17T23:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "L",
+        "home": {
+          "id": 763,
+          "name": "Ghana",
+          "tla": "GHA"
+        },
+        "away": {
+          "id": 1836,
+          "name": "Panama",
+          "tla": "PAN"
+        }
+      }
+    },
+    {
+      "id": "537404",
+      "title": "Uzbekistan – Colombia",
+      "utcDate": "2026-06-18T02:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 3
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "K",
+        "home": {
+          "id": 8070,
+          "name": "Uzbekistan",
+          "tla": "UZB"
+        },
+        "away": {
+          "id": 818,
+          "name": "Colombia",
+          "tla": "COL"
+        }
+      }
+    },
+    {
+      "id": "537329",
+      "title": "Czechia – South Africa",
+      "utcDate": "2026-06-18T16:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "A",
+        "home": {
+          "id": 798,
+          "name": "Czechia",
+          "tla": "CZE"
+        },
+        "away": {
+          "id": 774,
+          "name": "South Africa",
+          "tla": "RSA"
+        }
+      }
+    },
+    {
+      "id": "537335",
+      "title": "Switzerland – Bosnia-Herzegovina",
+      "utcDate": "2026-06-18T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 4,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "B",
+        "home": {
+          "id": 788,
+          "name": "Switzerland",
+          "tla": "SUI"
+        },
+        "away": {
+          "id": 1060,
+          "name": "Bosnia-Herzegovina",
+          "tla": "BIH"
+        }
+      }
+    },
+    {
+      "id": "537336",
+      "title": "Canada – Qatar",
+      "utcDate": "2026-06-18T22:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 6,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "B",
+        "home": {
+          "id": 828,
+          "name": "Canada",
+          "tla": "CAN"
+        },
+        "away": {
+          "id": 8030,
+          "name": "Qatar",
+          "tla": "QAT"
+        }
+      }
+    },
+    {
+      "id": "537330",
+      "title": "Mexico – South Korea",
+      "utcDate": "2026-06-19T01:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "A",
+        "home": {
+          "id": 769,
+          "name": "Mexico",
+          "tla": "MEX"
+        },
+        "away": {
+          "id": 772,
+          "name": "South Korea",
+          "tla": "KOR"
+        }
+      }
+    },
+    {
+      "id": "537348",
+      "title": "United States – Australia",
+      "utcDate": "2026-06-19T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "D",
+        "home": {
+          "id": 771,
+          "name": "United States",
+          "tla": "USA"
+        },
+        "away": {
+          "id": 779,
+          "name": "Australia",
+          "tla": "AUS"
+        }
+      }
+    },
+    {
+      "id": "537342",
+      "title": "Scotland – Morocco",
+      "utcDate": "2026-06-19T22:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "C",
+        "home": {
+          "id": 8873,
+          "name": "Scotland",
+          "tla": "SCO"
+        },
+        "away": {
+          "id": 815,
+          "name": "Morocco",
+          "tla": "MAR"
+        }
+      }
+    },
+    {
+      "id": "537341",
+      "title": "Brazil – Haiti",
+      "utcDate": "2026-06-20T00:30:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 3,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "C",
+        "home": {
+          "id": 764,
+          "name": "Brazil",
+          "tla": "BRA"
+        },
+        "away": {
+          "id": 836,
+          "name": "Haiti",
+          "tla": "HAI"
+        }
+      }
+    },
+    {
+      "id": "537347",
+      "title": "Turkey – Paraguay",
+      "utcDate": "2026-06-20T03:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "D",
+        "home": {
+          "id": 803,
+          "name": "Turkey",
+          "tla": "TUR"
+        },
+        "away": {
+          "id": 761,
+          "name": "Paraguay",
+          "tla": "PAR"
+        }
+      }
+    },
+    {
+      "id": "537359",
+      "title": "Netherlands – Sweden",
+      "utcDate": "2026-06-20T17:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 5,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "F",
+        "home": {
+          "id": 8601,
+          "name": "Netherlands",
+          "tla": "NED"
+        },
+        "away": {
+          "id": 792,
+          "name": "Sweden",
+          "tla": "SWE"
+        }
+      }
+    },
+    {
+      "id": "537353",
+      "title": "Germany – Ivory Coast",
+      "utcDate": "2026-06-20T20:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "E",
+        "home": {
+          "id": 759,
+          "name": "Germany",
+          "tla": "GER"
+        },
+        "away": {
+          "id": 1935,
+          "name": "Ivory Coast",
+          "tla": "CIV"
+        }
+      }
+    },
+    {
+      "id": "537354",
+      "title": "Ecuador – Curaçao",
+      "utcDate": "2026-06-21T00:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "E",
+        "home": {
+          "id": 791,
+          "name": "Ecuador",
+          "tla": "ECU"
+        },
+        "away": {
+          "id": 9460,
+          "name": "Curaçao",
+          "tla": "CUW"
+        }
+      }
+    },
+    {
+      "id": "537360",
+      "title": "Tunisia – Japan",
+      "utcDate": "2026-06-21T04:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 4
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "F",
+        "home": {
+          "id": 802,
+          "name": "Tunisia",
+          "tla": "TUN"
+        },
+        "away": {
+          "id": 766,
+          "name": "Japan",
+          "tla": "JPN"
+        }
+      }
+    },
+    {
+      "id": "537371",
+      "title": "Spain – Saudi Arabia",
+      "utcDate": "2026-06-21T16:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 4,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "H",
+        "home": {
+          "id": 760,
+          "name": "Spain",
+          "tla": "ESP"
+        },
+        "away": {
+          "id": 801,
+          "name": "Saudi Arabia",
+          "tla": "KSA"
+        }
+      }
+    },
+    {
+      "id": "537365",
+      "title": "Belgium – Iran",
+      "utcDate": "2026-06-21T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "G",
+        "home": {
+          "id": 805,
+          "name": "Belgium",
+          "tla": "BEL"
+        },
+        "away": {
+          "id": 840,
+          "name": "Iran",
+          "tla": "IRN"
+        }
+      }
+    },
+    {
+      "id": "537372",
+      "title": "Uruguay – Cape Verde Islands",
+      "utcDate": "2026-06-21T22:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 2
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "H",
+        "home": {
+          "id": 758,
+          "name": "Uruguay",
+          "tla": "URU"
+        },
+        "away": {
+          "id": 1930,
+          "name": "Cape Verde Islands",
+          "tla": "CPV"
+        }
+      }
+    },
+    {
+      "id": "537366",
+      "title": "New Zealand – Egypt",
+      "utcDate": "2026-06-22T01:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 3
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "G",
+        "home": {
+          "id": 783,
+          "name": "New Zealand",
+          "tla": "NZL"
+        },
+        "away": {
+          "id": 825,
+          "name": "Egypt",
+          "tla": "EGY"
+        }
+      }
+    },
+    {
+      "id": "537399",
+      "title": "Argentina – Austria",
+      "utcDate": "2026-06-22T17:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "J",
+        "home": {
+          "id": 762,
+          "name": "Argentina",
+          "tla": "ARG"
+        },
+        "away": {
+          "id": 816,
+          "name": "Austria",
+          "tla": "AUT"
+        }
+      }
+    },
+    {
+      "id": "537393",
+      "title": "France – Iraq",
+      "utcDate": "2026-06-22T21:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 3,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "I",
+        "home": {
+          "id": 773,
+          "name": "France",
+          "tla": "FRA"
+        },
+        "away": {
+          "id": 8062,
+          "name": "Iraq",
+          "tla": "IRQ"
+        }
+      }
+    },
+    {
+      "id": "537394",
+      "title": "Norway – Senegal",
+      "utcDate": "2026-06-23T00:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 3,
+        "away": 2
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "I",
+        "home": {
+          "id": 8872,
+          "name": "Norway",
+          "tla": "NOR"
+        },
+        "away": {
+          "id": 804,
+          "name": "Senegal",
+          "tla": "SEN"
+        }
+      }
+    },
+    {
+      "id": "537400",
+      "title": "Jordan – Algeria",
+      "utcDate": "2026-06-23T03:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 2
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "J",
+        "home": {
+          "id": 8049,
+          "name": "Jordan",
+          "tla": "JOR"
+        },
+        "away": {
+          "id": 778,
+          "name": "Algeria",
+          "tla": "ALG"
+        }
+      }
+    },
+    {
+      "id": "537405",
+      "title": "Portugal – Uzbekistan",
+      "utcDate": "2026-06-23T17:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 5,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "K",
+        "home": {
+          "id": 765,
+          "name": "Portugal",
+          "tla": "POR"
+        },
+        "away": {
+          "id": 8070,
+          "name": "Uzbekistan",
+          "tla": "UZB"
+        }
+      }
+    },
+    {
+      "id": "537411",
+      "title": "England – Ghana",
+      "utcDate": "2026-06-23T20:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "L",
+        "home": {
+          "id": 770,
+          "name": "England",
+          "tla": "ENG"
+        },
+        "away": {
+          "id": 763,
+          "name": "Ghana",
+          "tla": "GHA"
+        }
+      }
+    },
+    {
+      "id": "537412",
+      "title": "Panama – Croatia",
+      "utcDate": "2026-06-23T23:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "L",
+        "home": {
+          "id": 1836,
+          "name": "Panama",
+          "tla": "PAN"
+        },
+        "away": {
+          "id": 799,
+          "name": "Croatia",
+          "tla": "CRO"
+        }
+      }
+    },
+    {
+      "id": "537406",
+      "title": "Colombia – Congo DR",
+      "utcDate": "2026-06-24T02:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "K",
+        "home": {
+          "id": 818,
+          "name": "Colombia",
+          "tla": "COL"
+        },
+        "away": {
+          "id": 1934,
+          "name": "Congo DR",
+          "tla": "COD"
+        }
+      }
+    },
+    {
+      "id": "537337",
+      "title": "Switzerland – Canada",
+      "utcDate": "2026-06-24T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "B",
+        "home": {
+          "id": 788,
+          "name": "Switzerland",
+          "tla": "SUI"
+        },
+        "away": {
+          "id": 828,
+          "name": "Canada",
+          "tla": "CAN"
+        }
+      }
+    },
+    {
+      "id": "537338",
+      "title": "Bosnia-Herzegovina – Qatar",
+      "utcDate": "2026-06-24T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 3,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "B",
+        "home": {
+          "id": 1060,
+          "name": "Bosnia-Herzegovina",
+          "tla": "BIH"
+        },
+        "away": {
+          "id": 8030,
+          "name": "Qatar",
+          "tla": "QAT"
+        }
+      }
+    },
+    {
+      "id": "537343",
+      "title": "Scotland – Brazil",
+      "utcDate": "2026-06-24T22:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 3
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "C",
+        "home": {
+          "id": 8873,
+          "name": "Scotland",
+          "tla": "SCO"
+        },
+        "away": {
+          "id": 764,
+          "name": "Brazil",
+          "tla": "BRA"
+        }
+      }
+    },
+    {
+      "id": "537344",
+      "title": "Morocco – Haiti",
+      "utcDate": "2026-06-24T22:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 4,
+        "away": 2
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "C",
+        "home": {
+          "id": 815,
+          "name": "Morocco",
+          "tla": "MAR"
+        },
+        "away": {
+          "id": 836,
+          "name": "Haiti",
+          "tla": "HAI"
+        }
+      }
+    },
+    {
+      "id": "537331",
+      "title": "Czechia – Mexico",
+      "utcDate": "2026-06-25T01:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 3
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "A",
+        "home": {
+          "id": 798,
+          "name": "Czechia",
+          "tla": "CZE"
+        },
+        "away": {
+          "id": 769,
+          "name": "Mexico",
+          "tla": "MEX"
+        }
+      }
+    },
+    {
+      "id": "537332",
+      "title": "South Africa – South Korea",
+      "utcDate": "2026-06-25T01:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "A",
+        "home": {
+          "id": 774,
+          "name": "South Africa",
+          "tla": "RSA"
+        },
+        "away": {
+          "id": 772,
+          "name": "South Korea",
+          "tla": "KOR"
+        }
+      }
+    },
+    {
+      "id": "537355",
+      "title": "Ecuador – Germany",
+      "utcDate": "2026-06-25T20:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "E",
+        "home": {
+          "id": 791,
+          "name": "Ecuador",
+          "tla": "ECU"
+        },
+        "away": {
+          "id": 759,
+          "name": "Germany",
+          "tla": "GER"
+        }
+      }
+    },
+    {
+      "id": "537356",
+      "title": "Curaçao – Ivory Coast",
+      "utcDate": "2026-06-25T20:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 2
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "E",
+        "home": {
+          "id": 9460,
+          "name": "Curaçao",
+          "tla": "CUW"
+        },
+        "away": {
+          "id": 1935,
+          "name": "Ivory Coast",
+          "tla": "CIV"
+        }
+      }
+    },
+    {
+      "id": "537361",
+      "title": "Tunisia – Netherlands",
+      "utcDate": "2026-06-25T23:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 3
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "F",
+        "home": {
+          "id": 802,
+          "name": "Tunisia",
+          "tla": "TUN"
+        },
+        "away": {
+          "id": 8601,
+          "name": "Netherlands",
+          "tla": "NED"
+        }
+      }
+    },
+    {
+      "id": "537362",
+      "title": "Japan – Sweden",
+      "utcDate": "2026-06-25T23:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "F",
+        "home": {
+          "id": 766,
+          "name": "Japan",
+          "tla": "JPN"
+        },
+        "away": {
+          "id": 792,
+          "name": "Sweden",
+          "tla": "SWE"
+        }
+      }
+    },
+    {
+      "id": "537349",
+      "title": "Turkey – United States",
+      "utcDate": "2026-06-26T02:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 3,
+        "away": 2
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "D",
+        "home": {
+          "id": 803,
+          "name": "Turkey",
+          "tla": "TUR"
+        },
+        "away": {
+          "id": 771,
+          "name": "United States",
+          "tla": "USA"
+        }
+      }
+    },
+    {
+      "id": "537350",
+      "title": "Paraguay – Australia",
+      "utcDate": "2026-06-26T02:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "D",
+        "home": {
+          "id": 761,
+          "name": "Paraguay",
+          "tla": "PAR"
+        },
+        "away": {
+          "id": 779,
+          "name": "Australia",
+          "tla": "AUS"
+        }
+      }
+    },
+    {
+      "id": "537395",
+      "title": "Norway – France",
+      "utcDate": "2026-06-26T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 4
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "I",
+        "home": {
+          "id": 8872,
+          "name": "Norway",
+          "tla": "NOR"
+        },
+        "away": {
+          "id": 773,
+          "name": "France",
+          "tla": "FRA"
+        }
+      }
+    },
+    {
+      "id": "537396",
+      "title": "Senegal – Iraq",
+      "utcDate": "2026-06-26T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 5,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "I",
+        "home": {
+          "id": 804,
+          "name": "Senegal",
+          "tla": "SEN"
+        },
+        "away": {
+          "id": 8062,
+          "name": "Iraq",
+          "tla": "IRQ"
+        }
+      }
+    },
+    {
+      "id": "537373",
+      "title": "Uruguay – Spain",
+      "utcDate": "2026-06-27T00:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "H",
+        "home": {
+          "id": 758,
+          "name": "Uruguay",
+          "tla": "URU"
+        },
+        "away": {
+          "id": 760,
+          "name": "Spain",
+          "tla": "ESP"
+        }
+      }
+    },
+    {
+      "id": "537374",
+      "title": "Cape Verde Islands – Saudi Arabia",
+      "utcDate": "2026-06-27T00:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "H",
+        "home": {
+          "id": 1930,
+          "name": "Cape Verde Islands",
+          "tla": "CPV"
+        },
+        "away": {
+          "id": 801,
+          "name": "Saudi Arabia",
+          "tla": "KSA"
+        }
+      }
+    },
+    {
+      "id": "537367",
+      "title": "New Zealand – Belgium",
+      "utcDate": "2026-06-27T03:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 5
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "G",
+        "home": {
+          "id": 783,
+          "name": "New Zealand",
+          "tla": "NZL"
+        },
+        "away": {
+          "id": 805,
+          "name": "Belgium",
+          "tla": "BEL"
+        }
+      }
+    },
+    {
+      "id": "537368",
+      "title": "Egypt – Iran",
+      "utcDate": "2026-06-27T03:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "G",
+        "home": {
+          "id": 825,
+          "name": "Egypt",
+          "tla": "EGY"
+        },
+        "away": {
+          "id": 840,
+          "name": "Iran",
+          "tla": "IRN"
+        }
+      }
+    },
+    {
+      "id": "537413",
+      "title": "Panama – England",
+      "utcDate": "2026-06-27T21:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 2
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "L",
+        "home": {
+          "id": 1836,
+          "name": "Panama",
+          "tla": "PAN"
+        },
+        "away": {
+          "id": 770,
+          "name": "England",
+          "tla": "ENG"
+        }
+      }
+    },
+    {
+      "id": "537414",
+      "title": "Croatia – Ghana",
+      "utcDate": "2026-06-27T21:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "L",
+        "home": {
+          "id": 799,
+          "name": "Croatia",
+          "tla": "CRO"
+        },
+        "away": {
+          "id": 763,
+          "name": "Ghana",
+          "tla": "GHA"
+        }
+      }
+    },
+    {
+      "id": "537407",
+      "title": "Colombia – Portugal",
+      "utcDate": "2026-06-27T23:30:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "K",
+        "home": {
+          "id": 818,
+          "name": "Colombia",
+          "tla": "COL"
+        },
+        "away": {
+          "id": 765,
+          "name": "Portugal",
+          "tla": "POR"
+        }
+      }
+    },
+    {
+      "id": "537408",
+      "title": "Congo DR – Uzbekistan",
+      "utcDate": "2026-06-27T23:30:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 3,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "K",
+        "home": {
+          "id": 1934,
+          "name": "Congo DR",
+          "tla": "COD"
+        },
+        "away": {
+          "id": 8070,
+          "name": "Uzbekistan",
+          "tla": "UZB"
+        }
+      }
+    },
+    {
+      "id": "537401",
+      "title": "Jordan – Argentina",
+      "utcDate": "2026-06-28T02:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 3
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "J",
+        "home": {
+          "id": 8049,
+          "name": "Jordan",
+          "tla": "JOR"
+        },
+        "away": {
+          "id": 762,
+          "name": "Argentina",
+          "tla": "ARG"
+        }
+      }
+    },
+    {
+      "id": "537402",
+      "title": "Algeria – Austria",
+      "utcDate": "2026-06-28T02:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 3,
+        "away": 3
+      },
+      "metadata": {
+        "stage": "GROUP_STAGE",
+        "group": "J",
+        "home": {
+          "id": 778,
+          "name": "Algeria",
+          "tla": "ALG"
+        },
+        "away": {
+          "id": 816,
+          "name": "Austria",
+          "tla": "AUT"
+        }
+      }
+    },
+    {
+      "id": "537417",
+      "title": "South Africa – Canada",
+      "utcDate": "2026-06-28T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "LAST_32",
+        "group": null,
+        "home": {
+          "id": 774,
+          "name": "South Africa",
+          "tla": "RSA"
+        },
+        "away": {
+          "id": 828,
+          "name": "Canada",
+          "tla": "CAN"
+        }
+      }
+    },
+    {
+      "id": "537423",
+      "title": "Brazil – Japan",
+      "utcDate": "2026-06-29T17:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "LAST_32",
+        "group": null,
+        "home": {
+          "id": 764,
+          "name": "Brazil",
+          "tla": "BRA"
+        },
+        "away": {
+          "id": 766,
+          "name": "Japan",
+          "tla": "JPN"
+        }
+      }
+    },
+    {
+      "id": "537415",
+      "title": "Germany – Paraguay",
+      "utcDate": "2026-06-29T20:30:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "LAST_32",
+        "group": null,
+        "home": {
+          "id": 759,
+          "name": "Germany",
+          "tla": "GER"
+        },
+        "away": {
+          "id": 761,
+          "name": "Paraguay",
+          "tla": "PAR"
+        },
+        "duration": "PENALTY_SHOOTOUT",
+        "penalties": {
+          "home": 3,
+          "away": 4
+        }
+      }
+    },
+    {
+      "id": "537418",
+      "title": "Netherlands – Morocco",
+      "utcDate": "2026-06-30T01:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "LAST_32",
+        "group": null,
+        "home": {
+          "id": 8601,
+          "name": "Netherlands",
+          "tla": "NED"
+        },
+        "away": {
+          "id": 815,
+          "name": "Morocco",
+          "tla": "MAR"
+        },
+        "duration": "PENALTY_SHOOTOUT",
+        "penalties": {
+          "home": 2,
+          "away": 3
+        }
+      }
+    },
+    {
+      "id": "537424",
+      "title": "Ivory Coast – Norway",
+      "utcDate": "2026-06-30T17:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 2
+      },
+      "metadata": {
+        "stage": "LAST_32",
+        "group": null,
+        "home": {
+          "id": 1935,
+          "name": "Ivory Coast",
+          "tla": "CIV"
+        },
+        "away": {
+          "id": 8872,
+          "name": "Norway",
+          "tla": "NOR"
+        }
+      }
+    },
+    {
+      "id": "537416",
+      "title": "France – Sweden",
+      "utcDate": "2026-06-30T21:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 3,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "LAST_32",
+        "group": null,
+        "home": {
+          "id": 773,
+          "name": "France",
+          "tla": "FRA"
+        },
+        "away": {
+          "id": 792,
+          "name": "Sweden",
+          "tla": "SWE"
+        }
+      }
+    },
+    {
+      "id": "537425",
+      "title": "Mexico – Ecuador",
+      "utcDate": "2026-07-01T02:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "LAST_32",
+        "group": null,
+        "home": {
+          "id": 769,
+          "name": "Mexico",
+          "tla": "MEX"
+        },
+        "away": {
+          "id": 791,
+          "name": "Ecuador",
+          "tla": "ECU"
+        }
+      }
+    },
+    {
+      "id": "537426",
+      "title": "England – Congo DR",
+      "utcDate": "2026-07-01T16:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "LAST_32",
+        "group": null,
+        "home": {
+          "id": 770,
+          "name": "England",
+          "tla": "ENG"
+        },
+        "away": {
+          "id": 1934,
+          "name": "Congo DR",
+          "tla": "COD"
+        }
+      }
+    },
+    {
+      "id": "537422",
+      "title": "Belgium – Senegal",
+      "utcDate": "2026-07-01T20:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 3,
+        "away": 2
+      },
+      "metadata": {
+        "stage": "LAST_32",
+        "group": null,
+        "home": {
+          "id": 805,
+          "name": "Belgium",
+          "tla": "BEL"
+        },
+        "away": {
+          "id": 804,
+          "name": "Senegal",
+          "tla": "SEN"
+        },
+        "duration": "EXTRA_TIME"
+      }
+    },
+    {
+      "id": "537421",
+      "title": "United States – Bosnia-Herzegovina",
+      "utcDate": "2026-07-02T00:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "LAST_32",
+        "group": null,
+        "home": {
+          "id": 771,
+          "name": "United States",
+          "tla": "USA"
+        },
+        "away": {
+          "id": 1060,
+          "name": "Bosnia-Herzegovina",
+          "tla": "BIH"
+        }
+      }
+    },
+    {
+      "id": "537420",
+      "title": "Spain – Austria",
+      "utcDate": "2026-07-02T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 3,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "LAST_32",
+        "group": null,
+        "home": {
+          "id": 760,
+          "name": "Spain",
+          "tla": "ESP"
+        },
+        "away": {
+          "id": 816,
+          "name": "Austria",
+          "tla": "AUT"
+        }
+      }
+    },
+    {
+      "id": "537419",
+      "title": "Portugal – Croatia",
+      "utcDate": "2026-07-02T23:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "LAST_32",
+        "group": null,
+        "home": {
+          "id": 765,
+          "name": "Portugal",
+          "tla": "POR"
+        },
+        "away": {
+          "id": 799,
+          "name": "Croatia",
+          "tla": "CRO"
+        }
+      }
+    },
+    {
+      "id": "537429",
+      "title": "Switzerland – Algeria",
+      "utcDate": "2026-07-03T03:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "LAST_32",
+        "group": null,
+        "home": {
+          "id": 788,
+          "name": "Switzerland",
+          "tla": "SUI"
+        },
+        "away": {
+          "id": 778,
+          "name": "Algeria",
+          "tla": "ALG"
+        }
+      }
+    },
+    {
+      "id": "537428",
+      "title": "Australia – Egypt",
+      "utcDate": "2026-07-03T18:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "LAST_32",
+        "group": null,
+        "home": {
+          "id": 779,
+          "name": "Australia",
+          "tla": "AUS"
+        },
+        "away": {
+          "id": 825,
+          "name": "Egypt",
+          "tla": "EGY"
+        },
+        "duration": "PENALTY_SHOOTOUT",
+        "penalties": {
+          "home": 2,
+          "away": 4
+        }
+      }
+    },
+    {
+      "id": "537427",
+      "title": "Argentina – Cape Verde Islands",
+      "utcDate": "2026-07-03T22:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 3,
+        "away": 2
+      },
+      "metadata": {
+        "stage": "LAST_32",
+        "group": null,
+        "home": {
+          "id": 762,
+          "name": "Argentina",
+          "tla": "ARG"
+        },
+        "away": {
+          "id": 1930,
+          "name": "Cape Verde Islands",
+          "tla": "CPV"
+        },
+        "duration": "EXTRA_TIME"
+      }
+    },
+    {
+      "id": "537430",
+      "title": "Colombia – Ghana",
+      "utcDate": "2026-07-04T01:30:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "LAST_32",
+        "group": null,
+        "home": {
+          "id": 818,
+          "name": "Colombia",
+          "tla": "COL"
+        },
+        "away": {
+          "id": 763,
+          "name": "Ghana",
+          "tla": "GHA"
+        }
+      }
+    },
+    {
+      "id": "537376",
+      "title": "Canada – Morocco",
+      "utcDate": "2026-07-04T17:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 3
+      },
+      "metadata": {
+        "stage": "LAST_16",
+        "group": null,
+        "home": {
+          "id": 828,
+          "name": "Canada",
+          "tla": "CAN"
+        },
+        "away": {
+          "id": 815,
+          "name": "Morocco",
+          "tla": "MAR"
+        }
+      }
+    },
+    {
+      "id": "537375",
+      "title": "Paraguay – France",
+      "utcDate": "2026-07-04T21:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "LAST_16",
+        "group": null,
+        "home": {
+          "id": 761,
+          "name": "Paraguay",
+          "tla": "PAR"
+        },
+        "away": {
+          "id": 773,
+          "name": "France",
+          "tla": "FRA"
+        }
+      }
+    },
+    {
+      "id": "537377",
+      "title": "Brazil – Norway",
+      "utcDate": "2026-07-05T20:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 2
+      },
+      "metadata": {
+        "stage": "LAST_16",
+        "group": null,
+        "home": {
+          "id": 764,
+          "name": "Brazil",
+          "tla": "BRA"
+        },
+        "away": {
+          "id": 8872,
+          "name": "Norway",
+          "tla": "NOR"
+        }
+      }
+    },
+    {
+      "id": "537378",
+      "title": "Mexico – England",
+      "utcDate": "2026-07-06T01:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 3
+      },
+      "metadata": {
+        "stage": "LAST_16",
+        "group": null,
+        "home": {
+          "id": 769,
+          "name": "Mexico",
+          "tla": "MEX"
+        },
+        "away": {
+          "id": 770,
+          "name": "England",
+          "tla": "ENG"
+        }
+      }
+    },
+    {
+      "id": "537379",
+      "title": "Portugal – Spain",
+      "utcDate": "2026-07-06T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "LAST_16",
+        "group": null,
+        "home": {
+          "id": 765,
+          "name": "Portugal",
+          "tla": "POR"
+        },
+        "away": {
+          "id": 760,
+          "name": "Spain",
+          "tla": "ESP"
+        }
+      }
+    },
+    {
+      "id": "537380",
+      "title": "United States – Belgium",
+      "utcDate": "2026-07-07T00:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 4
+      },
+      "metadata": {
+        "stage": "LAST_16",
+        "group": null,
+        "home": {
+          "id": 771,
+          "name": "United States",
+          "tla": "USA"
+        },
+        "away": {
+          "id": 805,
+          "name": "Belgium",
+          "tla": "BEL"
+        }
+      }
+    },
+    {
+      "id": "537381",
+      "title": "Argentina – Egypt",
+      "utcDate": "2026-07-07T16:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 3,
+        "away": 2
+      },
+      "metadata": {
+        "stage": "LAST_16",
+        "group": null,
+        "home": {
+          "id": 762,
+          "name": "Argentina",
+          "tla": "ARG"
+        },
+        "away": {
+          "id": 825,
+          "name": "Egypt",
+          "tla": "EGY"
+        }
+      }
+    },
+    {
+      "id": "537382",
+      "title": "Switzerland – Colombia",
+      "utcDate": "2026-07-07T20:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "LAST_16",
+        "group": null,
+        "home": {
+          "id": 788,
+          "name": "Switzerland",
+          "tla": "SUI"
+        },
+        "away": {
+          "id": 818,
+          "name": "Colombia",
+          "tla": "COL"
+        },
+        "duration": "PENALTY_SHOOTOUT",
+        "penalties": {
+          "home": 4,
+          "away": 3
+        }
+      }
+    },
+    {
+      "id": "537383",
+      "title": "France – Morocco",
+      "utcDate": "2026-07-09T20:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "QUARTER_FINALS",
+        "group": null,
+        "home": {
+          "id": 773,
+          "name": "France",
+          "tla": "FRA"
+        },
+        "away": {
+          "id": 815,
+          "name": "Morocco",
+          "tla": "MAR"
+        }
+      }
+    },
+    {
+      "id": "537384",
+      "title": "Spain – Belgium",
+      "utcDate": "2026-07-10T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 2,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "QUARTER_FINALS",
+        "group": null,
+        "home": {
+          "id": 760,
+          "name": "Spain",
+          "tla": "ESP"
+        },
+        "away": {
+          "id": 805,
+          "name": "Belgium",
+          "tla": "BEL"
+        }
+      }
+    },
+    {
+      "id": "537385",
+      "title": "Norway – England",
+      "utcDate": "2026-07-11T21:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 2
+      },
+      "metadata": {
+        "stage": "QUARTER_FINALS",
+        "group": null,
+        "home": {
+          "id": 8872,
+          "name": "Norway",
+          "tla": "NOR"
+        },
+        "away": {
+          "id": 770,
+          "name": "England",
+          "tla": "ENG"
+        },
+        "duration": "EXTRA_TIME"
+      }
+    },
+    {
+      "id": "537386",
+      "title": "Argentina – Switzerland",
+      "utcDate": "2026-07-12T01:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 3,
+        "away": 1
+      },
+      "metadata": {
+        "stage": "QUARTER_FINALS",
+        "group": null,
+        "home": {
+          "id": 762,
+          "name": "Argentina",
+          "tla": "ARG"
+        },
+        "away": {
+          "id": 788,
+          "name": "Switzerland",
+          "tla": "SUI"
+        },
+        "duration": "EXTRA_TIME"
+      }
+    },
+    {
+      "id": "537387",
+      "title": "France – Spain",
+      "utcDate": "2026-07-14T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 0,
+        "away": 2
+      },
+      "metadata": {
+        "stage": "SEMI_FINALS",
+        "group": null,
+        "home": {
+          "id": 773,
+          "name": "France",
+          "tla": "FRA"
+        },
+        "away": {
+          "id": 760,
+          "name": "Spain",
+          "tla": "ESP"
+        }
+      }
+    },
+    {
+      "id": "537388",
+      "title": "England – Argentina",
+      "utcDate": "2026-07-15T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 2
+      },
+      "metadata": {
+        "stage": "SEMI_FINALS",
+        "group": null,
+        "home": {
+          "id": 770,
+          "name": "England",
+          "tla": "ENG"
+        },
+        "away": {
+          "id": 762,
+          "name": "Argentina",
+          "tla": "ARG"
+        }
+      }
+    },
+    {
+      "id": "537389",
+      "title": "France – England",
+      "utcDate": "2026-07-18T21:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 4,
+        "away": 6
+      },
+      "metadata": {
+        "stage": "THIRD_PLACE",
+        "group": null,
+        "home": {
+          "id": 773,
+          "name": "France",
+          "tla": "FRA"
+        },
+        "away": {
+          "id": 770,
+          "name": "England",
+          "tla": "ENG"
+        }
+      }
+    },
+    {
+      "id": "537390",
+      "title": "Spain – Argentina",
+      "utcDate": "2026-07-19T19:00:00Z",
+      "status": "RESOLVED",
+      "predictionType": "scoreline",
+      "resolution": {
+        "kind": "scoreline",
+        "home": 1,
+        "away": 0
+      },
+      "metadata": {
+        "stage": "FINAL",
+        "group": null,
+        "home": {
+          "id": 760,
+          "name": "Spain",
+          "tla": "ESP"
+        },
+        "away": {
+          "id": 762,
+          "name": "Argentina",
+          "tla": "ARG"
+        },
+        "duration": "EXTRA_TIME"
+      }
+    }
+  ]
+}
