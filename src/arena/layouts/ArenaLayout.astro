@@ -1,0 +1,98 @@
+---
+/**
+ * Eigenes Layout der Arena.
+ *
+ * Absichtlich getrennt vom WM-Layout (src/layouts/Layout.astro): Jenes hat fest
+ * verdrahtete Titel/Body-Klassen und keinen head-Slot. Ein eigenes Layout lässt
+ * den WM-Bestand vollständig unberührt und erlaubt eigene Meta-Daten.
+ */
+import '@fontsource-variable/inter';
+import '@fontsource-variable/fraunces';
+import '@fontsource-variable/jetbrains-mono';
+import '../../styles/global.css';
+import '../styles/arena.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Prediction Benchmarks Arena',
+  description = 'Welches KI-Modell prognostiziert die Zukunft am besten? Ein offenes Benchmark über Sport, Aktienmärkte und Wahlen – alle Vorhersagen vor dem Ereignis veröffentlicht.',
+} = Astro.props;
+
+const fullTitle = title === 'Prediction Benchmarks Arena' ? title : `${title} · Arena`;
+---
+
+<!doctype html>
+<html lang="de" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0a0c10" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body
+    class="min-h-screen bg-ink-950 font-sans text-ink-100 antialiased selection:bg-signal-400/30 selection:text-ink-50"
+  >
+    <div class="relative isolate overflow-x-clip">
+      <div
+        class="pointer-events-none absolute inset-x-0 top-0 -z-10 h-96 overflow-hidden"
+        aria-hidden="true"
+      >
+        <div
+          class="absolute -top-28 left-1/2 h-80 w-[42rem] -translate-x-1/2 rounded-full bg-signal-500/10 blur-3xl"
+        >
+        </div>
+        <div class="absolute left-[8%] top-6 h-56 w-72 rounded-full bg-clay-500/10 blur-3xl"></div>
+      </div>
+
+      <header class="mx-auto max-w-6xl px-4 pt-8">
+        <nav class="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm" aria-label="Arena">
+          <a
+            href="/arena"
+            class="font-display text-base font-semibold text-ink-50 transition-colors hover:text-signal-300"
+          >
+            Benchmarks<span class="text-signal-400">.</span>Arena
+          </a>
+          <a href="/arena" class="text-ink-300 transition-colors hover:text-ink-100">Kategorien</a>
+          <a href="/arena/methodology" class="text-ink-300 transition-colors hover:text-ink-100">
+            Methodik
+          </a>
+          <span
+            class="ml-auto rounded-full border border-ink-700 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-ink-400"
+            title="Diese Seite ist ein Prototyp: Ausser der Fussball-WM sind alle Daten Beispieldaten."
+          >
+            Prototyp
+          </span>
+        </nav>
+      </header>
+
+      <slot />
+
+      <footer class="mt-16 border-t border-ink-800 py-8">
+        <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 text-xs text-ink-400">
+          <p>
+            Ein Projekt von <a
+              class="font-semibold text-clay-400 underline decoration-ink-600 underline-offset-2 transition-colors hover:text-clay-300"
+              href="https://www.youtube.com/@zeldogiq"
+              rel="noopener noreferrer"
+              target="_blank">ZELDOgiq</a
+            >
+          </p>
+          <p>
+            Prototyp-Hinweis: Nur die Kategorie „Fussball-WM 2026" enthält echte Daten. Aktien,
+            Wahlen und Sport-Mix sind Beispieldaten zum Aufbau der Oberfläche.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

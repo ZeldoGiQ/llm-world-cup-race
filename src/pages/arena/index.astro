@@ -1,0 +1,153 @@
+---
+import ArenaLayout from '../../arena/layouts/ArenaLayout.astro';
+import { categories } from '../../arena/lib/plugins';
+import { metrics } from '../../arena/lib/metrics/index';
+import modelsJson from '../../arena/data/models.json';
+import type { ArenaModel } from '../../arena/lib/types';
+import { avatarTextColor, modelInitials } from '../../lib/format';
+
+const models = (modelsJson as ArenaModel[]).filter((model) => !model.baseline);
+const tiles = categories.list();
+
+/** Kennzahlen einer Kategorie zur Build-Zeit aus den Datendateien lesen. */
+async function categoryStats(id: string) {
+  try {
+    const events = await import(`../../../public/arena-data/${id}/events.json`);
+    const list = (events.default?.events ?? []) as Array<{ status: string }>;
+    return {
+      total: list.length,
+      resolved: list.filter((event) => event.status === 'RESOLVED').length,
+    };
+  } catch {
+    return { total: 0, resolved: 0 };
+  }
+}
+
+const stats = new Map<string, { total: number; resolved: number }>();
+for (const tile of tiles) stats.set(tile.id, await categoryStats(tile.id));
+---
+
+<ArenaLayout>
+  <main class="mx-auto max-w-6xl px-4 pb-8 pt-12">
+    <p class="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.25em] text-clay-400">
+      Ein ZELDOgiq-Experiment
+    </p>
+    <h1 class="font-display text-4xl font-semibold leading-tight text-ink-50 sm:text-6xl">
+      Prediction Benchmarks <span class="text-signal-400">Arena</span>
+    </h1>
+    <p class="mt-4 max-w-2xl text-base text-ink-300 sm:text-lg">
+      Welches KI-Modell schätzt die Zukunft am besten ein? Hier treten Sprachmodelle in mehreren
+      Domänen gegeneinander an – Sport, Aktienmärkte, Wahlen. Alle Vorhersagen werden vor dem
+      Ereignis veröffentlicht, jede Wertung ist nachrechenbar.
+    </p>
+
+    <ul class="mt-6 flex flex-wrap items-center gap-2" aria-label="Teilnehmende Modelle">
+      {
+        models.map((model) => (
+          <li class="flex items-center gap-2 rounded-full border border-ink-700/80 bg-ink-900/70 py-1 pl-1 pr-3 text-xs text-ink-200">
+            <span
+              class="flex h-6 w-6 items-center justify-center rounded-full text-[10px] font-bold"
+              style={`background-color:${model.color};color:${avatarTextColor(model.color)}`}
+              aria-hidden="true"
+            >
+              {modelInitials(model.name)}
+            </span>
+            {model.name}
+            {model.access === 'early-access' && (
+              <span
+                class="rounded-full border px-1.5 text-[9px] font-semibold uppercase tracking-wider"
+                style="border-color:color-mix(in srgb, var(--arena-prerelease) 45%, transparent);color:var(--arena-prerelease)"
+              >
+                Pre-release
+              </span>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+
+    <section class="mt-14" aria-labelledby="kategorien">
+      <h2
+        id="kategorien"
+        class="mb-5 border-l-2 border-signal-400/80 pl-4 font-display text-2xl font-semibold text-ink-50 sm:text-3xl"
+      >
+        Kategorien
+      </h2>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          tiles.map((tile) => {
+            const stat = stats.get(tile.id)!;
+            const rankingLabel = metrics.find(tile.primaryMetric)?.label ?? tile.primaryMetric;
+            return (
+              <a
+                href={`/arena/${tile.id}`}
+                class="group flex flex-col gap-3 rounded-2xl border border-ink-700/70 bg-ink-900/80 p-5 shadow-lg shadow-black/20 transition-all duration-200 hover:-translate-y-0.5 hover:border-ink-600"
+              >
+                <span class="flex items-center gap-2">
+                  <span
+                    class="h-2.5 w-2.5 rounded-full"
+                    style={`background-color:${tile.accent}`}
+                    aria-hidden="true"
+                  />
+                  <span class="font-display text-lg font-semibold text-ink-50 group-hover:text-signal-300">
+                    {tile.label}
+                  </span>
+                </span>
+                <p class="flex-1 text-sm leading-relaxed text-ink-300">{tile.blurb}</p>
+                <dl class="flex flex-wrap gap-x-4 gap-y-1 border-t border-ink-800 pt-3 text-[11px] text-ink-400">
+                  <div class="flex gap-1">
+                    <dt>Events</dt>
+                    <dd class="font-mono text-ink-200">{stat.total}</dd>
+                  </div>
+                  <div class="flex gap-1">
+                    <dt>aufgelöst</dt>
+                    <dd class="font-mono text-ink-200">{stat.resolved}</dd>
+                  </div>
+                  <div class="flex gap-1">
+                    <dt>Ranking</dt>
+                    <dd class="text-ink-200">{rankingLabel}</dd>
+                  </div>
+                </dl>
+              </a>
+            );
+          })
+        }
+      </div>
+    </section>
+
+    <section class="mt-14 rounded-2xl border border-ink-700/70 bg-ink-900/60 p-6" aria-labelledby="prinzip">
+      <h2 id="prinzip" class="font-display text-xl font-semibold text-ink-50">
+        Wie hier gemessen wird
+      </h2>
+      <div class="mt-4 grid gap-5 text-sm text-ink-300 sm:grid-cols-3">
+        <div>
+          <p class="mb-1 font-medium text-ink-100">Vorher veröffentlicht</p>
+          <p>
+            Jede Vorhersage trägt ihren Abgabezeitpunkt. Liegt er vor dem Ereignis, wird das
+            ausgewiesen – nachträgliches Tippen ist damit ausgeschlossen.
+          </p>
+        </div>
+        <div>
+          <p class="mb-1 font-medium text-ink-100">Passende Metrik je Domäne</p>
+          <p>
+            Ergebnistipps werden mit Punkten gewertet, Zahlen mit Fehlermassen, Wahrscheinlichkeiten
+            mit Brier-Score und Log-Loss – Letztere belohnen ehrliche Unsicherheit statt Overconfidence.
+          </p>
+        </div>
+        <div>
+          <p class="mb-1 font-medium text-ink-100">Gegen eine Referenz</p>
+          <p>
+            Absolute Zahlen sagen wenig. Entscheidend ist der Vergleich mit einer Baseline –
+            Buchmacher, Random-Walk oder letzte Umfrage.
+          </p>
+        </div>
+      </div>
+      <a
+        href="/arena/methodology"
+        class="mt-5 inline-block text-sm font-medium text-signal-300 transition-colors hover:text-signal-400"
+      >
+        Methodik im Detail →
+      </a>
+    </section>
+  </main>
+</ArenaLayout>

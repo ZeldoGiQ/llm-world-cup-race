@@ -1,0 +1,32 @@
+/*
+ * Arena-spezifische Tokens.
+ *
+ * Bewusst schlichte :root-Variablen statt eines zweiten @theme-Blocks: Die
+ * bestehenden Tailwind-Tokens (ink/clay/signal/success) kommen unverändert aus
+ * global.css, hier ergänzen wir nur die vier Farben, die dort fehlen. Die
+ * Verwendung erfolgt als arbitrary value, z. B. text-[var(--arena-danger)].
+ * So bleibt global.css unangetastet und es gibt kein Build-Risiko.
+ */
+:root {
+  --arena-danger: #f43f5e;
+  --arena-live: #f59e0b;
+  --arena-prerelease: #a78bfa;
+  --arena-baseline: #8b94a7;
+}
+
+/* Podest-Akzente für die ersten drei Ränge */
+.arena-rank-1 {
+  border-color: rgba(251, 191, 36, 0.45);
+  background-color: rgba(251, 191, 36, 0.12);
+  color: #fcd34d;
+}
+.arena-rank-2 {
+  border-color: rgba(203, 213, 225, 0.38);
+  background-color: rgba(203, 213, 225, 0.1);
+  color: #e2e8f0;
+}
+.arena-rank-3 {
+  border-color: rgba(234, 138, 100, 0.42);
+  background-color: rgba(234, 138, 100, 0.12);
+  color: #f0997b;
+}
