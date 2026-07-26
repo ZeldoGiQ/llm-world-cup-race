@@ -1,0 +1,31 @@
+/**
+ * Zentrale Plugin-Anmeldung.
+ *
+ * Jedes Plugin-Modul registriert sich beim Import selbst (Seiteneffekt). Wer mit
+ * den Registries arbeitet, importiert diese Datei einmal – dann sind alle
+ * Vorhersage-Typen, Metriken und Kategorien verfügbar.
+ *
+ * Eine neue Kategorie oder Metrik hinzufügen = Modul anlegen + hier eine Zeile.
+ * Sonst ändert sich nichts: weder Engine, noch Komponenten, noch Daten-Layer.
+ */
+
+// Vorhersage-Typen
+import './prediction-types/scoreline';
+import './prediction-types/numeric';
+import './prediction-types/binary';
+
+// Metriken
+import './metrics/accuracy';
+import './metrics/error';
+import './metrics/probabilistic';
+import './metrics/skill';
+
+// Kategorien
+import './categories/football-worldcup';
+import './categories/stocks-index';
+import './categories/elections';
+import './categories/sports-mixed';
+
+export { predictionTypes } from './prediction-types/index';
+export { metrics, metricsFor } from './metrics/index';
+export { categories } from './categories/index';
