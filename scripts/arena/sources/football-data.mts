@@ -35,6 +35,8 @@ interface FdTeam {
   tla?: string;
 }
 
+type FdScorePair = { home: number | null; away: number | null } | null;
+
 interface FdMatch {
   id: number;
   utcDate: string;
@@ -42,11 +44,38 @@ interface FdMatch {
   matchday?: number;
   homeTeam?: FdTeam;
   awayTeam?: FdTeam;
-  score?: { fullTime?: { home: number | null; away: number | null } };
+  score?: {
+    /** REGULAR | EXTRA_TIME | PENALTY_SHOOTOUT */
+    duration?: string;
+    fullTime?: FdScorePair;
+    regularTime?: FdScorePair;
+  };
 }
 
 function isNumber(value: unknown): value is number {
   return typeof value === 'number' && Number.isFinite(value);
+}
+
+/**
+ * Stand nach 90 Minuten – genau das, was im Prompt gefragt wird.
+ *
+ * Wichtig: `fullTime` ist NICHT der 90-Minuten-Stand, sobald verlängert wurde.
+ * Bei EXTRA_TIME enthält es den 120-Minuten-Stand, bei PENALTY_SHOOTOUT laut
+ * API-Doku sogar die Elfmetertore obendrauf (1:1 n. V., 6:5 i. E. -> 7:6).
+ * Der reguläre Stand steht dann in `regularTime`. Fehlt er, wird NICHT geraten –
+ * null führt zu VOID, was folgenlos ist, während ein falsches Ergebnis jeden
+ * korrekten Tipp entwerten würde.
+ *
+ * (Die WM-Kategorie wertet bewusst 120 Minuten; deren Logik liegt unangetastet
+ * in scripts/fetch-results.mjs.)
+ *
+ * Exportiert für football-data.test.mts.
+ */
+export function scoreAfter90(score: FdMatch['score']): { home: number; away: number } | null {
+  const duration = score?.duration ?? 'REGULAR';
+  const pair = duration === 'REGULAR' ? score?.fullTime : score?.regularTime;
+  if (isNumber(pair?.home) && isNumber(pair?.away)) return { home: pair.home, away: pair.away };
+  return null;
 }
 
 function sleep(ms: number): Promise<void> {
@@ -160,20 +189,28 @@ export const footballDataSource: FeedSource = {
       // Unbekanntes wird nie gewertet: nur FINISHED löst auf, abgesagt/verschoben
       // wird ungültig, alles andere bleibt offen.
       if (match.status === 'FINISHED') {
-        const full = match.score?.fullTime;
-        if (isNumber(full?.home) && isNumber(full?.away)) {
+        const after90 = scoreAfter90(match.score);
+        if (after90) {
           results.push({
             category: event.category,
             id: event.id,
-            resolution: { kind: 'scoreline', home: full.home, away: full.away },
-            evidence: { source: 'football-data.org', status: match.status, fullTime: full },
+            resolution: { kind: 'scoreline', ...after90 },
+            evidence: {
+              source: 'football-data.org',
+              status: match.status,
+              duration: match.score?.duration ?? 'REGULAR',
+              scoreAfter90: after90,
+              fullTime: match.score?.fullTime ?? null,
+            },
           });
         } else {
           results.push({
             category: event.category,
             id: event.id,
             resolution: null,
-            voidReason: 'Feed meldet FINISHED ohne verwertbaren Endstand.',
+            voidReason:
+              `Feed meldet FINISHED (duration ${match.score?.duration ?? 'REGULAR'}), aber der ` +
+              `Stand nach 90 Minuten ist daraus nicht ableitbar.`,
           });
         }
       } else if (['POSTPONED', 'CANCELLED', 'SUSPENDED', 'AWARDED'].includes(match.status)) {

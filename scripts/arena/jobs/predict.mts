@@ -113,6 +113,15 @@ async function main(): Promise<void> {
     const skippedModels = new Set<string>();
 
     for (const event of events) {
+      // Letzte Schranke vor dem Geldausgeben: Zwischen Abfrage und Bearbeitung
+      // können Minuten liegen, und der Ingest-Job kann einen Termin
+      // vorgezogen haben. Ein Tipp nach dem Lock wäre wertlos und würde nur
+      // Kosten erzeugen.
+      if (Date.parse(event.utc_date) <= Date.now()) {
+        console.log(`${event.category}/${event.id}: Lock bereits vorbei – übersprungen.`);
+        continue;
+      }
+
       // Ein Zeitstempel für ALLE Modelle dieses Events – gleiche Informationslage.
       const requestedAt = new Date().toISOString();
       const built = promptEvent(event, requestedAt);
@@ -146,6 +155,9 @@ async function main(): Promise<void> {
             event_id: event.id,
             model_id: model.id,
             value: result.value,
+            // raw = Audit-Spur der tatsächlichen Antwort. Bleibt in der DB und
+            // wird nie exportiert oder geloggt (öffentliches Repo).
+            raw: result.raw,
             provenance: result.provenance,
             run_id: runId,
           });

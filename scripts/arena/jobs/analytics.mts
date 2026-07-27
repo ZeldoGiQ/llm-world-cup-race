@@ -8,7 +8,7 @@
  *   node --experimental-strip-types scripts/arena/jobs/analytics.mts
  */
 import { readBudget } from '../lib/budget.mts';
-import { db, unwrap } from '../lib/db.mts';
+import { db, fetchAll, unwrap } from '../lib/db.mts';
 import { notifyDiscord } from '../lib/notify.mts';
 import { runJob } from '../lib/runs.mts';
 
@@ -28,20 +28,37 @@ async function main(): Promise<void> {
       .lt('started_at', staleBefore)
       .select('id');
 
-    // 2. Invariante: keine Prediction nach dem Lock ihres Events.
-    const predictions = unwrap(
-      await db().from('predictions').select('category, event_id, model_id, created_at'),
-      'predictions lesen',
-    ) as { category: string; event_id: string; model_id: string; created_at: string }[];
-    const events = unwrap(
-      await db().from('events').select('category, id, utc_date, status'),
-      'events lesen',
-    ) as { category: string; id: string; utc_date: string; status: string }[];
+    /*
+     * 2. Invariante: keine Prediction nach dem Lock ihres Events.
+     *
+     * Zwingend paginiert. Ein einfaches select() kappt bei 1000 Zeilen – und
+     * weil der Immutabilitäts-Trigger UPDATE/DELETE verbietet, entspricht die
+     * Heap-Reihenfolge der Einfügereihenfolge: verworfen würden ausgerechnet
+     * die neuesten Zeilen, also genau dort, wo ein frischer Verstoß läge. Der
+     * einzige aktive Wächter hätte dauerhaft "0 Verstöße" gemeldet.
+     */
+    const predictions = await fetchAll<{
+      category: string;
+      event_id: string;
+      model_id: string;
+      created_at: string;
+    }>('predictions', 'category, event_id, model_id, created_at', [
+      'category',
+      'event_id',
+      'model_id',
+    ]);
+    const events = await fetchAll<{
+      category: string;
+      id: string;
+      utc_date: string;
+      status: string;
+    }>('events', 'category, id, utc_date, status', ['category', 'id']);
 
     const lockByEvent = new Map(events.map((e) => [`${e.category} ${e.id}`, e.utc_date]));
     const violations = predictions.filter((p) => {
       const lock = lockByEvent.get(`${p.category} ${p.event_id}`);
-      return lock !== undefined && p.created_at > lock;
+      // Numerisch vergleichen: Schreibweisen aus DB und Export unterscheiden sich.
+      return lock !== undefined && Date.parse(p.created_at) > Date.parse(lock);
     });
 
     // 3. Abdeckung: aufgelöste Events mit auffällig wenigen Tipps.
@@ -53,12 +70,23 @@ async function main(): Promise<void> {
     const resolvedEvents = events.filter((e) => e.status === 'RESOLVED');
     const thin = resolvedEvents.filter((e) => (countByEvent.get(`${e.category} ${e.id}`) ?? 0) < 2);
 
-    // 4. Fehlerquote je Modell (letzte 24 h).
+    // 4. Fehlerquote je Modell (letzte 24 h). Auch hier paginiert: an einem
+    // Tag mit vollem Volumen liegen mehr als 1000 Calls im Fenster.
     const since = new Date(Date.now() - 86_400_000).toISOString();
-    const costs = unwrap(
-      await db().from('api_costs').select('model_id, status, cost_usd').gte('created_at', since),
-      'api_costs lesen',
-    ) as { model_id: string | null; status: string; cost_usd: number }[];
+    const costs: { model_id: string | null; status: string; cost_usd: number }[] = [];
+    for (let from = 0; ; from += 1000) {
+      const page = unwrap(
+        await db()
+          .from('api_costs')
+          .select('model_id, status, cost_usd')
+          .gte('created_at', since)
+          .order('id')
+          .range(from, from + 999),
+        'api_costs lesen',
+      ) as typeof costs;
+      costs.push(...page);
+      if (page.length < 1000) break;
+    }
 
     const byModel: Record<string, { calls: number; errors: number; costUsd: number }> = {};
     for (const cost of costs) {

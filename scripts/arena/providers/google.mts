@@ -8,12 +8,18 @@ import { num, postJson, type CallRequest, type CallResult } from './types.mts';
 
 export async function callGoogle(request: CallRequest): Promise<CallResult> {
   const started = Date.now();
+  // `extra` zuerst, und generationConfig wird TIEF gemischt: bei Google liegen
+  // die naheliegenden Zusatzparameter (thinkingConfig, temperature) innerhalb
+  // von generationConfig. Ein flacher Spread würde maxOutputTokens still
+  // löschen – die Stellschraube wäre eine Falle.
+  const extra = (request.model.extra ?? {}) as Record<string, unknown>;
+  const extraGenerationConfig = (extra.generationConfig ?? {}) as Record<string, unknown>;
   const body: Record<string, unknown> = {
+    ...extra,
     systemInstruction: { parts: [{ text: request.system }] },
     contents: [{ role: 'user', parts: [{ text: request.user }] }],
-    generationConfig: { maxOutputTokens: request.maxOutputTokens },
+    generationConfig: { ...extraGenerationConfig, maxOutputTokens: request.maxOutputTokens },
     ...(request.search ? { tools: [{ google_search: {} }] } : {}),
-    ...(request.model.extra ?? {}),
   };
 
   const url =
@@ -45,8 +51,11 @@ export async function callGoogle(request: CallRequest): Promise<CallResult> {
   return {
     text: parts.join('\n'),
     usage: {
-      inputTokens: num(usage.promptTokenCount),
-      outputTokens: num(usage.candidatesTokenCount),
+      // Google weist Denk- und Werkzeug-Tokens SEPARAT aus, rechnet sie aber
+      // zu den normalen Preisen ab. Ohne sie wäre die Kostenschätzung um ein
+      // Vielfaches zu niedrig – und der Budget-Guard würde zu spät greifen.
+      inputTokens: num(usage.promptTokenCount) + num(usage.toolUsePromptTokenCount),
+      outputTokens: num(usage.candidatesTokenCount) + num(usage.thoughtsTokenCount),
       searchCalls,
     },
     reportedModel: typeof raw.modelVersion === 'string' ? raw.modelVersion : null,

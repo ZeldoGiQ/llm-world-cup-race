@@ -66,7 +66,7 @@ async function main(): Promise<void> {
     const nowIso = new Date().toISOString();
 
     // Fällig = Lock vorbei und noch nicht abgeschlossen.
-    const events = unwrap(
+    const dueByLock = unwrap(
       await db()
         .from('events')
         .select('*')
@@ -76,7 +76,22 @@ async function main(): Promise<void> {
       'fällige Events lesen',
     ) as EventRow[];
 
-    if (events.length === 0) return { due: 0, resolved: 0, void: 0, pending: 0 };
+    /*
+     * Zweites Tor: Der Lock ist nur der Vorhersage-Schluss, nicht der Zeitpunkt,
+     * ab dem ein Ergebnis existiert. Ein Aktien-Event lockt Montag 00:00 und
+     * wird erst am Freitagabend messbar; ein Spiel ist erst nach Abpfiff
+     * ausgewertet. Ohne diese Grenze würde ein Resolver einen Zwischenwert als
+     * Endergebnis festschreiben – und Resolutions werden nicht revidiert.
+     */
+    const events = dueByLock.filter(
+      (event) => !event.expected_resolution_at || event.expected_resolution_at <= nowIso,
+    );
+    const tooEarly = dueByLock.length - events.length;
+    if (tooEarly > 0) console.log(`${tooEarly} Events gelockt, aber noch nicht messbar – warten.`);
+
+    if (events.length === 0) {
+      return { due: 0, resolved: 0, void: 0, pending: 0, notYetMeasurable: tooEarly };
+    }
 
     const bySource = new Map<string, EventRow[]>();
     for (const event of events) {
@@ -159,7 +174,14 @@ async function main(): Promise<void> {
       await notifyDiscord(`⚠️ arena-resolve: ${problems.join('\n')}`);
     }
 
-    return { due: events.length, resolved, void: voided, pending, failedSources: problems.length };
+    return {
+      due: events.length,
+      resolved,
+      void: voided,
+      pending,
+      notYetMeasurable: tooEarly,
+      failedSources: problems.length,
+    };
   });
 }
 

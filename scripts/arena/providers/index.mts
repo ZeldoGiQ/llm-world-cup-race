@@ -40,6 +40,8 @@ export interface AskSuccess {
   ok: true;
   value: Record<string, unknown>;
   provenance: Record<string, unknown>;
+  /** Roh-Antwort für die Audit-Spalte predictions.raw – nie öffentlich geloggt. */
+  raw: Record<string, unknown>;
 }
 
 export interface AskFailure {
@@ -111,14 +113,18 @@ export async function askModel(options: AskOptions): Promise<AskResult> {
           ? error
           : new ProviderError(error instanceof Error ? error.message : String(error), 'api-error', false);
 
+      // Eine Verweigerung kommt mit HTTP 200 und verbrauchten Tokens: der Call
+      // ist bezahlt, auch wenn kein Wert herauskam. Nur echte Transportfehler
+      // (kein Response) sind kostenlos.
+      const failedUsage = providerError.usage ?? { inputTokens: 0, outputTokens: 0, searchCalls: 0 };
       await recordCost({
         runId,
         modelId: model.id,
         purpose: repairTurns > 0 ? 'repair' : 'predict',
         category: event.category,
         eventId,
-        usage: { inputTokens: 0, outputTokens: 0, searchCalls: 0 },
-        costUsd: 0,
+        usage: failedUsage,
+        costUsd: costUsd(model, failedUsage),
         status: providerError.code,
       });
 
@@ -166,11 +172,14 @@ export async function askModel(options: AskOptions): Promise<AskResult> {
           inputTokens: totals.inputTokens,
           outputTokens: totals.outputTokens,
           searchCalls: totals.searchCalls,
-          searchEnabled: true,
+          // Beim Repair-Turn ist die Suche aus – das muss die Provenance sagen,
+          // sonst behauptet sie eine Recherche, die nicht stattgefunden hat.
+          searchEnabled: search,
           sampling: 'provider-default',
           ...(parsed.rationale ? { rationale: parsed.rationale } : {}),
           ...(parsed.sources.length > 0 ? { sources: parsed.sources } : {}),
         },
+        raw: { text: result.text, reportedModel, attempts, repairTurns },
       };
     }
 
@@ -179,7 +188,12 @@ export async function askModel(options: AskOptions): Promise<AskResult> {
     if (repairTurns >= HARNESS_LIMITS.maxRepairTurns) return lastFailure;
     repairTurns += 1;
     search = false;
-    userMessage = buildRepairPrompt(event.predictionType, parsed.detail);
+    // Die Frage MUSS mitgehen. Der Transport ist Single-Turn und trägt keine
+    // History – würde hier nur der Repair-Prompt stehen, wüsste das Modell im
+    // zweiten Versuch nicht mehr, worum es geht, und lieferte einen
+    // schemakonformen, aber erfundenen Wert. Der landet dann unlöschbar in der
+    // Datenbank und im öffentlichen Leaderboard.
+    userMessage = `${prompt.user}\n\n---\n\n${buildRepairPrompt(event.predictionType, parsed.detail)}`;
     console.log(`  ${model.id}: ${parsed.reason} → Repair-Turn ${repairTurns}`);
   }
 

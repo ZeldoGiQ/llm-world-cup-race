@@ -10,7 +10,10 @@ import { HARNESS_LIMITS } from '../../../src/arena/lib/harness/config.ts';
 
 export async function callAnthropic(request: CallRequest): Promise<CallResult> {
   const started = Date.now();
+  // `extra` zuerst – siehe openai.mts: Zusatzparameter ja, Überschreiben von
+  // Modell, Prompt oder Limits nein.
   const body: Record<string, unknown> = {
+    ...(request.model.extra ?? {}),
     model: request.model.api_model,
     system: request.system,
     messages: [{ role: 'user', content: request.user }],
@@ -22,7 +25,6 @@ export async function callAnthropic(request: CallRequest): Promise<CallResult> {
           ],
         }
       : {}),
-    ...(request.model.extra ?? {}),
   };
 
   const raw = (await postJson(
@@ -38,19 +40,22 @@ export async function callAnthropic(request: CallRequest): Promise<CallResult> {
     if (block.type === 'text' && typeof block.text === 'string') parts.push(block.text);
   }
 
+  const rawUsage = (raw.usage ?? {}) as Record<string, unknown>;
+  const serverToolUse = (rawUsage.server_tool_use ?? {}) as Record<string, unknown>;
+  const usage = {
+    inputTokens: num(rawUsage.input_tokens),
+    outputTokens: num(rawUsage.output_tokens),
+    searchCalls: num(serverToolUse.web_search_requests),
+  };
+
+  // Verweigerung: endgültig, aber bezahlt – Verbrauch mitgeben.
   if (raw.stop_reason === 'refusal') {
-    throw new ProviderError('Modell hat die Antwort verweigert.', 'refusal', false);
+    throw new ProviderError('Modell hat die Antwort verweigert.', 'refusal', false, usage);
   }
 
-  const usage = (raw.usage ?? {}) as Record<string, unknown>;
-  const serverToolUse = (usage.server_tool_use ?? {}) as Record<string, unknown>;
   return {
     text: parts.join('\n'),
-    usage: {
-      inputTokens: num(usage.input_tokens),
-      outputTokens: num(usage.output_tokens),
-      searchCalls: num(serverToolUse.web_search_requests),
-    },
+    usage,
     reportedModel: typeof raw.model === 'string' ? raw.model : null,
     latencyMs: Date.now() - started,
   };

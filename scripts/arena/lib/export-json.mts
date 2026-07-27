@@ -12,13 +12,27 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import type { EventRow, PredictionRow, FailureRow } from './db.mts';
 
+/**
+ * Zeitstempel in die kanonische Z-Schreibweise bringen.
+ *
+ * Postgres liefert timestamptz als "2026-07-29T20:00:00+00:00", der bestehende
+ * Datenbestand nutzt "2026-06-11T19:00:00Z". Beides ist gültiges ISO-8601 und
+ * für `new Date()` gleichwertig – aber ein TEXTvergleich zweier Schreibweisen
+ * ist es nicht ('+' < '.'), und im Export wird sortiert und verglichen. Deshalb
+ * bekommt jeder exportierte Zeitstempel dieselbe Form.
+ */
+export function isoZ(timestamp: string): string {
+  const parsed = Date.parse(timestamp);
+  return Number.isNaN(parsed) ? timestamp : new Date(parsed).toISOString();
+}
+
 /** ArenaEvent in Vertragsreihenfolge der Schlüssel aufbauen. */
 export function toArenaEvent(row: EventRow): Record<string, unknown> {
   return {
     id: row.id,
     title: row.title,
     ...(row.titles ? { titles: row.titles } : {}),
-    utcDate: row.utc_date,
+    utcDate: isoZ(row.utc_date),
     status: row.status,
     predictionType: row.prediction_type,
     resolution: row.status === 'RESOLVED' ? (row.resolution ?? null) : null,
@@ -37,7 +51,7 @@ export interface CategoryExport {
 
 function sortEvents(events: EventRow[]): EventRow[] {
   return [...events].sort(
-    (a, b) => a.utc_date.localeCompare(b.utc_date) || a.id.localeCompare(b.id),
+    (a, b) => Date.parse(a.utc_date) - Date.parse(b.utc_date) || a.id.localeCompare(b.id),
   );
 }
 
@@ -64,7 +78,7 @@ export function buildPredictionsFile(data: CategoryExport): Record<string, unkno
     const entry: Record<string, unknown> = {};
     for (const modelId of [...models.keys()].sort()) {
       const p = models.get(modelId)!;
-      entry[modelId] = { value: p.value, createdAt: p.created_at };
+      entry[modelId] = { value: p.value, createdAt: isoZ(p.created_at) };
     }
     predictions[eventId] = entry;
   }
@@ -80,8 +94,10 @@ export function buildPredictionsFile(data: CategoryExport): Record<string, unkno
  * und erst nach dem Lock (vorher kann ein Retry noch liefern).
  */
 export function buildFailuresFile(data: CategoryExport): Record<string, unknown> {
+  // Zeitvergleich numerisch, nicht als Text – siehe isoZ().
+  const now = Date.parse(data.updatedAt);
   const lockPassed = new Set(
-    data.events.filter((e) => e.utc_date <= data.updatedAt).map((e) => e.id),
+    data.events.filter((e) => Date.parse(e.utc_date) <= now).map((e) => e.id),
   );
   const hasPrediction = new Set(data.predictions.map((p) => `${p.event_id} ${p.model_id}`));
 
@@ -101,7 +117,7 @@ export function buildFailuresFile(data: CategoryExport): Record<string, unknown>
       .filter(([key]) => key.startsWith(`${event.id} `))
       .sort(([a], [b]) => a.localeCompare(b));
     for (const [key, row] of pairs) {
-      entry[key.slice(event.id.length + 1)] = { code: row.code, createdAt: row.created_at };
+      entry[key.slice(event.id.length + 1)] = { code: row.code, createdAt: isoZ(row.created_at) };
     }
     if (Object.keys(entry).length > 0) failures[event.id] = entry;
   }

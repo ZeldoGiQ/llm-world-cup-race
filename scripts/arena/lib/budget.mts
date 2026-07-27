@@ -41,8 +41,27 @@ export async function readBudget(): Promise<BudgetState> {
   };
 }
 
+/**
+ * Ausgaben, die nicht in die DB geschrieben werden konnten.
+ *
+ * Wenn `api_costs` nicht schreibbar ist, ist der Guard blind – und genau dann
+ * weiterzuzahlen wäre der teure Fehler. Deshalb werden solche Beträge im
+ * Prozess mitgeführt und beim nächsten Check aufgeschlagen. Ein Insert-Fehler
+ * bricht den Lauf aber nicht sofort ab: ein einzelner Aussetzer soll keinen
+ * ganzen Predict-Durchgang verlieren.
+ */
+let unrecordedSpendUsd = 0;
+
 export async function assertBudget(): Promise<BudgetState> {
   const state = await readBudget();
+  state.todayUsd += unrecordedSpendUsd;
+  state.monthUsd += unrecordedSpendUsd;
+  if (unrecordedSpendUsd > 0) {
+    console.error(
+      `Warnung: ${unrecordedSpendUsd.toFixed(4)} $ konnten nicht in api_costs ` +
+        `geschrieben werden und werden nur im Prozess mitgezählt.`,
+    );
+  }
   if (state.todayUsd >= state.dailyCapUsd) {
     throw new BudgetExceeded(
       `Tages-Cap erreicht: ${state.todayUsd.toFixed(2)} $ von ${state.dailyCapUsd} $.`,
@@ -101,6 +120,10 @@ export async function recordCost(cost: CostRecord): Promise<void> {
     latency_ms: cost.latencyMs ?? null,
     status: cost.status,
   });
-  // Kosten-Logging darf einen Lauf nie stoppen – aber laut sein.
-  if (error) console.error(`api_costs schreiben: ${error.message}`);
+  // Kosten-Logging darf einen Lauf nie stoppen – aber der Betrag darf auch
+  // nicht verschwinden, sonst rechnet der Guard mit einem zu günstigen Bild.
+  if (error) {
+    console.error(`api_costs schreiben: ${error.message}`);
+    unrecordedSpendUsd += cost.costUsd;
+  }
 }

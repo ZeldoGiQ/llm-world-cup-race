@@ -178,6 +178,21 @@ export const yahooFinanceSource: FeedSource = {
         continue;
       }
 
+      /*
+       * Entscheidend: Der Lock liegt am Montag, das Ziel ist der Freitag. Ohne
+       * diese Prüfung würde schon der Montagsschluss (oder bei laufender Sitzung
+       * gar ein Intraday-Preis) als Wochenschluss durchgehen – vier Tage zu früh
+       * und für jedes Event falsch. Deshalb: nur der Zieltag selbst zählt.
+       * Erst wenn dessen Handelsschluss vorbei ist und trotzdem kein Wert für
+       * ihn existiert, greift die Feiertagsregel und der letzte Handelstag der
+       * Woche wird genommen.
+       */
+      const deadlinePassed = Date.now() > Date.parse(`${targetDate}T22:30:00.000Z`);
+      if (chosen.date !== targetDate && !deadlinePassed) {
+        results.push({ category: event.category, id: event.id, resolution: null });
+        continue;
+      }
+
       results.push({
         category: event.category,
         id: event.id,

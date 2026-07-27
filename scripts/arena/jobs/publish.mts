@@ -14,7 +14,15 @@
  *   node --experimental-strip-types scripts/arena/jobs/publish.mts
  */
 import path from 'node:path';
-import { db, unwrap, type EventRow, type FailureRow, type ModelRow, type PredictionRow } from '../lib/db.mts';
+import {
+  db,
+  fetchAll,
+  unwrap,
+  type EventRow,
+  type FailureRow,
+  type ModelRow,
+  type PredictionRow,
+} from '../lib/db.mts';
 import { ROOT } from '../lib/env.mts';
 import {
   buildEventsFile,
@@ -28,34 +36,22 @@ import { runJob } from '../lib/runs.mts';
 
 const OUT_ROOT = path.join(ROOT, 'public/arena-data');
 
-/** Alle Zeilen einer Tabelle in Seiten holen (Supabase liefert max. 1000). */
-async function fetchAll<T>(table: string, columns: string): Promise<T[]> {
-  const pageSize = 1000;
-  const rows: T[] = [];
-  for (let from = 0; ; from += pageSize) {
-    const page = unwrap(
-      await db().from(table).select(columns).range(from, from + pageSize - 1),
-      `${table} lesen`,
-    ) as T[];
-    rows.push(...page);
-    if (page.length < pageSize) break;
-  }
-  return rows;
-}
-
 async function main(): Promise<void> {
   await runJob('publish', async () => {
     const events = await fetchAll<EventRow>(
       'events',
       'category, id, title, titles, utc_date, status, prediction_type, resolution, metadata, source, open_at, expected_resolution_at, resolved_at, void_reason',
+      ['category', 'id'],
     );
     const predictions = await fetchAll<PredictionRow>(
       'predictions',
       'category, event_id, model_id, value, created_at',
+      ['category', 'event_id', 'model_id'],
     );
     const failures = await fetchAll<FailureRow>(
       'prediction_failures',
       'category, event_id, model_id, code, detail, created_at',
+      ['id'],
     );
     const models = unwrap(
       await db().from('models').select('*').order('id'),
@@ -66,10 +62,13 @@ async function main(): Promise<void> {
 
     // Lock-Integrität: nach dem Lock erhobene Predictions gehören nicht in den
     // Export. Sie bleiben in der DB (Audit), zählen aber nie.
+    // Verglichen wird über Date.parse, nicht als Text: Postgres liefert
+    // "+00:00", der Exporter schreibt "Z" – ein Textvergleich gemischter
+    // ISO-Schreibweisen ist an der Sekundengrenze nicht verlässlich.
     const late: string[] = [];
     const exportable = predictions.filter((p) => {
       const lock = lockByEvent.get(`${p.category} ${p.event_id}`);
-      if (lock && p.created_at > lock) {
+      if (lock && Date.parse(p.created_at) > Date.parse(lock)) {
         late.push(`${p.category}/${p.event_id}/${p.model_id}`);
         return false;
       }

@@ -32,15 +32,28 @@ export class ProviderError extends Error {
   code: ProviderErrorCode;
   /** true = Transportfehler (429/5xx/Timeout) und damit wiederholbar. */
   retryable: boolean;
+  /**
+   * Verbrauch, falls der Fehler NACH einer abgerechneten Antwort auftrat
+   * (typisch bei einer Verweigerung: HTTP 200, Tokens verbraucht, kein Wert).
+   * Ohne das würden solche Calls mit 0 $ verbucht und der Budget-Guard
+   * bekäme ein zu günstiges Bild.
+   */
+  usage?: { inputTokens: number; outputTokens: number; searchCalls: number };
 
   // Bewusst ohne Parameter-Properties: `node --experimental-strip-types`
   // entfernt Typen nur, es transformiert nicht – Parameter-Properties wären
   // ein Syntaxfehler zur Laufzeit.
-  constructor(message: string, code: ProviderErrorCode, retryable: boolean) {
+  constructor(
+    message: string,
+    code: ProviderErrorCode,
+    retryable: boolean,
+    usage?: { inputTokens: number; outputTokens: number; searchCalls: number },
+  ) {
     super(message);
     this.name = 'ProviderError';
     this.code = code;
     this.retryable = retryable;
+    this.usage = usage;
   }
 }
 

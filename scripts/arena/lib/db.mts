@@ -115,6 +115,34 @@ export interface FailureRow {
   created_at: string;
 }
 
+/**
+ * Alle Zeilen einer Tabelle holen – seitenweise und deterministisch sortiert.
+ *
+ * Supabase liefert höchstens 1000 Zeilen je Anfrage. Ein einfaches `select()`
+ * schneidet also still ab, und zwar bei Heap-Reihenfolge genau die neuesten
+ * Zeilen – dort, wo ein frischer Invariantenverstoß liegen würde. Die
+ * Sortierung ist Pflicht, weil `range()` ohne `order()` keine stabile
+ * Seitenaufteilung garantiert und Zeilen doppelt oder gar nicht kommen können.
+ */
+export async function fetchAll<T>(
+  table: string,
+  columns: string,
+  orderBy: string[],
+): Promise<T[]> {
+  const pageSize = 1000;
+  const rows: T[] = [];
+
+  for (let from = 0; ; from += pageSize) {
+    let query = db().from(table).select(columns);
+    for (const column of orderBy) query = query.order(column);
+    const page = unwrap(await query.range(from, from + pageSize - 1), `${table} lesen`) as T[];
+    rows.push(...page);
+    if (page.length < pageSize) break;
+  }
+
+  return rows;
+}
+
 /** ops_config-Wert lesen; fallback, wenn der Key (noch) nicht existiert. */
 export async function opsConfig<T>(key: string, fallback: T): Promise<T> {
   const { data, error } = await db().from('ops_config').select('value').eq('key', key).maybeSingle();

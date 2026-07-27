@@ -36,7 +36,10 @@ export async function callOpenAICompat(request: CallRequest): Promise<CallResult
     );
   }
 
+  // `extra` zuerst – siehe openai.mts: Zusatzparameter ja, Überschreiben von
+  // Modell, Prompt oder Limits nein.
   const body: Record<string, unknown> = {
+    ...(request.model.extra ?? {}),
     model: request.model.api_model,
     messages: [
       { role: 'system', content: request.system },
@@ -44,7 +47,6 @@ export async function callOpenAICompat(request: CallRequest): Promise<CallResult
     ],
     max_tokens: request.maxOutputTokens,
     ...(request.search ? searchParams(request.provider.search_mode) : {}),
-    ...(request.model.extra ?? {}),
   };
 
   const raw = (await postJson(
