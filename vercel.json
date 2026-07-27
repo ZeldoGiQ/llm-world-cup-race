@@ -1,22 +1,4 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "comment": [
-    "Routing der Domain futurebench.ai.",
-    "",
-    "Die nackte Domain gehoert dem Benchmark, nicht der Pilotrunde: / fuehrt zur Arena.",
-    "Absichtlich als temporaere Weiterleitung (307) - eine dauerhafte (301) wird von",
-    "Browsern und Zwischenspeichern festgehalten und waere kaum zurueckzunehmen, falls",
-    "die Arena spaeter wirklich auf / umzieht.",
-    "",
-    "Das WM-Tippspiel bleibt unter /wm erreichbar. Bewusst als Rewrite auf die gebaute",
-    "index.html statt als zweite Astro-Seite: so bleibt die abgeschlossene Runde",
-    "byte-identisch und src/pages/index.astro unangetastet (eingefrorener Bestand, siehe",
-    "CLAUDE.md). Rewrites laufen bei Vercel nach den Redirects und greifen direkt aufs",
-    "Dateisystem - die Weiterleitung von / trifft dieses Ziel also nicht.",
-    "",
-    "Die Sprachvarianten /arena, /arena/de, /arena/es bleiben unveraendert gueltig; die",
-    "canonical- und hreflang-Angaben der Arena zeigen weiterhin auf /arena."
-  ],
   "redirects": [
     {
       "source": "/",

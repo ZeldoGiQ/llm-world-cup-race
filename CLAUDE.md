@@ -130,6 +130,29 @@ Admin ist **Supabase Studio** (Table Editor), nicht Code:
 Jobs lesen alles zur Laufzeit — kein Deploy, kein Commit nötig. Der **Publish-Job ist der
 einzige Committer** (Single Writer, keine Push-Races).
 
+### Routing (`vercel.json`)
+
+| Adresse | Ziel |
+|---|---|
+| `/` | Weiterleitung auf `/arena` — die Domain gehört dem Benchmark, nicht der Pilotrunde |
+| `/wm` | Rewrite auf die gebaute `index.html` (WM-Tipprunde) |
+| `/arena`, `/arena/de`, `/arena/es` | unverändert; canonical und hreflang zeigen auf `/arena` |
+
+`/wm` ist bewusst ein Rewrite und keine zweite Astro-Seite: so bleibt die abgeschlossene
+Runde byte-identisch und `src/pages/index.astro` unangetastet. Rewrites laufen bei Vercel nach
+den Redirects und greifen direkt aufs Dateisystem — die Weiterleitung von `/` trifft dieses
+Ziel also nicht. Die Weiterleitung ist absichtlich temporär (307), damit sie zurücknehmbar
+bleibt, falls die Arena später ganz auf `/` umzieht.
+
+**`vercel.json` verträgt keine Kommentare und keine unbekannten Felder.** Ein zusätzlicher
+Schlüssel (auch `"comment"`) macht die ganze Datei ungültig, und Vercel bricht den Build ab —
+die Begründungen gehören deshalb hierher, nicht in die Datei. Nach jeder Änderung an
+`vercel.json` den Deploy prüfen:
+
+```bash
+gh api repos/ZeldoGiQ/llm-world-cup-race/commits/HEAD/status --jq .state
+```
+
 ## Bei Unsicherheit
 
 Nachfragen statt annehmen. **Keine stillen Schema-Änderungen** — weder am Datenvertrag, noch am
