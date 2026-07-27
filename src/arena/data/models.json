@@ -1,11 +1,11 @@
 [
   {
-    "id": "gpt",
-    "name": "GPT-5.5",
-    "provider": "OpenAI",
-    "color": "#10a37f",
-    "version": "gpt-5.5",
-    "releaseDate": "2026-04-18",
+    "id": "claude",
+    "name": "Claude Fable 5",
+    "provider": "Anthropic",
+    "color": "#d97757",
+    "version": "claude-fable-5",
+    "releaseDate": "2026-05-06",
     "access": "public"
   },
   {
@@ -18,12 +18,12 @@
     "access": "public"
   },
   {
-    "id": "claude",
-    "name": "Claude Fable 5",
-    "provider": "Anthropic",
-    "color": "#d97757",
-    "version": "claude-fable-5",
-    "releaseDate": "2026-05-06",
+    "id": "gpt",
+    "name": "GPT-5.5",
+    "provider": "OpenAI",
+    "color": "#10a37f",
+    "version": "gpt-5.5",
+    "releaseDate": "2026-04-18",
     "access": "public"
   },
   {
@@ -33,15 +33,6 @@
     "color": "#9b59b6",
     "version": "grok-4.3",
     "releaseDate": "2026-02-11",
-    "access": "public"
-  },
-  {
-    "id": "qwen",
-    "name": "Qwen 3.7 Max",
-    "provider": "Alibaba",
-    "color": "#eab308",
-    "version": "qwen-3.7-max",
-    "releaseDate": "2026-05-22",
     "access": "public"
   },
   {
@@ -56,10 +47,19 @@
   {
     "id": "nova",
     "name": "Nova Preview",
-    "provider": "Example Lab",
+    "provider": "Example-lab",
     "color": "#a78bfa",
     "version": "nova-preview-0.9",
     "access": "early-access"
+  },
+  {
+    "id": "qwen",
+    "name": "Qwen 3.7 Max",
+    "provider": "Alibaba",
+    "color": "#eab308",
+    "version": "qwen-3.7-max",
+    "releaseDate": "2026-05-22",
+    "access": "public"
   },
   {
     "id": "baseline-market",
@@ -70,25 +70,45 @@
       "es": "Consenso de apuestas"
     },
     "provider": "Reference",
-    "providers": { "en": "Reference", "de": "Referenz", "es": "Referencia" },
+    "providers": {
+      "en": "Reference",
+      "de": "Referenz",
+      "es": "Referencia"
+    },
     "color": "#8b94a7",
     "baseline": true
   },
   {
     "id": "baseline-randomwalk",
     "name": "Random walk",
-    "names": { "en": "Random walk", "de": "Random-Walk", "es": "Camino aleatorio" },
+    "names": {
+      "en": "Random walk",
+      "de": "Random-Walk",
+      "es": "Camino aleatorio"
+    },
     "provider": "Reference",
-    "providers": { "en": "Reference", "de": "Referenz", "es": "Referencia" },
+    "providers": {
+      "en": "Reference",
+      "de": "Referenz",
+      "es": "Referencia"
+    },
     "color": "#8b94a7",
     "baseline": true
   },
   {
     "id": "baseline-poll",
     "name": "Latest poll",
-    "names": { "en": "Latest poll", "de": "Letzte Umfrage", "es": "Última encuesta" },
+    "names": {
+      "en": "Latest poll",
+      "de": "Letzte Umfrage",
+      "es": "Última encuesta"
+    },
     "provider": "Reference",
-    "providers": { "en": "Reference", "de": "Referenz", "es": "Referencia" },
+    "providers": {
+      "en": "Reference",
+      "de": "Referenz",
+      "es": "Referencia"
+    },
     "color": "#8b94a7",
     "baseline": true
   }
