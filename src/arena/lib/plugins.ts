@@ -22,6 +22,8 @@ import './metrics/skill';
 
 // Kategorien
 import './categories/football-worldcup';
+import './categories/football-leagues';
+import './categories/crypto';
 import './categories/stocks-index';
 import './categories/elections';
 import './categories/sports-mixed';

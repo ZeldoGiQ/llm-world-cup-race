@@ -1,0 +1,38 @@
+# FutureBench: Tages-Snapshot, Kosten-Digest, Invarianten-Check, Janitor.
+#
+# Prüft täglich die Lock-Invariante (keine Prediction nach dem Lock ihres
+# Events) – die Grundlage der Zitierfähigkeit wird gemessen, nicht angenommen.
+name: Arena Analytics
+
+on:
+  schedule:
+    - cron: '43 2 * * *' # täglich 02:43 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: arena-analytics
+  cancel-in-progress: false
+
+jobs:
+  analytics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Snapshot und Digest
+        run: node --experimental-strip-types scripts/arena/jobs/analytics.mts
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}

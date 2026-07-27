@@ -7,6 +7,8 @@
  */
 import { categories, metrics } from '../lib/plugins';
 import { predictionTypes } from '../lib/prediction-types/index';
+import { HARNESS_LIMITS, HARNESS_VERSION } from '../lib/harness/config';
+import { SYSTEM_PROMPT, typeBlock } from '../lib/harness/prompt-template';
 import { pick, type Locale } from '../lib/i18n/locales';
 import { t } from '../lib/i18n/messages';
 import ArenaLayout from '../layouts/ArenaLayout.astro';
@@ -21,6 +23,37 @@ const translate = t(locale);
 const allMetrics = metrics.list();
 const allCategories = categories.list();
 const allTypes = predictionTypes.list();
+
+/**
+ * Alles Ausführungsrelevante wird importiert, nie abgeschrieben: Limits aus
+ * harness/config, Prompt-Texte aus harness/prompt-template. Die Seite kann
+ * dadurch nicht behaupten, was der Runner nicht tut.
+ */
+const harnessLimits = [
+  { value: String(HARNESS_LIMITS.maxToolCalls), label: translate('methodology.harness.limit.toolCalls') },
+  {
+    value: String(Math.round(HARNESS_LIMITS.callTimeoutMs / 60_000)),
+    label: translate('methodology.harness.limit.timeout'),
+  },
+  { value: String(HARNESS_LIMITS.maxTransportRetries), label: translate('methodology.harness.limit.retries') },
+  { value: String(HARNESS_LIMITS.maxRepairTurns), label: translate('methodology.harness.limit.repairs') },
+];
+
+const failureCodes = [
+  { code: 'refusal', text: translate('methodology.failures.code.refusal') },
+  { code: 'invalid-output', text: translate('methodology.failures.code.invalidOutput') },
+  { code: 'timeout', text: translate('methodology.failures.code.timeout') },
+  { code: 'api-error', text: translate('methodology.failures.code.apiError') },
+  { code: 'rate-limited', text: translate('methodology.failures.code.rateLimited') },
+  { code: 'late', text: translate('methodology.failures.code.late') },
+];
+
+const voidReasons = [
+  translate('methodology.resolution.void1'),
+  translate('methodology.resolution.void2'),
+  translate('methodology.resolution.void3'),
+  translate('methodology.resolution.void4'),
+];
 ---
 
 <ArenaLayout
@@ -41,6 +74,133 @@ const allTypes = predictionTypes.list();
       </h2>
       <p class="mt-3 text-sm leading-relaxed text-ink-300">{translate('methodology.lock.p1')}</p>
       <p class="mt-3 text-sm leading-relaxed text-ink-300">{translate('methodology.lock.p2')}</p>
+    </section>
+
+    <section class="mt-12" aria-labelledby="m-harness">
+      <h2 id="m-harness" class="font-display text-2xl font-semibold text-ink-50">
+        {translate('methodology.harness.heading')}
+        <span class="ml-2 font-mono text-xs font-normal text-ink-400">{HARNESS_VERSION}</span>
+      </h2>
+      <p class="mt-3 text-sm leading-relaxed text-ink-300">
+        {translate('methodology.harness.intro')}
+      </p>
+
+      <ul class="mt-4 flex flex-col gap-2 text-sm leading-relaxed text-ink-300">
+        <li>
+          <span class="text-ink-100">{translate('methodology.harness.oneTemplate.lead')}</span>{' '}
+          {translate('methodology.harness.oneTemplate.body')}
+        </li>
+        <li>
+          <span class="text-ink-100">{translate('methodology.harness.incentives.lead')}</span>{' '}
+          {translate('methodology.harness.incentives.body')}
+        </li>
+        <li>
+          <span class="text-ink-100">{translate('methodology.harness.output.lead')}</span>{' '}
+          {translate('methodology.harness.output.body')}
+        </li>
+      </ul>
+
+      <h3 class="mt-6 text-xs uppercase tracking-wider text-ink-400">
+        {translate('methodology.harness.limitsLabel')}
+      </h3>
+      <dl class="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-4">
+        {
+          harnessLimits.map((limit) => (
+            <div class="rounded-xl border border-ink-700/70 bg-ink-900/70 p-3">
+              <dt class="font-mono tabular text-xl font-bold text-signal-300">{limit.value}</dt>
+              <dd class="mt-0.5 text-[11px] leading-snug text-ink-400">{limit.label}</dd>
+            </div>
+          ))
+        }
+      </dl>
+
+      <h3 class="mt-6 text-xs uppercase tracking-wider text-ink-400">
+        {translate('methodology.harness.promptLabel')}
+      </h3>
+      <p class="mt-2 text-xs text-ink-400">{translate('methodology.harness.promptNote')}</p>
+      <pre
+        class="mt-2 overflow-x-auto rounded-xl border border-ink-700/70 bg-ink-950/80 p-4 font-mono text-[11px] leading-relaxed text-ink-300"><code>{SYSTEM_PROMPT}</code></pre>
+      {
+        allTypes.map((type) => (
+          <details class="mt-2 rounded-xl border border-ink-700/70 bg-ink-900/70">
+            <summary class="cursor-pointer px-4 py-3 text-sm text-ink-200">
+              {pick(type.label, locale)}
+              <span class="ml-2 font-mono text-xs text-ink-400">{type.id}</span>
+            </summary>
+            <pre
+              class="overflow-x-auto border-t border-ink-800 px-4 py-3 font-mono text-[11px] leading-relaxed text-ink-300"><code>{typeBlock(type.id)}</code></pre>
+          </details>
+        ))
+      }
+    </section>
+
+    <section class="mt-12" aria-labelledby="m-search">
+      <h2 id="m-search" class="font-display text-2xl font-semibold text-ink-50">
+        {translate('methodology.search.heading')}
+      </h2>
+      <p class="mt-3 text-sm leading-relaxed text-ink-300">{translate('methodology.search.p1')}</p>
+      <p class="mt-3 text-sm leading-relaxed text-ink-300">{translate('methodology.search.p2')}</p>
+      <p class="mt-3 text-sm leading-relaxed text-ink-300">{translate('methodology.search.p3')}</p>
+    </section>
+
+    <section class="mt-12" aria-labelledby="m-window">
+      <h2 id="m-window" class="font-display text-2xl font-semibold text-ink-50">
+        {translate('methodology.window.heading')}
+      </h2>
+      <p class="mt-3 text-sm leading-relaxed text-ink-300">{translate('methodology.window.p1')}</p>
+      <p class="mt-3 text-sm leading-relaxed text-ink-300">{translate('methodology.window.p2')}</p>
+    </section>
+
+    <section class="mt-12" aria-labelledby="m-failures">
+      <h2 id="m-failures" class="font-display text-2xl font-semibold text-ink-50">
+        {translate('methodology.failures.heading')}
+      </h2>
+      <p class="mt-3 text-sm leading-relaxed text-ink-300">
+        {translate('methodology.failures.intro')}
+      </p>
+      <h3 class="mt-5 text-xs uppercase tracking-wider text-ink-400">
+        {translate('methodology.failures.codesLabel')}
+      </h3>
+      <dl class="mt-2 flex flex-col gap-1.5 text-sm text-ink-300">
+        {
+          failureCodes.map((entry) => (
+            <div class="flex flex-wrap items-baseline gap-2">
+              <dt class="font-mono text-xs text-ink-200">{entry.code}</dt>
+              <dd class="text-ink-400">{entry.text}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+
+    <section class="mt-12" aria-labelledby="m-resolution">
+      <h2 id="m-resolution" class="font-display text-2xl font-semibold text-ink-50">
+        {translate('methodology.resolution.heading')}
+      </h2>
+      <p class="mt-3 text-sm leading-relaxed text-ink-300">
+        {translate('methodology.resolution.p1')}
+      </p>
+      <p class="mt-3 text-sm leading-relaxed text-ink-300">
+        {translate('methodology.resolution.p2')}
+      </p>
+      <h3 class="mt-5 text-xs uppercase tracking-wider text-ink-400">
+        {translate('methodology.resolution.voidLabel')}
+      </h3>
+      <ul class="mt-2 flex list-disc flex-col gap-1 pl-5 text-sm text-ink-300">
+        {voidReasons.map((reason) => <li>{reason}</li>)}
+      </ul>
+    </section>
+
+    <section class="mt-12" aria-labelledby="m-versioning">
+      <h2 id="m-versioning" class="font-display text-2xl font-semibold text-ink-50">
+        {translate('methodology.versioning.heading')}
+      </h2>
+      <p class="mt-3 text-sm leading-relaxed text-ink-300">
+        {translate('methodology.versioning.p1')}
+      </p>
+      <p class="mt-3 text-sm leading-relaxed text-ink-300">
+        {translate('methodology.versioning.p2')}
+      </p>
     </section>
 
     <section class="mt-12" aria-labelledby="m-types">

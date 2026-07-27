@@ -1,0 +1,41 @@
+# FutureBench: die Modelle geben ihre Vorhersagen ab (HARNESS_V1).
+#
+# SECRETS_CONTEXT übergibt alle Repo-Secrets als JSON; der Runner schlägt den in
+# providers.secret_name hinterlegten Namen dynamisch nach. Deshalb muss beim
+# Anbinden eines neuen LLMs NIE diese Datei angefasst werden – ein Secret und
+# eine Zeile in der models-Tabelle genügen. GitHub maskiert Secret-Werte in
+# Logs weiterhin; das Skript loggt ohnehin niemals Keys oder Roh-Antworten.
+#
+# Ein Modell ohne gesetztes Secret wird übersprungen (Log-Hinweis), nichts scheitert.
+name: Arena Vorhersagen
+
+on:
+  schedule:
+    - cron: '7 * * * *' # stündlich (UTC)
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: arena-predict
+  cancel-in-progress: false
+
+jobs:
+  predict:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Modelle befragen
+        run: node --experimental-strip-types scripts/arena/jobs/predict.mts
+        env:
+          SECRETS_CONTEXT: ${{ toJson(secrets) }}

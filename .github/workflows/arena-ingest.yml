@@ -1,0 +1,37 @@
+# FutureBench: Feeds legen neue Events an (idempotent).
+#
+# Läuft dreimal täglich, damit neue Spielpläne früh genug im System sind, dass
+# die Modelle im vollen Vorhersagefenster tippen können. Ein fehlschlagender
+# Feed stoppt die anderen nicht.
+name: Arena Events beschaffen
+
+on:
+  schedule:
+    - cron: '17 4,12,20 * * *' # 3x täglich (UTC)
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: arena-ingest
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Feeds abrufen
+        run: node --experimental-strip-types scripts/arena/jobs/ingest.mts
+        env:
+          SECRETS_CONTEXT: ${{ toJson(secrets) }}

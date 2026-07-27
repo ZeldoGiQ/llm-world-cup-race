@@ -1,0 +1,21 @@
+{
+  // Typcheck des Backend-Runners. Eigene Datei, weil die Astro-Konfiguration
+  // (tsconfig.json) nur src/ prüft und dort keine Node-Typen erwünscht sind.
+  //   npm run check:arena
+  "extends": "./tsconfig.json",
+  "include": ["scripts/arena/**/*.mts", "src/arena/lib/harness/**/*.ts"],
+  // Testdateien bleiben aussen vor: sie importieren Frontend-Module, die
+  // (korrekt) extensionslose Vite-Imports verwenden. Die prüft `tsc` über
+  // tsconfig.json mit Bundler-Auflösung, ausgeführt werden sie von vitest.
+  "exclude": ["dist", "node_modules", "scripts/arena/**/*.test.mts"],
+  "compilerOptions": {
+    "types": ["node"],
+    "noEmit": true,
+    // Der Runner läuft über `node --experimental-strip-types`: Typen werden nur
+    // entfernt, nicht transformiert. Deshalb explizite Dateiendungen in Imports.
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true
+  }
+}

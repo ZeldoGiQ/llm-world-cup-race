@@ -1,0 +1,105 @@
+/**
+ * Supabase-Zugriff der Backend-Jobs.
+ *
+ * Ausschließlich mit dem Service-Key (umgeht RLS); der Anon-Key wird im ganzen
+ * Projekt nirgends verwendet. Zeilentypen spiegeln scripts/arena/sql/001_init.sql.
+ */
+import { createClient, type SupabaseClient } from '@supabase/supabase-js';
+import { requireSecret } from './env.mts';
+
+let client: SupabaseClient | undefined;
+
+export function db(): SupabaseClient {
+  if (!client) {
+    client = createClient(requireSecret('SUPABASE_URL'), requireSecret('SUPABASE_SERVICE_KEY'), {
+      auth: { persistSession: false, autoRefreshToken: false },
+    });
+  }
+  return client;
+}
+
+/** Supabase-Antwort auspacken; Fehler werden mit Kontext zu echten Exceptions. */
+export function unwrap<T>(
+  result: { data: T | null; error: { message: string } | null },
+  context: string,
+): T {
+  if (result.error) throw new Error(`${context}: ${result.error.message}`);
+  if (result.data === null) throw new Error(`${context}: keine Daten erhalten.`);
+  return result.data;
+}
+
+/* ------------------------------------------------------------------ */
+/* Zeilentypen (Spiegel von 001_init.sql)                              */
+/* ------------------------------------------------------------------ */
+
+export interface ProviderRow {
+  id: string;
+  api_kind: 'openai' | 'openai-compat' | 'anthropic' | 'google';
+  base_url: string | null;
+  secret_name: string;
+  search_mode: string;
+  enabled: boolean;
+}
+
+export interface ModelRow {
+  id: string;
+  provider_id: string;
+  api_model: string;
+  name: string;
+  color: string;
+  version: string | null;
+  release_date: string | null;
+  access: 'public' | 'early-access';
+  price_input_usd: number;
+  price_output_usd: number;
+  price_search_usd: number;
+  max_output_tokens: number;
+  extra: Record<string, unknown>;
+  enabled: boolean;
+  hidden: boolean;
+  retired_at: string | null;
+}
+
+export interface EventRow {
+  category: string;
+  id: string;
+  title: string;
+  titles: Record<string, string> | null;
+  utc_date: string;
+  status: 'UPCOMING' | 'LIVE' | 'RESOLVED' | 'VOID';
+  prediction_type: 'scoreline' | 'numeric' | 'binary';
+  resolution: Record<string, unknown> | null;
+  metadata: Record<string, unknown>;
+  source: string;
+  open_at: string | null;
+  expected_resolution_at: string | null;
+  resolved_at: string | null;
+  void_reason: string | null;
+}
+
+export interface PredictionRow {
+  category: string;
+  event_id: string;
+  model_id: string;
+  value: Record<string, unknown>;
+  raw: Record<string, unknown>;
+  provenance: Record<string, unknown>;
+  run_id: string | null;
+  created_at: string;
+}
+
+export interface FailureRow {
+  category: string;
+  event_id: string;
+  model_id: string;
+  code: 'refusal' | 'invalid-output' | 'timeout' | 'api-error' | 'rate-limited' | 'late';
+  detail: string | null;
+  created_at: string;
+}
+
+/** ops_config-Wert lesen; fallback, wenn der Key (noch) nicht existiert. */
+export async function opsConfig<T>(key: string, fallback: T): Promise<T> {
+  const { data, error } = await db().from('ops_config').select('value').eq('key', key).maybeSingle();
+  if (error) throw new Error(`ops_config "${key}": ${error.message}`);
+  return (data?.value as T) ?? fallback;
+}

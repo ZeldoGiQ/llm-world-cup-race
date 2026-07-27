@@ -367,6 +367,228 @@ const MESSAGES = {
     es: 'Salvo el Mundial 2026 ya concluido, todas las categorías contienen datos de muestra. Sirven para construir la interfaz, no para evaluar modelos.',
   },
 
+  /* --- Methodik: Wettkampf-Harness --- */
+  'methodology.harness.heading': {
+    en: 'The competition harness',
+    de: 'Das Wettkampf-Harness',
+    es: 'El protocolo de competición',
+  },
+  'methodology.harness.intro': {
+    en: 'FutureBench scores the deployed product, not the bare model — a model plus its provider-native research capability, under one identical protocol: same prompt, same time window, same validation, same retry budget. Nothing is ever backfilled, coerced, or reinterpreted after the lock.',
+    de: 'FutureBench bewertet das ausgelieferte Produkt, nicht das nackte Modell – ein Modell samt seiner anbietereigenen Recherchefähigkeit, unter einem identischen Protokoll: gleicher Prompt, gleiches Zeitfenster, gleiche Validierung, gleiches Wiederholungsbudget. Nach dem Lock wird nichts nachgereicht, nichts zurechtgebogen, nichts neu ausgelegt.',
+    es: 'FutureBench evalúa el producto desplegado, no el modelo desnudo: un modelo junto con su capacidad de investigación propia del proveedor, bajo un protocolo idéntico: mismo prompt, misma ventana temporal, misma validación, mismo presupuesto de reintentos. Después del cierre nada se añade, se ajusta ni se reinterpreta.',
+  },
+  'methodology.harness.oneTemplate.lead': {
+    en: 'One versioned template.',
+    de: 'Ein versioniertes Template.',
+    es: 'Una plantilla versionada.',
+  },
+  'methodology.harness.oneTemplate.body': {
+    en: 'Every model receives the same system and user prompt; only the mechanism for structured output differs. Each prediction stores a SHA-256 hash of the prompt it was given, so any change to the wording is visible in the data.',
+    de: 'Jedes Modell erhält denselben System- und User-Prompt; nur der Mechanismus für strukturierte Ausgabe unterscheidet sich. Zu jeder Vorhersage wird der SHA-256-Hash des gesendeten Prompts gespeichert – jede Wortänderung ist so in den Daten sichtbar.',
+    es: 'Cada modelo recibe el mismo prompt de sistema y de usuario; solo difiere el mecanismo de salida estructurada. Cada predicción guarda un hash SHA-256 del prompt recibido, de modo que cualquier cambio de redacción es visible en los datos.',
+  },
+  'methodology.harness.incentives.lead': {
+    en: 'The scoring rule is disclosed.',
+    de: 'Die Wertungsregel wird offengelegt.',
+    es: 'La regla de puntuación se revela.',
+  },
+  'methodology.harness.incentives.body': {
+    en: 'Each model is told how its answer will be scored. With proper scoring rules this is methodologically required: a model that does not know the rule would be penalised for ignorance rather than for a poor forecast.',
+    de: 'Jedes Modell erfährt, wie seine Antwort gewertet wird. Bei Proper Scoring Rules ist das methodisch geboten: Ein Modell, das die Regel nicht kennt, würde für Unwissen bestraft, nicht für eine schlechte Prognose.',
+    es: 'Cada modelo conoce cómo se puntuará su respuesta. Con reglas de puntuación propias esto es metodológicamente necesario: un modelo que no conoce la regla sería penalizado por ignorancia, no por un mal pronóstico.',
+  },
+  'methodology.harness.output.lead': {
+    en: 'The output is the stored format.',
+    de: 'Die Ausgabe ist das Speicherformat.',
+    es: 'La salida es el formato almacenado.',
+  },
+  'methodology.harness.output.body': {
+    en: 'The requested JSON is exactly the value that ends up in the public data files. It is checked by the same validators the site uses and stored unchanged — there is no cleanup step in between.',
+    de: 'Das geforderte JSON ist exakt der Wert, der in den öffentlichen Datendateien landet. Geprüft wird mit denselben Validatoren wie auf der Seite, gespeichert wird unverändert – es gibt keinen Zwischenschritt, der etwas glättet.',
+    es: 'El JSON solicitado es exactamente el valor que acaba en los archivos públicos de datos. Se comprueba con los mismos validadores del sitio y se guarda sin cambios: no hay ningún paso de limpieza intermedio.',
+  },
+  'methodology.harness.limitsLabel': {
+    en: 'Limits enforced by the runner',
+    de: 'Vom Runner erzwungene Grenzen',
+    es: 'Límites que aplica el ejecutor',
+  },
+  'methodology.harness.limit.toolCalls': {
+    en: 'search or tool calls per prediction',
+    de: 'Such- oder Werkzeugaufrufe je Vorhersage',
+    es: 'llamadas de búsqueda o herramientas por predicción',
+  },
+  'methodology.harness.limit.timeout': {
+    en: 'minutes per attempt',
+    de: 'Minuten je Versuch',
+    es: 'minutos por intento',
+  },
+  'methodology.harness.limit.retries': {
+    en: 'retries on transport errors',
+    de: 'Wiederholungen bei Transportfehlern',
+    es: 'reintentos ante errores de transporte',
+  },
+  'methodology.harness.limit.repairs': {
+    en: 'format repair turns (no new research)',
+    de: 'Format-Reparaturrunden (ohne neue Recherche)',
+    es: 'rondas de reparación de formato (sin nueva investigación)',
+  },
+  'methodology.harness.promptLabel': {
+    en: 'System prompt, verbatim',
+    de: 'System-Prompt im Wortlaut',
+    es: 'Prompt de sistema, literal',
+  },
+  'methodology.harness.promptNote': {
+    en: 'This text is read from the same file the runner sends. It cannot drift from what the models actually received.',
+    de: 'Dieser Text wird aus derselben Datei gelesen, die der Runner sendet. Er kann nicht von dem abweichen, was die Modelle tatsächlich erhalten haben.',
+    es: 'Este texto se lee del mismo archivo que envía el ejecutor. No puede divergir de lo que los modelos recibieron realmente.',
+  },
+
+  /* --- Methodik: Recherche --- */
+  'methodology.search.heading': {
+    en: 'Research and web search',
+    de: 'Recherche und Web-Suche',
+    es: 'Investigación y búsqueda web',
+  },
+  'methodology.search.p1': {
+    en: 'Models research on their own. Each one uses its provider’s native web search, and each is told that its training data is older than the question. Search depth, index quality and paywalls therefore differ between providers.',
+    de: 'Die Modelle recherchieren selbst. Jedes nutzt die Web-Suche seines Anbieters, und jedes erfährt, dass seine Trainingsdaten älter sind als die Frage. Suchtiefe, Indexqualität und Bezahlschranken unterscheiden sich damit zwischen den Anbietern.',
+    es: 'Los modelos investigan por su cuenta. Cada uno usa la búsqueda web nativa de su proveedor y a cada uno se le indica que sus datos de entrenamiento son anteriores a la pregunta. La profundidad de búsqueda, la calidad del índice y los muros de pago difieren entre proveedores.',
+  },
+  'methodology.search.p2': {
+    en: 'That is a deliberate choice, not an oversight: a research tool is part of what a lab ships. We do not equalise it, we document it — the number of search calls is recorded with every prediction.',
+    de: 'Das ist eine bewusste Entscheidung, kein Versäumnis: Ein Recherchewerkzeug gehört zu dem, was ein Labor ausliefert. Wir gleichen es nicht an, wir dokumentieren es – die Zahl der Suchaufrufe wird zu jeder Vorhersage erfasst.',
+    es: 'Es una decisión deliberada, no un descuido: una herramienta de investigación forma parte de lo que un laboratorio entrega. No la igualamos, la documentamos: el número de llamadas de búsqueda se registra con cada predicción.',
+  },
+  'methodology.search.p3': {
+    en: 'Sampling settings are left at each provider’s default. Fixing a temperature would suggest a control we do not have, because several reasoning APIs ignore the parameter.',
+    de: 'Sampling-Einstellungen bleiben beim Standard des jeweiligen Anbieters. Eine feste Temperatur würde eine Kontrolle vorgeben, die wir nicht haben – mehrere Reasoning-APIs ignorieren den Parameter.',
+    es: 'Los ajustes de muestreo se dejan en el valor predeterminado de cada proveedor. Fijar una temperatura sugeriría un control que no tenemos, porque varias API de razonamiento ignoran el parámetro.',
+  },
+
+  /* --- Methodik: Zeitfenster --- */
+  'methodology.window.heading': {
+    en: 'Time window',
+    de: 'Zeitfenster',
+    es: 'Ventana temporal',
+  },
+  'methodology.window.p1': {
+    en: 'Predictions are collected in a window that closes at the event’s lock time. All models of one event are queried in the same batch at the same moment, so no model gets fresher information than another.',
+    de: 'Vorhersagen werden in einem Fenster erhoben, das mit dem Lock-Zeitpunkt des Events endet. Alle Modelle eines Events werden im selben Durchgang zum selben Moment befragt – niemand bekommt frischere Informationen als ein anderer.',
+    es: 'Las predicciones se recogen en una ventana que se cierra en el momento de bloqueo del evento. Todos los modelos de un evento se consultan en el mismo lote y en el mismo instante, así que ninguno recibe información más reciente que otro.',
+  },
+  'methodology.window.p2': {
+    en: 'An answer that arrives after the lock is discarded and never exported. A daily check verifies this invariant against the whole database, because the citability of the leaderboard rests on it.',
+    de: 'Eine Antwort, die nach dem Lock eintrifft, wird verworfen und nie exportiert. Ein täglicher Check prüft diese Invariante gegen die gesamte Datenbank – die Zitierfähigkeit des Leaderboards hängt daran.',
+    es: 'Una respuesta que llega después del cierre se descarta y nunca se exporta. Una comprobación diaria verifica esta invariante en toda la base de datos, porque de ella depende la citabilidad de la clasificación.',
+  },
+
+  /* --- Methodik: Fehlverhalten --- */
+  'methodology.failures.heading': {
+    en: 'Missing answers',
+    de: 'Fehlende Antworten',
+    es: 'Respuestas ausentes',
+  },
+  'methodology.failures.intro': {
+    en: 'A refusal is a result. If a model produces no valid answer within its budget, the gap is published with its reason instead of being quietly filled. Values are never corrected: an impossible probability of 1.3 stays invalid rather than becoming 1.0.',
+    de: 'Eine Verweigerung ist ein Ergebnis. Liefert ein Modell innerhalb seines Budgets keine gültige Antwort, wird die Lücke mit Grund veröffentlicht statt stillschweigend gefüllt. Werte werden nie korrigiert: Eine unmögliche Wahrscheinlichkeit von 1,3 bleibt ungültig, statt zu 1,0 zu werden.',
+    es: 'Una negativa es un resultado. Si un modelo no produce una respuesta válida dentro de su presupuesto, el hueco se publica con su motivo en lugar de rellenarse en silencio. Los valores nunca se corrigen: una probabilidad imposible de 1,3 sigue siendo inválida en vez de convertirse en 1,0.',
+  },
+  'methodology.failures.codesLabel': {
+    en: 'Published reason codes',
+    de: 'Veröffentlichte Grund-Codes',
+    es: 'Códigos de motivo publicados',
+  },
+  'methodology.failures.code.refusal': {
+    en: 'the model declined to answer',
+    de: 'das Modell hat die Antwort verweigert',
+    es: 'el modelo se negó a responder',
+  },
+  'methodology.failures.code.invalidOutput': {
+    en: 'no valid value even after the repair turns',
+    de: 'auch nach den Reparaturrunden kein gültiger Wert',
+    es: 'ningún valor válido ni tras las rondas de reparación',
+  },
+  'methodology.failures.code.timeout': {
+    en: 'no reply within the time limit',
+    de: 'keine Antwort innerhalb des Zeitlimits',
+    es: 'sin respuesta dentro del límite de tiempo',
+  },
+  'methodology.failures.code.apiError': {
+    en: 'the provider’s API returned an error',
+    de: 'die API des Anbieters meldete einen Fehler',
+    es: 'la API del proveedor devolvió un error',
+  },
+  'methodology.failures.code.rateLimited': {
+    en: 'rate limit not cleared before the lock',
+    de: 'Ratenlimit vor dem Lock nicht mehr freigegeben',
+    es: 'límite de tasa no liberado antes del cierre',
+  },
+  'methodology.failures.code.late': {
+    en: 'answer arrived after the lock',
+    de: 'Antwort kam nach dem Lock',
+    es: 'la respuesta llegó después del cierre',
+  },
+
+  /* --- Methodik: Auflösung --- */
+  'methodology.resolution.heading': {
+    en: 'How events are resolved',
+    de: 'Wie Events aufgelöst werden',
+    es: 'Cómo se resuelven los eventos',
+  },
+  'methodology.resolution.p1': {
+    en: 'The resolution source and the rule for reading it are fixed when the event is created, before anyone has predicted. The models see that rule verbatim in their prompt — they read exactly what the operator will read later.',
+    de: 'Auflösungsquelle und Leseregel werden bei der Erstellung des Events festgelegt, bevor irgendwer getippt hat. Die Modelle sehen diese Regel wörtlich in ihrem Prompt – sie lesen genau das, was später auch der Betreiber liest.',
+    es: 'La fuente de resolución y la regla para leerla se fijan al crear el evento, antes de que nadie prediga. Los modelos ven esa regla literalmente en su prompt: leen exactamente lo que el operador leerá después.',
+  },
+  'methodology.resolution.p2': {
+    en: 'There is no operator discretion after the lock. Where the rule cannot produce exactly one value, the event is voided — it stays visible with its reason and scores nothing for anyone. Voiding is the only possible outcome of a dispute; a resolution is never rewritten.',
+    de: 'Nach dem Lock gibt es keinen Ermessensspielraum. Wo die Regel nicht genau einen Wert liefert, wird das Event ungültig – es bleibt mit Grund sichtbar und wird für niemanden gewertet. Ungültigkeit ist der einzige mögliche Ausgang eines Streitfalls; eine Auflösung wird nie umgeschrieben.',
+    es: 'No hay discrecionalidad del operador tras el cierre. Cuando la regla no produce exactamente un valor, el evento se anula: permanece visible con su motivo y no puntúa para nadie. La anulación es el único resultado posible de una disputa; una resolución nunca se reescribe.',
+  },
+  'methodology.resolution.voidLabel': {
+    en: 'An event is voided when',
+    de: 'Ein Event wird ungültig, wenn',
+    es: 'Un evento se anula cuando',
+  },
+  'methodology.resolution.void1': {
+    en: 'the stated rule does not yield exactly one value',
+    de: 'die festgelegte Regel nicht genau einen Wert liefert',
+    es: 'la regla establecida no arroja exactamente un valor',
+  },
+  'methodology.resolution.void2': {
+    en: 'the source is unavailable or contradicts itself',
+    de: 'die Quelle nicht verfügbar ist oder sich widerspricht',
+    es: 'la fuente no está disponible o se contradice',
+  },
+  'methodology.resolution.void3': {
+    en: 'the event is cancelled, postponed, or started early',
+    de: 'das Ereignis abgesagt, verschoben oder vorzeitig begonnen wurde',
+    es: 'el evento se cancela, se posterga o comienza antes de lo previsto',
+  },
+  'methodology.resolution.void4': {
+    en: 'the reported value violates the event type’s contract',
+    de: 'der gemeldete Wert den Vertrag des Event-Typs verletzt',
+    es: 'el valor informado incumple el contrato del tipo de evento',
+  },
+
+  /* --- Methodik: Versionierung --- */
+  'methodology.versioning.heading': {
+    en: 'Model versions',
+    de: 'Modellversionen',
+    es: 'Versiones de modelos',
+  },
+  'methodology.versioning.p1': {
+    en: 'One leaderboard row is one model version. Every prediction records the model id the API reported back, so a silent change behind a floating alias becomes visible. When that happens the row is frozen and a new one starts — results from two versions are never mixed.',
+    de: 'Eine Leaderboard-Zeile ist eine Modellversion. Zu jeder Vorhersage wird die von der API zurückgemeldete Modell-ID gespeichert, sodass eine stille Änderung hinter einem gleitenden Alias sichtbar wird. Tritt das ein, wird die Zeile eingefroren und eine neue beginnt – Ergebnisse zweier Versionen werden nie vermischt.',
+    es: 'Una fila de la clasificación es una versión de modelo. Cada predicción registra el identificador de modelo que devolvió la API, de modo que un cambio silencioso detrás de un alias flotante se hace visible. Cuando ocurre, la fila se congela y comienza otra: los resultados de dos versiones nunca se mezclan.',
+  },
+  'methodology.versioning.p2': {
+    en: 'A model that leaves the competition keeps its row and its history. Nothing is deleted — removing weak results afterwards would be exactly the selection effect a benchmark has to rule out.',
+    de: 'Ein Modell, das den Wettkampf verlässt, behält seine Zeile und seine Historie. Gelöscht wird nichts – schwache Ergebnisse nachträglich zu entfernen wäre genau der Selektionseffekt, den ein Benchmark ausschließen muss.',
+    es: 'Un modelo que abandona la competición conserva su fila y su historial. Nada se elimina: retirar después los resultados débiles sería exactamente el efecto de selección que un benchmark debe descartar.',
+  },
+
   /* --- Fusszeile --- */
   'footer.projectBy': { en: 'A project by', de: 'Ein Projekt von', es: 'Un proyecto de' },
   'footer.prototypeNote': {

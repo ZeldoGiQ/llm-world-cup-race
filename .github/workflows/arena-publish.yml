@@ -1,0 +1,54 @@
+# FutureBench: exportiert die DB nach public/arena-data/** und committet.
+#
+# Der EINZIGE Workflow, der committet (Single Writer, keine Push-Races). Der
+# Commit ist der Lock-Beweis: Predictions liegen damit öffentlich und
+# zeitgestempelt im Git, bevor das Event beginnt.
+#
+# Benötigt: SUPABASE_URL, SUPABASE_SERVICE_KEY
+name: Arena publizieren
+
+on:
+  schedule:
+    - cron: '41 * * * *' # stündlich (UTC), versetzt zu predict um :07
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: arena-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Export aus Supabase
+        run: node --experimental-strip-types scripts/arena/jobs/publish.mts
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+      - name: Änderungen committen und pushen
+        run: |
+          if git diff --quiet -- public/arena-data src/arena/data/models.json; then
+            echo "Keine Änderungen - nichts zu committen."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add public/arena-data src/arena/data/models.json
+            git commit -m "chore(arena): Daten aktualisieren (auto)"
+            git pull --rebase origin "$GITHUB_REF_NAME" || true
+            git push
+          fi

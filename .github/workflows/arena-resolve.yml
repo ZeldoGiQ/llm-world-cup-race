@@ -1,0 +1,36 @@
+# FutureBench: fällige Events auflösen (deterministisch über den Quell-Feed).
+#
+# Alle zwei Stunden, damit Ergebnisse zeitnah im Leaderboard stehen. Mehrdeutig
+# oder überfällig = VOID; niemals nachträgliche Interpretation.
+name: Arena Ergebnisse auflösen
+
+on:
+  schedule:
+    - cron: '23 */2 * * *' # alle 2 Stunden (UTC)
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: arena-resolve
+  cancel-in-progress: false
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Ergebnisse holen
+        run: node --experimental-strip-types scripts/arena/jobs/resolve.mts
+        env:
+          SECRETS_CONTEXT: ${{ toJson(secrets) }}
