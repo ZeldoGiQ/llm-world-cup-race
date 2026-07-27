@@ -5,13 +5,31 @@
  * Projekt nirgends verwendet. Zeilentypen spiegeln scripts/arena/sql/001_init.sql.
  */
 import { createClient, type SupabaseClient } from '@supabase/supabase-js';
-import { requireSecret } from './env.mts';
+import { getSecret, requireSecret } from './env.mts';
+
+/**
+ * Akzeptierte Secret-Namen für den Service-Key, in dieser Reihenfolge.
+ * Mehrere, weil das Supabase-Dashboard je nach Ansicht andere Bezeichnungen
+ * vorschlägt – ein falsch benanntes Secret soll nicht den ganzen Betrieb stoppen.
+ */
+const SERVICE_KEY_NAMES = ['SUPABASE_SERVICE_KEY', 'SUPABASE_SERVICE_ROLE_KEY', 'SUPABASE'];
+
+function serviceKey(): string {
+  for (const name of SERVICE_KEY_NAMES) {
+    const value = getSecret(name);
+    if (value) return value;
+  }
+  throw new Error(
+    `Kein Supabase-Service-Key gefunden. Erwartet als Secret unter einem dieser Namen: ` +
+      `${SERVICE_KEY_NAMES.join(', ')}.`,
+  );
+}
 
 let client: SupabaseClient | undefined;
 
 export function db(): SupabaseClient {
   if (!client) {
-    client = createClient(requireSecret('SUPABASE_URL'), requireSecret('SUPABASE_SERVICE_KEY'), {
+    client = createClient(requireSecret('SUPABASE_URL'), serviceKey(), {
       auth: { persistSession: false, autoRefreshToken: false },
     });
   }

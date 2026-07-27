@@ -33,6 +33,4 @@ jobs:
       - name: Snapshot und Digest
         run: node --experimental-strip-types scripts/arena/jobs/analytics.mts
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          SECRETS_CONTEXT: ${{ toJson(secrets) }}

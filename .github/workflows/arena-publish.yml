@@ -36,9 +36,10 @@ jobs:
       - name: Export aus Supabase
         run: node --experimental-strip-types scripts/arena/jobs/publish.mts
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          # Wie bei allen Arena-Jobs: Secrets werden zur Laufzeit nachgeschlagen,
+          # damit kein Workflow angefasst werden muss, wenn ein Secret dazukommt
+          # oder anders heißt. GitHub maskiert die Werte in Logs weiterhin.
+          SECRETS_CONTEXT: ${{ toJson(secrets) }}
 
       - name: Änderungen committen und pushen
         run: |
