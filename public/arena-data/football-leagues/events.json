@@ -1,11 +1,11 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-07-27T08:10:42.943Z",
+  "updatedAt": "2026-07-27T11:56:12.297Z",
   "events": [
     {
       "id": "fd-554940",
       "title": "Mineiro – Bragantino",
-      "utcDate": "2026-07-29T20:00:00+00:00",
+      "utcDate": "2026-07-29T20:00:00.000Z",
       "status": "UPCOMING",
       "predictionType": "scoreline",
       "resolution": null,
@@ -33,7 +33,7 @@
     {
       "id": "fd-554941",
       "title": "Botafogo – Grêmio",
-      "utcDate": "2026-07-29T20:00:00+00:00",
+      "utcDate": "2026-07-29T20:00:00.000Z",
       "status": "UPCOMING",
       "predictionType": "scoreline",
       "resolution": null,
@@ -61,7 +61,7 @@
     {
       "id": "fd-554942",
       "title": "Chapecoense – Vasco da Gama",
-      "utcDate": "2026-07-29T20:00:00+00:00",
+      "utcDate": "2026-07-29T20:00:00.000Z",
       "status": "UPCOMING",
       "predictionType": "scoreline",
       "resolution": null,
@@ -89,7 +89,7 @@
     {
       "id": "fd-554948",
       "title": "São Paulo – Santos",
-      "utcDate": "2026-07-29T20:00:00+00:00",
+      "utcDate": "2026-07-29T20:00:00.000Z",
       "status": "UPCOMING",
       "predictionType": "scoreline",
       "resolution": null,
@@ -117,7 +117,7 @@
     {
       "id": "fd-554946",
       "title": "Internacional – Flamengo",
-      "utcDate": "2026-07-29T22:30:00+00:00",
+      "utcDate": "2026-07-29T22:30:00.000Z",
       "status": "UPCOMING",
       "predictionType": "scoreline",
       "resolution": null,
@@ -145,7 +145,7 @@
     {
       "id": "fd-554947",
       "title": "Mirassol – Clube do Remo",
-      "utcDate": "2026-07-29T22:30:00+00:00",
+      "utcDate": "2026-07-29T22:30:00.000Z",
       "status": "UPCOMING",
       "predictionType": "scoreline",
       "resolution": null,
@@ -173,7 +173,7 @@
     {
       "id": "fd-554945",
       "title": "Fluminense – Bahia",
-      "utcDate": "2026-07-30T00:30:00+00:00",
+      "utcDate": "2026-07-30T00:30:00.000Z",
       "status": "UPCOMING",
       "predictionType": "scoreline",
       "resolution": null,
@@ -201,7 +201,7 @@
     {
       "id": "fd-554949",
       "title": "Vitória – Palmeiras",
-      "utcDate": "2026-07-30T00:30:00+00:00",
+      "utcDate": "2026-07-30T00:30:00.000Z",
       "status": "UPCOMING",
       "predictionType": "scoreline",
       "resolution": null,
@@ -229,7 +229,7 @@
     {
       "id": "fd-554943",
       "title": "Corinthians – Paranaense",
-      "utcDate": "2026-07-30T22:30:00+00:00",
+      "utcDate": "2026-07-30T22:30:00.000Z",
       "status": "UPCOMING",
       "predictionType": "scoreline",
       "resolution": null,
@@ -257,7 +257,7 @@
     {
       "id": "fd-554944",
       "title": "Coritiba – Cruzeiro",
-      "utcDate": "2026-07-31T00:30:00+00:00",
+      "utcDate": "2026-07-31T00:30:00.000Z",
       "status": "UPCOMING",
       "predictionType": "scoreline",
       "resolution": null,
@@ -285,7 +285,7 @@
     {
       "id": "fd-558214",
       "title": "Cambuur – Excelsior",
-      "utcDate": "2026-08-07T18:00:00+00:00",
+      "utcDate": "2026-08-07T18:00:00.000Z",
       "status": "UPCOMING",
       "predictionType": "scoreline",
       "resolution": null,
@@ -313,7 +313,7 @@
     {
       "id": "fd-567264",
       "title": "Estoril Praia – Famalicão",
-      "utcDate": "2026-08-07T19:15:00+00:00",
+      "utcDate": "2026-08-07T19:15:00.000Z",
       "status": "UPCOMING",
       "predictionType": "scoreline",
       "resolution": null,
