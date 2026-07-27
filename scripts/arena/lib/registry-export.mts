@@ -71,6 +71,7 @@ const PROVIDER_LABELS: Record<string, string> = {
   deepseek: 'DeepSeek',
   mistral: 'Mistral',
   meta: 'Meta',
+  'example-lab': 'Example Lab',
 };
 
 export function providerLabel(id: string): string {
