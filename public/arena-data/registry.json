@@ -1,8 +1,16 @@
 {
   "categories": [
     {
+      "id": "crypto",
+      "label": "Crypto"
+    },
+    {
       "id": "elections",
       "label": "Elections & politics"
+    },
+    {
+      "id": "football-leagues",
+      "label": "Football leagues"
     },
     {
       "id": "football-worldcup",

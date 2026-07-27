@@ -47,7 +47,7 @@
   {
     "id": "nova",
     "name": "Nova Preview",
-    "provider": "Example-lab",
+    "provider": "Example Lab",
     "color": "#a78bfa",
     "version": "nova-preview-0.9",
     "access": "early-access"

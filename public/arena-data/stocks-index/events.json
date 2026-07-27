@@ -1,249 +1,95 @@
 {
   "category": "stocks-index",
-  "updatedAt": "2026-07-19T21:00:00Z",
+  "updatedAt": "2026-07-27T08:10:42.943Z",
   "events": [
     {
-      "id": "spx-2026-04-03",
-      "title": "S&P 500 closing price, 2026-04-03",
-      "utcDate": "2026-04-03T20:00:00.000Z",
-      "status": "RESOLVED",
-      "predictionType": "numeric",
-      "resolution": {
-        "kind": "numeric",
-        "value": 6148.63
+      "id": "yf-gdaxi-2026-08-07",
+      "title": "DAX close on 2026-08-07",
+      "titles": {
+        "de": "DAX-Schlusskurs am 2026-08-07",
+        "en": "DAX close on 2026-08-07",
+        "es": "Cierre de DAX el 2026-08-07"
       },
-      "metadata": {
-        "symbol": "SPX",
-        "previousClose": 6180.42,
-        "period": "Wochenschluss"
-      }
-    },
-    {
-      "id": "spx-2026-04-10",
-      "title": "S&P 500 closing price, 2026-04-10",
-      "utcDate": "2026-04-10T20:00:00.000Z",
-      "status": "RESOLVED",
-      "predictionType": "numeric",
-      "resolution": {
-        "kind": "numeric",
-        "value": 6170.8
-      },
-      "metadata": {
-        "symbol": "SPX",
-        "previousClose": 6148.63,
-        "period": "Wochenschluss"
-      }
-    },
-    {
-      "id": "spx-2026-04-17",
-      "title": "S&P 500 closing price, 2026-04-17",
-      "utcDate": "2026-04-17T20:00:00.000Z",
-      "status": "RESOLVED",
-      "predictionType": "numeric",
-      "resolution": {
-        "kind": "numeric",
-        "value": 6203.42
-      },
-      "metadata": {
-        "symbol": "SPX",
-        "previousClose": 6170.8,
-        "period": "Wochenschluss"
-      }
-    },
-    {
-      "id": "spx-2026-04-24",
-      "title": "S&P 500 closing price, 2026-04-24",
-      "utcDate": "2026-04-24T20:00:00.000Z",
-      "status": "RESOLVED",
-      "predictionType": "numeric",
-      "resolution": {
-        "kind": "numeric",
-        "value": 6223.1
-      },
-      "metadata": {
-        "symbol": "SPX",
-        "previousClose": 6203.42,
-        "period": "Wochenschluss"
-      }
-    },
-    {
-      "id": "spx-2026-05-01",
-      "title": "S&P 500 closing price, 2026-05-01",
-      "utcDate": "2026-05-01T20:00:00.000Z",
-      "status": "RESOLVED",
-      "predictionType": "numeric",
-      "resolution": {
-        "kind": "numeric",
-        "value": 6187.11
-      },
-      "metadata": {
-        "symbol": "SPX",
-        "previousClose": 6223.1,
-        "period": "Wochenschluss"
-      }
-    },
-    {
-      "id": "spx-2026-05-08",
-      "title": "S&P 500 closing price, 2026-05-08",
-      "utcDate": "2026-05-08T20:00:00.000Z",
-      "status": "RESOLVED",
-      "predictionType": "numeric",
-      "resolution": {
-        "kind": "numeric",
-        "value": 6135.2
-      },
-      "metadata": {
-        "symbol": "SPX",
-        "previousClose": 6187.11,
-        "period": "Wochenschluss"
-      }
-    },
-    {
-      "id": "spx-2026-05-15",
-      "title": "S&P 500 closing price, 2026-05-15",
-      "utcDate": "2026-05-15T20:00:00.000Z",
-      "status": "RESOLVED",
-      "predictionType": "numeric",
-      "resolution": {
-        "kind": "numeric",
-        "value": 6139.3
-      },
-      "metadata": {
-        "symbol": "SPX",
-        "previousClose": 6135.2,
-        "period": "Wochenschluss"
-      }
-    },
-    {
-      "id": "spx-2026-05-22",
-      "title": "S&P 500 closing price, 2026-05-22",
-      "utcDate": "2026-05-22T20:00:00.000Z",
-      "status": "RESOLVED",
-      "predictionType": "numeric",
-      "resolution": {
-        "kind": "numeric",
-        "value": 6067.18
-      },
-      "metadata": {
-        "symbol": "SPX",
-        "previousClose": 6139.3,
-        "period": "Wochenschluss"
-      }
-    },
-    {
-      "id": "spx-2026-05-29",
-      "title": "S&P 500 closing price, 2026-05-29",
-      "utcDate": "2026-05-29T20:00:00.000Z",
-      "status": "RESOLVED",
-      "predictionType": "numeric",
-      "resolution": {
-        "kind": "numeric",
-        "value": 6039.01
-      },
-      "metadata": {
-        "symbol": "SPX",
-        "previousClose": 6067.18,
-        "period": "Wochenschluss"
-      }
-    },
-    {
-      "id": "spx-2026-06-05",
-      "title": "S&P 500 closing price, 2026-06-05",
-      "utcDate": "2026-06-05T20:00:00.000Z",
-      "status": "RESOLVED",
-      "predictionType": "numeric",
-      "resolution": {
-        "kind": "numeric",
-        "value": 6087.95
-      },
-      "metadata": {
-        "symbol": "SPX",
-        "previousClose": 6039.01,
-        "period": "Wochenschluss"
-      }
-    },
-    {
-      "id": "spx-2026-06-12",
-      "title": "S&P 500 closing price, 2026-06-12",
-      "utcDate": "2026-06-12T20:00:00.000Z",
-      "status": "RESOLVED",
-      "predictionType": "numeric",
-      "resolution": {
-        "kind": "numeric",
-        "value": 5976.72
-      },
-      "metadata": {
-        "symbol": "SPX",
-        "previousClose": 6087.95,
-        "period": "Wochenschluss"
-      }
-    },
-    {
-      "id": "spx-2026-06-19",
-      "title": "S&P 500 closing price, 2026-06-19",
-      "utcDate": "2026-06-19T20:00:00.000Z",
-      "status": "RESOLVED",
-      "predictionType": "numeric",
-      "resolution": {
-        "kind": "numeric",
-        "value": 6003.21
-      },
-      "metadata": {
-        "symbol": "SPX",
-        "previousClose": 5976.72,
-        "period": "Wochenschluss"
-      }
-    },
-    {
-      "id": "spx-2026-06-26",
-      "title": "S&P 500 closing price, 2026-06-26",
-      "utcDate": "2026-06-26T20:00:00.000Z",
+      "utcDate": "2026-08-03T00:00:00+00:00",
       "status": "UPCOMING",
       "predictionType": "numeric",
       "resolution": null,
       "metadata": {
-        "symbol": "SPX",
-        "previousClose": 6003.21,
-        "period": "Wochenschluss"
+        "period": "Week ending 2026-08-07",
+        "symbol": "DAX",
+        "context": [
+          "Index: DAX, quoted in EUR",
+          "Last close before lock: 25442.26 on 2026-07-27",
+          "Target: closing level on Friday 2026-08-07 (or the last trading day of that week)",
+          "Predictions lock on Monday 00:00 UTC, so the whole trading week is still ahead."
+        ],
+        "currency": "EUR",
+        "weekStart": "2026-08-03",
+        "targetDate": "2026-08-07",
+        "yahooSymbol": "^GDAXI",
+        "previousClose": 25442.26,
+        "resolutionRule": "Closing level of DAX (Yahoo Finance symbol ^GDAXI) on the last trading day of the week from 2026-08-03 to 2026-08-07, in EUR, rounded to two decimals. Read from the daily series of https://query1.finance.yahoo.com/v8/finance/chart/^GDAXI?interval=1d, field indicators.quote[0].close, with the trading day derived in the exchange's own timezone. If 2026-08-07 is a market holiday, the last trading day of that same week counts. If no close is published for that week, the event is voided and scores nothing for anyone.",
+        "previousCloseDate": "2026-07-27"
       }
     },
     {
-      "id": "spx-2026-07-03",
-      "title": "S&P 500 closing price, 2026-07-03",
-      "utcDate": "2026-07-03T20:00:00.000Z",
+      "id": "yf-gspc-2026-08-07",
+      "title": "S&P 500 close on 2026-08-07",
+      "titles": {
+        "de": "S&P 500-Schlusskurs am 2026-08-07",
+        "en": "S&P 500 close on 2026-08-07",
+        "es": "Cierre de S&P 500 el 2026-08-07"
+      },
+      "utcDate": "2026-08-03T00:00:00+00:00",
       "status": "UPCOMING",
       "predictionType": "numeric",
       "resolution": null,
       "metadata": {
-        "symbol": "SPX",
-        "previousClose": 6002.78,
-        "period": "Wochenschluss"
+        "period": "Week ending 2026-08-07",
+        "symbol": "S&P 500",
+        "context": [
+          "Index: S&P 500, quoted in USD",
+          "Last close before lock: 7411.98 on 2026-07-24",
+          "Target: closing level on Friday 2026-08-07 (or the last trading day of that week)",
+          "Predictions lock on Monday 00:00 UTC, so the whole trading week is still ahead."
+        ],
+        "currency": "USD",
+        "weekStart": "2026-08-03",
+        "targetDate": "2026-08-07",
+        "yahooSymbol": "^GSPC",
+        "previousClose": 7411.98,
+        "resolutionRule": "Closing level of S&P 500 (Yahoo Finance symbol ^GSPC) on the last trading day of the week from 2026-08-03 to 2026-08-07, in USD, rounded to two decimals. Read from the daily series of https://query1.finance.yahoo.com/v8/finance/chart/^GSPC?interval=1d, field indicators.quote[0].close, with the trading day derived in the exchange's own timezone. If 2026-08-07 is a market holiday, the last trading day of that same week counts. If no close is published for that week, the event is voided and scores nothing for anyone.",
+        "previousCloseDate": "2026-07-24"
       }
     },
     {
-      "id": "spx-2026-07-10",
-      "title": "S&P 500 closing price, 2026-07-10",
-      "utcDate": "2026-07-10T20:00:00.000Z",
+      "id": "yf-ndx-2026-08-07",
+      "title": "Nasdaq 100 close on 2026-08-07",
+      "titles": {
+        "de": "Nasdaq 100-Schlusskurs am 2026-08-07",
+        "en": "Nasdaq 100 close on 2026-08-07",
+        "es": "Cierre de Nasdaq 100 el 2026-08-07"
+      },
+      "utcDate": "2026-08-03T00:00:00+00:00",
       "status": "UPCOMING",
       "predictionType": "numeric",
       "resolution": null,
       "metadata": {
-        "symbol": "SPX",
-        "previousClose": 6109.29,
-        "period": "Wochenschluss"
-      }
-    },
-    {
-      "id": "spx-2026-07-17",
-      "title": "S&P 500 closing price, 2026-07-17",
-      "utcDate": "2026-07-17T20:00:00.000Z",
-      "status": "UPCOMING",
-      "predictionType": "numeric",
-      "resolution": null,
-      "metadata": {
-        "symbol": "SPX",
-        "previousClose": 6125.16,
-        "period": "Wochenschluss"
+        "period": "Week ending 2026-08-07",
+        "symbol": "Nasdaq 100",
+        "context": [
+          "Index: Nasdaq 100, quoted in USD",
+          "Last close before lock: 28128.34 on 2026-07-24",
+          "Target: closing level on Friday 2026-08-07 (or the last trading day of that week)",
+          "Predictions lock on Monday 00:00 UTC, so the whole trading week is still ahead."
+        ],
+        "currency": "USD",
+        "weekStart": "2026-08-03",
+        "targetDate": "2026-08-07",
+        "yahooSymbol": "^NDX",
+        "previousClose": 28128.34,
+        "resolutionRule": "Closing level of Nasdaq 100 (Yahoo Finance symbol ^NDX) on the last trading day of the week from 2026-08-03 to 2026-08-07, in USD, rounded to two decimals. Read from the daily series of https://query1.finance.yahoo.com/v8/finance/chart/^NDX?interval=1d, field indicators.quote[0].close, with the trading day derived in the exchange's own timezone. If 2026-08-07 is a market holiday, the last trading day of that same week counts. If no close is published for that week, the event is voided and scores nothing for anyone.",
+        "previousCloseDate": "2026-07-24"
       }
     }
   ]
