@@ -65,7 +65,7 @@ export function pick<T>(value: Localized<T>, locale: Locale): T {
  * Datei zum unangetasteten WM-Bestand gehört – `Astro.site` wäre deshalb
  * undefined. Suchmaschinen erwarten bei hreflang absolute URLs.
  */
-export const ARENA_ORIGIN = 'https://llm-world-cup-race.vercel.app';
+export const ARENA_ORIGIN = 'https://www.futurebench.ai';
 
 /**
  * Pfadsegmente, die keine Kategorie-ID sein dürfen.
