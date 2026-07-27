@@ -28,6 +28,7 @@ const PREVIOUS_WEEK: Record<Locale, string> = {
 
 export const stocksIndex: CategoryDescriptor = {
   id: 'stocks-index',
+  dataSource: 'live',
   label: { en: 'Stock index', de: 'Aktienindex', es: 'Índice bursátil' },
   blurb: {
     en: 'Weekly closing price of a stock index. Scored on the deviation in index points and measured against a random walk as the reference.',

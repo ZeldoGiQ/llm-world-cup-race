@@ -28,6 +28,7 @@ function meta(event: ArenaEvent): WorldCupMetadata {
 
 export const footballWorldCup: CategoryDescriptor = {
   id: 'football-worldcup',
+  dataSource: 'live',
   label: {
     en: 'FIFA World Cup 2026',
     de: 'Fußball-WM 2026',
@@ -44,6 +45,10 @@ export const footballWorldCup: CategoryDescriptor = {
     es: 'Resultado tras 120 minutos (sin tanda de penales)',
   },
   accent: '#34d399',
+  // Kein Referenz-Teilnehmer möglich: Das Turnier ist beendet, nachträglich
+  // Tipps einzutragen wäre Vorher-Wissen. Stattdessen eine deterministische
+  // Referenzregel, deren Nachträglichkeit auf der Seite offengelegt wird.
+  referenceRuleId: 'constant-1-0',
   predictionType: 'scoreline',
   metricIds: ['kicktipp-points', 'points-per-event', 'exact-acc', 'tendency-acc'],
   primaryMetric: 'kicktipp-points',

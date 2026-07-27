@@ -58,6 +58,7 @@ metrics.register(underestimationRate);
 
 const rainfallCategory: CategoryDescriptor = {
   id: 'weather-rainfall',
+  dataSource: 'example',
   label: { en: 'Rainfall', de: 'Niederschlag', es: 'Precipitación' },
   blurb: {
     en: 'Invented category that exists purely to serve this test.',
@@ -154,5 +155,22 @@ describe('Erweiterbarkeit ohne Core-Änderung', () => {
   it('kennt die neue Kategorie ohne Skill-Score, weil keine Baseline gesetzt ist', () => {
     expect(standings.baselineRows).toHaveLength(0);
     expect(standings.columns.map((c) => c.metricId)).not.toContain('skill-score');
+  });
+});
+
+describe('Provenienz ist erklärungspflichtig', () => {
+  it('deklariert für jede Kategorie, ob es echte oder Beispieldaten sind', () => {
+    /*
+     * Doppelt gesichert: Der Compiler erzwingt das Feld (Pflichtfeld ohne
+     * Standardwert), und dieser Test hält fest, dass niemand einen dritten Wert
+     * einschmuggelt. Ohne diese Angabe könnte eine neue Kategorie unbemerkt in
+     * die Kennzahlen der Startseite einfließen.
+     */
+    for (const descriptor of categories.list()) {
+      expect(
+        ['live', 'example'],
+        `Kategorie "${descriptor.id}" hat kein gültiges dataSource`,
+      ).toContain(descriptor.dataSource);
+    }
   });
 });

@@ -53,6 +53,7 @@ const three = (value: string) => ({ en: value, de: value, es: value });
 
 const DESCRIPTOR: CategoryDescriptor = {
   id: 'test',
+  dataSource: 'example',
   label: three('Test'),
   blurb: three(''),
   question: three(''),

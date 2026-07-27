@@ -23,6 +23,7 @@ const PREVIOUS_DAY: Record<Locale, string> = {
 
 export const crypto: CategoryDescriptor = {
   id: 'crypto',
+  dataSource: 'live',
   label: { en: 'Crypto', de: 'Krypto', es: 'Cripto' },
   blurb: {
     en: 'Daily closing price of major cryptocurrencies at 00:00 UTC. Scored on the deviation in US dollars and measured against a random walk as the reference.',

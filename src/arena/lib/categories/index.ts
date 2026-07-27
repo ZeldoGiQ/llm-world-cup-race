@@ -27,6 +27,16 @@ export interface EventTitle {
 
 export interface CategoryDescriptor {
   id: string;
+  /**
+   * Echte Daten oder Beispieldaten?
+   *
+   * Pflichtfeld ohne Standardwert – Absicht: Wer eine Kategorie anlegt und die
+   * Angabe vergisst, bekommt einen Typfehler statt stillschweigend als „echt"
+   * zu gelten. Beispieldaten zählen in keine Kennzahl der Startseite und in
+   * keine Gesamtwertung. Eine Deklaration als `live` wird zusätzlich von
+   * `classifyCategoryData()` gegengeprüft und bei Indizien abgestuft.
+   */
+  dataSource: 'live' | 'example';
   /** Anzeigename, z. B. "Stock index" */
   label: Localized<string>;
   /** Ein Satz für Kachel und Seitenkopf */
@@ -44,6 +54,14 @@ export interface CategoryDescriptor {
   baselineModelId?: string;
   /** Erläuterung der Baseline für die Methodik-Seite */
   baselineNote?: Localized<string>;
+  /**
+   * Referenzregel statt Referenz-Teilnehmer (`src/arena/lib/references/`).
+   *
+   * Für abgeschlossene Kategorien, in denen niemand mehr Vorhersagen abgeben
+   * kann: eine deterministische Funktion erzeugt die Bezugslinie, ohne dass
+   * nachträglich Daten in die Dateien geschrieben werden müssten.
+   */
+  referenceRuleId?: string;
   /** Einheit für Zahlenwerte, z. B. "index points" */
   unit?: Localized<string>;
 

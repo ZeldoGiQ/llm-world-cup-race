@@ -21,9 +21,9 @@ const MESSAGES = {
   'nav.methodology': { en: 'Methodology', de: 'Methodik', es: 'Metodología' },
   'nav.prototype': { en: 'Prototype', de: 'Prototyp', es: 'Prototipo' },
   'nav.prototypeTitle': {
-    en: 'This site is a prototype: apart from the FIFA World Cup, all data is sample data.',
-    de: 'Diese Seite ist ein Prototyp: Außer der Fußball-WM sind alle Daten Beispieldaten.',
-    es: 'Este sitio es un prototipo: salvo el Mundial, todos los datos son de muestra.',
+    en: 'Some categories still run on sample data. They are marked and excluded from every figure on this site.',
+    de: 'Einige Kategorien laufen noch auf Beispieldaten. Sie sind gekennzeichnet und zählen in keine Zahl dieser Seite.',
+    es: 'Algunas categorías siguen con datos de muestra. Están marcadas y quedan fuera de todas las cifras.',
   },
   'nav.language': { en: 'Language', de: 'Sprache', es: 'Idioma' },
   'nav.backToCategories': {
@@ -34,12 +34,12 @@ const MESSAGES = {
 
   /* --- Startseite --- */
   'home.eyebrow': {
-    en: 'A ZELDOgiq experiment',
-    de: 'Ein ZELDOgiq-Experiment',
-    es: 'Un experimento de ZELDOgiq',
+    en: 'Open benchmark · every prediction committed before the event',
+    de: 'Offenes Benchmark · jede Vorhersage vor dem Ereignis festgehalten',
+    es: 'Benchmark abierto · cada predicción registrada antes del evento',
   },
-  'home.titleLead': { en: 'Prediction Benchmarks', de: 'Prediction Benchmarks', es: 'Prediction Benchmarks' },
-  'home.titleAccent': { en: 'Arena', de: 'Arena', es: 'Arena' },
+  'home.titleLead': { en: 'Which model predicts', de: 'Welches Modell trifft', es: '¿Qué modelo predice' },
+  'home.titleAccent': { en: 'reality best?', de: 'die Wirklichkeit?', es: 'mejor la realidad?' },
   'home.intro': {
     en: 'Which AI model reads the future best? Language models compete across several domains — sport, stock markets, elections. Every prediction is published before the event, and every score can be recomputed.',
     de: 'Welches KI-Modell schätzt die Zukunft am besten ein? Hier treten Sprachmodelle in mehreren Domänen gegeneinander an – Sport, Aktienmärkte, Wahlen. Alle Vorhersagen werden vor dem Ereignis veröffentlicht, jede Wertung ist nachrechenbar.',
@@ -93,6 +93,433 @@ const MESSAGES = {
     en: 'Methodology in detail →',
     de: 'Methodik im Detail →',
     es: 'Metodología en detalle →',
+  },
+
+  /* --- Startseite: Antwortzeile ---
+     Kein Superlativ ohne Intervall. „führt" ist erlaubt, „gewinnt" nicht –
+     ein i18n-Test setzt das durch. */
+  'home.answer.clear': {
+    en: '{leader} leads the {category} board with {value} {metric} — clear of {runnerUp}, holding first place in {pLeader} of all resampled runs.',
+    de: '{leader} führt die {category}-Tabelle mit {value} {metric} – vor {runnerUp}, und hält Platz eins in {pLeader} aller Neuziehungen.',
+    es: '{leader} lidera la tabla de {category} con {value} {metric}, por delante de {runnerUp}, y mantiene el primer puesto en {pLeader} de las remuestras.',
+  },
+  'home.answer.tied': {
+    en: '{leader} leads the {category} board with {value} {metric} — but {runnerUp} is only {gap} behind, which is inside the measurement error: first place goes to {leader} in {pLeader} of resampled runs and to {runnerUp} in {pRunnerUp}.',
+    de: '{leader} führt die {category}-Tabelle mit {value} {metric} – doch {runnerUp} liegt nur {gap} zurück, und das liegt im Messfehler: Platz eins geht in {pLeader} der Neuziehungen an {leader}, in {pRunnerUp} an {runnerUp}.',
+    es: '{leader} lidera la tabla de {category} con {value} {metric}, pero {runnerUp} está solo {gap} por detrás, dentro del error de medición: el primer puesto va a {leader} en {pLeader} de las remuestras y a {runnerUp} en {pRunnerUp}.',
+  },
+  'home.answer.coldStart': {
+    en: 'No event has resolved yet. {events} upcoming events are already queued for prediction.',
+    de: 'Noch ist kein Ereignis aufgelöst. {events} kommende Ereignisse stehen bereits zur Vorhersage an.',
+    es: 'Aún no se ha resuelto ningún evento. Ya hay {events} eventos próximos en cola para predecir.',
+  },
+
+  /* --- Startseite: Leaderboard --- */
+  'home.scope.single': {
+    en: '{resolved} of {total} events resolved · {models} models · ranked by {metric}',
+    de: '{resolved} von {total} Ereignissen aufgelöst · {models} Modelle · gerankt nach {metric}',
+    es: '{resolved} de {total} eventos resueltos · {models} modelos · clasificados por {metric}',
+  },
+  'home.board.colInterval': { en: 'Rank (90%)', de: 'Rang (90 %)', es: 'Rango (90 %)' },
+  'home.board.colProbFirst': { en: 'P(#1)', de: 'P(#1)', es: 'P(#1)' },
+  'home.board.colProbFirstTitle': {
+    en: 'Share of resampled runs in which this model holds first place. Shared ranks count for both models, so the column can sum above 1.',
+    de: 'Anteil der Neuziehungen, in denen dieses Modell Platz eins hält. Geteilte Ränge zählen für beide Modelle, deshalb kann die Spalte über 1 summieren.',
+    es: 'Proporción de remuestras en las que este modelo ocupa el primer puesto. Los empates cuentan para ambos, por lo que la columna puede sumar más de 1.',
+  },
+  'home.board.noClearLeader': {
+    en: 'no clear leader',
+    de: 'kein klarer Führender',
+    es: 'sin líder claro',
+  },
+  'home.board.noClearLeaderTitle': {
+    en: 'The top model holds first place in fewer than 90% of resampled runs, so no medal is shown.',
+    de: 'Das führende Modell hält Platz eins in weniger als 90 % der Neuziehungen – deshalb keine Medaille.',
+    es: 'El modelo principal ocupa el primer puesto en menos del 90 % de las remuestras, por eso no se muestra medalla.',
+  },
+  'home.board.partial': {
+    en: '{scored}/{resolved} events — not ranked',
+    de: '{scored}/{resolved} Ereignisse – ohne Rang',
+    es: '{scored}/{resolved} eventos — sin rango',
+  },
+  'home.board.partialTitle': {
+    en: 'Fewer than half the resolved events predicted. Values over different event sets are not comparable, so this row carries no rank.',
+    de: 'Weniger als die Hälfte der aufgelösten Ereignisse getippt. Werte über unterschiedliche Ereignismengen sind nicht vergleichbar, deshalb trägt diese Zeile keinen Rang.',
+    es: 'Predijo menos de la mitad de los eventos resueltos. Los valores sobre conjuntos distintos no son comparables, así que esta fila no lleva rango.',
+  },
+  'home.board.reference': { en: 'reference', de: 'Referenz', es: 'referencia' },
+  'home.board.retroactive': {
+    en: 'written down after the fact',
+    de: 'nachträglich festgeschrieben',
+    es: 'fijada a posteriori',
+  },
+  'home.board.separablePairs': {
+    en: 'Separable at 95%: {separable} of {pairs} model pairs ({list}). Every other ordering in this table is within noise.',
+    de: 'Bei 95 % trennbar: {separable} von {pairs} Modellpaaren ({list}). Jede andere Reihenfolge in dieser Tabelle liegt im Rauschen.',
+    es: 'Separables al 95 %: {separable} de {pairs} pares de modelos ({list}). Cualquier otro orden de esta tabla está dentro del ruido.',
+  },
+  'home.board.bootstrapNote': {
+    en: 'Rank intervals and P(#1) come from {draws} paired resamples of the {events} events, seed {seed} — same draw for every model, so the comparison stays fair. Events share context, which makes these intervals lower bounds.',
+    de: 'Rangintervalle und P(#1) stammen aus {draws} gepaarten Neuziehungen über die {events} Ereignisse, Seed {seed} – dieselbe Ziehung für jedes Modell, damit der Vergleich fair bleibt. Ereignisse teilen Kontext, deshalb sind die Intervalle Untergrenzen.',
+    es: 'Los rangos y P(#1) provienen de {draws} remuestras emparejadas de los {events} eventos, semilla {seed}: la misma extracción para cada modelo, para que la comparación sea justa. Los eventos comparten contexto, así que estos intervalos son cotas inferiores.',
+  },
+  'home.board.scrollHint': {
+    en: 'Scroll sideways for more columns',
+    de: 'Seitlich scrollen für weitere Spalten',
+    es: 'Desplázate para ver más columnas',
+  },
+  'home.board.viewCategory': {
+    en: 'All {count} events in {category} →',
+    de: 'Alle {count} Ereignisse in {category} →',
+    es: 'Todos los {count} eventos de {category} →',
+  },
+
+  /* --- Startseite: Kennzahlen --- */
+  'home.kpi.scored': { en: 'events scored', de: 'Ereignisse gewertet', es: 'eventos puntuados' },
+  'home.kpi.predictions': {
+    en: 'predictions on record',
+    de: 'Vorhersagen aktenkundig',
+    es: 'predicciones registradas',
+  },
+  'home.kpi.models': { en: 'models ranked', de: 'Modelle gerankt', es: 'modelos clasificados' },
+  'home.kpi.open.empty': {
+    en: 'upcoming — no predictions committed yet',
+    de: 'kommend – noch keine Vorhersage abgegeben',
+    es: 'próximos — aún sin predicciones',
+  },
+  'home.kpi.open.filed': {
+    en: 'upcoming — {filed} of {slots} predictions committed',
+    de: 'kommend – {filed} von {slots} Vorhersagen abgegeben',
+    es: 'próximos — {filed} de {slots} predicciones enviadas',
+  },
+  'home.kpi.nextLock': {
+    en: 'Next lock {date} UTC',
+    de: 'Nächster Schluss {date} UTC',
+    es: 'Próximo cierre {date} UTC',
+  },
+  'home.kpi.onlyLive': {
+    en: 'Sample-data categories are excluded from all four figures.',
+    de: 'Kategorien mit Beispieldaten zählen in keine dieser vier Zahlen.',
+    es: 'Las categorías con datos de muestra quedan fuera de las cuatro cifras.',
+  },
+
+  /* --- Startseite: Kategorien --- */
+  'home.cat.state.scored': { en: 'real results', de: 'echte Ergebnisse', es: 'resultados reales' },
+  'home.cat.state.armed': {
+    en: 'real events, no predictions yet',
+    de: 'echte Ereignisse, noch keine Tipps',
+    es: 'eventos reales, aún sin predicciones',
+  },
+  'home.cat.state.awaiting': {
+    en: 'first predictions filed',
+    de: 'erste Tipps abgegeben',
+    es: 'primeras predicciones enviadas',
+  },
+  'home.cat.state.sample': { en: 'sample data', de: 'Beispieldaten', es: 'datos de muestra' },
+  'home.cat.state.sampleTitle': {
+    en: 'Fabricated predictions, used to exercise the interface. Excluded from every figure on this page.',
+    de: 'Erfundene Vorhersagen zum Erproben der Oberfläche. Zählen in keine Zahl dieser Seite.',
+    es: 'Predicciones inventadas para probar la interfaz. Excluidas de todas las cifras de esta página.',
+  },
+  'home.cat.leader': { en: 'Leader', de: 'Führend', es: 'Líder' },
+  'home.cat.nextLock': { en: 'Next lock', de: 'Nächster Schluss', es: 'Próximo cierre' },
+  'home.cat.noEvents': { en: 'no events yet', de: 'noch keine Ereignisse', es: 'aún sin eventos' },
+  'home.cat.demoted': {
+    en: 'Declared as real data, downgraded automatically: {reason}',
+    de: 'Als echte Daten deklariert, automatisch abgestuft: {reason}',
+    es: 'Declarada como datos reales, degradada automáticamente: {reason}',
+  },
+  'home.cat.integrity': {
+    en: 'Integrity check failed ({count} violations) — excluded from every figure.',
+    de: 'Integritätsprüfung fehlgeschlagen ({count} Verstöße) – zählt in keine Zahl.',
+    es: 'Falló la comprobación de integridad ({count} infracciones) — excluida de toda cifra.',
+  },
+  'home.cat.sampleGroupHeading': {
+    en: 'Interface fixtures — never counted',
+    de: 'Oberflächen-Attrappen – zählen nie',
+    es: 'Maquetas de interfaz — nunca cuentan',
+  },
+  'home.cat.scored.one': { en: '{count} scored', de: '{count} gewertet', es: '{count} puntuado' },
+  'home.cat.scored.other': { en: '{count} scored', de: '{count} gewertet', es: '{count} puntuados' },
+  'home.cat.pending.one': {
+    en: '{count} event pending',
+    de: '{count} Ereignis offen',
+    es: '{count} evento pendiente',
+  },
+  'home.cat.pending.other': {
+    en: '{count} events pending',
+    de: '{count} Ereignisse offen',
+    es: '{count} eventos pendientes',
+  },
+
+  /* --- Startseite: Abstufungsgründe --- */
+  'home.flag.declared': {
+    en: 'declared as sample data',
+    de: 'als Beispieldaten deklariert',
+    es: 'declarada como datos de muestra',
+  },
+  'home.flag.metadataSample': {
+    en: 'events label themselves as sample data',
+    de: 'Ereignisse bezeichnen sich selbst als Beispieldaten',
+    es: 'los eventos se declaran datos de muestra',
+  },
+  'home.flag.resolvedAfterUpdate': {
+    en: 'an event counts as resolved although it had not happened at the data timestamp',
+    de: 'ein Ereignis gilt als aufgelöst, obwohl es zum Datenstand nicht stattgefunden hatte',
+    es: 'un evento consta como resuelto aunque no había ocurrido en la fecha de los datos',
+  },
+  'home.flag.predictionAfterUpdate': {
+    en: 'a prediction is timestamped after the data snapshot',
+    de: 'ein Tipp trägt einen Zeitstempel nach dem Datenstand',
+    es: 'una predicción lleva fecha posterior a la instantánea de datos',
+  },
+
+  /* --- Startseite: offene Runde --- */
+  'home.open.heading': { en: 'Open round', de: 'Offene Runde', es: 'Ronda abierta' },
+  'home.open.oneLine': {
+    en: '{events} upcoming events are queued across {categories} categories, next lock {date} UTC — no model has committed a prediction yet.',
+    de: '{events} kommende Ereignisse stehen in {categories} Kategorien bereit, nächster Schluss {date} UTC – noch hat kein Modell getippt.',
+    es: '{events} eventos próximos en {categories} categorías, próximo cierre {date} UTC — ningún modelo ha enviado predicción todavía.',
+  },
+  'home.open.header': {
+    en: '{events} events open · next lock {date} UTC · {filed} of {slots} predictions committed',
+    de: '{events} Ereignisse offen · nächster Schluss {date} UTC · {filed} von {slots} Vorhersagen abgegeben',
+    es: '{events} eventos abiertos · próximo cierre {date} UTC · {filed} de {slots} predicciones enviadas',
+  },
+  'home.open.locks': { en: 'Locks {date} UTC', de: 'Schluss {date} UTC', es: 'Cierra {date} UTC' },
+  'home.open.progress': {
+    en: '{filed} of {slots} predictions',
+    de: '{filed} von {slots} Vorhersagen',
+    es: '{filed} de {slots} predicciones',
+  },
+  'home.open.awaiting': { en: 'awaiting entries', de: 'wartet auf Tipps', es: 'esperando entradas' },
+  'home.open.showAll': { en: 'show all {count}', de: 'alle {count} zeigen', es: 'ver los {count}' },
+  'home.open.footnote': {
+    en: 'Predictions appear here only after a run has published them. The board above shows what a completed window looks like.',
+    de: 'Vorhersagen erscheinen hier erst, wenn ein Lauf sie veröffentlicht hat. Die Tabelle oben zeigt, wie ein abgeschlossenes Fenster aussieht.',
+    es: 'Las predicciones aparecen aquí solo después de que una ejecución las publique. La tabla de arriba muestra una ventana ya completada.',
+  },
+
+  /* --- Startseite: kategorienübergreifend --- */
+  'home.overall.lockedTitle': {
+    en: 'Cross-category skill — locked',
+    de: 'Kategorienübergreifender Skill – gesperrt',
+    es: 'Habilidad entre categorías — bloqueada',
+  },
+  'home.overall.lockedBody': {
+    en: 'A cross-category number needs at least {required} qualified categories. {counted} qualifies today, so none is computed — an average over a single category would just be that category’s table under a grander name.',
+    de: 'Eine kategorienübergreifende Zahl braucht mindestens {required} qualifizierte Kategorien. Heute qualifiziert sich {counted}, deshalb wird keine berechnet – ein Mittelwert über eine Kategorie wäre nur deren Tabelle mit größerem Etikett.',
+    es: 'Una cifra entre categorías necesita al menos {required} categorías cualificadas. Hoy se cualifica {counted}, así que no se calcula ninguna: un promedio sobre una sola categoría sería su propia tabla con un nombre más grande.',
+  },
+  'home.overall.title': {
+    en: 'Cross-category skill ({counted} of {total} categories)',
+    de: 'Kategorienübergreifender Skill ({counted} von {total} Kategorien)',
+    es: 'Habilidad entre categorías ({counted} de {total} categorías)',
+  },
+  'home.overall.rule': {
+    en: 'A category qualifies with: real data, a clean integrity check, at least {minResolved} resolved events, at least {minModels} models scored on at least {minCoverage}% of the shared events, and a reference written down beforehand.',
+    de: 'Eine Kategorie qualifiziert sich mit: echten Daten, bestandener Integritätsprüfung, mindestens {minResolved} aufgelösten Ereignissen, mindestens {minModels} Modellen mit Wertung auf mindestens {minCoverage} % der gemeinsamen Ereignisse und einer vorab festgeschriebenen Referenz.',
+    es: 'Una categoría se cualifica con: datos reales, integridad correcta, al menos {minResolved} eventos resueltos, al menos {minModels} modelos puntuados en al menos el {minCoverage} % de los eventos comunes y una referencia fijada de antemano.',
+  },
+  'home.overall.reasonHeading': {
+    en: 'Not qualified yet',
+    de: 'Noch nicht qualifiziert',
+    es: 'Aún no cualificadas',
+  },
+  'home.overall.reason.example-data': {
+    en: 'sample data',
+    de: 'Beispieldaten',
+    es: 'datos de muestra',
+  },
+  'home.overall.reason.integrity': {
+    en: 'integrity check failed',
+    de: 'Integritätsprüfung fehlgeschlagen',
+    es: 'falló la integridad',
+  },
+  'home.overall.reason.too-few-resolved': {
+    en: 'only {resolved} resolved events',
+    de: 'nur {resolved} aufgelöste Ereignisse',
+    es: 'solo {resolved} eventos resueltos',
+  },
+  'home.overall.reason.no-predictions': {
+    en: 'no predictions committed',
+    de: 'noch keine Vorhersagen abgegeben',
+    es: 'sin predicciones enviadas',
+  },
+  'home.overall.reason.no-reference': {
+    en: 'no reference written down',
+    de: 'keine Referenz festgeschrieben',
+    es: 'sin referencia fijada',
+  },
+  'home.overall.reason.too-few-models': {
+    en: 'too few models scored on the shared events',
+    de: 'zu wenige Modelle auf den gemeinsamen Ereignissen gewertet',
+    es: 'pocos modelos puntuados en los eventos comunes',
+  },
+  'home.overall.colSkill': {
+    en: 'Skill (geometric)',
+    de: 'Skill (geometrisch)',
+    es: 'Habilidad (geométrica)',
+  },
+  'home.overall.colMeanRank': {
+    en: 'Mean rank (0 = always first)',
+    de: 'Mittlerer Rang (0 = immer Erster)',
+    es: 'Rango medio (0 = siempre primero)',
+  },
+  'home.overall.colCategories': { en: 'Categories', de: 'Kategorien', es: 'Categorías' },
+  'home.overall.formula': {
+    en: 'skill = 1 − exp(mean(ln(loss_model / loss_reference))), each category counted once',
+    de: 'Skill = 1 − exp(Mittel(ln(Verlust_Modell / Verlust_Referenz))), jede Kategorie zählt einmal',
+    es: 'habilidad = 1 − exp(media(ln(pérdida_modelo / pérdida_referencia))), cada categoría cuenta una vez',
+  },
+  'home.overall.weighting': {
+    en: 'Equal weight per category is a choice, not a statistic: 20 crypto days count as much as 104 World Cup matches. The per-category values are published so you can reweight them yourself.',
+    de: 'Gleiches Gewicht je Kategorie ist eine Entscheidung, keine Statistik: 20 Krypto-Tage zählen so viel wie 104 WM-Spiele. Die Werte je Kategorie sind veröffentlicht, damit man selbst umgewichten kann.',
+    es: 'El mismo peso por categoría es una decisión, no una estadística: 20 días de cripto cuentan igual que 104 partidos del Mundial. Los valores por categoría se publican para que puedas reponderarlos.',
+  },
+  'home.overall.clamped': { en: 'capped', de: 'geklemmt', es: 'limitado' },
+  'home.overall.clampWarning': {
+    en: '{count} cells were capped — read the skill column as a lower bound on the gap.',
+    de: '{count} Zellen wurden geklemmt – lies die Skill-Spalte als Untergrenze des Abstands.',
+    es: '{count} celdas se limitaron: lee la columna de habilidad como una cota inferior de la diferencia.',
+  },
+  'home.overall.missingCategory': {
+    en: 'no rank — did not compete in every qualified category',
+    de: 'kein Rang – nicht in jeder qualifizierten Kategorie angetreten',
+    es: 'sin rango — no compitió en todas las categorías cualificadas',
+  },
+  'home.overall.earlyAccessHeading': {
+    en: 'Early access — listed separately, values provisional',
+    de: 'Vorab-Zugang – separat geführt, Werte vorläufig',
+    es: 'Acceso anticipado — aparte, valores provisionales',
+  },
+
+  /* --- Startseite: Belege --- */
+  'home.proof.heading': { en: 'Receipts', de: 'Belege', es: 'Comprobantes' },
+  'home.proof.attestedNone': {
+    en: '{attested} of {total} scored predictions carry an independent commit proof. The completed round was imported as a single snapshot, so its timestamps are self-reported by the runner — which is why it says {attested} here and not something flattering. The first round whose commit predates its events locks {nextLock} UTC.',
+    de: '{attested} von {total} gewerteten Vorhersagen tragen einen unabhängigen Commit-Beweis. Die abgeschlossene Runde wurde als einzelner Schnappschuss übernommen, ihre Zeitstempel stammen also vom Runner selbst – deshalb steht hier {attested} und keine schönere Zahl. Die erste Runde, deren Commit vor ihren Ereignissen liegt, schließt {nextLock} UTC.',
+    es: '{attested} de {total} predicciones puntuadas tienen prueba de commit independiente. La ronda completada se importó como una única instantánea, así que sus marcas de tiempo las declara el propio ejecutor: por eso aquí figura {attested} y no una cifra más halagadora. La primera ronda cuyo commit precede a sus eventos cierra el {nextLock} UTC.',
+  },
+  'home.proof.leadTime': {
+    en: 'Lead time across {count} predictions: median {median}, tenth percentile {p10}, minimum {min}. {under24} were committed less than 24 hours before their event.',
+    de: 'Vorlaufzeit über {count} Vorhersagen: Median {median}, zehntes Perzentil {p10}, Minimum {min}. {under24} wurden weniger als 24 Stunden vor dem Ereignis abgegeben.',
+    es: 'Antelación en {count} predicciones: mediana {median}, percentil diez {p10}, mínimo {min}. {under24} se enviaron menos de 24 horas antes de su evento.',
+  },
+  'home.proof.batches': {
+    en: 'Those {count} predictions carry {batches} distinct submission timestamps — they were filed in batches, not one by one.',
+    de: 'Diese {count} Vorhersagen tragen {batches} verschiedene Abgabezeitpunkte – sie wurden in Stapeln eingereicht, nicht einzeln.',
+    es: 'Esas {count} predicciones tienen {batches} marcas de envío distintas: se registraron por lotes, no una a una.',
+  },
+  'home.proof.release': {
+    en: 'Contamination is ruled out by construction: every ranked model was published before the first scored event — {days} days between the newest release ({model}, {releaseDate}) and the first event ({firstEvent} UTC). The outcomes did not exist when these models were trained.',
+    de: 'Kontamination ist konstruktiv ausgeschlossen: Jedes gerankte Modell erschien vor dem ersten gewerteten Ereignis – {days} Tage zwischen der jüngsten Veröffentlichung ({model}, {releaseDate}) und dem ersten Ereignis ({firstEvent} UTC). Die Ausgänge existierten beim Training dieser Modelle nicht.',
+    es: 'La contaminación queda excluida por construcción: todo modelo clasificado se publicó antes del primer evento puntuado — {days} días entre el lanzamiento más reciente ({model}, {releaseDate}) y el primer evento ({firstEvent} UTC). Los resultados no existían cuando se entrenaron estos modelos.',
+  },
+  'home.proof.releaseExcluded': {
+    en: 'Excludes {count} participant without a public release date.',
+    de: 'Ohne {count} Teilnehmer ohne öffentliches Erscheinungsdatum.',
+    es: 'Excluye {count} participante sin fecha de lanzamiento pública.',
+  },
+  'home.proof.harness': {
+    en: 'One prompt template for every model, version {version}. The exact wording is on the methodology page.',
+    de: 'Ein Prompt-Template für jedes Modell, Version {version}. Der genaue Wortlaut steht auf der Methodikseite.',
+    es: 'Una única plantilla de prompt para cada modelo, versión {version}. El texto exacto está en la página de metodología.',
+  },
+  'home.proof.verifyHeading': {
+    en: 'Check one prediction yourself',
+    de: 'Eine Vorhersage selbst nachprüfen',
+    es: 'Comprueba una predicción tú mismo',
+  },
+  'home.proof.verifyEvent': { en: 'event', de: 'Ereignis', es: 'evento' },
+  'home.proof.verifyPrediction': { en: 'prediction', de: 'Vorhersage', es: 'predicción' },
+  'home.proof.verifyOutcome': { en: 'outcome', de: 'Ergebnis', es: 'resultado' },
+  'home.proof.verifyRecorded': {
+    en: 'recorded {date} UTC, {lead} before the event',
+    de: 'festgehalten {date} UTC, {lead} vor dem Ereignis',
+    es: 'registrada el {date} UTC, {lead} antes del evento',
+  },
+  'home.proof.verifyCommand': {
+    en: 'Every prediction file lives in a public repository. This command prints when its contents first appeared:',
+    de: 'Jede Vorhersage-Datei liegt in einem öffentlichen Repository. Dieser Befehl zeigt, wann ihr Inhalt zuerst auftauchte:',
+    es: 'Cada archivo de predicciones está en un repositorio público. Este comando muestra cuándo apareció su contenido:',
+  },
+  'home.proof.citeHeading': { en: 'How to cite', de: 'Zitieren', es: 'Cómo citar' },
+  'home.proof.cite': {
+    en: 'FutureBench, {domain} — {category} subset, {resolved} resolved events, data as of {date} UTC.',
+    de: 'FutureBench, {domain} – Teilmenge {category}, {resolved} aufgelöste Ereignisse, Datenstand {date} UTC.',
+    es: 'FutureBench, {domain} — subconjunto {category}, {resolved} eventos resueltos, datos a {date} UTC.',
+  },
+  'home.proof.earlyAccess': {
+    en: 'Labs can have an unreleased model scored: the row stays hidden until you ship it, results are published once the model is public — or not at all — and the harness does not change for you.',
+    de: 'Labore können ein unveröffentlichtes Modell werten lassen: Die Zeile bleibt verborgen, bis es erscheint, Ergebnisse werden veröffentlicht, sobald das Modell öffentlich ist – oder gar nicht – und das Harness ändert sich für niemanden.',
+    es: 'Los laboratorios pueden evaluar un modelo no publicado: la fila permanece oculta hasta su lanzamiento, los resultados se publican cuando el modelo sea público — o no se publican — y el protocolo no cambia para nadie.',
+  },
+
+  /* --- Startseite: Teilnehmerfeld und Grenzen --- */
+  'home.field.heading': { en: 'The field', de: 'Das Teilnehmerfeld', es: 'Los participantes' },
+  'home.field.colVersion': {
+    en: 'API identifier',
+    de: 'API-Kennung',
+    es: 'Identificador de API',
+  },
+  'home.field.colReleased': { en: 'Released', de: 'Erschienen', es: 'Lanzado' },
+  'home.field.colScored': {
+    en: 'Scored events',
+    de: 'Gewertete Ereignisse',
+    es: 'Eventos puntuados',
+  },
+  'home.field.earlyAccessHeading': {
+    en: 'Early access',
+    de: 'Vorab-Zugang',
+    es: 'Acceso anticipado',
+  },
+  'home.field.referenceHeading': {
+    en: 'Reference participants',
+    de: 'Referenz-Teilnehmer',
+    es: 'Participantes de referencia',
+  },
+  'home.field.exampleEntry': {
+    en: 'example entry',
+    de: 'Beispiel-Eintrag',
+    es: 'entrada de ejemplo',
+  },
+  'home.field.exampleEntryTitle': {
+    en: 'A placeholder showing how an unreleased model would appear. It has no predictions and enters no figure.',
+    de: 'Ein Platzhalter, der zeigt, wie ein unveröffentlichtes Modell erscheinen würde. Er hat keine Vorhersagen und zählt in keine Zahl.',
+    es: 'Un marcador que muestra cómo aparecería un modelo no publicado. No tiene predicciones ni entra en ninguna cifra.',
+  },
+  'home.limits.heading': {
+    en: 'What this does not claim',
+    de: 'Was das nicht behauptet',
+    es: 'Lo que esto no afirma',
+  },
+  'home.limits.mix': {
+    en: '{scored} of {total} categories carry real results, {armed} are connected to real events but hold no model answers yet, and {example} run on sample data.',
+    de: '{scored} von {total} Kategorien tragen echte Ergebnisse, {armed} hängen an echten Ereignissen, haben aber noch keine Modellantworten, und {example} laufen auf Beispieldaten.',
+    es: '{scored} de {total} categorías tienen resultados reales, {armed} están conectadas a eventos reales pero aún sin respuestas de modelos, y {example} funcionan con datos de muestra.',
+  },
+  'home.limits.correlation': {
+    en: 'Events are not independent, and neither are the answers: {identical} of {pairs} model pairs predicted the identical outcome ({share}). The effective sample is smaller than the event count suggests.',
+    de: 'Ereignisse sind nicht unabhängig, die Antworten auch nicht: {identical} von {pairs} Modellpaaren tippten dasselbe Ergebnis ({share}). Die effektive Stichprobe ist kleiner, als die Ereigniszahl vermuten lässt.',
+    es: 'Los eventos no son independientes, y tampoco las respuestas: {identical} de {pairs} pares de modelos predijeron el mismo resultado ({share}). La muestra efectiva es menor de lo que sugiere el número de eventos.',
+  },
+  'home.limits.pipeline': {
+    en: 'This measures a deployed product, not a bare model: web search, prompt, sampling and run time all count. There is one answer per model and event, so model variance cannot be separated from event difficulty.',
+    de: 'Gemessen wird ein ausgeliefertes Produkt, nicht ein nacktes Modell: Websuche, Prompt, Sampling und Laufzeit zählen mit. Es gibt eine Antwort je Modell und Ereignis, deshalb ist Modellstreuung nicht von Ereignisschwere zu trennen.',
+    es: 'Se mide un producto desplegado, no un modelo desnudo: búsqueda web, prompt, muestreo y tiempo de ejecución cuentan. Hay una respuesta por modelo y evento, así que la varianza del modelo no puede separarse de la dificultad del evento.',
+  },
+  'home.limits.link': {
+    en: 'Full limitations →',
+    de: 'Alle Einschränkungen →',
+    es: 'Todas las limitaciones →',
+  },
+
+  /* --- Startseite: Datenstand --- */
+  'home.footer.dataAs': {
+    en: 'Data as of {date} UTC · {live} live categories, {example} sample · {events} events tracked · page built {built} UTC',
+    de: 'Datenstand {date} UTC · {live} echte Kategorien, {example} Beispiel · {events} Ereignisse erfasst · Seite gebaut {built} UTC',
+    es: 'Datos a {date} UTC · {live} categorías reales, {example} de muestra · {events} eventos registrados · página generada {built} UTC',
   },
 
   /* --- Kategorieseite --- */
@@ -591,10 +1018,12 @@ const MESSAGES = {
 
   /* --- Fusszeile --- */
   'footer.projectBy': { en: 'A project by', de: 'Ein Projekt von', es: 'Un proyecto de' },
+  // Zählt sich selbst aus den Daten und verschwindet, sobald keine
+  // Beispielkategorie mehr existiert – kein handgepflegter Stand, der veraltet.
   'footer.prototypeNote': {
-    en: 'Prototype note: only the “FIFA World Cup 2026” category contains real data. Stock index, elections and mixed sports are sample data used to build the interface.',
-    de: 'Prototyp-Hinweis: Nur die Kategorie „Fußball-WM 2026" enthält echte Daten. Aktienindex, Wahlen und Sport-Mix sind Beispieldaten zum Aufbau der Oberfläche.',
-    es: 'Nota de prototipo: solo la categoría «Mundial 2026» contiene datos reales. Índice bursátil, elecciones y deportes varios son datos de muestra usados para construir la interfaz.',
+    en: '{example} of {total} categories still run on sample data and are marked as such. They are excluded from every figure on this site.',
+    de: '{example} von {total} Kategorien laufen noch auf Beispieldaten und sind so gekennzeichnet. Sie zählen in keine Zahl dieser Seite.',
+    es: '{example} de {total} categorías siguen con datos de muestra y están marcadas como tales. Quedan fuera de todas las cifras de este sitio.',
   },
 
   /* --- Meta / SEO --- */

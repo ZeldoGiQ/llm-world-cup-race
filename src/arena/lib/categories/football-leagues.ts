@@ -24,6 +24,7 @@ function meta(event: ArenaEvent): LeagueMetadata {
 
 export const footballLeagues: CategoryDescriptor = {
   id: 'football-leagues',
+  dataSource: 'live',
   label: {
     en: 'Football leagues',
     de: 'Fußball-Ligen',

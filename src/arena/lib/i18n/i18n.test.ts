@@ -10,6 +10,7 @@
 import { describe, expect, it } from 'vitest';
 import '../plugins';
 import { categories } from '../categories/index';
+import { references } from '../references/index';
 import { metrics } from '../metrics/index';
 import { predictionTypes } from '../prediction-types/index';
 import { groupName, stageName, teamName } from './football-terms';
@@ -278,5 +279,69 @@ describe('Fußball-Vokabular', () => {
 
   it('macht unbekannte Phasen lesbar', () => {
     expect(stageName('SOME_NEW_STAGE', 'en')).toBe('Some new stage');
+  });
+});
+
+describe('Ehrlichkeitsregeln der Startseite', () => {
+  const homeKeys = (Object.keys(__messages) as MessageKey[]).filter((key) =>
+    key.startsWith('home.'),
+  );
+
+  it('behauptet nirgends einen Sieger ohne Unsicherheitsangabe', () => {
+    /*
+     * Die schärfste Regel der Seite. Groks Vorsprung von sechs Punkten liegt im
+     * Messfehler – das 95-Prozent-Intervall der Differenz enthält die Null. Wer
+     * daraus „gewinnt" macht, behauptet mehr als die Daten tragen, und genau das
+     * würde die Zitierfähigkeit kosten. „Führt" plus Intervall ist erlaubt.
+     */
+    const forbidden = [
+      'wins',
+      'winner',
+      'the best model',
+      'best-performing',
+      'gewinnt',
+      'sieger',
+      'bestes modell',
+      'gana',
+      'ganador',
+      'mejor modelo',
+    ];
+    for (const key of homeKeys) {
+      for (const [locale, text] of Object.entries(__messages[key])) {
+        const lower = text.toLowerCase();
+        for (const word of forbidden) {
+          expect(lower, `${key} (${locale}) enthält "${word}"`).not.toContain(word);
+        }
+      }
+    }
+  });
+
+  it('nennt bei der Gesamtwertung immer die Zahl der Kategorien', () => {
+    // Sonst stünde „kategorienübergreifend" ohne Angabe, worüber gemittelt wurde.
+    for (const locale of LOCALES) {
+      const title = __messages['home.overall.title'][locale];
+      expect(title).toContain('{counted}');
+      expect(title).toContain('{total}');
+    }
+  });
+
+  it('führt zählabhängige Kategorietexte als Singular und Plural', () => {
+    const translate = t('de');
+    expect(translate.plural('home.cat.pending', 1)).toContain('Ereignis offen');
+    expect(translate.plural('home.cat.pending', 5)).toContain('Ereignisse offen');
+  });
+
+  it('hat für jede Referenzregel Label und Begründung in allen Sprachen', () => {
+    for (const rule of references.list()) {
+      for (const locale of LOCALES) {
+        expect(rule.label[locale], `${rule.id}.label[${locale}]`).toBeTruthy();
+        expect(rule.note[locale], `${rule.id}.note[${locale}]`).toBeTruthy();
+      }
+      // Eine nachträglich festgeschriebene Regel muss das im Text offenlegen.
+      if (rule.retroactive) {
+        expect(rule.note.en.toLowerCase()).toMatch(/after|retroactive/);
+        expect(rule.note.de.toLowerCase()).toMatch(/nach|nachträglich/);
+      }
+    }
   });
 });

@@ -30,6 +30,7 @@ const TOPIC_LABELS: Record<string, Record<Locale, string>> = {
 
 export const elections: CategoryDescriptor = {
   id: 'elections',
+  dataSource: 'example',
   label: { en: 'Elections & politics', de: 'Wahlen & Politik', es: 'Elecciones y política' },
   blurb: {
     en: 'Yes/no questions on elections and political events. Models state a probability, and scoring uses the Brier score and log loss, which reward honest uncertainty and penalise overconfidence.',

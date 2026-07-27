@@ -20,6 +20,9 @@ import './metrics/error';
 import './metrics/probabilistic';
 import './metrics/skill';
 
+// Referenzregeln (Bezugslinie ohne Referenz-Teilnehmer)
+import './references/constant-scoreline';
+
 // Kategorien
 import './categories/football-worldcup';
 import './categories/football-leagues';
@@ -31,3 +34,4 @@ import './categories/sports-mixed';
 export { predictionTypes } from './prediction-types/index';
 export { metrics, metricsFor } from './metrics/index';
 export { categories } from './categories/index';
+export { references } from './references/index';

@@ -14,6 +14,8 @@ import '@fontsource-variable/fraunces';
 import '@fontsource-variable/jetbrains-mono';
 import '../../styles/global.css';
 import '../styles/arena.css';
+import '../lib/plugins';
+import { countCategoryDataSources } from '../lib/home/home-data';
 import {
   arenaPath,
   arenaUrl,
@@ -45,6 +47,10 @@ const pageDescription = description ?? translate('meta.siteDescription');
 // URLs. Konsequent ohne abschliessenden Schrägstrich, damit sich canonical und
 // hreflang auf genau eine Schreibweise festlegen.
 const currentUrl = arenaUrl(locale, sub);
+
+// Der Hinweis auf Beispieldaten zählt sich selbst aus den Daten und
+// verschwindet, sobald keine Beispielkategorie mehr existiert.
+const dataSources = countCategoryDataSources();
 ---
 
 <!doctype html>
@@ -165,7 +171,16 @@ const currentUrl = arenaUrl(locale, sub);
               target="_blank">ZELDOgiq</a
             >
           </p>
-          <p>{translate('footer.prototypeNote')}</p>
+          {
+            dataSources.example > 0 && (
+              <p>
+                {translate('footer.prototypeNote', {
+                  example: dataSources.example,
+                  total: dataSources.total,
+                })}
+              </p>
+            )
+          }
         </div>
       </footer>
     </div>

@@ -19,6 +19,7 @@ interface MixedMetadata {
 
 export const sportsMixed: CategoryDescriptor = {
   id: 'sports-mixed',
+  dataSource: 'example',
   label: { en: 'Mixed sports', de: 'Sport-Mix', es: 'Deportes varios' },
   blurb: {
     en: 'Fixtures from several European leagues. Same prediction format as the World Cup, but with its own metric selection and live operation including open fixtures.',
