@@ -161,10 +161,22 @@ async function main(): Promise<void> {
         shifted += reconciled.shifted;
         voided += reconciled.voided;
 
-        // Referenz-Teilnehmer sofort mit anlegen: nach dem Lock ist das nicht
-        // mehr erlaubt, und ohne Baseline bleibt der Skill-Score dauerhaft leer.
         const newDrafts = drafts.filter((d) => !existingIds.has(`${d.category} ${d.id}`));
-        const baselines = await writeRandomWalkPredictions(newDrafts, runId);
+
+        /*
+         * Referenz-Teilnehmer schreiben.
+         *
+         * Bewusst für ALLE noch offenen Events, nicht nur für die neu angelegten:
+         * Ein Event, das entstand, bevor die Baseline-Modellzeile existierte,
+         * bekäme sonst nie eine Referenz – und nach seinem Lock ist das nicht mehr
+         * nachholbar, weil dann keine Vorhersage mehr entstehen darf. Solange der
+         * Lock in der Zukunft liegt, ist das Nachtragen dagegen völlig legitim:
+         * der Random-Walk-Wert steht seit dem Anlegen fest, er wird hier nur
+         * niedergeschrieben. Bestehende Zeilen bleiben unberührt (Predictions sind
+         * unveränderlich), doppeltes Schreiben ist also folgenlos.
+         */
+        const stillOpen = drafts.filter((d) => Date.parse(d.utcDate) > Date.now());
+        const baselines = await writeRandomWalkPredictions(stillOpen, runId);
 
         const fresh = newDrafts.length;
         stats[feed.id] = { new: fresh, known: existingIds.size, baselines, ...reconciled };
