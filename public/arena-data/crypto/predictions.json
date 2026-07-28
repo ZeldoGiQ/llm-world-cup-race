@@ -104,6 +104,13 @@
       }
     },
     "cg-btc-2026-07-30": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 63859
+        },
+        "createdAt": "2026-07-28T21:32:38.658Z"
+      },
       "claude": {
         "value": {
           "kind": "numeric",
@@ -155,6 +162,13 @@
       }
     },
     "cg-eth-2026-07-30": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 1918.23
+        },
+        "createdAt": "2026-07-28T21:32:38.658Z"
+      },
       "claude": {
         "value": {
           "kind": "numeric",
