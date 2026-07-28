@@ -2,6 +2,13 @@
   "category": "crypto",
   "predictions": {
     "cg-btc-2026-07-29": {
+      "claude": {
+        "value": {
+          "kind": "numeric",
+          "value": 65187
+        },
+        "createdAt": "2026-07-28T17:45:43.219Z"
+      },
       "deepseek": {
         "value": {
           "kind": "numeric",
