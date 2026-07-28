@@ -8,10 +8,32 @@
  * Werte verschiedener Versionen werden nie gemischt.
  */
 
-export const HARNESS_VERSION = 'HARNESS_V1';
+/**
+ * HARNESS_V2 – ohne Abruf externer Quellen.
+ *
+ * V1 sah vor, dass jedes Modell mit seiner anbietereigenen Web-Suche
+ * recherchiert. Gemessen worden wäre damit das ausgelieferte Produkt inklusive
+ * Suchwerkzeug – mit dem Nachteil, dass die Suchqualität je Anbieter
+ * unterschiedlich und unkontrolliert ist.
+ *
+ * V2 dreht das um: Alle Modelle laufen über denselben Zugang ohne Suchwerkzeug
+ * und bekommen damit exakt dieselben Informationen – die Frage, die
+ * Auflösungsregel und den Kontext, den der Feed mitliefert (etwa den letzten
+ * bekannten Kurs). Gemessen wird dadurch enger, aber sauberer vergleichbar:
+ * Wie gut prognostiziert ein Modell aus Weltwissen und einer identischen
+ * Kurzinformation?
+ *
+ * V1 wurde nie ausgeführt – es existiert keine einzige Prediction unter dieser
+ * Version. Werte verschiedener Harness-Versionen werden grundsätzlich nie
+ * gemischt; die Version steht in der Provenance jeder Prediction.
+ */
+export const HARNESS_VERSION = 'HARNESS_V2';
+
+/** Steht kein Suchwerkzeug zur Verfügung, sagt der Prompt das ausdrücklich. */
+export const HARNESS_RETRIEVAL = false;
 
 export const HARNESS_LIMITS = {
-  /** Obergrenze Such-/Tool-Aufrufe je Prediction (wo der Provider es zulässt). */
+  /** Obergrenze Such-/Tool-Aufrufe je Prediction (in V2 ohne Wirkung, siehe oben). */
   maxToolCalls: 20,
   /** Obergrenze Output-Tokens je Antwort (Modell-Spalte kann enger sein). */
   maxOutputTokens: 16_000,

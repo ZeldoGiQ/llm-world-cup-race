@@ -92,8 +92,12 @@ describe('Repair-Prompt', () => {
   it('verlangt nur ein Format, keine inhaltliche Änderung', () => {
     const repair = buildRepairPrompt('binary', 'Kein parsbarer JSON-Block in der Antwort.');
     expect(repair).toContain('unchanged in substance');
-    expect(repair).toContain('No new research needed');
     expect(repair).toContain('"kind": "binary"');
+    // Der Repair-Turn darf nur das Format einfordern. Stünde hier eine
+    // Einladung, den Wert zu überdenken, wäre er ein zweiter Versuch – und
+    // Modelle mit kaputtem Format hätten einen Vorteil gegenüber allen anderen.
+    expect(repair.toLowerCase()).not.toContain('reconsider');
+    expect(repair.toLowerCase()).not.toContain('improve');
   });
 });
 

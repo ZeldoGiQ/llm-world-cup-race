@@ -1,5 +1,5 @@
 /**
- * HARNESS_V1 – das eine Prompt-Template für ALLE Modelle.
+ * HARNESS_V2 – das eine Prompt-Template für ALLE Modelle, ohne Recherche.
  *
  * H1 Ein Template, versioniert: Der Text steht hier und nur hier; der Runner
  *    hasht den fertigen Prompt (SHA-256) und speichert den Hash je Prediction.
@@ -12,13 +12,20 @@
  *    Modell, das die Regel nicht kennt, wird für Unwissen bestraft, nicht für
  *    schlechte Prognosen.
  *
+ * V2 nimmt allen Modellen die Web-Suche und sagt ihnen das ausdrücklich. Damit
+ * arbeiten alle auf exakt derselben Informationsgrundlage: Frage,
+ * Auflösungsregel und der Kontextblock des Feeds. Das Feld `sources` ist
+ * bewusst aus den Schemata verschwunden – ohne Abrufmöglichkeit wäre es eine
+ * Einladung, URLs zu erfinden, und erfundene Quellen im öffentlichen Protokoll
+ * wären schlimmer als gar keine.
+ *
  * Englisch, weil es die gemeinsame Sprache aller Anbieter ist und Übersetzungen
  * die Vergleichbarkeit brechen würden. Die Methodik-Seite zeigt den Volltext.
  */
 // Explizite .ts-Endung: so kann derselbe Modulpfad vom Frontend (Vite,
 // allowImportingTsExtensions) UND vom Backend-Runner (node
 // --experimental-strip-types verlangt exakte Specifier) geladen werden.
-import { HARNESS_LIMITS, HARNESS_VERSION } from './config.ts';
+import { HARNESS_VERSION } from './config.ts';
 
 export type PredictionTypeId = 'scoreline' | 'numeric' | 'binary';
 
@@ -26,10 +33,13 @@ export const SYSTEM_PROMPT = `You are competing in FutureBench, a public predict
 
 Real events are scored publicly. Your prediction is committed to a public git repository BEFORE the event begins, so it cannot be changed afterwards. Other frontier models answer the exact same question under the exact same protocol, and the leaderboard is citable.
 
+You have NO access to the internet, to search, or to any tool. Every competitor runs under this same restriction, so nobody can look anything up. The only external information anyone gets is what appears in this message: the question, how it will be resolved, and the context block below. Everything else must come from what you already know.
+
 How to compete well:
-- Research first. Use your web search capability to find the current state of the world: latest results, form, injuries, prices, polls, news, official schedules. Your training data is older than this question.
-- Prefer primary and recent sources over recollection. If sources disagree, weigh recency and reliability.
-- Then commit to the single answer that maximises your expected score under the stated scoring rule.
+- Your knowledge has a cutoff and this event lies after it. Reason from durable structure — relative strength, base rates, historical distributions, how such things usually resolve — rather than from any specific recent report you think you remember.
+- Use the context block as the anchor when it gives you one. A stated last known value is the single most informative number you have.
+- Do not invent sources, headlines or figures to justify an answer. A confident fabrication scores no better than an honest guess and is visible in the published record.
+- Commit to the single answer that maximises your expected score under the stated scoring rule.
 - Be calibrated, not brave. Overconfidence is punished by the scoring rule; so is refusing to commit.
 - Answer even when uncertain. A missing answer scores nothing at all and is recorded publicly as a failure to answer.
 
@@ -55,8 +65,7 @@ explicitly asks for the result after them.
 OUTPUT SCHEMA:
 {
   "prediction": { "kind": "scoreline", "home": <integer >= 0>, "away": <integer >= 0> },
-  "rationale": "<optional, max 500 characters>",
-  "sources": ["<optional, max 5 URLs you actually used>"]
+  "rationale": "<optional, max 500 characters>"
 }`,
 
   numeric: `PREDICTION TYPE: numeric (a single point estimate)
@@ -73,8 +82,7 @@ states. Give a plain number: no thousands separators, no currency symbols, no ra
 OUTPUT SCHEMA:
 {
   "prediction": { "kind": "numeric", "value": <number> },
-  "rationale": "<optional, max 500 characters>",
-  "sources": ["<optional, max 5 URLs you actually used>"]
+  "rationale": "<optional, max 500 characters>"
 }`,
 
   binary: `PREDICTION TYPE: binary (probability that the statement turns out TRUE)
@@ -85,13 +93,12 @@ accuracy at the 0.5 threshold as secondary metrics.
 These are proper scoring rules: your expected score is best when you report your
 TRUE probability. Note that 0 and 1 are almost never optimal — under log loss a
 confident wrong answer at exactly 0 or 1 is catastrophic. Do not round to 0.5 to
-play safe either; that discards the information you just researched.
+play safe either; that discards what you do know.
 
 OUTPUT SCHEMA:
 {
   "prediction": { "kind": "binary", "probability": <number between 0 and 1> },
-  "rationale": "<optional, max 500 characters>",
-  "sources": ["<optional, max 5 URLs you actually used>"]
+  "rationale": "<optional, max 500 characters>"
 }`,
 };
 
@@ -139,8 +146,8 @@ export function buildUserPrompt(event: PromptEvent): string {
     '',
     TYPE_BLOCKS[event.predictionType],
     '',
-    `PROTOCOL: ${HARNESS_VERSION}. You may make up to ${HARNESS_LIMITS.maxToolCalls} search or tool calls. ` +
-      `Answer within one reply. Research now, then commit.`,
+    `PROTOCOL: ${HARNESS_VERSION}. No search, no tools, no internet — for you and for every ` +
+      `other competitor alike. Answer within this one reply.`,
   );
 
   return lines.join('\n');
@@ -157,7 +164,7 @@ export function buildRepairPrompt(type: PredictionTypeId, problem: string): stri
   return [
     `Your previous reply could not be stored: ${problem}`,
     '',
-    'Reply again with your prediction, unchanged in substance. No new research needed.',
+    'Reply again with your prediction, unchanged in substance.',
     'Output exactly one fenced ```json block, nothing after it, matching this schema:',
     '',
     TYPE_BLOCKS[type].split('OUTPUT SCHEMA:')[1].trim(),

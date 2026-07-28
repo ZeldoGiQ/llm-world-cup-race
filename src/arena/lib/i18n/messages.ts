@@ -505,9 +505,9 @@ const MESSAGES = {
     es: 'Los eventos no son independientes, y tampoco las respuestas: {identical} de {pairs} pares de modelos predijeron el mismo resultado ({share}). La muestra efectiva es menor de lo que sugiere el número de eventos.',
   },
   'home.limits.pipeline': {
-    en: 'This measures a deployed product, not a bare model: web search, prompt, sampling and run time all count. There is one answer per model and event, so model variance cannot be separated from event difficulty.',
-    de: 'Gemessen wird ein ausgeliefertes Produkt, nicht ein nacktes Modell: Websuche, Prompt, Sampling und Laufzeit zählen mit. Es gibt eine Antwort je Modell und Ereignis, deshalb ist Modellstreuung nicht von Ereignisschwere zu trennen.',
-    es: 'Se mide un producto desplegado, no un modelo desnudo: búsqueda web, prompt, muestreo y tiempo de ejecución cuentan. Hay una respuesta por modelo y evento, así que la varianza del modelo no puede separarse de la dificultad del evento.',
+    en: 'This measures a model answering from what it already knows: no search, no browsing, no tools — only the question and a short context block. There is one answer per model and event, so model variance cannot be separated from event difficulty.',
+    de: 'Gemessen wird ein Modell, das aus dem antwortet, was es ohnehin weiß: keine Suche, kein Surfen, keine Werkzeuge – nur die Frage und ein kurzer Kontextblock. Es gibt eine Antwort je Modell und Ereignis, deshalb ist Modellstreuung nicht von Ereignisschwere zu trennen.',
+    es: 'Se mide un modelo que responde con lo que ya sabe: sin búsqueda, sin navegación, sin herramientas, solo la pregunta y un breve bloque de contexto. Hay una respuesta por modelo y evento, así que la varianza del modelo no puede separarse de la dificultad del evento.',
   },
   'home.limits.link': {
     en: 'Full limitations →',
@@ -801,9 +801,9 @@ const MESSAGES = {
     es: 'El protocolo de competición',
   },
   'methodology.harness.intro': {
-    en: 'FutureBench scores the deployed product, not the bare model — a model plus its provider-native research capability, under one identical protocol: same prompt, same time window, same validation, same retry budget. Nothing is ever backfilled, coerced, or reinterpreted after the lock.',
-    de: 'FutureBench bewertet das ausgelieferte Produkt, nicht das nackte Modell – ein Modell samt seiner anbietereigenen Recherchefähigkeit, unter einem identischen Protokoll: gleicher Prompt, gleiches Zeitfenster, gleiche Validierung, gleiches Wiederholungsbudget. Nach dem Lock wird nichts nachgereicht, nichts zurechtgebogen, nichts neu ausgelegt.',
-    es: 'FutureBench evalúa el producto desplegado, no el modelo desnudo: un modelo junto con su capacidad de investigación propia del proveedor, bajo un protocolo idéntico: mismo prompt, misma ventana temporal, misma validación, mismo presupuesto de reintentos. Después del cierre nada se añade, se ajusta ni se reinterpreta.',
+    en: 'FutureBench scores the deployed product, not the bare model — every model answering from what it already knows, under one identical protocol: same prompt, same information, same time window, same validation, same retry budget. No model may look anything up. Nothing is ever backfilled, coerced, or reinterpreted after the lock.',
+    de: 'FutureBench bewertet das ausgelieferte Produkt, nicht das nackte Modell – jedes Modell antwortet aus dem, was es ohnehin weiß, unter einem identischen Protokoll: gleicher Prompt, gleiche Informationen, gleiches Zeitfenster, gleiche Validierung, gleiches Wiederholungsbudget. Kein Modell darf etwas nachschlagen. Nach dem Lock wird nichts nachgereicht, nichts zurechtgebogen, nichts neu ausgelegt.',
+    es: 'FutureBench evalúa a cada modelo respondiendo con lo que ya sabe, bajo un protocolo idéntico: mismo prompt, misma información, misma ventana temporal, misma validación, mismo presupuesto de reintentos. Ningún modelo puede consultar nada. Después del cierre nada se añade, se ajusta ni se reinterpreta.',
   },
   'methodology.harness.oneTemplate.lead': {
     en: 'One versioned template.',
@@ -841,9 +841,9 @@ const MESSAGES = {
     es: 'Límites que aplica el ejecutor',
   },
   'methodology.harness.limit.toolCalls': {
-    en: 'search or tool calls per prediction',
-    de: 'Such- oder Werkzeugaufrufe je Vorhersage',
-    es: 'llamadas de búsqueda o herramientas por predicción',
+    en: 'tool calls per prediction (none available in this version)',
+    de: 'Werkzeugaufrufe je Vorhersage (in dieser Version keine verfügbar)',
+    es: 'llamadas a herramientas por predicción (ninguna en esta versión)',
   },
   'methodology.harness.limit.timeout': {
     en: 'minutes per attempt',
@@ -856,9 +856,9 @@ const MESSAGES = {
     es: 'reintentos ante errores de transporte',
   },
   'methodology.harness.limit.repairs': {
-    en: 'format repair turns (no new research)',
-    de: 'Format-Reparaturrunden (ohne neue Recherche)',
-    es: 'rondas de reparación de formato (sin nueva investigación)',
+    en: 'format repair turns (format only, never the value)',
+    de: 'Format-Reparaturrunden (nur Format, nie der Wert)',
+    es: 'rondas de reparación de formato (solo formato, nunca el valor)',
   },
   'methodology.harness.promptLabel': {
     en: 'System prompt, verbatim',
@@ -873,19 +873,19 @@ const MESSAGES = {
 
   /* --- Methodik: Recherche --- */
   'methodology.search.heading': {
-    en: 'Research and web search',
-    de: 'Recherche und Web-Suche',
-    es: 'Investigación y búsqueda web',
+    en: 'Information: what every model gets',
+    de: 'Informationsstand: was jedes Modell bekommt',
+    es: 'Información: lo que recibe cada modelo',
   },
   'methodology.search.p1': {
-    en: 'Models research on their own. Each one uses its provider’s native web search, and each is told that its training data is older than the question. Search depth, index quality and paywalls therefore differ between providers.',
-    de: 'Die Modelle recherchieren selbst. Jedes nutzt die Web-Suche seines Anbieters, und jedes erfährt, dass seine Trainingsdaten älter sind als die Frage. Suchtiefe, Indexqualität und Bezahlschranken unterscheiden sich damit zwischen den Anbietern.',
-    es: 'Los modelos investigan por su cuenta. Cada uno usa la búsqueda web nativa de su proveedor y a cada uno se le indica que sus datos de entrenamiento son anteriores a la pregunta. La profundidad de búsqueda, la calidad del índice y los muros de pago difieren entre proveedores.',
+    en: 'No model can search, browse or call a tool, and every model is told so plainly. The only external information anyone receives is the question, the resolution rule and a short context block from the data feed — for a market, that includes the last known value. Everything else has to come from what the model already knows.',
+    de: 'Kein Modell kann suchen, surfen oder ein Werkzeug aufrufen, und jedes erfährt das ausdrücklich. Die einzige Information von außen sind die Frage, die Auflösungsregel und ein kurzer Kontextblock aus dem Datenfeed – bei einem Markt gehört der letzte bekannte Kurs dazu. Alles Weitere muss aus dem kommen, was das Modell ohnehin weiß.',
+    es: 'Ningún modelo puede buscar, navegar ni usar herramientas, y a todos se les dice con claridad. La única información externa que recibe cualquiera es la pregunta, la regla de resolución y un breve bloque de contexto del feed de datos: en un mercado, eso incluye el último valor conocido. Todo lo demás debe salir de lo que el modelo ya sabe.',
   },
   'methodology.search.p2': {
-    en: 'That is a deliberate choice, not an oversight: a research tool is part of what a lab ships. We do not equalise it, we document it — the number of search calls is recorded with every prediction.',
-    de: 'Das ist eine bewusste Entscheidung, kein Versäumnis: Ein Recherchewerkzeug gehört zu dem, was ein Labor ausliefert. Wir gleichen es nicht an, wir dokumentieren es – die Zahl der Suchaufrufe wird zu jeder Vorhersage erfasst.',
-    es: 'Es una decisión deliberada, no un descuido: una herramienta de investigación forma parte de lo que un laboratorio entrega. No la igualamos, la documentamos: el número de llamadas de búsqueda se registra con cada predicción.',
+    en: 'This is a deliberate narrowing. Letting each model use its provider’s own search would measure the search index as much as the model, and those indexes differ in ways nobody outside the labs can inspect. Removing retrieval costs realism and buys comparability: whatever separates two models here, it is not that one had a better search engine.',
+    de: 'Das ist eine bewusste Verengung. Ließe man jedes Modell die Suche seines Anbieters nutzen, würde man den Suchindex mitmessen – und diese Indizes unterscheiden sich auf eine Weise, die außerhalb der Labore niemand prüfen kann. Der Verzicht auf Recherche kostet Realitätsnähe und kauft Vergleichbarkeit: Was zwei Modelle hier trennt, ist jedenfalls nicht die bessere Suchmaschine.',
+    es: 'Es un estrechamiento deliberado. Permitir que cada modelo use la búsqueda de su proveedor mediría el índice de búsqueda tanto como al modelo, y esos índices difieren de formas que nadie fuera de los laboratorios puede inspeccionar. Renunciar a la recuperación cuesta realismo y compra comparabilidad: lo que separa a dos modelos aquí no es un buscador mejor.',
   },
   'methodology.search.p3': {
     en: 'Sampling settings are left at each provider’s default. Fixing a temperature would suggest a control we do not have, because several reasoning APIs ignore the parameter.',

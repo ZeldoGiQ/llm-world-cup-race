@@ -10,7 +10,12 @@
  */
 import { describe, expect, it } from 'vitest';
 import { buildPrompt } from '../lib/prompt.mts';
-import { buildRepairPrompt } from '../../../src/arena/lib/harness/prompt-template.ts';
+import { HARNESS_VERSION } from '../../../src/arena/lib/harness/config.ts';
+import {
+  buildRepairPrompt,
+  SYSTEM_PROMPT,
+  typeBlock,
+} from '../../../src/arena/lib/harness/prompt-template.ts';
 import { costUsd } from '../lib/budget.mts';
 import { ProviderError } from './types.mts';
 
@@ -36,8 +41,36 @@ describe('Repair-Turn', () => {
     expect(repairMessage).toContain('unchanged in substance');
   });
 
-  it('verlangt keine neue Recherche', () => {
-    expect(buildRepairPrompt('numeric', 'kein JSON')).toContain('No new research needed');
+  it('fordert dasselbe Schema wie der erste Versuch', () => {
+    expect(buildRepairPrompt('numeric', 'kein JSON')).toContain('"kind": "numeric"');
+  });
+});
+
+describe('HARNESS_V2: kein Abruf externer Quellen', () => {
+  it('sagt dem Modell ausdrücklich, dass es nichts nachschlagen kann', () => {
+    /*
+     * Entscheidend für die Vergleichbarkeit: Alle Modelle laufen ohne
+     * Suchwerkzeug. Wüsste ein Modell das nicht, würde es Recherche behaupten
+     * oder darauf warten – und die Antworten wären nicht mehr unter gleichen
+     * Bedingungen entstanden.
+     */
+    expect(SYSTEM_PROMPT).toContain('NO access to the internet');
+    expect(SYSTEM_PROMPT).toContain('Every competitor runs under this same restriction');
+    const prompt = buildPrompt(EVENT);
+    expect(prompt.user).toContain('No search, no tools, no internet');
+  });
+
+  it('fordert keine Quellenangaben an – ohne Abruf wären sie erfunden', () => {
+    for (const type of ['scoreline', 'numeric', 'binary'] as const) {
+      expect(typeBlock(type), `${type} verlangt noch sources`).not.toContain('"sources"');
+    }
+    expect(SYSTEM_PROMPT).toContain('Do not invent sources');
+  });
+
+  it('trägt die Versionskennung, unter der die Werte entstanden sind', () => {
+    // Werte verschiedener Harness-Versionen dürfen nie gemischt werden.
+    expect(HARNESS_VERSION).toBe('HARNESS_V2');
+    expect(buildPrompt(EVENT).user).toContain(HARNESS_VERSION);
   });
 });
 
