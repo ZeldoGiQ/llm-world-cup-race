@@ -6,7 +6,7 @@
  * Das steht als `search_mode` in der providers-Tabelle – ein neuer Anbieter
  * braucht deshalb nur eine Zeile im Admin, keinen Code.
  */
-import { num, postJson, type CallRequest, type CallResult } from './types.mts';
+import { num, postJson, ProviderError, type CallRequest, type CallResult } from './types.mts';
 
 /** Anbieterspezifische Suchparameter, additiv auf den Standard-Body. */
 function searchParams(mode: string): Record<string, unknown> {
@@ -63,17 +63,34 @@ export async function callOpenAICompat(request: CallRequest): Promise<CallResult
     if (typeof message.content === 'string') parts.push(message.content);
   }
 
-  const usage = (raw.usage ?? {}) as Record<string, unknown>;
-  // Such-Aufrufe melden diese APIs uneinheitlich; wo nichts kommt, wird bei
-  // aktivierter Suche konservativ 1 gezählt (Kostenschätzung nach oben).
-  const reported = num(usage.num_sources_used) || num(usage.search_count);
+  const rawUsage = (raw.usage ?? {}) as Record<string, unknown>;
+  const usage = {
+    inputTokens: num(rawUsage.prompt_tokens),
+    outputTokens: num(rawUsage.completion_tokens),
+    // Such-Aufrufe melden diese APIs uneinheitlich; wo nichts kommt, wird bei
+    // aktivierter Suche konservativ 1 gezählt (Kostenschätzung nach oben).
+    searchCalls: num(rawUsage.num_sources_used) || (request.search ? 1 : 0),
+  };
+
+  /*
+   * Verweigerung im OpenAI-Format: `message.refusal`.
+   *
+   * Ohne diese Prüfung bliebe der Text leer, der Parser meldete „kein JSON",
+   * und es liefen zwei weitere bezahlte Repair-Turns gegen ein Modell, das
+   * die Antwort bereits abgelehnt hat. Im öffentlichen Katalog stünde am Ende
+   * `invalid-output` statt `refusal` – also der falsche Grund.
+   *
+   * Endgültig, aber bezahlt: Der Verbrauch reist mit, damit er in api_costs
+   * landet.
+   */
+  const firstMessage = (choices[0]?.message ?? {}) as Record<string, unknown>;
+  if (typeof firstMessage.refusal === 'string' && firstMessage.refusal.length > 0) {
+    throw new ProviderError(firstMessage.refusal.slice(0, 200), 'refusal', false, usage);
+  }
+
   return {
     text: parts.join('\n'),
-    usage: {
-      inputTokens: num(usage.prompt_tokens),
-      outputTokens: num(usage.completion_tokens),
-      searchCalls: reported || (request.search ? 1 : 0),
-    },
+    usage,
     reportedModel: typeof raw.model === 'string' ? raw.model : null,
     latencyMs: Date.now() - started,
   };
