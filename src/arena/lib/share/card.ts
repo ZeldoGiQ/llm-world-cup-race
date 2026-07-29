@@ -20,6 +20,12 @@ export interface ShareRow {
   /** 90-%-Intervall in Score-Einheiten; null = keine Unsicherheitsdaten */
   ciLow: number | null;
   ciHigh: number | null;
+  /**
+   * Logo-Inhalt im 64×64-Raum (siehe model-logo-markup.ts). Fehlt es, zeichnet
+   * die Karte den Farbpunkt – Referenzzeilen und neue Modelle ohne Datei
+   * bleiben so darstellbar.
+   */
+  logoMarkup?: string | null;
 }
 
 export interface ShareCardInput {
@@ -36,7 +42,10 @@ export interface ShareCardInput {
 const WIDTH = 1200;
 const HEIGHT = 630;
 const CHART_TOP = 210;
-const CHART_BOTTOM = 500;
+// Die Nulllinie liegt bewusst nicht tiefer: Unter ihr brauchen Logo (36 px),
+// Modellname und Fußnote Platz, ohne sich zu berühren. 468 + 78 (Name) lässt
+// 50 px Luft bis zur Fußnote auf 596.
+const CHART_BOTTOM = 468;
 const CHART_LEFT = 110;
 const CHART_RIGHT = 1090;
 
@@ -122,8 +131,24 @@ export function buildShareCardSvg(input: ShareCardInput): string {
     const labelY = Math.min(topY, yOf(row.ciHigh ?? row.score)) - 16;
     parts.push(
       `<text x="${centerX}" y="${labelY.toFixed(1)}" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="30" font-weight="700" fill="${isTop ? RED : PAPER}">${row.score.toFixed(1)}</text>`,
-      // Farbpunkt + Name unter der Linie
-      `<circle cx="${(centerX - 0).toFixed(1)}" cy="${CHART_BOTTOM + 46}" r="7" fill="${escapeXml(row.color)}"/>`,
+    );
+
+    // Erkennungszeichen unter der Linie: das echte Modell-Logo, sonst der
+    // Farbpunkt. Das Logo ist in einer Zeitleiste auf einen Blick lesbar,
+    // ein farbiger Punkt nicht.
+    if (row.logoMarkup) {
+      const size = 36;
+      const scale = size / 64;
+      parts.push(
+        `<g transform="translate(${(centerX - size / 2).toFixed(1)} ${CHART_BOTTOM + 16}) scale(${scale})">${row.logoMarkup}</g>`,
+      );
+    } else {
+      parts.push(
+        `<circle cx="${centerX.toFixed(1)}" cy="${CHART_BOTTOM + 34}" r="7" fill="${escapeXml(row.color)}"/>`,
+      );
+    }
+
+    parts.push(
       `<text x="${centerX}" y="${CHART_BOTTOM + 78}" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="20" font-weight="600" fill="${PAPER}">${escapeXml(row.name)}</text>`,
     );
   });

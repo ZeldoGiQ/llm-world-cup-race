@@ -11,6 +11,7 @@ import { loadHomeData, uncertaintyFor } from '../../../arena/lib/home/home-data'
 import { pick } from '../../../arena/lib/i18n/locales';
 import { SCORE_VERSION } from '../../../arena/lib/scoring/score';
 import { buildShareCardSvg, type ShareRow } from '../../../arena/lib/share/card';
+import { modelLogoMarkup } from '../../../arena/lib/share/model-logo-markup';
 
 const data = loadHomeData('en');
 const shareable = data.live.filter((entry) => entry.scoredPairs > 0 && entry.standings);
@@ -37,6 +38,7 @@ export const GET: APIRoute = ({ params }) => {
         score: scoreCell?.value?.value ?? 0,
         ciLow: interval?.[0] ?? null,
         ciHigh: interval?.[1] ?? null,
+        logoMarkup: modelLogoMarkup(row.model.id) ?? null,
       };
     })
     .filter((row) => Number.isFinite(row.score));
