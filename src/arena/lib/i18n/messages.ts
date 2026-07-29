@@ -17,6 +17,7 @@ import { DEFAULT_LOCALE, INTL_LOCALE, type Locale, type Localized } from './loca
 const MESSAGES = {
   /* --- Navigation & Rahmen --- */
   'nav.brand': { en: 'FutureBench', de: 'FutureBench', es: 'FutureBench' },
+  'home.next.pause': { en: 'Pause', de: 'Pause', es: 'Pausa' },
   'nav.theme': { en: 'Color scheme', de: 'Darstellung', es: 'Apariencia' },
   'nav.themeLight': { en: 'Light', de: 'Tageslicht', es: 'Claro' },
   'nav.themeDark': { en: 'Dark', de: 'Lampenlicht', es: 'Oscuro' },

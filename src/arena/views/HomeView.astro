@@ -182,6 +182,15 @@ void knowledgeTrack;
               ))}
             </div>
           </div>
+          {/* Pause-Schalter ohne JavaScript. Bewegter Inhalt braucht einen
+              Halt, den jeder erreicht – auf dem Handy gibt es weder
+              Mauszeiger noch Tabulatortaste, dort wäre die Zeile sonst
+              unaufhaltsam. Die Checkbox trägt den Zustand, das CSS liest
+              ihn per :has(). */}
+          <label class="mr-3 flex shrink-0 cursor-pointer items-center rounded-md border border-ink-700 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-ink-400 transition-colors hover:border-signal-400 hover:text-signal-400 has-[:checked]:border-signal-400 has-[:checked]:text-signal-400">
+            <input type="checkbox" class="arena-ticker-pause sr-only" />
+            {translate('home.next.pause')}
+          </label>
         </div>
       )
     }

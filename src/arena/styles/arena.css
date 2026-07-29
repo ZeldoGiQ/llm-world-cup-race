@@ -155,8 +155,7 @@ html.arena[data-theme='dark'] {
   width: max-content;
   animation: arena-ticker-run calc(var(--ticker-units, 12) * 2.5s) linear infinite;
 }
-.arena-ticker:hover .arena-ticker-track,
-.arena-ticker:focus-within .arena-ticker-track {
+.arena-ticker:hover .arena-ticker-track {
   animation-play-state: paused;
 }
 @keyframes arena-ticker-run {
@@ -167,12 +166,40 @@ html.arena[data-theme='dark'] {
     transform: translateX(-50%);
   }
 }
+
+/* Stillstand-Zustand – drei Auslöser, eine Behandlung.
+   Auslöser: der Pause-Schalter, Tastaturfokus in der Zeile, oder die
+   Systemeinstellung „Bewegung reduzieren".
+   Behandlung (alle drei Teile sind nötig, einzeln wäre es kaputt):
+   1. animation: none setzt die Bahn auf Position 0 zurück. Bloßes Pausieren
+      würde mitten in der Fahrt einfrieren – dann lägen die echten Links
+      links außerhalb des Fensters, und dorthin kann kein Browser scrollen
+      (scrollLeft kann nicht unter 0). Der Tastaturfokus wäre unsichtbar.
+   2. overflow-x: auto macht die stehende Zeile von Hand erreichbar.
+   3. Die dekorativen Kopien verschwinden – im Stillstand würde sonst jedes
+      Ereignis doppelt dastehen und die Zeile mehr Termine behaupten, als
+      es gibt. */
+.arena-ticker:has(.arena-ticker-pause:checked) .arena-ticker-track,
+.arena-ticker:focus-within .arena-ticker-track {
+  animation: none;
+}
+.arena-ticker:has(.arena-ticker-pause:checked) .arena-ticker-viewport,
+.arena-ticker:focus-within .arena-ticker-viewport {
+  overflow-x: auto;
+}
+.arena-ticker:has(.arena-ticker-pause:checked) .arena-ticker-track > [aria-hidden='true'],
+.arena-ticker:focus-within .arena-ticker-track > [aria-hidden='true'] {
+  display: none;
+}
 @media (prefers-reduced-motion: reduce) {
   .arena-ticker-viewport {
     overflow-x: auto;
   }
   .arena-ticker-track {
     animation: none;
+  }
+  .arena-ticker-track > [aria-hidden='true'] {
+    display: none;
   }
 }
 

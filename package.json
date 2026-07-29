@@ -18,7 +18,8 @@
     "arena:predict": "node --experimental-strip-types scripts/arena/jobs/predict.mts",
     "arena:resolve": "node --experimental-strip-types scripts/arena/jobs/resolve.mts",
     "arena:publish": "node --experimental-strip-types scripts/arena/jobs/publish.mts",
-    "arena:analytics": "node --experimental-strip-types scripts/arena/jobs/analytics.mts"
+    "arena:analytics": "node --experimental-strip-types scripts/arena/jobs/analytics.mts",
+    "share:prompts": "node --experimental-strip-types scripts/arena/social-prompts.mts"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",
