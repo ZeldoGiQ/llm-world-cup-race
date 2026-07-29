@@ -149,7 +149,7 @@ void knowledgeTrack;
               />
               <span class="font-medium text-ink-200 group-hover:text-signal-300">{entry.title}</span>
               <span class="font-mono text-[11px] text-ink-500">{formatUtc(entry.utcDate, locale)} UTC</span>
-              <span class="rounded-full border border-ink-700 px-1.5 py-px font-mono text-[10px] text-ink-400">
+              <span class="rounded-md border border-ink-700 px-1.5 py-px font-mono text-[10px] text-ink-400">
                 {translate('home.next.filed', { filed: entry.filed, slots: entry.slots })}
               </span>
             </a>
@@ -189,13 +189,13 @@ void knowledgeTrack;
     }
 
     {/* ---------- Spur-Schalter ---------- */}
-    <div class="mt-6 inline-flex items-center rounded-full border border-ink-700 bg-ink-900/80 p-1" title={translate('track.hint')}>
-      <span class="rounded-full border border-signal-400/40 bg-signal-400/10 px-4 py-1.5 text-[13px] font-semibold text-signal-300">
+    <div class="mt-6 inline-flex items-center rounded-md border border-ink-700 bg-ink-900/80 p-1" title={translate('track.hint')}>
+      <span class="rounded-md border border-signal-400/40 bg-signal-400/10 px-4 py-1.5 text-[13px] font-semibold text-signal-300">
         {translate('track.knowledge')}
       </span>
       <span class="px-4 py-1.5 text-[13px] font-semibold text-ink-500">
         {translate('track.web')}
-        <span class="ml-2 rounded-full border border-ink-700 px-1.5 py-px text-[9px] uppercase tracking-wider text-ink-500">
+        <span class="ml-2 rounded-md border border-ink-700 px-1.5 py-px text-[9px] uppercase tracking-wider text-ink-500">
           {translate('track.soon')}
         </span>
       </span>
@@ -205,7 +205,7 @@ void knowledgeTrack;
     <nav class="mt-5 flex flex-wrap items-center gap-2" aria-label={translate('home.tabs.label')}>
       <a
         href="#overall"
-        class="rounded-full border border-dashed border-ink-700 px-3.5 py-1.5 text-[13px] text-ink-400 transition-colors hover:text-ink-200"
+        class="rounded-md border border-dashed border-ink-700 px-3.5 py-1.5 text-[13px] text-ink-400 transition-colors hover:text-ink-200"
       >
         {translate('home.tabs.overall')}
         <span class="ml-1.5 text-[10px] uppercase tracking-wider">{translate('home.tabs.locked')}</span>
@@ -215,7 +215,7 @@ void knowledgeTrack;
           <a
             href={tab.href}
             aria-current={tab.current ? 'page' : undefined}
-            class={`rounded-full border px-3.5 py-1.5 text-[13px] transition-colors ${
+            class={`rounded-md border px-3.5 py-1.5 text-[13px] transition-colors ${
               tab.current
                 ? 'border-signal-400/50 bg-signal-400/10 font-semibold text-signal-300'
                 : 'border-ink-700 text-ink-300 hover:border-ink-600 hover:text-ink-100'
@@ -237,7 +237,7 @@ void knowledgeTrack;
             </h2>
             {!clearLeader && (
               <span
-                class="rounded-full border border-ink-700 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-ink-400"
+                class="rounded-md border border-ink-700 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-ink-400"
                 title={translate('home.board.noClearLeaderTitle')}
               >
                 {translate('home.board.noClearLeader')}
@@ -298,12 +298,12 @@ void knowledgeTrack;
                       <th scope="row" class="px-4 py-3 text-left font-normal">
                         <a href={arenaPath(locale, featured.id)} class="group flex items-center gap-2.5">
                           <span
-                            class={`inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border font-mono text-xs font-bold tabular ${rankChipClass(row.rank)}`}
+                            class={`inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-sm border font-mono text-xs font-bold tabular ${rankChipClass(row.rank)}`}
                           >
                             {row.rank > 0 ? `${row.rank}` : '–'}
                           </span>
                           <span
-                            class="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded-full text-[10px] font-bold"
+                            class="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded-sm text-[10px] font-bold"
                             style={`background-color:${row.model.color};color:${avatarTextColor(row.model.color)}`}
                             aria-hidden="true"
                           >
@@ -311,7 +311,7 @@ void knowledgeTrack;
                               <img
                                 src={modelLogo(row.model.id)}
                                 alt=""
-                                class="h-full w-full rounded-full object-cover"
+                                class="h-full w-full object-cover"
                               />
                             ) : providerMark(row.model.provider) ? (
                               <svg
@@ -387,7 +387,7 @@ void knowledgeTrack;
                   <tr class="border-t border-ink-700 bg-ink-950/40">
                     <th scope="row" class="px-4 py-3 text-left font-normal">
                       <span class="flex items-center gap-2.5">
-                        <span class="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-ink-700 font-mono text-[10px] text-ink-400">
+                        <span class="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-sm border border-ink-700 font-mono text-[10px] text-ink-400">
                           ø
                         </span>
                         <span class="min-w-0">
@@ -424,7 +424,7 @@ void knowledgeTrack;
               href={shareLinks.x}
               target="_blank"
               rel="noopener noreferrer"
-              class="rounded-full border border-ink-700 px-3 py-1 text-[12px] text-ink-200 transition-colors hover:border-ink-500 hover:text-ink-50"
+              class="rounded-md border border-ink-700 px-3 py-1 text-[12px] text-ink-200 transition-colors hover:border-ink-500 hover:text-ink-50"
             >
               {translate('share.x')}
             </a>
@@ -432,7 +432,7 @@ void knowledgeTrack;
               href={shareLinks.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              class="rounded-full border border-ink-700 px-3 py-1 text-[12px] text-ink-200 transition-colors hover:border-ink-500 hover:text-ink-50"
+              class="rounded-md border border-ink-700 px-3 py-1 text-[12px] text-ink-200 transition-colors hover:border-ink-500 hover:text-ink-50"
             >
               {translate('share.whatsapp')}
             </a>
@@ -440,7 +440,7 @@ void knowledgeTrack;
               href={shareLinks.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              class="rounded-full border border-ink-700 px-3 py-1 text-[12px] text-ink-200 transition-colors hover:border-ink-500 hover:text-ink-50"
+              class="rounded-md border border-ink-700 px-3 py-1 text-[12px] text-ink-200 transition-colors hover:border-ink-500 hover:text-ink-50"
             >
               {translate('share.linkedin')}
             </a>
@@ -448,7 +448,7 @@ void knowledgeTrack;
               <a
                 href={shareLinks.card}
                 download
-                class="rounded-full border border-signal-400/40 px-3 py-1 text-[12px] text-signal-300 transition-colors hover:border-signal-400"
+                class="rounded-md border border-signal-400/40 px-3 py-1 text-[12px] text-signal-300 transition-colors hover:border-signal-400"
               >
                 {translate('share.card')}
               </a>
@@ -456,7 +456,7 @@ void knowledgeTrack;
             {shareLinks.data && (
               <a
                 href={shareLinks.data}
-                class="rounded-full border border-ink-700 px-3 py-1 font-mono text-[11px] text-ink-300 transition-colors hover:border-ink-500"
+                class="rounded-md border border-ink-700 px-3 py-1 font-mono text-[11px] text-ink-300 transition-colors hover:border-ink-500"
               >
                 {translate('share.data')}
               </a>

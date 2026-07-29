@@ -98,7 +98,7 @@ export default function ArenaApp({
         <button
           type="button"
           onClick={() => void refresh()}
-          className="rounded-full border border-signal-400/60 bg-signal-400/10 px-4 py-1.5 text-sm font-medium text-signal-300 transition-colors hover:bg-signal-400/20"
+          className="rounded-md border border-signal-400/60 bg-signal-400/10 px-4 py-1.5 text-sm font-medium text-signal-300 transition-colors hover:bg-signal-400/20"
         >
           {translate('data.retry')}
         </button>
@@ -134,7 +134,7 @@ export default function ArenaApp({
         <div className="flex items-center gap-2.5">
           {lastFailed && (
             <span
-              className="rounded-full border px-2 py-0.5 text-[10px]"
+              className="rounded-md border px-2 py-0.5 text-[10px]"
               style={{
                 borderColor: 'color-mix(in srgb, var(--arena-live) 40%, transparent)',
                 color: 'var(--arena-live)',
@@ -156,7 +156,7 @@ export default function ArenaApp({
             disabled={refreshing}
             aria-label={translate('data.refresh')}
             title={translate('data.refresh')}
-            className="flex h-8 w-8 items-center justify-center rounded-full border border-ink-700 bg-ink-900 text-ink-200 transition-all hover:border-signal-400/60 hover:text-signal-300 active:scale-90 disabled:opacity-60"
+            className="flex h-8 w-8 items-center justify-center rounded-md border border-ink-700 bg-ink-900 text-ink-200 transition-all hover:border-signal-400/60 hover:text-signal-300 active:scale-90 disabled:opacity-60"
           >
             <svg
               viewBox="0 0 24 24"

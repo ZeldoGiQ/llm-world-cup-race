@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- Favicon der Arena: Lorbeer wechselt mit dem Browser-Theme, das Rekordrot bleibt. -->
+  <style>
+    .laurel { stroke: #16130f; }
+    @media (prefers-color-scheme: dark) {
+      .laurel { stroke: #f4f1ea; }
+    }
+  </style>
+  <g class="laurel" fill="none" stroke-width="3.4" stroke-linecap="round">
+    <path d="M17 42C8 35 6.5 22 12 10"/>
+    <path d="M31 42C40 35 41.5 22 36 10"/>
+  </g>
+  <circle cx="24" cy="25" r="10" fill="#a4232a"/>
+</svg>

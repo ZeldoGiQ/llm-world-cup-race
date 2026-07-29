@@ -66,7 +66,7 @@ const scoredOf = (modelId: string) =>
                 <th scope="row" class="px-4 py-2.5 text-left font-normal">
                   <span class="flex items-center gap-2">
                     <span
-                      class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[10px] font-bold"
+                      class="flex h-6 w-6 shrink-0 items-center justify-center rounded-sm text-[10px] font-bold"
                       style={`background-color:${model.color};color:${avatarTextColor(model.color)}`}
                       aria-hidden="true"
                     >
@@ -74,7 +74,7 @@ const scoredOf = (modelId: string) =>
                         <img
                           src={modelLogo(model.id)}
                           alt=""
-                          class="h-full w-full rounded-full object-cover"
+                          class="h-full w-full object-cover"
                         />
                       ) : providerMark(model.provider) ? (
                         <svg
@@ -90,7 +90,7 @@ const scoredOf = (modelId: string) =>
                     <span class="text-[11px] text-ink-400">{model.provider}</span>
                     {model.access === 'early-access' && (
                       <span
-                        class="rounded-full border px-1.5 text-[9px] font-semibold uppercase tracking-wider"
+                        class="rounded-md border px-1.5 text-[9px] font-semibold uppercase tracking-wider"
                         style="border-color:color-mix(in srgb, var(--arena-prerelease) 45%, transparent);color:var(--arena-prerelease)"
                         title={translate('home.field.exampleEntryTitle')}
                       >
@@ -131,7 +131,7 @@ const scoredOf = (modelId: string) =>
               >
                 <span class="font-display text-ink-200">{pick(entry.descriptor.label, locale)}</span>
                 <span
-                  class="shrink-0 rounded-full border px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider"
+                  class="shrink-0 rounded-md border px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider"
                   style="border-color:color-mix(in srgb, var(--arena-live) 45%, transparent);color:var(--arena-live)"
                 >
                   {translate('home.cat.state.sample')}

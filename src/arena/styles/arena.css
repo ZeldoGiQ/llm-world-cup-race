@@ -1,32 +1,156 @@
 /*
- * Arena-spezifische Tokens.
+ * FutureBench — Design-System v2 „Rekordbuch" (Papier & Tinte).
  *
- * Bewusst schlichte :root-Variablen statt eines zweiten @theme-Blocks: Die
- * bestehenden Tailwind-Tokens (ink/clay/signal/success) kommen unverändert aus
- * global.css, hier ergänzen wir nur die vier Farben, die dort fehlen. Die
- * Verwendung erfolgt als arbitrary value, z. B. text-[var(--arena-danger)].
- * So bleibt global.css unangetastet und es gibt kein Build-Risiko.
+ * Zwei Schichten:
+ *
+ * 1. Gescopter Remap der Tailwind-Farbvariablen auf html.arena: Tailwind v4
+ *    kompiliert Utilities zu var(--color-…), darum genügt es, die Variablen
+ *    innerhalb der Arena umzudefinieren — die Views behalten ihre Klassen,
+ *    bedeuten aber Papier & Tinte statt der dunklen WM-Palette. global.css
+ *    bleibt unangetastet, die WM-Seiten sehen nichts davon. Die Skalenlogik
+ *    bleibt erhalten: hohe ink-Stufen = Grundflächen, niedrige = Text.
+ *    signal = Rekordrot (nur für den Spitzenwert), clay = Messing (nur als
+ *    Haarlinie), success = Treffergrün.
+ *
+ * 2. Eigene --arena-*-Tokens für alles, was es im Tailwind-Theme nicht gibt
+ *    (Tints, Statusfarben, Tintenflächen) — 1:1 aus tokens.css des
+ *    Design-Systems.
+ *
+ * Dark Mode („Lampenlicht") kommt ausschließlich über [data-theme="dark"],
+ * das ein Inline-Skript im Layout aus Nutzerwahl bzw. prefers-color-scheme
+ * setzt. Bewusst kein @media-Block: genau ein Ort mit Dark-Werten.
  */
-:root {
-  --arena-danger: #f43f5e;
-  --arena-live: #f59e0b;
-  --arena-prerelease: #a78bfa;
-  --arena-baseline: #8b94a7;
+
+html.arena {
+  color-scheme: light;
+
+  /* — Papier & Tinte (ink-Skala remappt) — */
+  --color-ink-950: #efebe2; /* Grund            */
+  --color-ink-900: #f4f1ea; /* Papier           */
+  --color-ink-800: #e0dbd0; /* Haarlinie/Hover  */
+  --color-ink-700: #cfc7b6; /* starke Haarlinie */
+  --color-ink-600: #b9b2a4;
+  --color-ink-500: #a29a8c;
+  --color-ink-400: #8d8375; /* Text dim         */
+  --color-ink-300: #5e574c; /* Text muted       */
+  --color-ink-200: #3a352c;
+  --color-ink-100: #16130f; /* Tinte            */
+  --color-ink-50: #16130f;
+
+  /* — signal = Rekordrot — */
+  --color-signal-300: #7d1a20;
+  --color-signal-400: #a4232a;
+  --color-signal-500: #a4232a;
+
+  /* — clay = Messing — */
+  --color-clay-300: #8a6c3c;
+  --color-clay-400: #b08b4f;
+  --color-clay-500: #b08b4f;
+  --color-clay-600: #8a6c3c;
+
+  /* — success = Treffer — */
+  --color-success-300: #225235;
+  --color-success-400: #2f6b46;
+  --color-success-500: #2f6b46;
+
+  /* — Kanten gestochen: kein Radius über 3px — */
+  --radius-xs: 1px;
+  --radius-sm: 1px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+  --radius-xl: 3px;
+  --radius-2xl: 3px;
+  --radius-3xl: 3px;
+
+  /* — Arena-eigene Tokens (aus tokens.css) — */
+  --arena-red: #a4232a;
+  --arena-red-deep: #7d1a20;
+  --arena-red-tint: #f3e3e1;
+  --arena-red-bright: #d94a52;
+  --arena-brass: #b08b4f;
+  --arena-brass-tint: #f2e6cf;
+  --arena-success-tint: #e2ece5;
+  --arena-danger: #7d1a20;
+  --arena-live: #b8791f;
+  --arena-live-tint: #f2e6cf;
+  --arena-live-text: #8f5c12;
+  --arena-prerelease: #6b4a7a;
+  --arena-baseline: #8d8375;
+
+  /* Tintenflächen (Share-Blöcke, invertierte Karten) */
+  --arena-ink: #16130f;
+  --arena-on-ink: #f4f1ea;
+  --arena-on-ink-muted: #a29a8c;
+
+  --arena-rule-brass: 1px solid #b08b4f;
+  --arena-shadow-card: 0 1px 0 #e0dbd0;
+  --arena-shadow-print: 0 10px 30px rgba(22, 19, 15, 0.12);
 }
 
-/* Podest-Akzente für die ersten drei Ränge */
+/* — Lampenlicht: dieselbe Ordnung bei Nacht. Rot bleibt dem Spitzenwert
+     vorbehalten, Messing bleibt Haarlinie. — */
+html.arena[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-ink-950: #14110d;
+  --color-ink-900: #1b1712;
+  --color-ink-800: #2b251d;
+  --color-ink-700: #473e31;
+  --color-ink-600: #5c5142;
+  --color-ink-500: #7a7062;
+  --color-ink-400: #9a8f7d;
+  --color-ink-300: #c3b9a8;
+  --color-ink-200: #ddd5c7;
+  --color-ink-100: #f4f1ea;
+  --color-ink-50: #f4f1ea;
+
+  --color-signal-300: #ef6f74;
+  --color-signal-400: #d94a52;
+  --color-signal-500: #d94a52;
+
+  --color-clay-300: #e0be7f;
+  --color-clay-400: #c9a463;
+  --color-clay-500: #c9a463;
+  --color-clay-600: #a5854c;
+
+  --color-success-300: #8fd4ab;
+  --color-success-400: #6cbf8f;
+  --color-success-500: #6cbf8f;
+
+  --arena-red: #d94a52;
+  --arena-red-deep: #ef6f74;
+  --arena-red-tint: #3a1c1d;
+  --arena-red-bright: #f08a8f;
+  --arena-brass: #c9a463;
+  --arena-brass-tint: #33291a;
+  --arena-success-tint: #1d2f24;
+  --arena-danger: #ef6f74;
+  --arena-live: #d9a341;
+  --arena-live-tint: #33280f;
+  --arena-live-text: #e3b862;
+  --arena-prerelease: #a98fbb;
+  --arena-baseline: #8a8073;
+
+  /* Tintenflächen kippen mit: sie werden Papier */
+  --arena-ink: #f4f1ea;
+  --arena-on-ink: #16130f;
+  --arena-on-ink-muted: #5e574c;
+
+  --arena-rule-brass: 1px solid #c9a463;
+  --arena-shadow-card: 0 1px 0 #332c23;
+  --arena-shadow-print: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Rang-Chips: die Erste trägt Rekordrot, alle anderen bleiben Registratur.
+   (Medaillen-Gold/Silber/Bronze gehören zur alten Cyber-Ästhetik und sind raus.) */
 .arena-rank-1 {
-  border-color: rgba(251, 191, 36, 0.45);
-  background-color: rgba(251, 191, 36, 0.12);
-  color: #fcd34d;
+  border-color: var(--arena-red);
+  background-color: var(--arena-red);
+  color: var(--color-ink-900);
 }
-.arena-rank-2 {
-  border-color: rgba(203, 213, 225, 0.38);
-  background-color: rgba(203, 213, 225, 0.1);
-  color: #e2e8f0;
-}
+.arena-rank-2,
 .arena-rank-3 {
-  border-color: rgba(234, 138, 100, 0.42);
-  background-color: rgba(234, 138, 100, 0.12);
-  color: #f0997b;
+  border-color: var(--color-ink-700);
+  background-color: var(--color-ink-900);
+  color: var(--color-ink-300);
 }

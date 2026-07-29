@@ -39,11 +39,11 @@ export function ModelAvatar({
   return (
     <span
       aria-hidden="true"
-      className={`inline-flex shrink-0 select-none items-center justify-center overflow-hidden rounded-full font-sans font-bold ${SIZES[size]}`}
+      className={`inline-flex shrink-0 select-none items-center justify-center overflow-hidden rounded-sm font-sans font-bold ${SIZES[size]}`}
       style={{ backgroundColor: model.color, color: avatarTextColor(model.color) }}
     >
       {logo ? (
-        <img src={logo} alt="" className="h-full w-full rounded-full object-cover" />
+        <img src={logo} alt="" className="h-full w-full object-cover" />
       ) : mark ? (
         <svg
           viewBox="0 0 24 24"
@@ -80,7 +80,7 @@ export default function ModelBadge({
           </span>
           {model.access === 'early-access' && (
             <span
-              className="shrink-0 rounded-full border px-1.5 py-px text-[9px] font-semibold uppercase tracking-wider"
+              className="shrink-0 rounded-md border px-1.5 py-px text-[9px] font-semibold uppercase tracking-wider"
               style={{
                 borderColor: 'color-mix(in srgb, var(--arena-prerelease) 45%, transparent)',
                 backgroundColor: 'color-mix(in srgb, var(--arena-prerelease) 12%, transparent)',
@@ -93,7 +93,7 @@ export default function ModelBadge({
           )}
           {model.baseline && (
             <span
-              className="shrink-0 rounded-full border border-ink-600 px-1.5 py-px text-[9px] font-semibold uppercase tracking-wider text-ink-300"
+              className="shrink-0 rounded-md border border-ink-600 px-1.5 py-px text-[9px] font-semibold uppercase tracking-wider text-ink-300"
               title={translate('model.baselineTitle')}
             >
               {translate('model.baseline')}

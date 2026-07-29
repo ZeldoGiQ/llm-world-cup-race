@@ -237,13 +237,13 @@ const voidReasons = [
               <div class="flex flex-wrap items-center gap-2">
                 <h3 class="font-medium text-ink-100">{pick(metric.label, locale)}</h3>
                 <span class="font-mono text-xs text-ink-400">{metric.id}</span>
-                <span class="rounded-full border border-ink-700 px-2 py-0.5 text-[10px] uppercase tracking-wider text-ink-400">
+                <span class="rounded-md border border-ink-700 px-2 py-0.5 text-[10px] uppercase tracking-wider text-ink-400">
                   {metric.betterDirection === 'lower'
                     ? translate('methodology.metrics.lower')
                     : translate('methodology.metrics.higher')}
                 </span>
                 {metric.requiresBaseline && (
-                  <span class="rounded-full border border-ink-700 px-2 py-0.5 text-[10px] uppercase tracking-wider text-ink-400">
+                  <span class="rounded-md border border-ink-700 px-2 py-0.5 text-[10px] uppercase tracking-wider text-ink-400">
                     {translate('methodology.metrics.needsBaseline')}
                   </span>
                 )}

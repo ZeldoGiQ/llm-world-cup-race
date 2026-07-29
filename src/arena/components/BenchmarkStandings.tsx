@@ -16,7 +16,7 @@ function RankMedallion({
   if (rank === 0) {
     return (
       <span
-        className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-dashed border-ink-700 font-mono text-[11px] text-ink-500"
+        className="inline-flex h-7 w-7 items-center justify-center rounded-sm border border-dashed border-ink-700 font-mono text-[11px] text-ink-500"
         title={
           provisional
             ? translate('standings.provisionalRankTitle')
@@ -30,7 +30,7 @@ function RankMedallion({
   const podium = rank <= 3 ? `arena-rank-${rank}` : 'border-ink-700 bg-ink-800/60 text-ink-300';
   return (
     <span
-      className={`inline-flex h-7 w-7 items-center justify-center rounded-full border font-mono text-xs font-bold tabular ${podium}`}
+      className={`inline-flex h-7 w-7 items-center justify-center rounded-sm border font-mono text-xs font-bold tabular ${podium}`}
     >
       {rank}
     </span>
@@ -105,7 +105,7 @@ export default function BenchmarkStandings({ standings, primaryMetric, locale, u
       <td className="px-4 py-3">
         {isBaseline ? (
           <span
-            className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-ink-700 font-mono text-[10px] text-ink-400"
+            className="inline-flex h-7 w-7 items-center justify-center rounded-sm border border-ink-700 font-mono text-[10px] text-ink-400"
             title={translate('standings.baselineMark')}
           >
             ø
@@ -119,7 +119,7 @@ export default function BenchmarkStandings({ standings, primaryMetric, locale, u
           <ModelBadge model={row.model} locale={locale} />
           {row.provisional && (
             <span
-              className="shrink-0 rounded-full border px-1.5 py-px text-[9px] font-semibold uppercase tracking-wider"
+              className="shrink-0 rounded-md border px-1.5 py-px text-[9px] font-semibold uppercase tracking-wider"
               style={{
                 borderColor: 'color-mix(in srgb, var(--arena-live) 45%, transparent)',
                 color: 'var(--arena-live)',
@@ -198,7 +198,7 @@ export default function BenchmarkStandings({ standings, primaryMetric, locale, u
             >
               <div className="flex items-center gap-3">
                 {row.isBaseline ? (
-                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-ink-700 font-mono text-[10px] text-ink-400">
+                  <span className="inline-flex h-7 w-7 items-center justify-center rounded-sm border border-ink-700 font-mono text-[10px] text-ink-400">
                     ø
                   </span>
                 ) : (

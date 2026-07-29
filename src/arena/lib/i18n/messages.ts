@@ -16,7 +16,10 @@ import { DEFAULT_LOCALE, INTL_LOCALE, type Locale, type Localized } from './loca
 
 const MESSAGES = {
   /* --- Navigation & Rahmen --- */
-  'nav.brand': { en: 'Benchmarks', de: 'Benchmarks', es: 'Benchmarks' },
+  'nav.brand': { en: 'FutureBench', de: 'FutureBench', es: 'FutureBench' },
+  'nav.theme': { en: 'Color scheme', de: 'Darstellung', es: 'Apariencia' },
+  'nav.themeLight': { en: 'Light', de: 'Tageslicht', es: 'Claro' },
+  'nav.themeDark': { en: 'Dark', de: 'Lampenlicht', es: 'Oscuro' },
   'nav.categories': { en: 'Categories', de: 'Kategorien', es: 'Categorías' },
   'nav.methodology': { en: 'Methodology', de: 'Methodik', es: 'Metodología' },
   'nav.prototype': { en: 'Prototype', de: 'Prototyp', es: 'Prototipo' },
@@ -1092,9 +1095,9 @@ const MESSAGES = {
 
   /* --- Meta / SEO --- */
   'meta.siteTitle': {
-    en: 'Prediction Benchmarks Arena',
-    de: 'Prediction Benchmarks Arena',
-    es: 'Prediction Benchmarks Arena',
+    en: 'FutureBench — LLM Prediction Benchmark',
+    de: 'FutureBench — LLM-Prognose-Benchmark',
+    es: 'FutureBench — benchmark de predicción LLM',
   },
   'meta.siteDescription': {
     en: 'Which AI model reads the future best? An open benchmark across sport, stock markets and elections — every prediction published before the event.',
@@ -1102,9 +1105,9 @@ const MESSAGES = {
     es: '¿Qué modelo de IA anticipa mejor el futuro? Un benchmark abierto sobre deporte, mercados bursátiles y elecciones, con cada predicción publicada antes del evento.',
   },
   'meta.methodologyDescription': {
-    en: 'How the Prediction Benchmarks Arena scores: metrics, baselines, proof of prior submission and the limits of interpretation.',
-    de: 'Wie die Prediction Benchmarks Arena wertet: Metriken, Baselines, Nachweis der vorherigen Abgabe und Grenzen der Aussagekraft.',
-    es: 'Cómo evalúa la Prediction Benchmarks Arena: métricas, líneas base, prueba de envío previo y límites de la interpretación.',
+    en: 'How FutureBench scores: metrics, baselines, proof of prior submission and the limits of interpretation.',
+    de: 'Wie FutureBench wertet: Metriken, Baselines, Nachweis der vorherigen Abgabe und Grenzen der Aussagekraft.',
+    es: 'Cómo evalúa FutureBench: métricas, líneas base, prueba de envío previo y límites de la interpretación.',
   },
 } as const satisfies Record<string, Localized<string>>;
 

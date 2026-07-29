@@ -22,7 +22,7 @@ function StatusPill({ status, translate }: { status: EventStatus; translate: Tra
   if (status === 'LIVE') {
     return (
       <span
-        className="flex shrink-0 items-center gap-1.5 rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider"
+        className="flex shrink-0 items-center gap-1.5 rounded-md border px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider"
         style={{
           borderColor: 'color-mix(in srgb, var(--arena-live) 50%, transparent)',
           backgroundColor: 'color-mix(in srgb, var(--arena-live) 12%, transparent)',
@@ -41,7 +41,7 @@ function StatusPill({ status, translate }: { status: EventStatus; translate: Tra
     status === 'VOID' ? 'border-dashed border-ink-600 text-ink-400' : 'border-ink-700 text-ink-300';
   return (
     <span
-      className={`shrink-0 rounded-full border px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider ${styles}`}
+      className={`shrink-0 rounded-md border px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider ${styles}`}
     >
       {label}
     </span>
