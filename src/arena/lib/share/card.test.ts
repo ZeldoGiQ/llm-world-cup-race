@@ -1,13 +1,13 @@
 import { describe, expect, it } from 'vitest';
-import { buildShareCardSvg, type ShareRow } from './card';
+import { buildShareCardSvg, SHARE_FORMATS, verdictFor, type ShareRow } from './card';
 import { innerSvgMarkup } from './model-logo-markup';
 
 const row = (over: Partial<ShareRow> = {}): ShareRow => ({
   name: 'Grok 4.3',
   color: '#9b59b6',
   score: 21.5,
-  ciLow: 14.9,
-  ciHigh: 27.8,
+  ciLow: 18.0,
+  ciHigh: 25.0,
   ...over,
 });
 
@@ -15,8 +15,22 @@ const input = (rows: ShareRow[]) => ({
   title: 'FIFA World Cup 2026',
   subtitle: 'Prediction Score · Knowledge Cap · SCORE_V1',
   rows,
-  footnote: '104 events · committed before each event · 90% CI',
+  footnote: '104 events · 90% CI',
 });
+
+const RED = '#d94a52';
+
+/** Balken tragen rx="2"; der Hintergrund und die Logo-Kacheln nicht. */
+function bars(svg: string): { x: number; width: number; fill: string }[] {
+  return [...svg.matchAll(/<rect x="([\d.-]+)" y="[\d.-]+" width="([\d.]+)" height="[\d.]+" rx="2" fill="([^"]+)"/g)].map(
+    (match) => ({ x: Number(match[1]), width: Number(match[2]), fill: match[3] }),
+  );
+}
+
+/** Die gestrichelte Senkrechte markiert die Referenz (Score 0). */
+function zeroX(svg: string): number {
+  return Number(svg.match(/<line x1="([\d.]+)"[^>]*stroke-dasharray/)![1]);
+}
 
 describe('innerSvgMarkup', () => {
   it('schält den Inhalt aus einer Logo-Datei', () => {
@@ -31,44 +45,93 @@ describe('innerSvgMarkup', () => {
   });
 });
 
+describe('verdictFor – die Karte muss sagen, was die Zahlen hergeben', () => {
+  it('nennt einen Vorsprung nur, wenn die Intervalle sich trennen', () => {
+    const verdict = verdictFor([
+      row({ name: 'A', score: 30, ciLow: 25, ciHigh: 35 }),
+      row({ name: 'B', score: 10, ciLow: 5, ciHigh: 15 }),
+    ]);
+    expect(verdict).toEqual({ text: 'A leads by 20.0 points', clear: true });
+  });
+
+  it('sagt bei Überlappung ausdrücklich, dass es zu knapp ist', () => {
+    // Die echten WM-Daten sind genau dieser Fall. Eine Karte, die hier
+    // „führt" behauptet, widerspricht ihrer eigenen Fußnote.
+    const verdict = verdictFor([
+      row({ name: 'A', score: 21.5, ciLow: 10.9, ciHigh: 31.3 }),
+      row({ name: 'B', score: 19.4, ciLow: 9.0, ciHigh: 29.1 }),
+    ]);
+    expect(verdict).toEqual({ text: 'A ahead — too close to call', clear: false });
+  });
+});
+
 describe('buildShareCardSvg', () => {
-  it('setzt das Logo ein, wenn eines mitkommt', () => {
-    const svg = buildShareCardSvg(input([row({ logoMarkup: '<rect id="logo"/>' })]));
-    expect(svg).toContain('<rect id="logo"/>');
-    // Auf 36 px skaliert: 36/64
-    expect(svg).toContain('scale(0.5625)');
+  it('färbt bei Gleichstand keinen einzigen Balken rot', () => {
+    // Regression: Früher wurde per Wert verglichen (score === topScore),
+    // wodurch bei Gleichstand JEDER Balken zum Spitzenwert wurde – die
+    // Krypto-Karte hatte fünf rote Balken.
+    const svg = buildShareCardSvg(
+      input([row({ name: 'A', score: 14.2 }), row({ name: 'B', score: 14.2 })]),
+    );
+    expect(bars(svg).filter((bar) => bar.fill === RED)).toHaveLength(0);
   });
 
-  it('fällt ohne Logo auf den Farbpunkt zurück', () => {
-    const svg = buildShareCardSvg(input([row()]));
-    expect(svg).toContain('fill="#9b59b6"');
-    expect(svg).not.toContain('scale(0.5625)');
+  it('färbt genau einen Balken rot, wenn einer nachweislich führt', () => {
+    const svg = buildShareCardSvg(
+      input([
+        row({ name: 'A', score: 30, ciLow: 25, ciHigh: 35 }),
+        row({ name: 'B', score: 10, ciLow: 5, ciHigh: 15 }),
+      ]),
+    );
+    expect(bars(svg).filter((bar) => bar.fill === RED)).toHaveLength(1);
   });
 
-  it('färbt nur den Spitzenwert rot – die Rekordregel des Design-Systems', () => {
-    const svg = buildShareCardSvg(input([row({ score: 21.5 }), row({ name: 'Kimi', score: 8.2 })]));
-    const red = svg.match(/fill="#d94a52"/g) ?? [];
-    const grey = svg.match(/fill="#6e675b"/g) ?? [];
-    expect(red.length).toBeGreaterThan(0);
-    expect(grey.length).toBe(1);
-  });
-
-  it('bleibt gültiges SVG bei negativen Scores', () => {
-    // Ein Modell darf schlechter sein als die Referenz. Die Säule wird dann
-    // auf der Nulllinie gekappt, die Zahl bleibt ehrlich negativ.
-    const svg = buildShareCardSvg(input([row({ score: -12.4, ciLow: -20, ciHigh: -4 })]));
+  it('zeichnet negative Scores sichtbar links der Referenz', () => {
+    // Regression: Die alte Skala kappte bei 0, negative Balken hatten Länge
+    // null. „Modell schlechter als der Würfel" ist die interessanteste
+    // Aussage des Benchmarks – sie darf nicht unsichtbar sein.
+    const svg = buildShareCardSvg(
+      input([
+        row({ name: 'Gut', score: 12, ciLow: 8, ciHigh: 16 }),
+        row({ name: 'Schlecht', score: -12.4, ciLow: -20, ciHigh: -4 }),
+      ]),
+    );
+    const negative = bars(svg).at(-1)!;
+    expect(negative.width).toBeGreaterThan(20);
+    expect(negative.x).toBeLessThan(zeroX(svg));
     expect(svg).toContain('-12.4');
-    expect(svg).not.toMatch(/height="-/);
-    expect(svg.startsWith('<svg')).toBe(true);
-    expect(svg.trimEnd().endsWith('</svg>')).toBe(true);
+  });
+
+  it('setzt das Logo ein und fällt sonst auf den Farbpunkt zurück', () => {
+    const withLogo = buildShareCardSvg(input([row({ logoMarkup: '<rect id="logo"/>' })]));
+    expect(withLogo).toContain('<rect id="logo"/>');
+
+    const withoutLogo = buildShareCardSvg(input([row()]));
+    expect(withoutLogo).toContain('fill="#9b59b6"');
+  });
+
+  it('kürzt zu lange Modellnamen, statt die Zahl zu überschreiben', () => {
+    const svg = buildShareCardSvg(input([row({ name: 'Ein sehr langer Modellname der nicht passt' })]));
+    expect(svg).toContain('…');
+  });
+
+  it('liefert jedes Format in seiner Größe und gültig', () => {
+    for (const [id, format] of Object.entries(SHARE_FORMATS)) {
+      const svg = buildShareCardSvg(input([row(), row({ name: 'B', score: 9 })]), id as never);
+      expect(svg).toContain(`width="${format.width}" height="${format.height}"`);
+      expect(svg.startsWith('<svg')).toBe(true);
+      expect(svg.trimEnd().endsWith('</svg>')).toBe(true);
+      expect(svg).not.toMatch(/(width|height)="-/);
+      expect(svg).not.toContain('NaN');
+    }
   });
 
   it('maskiert Sonderzeichen in Namen und Titel', () => {
     const svg = buildShareCardSvg({
-      ...input([row({ name: 'A & B <test>' })]),
-      title: 'Tom & Jerry',
+      ...input([row({ name: 'A & B' })]),
+      title: 'Tom & Jerry <script>',
     });
-    expect(svg).toContain('A &amp; B &lt;test&gt;');
-    expect(svg).toContain('Tom &amp; Jerry');
+    expect(svg).toContain('A &amp; B');
+    expect(svg).toContain('Tom &amp; Jerry &lt;script&gt;');
   });
 });

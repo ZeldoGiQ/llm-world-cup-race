@@ -18,6 +18,11 @@ const MESSAGES = {
   /* --- Navigation & Rahmen --- */
   'nav.brand': { en: 'FutureBench', de: 'FutureBench', es: 'FutureBench' },
   'home.next.pause': { en: 'Pause', de: 'Pause', es: 'Pausa' },
+  'meta.ogImageAlt': {
+    en: 'Leaderboard: prediction scores of the leading AI models, with 90% confidence intervals.',
+    de: 'Leaderboard: Prediction Scores der führenden KI-Modelle, mit 90-%-Konfidenzintervallen.',
+    es: 'Clasificación: prediction scores de los principales modelos de IA, con intervalos de confianza del 90 %.',
+  },
   'nav.theme': { en: 'Color scheme', de: 'Darstellung', es: 'Apariencia' },
   'nav.themeLight': { en: 'Light', de: 'Tageslicht', es: 'Claro' },
   'nav.themeDark': { en: 'Dark', de: 'Lampenlicht', es: 'Oscuro' },

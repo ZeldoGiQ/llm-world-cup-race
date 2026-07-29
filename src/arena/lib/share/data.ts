@@ -22,15 +22,29 @@ export interface ShareCardData {
 }
 
 /**
- * Alle Kategorien, die eine Karte verdienen: echte Daten, mindestens ein
- * gewertetes Paar. Beispieldaten werden hier so wenig verbreitet wie auf
- * der Seite selbst.
+ * Wie viele aufgelöste Ereignisse eine Kategorie mindestens braucht, bevor
+ * sie ein teilbares Bild bekommt. Darunter ist die Rangliste Rauschen, und
+ * ein Bild verbreitet sich weiter als eine Tabelle.
+ */
+const MIN_RESOLVED_FOR_CARD = 3;
+
+/**
+ * Alle Kategorien, die eine Karte verdienen: echte Daten, genug aufgelöste
+ * Ereignisse, mindestens zwei Teilnehmer und wenigstens ein Score, der nicht
+ * null ist. Beispieldaten werden hier so wenig verbreitet wie auf der Seite.
+ *
+ * Der Null-Test ist kein Schönheitsfilter: Eine Kategorie, in der alle
+ * Modelle exakt auf der Referenz liegen, ergibt eine Karte mit fünf Balken
+ * der Länge null – eine große leere Fläche unter einer Überschrift. Als
+ * Beitrag gelesen sagt sie „hier wurde nichts gemessen", und das ist
+ * schlimmer als gar kein Beitrag.
  */
 export function shareCards(): ShareCardData[] {
   const data = loadHomeData('en');
 
   return data.live
     .filter((entry) => entry.scoredPairs > 0 && entry.standings)
+    .filter((entry) => entry.resolvedEvents >= MIN_RESOLVED_FOR_CARD)
     .map((entry) => {
       const uncertainty = uncertaintyFor(entry);
       const rows: ShareRow[] = entry
@@ -56,8 +70,9 @@ export function shareCards(): ShareCardData[] {
         id: entry.id,
         title: pick(entry.descriptor.label, 'en'),
         subtitle: `Prediction Score · Knowledge Cap · ${SCORE_VERSION}`,
-        footnote: `${entry.resolvedEvents} events · committed before each event · 90% CI · whiskers overlap = no clear leader`,
+        footnote: `${entry.resolvedEvents} events · every prediction published before its event · 90% CI`,
         rows,
       };
-    });
+    })
+    .filter((card) => card.rows.length >= 2 && card.rows.some((row) => row.score !== 0));
 }

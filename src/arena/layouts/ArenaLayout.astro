@@ -21,7 +21,9 @@ import '../../styles/global.css';
 import '../styles/arena.css';
 import '../lib/plugins';
 import { countCategoryDataSources } from '../lib/home/home-data';
+import { shareCards } from '../lib/share/data';
 import {
+  ARENA_ORIGIN,
   arenaPath,
   arenaUrl,
   DEFAULT_LOCALE,
@@ -56,6 +58,14 @@ const currentUrl = arenaUrl(locale, sub);
 // Der Hinweis auf Beispieldaten zählt sich selbst aus den Daten und
 // verschwindet, sobald keine Beispielkategorie mehr existiert.
 const dataSources = countCategoryDataSources();
+
+// Vorschaubild beim Teilen: die Karte der beweiskräftigsten Kategorie, als
+// PNG. Bewusst nicht das SVG – X, LinkedIn und WhatsApp zeigen SVG als
+// og:image nicht an, der Link bliebe bildlos. Die PNG entsteht nach dem
+// Astro-Build (scripts/arena/render-cards.mts); gibt es noch keine
+// wertbare Kategorie, bleibt das Bild weg statt auf ein Nichts zu zeigen.
+const ogCard = shareCards()[0];
+const ogImage = ogCard ? `${ARENA_ORIGIN}/arena/share/${ogCard.id}.png` : null;
 ---
 
 <!doctype html>
@@ -95,6 +105,22 @@ const dataSources = countCategoryDataSources();
     <meta property="og:url" content={currentUrl} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={OG_LOCALE[locale]} />
+    {
+      ogImage && (
+        <>
+          <meta property="og:image" content={ogImage} />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content={translate('meta.ogImageAlt')} />
+          {/* summary_large_image statt summary: Die kleine Variante schrumpft
+              das Bild auf ein quadratisches Vorschaubildchen, in dem eine
+              Rangliste unleserlich wird. */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:image" content={ogImage} />
+        </>
+      )
+    }
     {
       LOCALES.filter((alternate) => alternate !== locale).map((alternate) => (
         <meta property="og:locale:alternate" content={OG_LOCALE[alternate]} />
