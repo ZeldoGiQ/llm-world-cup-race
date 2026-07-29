@@ -168,7 +168,7 @@ export interface HomeAnswer {
 }
 
 export interface HomeData {
-  /** Die nächsten sperrenden Events über alle echten Kategorien, max. 3. */
+  /** Die nächsten sperrenden Events über alle echten Kategorien, max. 8. */
   nextUp: NextUpEntry[];
   categories: CategoryHome[];
   live: CategoryHome[];
@@ -593,7 +593,7 @@ export function loadHomeData(locale: Locale, now: Date = new Date()): HomeData {
         }),
     )
     .sort((a, b) => Date.parse(a.utcDate) - Date.parse(b.utcDate))
-    .slice(0, 3);
+    .slice(0, 8);
 
   return {
     nextUp,

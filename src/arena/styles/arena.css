@@ -141,6 +141,41 @@ html.arena[data-theme='dark'] {
   --arena-shadow-print: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
+/* „Next Predictions"-Liveticker: reine CSS-Schleife ohne JavaScript.
+   Die Laufbahn enthält zwei identische Hälften, darum ist -50 % exakt eine
+   Basislänge und der Übergang nahtlos. Das Tempo skaliert pro Eintrag
+   (--ticker-units = Gesamtzahl der Einträge), damit lange Listen nicht
+   rasen. Unter Zeiger oder Tastaturfokus pausiert die Fahrt, damit Links
+   klickbar bleiben; bei reduzierter Bewegung steht sie und die Zeile wird
+   stattdessen von Hand scrollbar. */
+.arena-ticker-viewport {
+  overflow: hidden;
+}
+.arena-ticker-track {
+  width: max-content;
+  animation: arena-ticker-run calc(var(--ticker-units, 12) * 2.5s) linear infinite;
+}
+.arena-ticker:hover .arena-ticker-track,
+.arena-ticker:focus-within .arena-ticker-track {
+  animation-play-state: paused;
+}
+@keyframes arena-ticker-run {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .arena-ticker-viewport {
+    overflow-x: auto;
+  }
+  .arena-ticker-track {
+    animation: none;
+  }
+}
+
 /* Rang-Chips: die Erste trägt Rekordrot, alle anderen bleiben Registratur.
    (Medaillen-Gold/Silber/Bronze gehören zur alten Cyber-Ästhetik und sind raus.) */
 .arena-rank-1 {

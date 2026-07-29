@@ -31,6 +31,17 @@ const { locale } = Astro.props;
 const translate = t(locale);
 const data = loadHomeData(locale);
 
+// Liveticker-Laufbahn: Die Basisliste wird auf mindestens 6 Einträge
+// aufgefüllt (bei nur einem anstehenden Event bliebe die Schleife sonst
+// löchrig) und dann verdoppelt – zwei identische Hälften machen die
+// CSS-Fahrt auf -50 % nahtlos. Nur die ersten data.nextUp.length Einträge
+// sind reale Links, der Rest ist dekorative Wiederholung.
+const tickerBase: typeof data.nextUp = [];
+if (data.nextUp.length > 0) {
+  while (tickerBase.length < 6) tickerBase.push(...data.nextUp);
+}
+const tickerRun = [...tickerBase, ...tickerBase];
+
 const { featured, uncertainty, answer, kpi, overall } = data;
 const board = featured?.standings ?? null;
 
@@ -127,33 +138,50 @@ void knowledgeTrack;
 
 <ArenaLayout locale={locale}>
   <main class="mx-auto max-w-5xl px-4 pb-8 pt-6">
-    {/* ---------- „Next Predictions"-Ticker: eine Zeile, kein Countdown ----------
+    {/* ---------- „Next Predictions"-Liveticker: eine Zeile, kein Countdown ----------
         Signalisiert „hier läuft gerade etwas", ohne das Leaderboard nach unten
         zu schieben. Absolute UTC-Zeiten – ein statischer Build darf keine
-        Restzeit behaupten. Verschwindet von selbst, wenn nichts ansteht. */}
+        Restzeit behaupten. Verschwindet von selbst, wenn nichts ansteht.
+        Die Fahrt ist reines CSS (arena.css): Die Laufbahn besteht aus zwei
+        identischen Hälften, nur die erste Nennung jedes Events ist für
+        Screenreader und Tastatur real – alle Wiederholungen sind dekorative
+        Kopien (aria-hidden, tabindex -1). */}
     {
       data.nextUp.length > 0 && (
-        <div class="mb-6 flex items-center gap-3 overflow-x-auto whitespace-nowrap rounded-xl border border-ink-800 bg-ink-900/50 px-4 py-2.5">
+        <div class="arena-ticker mb-6 flex items-center gap-3 whitespace-nowrap rounded-xl border border-ink-800 bg-ink-900/50 py-2.5 pl-4">
           <span class="shrink-0 font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-clay-400">
             {translate('home.next.label')}
           </span>
-          {data.nextUp.map((entry) => (
-            <a
-              href={arenaPath(locale, entry.categoryId)}
-              class="group flex shrink-0 items-center gap-2 text-[12px] text-ink-300 transition-colors hover:text-ink-100"
+          <div class="arena-ticker-viewport min-w-0 flex-1">
+            <div
+              class="arena-ticker-track flex items-center"
+              style={`--ticker-units:${tickerRun.length}`}
             >
-              <span
-                class="h-1.5 w-1.5 shrink-0 rounded-full"
-                style={`background-color:${entry.accent}`}
-                aria-hidden="true"
-              />
-              <span class="font-medium text-ink-200 group-hover:text-signal-300">{entry.title}</span>
-              <span class="font-mono text-[11px] text-ink-500">{formatUtc(entry.utcDate, locale)} UTC</span>
-              <span class="rounded-md border border-ink-700 px-1.5 py-px font-mono text-[10px] text-ink-400">
-                {translate('home.next.filed', { filed: entry.filed, slots: entry.slots })}
-              </span>
-            </a>
-          ))}
+              {tickerRun.map((entry, index) => (
+                <a
+                  href={arenaPath(locale, entry.categoryId)}
+                  class="group mr-10 flex shrink-0 items-center gap-2 text-[12px] text-ink-300 transition-colors hover:text-ink-100"
+                  aria-hidden={index >= data.nextUp.length ? 'true' : undefined}
+                  tabindex={index >= data.nextUp.length ? -1 : undefined}
+                >
+                  <span
+                    class="h-1.5 w-1.5 shrink-0 rounded-full"
+                    style={`background-color:${entry.accent}`}
+                    aria-hidden="true"
+                  />
+                  <span class="font-medium text-ink-200 group-hover:text-signal-300">
+                    {entry.title}
+                  </span>
+                  <span class="font-mono text-[11px] text-ink-500">
+                    {formatUtc(entry.utcDate, locale)} UTC
+                  </span>
+                  <span class="rounded-md border border-ink-700 px-1.5 py-px font-mono text-[10px] text-ink-400">
+                    {translate('home.next.filed', { filed: entry.filed, slots: entry.slots })}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       )
     }
