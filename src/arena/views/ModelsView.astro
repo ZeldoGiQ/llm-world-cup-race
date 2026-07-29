@@ -4,8 +4,8 @@
  * Ausgemusterte Modelle bleiben sichtbar; nichts wird je gelöscht.
  */
 import { avatarTextColor, modelInitials } from '../../lib/format';
-import ProviderMark from '../components/ProviderMark.astro';
 import { loadHomeData } from '../lib/home/home-data';
+import { providerMark } from '../lib/provider-marks';
 import { formatDate } from '../lib/i18n/format';
 import { arenaPath, pick, type Locale } from '../lib/i18n/locales';
 import { t } from '../lib/i18n/messages';
@@ -69,13 +69,18 @@ const scoredOf = (modelId: string) =>
                       style={`background-color:${model.color};color:${avatarTextColor(model.color)}`}
                       aria-hidden="true"
                     >
-                      {modelInitials(model.name)}
+                      {providerMark(model.provider) ? (
+                        <svg
+                          viewBox="0 0 24 24"
+                          class="h-3.5 w-3.5"
+                          set:html={providerMark(model.provider)}
+                        />
+                      ) : (
+                        modelInitials(model.name)
+                      )}
                     </span>
                     <span class="text-ink-100">{model.name}</span>
-                    <span class="flex items-center gap-1 text-[11px] text-ink-400">
-                      <ProviderMark provider={model.provider} class="h-2.5 w-2.5" />
-                      {model.provider}
-                    </span>
+                    <span class="text-[11px] text-ink-400">{model.provider}</span>
                     {model.access === 'early-access' && (
                       <span
                         class="rounded-full border px-1.5 text-[9px] font-semibold uppercase tracking-wider"

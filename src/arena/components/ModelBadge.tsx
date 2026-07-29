@@ -1,6 +1,7 @@
 import { avatarTextColor, modelInitials } from '../../lib/format';
 import { modelName, modelProvider, type Locale } from '../lib/i18n/locales';
 import { t } from '../lib/i18n/messages';
+import { providerMark } from '../lib/provider-marks';
 import type { ArenaModel } from '../lib/types';
 
 const SIZES = {
@@ -9,10 +10,20 @@ const SIZES = {
   md: 'h-9 w-9 text-xs',
 } as const;
 
+const GLYPH_SIZES = {
+  xs: 'h-3 w-3',
+  sm: 'h-4 w-4',
+  md: 'h-5 w-5',
+} as const;
+
 /**
- * Initialen-Avatar eines Modells. Nutzt dieselben reinen Helfer wie das
- * WM-Tippspiel (modelInitials/avatarTextColor), damit ein Modell überall
- * identisch aussieht. Sprachneutral – Initialen und Farbe kommen aus den Daten.
+ * Modell-Avatar: farbiger Kreis mit der Lab-Glyphe aus dem Design-System,
+ * Initialen nur noch als Rückfall (unbekannte Labs, Referenz-Teilnehmer).
+ * Farbe und Kontrast kommen weiter aus denselben reinen Helfern wie im
+ * WM-Tippspiel, damit ein Modell überall identisch aussieht.
+ *
+ * Die Glyphe wird über die kanonische (englische) Anbieter-Bezeichnung
+ * aufgelöst, nicht über die übersetzte – Marken übersetzen sich nicht.
  */
 export function ModelAvatar({
   model,
@@ -21,13 +32,22 @@ export function ModelAvatar({
   model: ArenaModel;
   size?: keyof typeof SIZES;
 }) {
+  const mark = model.baseline ? undefined : providerMark(model.provider);
   return (
     <span
       aria-hidden="true"
       className={`inline-flex shrink-0 select-none items-center justify-center rounded-full font-sans font-bold ${SIZES[size]}`}
       style={{ backgroundColor: model.color, color: avatarTextColor(model.color) }}
     >
-      {modelInitials(model.name)}
+      {mark ? (
+        <svg
+          viewBox="0 0 24 24"
+          className={GLYPH_SIZES[size]}
+          dangerouslySetInnerHTML={{ __html: mark }}
+        />
+      ) : (
+        modelInitials(model.name)
+      )}
     </span>
   );
 }

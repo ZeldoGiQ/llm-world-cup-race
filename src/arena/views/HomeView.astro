@@ -12,8 +12,8 @@
  * Modell-ID ist hier verdrahtet – alles kommt aus loadHomeData().
  */
 import { avatarTextColor, modelInitials } from '../../lib/format';
-import ProviderMark from '../components/ProviderMark.astro';
 import { formatUtc, loadHomeData } from '../lib/home/home-data';
+import { providerMark } from '../lib/provider-marks';
 import { formatInteger, formatPercent } from '../lib/i18n/format';
 import { arenaPath, arenaUrl, pick, type Locale } from '../lib/i18n/locales';
 import { t, type MessageKey } from '../lib/i18n/messages';
@@ -275,14 +275,21 @@ void knowledgeTrack;
                             style={`background-color:${row.model.color};color:${avatarTextColor(row.model.color)}`}
                             aria-hidden="true"
                           >
-                            {modelInitials(row.model.name)}
+                            {providerMark(row.model.provider) ? (
+                              <svg
+                                viewBox="0 0 24 24"
+                                class="h-3.5 w-3.5"
+                                set:html={providerMark(row.model.provider)}
+                              />
+                            ) : (
+                              modelInitials(row.model.name)
+                            )}
                           </span>
                           <span class="min-w-0">
                             <span class="block truncate font-display text-ink-50 group-hover:text-signal-300">
                               {row.model.name}
                             </span>
-                            <span class="flex items-center gap-1 truncate text-[11px] text-ink-400">
-                              <ProviderMark provider={row.model.provider} class="h-2.5 w-2.5" />
+                            <span class="block truncate text-[11px] text-ink-400">
                               {row.model.provider}
                             </span>
                           </span>
