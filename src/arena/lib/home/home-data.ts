@@ -108,6 +108,18 @@ export interface CategoryHome {
   leader: { model: ArenaModel; formatted: string } | null;
 }
 
+/** Ein Eintrag der „Next Predictions"-Zeile ganz oben. */
+export interface NextUpEntry {
+  categoryId: string;
+  categoryLabel: string;
+  accent: string;
+  title: string;
+  utcDate: string;
+  /** abgegebene Tipps der aktiven Modelle für dieses Event */
+  filed: number;
+  slots: number;
+}
+
 export interface HomeKpi {
   scoredEvents: number;
   predictions: number;
@@ -156,6 +168,8 @@ export interface HomeAnswer {
 }
 
 export interface HomeData {
+  /** Die nächsten sperrenden Events über alle echten Kategorien, max. 3. */
+  nextUp: NextUpEntry[];
   categories: CategoryHome[];
   live: CategoryHome[];
   example: CategoryHome[];
@@ -321,6 +335,29 @@ export function loadHomeData(locale: Locale, now: Date = new Date()): HomeData {
   const earlyAccessModels = ALL_MODELS.filter((model) => model.access === 'early-access');
   const baselineModels = ALL_MODELS.filter((model) => model.baseline === true);
 
+  /*
+   * Aktive Teilnehmer aus den DATEN ableiten, nicht aus der Modellliste:
+   * models.json führt auch stillgelegte Zeilen (Historie bleibt für immer),
+   * aber „7 von 10 abgegeben" wäre eine Lüge, wenn drei der zehn gar nicht
+   * mehr antreten. Aktiv ist, wer auf OFFENE Events tippt – die Historie in
+   * abgeschlossenen Runden zählt hier nicht, sonst gälten die WM-Veteranen
+   * für immer als aktiv. Solange noch niemand getippt hat (Kaltstart), gilt
+   * die volle Liste als Schätzung.
+   */
+  const activeIds = new Set<string>();
+  for (const descriptor of categories.list()) {
+    if (descriptor.dataSource !== 'live') continue;
+    const eventFile = fileFor(EVENT_FILES, descriptor.id, 'events.json');
+    const predictionFile = fileFor(PREDICTION_FILES, descriptor.id, 'predictions.json');
+    for (const event of (eventFile?.events ?? []).filter(isOpen)) {
+      for (const modelId of Object.keys(predictionFile?.predictions?.[event.id] ?? {})) {
+        if (rankedModels.some((model) => model.id === modelId)) activeIds.add(modelId);
+      }
+    }
+  }
+  const activeCount = activeIds.size > 0 ? activeIds.size : rankedModels.length;
+  const isActive = (modelId: string) => (activeIds.size > 0 ? activeIds.has(modelId) : true);
+
   const list: CategoryHome[] = [];
 
   for (const descriptor of categories.list()) {
@@ -421,7 +458,7 @@ export function loadHomeData(locale: Locale, now: Date = new Date()): HomeData {
       openEvents: open.length,
       liveNow,
       openPredictions,
-      openSlots: open.length * rankedModels.length,
+      openSlots: open.length * activeCount,
       nextLockAt: nextLock,
       updatedAt: events?.updatedAt ?? null,
       leader:
@@ -534,7 +571,32 @@ export function loadHomeData(locale: Locale, now: Date = new Date()): HomeData {
       .filter((value): value is string => value !== null)
       .sort((a, b) => Date.parse(b) - Date.parse(a))[0] ?? null;
 
+  /* --- „Next Predictions": die nächsten sperrenden Events, kategorieübergreifend --- */
+  const nextUp: NextUpEntry[] = live
+    .flatMap((entry) =>
+      (entry.events?.events ?? [])
+        .filter((event) => isOpen(event) && Date.parse(event.utcDate) > nowMs)
+        .map((event) => {
+          const byModel = entry.predictions?.predictions?.[event.id] ?? {};
+          const filed = rankedModels.filter(
+            (model) => isActive(model.id) && validPrediction(event, byModel[model.id]),
+          ).length;
+          return {
+            categoryId: entry.id,
+            categoryLabel: pick(entry.descriptor.label, locale),
+            accent: entry.descriptor.accent,
+            title: event.titles?.[locale] ?? event.titles?.en ?? event.title,
+            utcDate: event.utcDate,
+            filed,
+            slots: activeCount,
+          };
+        }),
+    )
+    .sort((a, b) => Date.parse(a.utcDate) - Date.parse(b.utcDate))
+    .slice(0, 3);
+
   return {
+    nextUp,
     categories: list,
     live,
     example,

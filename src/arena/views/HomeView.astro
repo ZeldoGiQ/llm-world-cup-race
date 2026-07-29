@@ -126,7 +126,38 @@ void knowledgeTrack;
 ---
 
 <ArenaLayout locale={locale}>
-  <main class="mx-auto max-w-5xl px-4 pb-8 pt-10">
+  <main class="mx-auto max-w-5xl px-4 pb-8 pt-6">
+    {/* ---------- „Next Predictions"-Ticker: eine Zeile, kein Countdown ----------
+        Signalisiert „hier läuft gerade etwas", ohne das Leaderboard nach unten
+        zu schieben. Absolute UTC-Zeiten – ein statischer Build darf keine
+        Restzeit behaupten. Verschwindet von selbst, wenn nichts ansteht. */}
+    {
+      data.nextUp.length > 0 && (
+        <div class="mb-6 flex items-center gap-3 overflow-x-auto whitespace-nowrap rounded-xl border border-ink-800 bg-ink-900/50 px-4 py-2.5">
+          <span class="shrink-0 font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-clay-400">
+            {translate('home.next.label')}
+          </span>
+          {data.nextUp.map((entry) => (
+            <a
+              href={arenaPath(locale, entry.categoryId)}
+              class="group flex shrink-0 items-center gap-2 text-[12px] text-ink-300 transition-colors hover:text-ink-100"
+            >
+              <span
+                class="h-1.5 w-1.5 shrink-0 rounded-full"
+                style={`background-color:${entry.accent}`}
+                aria-hidden="true"
+              />
+              <span class="font-medium text-ink-200 group-hover:text-signal-300">{entry.title}</span>
+              <span class="font-mono text-[11px] text-ink-500">{formatUtc(entry.utcDate, locale)} UTC</span>
+              <span class="rounded-full border border-ink-700 px-1.5 py-px font-mono text-[10px] text-ink-400">
+                {translate('home.next.filed', { filed: entry.filed, slots: entry.slots })}
+              </span>
+            </a>
+          ))}
+        </div>
+      )
+    }
+
     {/* ---------- Antwort ---------- */}
     <p class="mb-2 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-clay-400">
       {translate('home.eyebrow')}

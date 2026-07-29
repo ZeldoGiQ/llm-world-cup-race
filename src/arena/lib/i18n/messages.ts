@@ -40,6 +40,18 @@ const MESSAGES = {
     es: 'Knowledge Cap: sin recuperación — cada modelo responde con lo que ya sabe, con información idéntica. Web Search: el mismo protocolo con búsqueda nativa activada. Dos tablas, nunca mezcladas.',
   },
 
+  /* --- „Next Predictions"-Zeile --- */
+  'home.next.label': {
+    en: 'Next predictions',
+    de: 'Nächste Vorhersagen',
+    es: 'Próximas predicciones',
+  },
+  'home.next.filed': {
+    en: '{filed}/{slots} committed',
+    de: '{filed}/{slots} abgegeben',
+    es: '{filed}/{slots} enviadas',
+  },
+
   /* --- Leaderboard-Tabs --- */
   'home.tabs.label': { en: 'Leaderboards', de: 'Leaderboards', es: 'Clasificaciones' },
   'home.tabs.overall': { en: 'Overall', de: 'Gesamt', es: 'General' },
