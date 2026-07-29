@@ -1,12 +1,12 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-07-29T08:09:25.139Z",
+  "updatedAt": "2026-07-29T23:38:26.834Z",
   "events": [
     {
       "id": "fd-554940",
       "title": "Mineiro – Bragantino",
       "utcDate": "2026-07-29T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "VOID",
       "predictionType": "scoreline",
       "resolution": null,
       "metadata": {
@@ -34,7 +34,7 @@
       "id": "fd-554941",
       "title": "Botafogo – Grêmio",
       "utcDate": "2026-07-29T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "VOID",
       "predictionType": "scoreline",
       "resolution": null,
       "metadata": {
@@ -62,7 +62,7 @@
       "id": "fd-554942",
       "title": "Chapecoense – Vasco da Gama",
       "utcDate": "2026-07-29T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "VOID",
       "predictionType": "scoreline",
       "resolution": null,
       "metadata": {
@@ -90,7 +90,7 @@
       "id": "fd-554948",
       "title": "São Paulo – Santos",
       "utcDate": "2026-07-29T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "VOID",
       "predictionType": "scoreline",
       "resolution": null,
       "metadata": {
