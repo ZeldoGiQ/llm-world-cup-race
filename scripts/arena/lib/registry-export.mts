@@ -74,8 +74,40 @@ const PROVIDER_LABELS: Record<string, string> = {
   'example-lab': 'Example Lab',
 };
 
-export function providerLabel(id: string): string {
-  return PROVIDER_LABELS[id] ?? id.charAt(0).toUpperCase() + id.slice(1);
+/**
+ * Lab-Präfixe, wie Gateways sie in Modell-Bezeichnern führen
+ * ("anthropic/claude-fable-5" → Anthropic).
+ */
+const LAB_PREFIXES: Record<string, string> = {
+  openai: 'OpenAI',
+  anthropic: 'Anthropic',
+  google: 'Google',
+  qwen: 'Alibaba',
+  alibaba: 'Alibaba',
+  moonshotai: 'Moonshot AI',
+  moonshot: 'Moonshot AI',
+  deepseek: 'DeepSeek',
+  'z-ai': 'Z.ai',
+  zai: 'Z.ai',
+  'x-ai': 'xAI',
+  xai: 'xAI',
+  mistralai: 'Mistral',
+  'meta-llama': 'Meta',
+};
+
+/**
+ * Angezeigt wird das LAB, nicht der Transportweg.
+ *
+ * Seit alle Modelle über ein Gateway laufen, wäre `provider_id` überall
+ * dieselbe Zeichenkette – und unter jedem Modell stünde der Name des
+ * Zwischenhändlers statt seines Herstellers. Der Hersteller steckt aber im
+ * Modell-Bezeichner selbst ("openai/gpt-5.5"): dessen Präfix gewinnt, die
+ * Anbieter-ID bleibt nur der Rückfall für Direktanbindungen.
+ */
+export function providerLabel(providerId: string, apiModel?: string): string {
+  const prefix = apiModel?.includes('/') ? apiModel.split('/')[0]!.toLowerCase() : undefined;
+  if (prefix && LAB_PREFIXES[prefix]) return LAB_PREFIXES[prefix];
+  return PROVIDER_LABELS[providerId] ?? providerId.charAt(0).toUpperCase() + providerId.slice(1);
 }
 
 /**
@@ -91,7 +123,7 @@ export async function exportModels(models: ModelRow[]): Promise<boolean> {
     .map((model) => ({
       id: model.id,
       name: model.name,
-      provider: providerLabel(model.provider_id),
+      provider: providerLabel(model.provider_id, model.api_model),
       color: model.color,
       ...(model.version ? { version: model.version } : {}),
       ...(model.release_date ? { releaseDate: model.release_date } : {}),

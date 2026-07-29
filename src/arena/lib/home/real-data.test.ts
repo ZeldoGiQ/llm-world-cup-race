@@ -168,7 +168,15 @@ describe('Unsicherheit der WM-Rangliste', () => {
   const resolved = wc.events.events.filter(
     (event) => event.status === 'RESOLVED' && event.resolution !== null,
   );
-  const contenders = models.filter((m) => !m.baseline && m.access !== 'early-access');
+  // Nur Modelle, die in dieser Kategorie überhaupt angetreten sind – die
+  // Modell-Registry wächst weiter (neue Teilnehmer ohne WM-Historie), und ein
+  // Schnitt über Nicht-Teilnehmer wäre leer. Gleiche Logik wie die Startseite.
+  const contenders = models.filter(
+    (m) =>
+      !m.baseline &&
+      m.access !== 'early-access' &&
+      resolved.some((event) => wc.predictions.predictions[event.id]?.[m.id]),
+  );
   const common = resolved.filter((event) =>
     contenders.every((model) => wc.predictions.predictions[event.id]?.[model.id]),
   );
@@ -263,9 +271,13 @@ describe('Gesamtwertung über die echten Daten', () => {
     );
     expect(reasons.get('elections')).toBe('example-data');
     expect(reasons.get('sports-mixed')).toBe('example-data');
-    expect(reasons.get('football-leagues')).toBe('no-predictions');
-    expect(reasons.get('crypto')).toBe('no-predictions');
-    expect(reasons.get('stocks-index')).toBe('no-predictions');
+    // Die Live-Kategorien wachsen unter diesem Test weiter: Erst gibt es keine
+    // Vorhersagen, dann zu wenige Auflösungen – beides sind gültige Zustände
+    // auf dem Weg zur Qualifikation. Der Test friert den GRUND-TYP ein, nicht
+    // den Kalendertag.
+    for (const id of ['football-leagues', 'crypto', 'stocks-index']) {
+      expect(['no-predictions', 'too-few-resolved', 'too-few-models']).toContain(reasons.get(id));
+    }
     expect(reasons.size).toBe(5);
   });
 

@@ -2,7 +2,7 @@
   {
     "id": "claude",
     "name": "Claude Fable 5",
-    "provider": "Wavespeed",
+    "provider": "Anthropic",
     "color": "#d97757",
     "version": "claude-fable-5",
     "releaseDate": "2026-05-06",
@@ -11,7 +11,7 @@
   {
     "id": "deepseek",
     "name": "DeepSeek V4 Pro",
-    "provider": "Wavespeed",
+    "provider": "DeepSeek",
     "color": "#4d6bfe",
     "version": "deepseek-v4-pro",
     "access": "public"
@@ -28,7 +28,7 @@
   {
     "id": "gemini-flash",
     "name": "Gemini 3.5 Flash",
-    "provider": "Wavespeed",
+    "provider": "Google",
     "color": "#4285f4",
     "version": "gemini-3.5-flash",
     "access": "public"
@@ -36,7 +36,7 @@
   {
     "id": "glm",
     "name": "GLM-5.2",
-    "provider": "Wavespeed",
+    "provider": "Z.ai",
     "color": "#14b8a6",
     "version": "glm-5.2",
     "access": "public"
@@ -44,7 +44,7 @@
   {
     "id": "gpt",
     "name": "GPT-5.5",
-    "provider": "Wavespeed",
+    "provider": "OpenAI",
     "color": "#10a37f",
     "version": "gpt-5.5",
     "releaseDate": "2026-04-18",
@@ -71,7 +71,7 @@
   {
     "id": "kimi-k3",
     "name": "Kimi K3",
-    "provider": "Wavespeed",
+    "provider": "Moonshot AI",
     "color": "#ec4899",
     "version": "kimi-k3",
     "access": "public"
@@ -87,7 +87,7 @@
   {
     "id": "qwen",
     "name": "Qwen 3.7 Max",
-    "provider": "Wavespeed",
+    "provider": "Alibaba",
     "color": "#eab308",
     "version": "qwen-3.7-max",
     "releaseDate": "2026-05-22",

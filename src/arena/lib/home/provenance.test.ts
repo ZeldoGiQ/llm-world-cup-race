@@ -96,14 +96,21 @@ describe('classifyCategoryData', () => {
     expect(result.flags).toEqual([]);
   });
 
-  it('stuft ab, wenn ein Tipp später datiert ist als der Datenstand', () => {
+  it('stuft NICHT ab, wenn ein Tipp jünger ist als der Datenstand der Events', () => {
+    /*
+     * Regression: Genau dieses Indiz gab es einmal, und es hat eine echte
+     * Kategorie stillgelegt. `updatedAt` bewegt sich nur bei inhaltlichen
+     * Event-Änderungen – im Betrieb laufen Vorhersagen aber stündlich ein,
+     * während die Events tagelang gleich bleiben. Ein Tipp nach dem
+     * Datenstand ist deshalb das gesündeste Muster der Pipeline, kein Indiz.
+     */
     const result = classifyCategoryData(
       'live',
       events([{ id: 'a' }]),
       predictions([{ event: 'a', model: 'm', createdAt: '2026-07-21T00:00:00.000Z' }]),
     );
-    expect(result.dataSource).toBe('example');
-    expect(result.flags).toContain('prediction-after-update');
+    expect(result.dataSource).toBe('live');
+    expect(result.flags).toEqual([]);
   });
 
   it('behandelt einen Tipp nach Ereignisbeginn als Regelbruch, nicht als Beispieldatum', () => {

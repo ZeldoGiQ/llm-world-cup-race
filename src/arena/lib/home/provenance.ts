@@ -29,12 +29,21 @@ import type { EventsFile, PredictionsFile } from '../types';
 
 export type DataSource = 'live' | 'example';
 
-/** Indizien, die eine Kategorie von `live` auf `example` abstufen. */
+/**
+ * Indizien, die eine Kategorie von `live` auf `example` abstufen.
+ *
+ * Bewusst NICHT dabei: „Tipp jünger als der Datenstand". `updatedAt` bewegt
+ * sich nur, wenn sich die Events inhaltlich ändern – im laufenden Betrieb
+ * laufen Vorhersagen aber stündlich ein, während die Events tagelang gleich
+ * bleiben. Das Indiz feuerte damit auf das gesündeste Muster der Pipeline und
+ * hat eine echte Kategorie stillgelegt. Die Beispieldaten, die es fangen
+ * sollte, tragen ohnehin andere Indizien (Selbstdeklaration im metadata,
+ * Auflösung vor dem Ereignis).
+ */
 export type ProvenanceFlag =
   | 'declared-example'
   | 'metadata-source-sample'
-  | 'resolved-after-update'
-  | 'prediction-after-update';
+  | 'resolved-after-update';
 
 /** Regelbrüche – kein Abstufungsgrund, sondern Ausschluss mit Hinweis. */
 export type IntegrityError = 'prediction-after-event' | 'invalid-resolution';
@@ -87,16 +96,10 @@ export function classifyCategoryData(
     flags.push('resolved-after-update');
   }
 
-  let predictionAfterUpdate = false;
   for (const [eventId, byModel] of Object.entries(predictions?.predictions ?? {})) {
     const event = byId.get(eventId);
     for (const prediction of Object.values(byModel)) {
       const createdAt = prediction?.createdAt ? Date.parse(prediction.createdAt) : Number.NaN;
-
-      // Indiz: Tipp trägt einen Zeitstempel nach dem Datenstand der Datei.
-      if (hasUpdatedAt && Number.isFinite(createdAt) && createdAt > updatedAt + toleranceMs) {
-        predictionAfterUpdate = true;
-      }
 
       // Regelbruch: Tipp zum oder nach Ereignisbeginn. Kein Zeitstempel heisst
       // „unbekannt" und ist kein Verstoss – die Oberfläche zeigt dann kein
@@ -109,7 +112,6 @@ export function classifyCategoryData(
       }
     }
   }
-  if (predictionAfterUpdate) flags.push('prediction-after-update');
 
   // Regelbruch: aufgelöst, aber das Ergebnis passt nicht zum Vorhersage-Typ.
   for (const event of list) {
@@ -134,5 +136,4 @@ export const FLAG_REASON_KEY: Record<ProvenanceFlag, string> = {
   'declared-example': 'home.flag.declared',
   'metadata-source-sample': 'home.flag.metadataSample',
   'resolved-after-update': 'home.flag.resolvedAfterUpdate',
-  'prediction-after-update': 'home.flag.predictionAfterUpdate',
 };
