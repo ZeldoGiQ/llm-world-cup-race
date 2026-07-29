@@ -65,6 +65,7 @@ const PRIVACY: Localized<LegalSection[]> = {
       heading: 'Zweck und Rechtsgrundlage',
       body: [
         'Diese Daten sind erforderlich, um die Seite auszuliefern, ihre Stabilität zu sichern und Angriffe abzuwehren. Rechtsgrundlage ist das berechtigte Interesse an einem sicheren und funktionierenden Angebot nach Artikel 6 Absatz 1 Buchstabe f der Datenschutz-Grundverordnung.',
+        'Die Protokolle werden gelöscht, sobald sie für diese Zwecke nicht mehr erforderlich sind; die Aufbewahrungsfrist richtet sich nach den Vorgaben des Hosting-Anbieters. Länger gespeichert wird nur, was zur Aufklärung eines konkreten Sicherheitsvorfalls benötigt wird, und auch das nur so lange, bis die Aufklärung abgeschlossen ist.',
         'Eine Zusammenführung dieser Daten mit anderen Quellen findet nicht statt. Es gibt keine Auswertung des Nutzungsverhaltens, keine Profilbildung und keine automatisierte Entscheidungsfindung.',
       ],
     },
@@ -72,7 +73,8 @@ const PRIVACY: Localized<LegalSection[]> = {
       id: 'hosting',
       heading: 'Hosting',
       body: [
-        'Die Seite wird bei Vercel Inc. gehostet. Der Anbieter verarbeitet die genannten Zugriffsdaten in unserem Auftrag auf Grundlage eines Vertrags zur Auftragsverarbeitung nach Artikel 28 der Datenschutz-Grundverordnung. Soweit dabei Daten in die Vereinigten Staaten übermittelt werden, stützt sich die Übermittlung auf die dafür vorgesehenen Garantien.',
+        'Die Seite wird bei Vercel Inc. gehostet. Der Anbieter verarbeitet die genannten Zugriffsdaten in unserem Auftrag auf Grundlage eines Vertrags zur Auftragsverarbeitung nach Artikel 28 der Datenschutz-Grundverordnung. Die Auslieferung erfolgt über Server in der Europäischen Union.',
+        'Soweit dabei Daten in die Vereinigten Staaten übermittelt werden, stützt sich die Übermittlung auf den Angemessenheitsbeschluss der Europäischen Kommission zum EU-US Data Privacy Framework und ergänzend auf die Standardvertragsklauseln der Europäischen Kommission nach Artikel 46 Absatz 2 Buchstabe c der Datenschutz-Grundverordnung.',
       ],
     },
     {
@@ -95,7 +97,7 @@ const PRIVACY: Localized<LegalSection[]> = {
       heading: 'Links zu anderen Anbietern',
       body: [
         'Die Seite enthält Schaltflächen zum Teilen von Inhalten bei X, WhatsApp und LinkedIn sowie einen Link zu einem YouTube-Kanal. Das sind gewöhnliche Verweise, keine eingebetteten Bausteine: Solange Sie sie nicht anklicken, wird nichts an diese Anbieter übertragen. Die Links sind so gesetzt, dass die zuvor besuchte Adresse nicht mitgesendet wird.',
-        'Klicken Sie einen dieser Links an, verlassen Sie diese Seite. Ab dann gelten die Datenschutzbestimmungen des jeweiligen Anbieters, auf dessen Verarbeitung wir keinen Einfluss haben.',
+        'Klicken Sie einen dieser Links an, verlassen Sie diese Seite. Dabei wird die Adresse der geteilten Seite an den jeweiligen Dienst übermittelt, weil sie Bestandteil des Links ist; die zuvor besuchte Adresse wird dagegen unterdrückt. Ab dann gelten die Datenschutzbestimmungen des jeweiligen Anbieters, auf dessen Verarbeitung wir keinen Einfluss haben.',
       ],
     },
     {
@@ -150,6 +152,7 @@ const PRIVACY: Localized<LegalSection[]> = {
       heading: 'Purpose and legal basis',
       body: [
         'This data is required to deliver the site, keep it stable and defend against attacks. The legal basis is the legitimate interest in a secure and functioning service under Article 6(1)(f) GDPR.',
+        'The logs are deleted as soon as they are no longer needed for those purposes; the retention period follows the hosting provider’s settings. Anything is kept longer only where a specific security incident has to be investigated, and only until that investigation is finished.',
         'This data is not combined with other sources. There is no analysis of usage behaviour, no profiling and no automated decision-making.',
       ],
     },
@@ -157,7 +160,8 @@ const PRIVACY: Localized<LegalSection[]> = {
       id: 'hosting',
       heading: 'Hosting',
       body: [
-        'The site is hosted by Vercel Inc. The provider processes the access data described above on our behalf under a data processing agreement pursuant to Article 28 GDPR. Where data is transferred to the United States, the transfer relies on the safeguards provided for that purpose.',
+        'The site is hosted by Vercel Inc. The provider processes the access data described above on our behalf under a data processing agreement pursuant to Article 28 GDPR. Delivery runs through servers in the European Union.',
+        'Where data is transferred to the United States, the transfer relies on the European Commission’s adequacy decision for the EU-US Data Privacy Framework and, in addition, on the European Commission’s standard contractual clauses under Article 46(2)(c) GDPR.',
       ],
     },
     {
@@ -180,7 +184,7 @@ const PRIVACY: Localized<LegalSection[]> = {
       heading: 'Links to other providers',
       body: [
         'The site offers buttons for sharing content on X, WhatsApp and LinkedIn, and a link to a YouTube channel. These are ordinary links, not embedded widgets: nothing is transmitted to those providers unless you click. The links are set so that the previously visited address is not passed on.',
-        'Once you follow such a link you leave this site, and the privacy policy of the respective provider applies, over whose processing we have no influence.',
+        'Once you follow such a link you leave this site. The address of the shared page is passed to that service, because it forms part of the link; the previously visited address is suppressed. From then on the privacy policy of the respective provider applies, over whose processing we have no influence.',
       ],
     },
     {
@@ -235,6 +239,7 @@ const PRIVACY: Localized<LegalSection[]> = {
       heading: 'Finalidad y base jurídica',
       body: [
         'Estos datos son necesarios para entregar el sitio, mantener su estabilidad y defenderlo frente a ataques. La base jurídica es el interés legítimo en un servicio seguro y funcional, conforme al artículo 6.1.f del RGPD.',
+        'Los registros se borran en cuanto dejan de ser necesarios para esos fines; el plazo de conservación se rige por la configuración del proveedor de alojamiento. Solo se conserva más tiempo lo que haga falta para esclarecer un incidente de seguridad concreto, y únicamente hasta que ese esclarecimiento concluya.',
         'Estos datos no se combinan con otras fuentes. No hay análisis del comportamiento de uso, ni elaboración de perfiles, ni decisiones automatizadas.',
       ],
     },
@@ -242,7 +247,8 @@ const PRIVACY: Localized<LegalSection[]> = {
       id: 'hosting',
       heading: 'Alojamiento',
       body: [
-        'El sitio está alojado en Vercel Inc. El proveedor trata los datos de acceso descritos por cuenta nuestra, en virtud de un contrato de encargo del tratamiento conforme al artículo 28 del RGPD. En la medida en que haya transferencias a Estados Unidos, estas se amparan en las garantías previstas para ello.',
+        'El sitio está alojado en Vercel Inc. El proveedor trata los datos de acceso descritos por cuenta nuestra, en virtud de un contrato de encargo del tratamiento conforme al artículo 28 del RGPD. La entrega se realiza a través de servidores situados en la Unión Europea.',
+        'En la medida en que haya transferencias a Estados Unidos, estas se amparan en la decisión de adecuación de la Comisión Europea relativa al EU-US Data Privacy Framework y, complementariamente, en las cláusulas contractuales tipo de la Comisión Europea conforme al artículo 46.2.c del RGPD.',
       ],
     },
     {
@@ -265,7 +271,7 @@ const PRIVACY: Localized<LegalSection[]> = {
       heading: 'Enlaces a otros proveedores',
       body: [
         'El sitio ofrece botones para compartir en X, WhatsApp y LinkedIn, y un enlace a un canal de YouTube. Son enlaces corrientes, no widgets incrustados: mientras no haga clic, no se transmite nada a esos proveedores. Los enlaces están configurados para no enviar la dirección visitada previamente.',
-        'Al seguir uno de esos enlaces abandona este sitio y se aplica la política de privacidad del proveedor correspondiente, sobre cuyo tratamiento no tenemos influencia.',
+        'Al seguir uno de esos enlaces abandona este sitio. La dirección de la página compartida se transmite a ese servicio, porque forma parte del enlace; la dirección visitada previamente, en cambio, se suprime. A partir de ese momento se aplica la política de privacidad del proveedor correspondiente, sobre cuyo tratamiento no tenemos influencia.',
       ],
     },
     {
