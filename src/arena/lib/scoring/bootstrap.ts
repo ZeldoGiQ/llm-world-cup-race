@@ -77,6 +77,17 @@ export interface CategoryUncertainty {
   rankInterval: Record<string, [number, number]>;
   /** 90-Prozent-Intervall des Metrik-Werts */
   valueInterval: Record<string, [number, number]>;
+  /**
+   * Metrik, in deren EINHEIT valueInterval steht.
+   *
+   * Ohne dieses Feld ist valueInterval nicht sicher darstellbar: Fehlt einer
+   * Kategorie die Referenz, weicht die Berechnung auf die Kategorie-Metrik
+   * aus (MAPE, MAE …). Ein Aufrufer, der die Zahlen dann als „Prediction
+   * Score" beschriftet, zeigt Prozentwerte oder Indexpunkte unter der
+   * falschen Überschrift – und bei „kleiner ist besser"-Metriken zusätzlich
+   * mit umgedrehter Richtung.
+   */
+  metricId: string;
   pairs: PairComparison[];
   /** Anzahl der Events, über die alle verglichenen Modelle einen Tipp haben */
   commonEvents: number;
@@ -135,6 +146,7 @@ export function bootstrapCategory(params: BootstrapParams): CategoryUncertainty 
     probabilityFirst: {},
     rankInterval: {},
     valueInterval: {},
+    metricId: metric.id,
     pairs: [],
     commonEvents: n,
     draws,
@@ -244,5 +256,14 @@ export function bootstrapCategory(params: BootstrapParams): CategoryUncertainty 
     });
   }
 
-  return { probabilityFirst, rankInterval, valueInterval, pairs, commonEvents: n, draws, seed };
+  return {
+    probabilityFirst,
+    rankInterval,
+    valueInterval,
+    metricId: metric.id,
+    pairs,
+    commonEvents: n,
+    draws,
+    seed,
+  };
 }

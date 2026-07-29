@@ -94,6 +94,12 @@ if (overall.status === 'ready') {
 for (const entry of data.live) {
   if (!entry.standings || entry.scoredPairs === 0) continue;
   const uncertainty = uncertaintyFor(entry);
+  // Das Wert-Intervall darf nur unter der Score-Überschrift stehen, wenn es
+  // auch in Score-Einheiten gerechnet ist. Fehlt einer Kategorie die
+  // Referenz, weicht der Bootstrap auf die Kategorie-Metrik aus – dann
+  // stünden dort Prozentwerte, bei „kleiner ist besser" sogar mit
+  // umgedrehter Richtung. Die Rang-Aussagen bleiben davon unberührt.
+  const scoreUncertainty = uncertainty?.metricId === 'prediction-score' ? uncertainty : null;
   const rows = entry.standings.rows
     .filter((row) => row.rank > 0 && row.scored > 0)
     .map((row) => {
@@ -105,7 +111,7 @@ for (const entry of data.live) {
         color: row.model.color,
         provider: row.model.provider,
         score: cell?.value?.value ?? null,
-        interval: uncertainty?.valueInterval[row.model.id] ?? null,
+        interval: scoreUncertainty?.valueInterval[row.model.id] ?? null,
         probabilityFirst: uncertainty?.probabilityFirst[row.model.id] ?? null,
         detail: translate('leaderboards.scoredEvents', {
           count: formatInteger(row.scored, locale),
@@ -133,15 +139,26 @@ for (const entry of data.live) {
 
 const pageUrl = arenaUrl(locale, 'leaderboards');
 
-/** Teilen-Links je Board – Intent-URLs, keine Skripte. */
+/**
+ * Teilen-Links je Board – Intent-URLs, keine Skripte.
+ *
+ * Der Text darf nur dann eine Führung behaupten, wenn es sie nachweislich
+ * gibt: genau eine Zeile auf Rang 1 UND ein Intervall, das sich vom zweiten
+ * trennt. Sonst stünde neben einem Bild, auf dem „zu knapp" steht, ein
+ * Beitragstext, der „führt" sagt – oder es würde ein alphabetisch erster
+ * Name zum Sieger erklärt, obwohl sechs Modelle gleichauf liegen.
+ */
 function shareFor(board: Board) {
   const leader = board.rows[0];
-  const text = leader
-    ? translate('leaderboards.shareText', {
-        leader: leader.name,
-        board: board.title,
-      })
-    : translate('meta.siteDescription');
+  const uniqueFirst = board.rows.filter((row) => row.rank === 1).length === 1;
+  const second = board.rows[1];
+  const separated = Boolean(
+    leader?.interval && second?.interval && leader.interval[0] > second.interval[1],
+  );
+  const text =
+    leader && uniqueFirst && separated
+      ? translate('leaderboards.shareText', { leader: leader.name, board: board.title })
+      : translate('leaderboards.shareTextNeutral', { board: board.title });
   const url = board.href ? arenaUrl(locale, board.id) : pageUrl;
   return {
     text,

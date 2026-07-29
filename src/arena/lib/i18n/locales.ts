@@ -84,6 +84,8 @@ export const RESERVED_PATH_SEGMENTS: readonly string[] = [
   'models',
   'share',
   'leaderboards',
+  'imprint',
+  'privacy',
 ];
 
 /** Wirft, wenn eine Kategorie-ID mit einem reservierten Segment kollidiert. */

@@ -182,3 +182,18 @@ describe('Reproduzierbarkeit des Builds', () => {
     }
   });
 });
+
+describe('metricId – die Einheit muss mitreisen', () => {
+  it('nennt die Metrik, in deren Einheit valueInterval steht', () => {
+    // Regression: Ohne dieses Feld beschriftete die Leaderboards-Seite
+    // MAPE-Werte als „Prediction Score" – bei einer „kleiner ist besser"-
+    // Metrik zusätzlich mit umgedrehter Richtung, sodass das letzte Modell
+    // das beste Intervall zeigte.
+    const samples = new Map([
+      ['a', [{ prediction: { kind: 'numeric', value: 1 }, resolution: { kind: 'numeric', value: 1 } }]],
+      ['b', [{ prediction: { kind: 'numeric', value: 2 }, resolution: { kind: 'numeric', value: 1 } }]],
+    ]) as never;
+    const metric = metrics.get('mae');
+    expect(bootstrapCategory({ samplesByModel: samples, metric }).metricId).toBe(metric.id);
+  });
+});

@@ -76,7 +76,12 @@ export function shareCards(): ShareCardData[] {
     .filter((entry) => entry.scoredPairs > 0 && entry.standings)
     .filter((entry) => entry.resolvedEvents >= MIN_RESOLVED_FOR_CARD)
     .map((entry) => {
-      const uncertainty = uncertaintyFor(entry);
+      // Whisker nur, wenn das Intervall auch in Score-Einheiten gerechnet
+      // ist. Ohne Referenz weicht der Bootstrap auf die Kategorie-Metrik aus –
+      // ein Fehlerbalken in Prozent neben einer Säule in Score-Punkten wäre
+      // schlicht eine falsche Grafik.
+      const rawUncertainty = uncertaintyFor(entry);
+      const uncertainty = rawUncertainty?.metricId === 'prediction-score' ? rawUncertainty : null;
       const rows: ShareRow[] = entry
         .standings!.rows.filter((row) => row.rank > 0)
         .slice(0, 5)

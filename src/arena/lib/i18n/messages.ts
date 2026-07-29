@@ -124,6 +124,14 @@ const MESSAGES = {
     de: '{leader} führt die Rangliste {board} auf FutureBench.',
     es: '{leader} encabeza la clasificación {board} en FutureBench.',
   },
+  // Ohne getrennte Intervalle oder bei geteiltem Rang 1 wird niemand zum
+  // Führenden erklärt – der Beitrag lädt dann zum Nachsehen ein, statt eine
+  // Reihenfolge zu behaupten, die im Messfehler liegt.
+  'leaderboards.shareTextNeutral': {
+    en: 'The {board} board on FutureBench — with the error bars that show how close it is.',
+    de: 'Die Rangliste {board} auf FutureBench – mit den Fehlerbalken, die zeigen, wie knapp es ist.',
+    es: 'La clasificación {board} en FutureBench, con las barras de error que muestran lo ajustado que está.',
+  },
   'leaderboards.imageLink': {
     en: 'Image (link preview)',
     de: 'Bild (Link-Vorschau)',
@@ -135,6 +143,71 @@ const MESSAGES = {
     es: 'Imagen (vertical)',
   },
   'leaderboards.imageStory': { en: 'Image (story)', de: 'Bild (Story)', es: 'Imagen (story)' },
+  /* --- Impressum & Datenschutz --- */
+  'legal.imprintTitle': { en: 'Imprint', de: 'Impressum', es: 'Aviso legal' },
+  'legal.privacyTitle': {
+    en: 'Privacy',
+    de: 'Datenschutzerklärung',
+    es: 'Protección de datos',
+  },
+  'legal.imprintDescription': {
+    en: 'Provider identification for futurebench.ai.',
+    de: 'Anbieterkennzeichnung für futurebench.ai.',
+    es: 'Identificación del prestador de futurebench.ai.',
+  },
+  'legal.privacyDescription': {
+    en: 'What this site processes: no cookies, no tracking, no third-party requests — only unavoidable server logs.',
+    de: 'Was diese Seite verarbeitet: keine Cookies, kein Tracking, keine Abrufe bei Dritten – nur die unvermeidbaren Server-Protokolle.',
+    es: 'Qué trata este sitio: sin cookies, sin rastreo, sin peticiones a terceros; solo los registros de servidor inevitables.',
+  },
+  'legal.pendingLabel': {
+    en: 'Incomplete',
+    de: 'Noch unvollständig',
+    es: 'Incompleto',
+  },
+  'legal.pendingBody': {
+    en: 'The operator details for this page have not been entered yet. They are being added; until then this page deliberately shows nothing rather than something invented.',
+    de: 'Die Betreiberangaben für diese Seite sind noch nicht eingetragen. Sie werden ergänzt; bis dahin steht hier bewusst nichts statt einer erfundenen Angabe.',
+    es: 'Todavía no se han introducido los datos del titular. Se añadirán; hasta entonces esta página no muestra nada en lugar de un dato inventado.',
+  },
+  'legal.imprintProviderHeading': {
+    en: 'Provider',
+    de: 'Anbieter',
+    es: 'Prestador',
+  },
+  'legal.imprintContactHeading': { en: 'Contact', de: 'Kontakt', es: 'Contacto' },
+  'legal.imprintRepresentativeHeading': {
+    en: 'Authorised representative',
+    de: 'Vertretungsberechtigter Geschäftsführer',
+    es: 'Representante legal',
+  },
+  'legal.imprintRegisterHeading': {
+    en: 'Commercial register',
+    de: 'Registereintrag',
+    es: 'Registro mercantil',
+  },
+  'legal.imprintVatHeading': {
+    en: 'VAT identification number',
+    de: 'Umsatzsteuer-Identifikationsnummer',
+    es: 'Número de identificación fiscal',
+  },
+  'legal.imprintContentHeading': {
+    en: 'Responsible for content',
+    de: 'Verantwortlich für den Inhalt',
+    es: 'Responsable del contenido',
+  },
+  'legal.imprintDisclaimer': {
+    en: 'Model names and logos are trademarks of their respective owners and are used here to identify the systems under test.',
+    de: 'Modellnamen und Logos sind Marken der jeweiligen Inhaber und werden hier zur Kennzeichnung der geprüften Systeme verwendet.',
+    es: 'Los nombres y logotipos de los modelos son marcas de sus respectivos titulares y se usan aquí para identificar los sistemas evaluados.',
+  },
+  'legal.privacyImprintPointer': {
+    en: 'Controller and contact details:',
+    de: 'Verantwortlicher und Kontaktdaten:',
+    es: 'Responsable y datos de contacto:',
+  },
+  'legal.footerPrivacy': { en: 'Privacy', de: 'Datenschutz', es: 'Privacidad' },
+
   'leaderboards.footer': {
     en: 'How these numbers come about:',
     de: 'Wie diese Zahlen zustande kommen:',

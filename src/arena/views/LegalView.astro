@@ -1,0 +1,173 @@
+---
+/**
+ * Impressum und Datenschutzerklärung – eine Ansicht, zwei Modi.
+ *
+ * Beide Seiten sind reiner Text mit derselben Struktur; sie zu trennen
+ * hieße, dasselbe Gerüst zweimal zu pflegen.
+ *
+ * Fehlen die Betreiberangaben (siehe lib/legal/operator.ts), zeigt die Seite
+ * das offen an, statt Platzhalter wie echte Angaben aussehen zu lassen. Eine
+ * falsche Anbieterkennzeichnung ist schlimmer als eine sichtbar
+ * unvollständige.
+ */
+import { arenaPath, type Locale } from '../lib/i18n/locales';
+import { t } from '../lib/i18n/messages';
+import { OPERATOR, operatorComplete } from '../lib/legal/operator';
+import { privacySections } from '../lib/legal/texts';
+import '../lib/plugins';
+import ArenaLayout from '../layouts/ArenaLayout.astro';
+
+interface Props {
+  locale: Locale;
+  kind: 'imprint' | 'privacy';
+}
+
+const { locale, kind } = Astro.props;
+const translate = t(locale);
+const complete = operatorComplete();
+const sections = kind === 'privacy' ? privacySections(locale) : [];
+
+const title = translate(kind === 'privacy' ? 'legal.privacyTitle' : 'legal.imprintTitle');
+const description = translate(
+  kind === 'privacy' ? 'legal.privacyDescription' : 'legal.imprintDescription',
+);
+---
+
+<ArenaLayout locale={locale} sub={kind} title={title} description={description}>
+  <main class="mx-auto max-w-3xl px-4 pb-8 pt-6">
+    <h1 class="font-display text-[26px] font-semibold leading-tight text-ink-50 sm:text-4xl">
+      {title}
+    </h1>
+
+    {
+      !complete && (
+        <div class="mt-6 rounded-2xl border border-dashed border-clay-500/60 bg-clay-500/5 p-5">
+          <p class="font-mono text-[10px] uppercase tracking-wider text-clay-400">
+            {translate('legal.pendingLabel')}
+          </p>
+          <p class="mt-2 text-[14px] leading-relaxed text-ink-200">
+            {translate('legal.pendingBody')}
+          </p>
+        </div>
+      )
+    }
+
+    {
+      kind === 'imprint' && complete && (
+        <section class="mt-8 space-y-5 text-[15px] leading-relaxed text-ink-200">
+          <div>
+            <h2 class="font-display text-lg font-semibold text-ink-50">
+              {translate('legal.imprintProviderHeading')}
+            </h2>
+            <address class="mt-2 not-italic">
+              {OPERATOR.name}
+              {OPERATOR.address.map((line) => (
+                <>
+                  <br />
+                  {line}
+                </>
+              ))}
+            </address>
+          </div>
+          {OPERATOR.representative && (
+            <div>
+              <h2 class="font-display text-lg font-semibold text-ink-50">
+                {translate('legal.imprintRepresentativeHeading')}
+              </h2>
+              <p class="mt-2">{OPERATOR.representative}</p>
+            </div>
+          )}
+          {OPERATOR.register && (
+            <div>
+              <h2 class="font-display text-lg font-semibold text-ink-50">
+                {translate('legal.imprintRegisterHeading')}
+              </h2>
+              <p class="mt-2">
+                {OPERATOR.register.court}
+                <br />
+                {OPERATOR.register.number}
+              </p>
+            </div>
+          )}
+          <div>
+            <h2 class="font-display text-lg font-semibold text-ink-50">
+              {translate('legal.imprintContactHeading')}
+            </h2>
+            <p class="mt-2">
+              <a
+                class="text-signal-300 underline underline-offset-2 hover:text-signal-400"
+                href={`mailto:${OPERATOR.email}`}
+              >
+                {OPERATOR.email}
+              </a>
+              {OPERATOR.phone && <><br />{OPERATOR.phone}</>}
+            </p>
+          </div>
+          {OPERATOR.vatId && (
+            <div>
+              <h2 class="font-display text-lg font-semibold text-ink-50">
+                {translate('legal.imprintVatHeading')}
+              </h2>
+              <p class="mt-2 font-mono text-[14px]">{OPERATOR.vatId}</p>
+            </div>
+          )}
+          {OPERATOR.contentResponsible && (
+            <div>
+              <h2 class="font-display text-lg font-semibold text-ink-50">
+                {translate('legal.imprintContentHeading')}
+              </h2>
+              <address class="mt-2 not-italic">
+                {OPERATOR.contentResponsible.map((line, index) => (
+                  <>
+                    {index > 0 && <br />}
+                    {line}
+                  </>
+                ))}
+              </address>
+            </div>
+          )}
+          <p class="border-t border-ink-800 pt-5 text-[13px] text-ink-400">
+            {translate('legal.imprintDisclaimer')}
+          </p>
+        </section>
+      )
+    }
+
+    {
+      kind === 'privacy' && (
+        <div class="mt-8 space-y-8">
+          {sections.map((section) => (
+            <section aria-labelledby={`legal-${section.id}`}>
+              <h2
+                id={`legal-${section.id}`}
+                class="font-display text-lg font-semibold text-ink-50 sm:text-xl"
+              >
+                {section.heading}
+              </h2>
+              {section.body.map((paragraph) => (
+                <p class="mt-2 text-[15px] leading-relaxed text-ink-200">{paragraph}</p>
+              ))}
+              {section.list && (
+                <ul class="mt-3 list-disc space-y-1 pl-5 text-[15px] leading-relaxed text-ink-300">
+                  {section.list.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              )}
+            </section>
+          ))}
+
+          <p class="border-t border-ink-800 pt-6 text-[13px] text-ink-400">
+            {translate('legal.privacyImprintPointer')}{' '}
+            <a
+              class="text-signal-300 underline underline-offset-2 hover:text-signal-400"
+              href={arenaPath(locale, 'imprint')}
+            >
+              {translate('legal.imprintTitle')}
+            </a>
+          </p>
+        </div>
+      )
+    }
+  </main>
+</ArenaLayout>

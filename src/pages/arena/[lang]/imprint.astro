@@ -1,0 +1,13 @@
+---
+// imprint der Alternativsprachen (/arena/de/imprint, /arena/es/imprint).
+import { PREFIXED_LOCALES, type Locale } from '../../../arena/lib/i18n/locales';
+import LegalView from '../../../arena/views/LegalView.astro';
+
+export function getStaticPaths() {
+  return PREFIXED_LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+---
+
+<LegalView locale={lang as Locale} kind="imprint" />

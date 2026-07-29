@@ -260,6 +260,22 @@ const ogImage = ogCard ? `${ARENA_ORIGIN}/arena/share/${ogCard.id}.png` : null;
               target="_blank">ZELDOgiq</a
             >
           </p>
+          {/* Impressum und Datenschutz gehören in jede Fußzeile: Sie müssen
+              von jeder Seite aus mit einem Klick erreichbar sein. */}
+          <p class="flex flex-wrap gap-x-4 gap-y-1">
+            <a
+              class="underline decoration-ink-600 underline-offset-2 transition-colors hover:text-ink-200"
+              href={arenaPath(locale, 'imprint')}
+            >
+              {translate('legal.imprintTitle')}
+            </a>
+            <a
+              class="underline decoration-ink-600 underline-offset-2 transition-colors hover:text-ink-200"
+              href={arenaPath(locale, 'privacy')}
+            >
+              {translate('legal.footerPrivacy')}
+            </a>
+          </p>
           {
             dataSources.example > 0 && (
               <p>
