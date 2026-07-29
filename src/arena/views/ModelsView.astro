@@ -5,6 +5,7 @@
  */
 import { avatarTextColor, modelInitials } from '../../lib/format';
 import { loadHomeData } from '../lib/home/home-data';
+import { modelLogo } from '../lib/model-logos';
 import { providerMark } from '../lib/provider-marks';
 import { formatDate } from '../lib/i18n/format';
 import { arenaPath, pick, type Locale } from '../lib/i18n/locales';
@@ -69,7 +70,13 @@ const scoredOf = (modelId: string) =>
                       style={`background-color:${model.color};color:${avatarTextColor(model.color)}`}
                       aria-hidden="true"
                     >
-                      {providerMark(model.provider) ? (
+                      {modelLogo(model.id) ? (
+                        <img
+                          src={modelLogo(model.id)}
+                          alt=""
+                          class="h-full w-full rounded-full object-cover"
+                        />
+                      ) : providerMark(model.provider) ? (
                         <svg
                           viewBox="0 0 24 24"
                           class="h-3.5 w-3.5"

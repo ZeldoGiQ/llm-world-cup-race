@@ -1,6 +1,7 @@
 import { avatarTextColor, modelInitials } from '../../lib/format';
 import { modelName, modelProvider, type Locale } from '../lib/i18n/locales';
 import { t } from '../lib/i18n/messages';
+import { modelLogo } from '../lib/model-logos';
 import { providerMark } from '../lib/provider-marks';
 import type { ArenaModel } from '../lib/types';
 
@@ -32,14 +33,18 @@ export function ModelAvatar({
   model: ArenaModel;
   size?: keyof typeof SIZES;
 }) {
+  // Rangfolge: eigenes Logo → Lab-Glyphe → Initialen.
+  const logo = model.baseline ? undefined : modelLogo(model.id);
   const mark = model.baseline ? undefined : providerMark(model.provider);
   return (
     <span
       aria-hidden="true"
-      className={`inline-flex shrink-0 select-none items-center justify-center rounded-full font-sans font-bold ${SIZES[size]}`}
+      className={`inline-flex shrink-0 select-none items-center justify-center overflow-hidden rounded-full font-sans font-bold ${SIZES[size]}`}
       style={{ backgroundColor: model.color, color: avatarTextColor(model.color) }}
     >
-      {mark ? (
+      {logo ? (
+        <img src={logo} alt="" className="h-full w-full rounded-full object-cover" />
+      ) : mark ? (
         <svg
           viewBox="0 0 24 24"
           className={GLYPH_SIZES[size]}

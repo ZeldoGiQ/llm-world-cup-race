@@ -13,6 +13,7 @@
  */
 import { avatarTextColor, modelInitials } from '../../lib/format';
 import { formatUtc, loadHomeData } from '../lib/home/home-data';
+import { modelLogo } from '../lib/model-logos';
 import { providerMark } from '../lib/provider-marks';
 import { formatInteger, formatPercent } from '../lib/i18n/format';
 import { arenaPath, arenaUrl, pick, type Locale } from '../lib/i18n/locales';
@@ -271,11 +272,17 @@ void knowledgeTrack;
                             {row.rank > 0 ? `${row.rank}` : '–'}
                           </span>
                           <span
-                            class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[10px] font-bold"
+                            class="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded-full text-[10px] font-bold"
                             style={`background-color:${row.model.color};color:${avatarTextColor(row.model.color)}`}
                             aria-hidden="true"
                           >
-                            {providerMark(row.model.provider) ? (
+                            {modelLogo(row.model.id) ? (
+                              <img
+                                src={modelLogo(row.model.id)}
+                                alt=""
+                                class="h-full w-full rounded-full object-cover"
+                              />
+                            ) : providerMark(row.model.provider) ? (
                               <svg
                                 viewBox="0 0 24 24"
                                 class="h-3.5 w-3.5"
