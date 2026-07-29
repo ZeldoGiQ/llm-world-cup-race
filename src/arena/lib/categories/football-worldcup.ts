@@ -50,7 +50,7 @@ export const footballWorldCup: CategoryDescriptor = {
   // Referenzregel, deren Nachträglichkeit auf der Seite offengelegt wird.
   referenceRuleId: 'constant-1-0',
   predictionType: 'scoreline',
-  metricIds: ['kicktipp-points', 'points-per-event', 'exact-acc', 'tendency-acc'],
+  metricIds: ['prediction-score', 'kicktipp-points', 'points-per-event', 'exact-acc', 'tendency-acc'],
   primaryMetric: 'kicktipp-points',
 
   eventTitle(event, locale) {

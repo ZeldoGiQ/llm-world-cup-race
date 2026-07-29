@@ -1,0 +1,129 @@
+---
+/**
+ * Teilnehmerfeld – hierher zog die Feld-Tabelle von der Startseite.
+ * Ausgemusterte Modelle bleiben sichtbar; nichts wird je gelöscht.
+ */
+import { avatarTextColor, modelInitials } from '../../lib/format';
+import { loadHomeData } from '../lib/home/home-data';
+import { formatDate } from '../lib/i18n/format';
+import { arenaPath, pick, type Locale } from '../lib/i18n/locales';
+import { t } from '../lib/i18n/messages';
+import '../lib/plugins';
+import ArenaLayout from '../layouts/ArenaLayout.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const translate = t(locale);
+const data = loadHomeData(locale);
+
+const scoredOf = (modelId: string) =>
+  data.live.reduce(
+    (sum, entry) =>
+      sum + (entry.standings?.rows.find((row) => row.model.id === modelId)?.scored ?? 0),
+    0,
+  );
+---
+
+<ArenaLayout
+  locale={locale}
+  sub="models"
+  title={translate('models.metaTitle')}
+  description={translate('models.metaDescription')}
+>
+  <main class="mx-auto max-w-4xl px-4 pb-8 pt-10">
+    <a href={arenaPath(locale)} class="text-sm text-ink-400 hover:text-ink-200">
+      {translate('nav.backToCategories')}
+    </a>
+    <h1 class="mt-3 font-display text-3xl font-semibold text-ink-50">
+      {translate('home.field.heading')}
+    </h1>
+
+    <div class="mt-6 overflow-x-auto rounded-2xl border border-ink-700/70 bg-ink-900/70">
+      <table class="w-full border-collapse text-sm">
+        <thead>
+          <tr class="text-left text-[11px] uppercase tracking-wider text-ink-400">
+            <th scope="col" class="px-4 py-3 font-medium">{translate('standings.model')}</th>
+            <th scope="col" class="hidden px-4 py-3 font-medium sm:table-cell">
+              {translate('home.field.colVersion')}
+            </th>
+            <th scope="col" class="hidden px-4 py-3 font-medium md:table-cell">
+              {translate('home.field.colReleased')}
+            </th>
+            <th scope="col" class="px-4 py-3 text-right font-medium">
+              {translate('home.field.colScored')}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            [...data.rankedModels, ...data.earlyAccessModels].map((model) => (
+              <tr class="border-t border-ink-700/60">
+                <th scope="row" class="px-4 py-2.5 text-left font-normal">
+                  <span class="flex items-center gap-2">
+                    <span
+                      class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[10px] font-bold"
+                      style={`background-color:${model.color};color:${avatarTextColor(model.color)}`}
+                      aria-hidden="true"
+                    >
+                      {modelInitials(model.name)}
+                    </span>
+                    <span class="text-ink-100">{model.name}</span>
+                    {model.access === 'early-access' && (
+                      <span
+                        class="rounded-full border px-1.5 text-[9px] font-semibold uppercase tracking-wider"
+                        style="border-color:color-mix(in srgb, var(--arena-prerelease) 45%, transparent);color:var(--arena-prerelease)"
+                        title={translate('home.field.exampleEntryTitle')}
+                      >
+                        {translate('home.field.exampleEntry')}
+                      </span>
+                    )}
+                  </span>
+                  <span class="mt-0.5 block text-[11px] text-ink-400 sm:hidden">{model.provider}</span>
+                </th>
+                <td class="hidden px-4 py-2.5 font-mono text-[12px] text-ink-300 sm:table-cell">
+                  {model.version ?? '—'}
+                </td>
+                <td class="hidden px-4 py-2.5 text-[12px] text-ink-300 md:table-cell">
+                  {model.releaseDate ? formatDate(model.releaseDate, locale) : '—'}
+                </td>
+                <td class="px-4 py-2.5 text-right font-mono tabular text-ink-200">
+                  {scoredOf(model.id)}
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    {
+      data.example.length > 0 && (
+        <div class="mt-8">
+          <h2 class="mb-2 font-mono text-[11px] uppercase tracking-wider text-ink-500">
+            {translate('home.cat.sampleGroupHeading')}
+          </h2>
+          <div class="grid gap-3 sm:grid-cols-2">
+            {data.example.map((entry) => (
+              <a
+                href={arenaPath(locale, entry.id)}
+                class="flex items-center justify-between gap-2 rounded-2xl border border-dashed border-ink-700 bg-ink-900/40 p-4 opacity-70 transition-opacity hover:opacity-100"
+                title={translate('home.cat.state.sampleTitle')}
+              >
+                <span class="font-display text-ink-200">{pick(entry.descriptor.label, locale)}</span>
+                <span
+                  class="shrink-0 rounded-full border px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider"
+                  style="border-color:color-mix(in srgb, var(--arena-live) 45%, transparent);color:var(--arena-live)"
+                >
+                  {translate('home.cat.state.sample')}
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      )
+    }
+  </main>
+</ArenaLayout>

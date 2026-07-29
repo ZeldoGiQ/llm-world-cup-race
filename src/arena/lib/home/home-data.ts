@@ -247,6 +247,54 @@ function referenceSamples(rule: ReferenceRule, events: ArenaEvent[]): Sample[] |
   return samples;
 }
 
+/**
+ * Unsicherheit einer Kategorie – in Score-Einheiten, wo eine Referenz existiert.
+ *
+ * Der Bootstrap läuft bevorzugt über die Prediction-Score-Metrik, damit
+ * Intervalle und Whisker in derselben Einheit stehen wie die Hero-Zahl. Ohne
+ * Referenz (kein Quotient bildbar) fällt er auf die Ranking-Metrik der
+ * Kategorie zurück – die Rangaussagen (P(#1), Intervalle) sind in beiden
+ * Fällen identisch, weil Score und Verlust dieselbe Ordnung tragen.
+ *
+ * Exportiert, weil auch der Share-Karten-Endpunkt sie je Kategorie braucht.
+ */
+export function uncertaintyFor(entry: CategoryHome): CategoryUncertainty | null {
+  if (!entry.standings || !entry.events || !entry.predictions) return null;
+  const contenders = entry.standings.rows
+    .filter((row) => row.scored > 0 && !row.isBaseline)
+    .map((row) => row.model.id);
+  if (contenders.length < 2) return null;
+
+  const resolved = resolvedEventsOf(entry.events.events ?? []);
+  const predictionMap = entry.predictions.predictions ?? {};
+  const { events: commonEvents, byModel } = commonSamples(contenders, resolved, predictionMap);
+  if (commonEvents.length === 0) return null;
+
+  // Referenz-Stichprobe über die gemeinsame Event-Menge: aus der Regel oder
+  // aus den Tipps des Referenz-Teilnehmers.
+  let baseline: Sample[] | undefined;
+  if (entry.reference) {
+    baseline = referenceSamples(entry.reference.rule, commonEvents) ?? undefined;
+  } else if (entry.descriptor.baselineModelId) {
+    const samples: Sample[] = [];
+    for (const event of commonEvents) {
+      const prediction = predictionMap[event.id]?.[entry.descriptor.baselineModelId];
+      if (!validPrediction(event, prediction)) break;
+      samples.push({ prediction: prediction!.value, resolution: event.resolution! });
+    }
+    if (samples.length === commonEvents.length) baseline = samples;
+  }
+
+  const scoreMetric = metrics.find('prediction-score');
+  const useScore = Boolean(baseline && baseline.length === commonEvents.length && scoreMetric);
+
+  return bootstrapCategory({
+    samplesByModel: byModel,
+    metric: useScore ? scoreMetric! : (entry.primaryMetric ?? scoreMetric!),
+    baselineSamples: useScore ? baseline : undefined,
+  });
+}
+
 function median(sorted: number[]): number {
   if (sorted.length === 0) return Number.NaN;
   const middle = Math.floor(sorted.length / 2);
@@ -346,7 +394,11 @@ export function loadHomeData(locale: Locale, now: Date = new Date()): HomeData {
             : 'armed';
 
     const leaderRow = standings?.rows.find((row) => row.rank === 1);
-    const leaderCell = leaderRow?.cells.find((cell) => cell.metricId === descriptor.primaryMetric);
+    // Kachel-Anzeige in der Leitwährung, wenn die Kategorie einen Score trägt.
+    const leaderCell =
+      leaderRow?.cells.find(
+        (cell) => cell.metricId === 'prediction-score' && cell.value !== null,
+      ) ?? leaderRow?.cells.find((cell) => cell.metricId === descriptor.primaryMetric);
 
     list.push({
       id: descriptor.id,
@@ -393,62 +445,47 @@ export function loadHomeData(locale: Locale, now: Date = new Date()): HomeData {
       )[0] ?? null;
 
   /* --- Unsicherheit der Heldenkategorie --- */
-  let uncertainty: CategoryUncertainty | null = null;
-  if (featured?.standings && featured.primaryMetric && featured.events && featured.predictions) {
-    const contenders = featured.standings.rows
-      .filter((row) => row.scored > 0 && !row.isBaseline)
-      .map((row) => row.model.id);
-    if (contenders.length >= 2) {
-      const resolved = resolvedEventsOf(featured.events.events ?? []);
-      const { events: commonEvents, byModel } = commonSamples(
-        contenders,
-        resolved,
-        featured.predictions.predictions ?? {},
-      );
-      if (commonEvents.length > 0) {
-        const baseline = featured.reference
-          ? (referenceSamples(featured.reference.rule, commonEvents) ?? undefined)
-          : undefined;
-        uncertainty = bootstrapCategory({
-          samplesByModel: byModel,
-          metric: featured.primaryMetric,
-          baselineSamples: baseline,
-        });
-      }
-    }
-  }
+  const uncertainty: CategoryUncertainty | null = featured ? uncertaintyFor(featured) : null;
 
-  /* --- Antwortzeile --- */
+  /* --- Antwortzeile: spricht in der Leitwährung, dem Prediction Score --- */
   let answer: HomeAnswer = { variant: 'coldStart' };
   if (featured?.standings && featured.primaryMetric) {
     const ranked = featured.standings.rows.filter((row) => row.rank > 0);
     const first = ranked[0];
     const second = ranked[1];
-    const cellOf = (row: typeof first) =>
+    const scoreMetric = metrics.find('prediction-score');
+    // Score-Zelle bevorzugen; ohne Referenz fällt die Zeile auf die
+    // Ranking-Metrik der Kategorie zurück.
+    const heroCellOf = (row: typeof first) =>
+      row?.cells.find((cell) => cell.metricId === 'prediction-score' && cell.value !== null) ??
       row?.cells.find((cell) => cell.metricId === featured.descriptor.primaryMetric);
+    const firstCell = heroCellOf(first);
+    const usesScore = firstCell?.metricId === 'prediction-score' && scoreMetric !== undefined;
+    const heroMetric = usesScore ? scoreMetric! : featured.primaryMetric;
     const pFirst = first ? (uncertainty?.probabilityFirst[first.model.id] ?? 0) : 0;
 
     if (first && second) {
+      const secondCell = heroCellOf(second);
       const gapValue =
-        first.primaryValue !== null && second.primaryValue !== null
-          ? Math.abs(first.primaryValue - second.primaryValue)
+        firstCell?.value != null && secondCell?.value != null
+          ? Math.abs(firstCell.value.value - secondCell.value.value)
           : null;
       answer = {
         // Eine Medaille erst, wenn das führende Modell in mindestens 90 % der
         // Ziehungen vorn liegt. Alles darunter ist eine Führung, kein Sieg.
         variant: pFirst >= 0.9 ? 'clear' : 'tied',
         category: featured,
-        metricLabel: pick(featured.primaryMetric.label, locale),
+        metricLabel: pick(heroMetric.label, locale),
         leader: {
           model: first.model,
-          formatted: cellOf(first)?.formatted ?? '—',
+          formatted: firstCell?.formatted ?? '—',
           probabilityFirst: pFirst,
         },
         runnerUp: {
           model: second.model,
-          formatted: cellOf(second)?.formatted ?? '—',
+          formatted: secondCell?.formatted ?? '—',
           probabilityFirst: uncertainty?.probabilityFirst[second.model.id] ?? 0,
-          gap: gapValue === null ? '—' : featured.primaryMetric.format({ value: gapValue, n: 0 }, locale),
+          gap: gapValue === null ? '—' : heroMetric.format({ value: gapValue, n: 0 }, locale),
         },
       };
     }

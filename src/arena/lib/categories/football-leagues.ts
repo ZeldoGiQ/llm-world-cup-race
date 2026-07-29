@@ -25,6 +25,8 @@ function meta(event: ArenaEvent): LeagueMetadata {
 export const footballLeagues: CategoryDescriptor = {
   id: 'football-leagues',
   dataSource: 'live',
+  // A-priori-Referenz: am 29.07.2026 fixiert, vor der ersten Auflösung.
+  referenceRuleId: 'constant-1-0-apriori',
   label: {
     en: 'Football leagues',
     de: 'Fußball-Ligen',
@@ -42,7 +44,7 @@ export const footballLeagues: CategoryDescriptor = {
   },
   accent: '#4ade80',
   predictionType: 'scoreline',
-  metricIds: ['points-per-event', 'exact-acc', 'tendency-acc', 'kicktipp-points'],
+  metricIds: ['prediction-score', 'points-per-event', 'exact-acc', 'tendency-acc', 'kicktipp-points'],
   primaryMetric: 'points-per-event',
 
   eventTitle(event, locale) {

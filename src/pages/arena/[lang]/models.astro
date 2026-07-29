@@ -1,0 +1,13 @@
+---
+// Teilnehmerfeld der Alternativsprachen (/arena/de/models, /arena/es/models).
+import { PREFIXED_LOCALES, type Locale } from '../../../arena/lib/i18n/locales';
+import ModelsView from '../../../arena/views/ModelsView.astro';
+
+export function getStaticPaths() {
+  return PREFIXED_LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+---
+
+<ModelsView locale={lang as Locale} />

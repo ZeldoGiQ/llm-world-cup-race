@@ -34,3 +34,26 @@ export const constantOneNil: ReferenceRule = {
 };
 
 references.register(constantOneNil);
+
+/**
+ * Dieselbe Regel, aber VORAB festgeschrieben – für die laufenden Fußball-Ligen.
+ *
+ * Der Unterschied zur WM-Variante ist nicht die Vorhersage, sondern der
+ * Zeitpunkt der Festlegung: Diese Regel wurde am 29. Juli 2026 fixiert, bevor
+ * ein einziges Liga-Event aufgelöst war. Sie ist damit eine echte
+ * A-priori-Referenz und trägt kein retroactive-Etikett. Getrennte IDs, weil
+ * die Offenlegung („nachträglich" ja/nein) Teil der Regel-Identität ist.
+ */
+export const constantOneNilApriori: ReferenceRule = {
+  id: 'constant-1-0-apriori',
+  label: constantOneNil.label,
+  note: {
+    en: 'The most common result in professional football, written down on 29 July 2026 — before any league event had resolved. A genuine a-priori reference: it was fixed first, the outcomes came later.',
+    de: 'Das häufigste Ergebnis im Profifußball, festgeschrieben am 29. Juli 2026 – bevor ein einziges Liga-Event aufgelöst war. Eine echte A-priori-Referenz: Erst die Regel, dann die Ergebnisse.',
+    es: 'El resultado más común en el fútbol profesional, fijado el 29 de julio de 2026, antes de que se resolviera un solo evento de liga. Una referencia a priori genuina: primero la regla, después los resultados.',
+  },
+  appliesTo: ['scoreline'],
+  predict: () => ({ kind: 'scoreline', home: 1, away: 0 }),
+};
+
+references.register(constantOneNilApriori);

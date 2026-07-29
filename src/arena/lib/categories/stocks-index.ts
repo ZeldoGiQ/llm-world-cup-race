@@ -42,7 +42,7 @@ export const stocksIndex: CategoryDescriptor = {
   },
   accent: '#22d3ee',
   predictionType: 'numeric',
-  metricIds: ['mae', 'mape', 'rmse', 'skill-score'],
+  metricIds: ['prediction-score', 'mae', 'mape', 'rmse', 'skill-score'],
   primaryMetric: 'mae',
   baselineModelId: 'baseline-randomwalk',
   baselineNote: {

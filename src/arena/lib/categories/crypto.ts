@@ -37,7 +37,7 @@ export const crypto: CategoryDescriptor = {
   },
   accent: '#f7931a',
   predictionType: 'numeric',
-  metricIds: ['mae', 'mape', 'rmse', 'skill-score'],
+  metricIds: ['prediction-score', 'mae', 'mape', 'rmse', 'skill-score'],
   primaryMetric: 'mape',
   baselineModelId: 'baseline-randomwalk',
   baselineNote: {

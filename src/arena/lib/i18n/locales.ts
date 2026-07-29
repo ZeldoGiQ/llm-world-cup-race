@@ -75,7 +75,15 @@ export const ARENA_ORIGIN = 'https://www.futurebench.ai';
  * „methodology", würde eine der Seiten still überschrieben – Astro warnt dabei
  * nicht zuverlässig. Deshalb wird die Kollision beim Bauen aktiv abgewiesen.
  */
-export const RESERVED_PATH_SEGMENTS: readonly string[] = [...LOCALES, 'methodology'];
+export const RESERVED_PATH_SEGMENTS: readonly string[] = [
+  ...LOCALES,
+  'methodology',
+  // Neue feste Seiten und der Share-Endpunkt – eine Kategorie mit diesen IDs
+  // würde die jeweilige Route still überschreiben.
+  'proof',
+  'models',
+  'share',
+];
 
 /** Wirft, wenn eine Kategorie-ID mit einem reservierten Segment kollidiert. */
 export function assertNoReservedCategoryId(id: string): void {

@@ -119,6 +119,8 @@ export interface OverallRow {
   rank: number;
   /** 1 − geometrisches Mittel der Verlust-Quotienten */
   overallSkill: number | null;
+  /** Prediction Score (SCORE_V1): overallSkill × 100 – die Leitzahl der Seite */
+  predictionScore: number | null;
   meanNormalizedRank: number | null;
   categoriesCounted: number;
   /** true = nicht in allen qualifizierten Kategorien angetreten -> kein Rang */
@@ -419,10 +421,12 @@ export function computeOverall(
       .map((cell) => cell.normalizedRank)
       .filter((value): value is number => value !== null);
 
+    const overallSkill = 1 - Math.exp(mean(logRatios));
     return {
       model,
       rank: 0,
-      overallSkill: 1 - Math.exp(mean(logRatios)),
+      overallSkill,
+      predictionScore: 100 * overallSkill,
       meanNormalizedRank: normalized.length > 0 ? mean(normalized) : null,
       categoriesCounted: cells.length,
       provisional: requireAll ? !complete : true,

@@ -44,7 +44,7 @@ export function sampleLoss(sample: Sample): number | null {
   return null;
 }
 
-function averageLoss(samples: Sample[]): number | null {
+export function averageLoss(samples: Sample[]): number | null {
   const losses: number[] = [];
   for (const sample of samples) {
     const loss = sampleLoss(sample);

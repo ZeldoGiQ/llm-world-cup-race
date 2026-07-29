@@ -26,6 +26,58 @@ const MESSAGES = {
     es: 'Algunas categorías siguen con datos de muestra. Están marcadas y quedan fuera de todas las cifras.',
   },
   'nav.language': { en: 'Language', de: 'Sprache', es: 'Idioma' },
+  'nav.proof': { en: 'Proof', de: 'Belege', es: 'Pruebas' },
+  'nav.models': { en: 'Models', de: 'Modelle', es: 'Modelos' },
+
+  /* --- Spuren (Tracks) ---
+     Der Score existiert je Erhebungs-Spur und wird nie über Spuren gemischt. */
+  'track.knowledge': { en: 'Knowledge Cap', de: 'Knowledge Cap', es: 'Knowledge Cap' },
+  'track.web': { en: 'Web Search', de: 'Web Search', es: 'Web Search' },
+  'track.soon': { en: 'soon', de: 'bald', es: 'pronto' },
+  'track.hint': {
+    en: 'Knowledge Cap: no retrieval — every model answers from what it already knows, on identical information. Web Search: the same protocol with native search enabled. Two boards, never mixed.',
+    de: 'Knowledge Cap: keine Recherche – jedes Modell antwortet aus seinem Wissen, auf identischer Information. Web Search: dasselbe Protokoll mit eingeschalteter Suche. Zwei Boards, nie vermischt.',
+    es: 'Knowledge Cap: sin recuperación — cada modelo responde con lo que ya sabe, con información idéntica. Web Search: el mismo protocolo con búsqueda nativa activada. Dos tablas, nunca mezcladas.',
+  },
+
+  /* --- Leaderboard-Tabs --- */
+  'home.tabs.label': { en: 'Leaderboards', de: 'Leaderboards', es: 'Clasificaciones' },
+  'home.tabs.overall': { en: 'Overall', de: 'Gesamt', es: 'General' },
+  'home.tabs.locked': { en: 'locked', de: 'gesperrt', es: 'bloqueada' },
+
+  /* --- Score-Beschriftung --- */
+  'score.scale': {
+    en: '0 = reference · 100 = perfect',
+    de: '0 = Referenz · 100 = perfekt',
+    es: '0 = referencia · 100 = perfecto',
+  },
+
+  /* --- Teilen --- */
+  'share.heading': { en: 'Share this board', de: 'Board teilen', es: 'Compartir esta tabla' },
+  'share.x': { en: 'Post on X', de: 'Auf X posten', es: 'Publicar en X' },
+  'share.whatsapp': { en: 'WhatsApp', de: 'WhatsApp', es: 'WhatsApp' },
+  'share.linkedin': { en: 'LinkedIn', de: 'LinkedIn', es: 'LinkedIn' },
+  'share.card': { en: 'Download card (SVG)', de: 'Karte laden (SVG)', es: 'Descargar tarjeta (SVG)' },
+  'share.data': { en: 'Data (JSON)', de: 'Daten (JSON)', es: 'Datos (JSON)' },
+  'share.text': {
+    en: 'Prediction Score {score}: {leader} leads the {category} board on FutureBench — with the error bars to prove how close it is.',
+    de: 'Prediction Score {score}: {leader} führt das {category}-Board auf FutureBench – mit Fehlerbalken, die zeigen, wie knapp es ist.',
+    es: 'Prediction Score {score}: {leader} lidera la tabla de {category} en FutureBench, con barras de error que muestran lo reñido que está.',
+  },
+
+  /* --- Unterseiten Proof & Models --- */
+  'proof.metaTitle': { en: 'Proof', de: 'Belege', es: 'Pruebas' },
+  'proof.metaDescription': {
+    en: 'Every FutureBench figure is verifiable: commit history as time proof, lead-time distributions, a worked example you can recheck with git log.',
+    de: 'Jede FutureBench-Zahl ist prüfbar: Commit-Historie als Zeitbeweis, Vorlaufzeit-Verteilungen und ein nachrechenbarer Einzelfall per git log.',
+    es: 'Cada cifra de FutureBench es verificable: historial de commits como prueba temporal, distribuciones de antelación y un ejemplo comprobable con git log.',
+  },
+  'models.metaTitle': { en: 'Models', de: 'Modelle', es: 'Modelos' },
+  'models.metaDescription': {
+    en: 'The FutureBench field: every participant with API identifier, release date and scored events — including retired rows, which are never deleted.',
+    de: 'Das FutureBench-Teilnehmerfeld: jedes Modell mit API-Kennung, Erscheinungsdatum und gewerteten Events – inklusive ausgemusterter Zeilen, die nie gelöscht werden.',
+    es: 'Los participantes de FutureBench: cada modelo con identificador de API, fecha de lanzamiento y eventos puntuados, incluidas filas retiradas que nunca se borran.',
+  },
   'nav.backToCategories': {
     en: '← All categories',
     de: '← Alle Kategorien',

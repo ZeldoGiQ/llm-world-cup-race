@@ -19,6 +19,7 @@ import './metrics/accuracy';
 import './metrics/error';
 import './metrics/probabilistic';
 import './metrics/skill';
+import './metrics/score';
 
 // Referenzregeln (Bezugslinie ohne Referenz-Teilnehmer)
 import './references/constant-scoreline';

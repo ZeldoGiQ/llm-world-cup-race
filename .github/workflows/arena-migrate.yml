@@ -1,0 +1,40 @@
+# Wendet neue SQL-Migrationen automatisch an, sobald sie gepusht werden.
+# Ersetzt das Kopieren in den Supabase-SQL-Editor vollständig – bis auf die
+# einmalige 000_migrations_bootstrap.sql, die die Funktion dafür erschafft.
+name: Arena Migrationen
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/arena/sql/**'
+  workflow_dispatch: {} # manueller Start über den Actions-Tab
+
+permissions:
+  contents: read
+
+concurrency:
+  group: arena-migrate
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Node einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Dependencies installieren
+        run: npm ci
+
+      - name: Migrationen anwenden
+        run: node --experimental-strip-types scripts/arena/jobs/migrate.mts
+        env:
+          SECRETS_CONTEXT: ${{ toJson(secrets) }}

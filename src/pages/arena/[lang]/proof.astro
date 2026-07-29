@@ -1,0 +1,13 @@
+---
+// Belege-Seite der Alternativsprachen (/arena/de/proof, /arena/es/proof).
+import { PREFIXED_LOCALES, type Locale } from '../../../arena/lib/i18n/locales';
+import ProofView from '../../../arena/views/ProofView.astro';
+
+export function getStaticPaths() {
+  return PREFIXED_LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+---
+
+<ProofView locale={lang as Locale} />

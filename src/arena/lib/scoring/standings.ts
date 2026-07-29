@@ -15,6 +15,7 @@ import type { CategoryDescriptor } from '../categories/index';
 import { pick, type Locale } from '../i18n/locales';
 import { metrics, type Metric, type MetricValue } from '../metrics/index';
 import { predictionTypes } from '../prediction-types/index';
+import { references } from '../references/index';
 import type { ArenaEvent, ArenaModel, EventsFile, PredictionsFile, Sample } from '../types';
 
 export interface StandingCell {
@@ -131,6 +132,22 @@ export function computeStandings(
     ? collectSamples(baselineModel.id, resolved, predictions)
     : null;
 
+  /*
+   * Referenzregel als zweite Baseline-Quelle: Für abgeschlossene Kategorien
+   * gibt es keinen Referenz-Teilnehmer mit eigenen Tipps mehr – nachträglich
+   * welche einzutragen wäre Vorher-Wissen. Eine deterministische Regel
+   * („immer 1:0") erzeugt die Bezugslinie stattdessen zur Laufzeit, ohne dass
+   * je ein Datensatz entsteht, der ein Vorab-Wissen behaupten würde.
+   * Ein Referenz-Teilnehmer hat Vorrang, falls beides deklariert ist.
+   */
+  const referenceRule =
+    !baselineAll && descriptor.referenceRuleId
+      ? references.find(descriptor.referenceRuleId)
+      : undefined;
+  const resolvedById = referenceRule
+    ? new Map(resolved.map((event) => [event.id, event]))
+    : undefined;
+
   // Referenz-Teilnehmer anderer Kategorien gehören nicht in diese Tabelle:
   // die Modell-Registry ist global, die Baseline aber kategoriespezifisch.
   const relevantModels = models.filter(
@@ -148,6 +165,17 @@ export function computeStandings(
       baselineSamples = baselineAll.samples.filter((_, index) =>
         wanted.has(baselineAll.eventIds[index]!),
       );
+    } else if (referenceRule && resolvedById) {
+      // Regelbasierte Referenz: exakt dieselbe Event-Menge wie das Modell.
+      const samples: Sample[] = [];
+      for (const eventId of eventIds) {
+        const event = resolvedById.get(eventId);
+        if (!event || !referenceRule.appliesTo.includes(event.predictionType)) continue;
+        const prediction = referenceRule.predict(event);
+        if (prediction === null) continue;
+        samples.push({ prediction, resolution: event.resolution! });
+      }
+      if (samples.length > 0) baselineSamples = samples;
     }
 
     const cells: StandingCell[] = columnMetrics.map((metric) => {
