@@ -1,0 +1,13 @@
+---
+// Leaderboards der Alternativsprachen (/arena/de/leaderboards, /arena/es/leaderboards).
+import { PREFIXED_LOCALES, type Locale } from '../../../arena/lib/i18n/locales';
+import LeaderboardsView from '../../../arena/views/LeaderboardsView.astro';
+
+export function getStaticPaths() {
+  return PREFIXED_LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+---
+
+<LeaderboardsView locale={lang as Locale} />

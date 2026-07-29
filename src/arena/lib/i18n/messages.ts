@@ -35,7 +35,111 @@ const MESSAGES = {
     es: 'Algunas categorías siguen con datos de muestra. Están marcadas y quedan fuera de todas las cifras.',
   },
   'nav.language': { en: 'Language', de: 'Sprache', es: 'Idioma' },
+  'nav.leaderboards': { en: 'Leaderboards', de: 'Leaderboards', es: 'Clasificaciones' },
   'nav.proof': { en: 'Proof', de: 'Belege', es: 'Pruebas' },
+
+  /* --- Leaderboards-Seite --- */
+  'leaderboards.eyebrow': {
+    en: 'All boards · Knowledge Cap',
+    de: 'Alle Ranglisten · Knowledge Cap',
+    es: 'Todas las tablas · Knowledge Cap',
+  },
+  'leaderboards.title': {
+    en: 'Every leaderboard, ready to share',
+    de: 'Alle Ranglisten, fertig zum Teilen',
+    es: 'Todas las clasificaciones, listas para compartir',
+  },
+  'leaderboards.intro': {
+    en: 'The overall board first, then one per category. Every board comes with a ready-made image built from the same numbers you see here — nothing is redrawn by hand.',
+    de: 'Zuerst die Gesamtwertung, dann eine Rangliste je Kategorie. Zu jeder gibt es ein fertiges Bild, gebaut aus genau den Zahlen, die hier stehen – nichts wird von Hand nachgezeichnet.',
+    es: 'Primero la clasificación general, después una por categoría. Cada tabla trae una imagen lista, construida con las mismas cifras que ves aquí: nada se redibuja a mano.',
+  },
+  'leaderboards.metaTitle': {
+    en: 'Leaderboards',
+    de: 'Leaderboards',
+    es: 'Clasificaciones',
+  },
+  'leaderboards.metaDescription': {
+    en: 'Every FutureBench leaderboard in one place: overall and per category, with confidence intervals and share-ready images.',
+    de: 'Alle FutureBench-Ranglisten an einem Ort: Gesamtwertung und je Kategorie, mit Konfidenzintervallen und fertigen Bildern zum Teilen.',
+    es: 'Todas las clasificaciones de FutureBench en un lugar: general y por categoría, con intervalos de confianza e imágenes listas para compartir.',
+  },
+  'leaderboards.overallTitle': {
+    en: 'Overall — all categories',
+    de: 'Gesamtwertung — alle Kategorien',
+    es: 'General — todas las categorías',
+  },
+  'leaderboards.overallScope': {
+    en: '{categories} categories · equal weight',
+    de: '{categories} Kategorien · gleiches Gewicht',
+    es: '{categories} categorías · mismo peso',
+  },
+  'leaderboards.overallLockedTitle': {
+    en: 'The overall board is not open yet',
+    de: 'Die Gesamtwertung ist noch nicht offen',
+    es: 'La clasificación general aún no está abierta',
+  },
+  'leaderboards.overallLockedBody': {
+    en: 'It needs {required} qualified categories; {qualified} qualify today. A number that averages a single category is not a cross-category number, so it stays closed until then.',
+    de: 'Sie braucht {required} qualifizierte Kategorien, heute qualifizieren sich {qualified}. Eine Zahl, die über eine einzige Kategorie mittelt, ist keine kategorienübergreifende Zahl – bis dahin bleibt sie zu.',
+    es: 'Necesita {required} categorías cualificadas; hoy cualifican {qualified}. Una cifra que promedia una sola categoría no es una cifra entre categorías, así que permanece cerrada.',
+  },
+  'leaderboards.overallRule': {
+    en: 'A category qualifies with ≥ {resolved} resolved events, ≥ {models} models and ≥ {coverage} coverage.',
+    de: 'Eine Kategorie qualifiziert sich ab {resolved} aufgelösten Ereignissen, {models} Modellen und {coverage} Abdeckung.',
+    es: 'Una categoría cualifica con ≥ {resolved} eventos resueltos, ≥ {models} modelos y ≥ {coverage} de cobertura.',
+  },
+  'leaderboards.categoryScope': {
+    en: '{resolved} resolved · {models} models',
+    de: '{resolved} aufgelöst · {models} Modelle',
+    es: '{resolved} resueltos · {models} modelos',
+  },
+  'leaderboards.categoriesCounted': {
+    en: '{count} categories',
+    de: '{count} Kategorien',
+    es: '{count} categorías',
+  },
+  'leaderboards.scoredEvents': {
+    en: '{count} scored',
+    de: '{count} gewertet',
+    es: '{count} puntuados',
+  },
+  'leaderboards.colScore': {
+    en: 'Prediction Score',
+    de: 'Prediction Score',
+    es: 'Prediction Score',
+  },
+  // Hier steht das Intervall des SCORE, nicht das des Rangs – die
+  // Startseite zeigt an gleicher Stelle Ränge, die Bezeichnung darf sich
+  // nicht überschneiden.
+  'leaderboards.colInterval': {
+    en: 'Score (90%)',
+    de: 'Score (90 %)',
+    es: 'Score (90 %)',
+  },
+  'leaderboards.colDetail': { en: 'Basis', de: 'Grundlage', es: 'Base' },
+  'leaderboards.shareLabel': { en: 'Share', de: 'Teilen', es: 'Compartir' },
+  'leaderboards.shareText': {
+    en: '{leader} leads the {board} board on FutureBench.',
+    de: '{leader} führt die Rangliste {board} auf FutureBench.',
+    es: '{leader} encabeza la clasificación {board} en FutureBench.',
+  },
+  'leaderboards.imageLink': {
+    en: 'Image (link preview)',
+    de: 'Bild (Link-Vorschau)',
+    es: 'Imagen (vista previa)',
+  },
+  'leaderboards.imagePortrait': {
+    en: 'Image (portrait)',
+    de: 'Bild (Hochformat)',
+    es: 'Imagen (vertical)',
+  },
+  'leaderboards.imageStory': { en: 'Image (story)', de: 'Bild (Story)', es: 'Imagen (story)' },
+  'leaderboards.footer': {
+    en: 'How these numbers come about:',
+    de: 'Wie diese Zahlen zustande kommen:',
+    es: 'Cómo se obtienen estas cifras:',
+  },
   'nav.models': { en: 'Models', de: 'Modelle', es: 'Modelos' },
 
   /* --- Spuren (Tracks) ---

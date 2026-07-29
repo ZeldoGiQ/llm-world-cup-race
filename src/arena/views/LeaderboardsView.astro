@@ -1,0 +1,329 @@
+---
+/**
+ * /arena/leaderboards – alle Ranglisten an einem Ort, jede einzeln teilbar.
+ *
+ * Die Startseite zeigt EIN Board (das beweiskräftigste). Diese Seite zeigt
+ * alle: die Gesamtwertung obenauf, darunter jede echte Kategorie. Der Zweck
+ * ist Teilen – deshalb hat jedes Board seine eigene Zeile mit Links zu X,
+ * WhatsApp, LinkedIn und dem fertigen Bild.
+ *
+ * Kein JavaScript. Die Bilder sind zur Bauzeit gerendert, die Teilen-Links
+ * sind Intent-URLs.
+ */
+import { avatarTextColor, modelInitials } from '../../lib/format';
+import { loadHomeData, uncertaintyFor } from '../lib/home/home-data';
+import { formatInteger, formatPercent } from '../lib/i18n/format';
+import { arenaPath, arenaUrl, pick, type Locale } from '../lib/i18n/locales';
+import { t, type MessageKey } from '../lib/i18n/messages';
+import { modelLogo } from '../lib/model-logos';
+import { providerMark } from '../lib/provider-marks';
+import { MIN_MODEL_COVERAGE, MIN_MODELS, MIN_RESOLVED } from '../lib/scoring/overall';
+import { SCORE_VERSION } from '../lib/scoring/score';
+import '../lib/plugins';
+import ArenaLayout from '../layouts/ArenaLayout.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const translate = t(locale);
+const data = loadHomeData(locale);
+const { overall } = data;
+
+/**
+ * Eine Zeile, egal ob aus der Gesamtwertung oder aus einer Kategorie – damit
+ * beide Board-Arten durch dieselbe Darstellung laufen und nicht auseinander
+ * driften.
+ */
+interface BoardRow {
+  rank: number;
+  modelId: string;
+  name: string;
+  color: string;
+  provider: string;
+  score: number | null;
+  interval: [number, number] | null;
+  probabilityFirst: number | null;
+  detail: string;
+}
+
+interface Board {
+  id: string;
+  title: string;
+  subtitle: string;
+  href: string | null;
+  rows: BoardRow[];
+  /** Bild und Rohdaten; null, wenn es für dieses Board keine Karte gibt */
+  cardSlug: string | null;
+  dataHref: string | null;
+}
+
+const boards: Board[] = [];
+
+/* — Gesamtwertung, sofern sie steht — */
+if (overall.status === 'ready') {
+  boards.push({
+    id: 'overall',
+    title: translate('leaderboards.overallTitle'),
+    subtitle: translate('leaderboards.overallScope', {
+      categories: formatInteger(overall.qualifiedCount, locale),
+    }),
+    href: null,
+    rows: overall.rows
+      .filter((row) => row.rank > 0)
+      .map((row) => ({
+        rank: row.rank,
+        modelId: row.model.id,
+        name: row.model.name,
+        color: row.model.color,
+        provider: row.model.provider,
+        score: row.predictionScore,
+        interval: null,
+        probabilityFirst: null,
+        detail: translate('leaderboards.categoriesCounted', {
+          count: formatInteger(row.categoriesCounted, locale),
+        }),
+      })),
+    cardSlug: 'overall',
+    dataHref: null,
+  });
+}
+
+/* — Je echte Kategorie ein Board — */
+for (const entry of data.live) {
+  if (!entry.standings || entry.scoredPairs === 0) continue;
+  const uncertainty = uncertaintyFor(entry);
+  const rows = entry.standings.rows
+    .filter((row) => row.rank > 0 && row.scored > 0)
+    .map((row) => {
+      const cell = row.cells.find((candidate) => candidate.metricId === 'prediction-score');
+      return {
+        rank: row.rank,
+        modelId: row.model.id,
+        name: row.model.name,
+        color: row.model.color,
+        provider: row.model.provider,
+        score: cell?.value?.value ?? null,
+        interval: uncertainty?.valueInterval[row.model.id] ?? null,
+        probabilityFirst: uncertainty?.probabilityFirst[row.model.id] ?? null,
+        detail: translate('leaderboards.scoredEvents', {
+          count: formatInteger(row.scored, locale),
+        }),
+      };
+    });
+  if (rows.length === 0) continue;
+
+  boards.push({
+    id: entry.id,
+    title: pick(entry.descriptor.label, locale),
+    subtitle: translate('leaderboards.categoryScope', {
+      resolved: formatInteger(entry.resolvedEvents, locale),
+      models: formatInteger(rows.length, locale),
+    }),
+    href: arenaPath(locale, entry.id),
+    rows,
+    // Dieselbe Bedingung wie in share/data.ts: Ohne genug aufgelöste
+    // Ereignisse gibt es kein Bild, und dann darf hier auch keiner
+    // verlinkt werden.
+    cardSlug: entry.resolvedEvents >= 3 ? entry.id : null,
+    dataHref: `/arena-data/${entry.id}/predictions.json`,
+  });
+}
+
+const pageUrl = arenaUrl(locale, 'leaderboards');
+
+/** Teilen-Links je Board – Intent-URLs, keine Skripte. */
+function shareFor(board: Board) {
+  const leader = board.rows[0];
+  const text = leader
+    ? translate('leaderboards.shareText', {
+        leader: leader.name,
+        board: board.title,
+      })
+    : translate('meta.siteDescription');
+  const url = board.href ? arenaUrl(locale, board.id) : pageUrl;
+  return {
+    text,
+    x: `https://x.com/intent/post?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
+    whatsapp: `https://wa.me/?text=${encodeURIComponent(`${text} ${url}`)}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+  };
+}
+
+const linkClass =
+  'rounded-md border border-ink-700 px-3 py-1 text-[12px] text-ink-200 transition-colors hover:border-ink-500 hover:text-ink-50';
+---
+
+<ArenaLayout
+  locale={locale}
+  sub="leaderboards"
+  title={translate('leaderboards.metaTitle')}
+  description={translate('leaderboards.metaDescription')}
+>
+  <main class="mx-auto max-w-5xl px-4 pb-8 pt-6">
+    <p class="mb-2 font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-clay-400">
+      {translate('leaderboards.eyebrow')}
+    </p>
+    <h1 class="max-w-3xl font-display text-[28px] font-semibold leading-[1.1] text-ink-50 sm:text-4xl">
+      {translate('leaderboards.title')}
+    </h1>
+    <p class="mt-3 max-w-2xl text-[15px] leading-relaxed text-ink-300">
+      {translate('leaderboards.intro')}
+    </p>
+    <p class="mt-2 font-mono text-[11px] text-ink-400">
+      {translate('score.scale')} · {SCORE_VERSION}
+    </p>
+
+    {
+      overall.status === 'insufficient' && (
+        <section class="mt-8 rounded-2xl border border-dashed border-ink-700 bg-ink-900/50 p-5">
+          <h2 class="font-display text-lg font-semibold text-ink-100">
+            {translate('leaderboards.overallLockedTitle')}
+          </h2>
+          <p class="mt-2 text-[13px] leading-relaxed text-ink-300">
+            {translate('leaderboards.overallLockedBody', {
+              qualified: formatInteger(overall.qualifiedCount, locale),
+              required: formatInteger(overall.requiredCategories, locale),
+            })}
+          </p>
+          <p class="mt-2 font-mono text-[11px] text-ink-400">
+            {translate('leaderboards.overallRule', {
+              resolved: formatInteger(MIN_RESOLVED, locale),
+              models: formatInteger(MIN_MODELS, locale),
+              coverage: formatPercent(MIN_MODEL_COVERAGE, locale, 0),
+            })}
+          </p>
+        </section>
+      )
+    }
+
+    {
+      boards.map((board) => {
+        const share = shareFor(board);
+        return (
+          <section class="mt-10" aria-labelledby={`board-${board.id}`}>
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h2
+                id={`board-${board.id}`}
+                class="font-display text-xl font-semibold text-ink-50 sm:text-2xl"
+              >
+                {board.href ? (
+                  <a href={board.href} class="transition-colors hover:text-signal-400">
+                    {board.title}
+                  </a>
+                ) : (
+                  board.title
+                )}
+              </h2>
+              <p class="font-mono text-[11px] text-ink-400">{board.subtitle}</p>
+            </div>
+
+            <div class="mt-3 overflow-x-auto rounded-2xl border border-ink-700/70 bg-ink-900/80">
+              <table class="w-full border-collapse text-sm">
+                <thead>
+                  <tr class="text-left text-[11px] uppercase tracking-wider text-ink-400">
+                    <th scope="col" class="px-4 py-3 font-medium">
+                      {translate('standings.model')}
+                    </th>
+                    <th scope="col" class="px-4 py-3 text-right font-medium">
+                      {translate('leaderboards.colScore')}
+                    </th>
+                    <th scope="col" class="hidden px-4 py-3 text-right font-medium sm:table-cell">
+                      {translate('leaderboards.colInterval')}
+                    </th>
+                    <th scope="col" class="hidden px-4 py-3 text-right font-medium sm:table-cell">
+                      {translate('leaderboards.colDetail')}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {board.rows.map((row) => (
+                    <tr class="border-t border-ink-700/60 transition-colors hover:bg-ink-800/40">
+                      <th scope="row" class="px-4 py-3 text-left font-normal">
+                        <span class="flex items-center gap-2.5">
+                          <span class="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-sm border border-ink-700 bg-ink-800/60 font-mono text-xs font-bold tabular text-ink-300">
+                            {row.rank}
+                          </span>
+                          <span
+                            class="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded-sm text-[10px] font-bold"
+                            style={`background-color:${row.color};color:${avatarTextColor(row.color)}`}
+                            aria-hidden="true"
+                          >
+                            {modelLogo(row.modelId) ? (
+                              <img src={modelLogo(row.modelId)} alt="" class="h-full w-full object-cover" />
+                            ) : providerMark(row.provider) ? (
+                              <svg viewBox="0 0 24 24" class="h-3.5 w-3.5" set:html={providerMark(row.provider)} />
+                            ) : (
+                              modelInitials(row.name)
+                            )}
+                          </span>
+                          <span class="truncate font-medium text-ink-100">{row.name}</span>
+                        </span>
+                      </th>
+                      <td class="px-4 py-3 text-right font-mono font-semibold tabular text-ink-50">
+                        {row.score === null ? '–' : row.score.toFixed(1)}
+                      </td>
+                      <td class="hidden px-4 py-3 text-right font-mono text-[12px] tabular text-ink-400 sm:table-cell">
+                        {row.interval
+                          ? `${row.interval[0].toFixed(1)} – ${row.interval[1].toFixed(1)}`
+                          : '–'}
+                      </td>
+                      <td class="hidden px-4 py-3 text-right text-[12px] text-ink-400 sm:table-cell">
+                        {row.detail}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div class="mt-3 flex flex-wrap items-center gap-2">
+              <span class="mr-1 font-mono text-[10px] uppercase tracking-wider text-ink-500">
+                {translate('leaderboards.shareLabel')}
+              </span>
+              <a class={linkClass} href={share.x} rel="noopener noreferrer" target="_blank">
+                {translate('share.x')}
+              </a>
+              <a class={linkClass} href={share.whatsapp} rel="noopener noreferrer" target="_blank">
+                {translate('share.whatsapp')}
+              </a>
+              <a class={linkClass} href={share.linkedin} rel="noopener noreferrer" target="_blank">
+                {translate('share.linkedin')}
+              </a>
+              {board.cardSlug && (
+                <>
+                  <a
+                    class="rounded-md border border-signal-400/40 px-3 py-1 text-[12px] text-signal-300 transition-colors hover:border-signal-400"
+                    href={`/arena/share/${board.cardSlug}.png`}
+                    download
+                  >
+                    {translate('leaderboards.imageLink')}
+                  </a>
+                  <a class={linkClass} href={`/arena/share/${board.cardSlug}-portrait.png`} download>
+                    {translate('leaderboards.imagePortrait')}
+                  </a>
+                  <a class={linkClass} href={`/arena/share/${board.cardSlug}-story.png`} download>
+                    {translate('leaderboards.imageStory')}
+                  </a>
+                </>
+              )}
+              {board.dataHref && (
+                <a class="rounded-md border border-ink-700 px-3 py-1 font-mono text-[11px] text-ink-300 transition-colors hover:border-ink-500" href={board.dataHref}>
+                  {translate('share.data')}
+                </a>
+              )}
+            </div>
+          </section>
+        );
+      })
+    }
+
+    <p class="mt-10 text-[13px] text-ink-400">
+      {translate('leaderboards.footer')}{' '}
+      <a class="text-signal-300 underline underline-offset-2 hover:text-signal-400" href={arenaPath(locale, 'methodology')}>
+        {translate('nav.methodology')}
+      </a>
+    </p>
+  </main>
+</ArenaLayout>

@@ -42,7 +42,37 @@ const MIN_RESOLVED_FOR_CARD = 3;
 export function shareCards(): ShareCardData[] {
   const data = loadHomeData('en');
 
-  return data.live
+  /* — Die Gesamtwertung: die Zahl, die ein Labor zitieren würde, und damit
+       die wichtigste teilbare Karte überhaupt. Es gibt sie erst, wenn genug
+       Kategorien qualifiziert sind – vorher wäre sie eine Behauptung.
+       Konfidenzintervalle fehlen hier bewusst: Der Bootstrap läuft je
+       Kategorie, für die kategorienübergreifende Aggregation gibt es keinen.
+       Die Karte behauptet dann auch keinen Vorsprung (siehe verdictFor). — */
+  const overallCard: ShareCardData[] =
+    data.overall.status === 'ready' && data.overall.rows.length >= 2
+      ? [
+          {
+            id: 'overall',
+            title: 'Overall — all categories',
+            subtitle: `Prediction Score · Knowledge Cap · ${SCORE_VERSION}`,
+            footnote: `${data.overall.qualifiedCount} categories · equal weight · geometric mean of loss ratios`,
+            rows: data.overall.rows
+              .filter((row) => row.rank > 0 && row.predictionScore !== null)
+              .slice(0, 5)
+              .map((row) => ({
+                name: row.model.name,
+                color: row.model.color,
+                score: row.predictionScore!,
+                ciLow: null,
+                ciHigh: null,
+                logoMarkup: modelLogoMarkup(row.model.id) ?? null,
+              })),
+          },
+        ]
+      : [];
+
+  return overallCard.concat(
+    data.live
     .filter((entry) => entry.scoredPairs > 0 && entry.standings)
     .filter((entry) => entry.resolvedEvents >= MIN_RESOLVED_FOR_CARD)
     .map((entry) => {
@@ -73,6 +103,6 @@ export function shareCards(): ShareCardData[] {
         footnote: `${entry.resolvedEvents} events · every prediction published before its event · 90% CI`,
         rows,
       };
-    })
-    .filter((card) => card.rows.length >= 2 && card.rows.some((row) => row.score !== 0));
+      }),
+  ).filter((card) => card.rows.length >= 2 && card.rows.some((row) => row.score !== 0));
 }

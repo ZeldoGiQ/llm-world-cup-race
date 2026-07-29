@@ -184,6 +184,12 @@ const ogImage = ogCard ? `${ARENA_ORIGIN}/arena/share/${ogCard.id}.png` : null;
             </svg>
             {translate('nav.brand')}
           </a>
+          <a
+            href={arenaPath(locale, 'leaderboards')}
+            class="text-ink-300 transition-colors hover:text-ink-100"
+          >
+            {translate('nav.leaderboards')}
+          </a>
           <a href={arenaPath(locale)} class="text-ink-300 transition-colors hover:text-ink-100">
             {translate('nav.categories')}
           </a>

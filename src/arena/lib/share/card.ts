@@ -141,12 +141,20 @@ export function verdictFor(rows: ShareRow[]): ShareVerdict | null {
   const [lead, second] = rows;
   if (!second) return { text: `${lead.name} at ${lead.score.toFixed(1)}`, clear: true };
 
-  const separated =
-    lead.ciLow !== null && second.ciHigh !== null
-      ? lead.ciLow > second.ciHigh
-      : lead.score > second.score;
+  // Ohne Intervalle wird kein Vorsprung behauptet. Ein höherer Wert allein
+  // belegt keine Überlegenheit – und eine Karte, die ohne Unsicherheitsdaten
+  // „führt mit 2,1 Punkten" sagt, verspricht mehr, als die Zahlen hergeben.
+  const haveIntervals = lead.ciLow !== null && second.ciHigh !== null;
+  const separated = haveIntervals && lead.ciLow! > second.ciHigh!;
 
-  if (!separated) return { text: `${lead.name} ahead — too close to call`, clear: false };
+  if (!separated) {
+    return {
+      text: haveIntervals
+        ? `${lead.name} ahead — too close to call`
+        : `${lead.name} ahead`,
+      clear: false,
+    };
+  }
   return {
     text: `${lead.name} leads by ${(lead.score - second.score).toFixed(1)} points`,
     clear: true,
