@@ -1,4 +1,32 @@
 {
   "category": "stocks-index",
-  "predictions": {}
+  "predictions": {
+    "yf-gdaxi-2026-08-07": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 25464.01
+        },
+        "createdAt": "2026-07-28T21:32:36.869Z"
+      }
+    },
+    "yf-gspc-2026-08-07": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 7428.78
+        },
+        "createdAt": "2026-07-28T21:32:36.869Z"
+      }
+    },
+    "yf-ndx-2026-08-07": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 27763.13
+        },
+        "createdAt": "2026-07-28T21:32:36.869Z"
+      }
+    }
+  }
 }
