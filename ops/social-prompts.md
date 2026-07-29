@@ -6,9 +6,26 @@ Erzeugt von `npm run share:prompts` — nicht von Hand pflegen, sondern
 So benutzt du sie: Prompt kopieren, in GPT Image 2 (oder ein anderes
 Bildmodell) einfügen, Bild erzeugen lassen, fertig.
 
-**Diagramme gehören nicht hierher.** Die Leaderboard-Grafik mit echten
-Zahlen liegt fertig unter `https://www.futurebench.ai/arena/share/<kategorie>.svg`.
-Ein Bildmodell würde die Balkenhöhen erfinden.
+## Ergebnisse als Bild (echte Zahlen)
+
+```bash
+npm run build                 # erzeugt die Zahlen
+npm run share:prompts -- --preset results --category football-worldcup
+```
+
+Der Prompt zieht die Rangliste aus `dist/arena/share/<kategorie>.json` –
+dieselbe Quelle wie das Bild – und gibt sie dem Modell wörtlich vor. Das
+Modell setzt sie als **Schrift**, nicht als Grafik.
+
+Warum diese Trennung: Zahlen abtippen kann ein Bildmodell korrekt, wenn man
+sie ihm vorgibt. Balkenlängen im richtigen Verhältnis zeichnen kann es nicht –
+es malt einen Balken, der nicht zur Zahl daneben passt. Wer die Balken mit
+Konfidenzintervallen will, nimmt die gerechnete Karte:
+`https://www.futurebench.ai/arena/share/<kategorie>.svg`.
+
+Mit `--format square|story|announcement|thumbnail` das Seitenverhältnis wählen.
+**Bild vor dem Posten gegenlesen** – Bildmodelle verdrehen gelegentlich
+Buchstaben und Ziffern.
 
 ## Kanal-/Profilbanner (X, LinkedIn, YouTube)
 

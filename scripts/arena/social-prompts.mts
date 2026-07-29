@@ -18,7 +18,7 @@
  * und Zahlen, und Text im Bild wird immer als wörtlich zu setzende Zeile
  * übergeben statt vom Modell erfunden.
  */
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -145,6 +145,61 @@ function buildPrompt(preset: Preset, headlineOverride?: string): string {
   ].join('\n');
 }
 
+/**
+ * Ergebnis-Tafel: der einzige Prompt, der echte Zahlen enthält – und deshalb
+ * der einzige, der sie nicht selbst erfindet, sondern aus
+ * dist/arena/share/<kategorie>.json übernimmt (dieselbe Quelle wie das Bild).
+ *
+ * Der Trick, mit dem das ehrlich bleibt: Das Modell setzt die Rangliste als
+ * SCHRIFT, nicht als Grafik. Zahlen abtippen kann es korrekt, wenn man sie
+ * ihm wörtlich vorgibt; Balkenlängen im richtigen Verhältnis zeichnen kann es
+ * nicht. Deshalb steht im Prompt ausdrücklich: keine Balken, keine Säulen,
+ * keine Diagrammfläche. Wer die Balken will, nimmt die gerechnete Karte.
+ */
+interface ShareJson {
+  title: string;
+  subtitle: string;
+  footnote: string;
+  rows: { name: string; score: number }[];
+}
+
+function buildResultsPrompt(card: ShareJson, format: Preset): string {
+  const table = card.rows
+    .map((row, index) => `${index + 1}. ${row.name} — ${row.score.toFixed(1)}`)
+    .join('\n');
+  const leader = card.rows[0];
+
+  return [
+    'An editorial results plate from a printed record book: a ranked list, set as type, with a heading above it.',
+    'No chart area, no plotting, no illustration of the values — the ranking is typography and nothing else.',
+    '',
+    STYLE,
+    MOTIFS,
+    '',
+    'The image contains exactly the following text and nothing else. Reproduce every character, name and number',
+    'exactly as written — do not translate, reorder, round, abbreviate, or add entries:',
+    '',
+    `Heading: "${card.title}"`,
+    `Sub-heading, smaller, in brass: "${card.subtitle}"`,
+    '',
+    'Ranked list, one entry per line, names in the grotesque face, numbers in a monospaced face,',
+    'numbers right-aligned in a single column so the decimal points line up:',
+    table,
+    '',
+    `Set the first line — "${leader.name} — ${leader.score.toFixed(1)}" — apart: its number in the deep red #a4232a,`,
+    'a thin brass rule beneath it. Every other number stays paper-white.',
+    '',
+    `Footer line, small and muted: "${card.footnote}"`,
+    `Bottom right, monospaced: "futurebench.ai"`,
+    '',
+    'Do not draw bars, columns, dots, sparklines or any other graphical representation of these numbers.',
+    'Do not invent additional models, scores or statistics. No stock-photo people, no 3D robots, no watermark,',
+    'no gibberish or garbled lettering.',
+    '',
+    `Aspect ratio ${format.aspect} (${format.size} pixels).`,
+  ].join('\n');
+}
+
 function arg(name: string): string | undefined {
   const index = process.argv.indexOf(`--${name}`);
   return index === -1 ? undefined : process.argv[index + 1];
@@ -153,7 +208,24 @@ function arg(name: string): string | undefined {
 const wanted = arg('preset');
 const headline = arg('headline');
 
-if (wanted) {
+if (wanted === 'results') {
+  const category = arg('category') ?? 'football-worldcup';
+  const path = join(ROOT, 'dist', 'arena', 'share', `${category}.json`);
+  let card: ShareJson;
+  try {
+    card = JSON.parse(await readFile(path, 'utf8')) as ShareJson;
+  } catch {
+    console.error(
+      `Keine Zahlen für "${category}" gefunden (${path}).\n` +
+        'Erst "npm run build" laufen lassen – die Rangliste entsteht beim Bauen.\n' +
+        'Eine Kategorie bekommt nur dann Zahlen, wenn sie echte, gewertete Ergebnisse hat.',
+    );
+    process.exit(1);
+  }
+  const format =
+    PRESETS.find((preset) => preset.id === (arg('format') ?? 'square')) ?? PRESETS[2];
+  console.log(buildResultsPrompt(card, format));
+} else if (wanted) {
   const preset = PRESETS.find((candidate) => candidate.id === wanted);
   if (!preset) {
     console.error(`Unbekanntes Preset "${wanted}". Verfügbar: ${PRESETS.map((p) => p.id).join(', ')}`);
@@ -170,9 +242,26 @@ if (wanted) {
     'So benutzt du sie: Prompt kopieren, in GPT Image 2 (oder ein anderes',
     'Bildmodell) einfügen, Bild erzeugen lassen, fertig.',
     '',
-    '**Diagramme gehören nicht hierher.** Die Leaderboard-Grafik mit echten',
-    'Zahlen liegt fertig unter `https://www.futurebench.ai/arena/share/<kategorie>.svg`.',
-    'Ein Bildmodell würde die Balkenhöhen erfinden.',
+    '## Ergebnisse als Bild (echte Zahlen)',
+    '',
+    '```bash',
+    'npm run build                 # erzeugt die Zahlen',
+    'npm run share:prompts -- --preset results --category football-worldcup',
+    '```',
+    '',
+    'Der Prompt zieht die Rangliste aus `dist/arena/share/<kategorie>.json` –',
+    'dieselbe Quelle wie das Bild – und gibt sie dem Modell wörtlich vor. Das',
+    'Modell setzt sie als **Schrift**, nicht als Grafik.',
+    '',
+    'Warum diese Trennung: Zahlen abtippen kann ein Bildmodell korrekt, wenn man',
+    'sie ihm vorgibt. Balkenlängen im richtigen Verhältnis zeichnen kann es nicht –',
+    'es malt einen Balken, der nicht zur Zahl daneben passt. Wer die Balken mit',
+    'Konfidenzintervallen will, nimmt die gerechnete Karte:',
+    '`https://www.futurebench.ai/arena/share/<kategorie>.svg`.',
+    '',
+    'Mit `--format square|story|announcement|thumbnail` das Seitenverhältnis wählen.',
+    '**Bild vor dem Posten gegenlesen** – Bildmodelle verdrehen gelegentlich',
+    'Buchstaben und Ziffern.',
     '',
     ...PRESETS.flatMap((preset) => [
       `## ${preset.label}`,
