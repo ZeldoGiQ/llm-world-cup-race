@@ -60,11 +60,27 @@ async function fetchCatalog(provider: ProviderRow): Promise<CatalogEntry[]> {
   if (!Array.isArray(payload.data)) {
     throw new Error(`GET ${base}/models lieferte kein data-Array.`);
   }
-  return payload.data
-    .filter((entry): entry is { id: string; owned_by?: string } =>
-      typeof entry === 'object' && entry !== null && typeof (entry as { id?: unknown }).id === 'string',
-    )
-    .map((entry) => ({ id: entry.id, ownedBy: entry.owned_by }));
+
+  // Zwei Formate, weil WaveSpeed zwei Oberflächen hat: Der
+  // OpenAI-kompatible LLM-Endpunkt liefert data[].id, die hauseigene
+  // Modell-Liste data[].model_id. Wir lesen beide, statt uns auf eine
+  // Vermutung zu stützen – und melden es, wenn keines passt. Ein leeres
+  // Ergebnis wäre die schlimmste Antwort: Es sähe aus, als wäre jedes
+  // unserer Modelle aus dem Katalog verschwunden.
+  const entries = payload.data.flatMap((raw) => {
+    if (typeof raw !== 'object' || raw === null) return [];
+    const row = raw as { id?: unknown; model_id?: unknown; owned_by?: unknown; name?: unknown };
+    const id = typeof row.id === 'string' ? row.id : typeof row.model_id === 'string' ? row.model_id : null;
+    if (!id) return [];
+    return [{ id, ownedBy: typeof row.owned_by === 'string' ? row.owned_by : undefined }];
+  });
+
+  if (entries.length === 0) {
+    throw new Error(
+      `GET ${base}/models lieferte ${payload.data.length} Einträge, aber keiner hatte ein Feld "id" oder "model_id". Format geändert?`,
+    );
+  }
+  return entries;
 }
 
 const providers = unwrap(
