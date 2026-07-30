@@ -1,0 +1,41 @@
+# FutureBench: Katalog-Abgleich zwischen Anbieter und Teilnehmerliste.
+#
+# Beantwortet wöchentlich die Frage, die monatelang niemand gestellt hat:
+# Welche Modelle bietet das Gateway inzwischen an, die bei uns nicht mittippen –
+# und welches unserer aktiven Modelle gibt es dort gar nicht mehr?
+#
+# Der Job ändert nichts. Er berichtet, weil das Eintragen eines Modells eine
+# Entscheidung ist (Preis, Kosten, und die Regel „ein Eintrag = eine
+# Modellversion") und keine Ableitung.
+name: Arena Catalog
+
+on:
+  schedule:
+    - cron: '11 5 * * 1' # montags 05:11 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: arena-catalog
+  cancel-in-progress: false
+
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Katalog abgleichen
+        run: node --experimental-strip-types scripts/arena/jobs/catalog.mts
+        env:
+          SECRETS_CONTEXT: ${{ toJson(secrets) }}
