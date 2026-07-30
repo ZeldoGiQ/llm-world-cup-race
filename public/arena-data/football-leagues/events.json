@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-07-30T04:39:53.173Z",
+  "updatedAt": "2026-07-30T07:19:58.018Z",
   "events": [
     {
       "id": "fd-554940",
@@ -1052,6 +1052,34 @@
         "competition": "Brasileirão",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 554955. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-567257",
+      "title": "Santa Clara – CD Nacional",
+      "utcDate": "2026-08-10T19:15:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "CDN",
+          "name": "CD Nacional"
+        },
+        "home": {
+          "tla": "CD ",
+          "name": "Santa Clara"
+        },
+        "context": [
+          "Competition: Primeira Liga",
+          "Matchday: 1",
+          "Home team: Santa Clara",
+          "Away team: CD Nacional"
+        ],
+        "matchday": 1,
+        "competition": "Primeira Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 567257. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PPL"
       }
     }
   ]
