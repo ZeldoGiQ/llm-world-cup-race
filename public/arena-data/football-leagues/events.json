@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-07-29T23:38:26.834Z",
+  "updatedAt": "2026-07-30T04:39:53.173Z",
   "events": [
     {
       "id": "fd-554940",
@@ -118,9 +118,13 @@
       "id": "fd-554946",
       "title": "Internacional – Flamengo",
       "utcDate": "2026-07-29T22:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FLA",
@@ -146,9 +150,13 @@
       "id": "fd-554947",
       "title": "Mirassol – Clube do Remo",
       "utcDate": "2026-07-29T22:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CRE",
@@ -174,9 +182,13 @@
       "id": "fd-554945",
       "title": "Fluminense – Bahia",
       "utcDate": "2026-07-30T00:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BAH",
@@ -202,9 +214,13 @@
       "id": "fd-554949",
       "title": "Vitória – Palmeiras",
       "utcDate": "2026-07-30T00:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 4,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "PAL",
