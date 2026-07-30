@@ -34,3 +34,16 @@ jobs:
         run: node --experimental-strip-types scripts/arena/jobs/analytics.mts
         env:
           SECRETS_CONTEXT: ${{ toJson(secrets) }}
+
+      # Katalog-Abgleich laeuft hier mit, nicht in einem eigenen Workflow:
+      # GitHub sperrt den erstmaligen Lauf neu hinzugefuegter Workflows in
+      # diesem Repo (conclusion action_required, keine Jobs), und dieser Job
+      # traegt den Anbieter-Schluessel ohnehin schon. Ein GET pro Anbieter
+      # und Tag kostet nichts.
+      # Faellt der Abgleich aus, soll der Snapshot trotzdem gruen bleiben -
+      # deshalb continue-on-error.
+      - name: Modellkatalog abgleichen
+        continue-on-error: true
+        run: node --experimental-strip-types scripts/arena/jobs/catalog.mts
+        env:
+          SECRETS_CONTEXT: ${{ toJson(secrets) }}
