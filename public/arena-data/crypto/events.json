@@ -1,6 +1,6 @@
 {
   "category": "crypto",
-  "updatedAt": "2026-07-30T07:19:58.018Z",
+  "updatedAt": "2026-07-31T05:05:38.406Z",
   "events": [
     {
       "id": "cg-btc-2026-07-29",
@@ -123,9 +123,12 @@
         "es": "Cierre de BTC el 2026-07-31"
       },
       "utcDate": "2026-07-31T00:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "numeric",
-      "resolution": null,
+      "resolution": {
+        "kind": "numeric",
+        "value": 64743.34
+      },
       "metadata": {
         "day": "2026-07-31",
         "coinId": "bitcoin",
