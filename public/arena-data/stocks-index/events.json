@@ -1,6 +1,6 @@
 {
   "category": "stocks-index",
-  "updatedAt": "2026-07-27T11:56:12.297Z",
+  "updatedAt": "2026-08-02T07:52:05.023Z",
   "events": [
     {
       "id": "yf-gdaxi-2026-08-07",
@@ -90,6 +90,96 @@
         "previousClose": 28128.34,
         "resolutionRule": "Closing level of Nasdaq 100 (Yahoo Finance symbol ^NDX) on the last trading day of the week from 2026-08-03 to 2026-08-07, in USD, rounded to two decimals. Read from the daily series of https://query1.finance.yahoo.com/v8/finance/chart/^NDX?interval=1d, field indicators.quote[0].close, with the trading day derived in the exchange's own timezone. If 2026-08-07 is a market holiday, the last trading day of that same week counts. If no close is published for that week, the event is voided and scores nothing for anyone.",
         "previousCloseDate": "2026-07-24"
+      }
+    },
+    {
+      "id": "yf-gdaxi-2026-08-14",
+      "title": "DAX close on 2026-08-14",
+      "titles": {
+        "de": "DAX-Schlusskurs am 2026-08-14",
+        "en": "DAX close on 2026-08-14",
+        "es": "Cierre de DAX el 2026-08-14"
+      },
+      "utcDate": "2026-08-10T00:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "numeric",
+      "resolution": null,
+      "metadata": {
+        "period": "Week ending 2026-08-14",
+        "symbol": "DAX",
+        "context": [
+          "Index: DAX, quoted in EUR",
+          "Last close before lock: 25629.24 on 2026-07-31",
+          "Target: closing level on Friday 2026-08-14 (or the last trading day of that week)",
+          "Predictions lock on Monday 00:00 UTC, so the whole trading week is still ahead."
+        ],
+        "currency": "EUR",
+        "weekStart": "2026-08-10",
+        "targetDate": "2026-08-14",
+        "yahooSymbol": "^GDAXI",
+        "previousClose": 25629.24,
+        "resolutionRule": "Closing level of DAX (Yahoo Finance symbol ^GDAXI) on the last trading day of the week from 2026-08-10 to 2026-08-14, in EUR, rounded to two decimals. Read from the daily series of https://query1.finance.yahoo.com/v8/finance/chart/^GDAXI?interval=1d, field indicators.quote[0].close, with the trading day derived in the exchange's own timezone. If 2026-08-14 is a market holiday, the last trading day of that same week counts. If no close is published for that week, the event is voided and scores nothing for anyone.",
+        "previousCloseDate": "2026-07-31"
+      }
+    },
+    {
+      "id": "yf-gspc-2026-08-14",
+      "title": "S&P 500 close on 2026-08-14",
+      "titles": {
+        "de": "S&P 500-Schlusskurs am 2026-08-14",
+        "en": "S&P 500 close on 2026-08-14",
+        "es": "Cierre de S&P 500 el 2026-08-14"
+      },
+      "utcDate": "2026-08-10T00:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "numeric",
+      "resolution": null,
+      "metadata": {
+        "period": "Week ending 2026-08-14",
+        "symbol": "S&P 500",
+        "context": [
+          "Index: S&P 500, quoted in USD",
+          "Last close before lock: 7489.72 on 2026-07-31",
+          "Target: closing level on Friday 2026-08-14 (or the last trading day of that week)",
+          "Predictions lock on Monday 00:00 UTC, so the whole trading week is still ahead."
+        ],
+        "currency": "USD",
+        "weekStart": "2026-08-10",
+        "targetDate": "2026-08-14",
+        "yahooSymbol": "^GSPC",
+        "previousClose": 7489.72,
+        "resolutionRule": "Closing level of S&P 500 (Yahoo Finance symbol ^GSPC) on the last trading day of the week from 2026-08-10 to 2026-08-14, in USD, rounded to two decimals. Read from the daily series of https://query1.finance.yahoo.com/v8/finance/chart/^GSPC?interval=1d, field indicators.quote[0].close, with the trading day derived in the exchange's own timezone. If 2026-08-14 is a market holiday, the last trading day of that same week counts. If no close is published for that week, the event is voided and scores nothing for anyone.",
+        "previousCloseDate": "2026-07-31"
+      }
+    },
+    {
+      "id": "yf-ndx-2026-08-14",
+      "title": "Nasdaq 100 close on 2026-08-14",
+      "titles": {
+        "de": "Nasdaq 100-Schlusskurs am 2026-08-14",
+        "en": "Nasdaq 100 close on 2026-08-14",
+        "es": "Cierre de Nasdaq 100 el 2026-08-14"
+      },
+      "utcDate": "2026-08-10T00:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "numeric",
+      "resolution": null,
+      "metadata": {
+        "period": "Week ending 2026-08-14",
+        "symbol": "Nasdaq 100",
+        "context": [
+          "Index: Nasdaq 100, quoted in USD",
+          "Last close before lock: 28274.2 on 2026-07-31",
+          "Target: closing level on Friday 2026-08-14 (or the last trading day of that week)",
+          "Predictions lock on Monday 00:00 UTC, so the whole trading week is still ahead."
+        ],
+        "currency": "USD",
+        "weekStart": "2026-08-10",
+        "targetDate": "2026-08-14",
+        "yahooSymbol": "^NDX",
+        "previousClose": 28274.2,
+        "resolutionRule": "Closing level of Nasdaq 100 (Yahoo Finance symbol ^NDX) on the last trading day of the week from 2026-08-10 to 2026-08-14, in USD, rounded to two decimals. Read from the daily series of https://query1.finance.yahoo.com/v8/finance/chart/^NDX?interval=1d, field indicators.quote[0].close, with the trading day derived in the exchange's own timezone. If 2026-08-14 is a market holiday, the last trading day of that same week counts. If no close is published for that week, the event is voided and scores nothing for anyone.",
+        "previousCloseDate": "2026-07-31"
       }
     }
   ]
