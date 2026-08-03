@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-07-31T05:05:38.406Z",
+  "updatedAt": "2026-08-03T08:50:13.067Z",
   "events": [
     {
       "id": "fd-554940",
@@ -1087,6 +1087,62 @@
         "matchday": 1,
         "competition": "Primeira Liga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 567257. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PPL"
+      }
+    },
+    {
+      "id": "fd-558223",
+      "title": "Telstar – Sparta",
+      "utcDate": "2026-08-14T18:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SPA",
+          "name": "Sparta"
+        },
+        "home": {
+          "tla": "TEL",
+          "name": "Telstar"
+        },
+        "context": [
+          "Competition: Eredivisie",
+          "Matchday: 2",
+          "Home team: Telstar",
+          "Away team: Sparta"
+        ],
+        "matchday": 2,
+        "competition": "Eredivisie",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558223. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "DED"
+      }
+    },
+    {
+      "id": "fd-567268",
+      "title": "Sporting CP – Vitória SC",
+      "utcDate": "2026-08-14T19:15:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "GUI",
+          "name": "Vitória SC"
+        },
+        "home": {
+          "tla": "SPO",
+          "name": "Sporting CP"
+        },
+        "context": [
+          "Competition: Primeira Liga",
+          "Matchday: 2",
+          "Home team: Sporting CP",
+          "Away team: Vitória SC"
+        ],
+        "matchday": 2,
+        "competition": "Primeira Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 567268. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PPL"
       }
     }
