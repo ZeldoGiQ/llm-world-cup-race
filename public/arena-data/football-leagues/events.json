@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-03T08:50:13.067Z",
+  "updatedAt": "2026-08-04T07:20:26.194Z",
   "events": [
     {
       "id": "fd-554940",
@@ -1144,6 +1144,286 @@
         "competition": "Primeira Liga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 567268. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PPL"
+      }
+    },
+    {
+      "id": "fd-558224",
+      "title": "Willem II – NEC",
+      "utcDate": "2026-08-15T14:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "NEC",
+          "name": "NEC"
+        },
+        "home": {
+          "tla": "WII",
+          "name": "Willem II"
+        },
+        "context": [
+          "Competition: Eredivisie",
+          "Matchday: 2",
+          "Home team: Willem II",
+          "Away team: NEC"
+        ],
+        "matchday": 2,
+        "competition": "Eredivisie",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558224. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "DED"
+      }
+    },
+    {
+      "id": "fd-558225",
+      "title": "Utrecht – AZ",
+      "utcDate": "2026-08-15T16:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "AZ",
+          "name": "AZ"
+        },
+        "home": {
+          "tla": "UTR",
+          "name": "Utrecht"
+        },
+        "context": [
+          "Competition: Eredivisie",
+          "Matchday: 2",
+          "Home team: Utrecht",
+          "Away team: AZ"
+        ],
+        "matchday": 2,
+        "competition": "Eredivisie",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558225. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "DED"
+      }
+    },
+    {
+      "id": "fd-564634",
+      "title": "Alavés – Getafe",
+      "utcDate": "2026-08-15T17:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "GET",
+          "name": "Getafe"
+        },
+        "home": {
+          "tla": "ALA",
+          "name": "Alavés"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 1",
+          "Home team: Alavés",
+          "Away team: Getafe"
+        ],
+        "matchday": 1,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564634. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-558226",
+      "title": "Excelsior – PSV",
+      "utcDate": "2026-08-15T18:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "PSV",
+          "name": "PSV"
+        },
+        "home": {
+          "tla": "EXC",
+          "name": "Excelsior"
+        },
+        "context": [
+          "Competition: Eredivisie",
+          "Matchday: 2",
+          "Home team: Excelsior",
+          "Away team: PSV"
+        ],
+        "matchday": 2,
+        "competition": "Eredivisie",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558226. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "DED"
+      }
+    },
+    {
+      "id": "fd-558227",
+      "title": "Sittard – Cambuur",
+      "utcDate": "2026-08-15T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "CAM",
+          "name": "Cambuur"
+        },
+        "home": {
+          "tla": "SIT",
+          "name": "Sittard"
+        },
+        "context": [
+          "Competition: Eredivisie",
+          "Matchday: 2",
+          "Home team: Sittard",
+          "Away team: Cambuur"
+        ],
+        "matchday": 2,
+        "competition": "Eredivisie",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558227. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "DED"
+      }
+    },
+    {
+      "id": "fd-554961",
+      "title": "Mineiro – Grêmio",
+      "utcDate": "2026-08-15T19:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FBP",
+          "name": "Grêmio"
+        },
+        "home": {
+          "tla": "CAM",
+          "name": "Mineiro"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 23",
+          "Home team: Mineiro",
+          "Away team: Grêmio"
+        ],
+        "matchday": 23,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 554961. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-554964",
+      "title": "Fluminense – Palmeiras",
+      "utcDate": "2026-08-15T19:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "PAL",
+          "name": "Palmeiras"
+        },
+        "home": {
+          "tla": "FLU",
+          "name": "Fluminense"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 23",
+          "Home team: Fluminense",
+          "Away team: Palmeiras"
+        ],
+        "matchday": 23,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 554964. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-564633",
+      "title": "Sevilla FC – Rayo Vallecano",
+      "utcDate": "2026-08-15T19:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "RAY",
+          "name": "Rayo Vallecano"
+        },
+        "home": {
+          "tla": "SEV",
+          "name": "Sevilla FC"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 1",
+          "Home team: Sevilla FC",
+          "Away team: Rayo Vallecano"
+        ],
+        "matchday": 1,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564633. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-554960",
+      "title": "Paranaense – Bragantino",
+      "utcDate": "2026-08-15T21:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "RBB",
+          "name": "Bragantino"
+        },
+        "home": {
+          "tla": "CAP",
+          "name": "Paranaense"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 23",
+          "Home team: Paranaense",
+          "Away team: Bragantino"
+        ],
+        "matchday": 23,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 554960. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-554967",
+      "title": "São Paulo – Coritiba",
+      "utcDate": "2026-08-16T00:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "COR",
+          "name": "Coritiba"
+        },
+        "home": {
+          "tla": "PAU",
+          "name": "São Paulo"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 23",
+          "Home team: São Paulo",
+          "Away team: Coritiba"
+        ],
+        "matchday": 23,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 554967. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
       }
     }
   ]
