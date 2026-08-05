@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-04T07:20:26.194Z",
+  "updatedAt": "2026-08-05T07:21:11.984Z",
   "events": [
     {
       "id": "fd-554940",
@@ -1423,6 +1423,230 @@
         "matchday": 23,
         "competition": "Brasileirão",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 554967. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-554962",
+      "title": "Chapecoense – Bahia",
+      "utcDate": "2026-08-16T14:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BAH",
+          "name": "Bahia"
+        },
+        "home": {
+          "tla": "CHA",
+          "name": "Chapecoense"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 23",
+          "Home team: Chapecoense",
+          "Away team: Bahia"
+        ],
+        "matchday": 23,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 554962. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-564629",
+      "title": "Santander – Villarreal",
+      "utcDate": "2026-08-16T15:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "VIL",
+          "name": "Villarreal"
+        },
+        "home": {
+          "tla": "SAN",
+          "name": "Santander"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 1",
+          "Home team: Santander",
+          "Away team: Villarreal"
+        ],
+        "matchday": 1,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564629. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-564632",
+      "title": "Espanyol – Levante",
+      "utcDate": "2026-08-16T17:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "LEV",
+          "name": "Levante"
+        },
+        "home": {
+          "tla": "ESP",
+          "name": "Espanyol"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 1",
+          "Home team: Espanyol",
+          "Away team: Levante"
+        ],
+        "matchday": 1,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564632. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-554968",
+      "title": "Vasco da Gama – Santos",
+      "utcDate": "2026-08-16T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SAN",
+          "name": "Santos"
+        },
+        "home": {
+          "tla": "VAS",
+          "name": "Vasco da Gama"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 23",
+          "Home team: Vasco da Gama",
+          "Away team: Santos"
+        ],
+        "matchday": 23,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 554968. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-564636",
+      "title": "Celta – Osasuna",
+      "utcDate": "2026-08-16T19:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "OSA",
+          "name": "Osasuna"
+        },
+        "home": {
+          "tla": "CEL",
+          "name": "Celta"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 1",
+          "Home team: Celta",
+          "Away team: Osasuna"
+        ],
+        "matchday": 1,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564636. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-554966",
+      "title": "Mirassol – Flamengo",
+      "utcDate": "2026-08-16T21:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FLA",
+          "name": "Flamengo"
+        },
+        "home": {
+          "tla": "MIR",
+          "name": "Mirassol"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 23",
+          "Home team: Mirassol",
+          "Away team: Flamengo"
+        ],
+        "matchday": 23,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 554966. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-554969",
+      "title": "Vitória – Botafogo",
+      "utcDate": "2026-08-16T21:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BOT",
+          "name": "Botafogo"
+        },
+        "home": {
+          "tla": "VIT",
+          "name": "Vitória"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 23",
+          "Home team: Vitória",
+          "Away team: Botafogo"
+        ],
+        "matchday": 23,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 554969. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-554963",
+      "title": "Corinthians – Cruzeiro",
+      "utcDate": "2026-08-16T22:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "CRU",
+          "name": "Cruzeiro"
+        },
+        "home": {
+          "tla": "COR",
+          "name": "Corinthians"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 23",
+          "Home team: Corinthians",
+          "Away team: Cruzeiro"
+        ],
+        "matchday": 23,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 554963. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BSA"
       }
     }
