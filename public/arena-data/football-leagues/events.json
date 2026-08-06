@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-05T07:21:11.984Z",
+  "updatedAt": "2026-08-06T08:04:49.433Z",
   "events": [
     {
       "id": "fd-554940",
@@ -1647,6 +1647,62 @@
         "matchday": 23,
         "competition": "Brasileirão",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 554963. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-564635",
+      "title": "Deportivo – Elche",
+      "utcDate": "2026-08-17T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ELC",
+          "name": "Elche"
+        },
+        "home": {
+          "tla": "DEP",
+          "name": "Deportivo"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 1",
+          "Home team: Deportivo",
+          "Away team: Elche"
+        ],
+        "matchday": 1,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564635. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-554965",
+      "title": "Internacional – Clube do Remo",
+      "utcDate": "2026-08-17T23:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "CRE",
+          "name": "Clube do Remo"
+        },
+        "home": {
+          "tla": "SCI",
+          "name": "Internacional"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 23",
+          "Home team: Internacional",
+          "Away team: Clube do Remo"
+        ],
+        "matchday": 23,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 554965. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BSA"
       }
     }
