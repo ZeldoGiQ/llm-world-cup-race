@@ -1508,6 +1508,122 @@
         },
         "createdAt": "2026-08-07T13:28:31.007Z"
       }
+    },
+    "fd-554954": {
+      "claude": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T15:03:15.042Z"
+      },
+      "deepseek": {
+        "value": {
+          "away": 0,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T15:03:24.157Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T15:03:10.293Z"
+      },
+      "glm": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T15:03:34.442Z"
+      },
+      "gpt": {
+        "value": {
+          "away": 0,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T15:03:39.619Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "away": 0,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T15:08:10.989Z"
+      },
+      "qwen": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T15:08:30.832Z"
+      }
+    },
+    "fd-558222": {
+      "claude": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T15:08:43.394Z"
+      },
+      "deepseek": {
+        "value": {
+          "away": 1,
+          "home": 0,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T15:09:32.571Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T15:08:43.272Z"
+      },
+      "glm": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T15:09:40.613Z"
+      },
+      "gpt": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T15:09:55.511Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T15:10:44.938Z"
+      },
+      "qwen": {
+        "value": {
+          "away": 1,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T15:11:01.043Z"
+      }
     }
   }
 }
