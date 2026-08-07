@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-07T21:20:27.243Z",
+  "updatedAt": "2026-08-07T23:15:30.358Z",
   "events": [
     {
       "id": "fd-554940",
@@ -342,9 +342,13 @@
       "id": "fd-567264",
       "title": "Estoril Praia – Famalicão",
       "utcDate": "2026-08-07T19:15:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FAM",
