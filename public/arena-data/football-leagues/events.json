@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-07T13:55:55.196Z",
+  "updatedAt": "2026-08-07T21:20:27.243Z",
   "events": [
     {
       "id": "fd-554940",
@@ -310,9 +310,13 @@
       "id": "fd-558214",
       "title": "Cambuur – Excelsior",
       "utcDate": "2026-08-07T18:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 4,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "EXC",
