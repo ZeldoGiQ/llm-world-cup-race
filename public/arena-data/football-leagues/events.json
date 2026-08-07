@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-07T03:35:45.303Z",
+  "updatedAt": "2026-08-07T06:51:24.488Z",
   "events": [
     {
       "id": "fd-554940",
@@ -1175,6 +1175,34 @@
       }
     },
     {
+      "id": "fd-554961",
+      "title": "Mineiro – Grêmio",
+      "utcDate": "2026-08-15T16:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FBP",
+          "name": "Grêmio"
+        },
+        "home": {
+          "tla": "CAM",
+          "name": "Mineiro"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 23",
+          "Home team: Mineiro",
+          "Away team: Grêmio"
+        ],
+        "matchday": 23,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 554961. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
       "id": "fd-558225",
       "title": "Utrecht – AZ",
       "utcDate": "2026-08-15T16:45:00.000Z",
@@ -1480,34 +1508,6 @@
         "competition": "La Liga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564632. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PD"
-      }
-    },
-    {
-      "id": "fd-554961",
-      "title": "Mineiro – Grêmio",
-      "utcDate": "2026-08-16T19:00:00.000Z",
-      "status": "UPCOMING",
-      "predictionType": "scoreline",
-      "resolution": null,
-      "metadata": {
-        "away": {
-          "tla": "FBP",
-          "name": "Grêmio"
-        },
-        "home": {
-          "tla": "CAM",
-          "name": "Mineiro"
-        },
-        "context": [
-          "Competition: Brasileirão",
-          "Matchday: 23",
-          "Home team: Mineiro",
-          "Away team: Grêmio"
-        ],
-        "matchday": 23,
-        "competition": "Brasileirão",
-        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 554961. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
-        "competitionCode": "BSA"
       }
     },
     {
