@@ -696,6 +696,488 @@
         },
         "createdAt": "2026-08-05T20:38:29.397Z"
       }
+    },
+    "fd-558215": {
+      "claude": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-06T15:27:41.698Z"
+      },
+      "deepseek": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-06T15:28:07.298Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-06T15:27:42.455Z"
+      },
+      "glm": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-06T15:28:14.975Z"
+      },
+      "gpt": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-06T15:28:24.230Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-06T15:28:35.632Z"
+      },
+      "qwen": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-06T15:28:53.597Z"
+      }
+    },
+    "fd-567263": {
+      "claude": {
+        "value": {
+          "away": 0,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-06T15:29:18.037Z"
+      },
+      "deepseek": {
+        "value": {
+          "away": 0,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-06T15:31:47.753Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "away": 1,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-06T15:29:03.051Z"
+      },
+      "glm": {
+        "value": {
+          "away": 1,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-06T15:32:06.200Z"
+      },
+      "gpt": {
+        "value": {
+          "away": 1,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-06T15:32:10.675Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "away": 0,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-06T15:32:56.757Z"
+      },
+      "qwen": {
+        "value": {
+          "away": 1,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-06T15:33:15.819Z"
+      }
+    },
+    "fd-558216": {
+      "claude": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:11:08.729Z"
+      },
+      "deepseek": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:11:18.597Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:11:03.634Z"
+      },
+      "glm": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:11:22.163Z"
+      },
+      "gpt": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:11:32.053Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:15:45.954Z"
+      },
+      "qwen": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:16:05.358Z"
+      }
+    },
+    "fd-567258": {
+      "claude": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:16:17.401Z"
+      },
+      "deepseek": {
+        "value": {
+          "away": 0,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:16:37.632Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:16:13.961Z"
+      },
+      "glm": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:17:25.265Z"
+      },
+      "gpt": {
+        "value": {
+          "away": 0,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:16:51.090Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:16:48.962Z"
+      },
+      "qwen": {
+        "value": {
+          "away": 0,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:17:38.938Z"
+      }
+    },
+    "fd-558217": {
+      "claude": {
+        "value": {
+          "away": 0,
+          "home": 3,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:17:54.386Z"
+      },
+      "deepseek": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:18:51.356Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "away": 0,
+          "home": 3,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:17:50.575Z"
+      },
+      "glm": {
+        "value": {
+          "away": 0,
+          "home": 3,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:18:56.299Z"
+      },
+      "gpt": {
+        "value": {
+          "away": 0,
+          "home": 3,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:19:08.301Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "away": 0,
+          "home": 3,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:19:10.284Z"
+      },
+      "qwen": {
+        "value": {
+          "away": 1,
+          "home": 3,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:19:39.050Z"
+      }
+    },
+    "fd-554956": {
+      "claude": {
+        "value": {
+          "away": 0,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:19:50.948Z"
+      },
+      "deepseek": {
+        "value": {
+          "away": 0,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:20:59.162Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:19:48.741Z"
+      },
+      "glm": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:21:55.408Z"
+      },
+      "gpt": {
+        "value": {
+          "away": 0,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:21:11.607Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "away": 0,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:22:05.670Z"
+      },
+      "qwen": {
+        "value": {
+          "away": 1,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:22:21.522Z"
+      }
+    },
+    "fd-558218": {
+      "claude": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:22:41.414Z"
+      },
+      "deepseek": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:23:18.491Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:22:29.471Z"
+      },
+      "glm": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:23:22.124Z"
+      },
+      "gpt": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:23:37.148Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:25:46.548Z"
+      },
+      "qwen": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:25:59.262Z"
+      }
+    },
+    "fd-567260": {
+      "claude": {
+        "value": {
+          "away": 2,
+          "home": 0,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:26:10.894Z"
+      },
+      "deepseek": {
+        "value": {
+          "away": 2,
+          "home": 0,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:26:14.401Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "away": 2,
+          "home": 0,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:26:10.873Z"
+      },
+      "glm": {
+        "value": {
+          "away": 2,
+          "home": 0,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:26:21.641Z"
+      },
+      "gpt": {
+        "value": {
+          "away": 2,
+          "home": 0,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:26:37.327Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "away": 2,
+          "home": 0,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:26:50.426Z"
+      },
+      "qwen": {
+        "value": {
+          "away": 2,
+          "home": 0,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:27:04.347Z"
+      }
+    },
+    "fd-554958": {
+      "claude": {
+        "value": {
+          "away": 1,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:27:18.181Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "away": 0,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-07T00:27:16.955Z"
+      }
     }
   }
 }
