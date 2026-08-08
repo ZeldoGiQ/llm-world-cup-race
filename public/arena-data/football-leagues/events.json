@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-08T21:02:38.533Z",
+  "updatedAt": "2026-08-08T23:01:23.098Z",
   "events": [
     {
       "id": "fd-554940",
@@ -502,9 +502,13 @@
       "id": "fd-558217",
       "title": "PSV – Sittard",
       "utcDate": "2026-08-08T18:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SIT",
@@ -530,9 +534,13 @@
       "id": "fd-554956",
       "title": "Grêmio – São Paulo",
       "utcDate": "2026-08-08T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "PAU",
@@ -558,9 +566,13 @@
       "id": "fd-558218",
       "title": "AZ – Den Haag",
       "utcDate": "2026-08-08T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ADO",
@@ -586,9 +598,13 @@
       "id": "fd-567260",
       "title": "Amadora – Sporting CP",
       "utcDate": "2026-08-08T19:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SPO",
