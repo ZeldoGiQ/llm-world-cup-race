@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-08T13:30:09.765Z",
+  "updatedAt": "2026-08-08T19:13:47.858Z",
   "events": [
     {
       "id": "fd-554940",
@@ -374,9 +374,13 @@
       "id": "fd-558215",
       "title": "NEC – Telstar",
       "utcDate": "2026-08-08T14:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "TEL",
@@ -402,9 +406,13 @@
       "id": "fd-567263",
       "title": "Marítimo – Casa Pia",
       "utcDate": "2026-08-08T14:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CAS",
