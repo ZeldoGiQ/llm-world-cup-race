@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-08T19:13:47.858Z",
+  "updatedAt": "2026-08-08T21:02:38.533Z",
   "events": [
     {
       "id": "fd-554940",
@@ -438,9 +438,13 @@
       "id": "fd-558216",
       "title": "Go Ahead – Willem II",
       "utcDate": "2026-08-08T16:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "WII",
@@ -466,9 +470,13 @@
       "id": "fd-567258",
       "title": "Vitória SC – Arouca",
       "utcDate": "2026-08-08T17:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCA",
@@ -1443,6 +1451,62 @@
       }
     },
     {
+      "id": "fd-558229",
+      "title": "Feyenoord – Go Ahead",
+      "utcDate": "2026-08-16T12:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "GOA",
+          "name": "Go Ahead"
+        },
+        "home": {
+          "tla": "FEY",
+          "name": "Feyenoord"
+        },
+        "context": [
+          "Competition: Eredivisie",
+          "Matchday: 2",
+          "Home team: Feyenoord",
+          "Away team: Go Ahead"
+        ],
+        "matchday": 2,
+        "competition": "Eredivisie",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558229. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "DED"
+      }
+    },
+    {
+      "id": "fd-558230",
+      "title": "Twente – Zwolle",
+      "utcDate": "2026-08-16T12:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ZWO",
+          "name": "Zwolle"
+        },
+        "home": {
+          "tla": "TWE",
+          "name": "Twente"
+        },
+        "context": [
+          "Competition: Eredivisie",
+          "Matchday: 2",
+          "Home team: Twente",
+          "Away team: Zwolle"
+        ],
+        "matchday": 2,
+        "competition": "Eredivisie",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558230. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "DED"
+      }
+    },
+    {
       "id": "fd-554962",
       "title": "Chapecoense – Bahia",
       "utcDate": "2026-08-16T14:00:00.000Z",
@@ -1468,6 +1532,34 @@
         "competition": "Brasileirão",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 554962. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-558231",
+      "title": "Ajax – Heerenveen",
+      "utcDate": "2026-08-16T14:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "HEE",
+          "name": "Heerenveen"
+        },
+        "home": {
+          "tla": "AJA",
+          "name": "Ajax"
+        },
+        "context": [
+          "Competition: Eredivisie",
+          "Matchday: 2",
+          "Home team: Ajax",
+          "Away team: Heerenveen"
+        ],
+        "matchday": 2,
+        "competition": "Eredivisie",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558231. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "DED"
       }
     },
     {
