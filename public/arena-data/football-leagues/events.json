@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-07T23:15:30.358Z",
+  "updatedAt": "2026-08-08T05:23:01.257Z",
   "events": [
     {
       "id": "fd-554940",
@@ -1712,6 +1712,34 @@
         "competition": "Brasileirão",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 554965. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-564628",
+      "title": "Atleti – Málaga",
+      "utcDate": "2026-08-19T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "MAL",
+          "name": "Málaga"
+        },
+        "home": {
+          "tla": "ATL",
+          "name": "Atleti"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 1",
+          "Home team: Atleti",
+          "Away team: Málaga"
+        ],
+        "matchday": 1,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564628. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
       }
     }
   ]
