@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-09T05:31:43.502Z",
+  "updatedAt": "2026-08-09T13:34:05.888Z",
   "events": [
     {
       "id": "fd-554940",
@@ -726,9 +726,13 @@
       "id": "fd-558219",
       "title": "Sparta – Feyenoord",
       "utcDate": "2026-08-09T10:15:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FEY",
