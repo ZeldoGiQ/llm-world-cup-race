@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-09T19:17:53.490Z",
+  "updatedAt": "2026-08-09T21:05:35.191Z",
   "events": [
     {
       "id": "fd-554940",
@@ -886,9 +886,13 @@
       "id": "fd-567265",
       "title": "Porto – Alverca",
       "utcDate": "2026-08-09T17:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ALV",
@@ -1300,6 +1304,34 @@
         "competition": "Eredivisie",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558225. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "DED"
+      }
+    },
+    {
+      "id": "fd-567273",
+      "title": "Acad. Viseu – Santa Clara",
+      "utcDate": "2026-08-15T17:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "CD ",
+          "name": "Santa Clara"
+        },
+        "home": {
+          "tla": "ACV",
+          "name": "Acad. Viseu"
+        },
+        "context": [
+          "Competition: Primeira Liga",
+          "Matchday: 2",
+          "Home team: Acad. Viseu",
+          "Away team: Santa Clara"
+        ],
+        "matchday": 2,
+        "competition": "Primeira Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 567273. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PPL"
       }
     },
     {
