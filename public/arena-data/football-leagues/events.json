@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-09T21:05:35.191Z",
+  "updatedAt": "2026-08-09T23:03:07.139Z",
   "events": [
     {
       "id": "fd-554940",
@@ -918,9 +918,13 @@
       "id": "fd-554950",
       "title": "Bahia – Vasco da Gama",
       "utcDate": "2026-08-09T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "VAS",
@@ -946,9 +950,13 @@
       "id": "fd-554957",
       "title": "Palmeiras – Internacional",
       "utcDate": "2026-08-09T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SCI",
@@ -974,9 +982,13 @@
       "id": "fd-567259",
       "title": "Moreirense – Braga",
       "utcDate": "2026-08-09T19:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SCB",
@@ -1002,9 +1014,13 @@
       "id": "fd-567261",
       "title": "Gil Vicente – Rio Ave",
       "utcDate": "2026-08-09T19:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "RIO",
@@ -1030,9 +1046,13 @@
       "id": "fd-567262",
       "title": "SL Benfica – Acad. Viseu",
       "utcDate": "2026-08-09T19:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ACV",
