@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-08T23:01:23.098Z",
+  "updatedAt": "2026-08-09T05:31:43.502Z",
   "events": [
     {
       "id": "fd-554940",
@@ -630,9 +630,13 @@
       "id": "fd-554958",
       "title": "Clube do Remo – Mineiro",
       "utcDate": "2026-08-08T21:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CAM",
@@ -658,9 +662,13 @@
       "id": "fd-554953",
       "title": "Coritiba – Chapecoense",
       "utcDate": "2026-08-08T23:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CHA",
@@ -686,9 +694,13 @@
       "id": "fd-554951",
       "title": "Botafogo – Fluminense",
       "utcDate": "2026-08-09T00:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FLU",
@@ -1212,6 +1224,34 @@
         "competition": "Eredivisie",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558224. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "DED"
+      }
+    },
+    {
+      "id": "fd-567266",
+      "title": "Alverca – Amadora",
+      "utcDate": "2026-08-15T14:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "AMA",
+          "name": "Amadora"
+        },
+        "home": {
+          "tla": "ALV",
+          "name": "Alverca"
+        },
+        "context": [
+          "Competition: Primeira Liga",
+          "Matchday: 2",
+          "Home team: Alverca",
+          "Away team: Amadora"
+        ],
+        "matchday": 2,
+        "competition": "Primeira Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 567266. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PPL"
       }
     },
     {
@@ -1883,6 +1923,34 @@
         "matchday": 1,
         "competition": "La Liga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564628. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-564638",
+      "title": "Rayo Vallecano – Alavés",
+      "utcDate": "2026-08-20T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ALA",
+          "name": "Alavés"
+        },
+        "home": {
+          "tla": "RAY",
+          "name": "Rayo Vallecano"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 2",
+          "Home team: Rayo Vallecano",
+          "Away team: Alavés"
+        ],
+        "matchday": 2,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564638. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PD"
       }
     }

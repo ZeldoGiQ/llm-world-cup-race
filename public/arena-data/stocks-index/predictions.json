@@ -348,6 +348,33 @@
         },
         "createdAt": "2026-08-08T02:17:46.101Z"
       }
+    },
+    "yf-gdaxi-2026-08-21": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 26319.45
+        },
+        "createdAt": "2026-08-09T05:19:08.243Z"
+      }
+    },
+    "yf-gspc-2026-08-21": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 7757.64
+        },
+        "createdAt": "2026-08-09T05:19:08.243Z"
+      }
+    },
+    "yf-ndx-2026-08-21": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 29722.3
+        },
+        "createdAt": "2026-08-09T05:19:08.243Z"
+      }
     }
   }
 }
