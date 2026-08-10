@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-09T23:03:07.139Z",
+  "updatedAt": "2026-08-10T02:56:01.787Z",
   "events": [
     {
       "id": "fd-554940",
@@ -1078,9 +1078,13 @@
       "id": "fd-554952",
       "title": "Bragantino – Corinthians",
       "utcDate": "2026-08-09T21:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "COR",
@@ -1106,9 +1110,13 @@
       "id": "fd-554959",
       "title": "Santos – Paranaense",
       "utcDate": "2026-08-09T21:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CAP",
@@ -1134,9 +1142,13 @@
       "id": "fd-554955",
       "title": "Flamengo – Vitória",
       "utcDate": "2026-08-09T22:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "VIT",
