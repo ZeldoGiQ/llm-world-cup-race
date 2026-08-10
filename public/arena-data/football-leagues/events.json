@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-10T06:53:44.929Z",
+  "updatedAt": "2026-08-10T23:15:50.566Z",
   "events": [
     {
       "id": "fd-554940",
@@ -1174,9 +1174,13 @@
       "id": "fd-567257",
       "title": "Santa Clara – CD Nacional",
       "utcDate": "2026-08-10T19:15:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CDN",
