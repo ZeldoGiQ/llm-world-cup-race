@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-10T02:56:01.787Z",
+  "updatedAt": "2026-08-10T06:53:44.929Z",
   "events": [
     {
       "id": "fd-554940",
@@ -2035,6 +2035,90 @@
         "matchday": 2,
         "competition": "La Liga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564638. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-559715",
+      "title": "Marseille – Strasbourg",
+      "utcDate": "2026-08-21T18:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "RC ",
+          "name": "Strasbourg"
+        },
+        "home": {
+          "tla": "MAR",
+          "name": "Marseille"
+        },
+        "context": [
+          "Competition: Ligue 1",
+          "Matchday: 1",
+          "Home team: Marseille",
+          "Away team: Strasbourg"
+        ],
+        "matchday": 1,
+        "competition": "Ligue 1",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 559715. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "FL1"
+      }
+    },
+    {
+      "id": "fd-560542",
+      "title": "Arsenal – Coventry City",
+      "utcDate": "2026-08-21T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "COV",
+          "name": "Coventry City"
+        },
+        "home": {
+          "tla": "ARS",
+          "name": "Arsenal"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 1",
+          "Home team: Arsenal",
+          "Away team: Coventry City"
+        ],
+        "matchday": 1,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560542. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-564647",
+      "title": "Real Betis – Real Sociedad",
+      "utcDate": "2026-08-21T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "RSO",
+          "name": "Real Sociedad"
+        },
+        "home": {
+          "tla": "BET",
+          "name": "Real Betis"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 2",
+          "Home team: Real Betis",
+          "Away team: Real Sociedad"
+        ],
+        "matchday": 2,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564647. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PD"
       }
     }
