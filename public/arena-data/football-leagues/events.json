@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-12T06:57:03.457Z",
+  "updatedAt": "2026-08-13T06:04:20.671Z",
   "events": [
     {
       "id": "fd-554940",
@@ -2823,6 +2823,90 @@
         "matchday": 2,
         "competition": "La Liga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564642. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-564639",
+      "title": "Osasuna – Levante",
+      "utcDate": "2026-08-24T17:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "LEV",
+          "name": "Levante"
+        },
+        "home": {
+          "tla": "OSA",
+          "name": "Osasuna"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 2",
+          "Home team: Osasuna",
+          "Away team: Levante"
+        ],
+        "matchday": 2,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564639. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-560551",
+      "title": "Fulham – Chelsea",
+      "utcDate": "2026-08-24T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "CHE",
+          "name": "Chelsea"
+        },
+        "home": {
+          "tla": "FUL",
+          "name": "Fulham"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 1",
+          "Home team: Fulham",
+          "Away team: Chelsea"
+        ],
+        "matchday": 1,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560551. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-564640",
+      "title": "Málaga – Deportivo",
+      "utcDate": "2026-08-24T19:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "DEP",
+          "name": "Deportivo"
+        },
+        "home": {
+          "tla": "MAL",
+          "name": "Málaga"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 2",
+          "Home team: Málaga",
+          "Away team: Deportivo"
+        ],
+        "matchday": 2,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564640. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PD"
       }
     }
