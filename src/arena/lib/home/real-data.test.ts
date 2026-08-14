@@ -16,7 +16,11 @@ import { metrics } from '../metrics/index';
 import { predictionTypes } from '../prediction-types/index';
 import { references } from '../references/index';
 import { bootstrapCategory } from '../scoring/bootstrap';
-import { computeOverall } from '../scoring/overall';
+import {
+  computeOverall,
+  REQUIRED_CATEGORIES,
+  type QualificationFailure,
+} from '../scoring/overall';
 import type { ArenaModel, EventsFile, PredictionsFile, Sample } from '../types';
 import modelsJson from '../../data/models.json';
 import { classifyCategoryData } from './provenance';
@@ -258,27 +262,53 @@ describe('Gesamtwertung über die echten Daten', () => {
     }),
   );
 
-  it('entsteht heute bewusst NICHT – eine Kategorie ist keine Gesamtwertung', () => {
-    expect(overall.status).toBe('insufficient');
-    expect(overall.rows).toEqual([]);
-    expect(overall.qualifiedCount).toBe(1);
+  it('entsteht genau dann, wenn genug Kategorien qualifiziert sind', () => {
+    // Dieser Test hat schon einmal den Kalendertag eingefroren statt der
+    // Regel: Er behauptete, es gebe keine Gesamtwertung – und wurde rot, als
+    // die zweite Kategorie qualifizierte. Geprüft wird deshalb der
+    // Zusammenhang, nicht der Zählerstand.
     expect(overall.totalCategories).toBe(6);
+    expect(overall.status).toBe(
+      overall.qualifiedCount >= REQUIRED_CATEGORIES ? 'ready' : 'insufficient',
+    );
+
+    if (overall.status === 'ready') {
+      expect(overall.rows.length).toBeGreaterThan(0);
+      for (const row of overall.rows) {
+        expect(row.categoriesCounted).toBeGreaterThan(0);
+        if (row.predictionScore !== null) expect(Number.isFinite(row.predictionScore)).toBe(true);
+      }
+    } else {
+      expect(overall.rows).toEqual([]);
+    }
   });
 
   it('nennt für jede nicht qualifizierte Kategorie einen prüfbaren Grund', () => {
-    const reasons = new Map(
-      overall.qualifications.filter((q) => !q.qualified).map((q) => [q.categoryId, q.reason]),
-    );
+    const unqualified = overall.qualifications.filter((q) => !q.qualified);
+    const reasons = new Map(unqualified.map((q) => [q.categoryId, q.reason]));
+
+    // Beispieldaten qualifizieren sich nie – das ist eine feste Regel und
+    // kein Zwischenstand.
     expect(reasons.get('elections')).toBe('example-data');
     expect(reasons.get('sports-mixed')).toBe('example-data');
-    // Die Live-Kategorien wachsen unter diesem Test weiter: Erst gibt es keine
-    // Vorhersagen, dann zu wenige Auflösungen – beides sind gültige Zustände
-    // auf dem Weg zur Qualifikation. Der Test friert den GRUND-TYP ein, nicht
-    // den Kalendertag.
-    for (const id of ['football-leagues', 'crypto', 'stocks-index']) {
-      expect(['no-predictions', 'too-few-resolved', 'too-few-models']).toContain(reasons.get(id));
+
+    // Die Live-Kategorien wachsen unter diesem Test weiter: erst fehlt die
+    // Referenz, dann fehlen Vorhersagen, dann Auflösungen, irgendwann sind
+    // sie qualifiziert. Alle diese Gründe sind gültige Zwischenstände auf
+    // demselben Weg – nur „integrity" wäre ein echter Fehler und deshalb
+    // hier ausgeschlossen.
+    const ONGOING: QualificationFailure[] = [
+      'no-reference',
+      'no-predictions',
+      'too-few-resolved',
+      'too-few-models',
+    ];
+    for (const [id, reason] of reasons) {
+      if (id === 'elections' || id === 'sports-mixed') continue;
+      expect(ONGOING).toContain(reason);
     }
-    expect(reasons.size).toBe(5);
+
+    expect(unqualified.length + overall.qualifiedCount).toBe(overall.totalCategories);
   });
 
   it('qualifiziert die WM und merkt sich die nachträgliche Referenz', () => {
