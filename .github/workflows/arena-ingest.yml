@@ -35,35 +35,3 @@ jobs:
         run: node --experimental-strip-types scripts/arena/jobs/ingest.mts
         env:
           SECRETS_CONTEXT: ${{ toJson(secrets) }}
-
-      # ---------------------------------------------------------------------
-      # NOTBEHELF, bewusst hier und nicht in arena-analytics.yml.
-      #
-      # Der Analytics-Workflow wird von GitHub blockiert: Jeder Lauf endet
-      # sofort mit conclusion "action_required" und ohne einen einzigen Job –
-      # auch bei manuellem Anstoss durch den Repo-Eigentuemer. Repo-Rechte,
-      # Rulesets und Environments sind unauffaellig, die Freigabe-API greift
-      # nur bei Fork-PRs. Solange das nicht in der GitHub-Oberflaeche
-      # freigegeben ist, laufen diese beiden Schritte NIE.
-      #
-      # Was dadurch ausfiel: der taegliche Kosten-Digest, der Janitor – und
-      # vor allem der Invarianten-Check, der die Lock-Zusage misst statt sie
-      # anzunehmen. Das ist die Grundlage der Zitierfaehigkeit; sie
-      # ungeprueft zu lassen ist teurer als ein unsauber einsortierter
-      # Schritt.
-      #
-      # Beide Schritte laufen mit continue-on-error, damit die
-      # Event-Beschaffung gruen bleibt, wenn einer von ihnen scheitert.
-      # Sobald arena-analytics wieder laeuft, gehoeren sie dorthin zurueck.
-      # ---------------------------------------------------------------------
-      - name: Snapshot und Digest (Ersatz fuer den blockierten Analytics-Lauf)
-        continue-on-error: true
-        run: node --experimental-strip-types scripts/arena/jobs/analytics.mts
-        env:
-          SECRETS_CONTEXT: ${{ toJson(secrets) }}
-
-      - name: Modellkatalog abgleichen
-        continue-on-error: true
-        run: node --experimental-strip-types scripts/arena/jobs/catalog.mts
-        env:
-          SECRETS_CONTEXT: ${{ toJson(secrets) }}
