@@ -413,3 +413,63 @@ describe('Berechnung', () => {
     }
   });
 });
+
+describe('Neuzugang in eine laufende Kategorie', () => {
+  /**
+   * Festgehaltenes Verhalten, kein Wunschzustand.
+   *
+   * Die Gesamtwertung rechnet bewusst streng über die Schnittmenge: Nur
+   * Ereignisse, die ALLE Teilnehmer getippt haben, zählen – sonst würden
+   * zwei Modelle über verschiedene Hälften verglichen. Als „Teilnehmer" gilt
+   * dabei schon, wer einen einzigen Tipp abgegeben hat.
+   *
+   * Die Kehrseite: Ein Modell, das mitten in einer laufenden Kategorie
+   * dazukommt, schrumpft die Schnittmenge auf seine eigenen wenigen
+   * Ereignisse. Die Kategorie reißt dann die Abdeckungshürde und fällt für
+   * ALLE Modelle aus der Gesamtwertung – der Neuzugang beschädigt also die
+   * Zahl der anderen, statt nur selbst keine zu bekommen.
+   *
+   * Das ist der Grund, warum ein neues Modell derzeit nicht einfach in eine
+   * laufende Kategorie eingehängt werden kann. Ändert jemand diese Regel,
+   * muss dieser Test bewusst angepasst werden.
+   */
+  it('lässt die Kategorie für alle aus der Wertung fallen', () => {
+    const n = MIN_RESOLVED;
+    const lateJoiner = 'c';
+    // a und b tippen alles, c erst die letzten beiden Ereignisse.
+    const skipped = Array.from({ length: n - 2 }, (_, index) => `e${index}`);
+
+    const withLateJoiner = (id: string) => ({
+      descriptor: descriptor(id),
+      events: scorelineEvents(n, id),
+      predictions: scorelinePredictions(
+        n,
+        { a: [1, 0], b: [2, 1], [lateJoiner]: [0, 3] },
+        { [lateJoiner]: skipped },
+      ),
+      dataSource: 'live' as const,
+      integrityErrors: 0,
+      reference: ALWAYS_DRAW,
+    });
+
+    const categories = Array.from({ length: REQUIRED_CATEGORIES }, (_, index) =>
+      withLateJoiner(`late${index}`),
+    );
+    const result = computeOverall(MODELS, categories);
+
+    expect(result.status).toBe('insufficient');
+    expect(result.qualifiedCount).toBe(0);
+    // Nicht der Neuzugang scheitert – die ganze Kategorie scheitert.
+    for (const qualification of result.qualifications) {
+      expect(qualification.reason).toBe('too-few-models');
+    }
+  });
+
+  it('wertet dieselben Kategorien ohne den Neuzugang normal', () => {
+    // Gegenprobe: Es liegt am späten Einstieg, nicht an den Daten.
+    const categories = Array.from({ length: REQUIRED_CATEGORIES }, (_, index) =>
+      goodCategory(`full${index}`),
+    );
+    expect(computeOverall(MODELS, categories).status).toBe('ready');
+  });
+});
