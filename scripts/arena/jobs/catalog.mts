@@ -28,7 +28,7 @@
  * Entscheidung, keine Ableitung. Der Job schreibt einen Bericht; eintragen
  * bleibt ein bewusster Handgriff.
  */
-import { db, unwrap, type ModelRow, type ProviderRow } from '../lib/db.mts';
+import { db, opsConfig, setOpsConfig, unwrap, type ModelRow, type ProviderRow } from '../lib/db.mts';
 import { getSecret } from '../lib/env.mts';
 import { notifyDiscord } from '../lib/notify.mts';
 
@@ -90,7 +90,28 @@ const providers = unwrap(
 
 const models = unwrap(await db().from('models').select('*').order('id'), 'models lesen') as ModelRow[];
 
+/**
+ * Zeitkritischer Teil: Erscheint bei einem Labor, das wir ohnehin messen, ein
+ * neues Modell, ist das die Gelegenheit, es früh zu benchmarken – und die
+ * Aufmerksamkeit hält nur wenige Tage. Deshalb wird dieser Fall gemeldet und
+ * nicht nur protokolliert.
+ *
+ * Zwei Filter, damit die Meldung eine Meldung bleibt und kein Rauschen:
+ *   1. Nur Labore, von denen wir schon ein Modell führen. Der Katalog hat
+ *      hunderte Einträge; die meisten sind für uns bedeutungslos.
+ *   2. Nur Kandidaten für die vordere Reihe. Was erkennbar eine Spar- oder
+ *      Sondervariante ist, taugt nicht als Nachfolger eines Teilnehmers.
+ * Gemeldet wird jeder Bezeichner genau einmal – wiederholte Meldungen werden
+ * nach zwei Tagen nicht mehr gelesen.
+ */
+const SIDE_VARIANT = /-(mini|nano|lite|preview|chat|image|audio|tts|embed|coder|search)\b/i;
+
+function isFrontRunner(id: string): boolean {
+  return !SIDE_VARIANT.test(id);
+}
+
 const lines: string[] = [];
+const noteworthy: string[] = [];
 let missingCount = 0;
 let newCount = 0;
 
@@ -134,6 +155,7 @@ for (const provider of providers) {
     for (const [lab, ids] of [...byLab].sort((a, b) => a[0].localeCompare(b[0]))) {
       const known = ours.some((model) => model.api_model.startsWith(`${lab}/`));
       lines.push(`- **${lab}**${known ? ' (Lab ist bei uns vertreten)' : ''}: ${ids.sort().join(', ')}`);
+      if (known) noteworthy.push(...ids.filter(isFrontRunner));
     }
   }
 
@@ -158,4 +180,20 @@ if (missingCount > 0) {
     `Katalog-Abgleich: ${missingCount} aktive(s) Modell(e) nicht mehr im Katalog des Anbieters. ` +
       `Sie tippen weiter und schlagen dabei fehl. Details im Job-Protokoll.`,
   );
+}
+
+// Neues Modell bei einem Labor, das wir messen: Das ist die Gelegenheit, früh
+// dabei zu sein. Nur beim ersten Auftauchen melden – danach steht es im
+// Bericht und muss nicht täglich wiederholt werden.
+const alreadySeen = await opsConfig<string[]>('catalog_announced', []);
+const unseen = noteworthy.filter((id) => !alreadySeen.includes(id)).sort();
+
+if (unseen.length > 0) {
+  const list = unseen.slice(0, 8).join(', ');
+  const rest = unseen.length > 8 ? ` (+${unseen.length - 8} weitere)` : '';
+  await notifyDiscord(
+    `Neu im Katalog bei einem Labor, das wir messen: ${list}${rest}. ` +
+      `Wer früh benchmarkt, misst mit der Aufmerksamkeit – Eintragen bleibt eine bewusste Entscheidung.`,
+  );
+  await setOpsConfig('catalog_announced', [...alreadySeen, ...unseen]);
 }

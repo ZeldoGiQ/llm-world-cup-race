@@ -149,3 +149,13 @@ export async function opsConfig<T>(key: string, fallback: T): Promise<T> {
   if (error) throw new Error(`ops_config "${key}": ${error.message}`);
   return (data?.value as T) ?? fallback;
 }
+
+/**
+ * ops_config-Wert schreiben. Für Jobs, die sich etwas merken müssen – etwa
+ * welche Katalog-Einträge schon gemeldet wurden, damit dieselbe Meldung
+ * nicht jeden Tag erneut kommt und dadurch aufhört, gelesen zu werden.
+ */
+export async function setOpsConfig(key: string, value: unknown): Promise<void> {
+  const { error } = await db().from('ops_config').upsert({ key, value }, { onConflict: 'key' });
+  if (error) throw new Error(`ops_config "${key}" schreiben: ${error.message}`);
+}
