@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-14T06:03:30.776Z",
+  "updatedAt": "2026-08-14T22:56:02.747Z",
   "events": [
     {
       "id": "fd-554940",
@@ -1206,9 +1206,13 @@
       "id": "fd-558223",
       "title": "Telstar – Sparta",
       "utcDate": "2026-08-14T18:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SPA",
@@ -1234,9 +1238,13 @@
       "id": "fd-567268",
       "title": "Sporting CP – Vitória SC",
       "utcDate": "2026-08-14T19:15:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "GUI",

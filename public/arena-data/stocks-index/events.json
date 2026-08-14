@@ -1,6 +1,6 @@
 {
   "category": "stocks-index",
-  "updatedAt": "2026-08-09T05:31:43.502Z",
+  "updatedAt": "2026-08-14T22:56:02.747Z",
   "events": [
     {
       "id": "yf-gdaxi-2026-08-07",
@@ -110,9 +110,12 @@
         "es": "Cierre de DAX el 2026-08-14"
       },
       "utcDate": "2026-08-10T00:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "numeric",
-      "resolution": null,
+      "resolution": {
+        "kind": "numeric",
+        "value": 26299.74
+      },
       "metadata": {
         "period": "Week ending 2026-08-14",
         "symbol": "DAX",
@@ -140,9 +143,12 @@
         "es": "Cierre de S&P 500 el 2026-08-14"
       },
       "utcDate": "2026-08-10T00:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "numeric",
-      "resolution": null,
+      "resolution": {
+        "kind": "numeric",
+        "value": 7785.76
+      },
       "metadata": {
         "period": "Week ending 2026-08-14",
         "symbol": "S&P 500",
@@ -170,9 +176,12 @@
         "es": "Cierre de Nasdaq 100 el 2026-08-14"
       },
       "utcDate": "2026-08-10T00:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "numeric",
-      "resolution": null,
+      "resolution": {
+        "kind": "numeric",
+        "value": 30046.14
+      },
       "metadata": {
         "period": "Week ending 2026-08-14",
         "symbol": "Nasdaq 100",
