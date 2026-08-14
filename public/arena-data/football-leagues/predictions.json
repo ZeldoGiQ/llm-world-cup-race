@@ -3289,6 +3289,22 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-08-14T15:21:51.408Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-14T15:27:59.778Z"
+      },
+      "qwen": {
+        "value": {
+          "away": 1,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-14T15:28:17.459Z"
       }
     }
   }
