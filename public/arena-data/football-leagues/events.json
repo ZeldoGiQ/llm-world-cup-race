@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-15T20:54:57.529Z",
+  "updatedAt": "2026-08-15T22:55:07.499Z",
   "events": [
     {
       "id": "fd-554940",
@@ -1430,9 +1430,13 @@
       "id": "fd-558226",
       "title": "Excelsior – PSV",
       "utcDate": "2026-08-15T18:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "PSV",
@@ -1458,9 +1462,13 @@
       "id": "fd-558227",
       "title": "Sittard – Cambuur",
       "utcDate": "2026-08-15T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CAM",
@@ -1486,9 +1494,13 @@
       "id": "fd-554964",
       "title": "Fluminense – Palmeiras",
       "utcDate": "2026-08-15T19:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "PAL",
@@ -1514,9 +1526,13 @@
       "id": "fd-564633",
       "title": "Sevilla FC – Rayo Vallecano",
       "utcDate": "2026-08-15T19:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "RAY",
