@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-14T22:56:02.747Z",
+  "updatedAt": "2026-08-15T05:00:23.209Z",
   "events": [
     {
       "id": "fd-554940",
@@ -2943,6 +2943,34 @@
         "matchday": 1,
         "competition": "La Liga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564637. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-564631",
+      "title": "Real Madrid – Real Sociedad",
+      "utcDate": "2026-08-26T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "RSO",
+          "name": "Real Sociedad"
+        },
+        "home": {
+          "tla": "RMA",
+          "name": "Real Madrid"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 1",
+          "Home team: Real Madrid",
+          "Away team: Real Sociedad"
+        ],
+        "matchday": 1,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564631. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PD"
       }
     }
