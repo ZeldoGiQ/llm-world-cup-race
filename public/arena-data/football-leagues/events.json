@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-15T05:00:23.209Z",
+  "updatedAt": "2026-08-15T19:00:04.194Z",
   "events": [
     {
       "id": "fd-554940",
@@ -1270,9 +1270,13 @@
       "id": "fd-558224",
       "title": "Willem II – NEC",
       "utcDate": "2026-08-15T14:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 4,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "NEC",
@@ -1298,9 +1302,13 @@
       "id": "fd-567266",
       "title": "Alverca – Amadora",
       "utcDate": "2026-08-15T14:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "AMA",
