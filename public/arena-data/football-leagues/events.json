@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-15T19:00:04.194Z",
+  "updatedAt": "2026-08-15T20:54:57.529Z",
   "events": [
     {
       "id": "fd-554940",
@@ -1334,9 +1334,13 @@
       "id": "fd-558225",
       "title": "Utrecht – AZ",
       "utcDate": "2026-08-15T16:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 4,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "AZ",
@@ -1362,9 +1366,13 @@
       "id": "fd-567273",
       "title": "Acad. Viseu – Santa Clara",
       "utcDate": "2026-08-15T17:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CD ",
@@ -1390,9 +1398,13 @@
       "id": "fd-564634",
       "title": "Alavés – Getafe",
       "utcDate": "2026-08-15T17:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "GET",
