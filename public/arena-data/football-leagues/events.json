@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-16T03:30:10.773Z",
+  "updatedAt": "2026-08-16T05:03:55.459Z",
   "events": [
     {
       "id": "fd-554940",
@@ -1874,7 +1874,7 @@
       "id": "fd-564636",
       "title": "Celta – Osasuna",
       "utcDate": "2026-08-16T19:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "VOID",
       "predictionType": "scoreline",
       "resolution": null,
       "metadata": {
@@ -3015,6 +3015,34 @@
         "matchday": 1,
         "competition": "La Liga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564631. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-564630",
+      "title": "Barça – Athletic",
+      "utcDate": "2026-08-27T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ATH",
+          "name": "Athletic"
+        },
+        "home": {
+          "tla": "FCB",
+          "name": "Barça"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 1",
+          "Home team: Barça",
+          "Away team: Athletic"
+        ],
+        "matchday": 1,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564630. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PD"
       }
     }
