@@ -1,6 +1,6 @@
 {
   "category": "crypto",
-  "updatedAt": "2026-08-15T05:00:23.209Z",
+  "updatedAt": "2026-08-16T02:09:30.421Z",
   "events": [
     {
       "id": "cg-btc-2026-07-29",
@@ -1019,9 +1019,12 @@
         "es": "Cierre de BTC el 2026-08-16"
       },
       "utcDate": "2026-08-16T00:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "numeric",
-      "resolution": null,
+      "resolution": {
+        "kind": "numeric",
+        "value": 63031.05
+      },
       "metadata": {
         "day": "2026-08-16",
         "coinId": "bitcoin",
@@ -1044,9 +1047,12 @@
         "es": "Cierre de ETH el 2026-08-16"
       },
       "utcDate": "2026-08-16T00:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "numeric",
-      "resolution": null,
+      "resolution": {
+        "kind": "numeric",
+        "value": 1880.96
+      },
       "metadata": {
         "day": "2026-08-16",
         "coinId": "ethereum",
