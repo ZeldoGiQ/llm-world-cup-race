@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-16T14:56:20.077Z",
+  "updatedAt": "2026-08-16T16:56:39.021Z",
   "events": [
     {
       "id": "fd-554940",
@@ -1654,9 +1654,13 @@
       "id": "fd-558229",
       "title": "Feyenoord – Go Ahead",
       "utcDate": "2026-08-16T12:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "GOA",
@@ -1682,9 +1686,13 @@
       "id": "fd-558230",
       "title": "Twente – Zwolle",
       "utcDate": "2026-08-16T12:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ZWO",
