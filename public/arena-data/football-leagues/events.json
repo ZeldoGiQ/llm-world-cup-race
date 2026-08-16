@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-16T20:54:38.883Z",
+  "updatedAt": "2026-08-16T22:53:58.730Z",
   "events": [
     {
       "id": "fd-554940",
@@ -1846,9 +1846,13 @@
       "id": "fd-554961",
       "title": "Mineiro – Grêmio",
       "utcDate": "2026-08-16T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FBP",
@@ -1874,9 +1878,13 @@
       "id": "fd-554968",
       "title": "Vasco da Gama – Santos",
       "utcDate": "2026-08-16T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SAN",
