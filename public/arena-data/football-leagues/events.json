@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-16T05:03:55.459Z",
+  "updatedAt": "2026-08-16T14:56:20.077Z",
   "events": [
     {
       "id": "fd-554940",
@@ -1622,9 +1622,13 @@
       "id": "fd-558228",
       "title": "Den Haag – Groningen",
       "utcDate": "2026-08-16T10:15:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 4,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "GRO",
