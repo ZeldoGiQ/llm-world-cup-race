@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-16T22:53:58.730Z",
+  "updatedAt": "2026-08-17T02:07:10.020Z",
   "events": [
     {
       "id": "fd-554940",
@@ -1938,9 +1938,13 @@
       "id": "fd-554966",
       "title": "Mirassol – Flamengo",
       "utcDate": "2026-08-16T21:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 5,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FLA",
@@ -1966,9 +1970,13 @@
       "id": "fd-554969",
       "title": "Vitória – Botafogo",
       "utcDate": "2026-08-16T21:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BOT",
@@ -1994,9 +2002,13 @@
       "id": "fd-554963",
       "title": "Corinthians – Cruzeiro",
       "utcDate": "2026-08-16T22:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CRU",
