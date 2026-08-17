@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-17T02:07:10.020Z",
+  "updatedAt": "2026-08-17T05:19:32.857Z",
   "events": [
     {
       "id": "fd-554940",
@@ -3091,6 +3091,118 @@
         "matchday": 1,
         "competition": "La Liga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564630. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-564654",
+      "title": "Santander – Elche",
+      "utcDate": "2026-08-28T17:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ELC",
+          "name": "Elche"
+        },
+        "home": {
+          "tla": "SAN",
+          "name": "Santander"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 3",
+          "Home team: Santander",
+          "Away team: Elche"
+        ],
+        "matchday": 3,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564654. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-565776",
+      "title": "Bayern – Stuttgart",
+      "utcDate": "2026-08-28T18:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "VFB",
+          "name": "Stuttgart"
+        },
+        "home": {
+          "tla": "FCB",
+          "name": "Bayern"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 1",
+          "Home team: Bayern",
+          "Away team: Stuttgart"
+        ],
+        "matchday": 1,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565776. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-560555",
+      "title": "Crystal Palace – Man City",
+      "utcDate": "2026-08-28T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "MCI",
+          "name": "Man City"
+        },
+        "home": {
+          "tla": "CRY",
+          "name": "Crystal Palace"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 2",
+          "Home team: Crystal Palace",
+          "Away team: Man City"
+        ],
+        "matchday": 2,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560555. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-564648",
+      "title": "Alavés – Villarreal",
+      "utcDate": "2026-08-28T19:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "VIL",
+          "name": "Villarreal"
+        },
+        "home": {
+          "tla": "ALA",
+          "name": "Alavés"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 3",
+          "Home team: Alavés",
+          "Away team: Villarreal"
+        ],
+        "matchday": 3,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564648. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PD"
       }
     }
