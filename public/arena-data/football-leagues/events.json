@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-17T05:19:32.857Z",
+  "updatedAt": "2026-08-17T22:56:26.065Z",
   "events": [
     {
       "id": "fd-554940",
@@ -2034,9 +2034,13 @@
       "id": "fd-564635",
       "title": "Deportivo – Elche",
       "utcDate": "2026-08-17T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ELC",
