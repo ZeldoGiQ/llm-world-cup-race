@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-17T22:56:26.065Z",
+  "updatedAt": "2026-08-18T03:25:50.578Z",
   "events": [
     {
       "id": "fd-554940",
@@ -2066,9 +2066,13 @@
       "id": "fd-554965",
       "title": "Internacional – Clube do Remo",
       "utcDate": "2026-08-17T23:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CRE",
