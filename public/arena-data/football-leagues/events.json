@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-18T05:05:25.588Z",
+  "updatedAt": "2026-08-19T05:06:38.205Z",
   "events": [
     {
       "id": "fd-554940",
@@ -3491,6 +3491,174 @@
         "matchday": 1,
         "competition": "Bundesliga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565781. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-560554",
+      "title": "Sunderland – Fulham",
+      "utcDate": "2026-08-30T13:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FUL",
+          "name": "Fulham"
+        },
+        "home": {
+          "tla": "SUN",
+          "name": "Sunderland"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 2",
+          "Home team: Sunderland",
+          "Away team: Fulham"
+        ],
+        "matchday": 2,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560554. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560556",
+      "title": "Chelsea – Brighton Hove",
+      "utcDate": "2026-08-30T13:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BHA",
+          "name": "Brighton Hove"
+        },
+        "home": {
+          "tla": "CHE",
+          "name": "Chelsea"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 2",
+          "Home team: Chelsea",
+          "Away team: Brighton Hove"
+        ],
+        "matchday": 2,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560556. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560559",
+      "title": "Leeds United – Brentford",
+      "utcDate": "2026-08-30T13:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BRE",
+          "name": "Brentford"
+        },
+        "home": {
+          "tla": "LEE",
+          "name": "Leeds United"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 2",
+          "Home team: Leeds United",
+          "Away team: Brentford"
+        ],
+        "matchday": 2,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560559. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-565784",
+      "title": "Freiburg – Bremen",
+      "utcDate": "2026-08-30T13:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SVW",
+          "name": "Bremen"
+        },
+        "home": {
+          "tla": "SCF",
+          "name": "Freiburg"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 1",
+          "Home team: Freiburg",
+          "Away team: Bremen"
+        ],
+        "matchday": 1,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565784. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-560553",
+      "title": "Man United – Ipswich Town",
+      "utcDate": "2026-08-30T15:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "IPS",
+          "name": "Ipswich Town"
+        },
+        "home": {
+          "tla": "MUN",
+          "name": "Man United"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 2",
+          "Home team: Man United",
+          "Away team: Ipswich Town"
+        ],
+        "matchday": 2,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560553. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-565782",
+      "title": "Augsburg – Schalke",
+      "utcDate": "2026-08-30T15:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "S04",
+          "name": "Schalke"
+        },
+        "home": {
+          "tla": "FCA",
+          "name": "Augsburg"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 1",
+          "Home team: Augsburg",
+          "Away team: Schalke"
+        ],
+        "matchday": 1,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565782. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BL1"
       }
     }
