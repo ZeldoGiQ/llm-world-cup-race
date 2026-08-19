@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-19T05:06:38.205Z",
+  "updatedAt": "2026-08-19T22:57:03.904Z",
   "events": [
     {
       "id": "fd-554940",
@@ -2098,9 +2098,13 @@
       "id": "fd-564628",
       "title": "Atleti – Málaga",
       "utcDate": "2026-08-19T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "MAL",
