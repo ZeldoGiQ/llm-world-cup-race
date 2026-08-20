@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-20T05:07:41.573Z",
+  "updatedAt": "2026-08-20T22:59:44.276Z",
   "events": [
     {
       "id": "fd-554940",
@@ -2130,9 +2130,13 @@
       "id": "fd-564638",
       "title": "Rayo Vallecano – Alavés",
       "utcDate": "2026-08-20T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ALA",
