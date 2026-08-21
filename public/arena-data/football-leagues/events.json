@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-20T22:59:44.276Z",
+  "updatedAt": "2026-08-21T22:56:41.656Z",
   "events": [
     {
       "id": "fd-554940",
@@ -2162,9 +2162,13 @@
       "id": "fd-559715",
       "title": "Marseille – Strasbourg",
       "utcDate": "2026-08-21T18:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "RC ",
@@ -2190,9 +2194,13 @@
       "id": "fd-560542",
       "title": "Arsenal – Coventry City",
       "utcDate": "2026-08-21T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "COV",
@@ -2218,9 +2226,13 @@
       "id": "fd-564647",
       "title": "Real Betis – Real Sociedad",
       "utcDate": "2026-08-21T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "RSO",
