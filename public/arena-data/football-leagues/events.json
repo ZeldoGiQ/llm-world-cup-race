@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-22T19:01:40.784Z",
+  "updatedAt": "2026-08-22T20:55:48.763Z",
   "events": [
     {
       "id": "fd-554940",
@@ -2450,9 +2450,13 @@
       "id": "fd-558629",
       "title": "Udinese – Como 1907",
       "utcDate": "2026-08-22T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "COM",
@@ -2478,9 +2482,13 @@
       "id": "fd-558632",
       "title": "Inter – Monza",
       "utcDate": "2026-08-22T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "MON",
@@ -2506,9 +2514,13 @@
       "id": "fd-560547",
       "title": "Brentford – Tottenham",
       "utcDate": "2026-08-22T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "TOT",
@@ -2534,9 +2546,13 @@
       "id": "fd-564643",
       "title": "Valencia – Celta",
       "utcDate": "2026-08-22T17:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CEL",
@@ -3483,6 +3499,34 @@
       }
     },
     {
+      "id": "fd-564655",
+      "title": "Levante – Real Betis",
+      "utcDate": "2026-08-29T15:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BET",
+          "name": "Real Betis"
+        },
+        "home": {
+          "tla": "LEV",
+          "name": "Levante"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 3",
+          "Home team: Levante",
+          "Away team: Real Betis"
+        ],
+        "matchday": 3,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564655. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
       "id": "fd-560558",
       "title": "Tottenham – Newcastle",
       "utcDate": "2026-08-29T16:30:00.000Z",
@@ -3536,6 +3580,34 @@
         "competition": "Bundesliga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565781. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-564653",
+      "title": "Real Sociedad – Espanyol",
+      "utcDate": "2026-08-29T17:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ESP",
+          "name": "Espanyol"
+        },
+        "home": {
+          "tla": "RSO",
+          "name": "Real Sociedad"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 3",
+          "Home team: Real Sociedad",
+          "Away team: Espanyol"
+        ],
+        "matchday": 3,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564653. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
       }
     },
     {
