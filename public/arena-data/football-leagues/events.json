@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-22T14:54:50.193Z",
+  "updatedAt": "2026-08-22T19:01:40.784Z",
   "events": [
     {
       "id": "fd-554940",
@@ -2290,9 +2290,13 @@
       "id": "fd-560544",
       "title": "Ipswich Town – Sunderland",
       "utcDate": "2026-08-22T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SUN",
@@ -2318,9 +2322,13 @@
       "id": "fd-560545",
       "title": "Nottingham – Leeds United",
       "utcDate": "2026-08-22T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LEE",
@@ -2346,9 +2354,13 @@
       "id": "fd-560546",
       "title": "Everton – Crystal Palace",
       "utcDate": "2026-08-22T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CRY",
@@ -2374,9 +2386,13 @@
       "id": "fd-564641",
       "title": "Athletic – Sevilla FC",
       "utcDate": "2026-08-22T15:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SEV",
@@ -2402,9 +2418,13 @@
       "id": "fd-559712",
       "title": "RC Lens – Auxerre",
       "utcDate": "2026-08-22T15:15:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 5,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "AJA",
