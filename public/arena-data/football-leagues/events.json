@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-22T20:55:48.763Z",
+  "updatedAt": "2026-08-22T22:55:11.812Z",
   "events": [
     {
       "id": "fd-554940",
@@ -2578,9 +2578,13 @@
       "id": "fd-558631",
       "title": "Genoa – Napoli",
       "utcDate": "2026-08-22T18:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "NAP",
@@ -2606,9 +2610,13 @@
       "id": "fd-558636",
       "title": "Parma – Cagliari",
       "utcDate": "2026-08-22T18:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CAG",
@@ -2634,9 +2642,13 @@
       "id": "fd-559711",
       "title": "Le Mans – Brest",
       "utcDate": "2026-08-22T18:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BRE",
@@ -2662,9 +2674,13 @@
       "id": "fd-559714",
       "title": "Troyes – Paris FC",
       "utcDate": "2026-08-22T18:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "PFC",
@@ -2690,9 +2706,13 @@
       "id": "fd-559716",
       "title": "Nice – Lorient",
       "utcDate": "2026-08-22T18:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCL",
@@ -2718,9 +2738,13 @@
       "id": "fd-559718",
       "title": "Toulouse – Olympique Lyon",
       "utcDate": "2026-08-22T18:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LYO",
@@ -2746,9 +2770,13 @@
       "id": "fd-564645",
       "title": "Espanyol – Real Madrid",
       "utcDate": "2026-08-22T19:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "RMA",
