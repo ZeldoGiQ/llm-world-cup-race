@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-22T22:55:11.812Z",
+  "updatedAt": "2026-08-23T16:57:46.219Z",
   "events": [
     {
       "id": "fd-554940",
@@ -2802,9 +2802,13 @@
       "id": "fd-560548",
       "title": "Man City – Bournemouth",
       "utcDate": "2026-08-23T13:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BOU",
@@ -2830,9 +2834,13 @@
       "id": "fd-560549",
       "title": "Brighton Hove – Aston Villa",
       "utcDate": "2026-08-23T13:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "AVL",
