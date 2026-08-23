@@ -5744,6 +5744,14 @@
       }
     },
     "fd-564637": {
+      "claude": {
+        "value": {
+          "away": 1,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-08-23T20:33:09.373Z"
+      },
       "deepseek": {
         "value": {
           "away": 0,

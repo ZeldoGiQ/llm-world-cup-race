@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-23T19:01:15.825Z",
+  "updatedAt": "2026-08-23T20:55:20.858Z",
   "events": [
     {
       "id": "fd-554940",
@@ -2930,9 +2930,13 @@
       "id": "fd-558635",
       "title": "Frosinone – Juventus",
       "utcDate": "2026-08-23T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "JUV",
@@ -2958,9 +2962,13 @@
       "id": "fd-558637",
       "title": "Venezia FC – Lecce",
       "utcDate": "2026-08-23T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "USL",
@@ -2986,9 +2994,13 @@
       "id": "fd-564644",
       "title": "Getafe – Santander",
       "utcDate": "2026-08-23T17:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SAN",
@@ -3655,6 +3667,34 @@
       }
     },
     {
+      "id": "fd-564649",
+      "title": "Sevilla FC – Atleti",
+      "utcDate": "2026-08-29T19:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ATL",
+          "name": "Atleti"
+        },
+        "home": {
+          "tla": "SEV",
+          "name": "Sevilla FC"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 3",
+          "Home team: Sevilla FC",
+          "Away team: Atleti"
+        ],
+        "matchday": 3,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564649. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
       "id": "fd-560554",
       "title": "Sunderland – Fulham",
       "utcDate": "2026-08-30T13:00:00.000Z",
@@ -3767,6 +3807,34 @@
       }
     },
     {
+      "id": "fd-564656",
+      "title": "Real Madrid – Málaga",
+      "utcDate": "2026-08-30T15:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "MAL",
+          "name": "Málaga"
+        },
+        "home": {
+          "tla": "RMA",
+          "name": "Real Madrid"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 3",
+          "Home team: Real Madrid",
+          "Away team: Málaga"
+        ],
+        "matchday": 3,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564656. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
       "id": "fd-560553",
       "title": "Man United – Ipswich Town",
       "utcDate": "2026-08-30T15:30:00.000Z",
@@ -3820,6 +3888,34 @@
         "competition": "Bundesliga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565782. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-564651",
+      "title": "Deportivo – Valencia",
+      "utcDate": "2026-08-30T17:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "VAL",
+          "name": "Valencia"
+        },
+        "home": {
+          "tla": "DEP",
+          "name": "Deportivo"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 3",
+          "Home team: Deportivo",
+          "Away team: Valencia"
+        ],
+        "matchday": 3,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564651. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
       }
     },
     {
