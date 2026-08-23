@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-23T20:55:20.858Z",
+  "updatedAt": "2026-08-23T22:54:44.469Z",
   "events": [
     {
       "id": "fd-554940",
@@ -3026,9 +3026,13 @@
       "id": "fd-564642",
       "title": "Elche – Barça",
       "utcDate": "2026-08-23T19:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 5,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCB",
