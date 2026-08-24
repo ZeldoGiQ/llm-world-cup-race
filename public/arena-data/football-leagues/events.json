@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-23T22:54:44.469Z",
+  "updatedAt": "2026-08-24T05:23:01.559Z",
   "events": [
     {
       "id": "fd-554940",
@@ -3947,6 +3947,62 @@
         "matchday": 2,
         "competition": "Premier League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560557. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-565791",
+      "title": "Stuttgart – 1. FC Köln",
+      "utcDate": "2026-09-04T18:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "KOE",
+          "name": "1. FC Köln"
+        },
+        "home": {
+          "tla": "VFB",
+          "name": "Stuttgart"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 2",
+          "Home team: Stuttgart",
+          "Away team: 1. FC Köln"
+        ],
+        "matchday": 2,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565791. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-560566",
+      "title": "Ipswich Town – Liverpool",
+      "utcDate": "2026-09-04T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "LIV",
+          "name": "Liverpool"
+        },
+        "home": {
+          "tla": "IPS",
+          "name": "Ipswich Town"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 3",
+          "Home team: Ipswich Town",
+          "Away team: Liverpool"
+        ],
+        "matchday": 3,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560566. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PL"
       }
     }
