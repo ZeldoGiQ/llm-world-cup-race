@@ -3358,6 +3358,55 @@
           "value": 80289
         },
         "createdAt": "2026-08-25T04:53:24.375Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "numeric",
+          "value": 80289
+        },
+        "createdAt": "2026-08-25T05:39:48.934Z"
+      },
+      "deepseek": {
+        "value": {
+          "kind": "numeric",
+          "value": 80289
+        },
+        "createdAt": "2026-08-25T05:43:19.726Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "kind": "numeric",
+          "value": 80289
+        },
+        "createdAt": "2026-08-25T05:39:44.439Z"
+      },
+      "glm": {
+        "value": {
+          "kind": "numeric",
+          "value": 80000
+        },
+        "createdAt": "2026-08-25T05:43:25.350Z"
+      },
+      "gpt": {
+        "value": {
+          "kind": "numeric",
+          "value": 80289
+        },
+        "createdAt": "2026-08-25T05:43:40.058Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "kind": "numeric",
+          "value": 80289
+        },
+        "createdAt": "2026-08-25T05:43:30.785Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "numeric",
+          "value": 80289
+        },
+        "createdAt": "2026-08-25T05:43:59.393Z"
       }
     },
     "cg-eth-2026-08-27": {
@@ -3367,6 +3416,55 @@
           "value": 2493.38
         },
         "createdAt": "2026-08-25T04:53:24.375Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "numeric",
+          "value": 2493.38
+        },
+        "createdAt": "2026-08-25T05:44:16.486Z"
+      },
+      "deepseek": {
+        "value": {
+          "kind": "numeric",
+          "value": 2493.38
+        },
+        "createdAt": "2026-08-25T05:45:04.079Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "kind": "numeric",
+          "value": 2493.38
+        },
+        "createdAt": "2026-08-25T05:44:10.782Z"
+      },
+      "glm": {
+        "value": {
+          "kind": "numeric",
+          "value": 2493.38
+        },
+        "createdAt": "2026-08-25T05:45:10.401Z"
+      },
+      "gpt": {
+        "value": {
+          "kind": "numeric",
+          "value": 2493.38
+        },
+        "createdAt": "2026-08-25T05:45:18.488Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "kind": "numeric",
+          "value": 2493.38
+        },
+        "createdAt": "2026-08-25T05:45:18.630Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "numeric",
+          "value": 2493.38
+        },
+        "createdAt": "2026-08-25T05:45:32.847Z"
       }
     }
   }
