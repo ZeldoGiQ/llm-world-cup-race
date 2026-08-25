@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-25T05:15:21.525Z",
+  "updatedAt": "2026-08-25T22:59:26.870Z",
   "events": [
     {
       "id": "fd-554940",
@@ -3154,9 +3154,13 @@
       "id": "fd-564637",
       "title": "Valencia – Real Betis",
       "utcDate": "2026-08-25T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BET",
