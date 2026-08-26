@@ -1,6 +1,6 @@
 {
   "category": "crypto",
-  "updatedAt": "2026-08-26T02:12:21.828Z",
+  "updatedAt": "2026-08-26T05:09:23.235Z",
   "events": [
     {
       "id": "cg-btc-2026-07-29",
@@ -1674,6 +1674,56 @@
         ],
         "previousClose": 2493.38,
         "resolutionRule": "USD price of ETH as reported by the CoinGecko API for 2026-08-27 at 00:00 UTC (endpoint /coins/ethereum/history?date=DD-MM-YYYY, field market_data.current_price.usd). Rounded to two decimals. If CoinGecko does not report a price for that date, the event is voided."
+      }
+    },
+    {
+      "id": "cg-btc-2026-08-28",
+      "title": "BTC close on 2026-08-28",
+      "titles": {
+        "de": "BTC-Schlusskurs am 2026-08-28",
+        "en": "BTC close on 2026-08-28",
+        "es": "Cierre de BTC el 2026-08-28"
+      },
+      "utcDate": "2026-08-28T00:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "numeric",
+      "resolution": null,
+      "metadata": {
+        "day": "2026-08-28",
+        "coinId": "bitcoin",
+        "symbol": "BTC",
+        "context": [
+          "Asset: BTC (bitcoin) priced in USD",
+          "Latest price known at event creation: 78845.00 USD",
+          "Resolution uses the CoinGecko daily snapshot at 00:00 UTC."
+        ],
+        "previousClose": 78845,
+        "resolutionRule": "USD price of BTC as reported by the CoinGecko API for 2026-08-28 at 00:00 UTC (endpoint /coins/bitcoin/history?date=DD-MM-YYYY, field market_data.current_price.usd). Rounded to two decimals. If CoinGecko does not report a price for that date, the event is voided."
+      }
+    },
+    {
+      "id": "cg-eth-2026-08-28",
+      "title": "ETH close on 2026-08-28",
+      "titles": {
+        "de": "ETH-Schlusskurs am 2026-08-28",
+        "en": "ETH close on 2026-08-28",
+        "es": "Cierre de ETH el 2026-08-28"
+      },
+      "utcDate": "2026-08-28T00:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "numeric",
+      "resolution": null,
+      "metadata": {
+        "day": "2026-08-28",
+        "coinId": "ethereum",
+        "symbol": "ETH",
+        "context": [
+          "Asset: ETH (ethereum) priced in USD",
+          "Latest price known at event creation: 2459.53 USD",
+          "Resolution uses the CoinGecko daily snapshot at 00:00 UTC."
+        ],
+        "previousClose": 2459.53,
+        "resolutionRule": "USD price of ETH as reported by the CoinGecko API for 2026-08-28 at 00:00 UTC (endpoint /coins/ethereum/history?date=DD-MM-YYYY, field market_data.current_price.usd). Rounded to two decimals. If CoinGecko does not report a price for that date, the event is voided."
       }
     }
   ]

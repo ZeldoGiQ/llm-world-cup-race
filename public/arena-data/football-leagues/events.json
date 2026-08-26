@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-25T22:59:26.870Z",
+  "updatedAt": "2026-08-26T05:09:23.235Z",
   "events": [
     {
       "id": "fd-554940",
@@ -4271,6 +4271,62 @@
         "matchday": 3,
         "competition": "Premier League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560569. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560567",
+      "title": "Everton – Man United",
+      "utcDate": "2026-09-06T13:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "MUN",
+          "name": "Man United"
+        },
+        "home": {
+          "tla": "EVE",
+          "name": "Everton"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 3",
+          "Home team: Everton",
+          "Away team: Man United"
+        ],
+        "matchday": 3,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560567. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560570",
+      "title": "Arsenal – Chelsea",
+      "utcDate": "2026-09-06T15:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "CHE",
+          "name": "Chelsea"
+        },
+        "home": {
+          "tla": "ARS",
+          "name": "Arsenal"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 3",
+          "Home team: Arsenal",
+          "Away team: Chelsea"
+        ],
+        "matchday": 3,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560570. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PL"
       }
     }
