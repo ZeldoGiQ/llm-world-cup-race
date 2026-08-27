@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-26T13:38:09.406Z",
+  "updatedAt": "2026-08-27T01:02:19.203Z",
   "events": [
     {
       "id": "fd-554940",
@@ -3186,9 +3186,13 @@
       "id": "fd-564631",
       "title": "Real Madrid – Real Sociedad",
       "utcDate": "2026-08-26T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "RSO",
