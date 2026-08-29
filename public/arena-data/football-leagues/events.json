@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-29T21:10:35.195Z",
+  "updatedAt": "2026-08-29T23:34:44.444Z",
   "events": [
     {
       "id": "fd-554940",
@@ -5128,6 +5128,62 @@
         "competition": "Bundesliga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565786. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-564664",
+      "title": "Alavés – Osasuna",
+      "utcDate": "2026-09-06T16:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "OSA",
+          "name": "Osasuna"
+        },
+        "home": {
+          "tla": "ALA",
+          "name": "Alavés"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 4",
+          "Home team: Alavés",
+          "Away team: Osasuna"
+        ],
+        "matchday": 4,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564664. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-564666",
+      "title": "Málaga – Levante",
+      "utcDate": "2026-09-06T16:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "LEV",
+          "name": "Levante"
+        },
+        "home": {
+          "tla": "MAL",
+          "name": "Málaga"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 4",
+          "Home team: Málaga",
+          "Away team: Levante"
+        ],
+        "matchday": 4,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564666. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
       }
     }
   ]
