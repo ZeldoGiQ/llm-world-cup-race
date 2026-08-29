@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-29T17:53:55.556Z",
+  "updatedAt": "2026-08-29T21:10:35.195Z",
   "events": [
     {
       "id": "fd-554940",
@@ -3570,9 +3570,13 @@
       "id": "fd-560560",
       "title": "Bournemouth – Everton",
       "utcDate": "2026-08-29T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "EVE",
@@ -3598,9 +3602,13 @@
       "id": "fd-560561",
       "title": "Coventry City – Hull City",
       "utcDate": "2026-08-29T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "HUL",
@@ -3626,9 +3634,13 @@
       "id": "fd-564655",
       "title": "Levante – Real Betis",
       "utcDate": "2026-08-29T15:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 5,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BET",
@@ -3654,9 +3666,13 @@
       "id": "fd-560558",
       "title": "Tottenham – Newcastle",
       "utcDate": "2026-08-29T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "NEW",
@@ -3682,9 +3698,13 @@
       "id": "fd-565781",
       "title": "Dortmund – HSV",
       "utcDate": "2026-08-29T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "HSV",
@@ -3710,9 +3730,13 @@
       "id": "fd-564653",
       "title": "Real Sociedad – Espanyol",
       "utcDate": "2026-08-29T17:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ESP",
