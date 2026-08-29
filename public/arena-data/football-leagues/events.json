@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-28T06:18:18.050Z",
+  "updatedAt": "2026-08-29T02:26:14.441Z",
   "events": [
     {
       "id": "fd-554940",
@@ -4115,6 +4115,34 @@
       }
     },
     {
+      "id": "fd-564652",
+      "title": "Celta – Athletic",
+      "utcDate": "2026-08-30T19:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ATH",
+          "name": "Athletic"
+        },
+        "home": {
+          "tla": "CEL",
+          "name": "Celta"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 3",
+          "Home team: Celta",
+          "Away team: Athletic"
+        ],
+        "matchday": 3,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564652. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
       "id": "fd-554985",
       "title": "Grêmio – Chapecoense",
       "utcDate": "2026-08-30T21:30:00.000Z",
@@ -4168,6 +4196,34 @@
         "competition": "Brasileirão",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 554982. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-564657",
+      "title": "Osasuna – Getafe",
+      "utcDate": "2026-08-31T17:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "GET",
+          "name": "Getafe"
+        },
+        "home": {
+          "tla": "OSA",
+          "name": "Osasuna"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 3",
+          "Home team: Osasuna",
+          "Away team: Getafe"
+        ],
+        "matchday": 3,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564657. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
       }
     },
     {
