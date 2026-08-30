@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-29T23:34:44.444Z",
+  "updatedAt": "2026-08-30T01:37:38.845Z",
   "events": [
     {
       "id": "fd-554940",
@@ -3762,9 +3762,13 @@
       "id": "fd-564649",
       "title": "Sevilla FC – Atleti",
       "utcDate": "2026-08-29T19:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ATL",
