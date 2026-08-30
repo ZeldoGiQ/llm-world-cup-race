@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-30T13:16:14.120Z",
+  "updatedAt": "2026-08-30T21:30:32.544Z",
   "events": [
     {
       "id": "fd-554940",
@@ -3890,9 +3890,13 @@
       "id": "fd-560554",
       "title": "Sunderland – Fulham",
       "utcDate": "2026-08-30T13:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FUL",
@@ -3918,9 +3922,13 @@
       "id": "fd-560556",
       "title": "Chelsea – Brighton Hove",
       "utcDate": "2026-08-30T13:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BHA",
@@ -3946,9 +3954,13 @@
       "id": "fd-560559",
       "title": "Leeds United – Brentford",
       "utcDate": "2026-08-30T13:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BRE",
@@ -3974,9 +3986,13 @@
       "id": "fd-565784",
       "title": "Freiburg – Bremen",
       "utcDate": "2026-08-30T13:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SVW",
@@ -4002,9 +4018,13 @@
       "id": "fd-554980",
       "title": "Paranaense – Fluminense",
       "utcDate": "2026-08-30T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FLU",
@@ -4030,9 +4050,13 @@
       "id": "fd-564656",
       "title": "Real Madrid – Málaga",
       "utcDate": "2026-08-30T15:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "MAL",
@@ -4058,9 +4082,13 @@
       "id": "fd-560553",
       "title": "Man United – Ipswich Town",
       "utcDate": "2026-08-30T15:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 5,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "IPS",
@@ -4086,9 +4114,13 @@
       "id": "fd-565782",
       "title": "Augsburg – Schalke",
       "utcDate": "2026-08-30T15:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "S04",
@@ -4114,9 +4146,13 @@
       "id": "fd-564651",
       "title": "Deportivo – Valencia",
       "utcDate": "2026-08-30T17:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "VAL",
