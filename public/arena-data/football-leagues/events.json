@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-30T01:37:38.845Z",
+  "updatedAt": "2026-08-30T13:16:14.120Z",
   "events": [
     {
       "id": "fd-554940",
@@ -3794,9 +3794,13 @@
       "id": "fd-554981",
       "title": "Mineiro – Vitória",
       "utcDate": "2026-08-29T21:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "VIT",
@@ -3822,9 +3826,13 @@
       "id": "fd-554988",
       "title": "São Paulo – Bragantino",
       "utcDate": "2026-08-29T23:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "RBB",
@@ -3850,9 +3858,13 @@
       "id": "fd-554989",
       "title": "Vasco da Gama – Cruzeiro",
       "utcDate": "2026-08-30T00:20:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CRU",

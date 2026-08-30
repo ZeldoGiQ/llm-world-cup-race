@@ -870,6 +870,33 @@
         },
         "createdAt": "2026-08-29T02:42:51.278Z"
       }
+    },
+    "yf-gdaxi-2026-09-11": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 26569.99
+        },
+        "createdAt": "2026-08-30T09:56:35.282Z"
+      }
+    },
+    "yf-gspc-2026-09-11": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 7711.76
+        },
+        "createdAt": "2026-08-30T09:56:35.282Z"
+      }
+    },
+    "yf-ndx-2026-09-11": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 29433.43
+        },
+        "createdAt": "2026-08-30T09:56:35.282Z"
+      }
     }
   }
 }

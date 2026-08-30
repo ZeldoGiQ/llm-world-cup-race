@@ -1,6 +1,6 @@
 {
   "category": "crypto",
-  "updatedAt": "2026-08-29T14:41:03.113Z",
+  "updatedAt": "2026-08-30T13:16:14.120Z",
   "events": [
     {
       "id": "cg-btc-2026-07-29",
@@ -1803,9 +1803,12 @@
         "es": "Cierre de BTC el 2026-08-30"
       },
       "utcDate": "2026-08-30T00:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "numeric",
-      "resolution": null,
+      "resolution": {
+        "kind": "numeric",
+        "value": 78225.14
+      },
       "metadata": {
         "day": "2026-08-30",
         "coinId": "bitcoin",
@@ -1828,9 +1831,12 @@
         "es": "Cierre de ETH el 2026-08-30"
       },
       "utcDate": "2026-08-30T00:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "numeric",
-      "resolution": null,
+      "resolution": {
+        "kind": "numeric",
+        "value": 2457.09
+      },
       "metadata": {
         "day": "2026-08-30",
         "coinId": "ethereum",
@@ -1892,6 +1898,56 @@
         ],
         "previousClose": 2434.31,
         "resolutionRule": "USD price of ETH as reported by the CoinGecko API for 2026-08-31 at 00:00 UTC (endpoint /coins/ethereum/history?date=DD-MM-YYYY, field market_data.current_price.usd). Rounded to two decimals. If CoinGecko does not report a price for that date, the event is voided."
+      }
+    },
+    {
+      "id": "cg-btc-2026-09-01",
+      "title": "BTC close on 2026-09-01",
+      "titles": {
+        "de": "BTC-Schlusskurs am 2026-09-01",
+        "en": "BTC close on 2026-09-01",
+        "es": "Cierre de BTC el 2026-09-01"
+      },
+      "utcDate": "2026-09-01T00:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "numeric",
+      "resolution": null,
+      "metadata": {
+        "day": "2026-09-01",
+        "coinId": "bitcoin",
+        "symbol": "BTC",
+        "context": [
+          "Asset: BTC (bitcoin) priced in USD",
+          "Latest price known at event creation: 77994.00 USD",
+          "Resolution uses the CoinGecko daily snapshot at 00:00 UTC."
+        ],
+        "previousClose": 77994,
+        "resolutionRule": "USD price of BTC as reported by the CoinGecko API for 2026-09-01 at 00:00 UTC (endpoint /coins/bitcoin/history?date=DD-MM-YYYY, field market_data.current_price.usd). Rounded to two decimals. If CoinGecko does not report a price for that date, the event is voided."
+      }
+    },
+    {
+      "id": "cg-eth-2026-09-01",
+      "title": "ETH close on 2026-09-01",
+      "titles": {
+        "de": "ETH-Schlusskurs am 2026-09-01",
+        "en": "ETH close on 2026-09-01",
+        "es": "Cierre de ETH el 2026-09-01"
+      },
+      "utcDate": "2026-09-01T00:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "numeric",
+      "resolution": null,
+      "metadata": {
+        "day": "2026-09-01",
+        "coinId": "ethereum",
+        "symbol": "ETH",
+        "context": [
+          "Asset: ETH (ethereum) priced in USD",
+          "Latest price known at event creation: 2453.00 USD",
+          "Resolution uses the CoinGecko daily snapshot at 00:00 UTC."
+        ],
+        "previousClose": 2453,
+        "resolutionRule": "USD price of ETH as reported by the CoinGecko API for 2026-09-01 at 00:00 UTC (endpoint /coins/ethereum/history?date=DD-MM-YYYY, field market_data.current_price.usd). Rounded to two decimals. If CoinGecko does not report a price for that date, the event is voided."
       }
     }
   ]
