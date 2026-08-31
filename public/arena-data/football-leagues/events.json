@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-08-31T06:05:02.019Z",
+  "updatedAt": "2026-08-31T14:23:12.795Z",
   "events": [
     {
       "id": "fd-554940",
@@ -4178,9 +4178,13 @@
       "id": "fd-554983",
       "title": "Corinthians – Santos",
       "utcDate": "2026-08-30T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SAN",
@@ -4206,9 +4210,13 @@
       "id": "fd-554984",
       "title": "Flamengo – Botafogo",
       "utcDate": "2026-08-30T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BOT",
@@ -4298,9 +4306,13 @@
       "id": "fd-554982",
       "title": "Bahia – Internacional",
       "utcDate": "2026-08-30T22:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SCI",
