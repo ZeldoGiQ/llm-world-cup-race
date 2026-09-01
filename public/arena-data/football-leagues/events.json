@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-09-01T00:03:39.197Z",
+  "updatedAt": "2026-09-01T05:37:16.150Z",
   "events": [
     {
       "id": "fd-554940",
@@ -4434,9 +4434,13 @@
       "id": "fd-554987",
       "title": "Clube do Remo – Coritiba",
       "utcDate": "2026-08-31T23:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "COR",
