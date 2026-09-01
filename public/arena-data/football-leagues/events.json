@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-09-01T05:37:16.150Z",
+  "updatedAt": "2026-09-01T10:25:20.078Z",
   "events": [
     {
       "id": "fd-554940",
@@ -5776,6 +5776,62 @@
         "competition": "UEFA Champions League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575340. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-560572",
+      "title": "Crystal Palace – Ipswich Town",
+      "utcDate": "2026-09-12T14:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "IPS",
+          "name": "Ipswich Town"
+        },
+        "home": {
+          "tla": "CRY",
+          "name": "Crystal Palace"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 4",
+          "Home team: Crystal Palace",
+          "Away team: Ipswich Town"
+        ],
+        "matchday": 4,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560572. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560573",
+      "title": "Liverpool – Fulham",
+      "utcDate": "2026-09-12T14:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FUL",
+          "name": "Fulham"
+        },
+        "home": {
+          "tla": "LIV",
+          "name": "Liverpool"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 4",
+          "Home team: Liverpool",
+          "Away team: Fulham"
+        ],
+        "matchday": 4,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560573. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
       }
     }
   ]
