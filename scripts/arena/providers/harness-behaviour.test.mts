@@ -18,6 +18,7 @@ import {
 } from '../../../src/arena/lib/harness/prompt-template.ts';
 import { costUsd } from '../lib/budget.mts';
 import { ProviderError } from './types.mts';
+import { searchEnabledFor } from './index.mts';
 
 const EVENT = {
   category: 'football-leagues',
@@ -107,5 +108,32 @@ describe('ProviderError', () => {
     const error = new ProviderError('Timeout nach 300000 ms', 'timeout', true);
     expect(error.usage).toBeUndefined();
     expect(error.retryable).toBe(true);
+  });
+});
+
+describe('Recherche-Freigabe je Anbieter', () => {
+  /**
+   * Die Knowledge-Cap-Spur lebt davon, dass KEIN Modell recherchiert. Diese
+   * Zusage haengt an einer einzigen Zeile: Wer die Suche freigibt.
+   *
+   * Der Fehler, den dieser Test verhindert: Bisher war die Suche pauschal
+   * eingeschaltet, und nur der Gateway-Adapter fragte search_mode ab. Beim
+   * Umstieg auf eine Direktanbindung haette dasselbe Modell plötzlich mit
+   * Websuche getippt, waehrend alle anderen ohne auskommen - und niemand
+   * haette es an den Zahlen erkannt, sondern nur an einem Sprung nach oben.
+   */
+  it('gibt ohne search_mode none frei, sonst nicht', () => {
+    expect(searchEnabledFor({ search_mode: 'none' })).toBe(false);
+    for (const mode of ['native', 'xai-params', 'qwen-flag', 'kimi-builtin']) {
+      expect(searchEnabledFor({ search_mode: mode })).toBe(true);
+    }
+  });
+
+  it('haelt die Knowledge-Cap-Spur auch bei Direktanbindung geschlossen', () => {
+    // Genau der Fall, den der Betreiber gerade baut: OpenAI direkt statt
+    // ueber den Gateway. Der Anbieter traegt dieselbe Spur-Einstellung, also
+    // bleibt die Recherche aus - unabhaengig davon, dass der OpenAI-Adapter
+    // ein natives web_search-Werkzeug anbieten koennte.
+    expect(searchEnabledFor({ search_mode: 'none' })).toBe(false);
   });
 });

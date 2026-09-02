@@ -21,6 +21,27 @@ import { callOpenAICompat } from './openai-compat.mts';
 import { callOpenAI } from './openai.mts';
 import { ProviderError, type CallRequest, type CallResult, type ProviderAdapter } from './types.mts';
 
+/**
+ * Darf dieser Anbieter recherchieren?
+ *
+ * Die Spur entscheidet das, nicht der Adapter. `search_mode = 'none'` heisst
+ * „keine Recherche", und das muss fuer JEDEN Anbieter gelten – sonst misst das
+ * Benchmark nicht mehr dasselbe.
+ *
+ * Vorher stand an der Aufrufstelle schlicht `true`, und nur der
+ * openai-compat-Adapter fragte `search_mode` ueberhaupt ab. Die drei
+ * Direktadapter (OpenAI, Anthropic, Google) haengen ihr Suchwerkzeug an,
+ * sobald das Flag gesetzt ist. Ein Modell, das direkt beim Labor angebunden
+ * wird statt ueber den Gateway, haette deshalb stillschweigend Websuche
+ * bekommen, waehrend alle anderen ohne auskommen. Im Leaderboard saehe das
+ * aus wie ein sprunghaft besseres Modell – tatsaechlich waere die Zahl
+ * schlicht nicht mehr vergleichbar. Genau das schliesst HARNESS_V2 aus:
+ * identische Informationsgrundlage fuer alle.
+ */
+export function searchEnabledFor(provider: Pick<ProviderRow, 'search_mode'>): boolean {
+  return provider.search_mode !== 'none';
+}
+
 const ADAPTERS: Record<ProviderRow['api_kind'], ProviderAdapter> = {
   openai: callOpenAI,
   anthropic: callAnthropic,
@@ -85,7 +106,7 @@ export async function askModel(options: AskOptions): Promise<AskResult> {
   let attempts = 0;
   let repairTurns = 0;
   let userMessage = prompt.user;
-  let search = true;
+  let search = searchEnabledFor(provider);
   let lastFailure: AskFailure = { ok: false, code: 'api-error', detail: 'Kein Versuch ausgeführt.' };
   const totals = { inputTokens: 0, outputTokens: 0, searchCalls: 0 };
   let reportedModel: string | null = null;
