@@ -8162,6 +8162,14 @@
         },
         "createdAt": "2026-08-31T23:45:34.458Z"
       },
+      "gpt-5.6": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-09-02T07:18:56.322Z"
+      },
       "kimi-k3": {
         "value": {
           "away": 0,
@@ -8219,6 +8227,14 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-09-01T21:43:46.552Z"
+      },
+      "gpt-5.6": {
+        "value": {
+          "away": 0,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-09-02T07:19:12.008Z"
       },
       "kimi-k3": {
         "value": {

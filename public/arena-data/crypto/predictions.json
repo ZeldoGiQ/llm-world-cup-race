@@ -4206,6 +4206,13 @@
         },
         "createdAt": "2026-09-01T09:57:34.481Z"
       },
+      "gpt-5.6": {
+        "value": {
+          "kind": "numeric",
+          "value": 77883
+        },
+        "createdAt": "2026-09-02T07:19:01.210Z"
+      },
       "kimi-k3": {
         "value": {
           "kind": "numeric",
@@ -4263,6 +4270,13 @@
           "value": 2447.32
         },
         "createdAt": "2026-09-01T09:58:48.925Z"
+      },
+      "gpt-5.6": {
+        "value": {
+          "kind": "numeric",
+          "value": 2447.32
+        },
+        "createdAt": "2026-09-02T07:19:05.893Z"
       },
       "kimi-k3": {
         "value": {
