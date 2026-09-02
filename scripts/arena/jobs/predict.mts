@@ -172,7 +172,11 @@ async function main(): Promise<void> {
           }
         } else {
           failures += 1;
-          console.log(`  ${model.id}: kein Tipp (${result.code})`);
+          // Der Grund gehoert ins Protokoll, nicht nur in die Tabelle: Ein
+          // nackter Code wie "api-error" ist bei der Fehlersuche wertlos, und
+          // genau dann schaut jemand ins Log - meist unter Zeitdruck, weil ein
+          // Modell gerade schweigt und im Leaderboard wie schwach aussieht.
+          console.log(`  ${model.id}: kein Tipp (${result.code}) - ${result.detail.slice(0, 200)}`);
           await db().from('prediction_failures').insert({
             category: event.category,
             event_id: event.id,
