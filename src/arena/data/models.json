@@ -75,7 +75,16 @@
     "color": "#9b59b6",
     "version": "grok-4.3",
     "releaseDate": "2026-02-11",
-    "access": "public"
+    "access": "public",
+    "retiredAt": "2026-09-02T09:35:34.488076+00:00"
+  },
+  {
+    "id": "grok-4.6",
+    "name": "Grok 4.6",
+    "provider": "xAI",
+    "color": "#9b59b6",
+    "version": "grok-4.6",
+    "access": "early-access"
   },
   {
     "id": "kimi",
