@@ -4178,6 +4178,13 @@
         },
         "createdAt": "2026-09-01T09:57:15.987Z"
       },
+      "claude-5.1": {
+        "value": {
+          "kind": "numeric",
+          "value": 77883
+        },
+        "createdAt": "2026-09-02T07:32:32.972Z"
+      },
       "deepseek": {
         "value": {
           "kind": "numeric",
@@ -4243,6 +4250,13 @@
         },
         "createdAt": "2026-09-01T09:58:26.019Z"
       },
+      "claude-5.1": {
+        "value": {
+          "kind": "numeric",
+          "value": 2447.32
+        },
+        "createdAt": "2026-09-02T07:32:40.135Z"
+      },
       "deepseek": {
         "value": {
           "kind": "numeric",
@@ -4291,6 +4305,136 @@
           "value": 2447.32
         },
         "createdAt": "2026-09-01T09:59:16.667Z"
+      }
+    },
+    "cg-btc-2026-09-04": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 77603
+        },
+        "createdAt": "2026-09-02T07:22:00.308Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "numeric",
+          "value": 77603
+        },
+        "createdAt": "2026-09-02T07:23:01.967Z"
+      },
+      "claude-5.1": {
+        "value": {
+          "kind": "numeric",
+          "value": 77600
+        },
+        "createdAt": "2026-09-02T07:33:01.531Z"
+      },
+      "deepseek": {
+        "value": {
+          "kind": "numeric",
+          "value": 77603
+        },
+        "createdAt": "2026-09-02T07:23:57.851Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "kind": "numeric",
+          "value": 77603
+        },
+        "createdAt": "2026-09-02T07:22:54.163Z"
+      },
+      "glm": {
+        "value": {
+          "kind": "numeric",
+          "value": 77603
+        },
+        "createdAt": "2026-09-02T07:24:10.835Z"
+      },
+      "gpt-5.6": {
+        "value": {
+          "kind": "numeric",
+          "value": 77603
+        },
+        "createdAt": "2026-09-02T07:24:04.096Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "kind": "numeric",
+          "value": 77603
+        },
+        "createdAt": "2026-09-02T07:26:23.534Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "numeric",
+          "value": 77603
+        },
+        "createdAt": "2026-09-02T07:26:41.898Z"
+      }
+    },
+    "cg-eth-2026-09-04": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 2423.63
+        },
+        "createdAt": "2026-09-02T07:22:00.308Z"
+      },
+      "claude": {
+        "value": {
+          "kind": "numeric",
+          "value": 2420
+        },
+        "createdAt": "2026-09-02T07:27:36.957Z"
+      },
+      "claude-5.1": {
+        "value": {
+          "kind": "numeric",
+          "value": 2423.63
+        },
+        "createdAt": "2026-09-02T07:33:08.231Z"
+      },
+      "deepseek": {
+        "value": {
+          "kind": "numeric",
+          "value": 2423.63
+        },
+        "createdAt": "2026-09-02T07:27:17.269Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "kind": "numeric",
+          "value": 2423.63
+        },
+        "createdAt": "2026-09-02T07:26:54.693Z"
+      },
+      "glm": {
+        "value": {
+          "kind": "numeric",
+          "value": 2424
+        },
+        "createdAt": "2026-09-02T07:27:48.976Z"
+      },
+      "gpt-5.6": {
+        "value": {
+          "kind": "numeric",
+          "value": 2423.63
+        },
+        "createdAt": "2026-09-02T07:27:43.715Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "kind": "numeric",
+          "value": 2423.63
+        },
+        "createdAt": "2026-09-02T07:28:10.245Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "numeric",
+          "value": 2423.63
+        },
+        "createdAt": "2026-09-02T07:28:21.443Z"
       }
     }
   }

@@ -6,7 +6,16 @@
     "color": "#d97757",
     "version": "claude-fable-5",
     "releaseDate": "2026-05-06",
-    "access": "public"
+    "access": "public",
+    "retiredAt": "2026-09-02T07:31:06.449589+00:00"
+  },
+  {
+    "id": "claude-5.1",
+    "name": "Claude Fable 5.1",
+    "provider": "Anthropic",
+    "color": "#d97757",
+    "version": "claude-fable-5-1",
+    "access": "early-access"
   },
   {
     "id": "deepseek",
