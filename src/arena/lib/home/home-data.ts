@@ -274,9 +274,21 @@ function referenceSamples(rule: ReferenceRule, events: ArenaEvent[]): Sample[] |
  */
 export function uncertaintyFor(entry: CategoryHome): CategoryUncertainty | null {
   if (!entry.standings || !entry.events || !entry.predictions) return null;
-  const contenders = entry.standings.rows
-    .filter((row) => row.scored > 0 && !row.isBaseline)
+
+  // Nur das etablierte Feld bildet die Vergleichsgruppe: Modelle, die genug
+  // Ereignisse getippt haben, um gewertet zu werden.
+  //
+  // Ein Neuzugang darf hier NICHT hinein. Die Rechnung läuft über die
+  // Ereignisse, die alle Beteiligten gemeinsam getippt haben – ein Modell mit
+  // fünf Tipps würde diese Menge von 34 auf 5 zusammenschrumpfen, und alle
+  // veröffentlichten Intervalle wären plötzlich über eine Handvoll Ereignisse
+  // gerechnet statt über die volle Historie. Sie sähen dadurch enger aus, also
+  // sicherer, obwohl weniger dahintersteht. Das ist die gefährlichste Art von
+  // Fehler, die dieses Projekt machen kann.
+  const established = entry.standings.rows
+    .filter((row) => row.scored > 0 && !row.isBaseline && !row.provisional)
     .map((row) => row.model.id);
+  const contenders = established;
   if (contenders.length < 2) return null;
 
   const resolved = resolvedEventsOf(entry.events.events ?? []);
@@ -301,12 +313,53 @@ export function uncertaintyFor(entry: CategoryHome): CategoryUncertainty | null 
 
   const scoreMetric = metrics.find('prediction-score');
   const useScore = Boolean(baseline && baseline.length === commonEvents.length && scoreMetric);
+  const metric = useScore ? scoreMetric! : (entry.primaryMetric ?? scoreMetric!);
 
-  return bootstrapCategory({
+  const result = bootstrapCategory({
     samplesByModel: byModel,
-    metric: useScore ? scoreMetric! : (entry.primaryMetric ?? scoreMetric!),
+    metric,
     baselineSamples: useScore ? baseline : undefined,
   });
+
+  // Neuzugänge bekommen ihr eigenes Intervall – über ihre eigenen Ereignisse,
+  // gegen dieselbe Referenz. So ist eine frühe Zahl zeigbar, ohne die Zahlen
+  // der anderen anzufassen: Der Fehlerbalken ist dann eben breit, und genau
+  // das ist die ehrliche Aussage über ein Modell mit wenigen Tipps.
+  //
+  // Bewusst NUR das Wert-Intervall: Rangaussagen (P(#1), Rang-Intervall,
+  // Paarvergleiche) setzen eine gemeinsame Ereignismenge voraus. Wer über
+  // andere Ereignisse gemessen wurde, hat keinen vergleichbaren Rang.
+  for (const row of entry.standings.rows) {
+    if (!row.provisional || row.scored === 0 || row.isBaseline) continue;
+
+    const own = resolved.filter((event) =>
+      validPrediction(event, predictionMap[event.id]?.[row.model.id]),
+    );
+    if (own.length < 2) continue;
+
+    const ownSamples = own.map((event) => ({
+      prediction: predictionMap[event.id]![row.model.id]!.value,
+      resolution: event.resolution!,
+    }));
+    const ownBaseline = entry.reference
+      ? (referenceSamples(entry.reference.rule, own) ?? undefined)
+      : undefined;
+    // Ohne passende Referenz-Stichprobe keine Score-Einheit – dann lieber
+    // gar kein Intervall als eines in einer anderen Einheit.
+    if (useScore && (!ownBaseline || ownBaseline.length !== own.length)) continue;
+
+    const solo = bootstrapCategory({
+      samplesByModel: new Map([[row.model.id, ownSamples]]),
+      metric,
+      baselineSamples: useScore ? ownBaseline : undefined,
+    });
+    const interval = solo.valueInterval[row.model.id];
+    if (interval && Number.isFinite(interval[0]) && Number.isFinite(interval[1])) {
+      result.valueInterval[row.model.id] = interval;
+    }
+  }
+
+  return result;
 }
 
 function median(sorted: number[]): number {
