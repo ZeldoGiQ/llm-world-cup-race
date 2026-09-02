@@ -51,6 +51,14 @@
     "access": "public"
   },
   {
+    "id": "glm-5.3",
+    "name": "GLM-5.3",
+    "provider": "Z-ai",
+    "color": "#14b8a6",
+    "version": "glm-5.3",
+    "access": "early-access"
+  },
+  {
     "id": "gpt",
     "name": "GPT-5.5",
     "provider": "OpenAI",
@@ -119,6 +127,14 @@
     "version": "qwen-3.7-max",
     "releaseDate": "2026-05-22",
     "access": "public"
+  },
+  {
+    "id": "qwen-3.8",
+    "name": "Qwen3.8-Max",
+    "provider": "Alibaba",
+    "color": "#eab308",
+    "version": "qwen3.8-max",
+    "access": "early-access"
   },
   {
     "id": "baseline-market",

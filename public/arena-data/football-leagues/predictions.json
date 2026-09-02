@@ -8201,6 +8201,14 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-08-31T23:46:50.163Z"
+      },
+      "qwen-3.8": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-09-02T12:17:59.634Z"
       }
     },
     "fd-564682": {
@@ -8283,6 +8291,14 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-09-01T21:44:29.238Z"
+      },
+      "qwen-3.8": {
+        "value": {
+          "away": 0,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-09-02T12:19:57.232Z"
       }
     }
   }
