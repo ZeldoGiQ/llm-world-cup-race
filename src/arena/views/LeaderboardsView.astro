@@ -46,6 +46,12 @@ interface BoardRow {
   interval: [number, number] | null;
   probabilityFirst: number | null;
   detail: string;
+  /**
+   * Zu wenige Ereignisse fuer einen Rang – aber mit einer echten Zahl.
+   * Genau der Zustand, in dem ein neu erschienenes Modell die ersten Tage
+   * verbringt. Es wird gezeigt, deutlich markiert und ohne Rang.
+   */
+  provisional: boolean;
 }
 
 interface Board {
@@ -84,6 +90,7 @@ if (overall.status === 'ready') {
         detail: translate('leaderboards.categoriesCounted', {
           count: formatInteger(row.categoriesCounted, locale),
         }),
+        provisional: false,
       })),
     cardSlug: 'overall',
     dataHref: null,
@@ -100,8 +107,13 @@ for (const entry of data.live) {
   // stünden dort Prozentwerte, bei „kleiner ist besser" sogar mit
   // umgedrehter Richtung. Die Rang-Aussagen bleiben davon unberührt.
   const scoreUncertainty = uncertainty?.metricId === 'prediction-score' ? uncertainty : null;
+  // Vorlaeufige Modelle bleiben drin. Sie tragen Rang 0, und ein Filter auf
+  // rank > 0 hat sie bisher vollstaendig verschwinden lassen – ein neu
+  // angebundenes Modell war damit unsichtbar, egal wie viele Ereignisse es
+  // schon getippt hatte. Die Sortierung aus computeStandings stellt die
+  // gewerteten Zeilen ohnehin nach vorn.
   const rows = entry.standings.rows
-    .filter((row) => row.rank > 0 && row.scored > 0)
+    .filter((row) => row.scored > 0)
     .map((row) => {
       const cell = row.cells.find((candidate) => candidate.metricId === 'prediction-score');
       return {
@@ -116,6 +128,7 @@ for (const entry of data.live) {
         detail: translate('leaderboards.scoredEvents', {
           count: formatInteger(row.scored, locale),
         }),
+        provisional: row.provisional,
       };
     });
   if (rows.length === 0) continue;
@@ -259,8 +272,14 @@ const linkClass =
                     <tr class="border-t border-ink-700/60 transition-colors hover:bg-ink-800/40">
                       <th scope="row" class="px-4 py-3 text-left font-normal">
                         <span class="flex items-center gap-2.5">
-                          <span class="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-sm border border-ink-700 bg-ink-800/60 font-mono text-xs font-bold tabular text-ink-300">
-                            {row.rank}
+                          <span
+                            class={`inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-sm border font-mono text-xs font-bold tabular ${
+                              row.provisional
+                                ? 'border-dashed border-ink-700 text-ink-500'
+                                : 'border-ink-700 bg-ink-800/60 text-ink-300'
+                            }`}
+                          >
+                            {row.provisional ? '–' : row.rank}
                           </span>
                           <span
                             class="flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded-sm text-[10px] font-bold"
@@ -276,6 +295,14 @@ const linkClass =
                             )}
                           </span>
                           <span class="truncate font-medium text-ink-100">{row.name}</span>
+                          {row.provisional && (
+                            <span
+                              class="shrink-0 rounded-md border border-clay-500/50 bg-clay-500/10 px-1.5 py-px font-mono text-[9px] uppercase tracking-wider text-clay-400"
+                              title={translate('leaderboards.provisionalTitle')}
+                            >
+                              {translate('leaderboards.provisional')}
+                            </span>
+                          )}
                         </span>
                       </th>
                       <td class="px-4 py-3 text-right font-mono font-semibold tabular text-ink-50">

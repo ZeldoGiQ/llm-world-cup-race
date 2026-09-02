@@ -117,6 +117,12 @@ const MESSAGES = {
     de: 'Score (90 %)',
     es: 'Score (90 %)',
   },
+  'leaderboards.provisional': { en: 'provisional', de: 'vorläufig', es: 'provisional' },
+  'leaderboards.provisionalTitle': {
+    en: 'Too few scored events for a rank. The score is real, but its uncertainty is wide — a newly added model starts here.',
+    de: 'Zu wenige gewertete Ereignisse für einen Rang. Der Score ist echt, seine Unsicherheit aber groß – ein neu angebundenes Modell startet hier.',
+    es: 'Muy pocos eventos puntuados para un puesto. La puntuación es real, pero su incertidumbre es amplia: un modelo recién añadido empieza aquí.',
+  },
   'leaderboards.colDetail': { en: 'Basis', de: 'Grundlage', es: 'Base' },
   'leaderboards.shareLabel': { en: 'Share', de: 'Teilen', es: 'Compartir' },
   'leaderboards.shareText': {
