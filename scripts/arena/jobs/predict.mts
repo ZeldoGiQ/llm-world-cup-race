@@ -168,7 +168,23 @@ async function main(): Promise<void> {
             }
           } else {
             predictions += 1;
-            console.log(`  ${model.id}: ${JSON.stringify(result.value)}`);
+            // Herkunft mitschreiben, nicht nur wegspeichern. Zwei Angaben
+            // entscheiden darueber, ob die Messung gueltig ist, und beide
+            // sieht man sonst nie: ob wirklich das bestellte Modell geantwortet
+            // hat (Anbieter leiten Aliasse still weiter - dann misst die Zeile
+            // etwas anderes, als draufsteht), und ob recherchiert wurde
+            // (Knowledge Cap verlangt: nein, fuer alle gleich).
+            const provenance = result.provenance as {
+              reportedModel?: string | null;
+              searchCalls?: number;
+              apiModel?: string;
+            };
+            const reported = provenance.reportedModel ?? '?';
+            const drift = reported !== '?' && reported !== provenance.apiModel ? ' DRIFT!' : '';
+            console.log(
+              `  ${model.id}: ${JSON.stringify(result.value)}` +
+                ` [${reported}${drift}, Suche: ${provenance.searchCalls ?? 0}]`,
+            );
           }
         } else {
           failures += 1;
