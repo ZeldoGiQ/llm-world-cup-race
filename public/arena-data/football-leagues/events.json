@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-09-01T10:25:20.078Z",
+  "updatedAt": "2026-09-03T06:28:08.348Z",
   "events": [
     {
       "id": "fd-554940",
@@ -4466,9 +4466,13 @@
       "id": "fd-554775",
       "title": "Flamengo – Mirassol",
       "utcDate": "2026-09-02T22:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "MIR",
