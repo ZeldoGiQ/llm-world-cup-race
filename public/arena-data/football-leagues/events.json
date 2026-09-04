@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-09-04T00:26:03.643Z",
+  "updatedAt": "2026-09-04T17:45:49.615Z",
   "events": [
     {
       "id": "fd-554940",
@@ -5787,6 +5787,174 @@
       }
     },
     {
+      "id": "fd-565797",
+      "title": "Union Berlin – Schalke",
+      "utcDate": "2026-09-11T18:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "S04",
+          "name": "Schalke"
+        },
+        "home": {
+          "tla": "UNB",
+          "name": "Union Berlin"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 3",
+          "Home team: Union Berlin",
+          "Away team: Schalke"
+        ],
+        "matchday": 3,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565797. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565794",
+      "title": "Hoffenheim – Stuttgart",
+      "utcDate": "2026-09-12T13:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "VFB",
+          "name": "Stuttgart"
+        },
+        "home": {
+          "tla": "TSG",
+          "name": "Hoffenheim"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 3",
+          "Home team: Hoffenheim",
+          "Away team: Stuttgart"
+        ],
+        "matchday": 3,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565794. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565795",
+      "title": "Dortmund – SC Paderborn",
+      "utcDate": "2026-09-12T13:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SCP",
+          "name": "SC Paderborn"
+        },
+        "home": {
+          "tla": "BVB",
+          "name": "Dortmund"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 3",
+          "Home team: Dortmund",
+          "Away team: SC Paderborn"
+        ],
+        "matchday": 3,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565795. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565796",
+      "title": "Augsburg – Leverkusen",
+      "utcDate": "2026-09-12T13:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "B04",
+          "name": "Leverkusen"
+        },
+        "home": {
+          "tla": "FCA",
+          "name": "Augsburg"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 3",
+          "Home team: Augsburg",
+          "Away team: Leverkusen"
+        ],
+        "matchday": 3,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565796. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565801",
+      "title": "Mainz – Frankfurt",
+      "utcDate": "2026-09-12T13:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SGE",
+          "name": "Frankfurt"
+        },
+        "home": {
+          "tla": "M05",
+          "name": "Mainz"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 3",
+          "Home team: Mainz",
+          "Away team: Frankfurt"
+        ],
+        "matchday": 3,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565801. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565802",
+      "title": "Freiburg – M'gladbach",
+      "utcDate": "2026-09-12T13:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BMG",
+          "name": "M'gladbach"
+        },
+        "home": {
+          "tla": "SCF",
+          "name": "Freiburg"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 3",
+          "Home team: Freiburg",
+          "Away team: M'gladbach"
+        ],
+        "matchday": 3,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565802. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
       "id": "fd-560572",
       "title": "Crystal Palace – Ipswich Town",
       "utcDate": "2026-09-12T14:00:00.000Z",
@@ -5868,6 +6036,90 @@
         "competition": "Premier League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560574. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-565798",
+      "title": "1. FC Köln – Bremen",
+      "utcDate": "2026-09-12T16:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SVW",
+          "name": "Bremen"
+        },
+        "home": {
+          "tla": "KOE",
+          "name": "1. FC Köln"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 3",
+          "Home team: 1. FC Köln",
+          "Away team: Bremen"
+        ],
+        "matchday": 3,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565798. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565799",
+      "title": "RB Leipzig – HSV",
+      "utcDate": "2026-09-13T13:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "HSV",
+          "name": "HSV"
+        },
+        "home": {
+          "tla": "RBL",
+          "name": "RB Leipzig"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 3",
+          "Home team: RB Leipzig",
+          "Away team: HSV"
+        ],
+        "matchday": 3,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565799. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565800",
+      "title": "Elversberg – Bayern",
+      "utcDate": "2026-09-13T15:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FCB",
+          "name": "Bayern"
+        },
+        "home": {
+          "tla": "ELV",
+          "name": "Elversberg"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 3",
+          "Home team: Elversberg",
+          "Away team: Bayern"
+        ],
+        "matchday": 3,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565800. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
       }
     }
   ]
