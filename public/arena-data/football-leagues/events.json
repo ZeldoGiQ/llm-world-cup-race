@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-09-03T06:28:08.348Z",
+  "updatedAt": "2026-09-04T00:26:03.643Z",
   "events": [
     {
       "id": "fd-554940",
@@ -4498,9 +4498,13 @@
       "id": "fd-564682",
       "title": "Real Sociedad – Celta",
       "utcDate": "2026-09-03T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CEL",
@@ -5835,6 +5839,34 @@
         "matchday": 4,
         "competition": "Premier League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560573. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560574",
+      "title": "Aston Villa – Nottingham",
+      "utcDate": "2026-09-12T14:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "NOT",
+          "name": "Nottingham"
+        },
+        "home": {
+          "tla": "AVL",
+          "name": "Aston Villa"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 4",
+          "Home team: Aston Villa",
+          "Away team: Nottingham"
+        ],
+        "matchday": 4,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560574. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PL"
       }
     }
