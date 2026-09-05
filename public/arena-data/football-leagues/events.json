@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-09-04T23:17:00.887Z",
+  "updatedAt": "2026-09-05T01:22:01.758Z",
   "events": [
     {
       "id": "fd-554940",
@@ -4530,9 +4530,13 @@
       "id": "fd-565791",
       "title": "Stuttgart – 1. FC Köln",
       "utcDate": "2026-09-04T18:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "KOE",
@@ -4558,9 +4562,13 @@
       "id": "fd-560566",
       "title": "Ipswich Town – Liverpool",
       "utcDate": "2026-09-04T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LIV",
@@ -4586,9 +4594,13 @@
       "id": "fd-564667",
       "title": "Real Betis – Real Madrid",
       "utcDate": "2026-09-04T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "RMA",
