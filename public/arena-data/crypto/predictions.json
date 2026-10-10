@@ -4975,6 +4975,13 @@
         },
         "createdAt": "2026-10-10T14:48:40.106Z"
       },
+      "grok-4.7": {
+        "value": {
+          "kind": "numeric",
+          "value": 82937
+        },
+        "createdAt": "2026-10-10T15:12:32.352Z"
+      },
       "kimi-k3": {
         "value": {
           "kind": "numeric",
@@ -5039,6 +5046,13 @@
           "value": 2505.86
         },
         "createdAt": "2026-10-10T14:50:29.461Z"
+      },
+      "grok-4.7": {
+        "value": {
+          "kind": "numeric",
+          "value": 2505.86
+        },
+        "createdAt": "2026-10-10T15:13:04.433Z"
       },
       "kimi-k3": {
         "value": {

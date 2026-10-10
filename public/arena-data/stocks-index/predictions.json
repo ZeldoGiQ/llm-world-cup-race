@@ -1137,6 +1137,13 @@
         },
         "createdAt": "2026-10-10T14:45:25.330Z"
       },
+      "grok-4.7": {
+        "value": {
+          "kind": "numeric",
+          "value": 25112.36
+        },
+        "createdAt": "2026-10-10T15:10:03.826Z"
+      },
       "kimi-k3": {
         "value": {
           "kind": "numeric",
@@ -1202,6 +1209,13 @@
         },
         "createdAt": "2026-10-10T14:43:01.452Z"
       },
+      "grok-4.7": {
+        "value": {
+          "kind": "numeric",
+          "value": 7825
+        },
+        "createdAt": "2026-10-10T15:09:06.447Z"
+      },
       "kimi-k3": {
         "value": {
           "kind": "numeric",
@@ -1266,6 +1280,13 @@
           "value": 30883.15
         },
         "createdAt": "2026-10-10T14:47:14.396Z"
+      },
+      "grok-4.7": {
+        "value": {
+          "kind": "numeric",
+          "value": 30920
+        },
+        "createdAt": "2026-10-10T15:11:59.151Z"
       },
       "kimi-k3": {
         "value": {
