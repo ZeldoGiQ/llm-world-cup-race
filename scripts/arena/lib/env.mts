@@ -1,10 +1,16 @@
 /**
  * Secrets-Zugriff für alle Backend-Jobs.
  *
- * In GitHub Actions liefert der Workflow `SECRETS_CONTEXT: ${{ toJson(secrets) }}` –
- * damit kann `secret_name` aus der models/providers-Tabelle dynamisch nachgeschlagen
- * werden, ohne dass je eine env:-Zeile ins YML muss (Kern des 2-Minuten-Onboardings).
- * GitHub maskiert die Werte in Logs weiterhin.
+ * In GitHub Actions übergibt jeder Workflow die Secrets EINZELN als
+ * Umgebungsvariablen (env: NAME: ${{ secrets.NAME }}); `secret_name` aus der
+ * providers-Tabelle wird in process.env nachgeschlagen.
+ *
+ * Früher lief das über SECRETS_CONTEXT: ${{ toJson(secrets) }} – alle Secrets
+ * als ein JSON. Das sparte beim Anbinden eines Anbieters eine YML-Zeile, ist
+ * aber exakt das Muster, mit dem Credential-Diebstahl-Malware arbeitet, und
+ * GitHubs Heuristik hat die Workflows deshalb als „may be malicious" gesperrt:
+ * fünf Wochen lang kein einziger Lauf. Eine YML-Zeile pro neuem Anbieter ist
+ * der weitaus billigere Preis.
  *
  * Lokal (Windows-Entwicklung) greift derselbe Aufruf auf process.env zu; eine
  * vorhandene .env im Projektstamm wird einmalig nachgeladen, ohne gesetzte
@@ -17,7 +23,6 @@ import { fileURLToPath } from 'node:url';
 /** Projektstamm – von scripts/arena/lib drei Ebenen hoch. */
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..');
 
-let secretsContext: Record<string, unknown> | null | undefined;
 let dotenvLoaded = false;
 
 function loadDotEnv(): void {
@@ -38,27 +43,10 @@ function loadDotEnv(): void {
   }
 }
 
-function fromSecretsContext(name: string): string | undefined {
-  if (secretsContext === undefined) {
-    const raw = process.env.SECRETS_CONTEXT;
-    if (!raw) {
-      secretsContext = null;
-    } else {
-      try {
-        secretsContext = JSON.parse(raw) as Record<string, unknown>;
-      } catch {
-        secretsContext = null; // defekter Kontext = wie nicht vorhanden
-      }
-    }
-  }
-  const value = secretsContext?.[name];
-  return typeof value === 'string' && value.length > 0 ? value : undefined;
-}
-
-/** Secret nachschlagen: SECRETS_CONTEXT (Actions) vor process.env/.env (lokal). */
+/** Secret nachschlagen: process.env (Actions und lokal), ergänzt um .env. */
 export function getSecret(name: string): string | undefined {
   loadDotEnv();
-  return fromSecretsContext(name) ?? (process.env[name] || undefined);
+  return process.env[name] || undefined;
 }
 
 /** Wie getSecret, wirft aber mit klarer Meldung, wenn das Secret fehlt. */

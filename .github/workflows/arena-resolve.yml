@@ -33,4 +33,22 @@ jobs:
       - name: Ergebnisse holen
         run: node --experimental-strip-types scripts/arena/jobs/resolve.mts
         env:
-          SECRETS_CONTEXT: ${{ toJson(secrets) }}
+          # Jedes Secret einzeln, mit Absicht. Das fruehere
+          #   SECRETS_CONTEXT: ${{ toJson(secrets) }}
+          # kippte alle Secrets auf einmal in eine Variable - exakt die Signatur,
+          # mit der Credential-Diebstahl-Malware arbeitet, und GitHubs Heuristik
+          # hat die Datei deshalb als "may be malicious" gesperrt. Jeder Lauf
+          # endete ohne einen einzigen Job. Nicht hinterlegte Secrets ergeben
+          # hier einen Leerstring, den der Leser wie "fehlt" behandelt.
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE: ${{ secrets.SUPABASE }}
+          WAVESPEED_API_KEY: ${{ secrets.WAVESPEED_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
+          MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+          FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}

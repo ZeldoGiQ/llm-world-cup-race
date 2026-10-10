@@ -1,10 +1,10 @@
 # FutureBench: die Modelle geben ihre Vorhersagen ab (HARNESS_V1).
 #
-# SECRETS_CONTEXT übergibt alle Repo-Secrets als JSON; der Runner schlägt den in
-# providers.secret_name hinterlegten Namen dynamisch nach. Deshalb muss beim
-# Anbinden eines neuen LLMs NIE diese Datei angefasst werden – ein Secret und
-# eine Zeile in der models-Tabelle genügen. GitHub maskiert Secret-Werte in
-# Logs weiterhin; das Skript loggt ohnehin niemals Keys oder Roh-Antworten.
+# Secrets werden einzeln uebergeben (siehe env: unten); der Runner schlaegt den
+# in providers.secret_name hinterlegten Namen in process.env nach. Ein neuer
+# Anbieter braucht damit EINE Zeile hier - der Preis dafuer, dass GitHub die
+# Datei nicht mehr als bösartig einstuft. Das Skript loggt niemals Keys oder
+# Roh-Antworten.
 #
 # Ein Modell ohne gesetztes Secret wird übersprungen (Log-Hinweis), nichts scheitert.
 name: Arena Vorhersagen
@@ -38,4 +38,22 @@ jobs:
       - name: Modelle befragen
         run: node --experimental-strip-types scripts/arena/jobs/predict.mts
         env:
-          SECRETS_CONTEXT: ${{ toJson(secrets) }}
+          # Jedes Secret einzeln, mit Absicht. Das fruehere
+          #   SECRETS_CONTEXT: ${{ toJson(secrets) }}
+          # kippte alle Secrets auf einmal in eine Variable - exakt die Signatur,
+          # mit der Credential-Diebstahl-Malware arbeitet, und GitHubs Heuristik
+          # hat die Datei deshalb als "may be malicious" gesperrt. Jeder Lauf
+          # endete ohne einen einzigen Job. Nicht hinterlegte Secrets ergeben
+          # hier einen Leerstring, den der Leser wie "fehlt" behandelt.
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE: ${{ secrets.SUPABASE }}
+          WAVESPEED_API_KEY: ${{ secrets.WAVESPEED_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
+          MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+          FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
