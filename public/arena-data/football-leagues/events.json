@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-09-05T01:22:01.758Z",
+  "updatedAt": "2026-10-10T14:41:41.320Z",
   "events": [
     {
       "id": "fd-554940",
@@ -4626,9 +4626,13 @@
       "id": "fd-560571",
       "title": "Newcastle – Bournemouth",
       "utcDate": "2026-09-05T11:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BOU",
@@ -4654,9 +4658,13 @@
       "id": "fd-565785",
       "title": "Bremen – RB Leipzig",
       "utcDate": "2026-09-05T13:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "RBL",
@@ -4682,9 +4690,13 @@
       "id": "fd-565787",
       "title": "Hoffenheim – Dortmund",
       "utcDate": "2026-09-05T13:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BVB",
@@ -4710,9 +4722,13 @@
       "id": "fd-565790",
       "title": "Leverkusen – Union Berlin",
       "utcDate": "2026-09-05T13:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "UNB",
@@ -4738,9 +4754,13 @@
       "id": "fd-565792",
       "title": "M'gladbach – Elversberg",
       "utcDate": "2026-09-05T13:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 4,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ELV",
@@ -4766,9 +4786,13 @@
       "id": "fd-565793",
       "title": "SC Paderborn – Freiburg",
       "utcDate": "2026-09-05T13:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SCF",
@@ -4794,9 +4818,13 @@
       "id": "fd-560562",
       "title": "Nottingham – Tottenham",
       "utcDate": "2026-09-05T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "TOT",
@@ -4822,9 +4850,13 @@
       "id": "fd-560563",
       "title": "Man City – Coventry City",
       "utcDate": "2026-09-05T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "COV",
@@ -4850,9 +4882,13 @@
       "id": "fd-560564",
       "title": "Brighton Hove – Leeds United",
       "utcDate": "2026-09-05T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LEE",
@@ -4878,9 +4914,13 @@
       "id": "fd-560565",
       "title": "Brentford – Sunderland",
       "utcDate": "2026-09-05T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SUN",
@@ -4906,9 +4946,13 @@
       "id": "fd-560568",
       "title": "Fulham – Crystal Palace",
       "utcDate": "2026-09-05T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CRY",
@@ -4934,9 +4978,13 @@
       "id": "fd-564663",
       "title": "Athletic – Atleti",
       "utcDate": "2026-09-05T14:15:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ATL",
@@ -4962,9 +5010,13 @@
       "id": "fd-560569",
       "title": "Hull City – Aston Villa",
       "utcDate": "2026-09-05T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "AVL",
@@ -4990,9 +5042,13 @@
       "id": "fd-564660",
       "title": "Rayo Vallecano – Santander",
       "utcDate": "2026-09-05T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SAN",
@@ -5018,9 +5074,13 @@
       "id": "fd-565789",
       "title": "Schalke – Bayern",
       "utcDate": "2026-09-05T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCB",
@@ -5046,9 +5106,13 @@
       "id": "fd-554991",
       "title": "Bragantino – Bahia",
       "utcDate": "2026-09-05T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BAH",
@@ -5074,9 +5138,13 @@
       "id": "fd-564662",
       "title": "Villarreal – Deportivo",
       "utcDate": "2026-09-05T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "DEP",
@@ -5102,9 +5170,13 @@
       "id": "fd-560567",
       "title": "Everton – Man United",
       "utcDate": "2026-09-06T13:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "MUN",
@@ -5130,9 +5202,13 @@
       "id": "fd-565788",
       "title": "HSV – Mainz",
       "utcDate": "2026-09-06T13:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 5,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "M05",
@@ -5158,9 +5234,13 @@
       "id": "fd-564659",
       "title": "Valencia – Barça",
       "utcDate": "2026-09-06T14:15:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 5,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCB",
@@ -5186,9 +5266,13 @@
       "id": "fd-560570",
       "title": "Arsenal – Chelsea",
       "utcDate": "2026-09-06T15:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CHE",
@@ -5214,9 +5298,13 @@
       "id": "fd-565786",
       "title": "Frankfurt – Augsburg",
       "utcDate": "2026-09-06T15:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 4,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCA",
@@ -5242,9 +5330,13 @@
       "id": "fd-564664",
       "title": "Alavés – Osasuna",
       "utcDate": "2026-09-06T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 5,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "OSA",
@@ -5270,9 +5362,13 @@
       "id": "fd-564666",
       "title": "Málaga – Levante",
       "utcDate": "2026-09-06T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LEV",
@@ -5298,9 +5394,13 @@
       "id": "fd-575323",
       "title": "Club Brugge – Aston Villa",
       "utcDate": "2026-09-08T16:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "AVL",
@@ -5326,9 +5426,13 @@
       "id": "fd-575324",
       "title": "PAE AEK – LASK",
       "utcDate": "2026-09-08T16:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LIN",
@@ -5354,9 +5458,13 @@
       "id": "fd-575325",
       "title": "Real Madrid – Inter",
       "utcDate": "2026-09-08T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "INT",
@@ -5382,9 +5490,13 @@
       "id": "fd-575326",
       "title": "Porto – Man City",
       "utcDate": "2026-09-08T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "MCI",
@@ -5410,9 +5522,13 @@
       "id": "fd-575327",
       "title": "Dortmund – Villarreal",
       "utcDate": "2026-09-08T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "VIL",
@@ -5438,9 +5554,13 @@
       "id": "fd-575328",
       "title": "Lille – Real Betis",
       "utcDate": "2026-09-08T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BET",
@@ -5466,9 +5586,13 @@
       "id": "fd-575329",
       "title": "Barça – Feyenoord",
       "utcDate": "2026-09-09T16:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 5,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FEY",
@@ -5494,9 +5618,13 @@
       "id": "fd-575330",
       "title": "Stuttgart – Viking",
       "utcDate": "2026-09-09T16:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "VIK",
@@ -5522,9 +5650,13 @@
       "id": "fd-575331",
       "title": "Liverpool – Atleti",
       "utcDate": "2026-09-09T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ATL",
@@ -5550,9 +5682,13 @@
       "id": "fd-575332",
       "title": "PSG – Sl. Bratislava",
       "utcDate": "2026-09-09T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 6,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SBA",
@@ -5578,9 +5714,13 @@
       "id": "fd-575333",
       "title": "Napoli – Arsenal",
       "utcDate": "2026-09-09T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ARS",
@@ -5606,9 +5746,13 @@
       "id": "fd-575334",
       "title": "Sporting CP – Galatasaray",
       "utcDate": "2026-09-09T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "GAL",
@@ -5634,9 +5778,13 @@
       "id": "fd-575335",
       "title": "Fenerbahçe – Roma",
       "utcDate": "2026-09-10T16:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ROM",
@@ -5662,9 +5810,13 @@
       "id": "fd-575336",
       "title": "PSV – Shaktar",
       "utcDate": "2026-09-10T16:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SHD",
@@ -5690,9 +5842,13 @@
       "id": "fd-575337",
       "title": "Bayern – Bodø/Glimt",
       "utcDate": "2026-09-10T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 5,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FK",
@@ -5718,9 +5874,13 @@
       "id": "fd-575338",
       "title": "Man United – Sabah FK",
       "utcDate": "2026-09-10T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SAB",
@@ -5746,9 +5906,13 @@
       "id": "fd-575339",
       "title": "Como 1907 – RB Leipzig",
       "utcDate": "2026-09-10T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "RBL",
@@ -5774,9 +5938,13 @@
       "id": "fd-575340",
       "title": "Slavia Praha – RC Lens",
       "utcDate": "2026-09-10T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "RCL",
@@ -5802,9 +5970,13 @@
       "id": "fd-565797",
       "title": "Union Berlin – Schalke",
       "utcDate": "2026-09-11T18:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "S04",
@@ -5830,9 +6002,13 @@
       "id": "fd-565794",
       "title": "Hoffenheim – Stuttgart",
       "utcDate": "2026-09-12T13:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "VFB",
@@ -5858,9 +6034,13 @@
       "id": "fd-565795",
       "title": "Dortmund – SC Paderborn",
       "utcDate": "2026-09-12T13:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SCP",
@@ -5886,9 +6066,13 @@
       "id": "fd-565796",
       "title": "Augsburg – Leverkusen",
       "utcDate": "2026-09-12T13:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "B04",
@@ -5914,9 +6098,13 @@
       "id": "fd-565801",
       "title": "Mainz – Frankfurt",
       "utcDate": "2026-09-12T13:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SGE",
@@ -5942,9 +6130,13 @@
       "id": "fd-565802",
       "title": "Freiburg – M'gladbach",
       "utcDate": "2026-09-12T13:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 5,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BMG",
@@ -5970,9 +6162,13 @@
       "id": "fd-560572",
       "title": "Crystal Palace – Ipswich Town",
       "utcDate": "2026-09-12T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "IPS",
@@ -5998,9 +6194,13 @@
       "id": "fd-560573",
       "title": "Liverpool – Fulham",
       "utcDate": "2026-09-12T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FUL",
@@ -6026,9 +6226,13 @@
       "id": "fd-560574",
       "title": "Aston Villa – Nottingham",
       "utcDate": "2026-09-12T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "NOT",
@@ -6054,9 +6258,13 @@
       "id": "fd-560576",
       "title": "Bournemouth – Brentford",
       "utcDate": "2026-09-12T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BRE",
@@ -6082,9 +6290,13 @@
       "id": "fd-560581",
       "title": "Chelsea – Hull City",
       "utcDate": "2026-09-12T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "HUL",
@@ -6110,9 +6322,13 @@
       "id": "fd-560575",
       "title": "Tottenham – Everton",
       "utcDate": "2026-09-12T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "EVE",
@@ -6138,9 +6354,13 @@
       "id": "fd-565798",
       "title": "1. FC Köln – Bremen",
       "utcDate": "2026-09-12T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SVW",
@@ -6166,9 +6386,13 @@
       "id": "fd-560577",
       "title": "Sunderland – Arsenal",
       "utcDate": "2026-09-12T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ARS",
@@ -6194,9 +6418,13 @@
       "id": "fd-560578",
       "title": "Coventry City – Brighton Hove",
       "utcDate": "2026-09-13T13:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 5,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BHA",
@@ -6222,9 +6450,13 @@
       "id": "fd-565799",
       "title": "RB Leipzig – HSV",
       "utcDate": "2026-09-13T13:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 5,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "HSV",
@@ -6250,9 +6482,13 @@
       "id": "fd-560580",
       "title": "Man United – Man City",
       "utcDate": "2026-09-13T15:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "MCI",
@@ -6278,9 +6514,13 @@
       "id": "fd-565800",
       "title": "Elversberg – Bayern",
       "utcDate": "2026-09-13T15:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCB",
@@ -6306,9 +6546,13 @@
       "id": "fd-560579",
       "title": "Leeds United – Newcastle",
       "utcDate": "2026-09-14T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "NEW",
@@ -6328,6 +6572,846 @@
         "competition": "Premier League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560579. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-575341",
+      "title": "RC Lens – Sporting CP",
+      "utcDate": "2026-10-13T16:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SPO",
+          "name": "Sporting CP"
+        },
+        "home": {
+          "tla": "RCL",
+          "name": "RC Lens"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 2",
+          "Home team: RC Lens",
+          "Away team: Sporting CP"
+        ],
+        "matchday": 2,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575341. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575342",
+      "title": "Sabah FK – Slavia Praha",
+      "utcDate": "2026-10-13T16:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SLP",
+          "name": "Slavia Praha"
+        },
+        "home": {
+          "tla": "SAB",
+          "name": "Sabah FK"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 2",
+          "Home team: Sabah FK",
+          "Away team: Slavia Praha"
+        ],
+        "matchday": 2,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575342. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575343",
+      "title": "Inter – Club Brugge",
+      "utcDate": "2026-10-13T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BRU",
+          "name": "Club Brugge"
+        },
+        "home": {
+          "tla": "INT",
+          "name": "Inter"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 2",
+          "Home team: Inter",
+          "Away team: Club Brugge"
+        ],
+        "matchday": 2,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575343. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575344",
+      "title": "Galatasaray – Barça",
+      "utcDate": "2026-10-13T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FCB",
+          "name": "Barça"
+        },
+        "home": {
+          "tla": "GAL",
+          "name": "Galatasaray"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 2",
+          "Home team: Galatasaray",
+          "Away team: Barça"
+        ],
+        "matchday": 2,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575344. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575345",
+      "title": "Atleti – Man United",
+      "utcDate": "2026-10-13T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "MUN",
+          "name": "Man United"
+        },
+        "home": {
+          "tla": "ATL",
+          "name": "Atleti"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 2",
+          "Home team: Atleti",
+          "Away team: Man United"
+        ],
+        "matchday": 2,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575345. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575346",
+      "title": "Arsenal – Lille",
+      "utcDate": "2026-10-13T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "LIL",
+          "name": "Lille"
+        },
+        "home": {
+          "tla": "ARS",
+          "name": "Arsenal"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 2",
+          "Home team: Arsenal",
+          "Away team: Lille"
+        ],
+        "matchday": 2,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575346. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575347",
+      "title": "Viking – Bayern",
+      "utcDate": "2026-10-13T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FCB",
+          "name": "Bayern"
+        },
+        "home": {
+          "tla": "VIK",
+          "name": "Viking"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 2",
+          "Home team: Viking",
+          "Away team: Bayern"
+        ],
+        "matchday": 2,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575347. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575348",
+      "title": "RB Leipzig – PSV",
+      "utcDate": "2026-10-13T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "PSV",
+          "name": "PSV"
+        },
+        "home": {
+          "tla": "RBL",
+          "name": "RB Leipzig"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 2",
+          "Home team: RB Leipzig",
+          "Away team: PSV"
+        ],
+        "matchday": 2,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575348. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575349",
+      "title": "Villarreal – Napoli",
+      "utcDate": "2026-10-13T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "NAP",
+          "name": "Napoli"
+        },
+        "home": {
+          "tla": "VIL",
+          "name": "Villarreal"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 2",
+          "Home team: Villarreal",
+          "Away team: Napoli"
+        ],
+        "matchday": 2,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575349. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575350",
+      "title": "LASK – Liverpool",
+      "utcDate": "2026-10-14T16:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "LIV",
+          "name": "Liverpool"
+        },
+        "home": {
+          "tla": "LIN",
+          "name": "LASK"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 2",
+          "Home team: LASK",
+          "Away team: Liverpool"
+        ],
+        "matchday": 2,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575350. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575351",
+      "title": "Feyenoord – Como 1907",
+      "utcDate": "2026-10-14T16:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "COM",
+          "name": "Como 1907"
+        },
+        "home": {
+          "tla": "FEY",
+          "name": "Feyenoord"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 2",
+          "Home team: Feyenoord",
+          "Away team: Como 1907"
+        ],
+        "matchday": 2,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575351. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575352",
+      "title": "Roma – Real Madrid",
+      "utcDate": "2026-10-14T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "RMA",
+          "name": "Real Madrid"
+        },
+        "home": {
+          "tla": "ROM",
+          "name": "Roma"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 2",
+          "Home team: Roma",
+          "Away team: Real Madrid"
+        ],
+        "matchday": 2,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575352. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575353",
+      "title": "Man City – PSG",
+      "utcDate": "2026-10-14T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "PSG",
+          "name": "PSG"
+        },
+        "home": {
+          "tla": "MCI",
+          "name": "Man City"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 2",
+          "Home team: Man City",
+          "Away team: PSG"
+        ],
+        "matchday": 2,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575353. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575354",
+      "title": "Bodø/Glimt – Dortmund",
+      "utcDate": "2026-10-14T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BVB",
+          "name": "Dortmund"
+        },
+        "home": {
+          "tla": "FK",
+          "name": "Bodø/Glimt"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 2",
+          "Home team: Bodø/Glimt",
+          "Away team: Dortmund"
+        ],
+        "matchday": 2,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575354. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575355",
+      "title": "Aston Villa – Fenerbahçe",
+      "utcDate": "2026-10-14T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FEN",
+          "name": "Fenerbahçe"
+        },
+        "home": {
+          "tla": "AVL",
+          "name": "Aston Villa"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 2",
+          "Home team: Aston Villa",
+          "Away team: Fenerbahçe"
+        ],
+        "matchday": 2,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575355. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575356",
+      "title": "Real Betis – Porto",
+      "utcDate": "2026-10-14T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FCP",
+          "name": "Porto"
+        },
+        "home": {
+          "tla": "BET",
+          "name": "Real Betis"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 2",
+          "Home team: Real Betis",
+          "Away team: Porto"
+        ],
+        "matchday": 2,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575356. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575357",
+      "title": "Shaktar – PAE AEK",
+      "utcDate": "2026-10-14T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "AEK",
+          "name": "PAE AEK"
+        },
+        "home": {
+          "tla": "SHD",
+          "name": "Shaktar"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 2",
+          "Home team: Shaktar",
+          "Away team: PAE AEK"
+        ],
+        "matchday": 2,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575357. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575358",
+      "title": "Sl. Bratislava – Stuttgart",
+      "utcDate": "2026-10-14T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "VFB",
+          "name": "Stuttgart"
+        },
+        "home": {
+          "tla": "SBA",
+          "name": "Sl. Bratislava"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 2",
+          "Home team: Sl. Bratislava",
+          "Away team: Stuttgart"
+        ],
+        "matchday": 2,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575358. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575359",
+      "title": "Sabah FK – Dortmund",
+      "utcDate": "2026-10-20T16:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BVB",
+          "name": "Dortmund"
+        },
+        "home": {
+          "tla": "SAB",
+          "name": "Sabah FK"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 3",
+          "Home team: Sabah FK",
+          "Away team: Dortmund"
+        ],
+        "matchday": 3,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575359. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575360",
+      "title": "Fenerbahçe – Slavia Praha",
+      "utcDate": "2026-10-20T16:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SLP",
+          "name": "Slavia Praha"
+        },
+        "home": {
+          "tla": "FEN",
+          "name": "Fenerbahçe"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 3",
+          "Home team: Fenerbahçe",
+          "Away team: Slavia Praha"
+        ],
+        "matchday": 3,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575360. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575361",
+      "title": "Man City – PAE AEK",
+      "utcDate": "2026-10-20T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "AEK",
+          "name": "PAE AEK"
+        },
+        "home": {
+          "tla": "MCI",
+          "name": "Man City"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 3",
+          "Home team: Man City",
+          "Away team: PAE AEK"
+        ],
+        "matchday": 3,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575361. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575362",
+      "title": "Stuttgart – Atleti",
+      "utcDate": "2026-10-20T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ATL",
+          "name": "Atleti"
+        },
+        "home": {
+          "tla": "VFB",
+          "name": "Stuttgart"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 3",
+          "Home team: Stuttgart",
+          "Away team: Atleti"
+        ],
+        "matchday": 3,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575362. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575363",
+      "title": "Liverpool – Villarreal",
+      "utcDate": "2026-10-20T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "VIL",
+          "name": "Villarreal"
+        },
+        "home": {
+          "tla": "LIV",
+          "name": "Liverpool"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 3",
+          "Home team: Liverpool",
+          "Away team: Villarreal"
+        ],
+        "matchday": 3,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575363. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575364",
+      "title": "Roma – Sl. Bratislava",
+      "utcDate": "2026-10-20T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SBA",
+          "name": "Sl. Bratislava"
+        },
+        "home": {
+          "tla": "ROM",
+          "name": "Roma"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 3",
+          "Home team: Roma",
+          "Away team: Sl. Bratislava"
+        ],
+        "matchday": 3,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575364. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575365",
+      "title": "Porto – PSV",
+      "utcDate": "2026-10-20T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "PSV",
+          "name": "PSV"
+        },
+        "home": {
+          "tla": "FCP",
+          "name": "Porto"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 3",
+          "Home team: Porto",
+          "Away team: PSV"
+        ],
+        "matchday": 3,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575365. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575366",
+      "title": "Napoli – Bodø/Glimt",
+      "utcDate": "2026-10-20T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FK",
+          "name": "Bodø/Glimt"
+        },
+        "home": {
+          "tla": "NAP",
+          "name": "Napoli"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 3",
+          "Home team: Napoli",
+          "Away team: Bodø/Glimt"
+        ],
+        "matchday": 3,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575366. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575367",
+      "title": "PSG – Barça",
+      "utcDate": "2026-10-20T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FCB",
+          "name": "Barça"
+        },
+        "home": {
+          "tla": "PSG",
+          "name": "PSG"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 3",
+          "Home team: PSG",
+          "Away team: Barça"
+        ],
+        "matchday": 3,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575367. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575368",
+      "title": "Como 1907 – Man United",
+      "utcDate": "2026-10-21T16:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "MUN",
+          "name": "Man United"
+        },
+        "home": {
+          "tla": "COM",
+          "name": "Como 1907"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 3",
+          "Home team: Como 1907",
+          "Away team: Man United"
+        ],
+        "matchday": 3,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575368. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575369",
+      "title": "Lille – Galatasaray",
+      "utcDate": "2026-10-21T16:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "GAL",
+          "name": "Galatasaray"
+        },
+        "home": {
+          "tla": "LIL",
+          "name": "Lille"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 3",
+          "Home team: Lille",
+          "Away team: Galatasaray"
+        ],
+        "matchday": 3,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575369. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575370",
+      "title": "Real Madrid – RB Leipzig",
+      "utcDate": "2026-10-21T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "RBL",
+          "name": "RB Leipzig"
+        },
+        "home": {
+          "tla": "RMA",
+          "name": "Real Madrid"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 3",
+          "Home team: Real Madrid",
+          "Away team: RB Leipzig"
+        ],
+        "matchday": 3,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575370. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
       }
     }
   ]

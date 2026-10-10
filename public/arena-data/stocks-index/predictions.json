@@ -1086,6 +1086,61 @@
         },
         "createdAt": "2026-09-05T04:40:42.636Z"
       }
+    },
+    "yf-gdaxi-2026-10-16": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 25087.27
+        },
+        "createdAt": "2026-10-10T14:39:23.480Z"
+      }
+    },
+    "yf-gspc-2026-10-16": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 7811.54
+        },
+        "createdAt": "2026-10-10T14:39:23.480Z"
+      },
+      "claude-5.1": {
+        "value": {
+          "kind": "numeric",
+          "value": 7822
+        },
+        "createdAt": "2026-10-10T14:41:12.444Z"
+      },
+      "deepseek": {
+        "value": {
+          "kind": "numeric",
+          "value": 7811.54
+        },
+        "createdAt": "2026-10-10T14:41:29.666Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "kind": "numeric",
+          "value": 7825
+        },
+        "createdAt": "2026-10-10T14:41:13.447Z"
+      },
+      "gpt-5.6": {
+        "value": {
+          "kind": "numeric",
+          "value": 7823.26
+        },
+        "createdAt": "2026-10-10T14:41:36.630Z"
+      }
+    },
+    "yf-ndx-2026-10-16": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 30883.15
+        },
+        "createdAt": "2026-10-10T14:39:23.480Z"
+      }
     }
   }
 }
