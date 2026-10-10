@@ -46,19 +46,36 @@ interface CatalogEntry {
 async function fetchCatalog(provider: ProviderRow): Promise<CatalogEntry[]> {
   const key = getSecret(provider.secret_name);
   if (!key) throw new Error(`Secret ${provider.secret_name} fehlt.`);
-  const base = (provider.base_url ?? '').replace(/\/$/, '');
-  if (!base) throw new Error(`Provider ${provider.id} hat keine base_url.`);
 
-  const response = await fetch(`${base}/models`, {
-    headers: { Authorization: `Bearer ${key}` },
+  // Die Direktadapter (OpenAI, Anthropic) tragen ihre Adresse im Code, die
+  // Anbieterzeile hat keine base_url. Der Katalog muss sie genauso kennen -
+  // sonst bleiben ausgerechnet die beiden groessten Labore unbeobachtet, wie
+  // beim allerersten Lauf dieses Jobs ("Katalog nicht lesbar").
+  const NATIVE: Record<string, { url: string; headers: Record<string, string> }> = {
+    openai: {
+      url: 'https://api.openai.com/v1/models',
+      headers: { Authorization: `Bearer ${key}` },
+    },
+    anthropic: {
+      url: 'https://api.anthropic.com/v1/models',
+      headers: { 'x-api-key': key, 'anthropic-version': '2023-06-01' },
+    },
+  };
+  const native = NATIVE[provider.api_kind];
+  const base = (provider.base_url ?? '').replace(/\/$/, '');
+  if (!native && !base) throw new Error(`Provider ${provider.id} hat keine base_url.`);
+  const url = native ? native.url : `${base}/models`;
+
+  const response = await fetch(url, {
+    headers: native ? native.headers : { Authorization: `Bearer ${key}` },
     signal: AbortSignal.timeout(30_000),
   });
   if (!response.ok) {
-    throw new Error(`GET ${base}/models antwortete ${response.status} ${response.statusText}`);
+    throw new Error(`GET ${url} antwortete ${response.status} ${response.statusText}`);
   }
   const payload = (await response.json()) as { data?: unknown };
   if (!Array.isArray(payload.data)) {
-    throw new Error(`GET ${base}/models lieferte kein data-Array.`);
+    throw new Error(`GET ${url} lieferte kein data-Array.`);
   }
 
   // Zwei Formate, weil WaveSpeed zwei Oberflächen hat: Der
@@ -77,7 +94,7 @@ async function fetchCatalog(provider: ProviderRow): Promise<CatalogEntry[]> {
 
   if (entries.length === 0) {
     throw new Error(
-      `GET ${base}/models lieferte ${payload.data.length} Einträge, aber keiner hatte ein Feld "id" oder "model_id". Format geändert?`,
+      `GET ${url} lieferte ${payload.data.length} Einträge, aber keiner hatte ein Feld "id" oder "model_id". Format geändert?`,
     );
   }
   return entries;
