@@ -1302,6 +1302,33 @@
         },
         "createdAt": "2026-10-10T14:46:53.708Z"
       }
+    },
+    "yf-gdaxi-2026-10-23": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 25087.27
+        },
+        "createdAt": "2026-10-11T10:48:35.957Z"
+      }
+    },
+    "yf-gspc-2026-10-23": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 7811.54
+        },
+        "createdAt": "2026-10-11T10:48:35.957Z"
+      }
+    },
+    "yf-ndx-2026-10-23": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 30883.15
+        },
+        "createdAt": "2026-10-11T10:48:35.957Z"
+      }
     }
   }
 }
