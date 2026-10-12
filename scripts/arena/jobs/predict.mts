@@ -15,7 +15,7 @@
 import { assertBudget } from '../lib/budget.mts';
 import { db, opsConfig, unwrap, type EventRow, type ModelRow, type ProviderRow } from '../lib/db.mts';
 import { getSecret } from '../lib/env.mts';
-import { notifyDiscord } from '../lib/notify.mts';
+import { notifyOps } from '../lib/notify.mts';
 import { runJob } from '../lib/runs.mts';
 import { askModel } from '../providers/index.mts';
 import { CATEGORY_LABELS } from '../lib/registry-export.mts';
@@ -214,7 +214,7 @@ async function main(): Promise<void> {
 
     const budget = await assertBudget().catch(() => null);
     if (budget?.warn) {
-      await notifyDiscord(
+      await notifyOps(
         `⚠️ FutureBench Budget: ${budget.monthUsd.toFixed(2)} $ von ${budget.monthlyCapUsd} $ ` +
           `im laufenden Monat verbraucht.`,
       );

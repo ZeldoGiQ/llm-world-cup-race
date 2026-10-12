@@ -18,6 +18,8 @@ export interface ShareCardData {
   title: string;
   subtitle: string;
   footnote: string;
+  /** Aufgelöste Ereignisse hinter der Karte – für Beitragsschwellen, nicht nur für die Fußnote */
+  resolvedEvents: number;
   rows: ShareRow[];
 }
 
@@ -56,6 +58,9 @@ export function shareCards(): ShareCardData[] {
             title: 'Overall — all categories',
             subtitle: `Prediction Score · Knowledge Cap · ${SCORE_VERSION}`,
             footnote: `${data.overall.qualifiedCount} categories · equal weight · geometric mean of loss ratios`,
+            resolvedEvents: data.overall.qualifications
+              .filter((q) => q.qualified)
+              .reduce((sum, q) => sum + q.resolvedEvents, 0),
             rows: data.overall.rows
               .filter((row) => row.rank > 0 && row.predictionScore !== null)
               .slice(0, 5)
@@ -106,6 +111,7 @@ export function shareCards(): ShareCardData[] {
         title: pick(entry.descriptor.label, 'en'),
         subtitle: `Prediction Score · Knowledge Cap · ${SCORE_VERSION}`,
         footnote: `${entry.resolvedEvents} events · every prediction published before its event · 90% CI`,
+        resolvedEvents: entry.resolvedEvents,
         rows,
       };
       }),

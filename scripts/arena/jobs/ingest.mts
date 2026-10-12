@@ -12,7 +12,7 @@
  */
 import { writeRandomWalkPredictions } from '../lib/baseline.mts';
 import { db, opsConfig, unwrap } from '../lib/db.mts';
-import { notifyDiscord } from '../lib/notify.mts';
+import { notifyOps } from '../lib/notify.mts';
 import { runJob } from '../lib/runs.mts';
 import { FEEDS } from '../sources/index.mts';
 import type { DraftEvent } from '../sources/types.mts';
@@ -193,10 +193,10 @@ async function main(): Promise<void> {
     }
 
     if (problems.length > 0) {
-      await notifyDiscord(`⚠️ arena-ingest: ${problems.length} Feed(s) fehlgeschlagen\n${problems.join('\n')}`);
+      await notifyOps(`⚠️ arena-ingest: ${problems.length} Feed(s) fehlgeschlagen\n${problems.join('\n')}`);
     }
     if (voided > 0) {
-      await notifyDiscord(
+      await notifyOps(
         `⚠️ arena-ingest: ${voided} Event(s) ungültig, weil der Termin nach der Abgabe verlegt wurde.`,
       );
     }

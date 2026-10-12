@@ -15,7 +15,7 @@
  */
 import { validateResolution } from '../lib/contract.mts';
 import { db, unwrap, type EventRow } from '../lib/db.mts';
-import { notifyDiscord } from '../lib/notify.mts';
+import { notifyOps } from '../lib/notify.mts';
 import { runJob } from '../lib/runs.mts';
 import { feedById } from '../sources/index.mts';
 import type { ResolvedEvent } from '../sources/types.mts';
@@ -171,7 +171,7 @@ async function main(): Promise<void> {
     }
 
     if (problems.length > 0) {
-      await notifyDiscord(`⚠️ arena-resolve: ${problems.join('\n')}`);
+      await notifyOps(`⚠️ arena-resolve: ${problems.join('\n')}`);
     }
 
     return {

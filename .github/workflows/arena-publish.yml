@@ -55,8 +55,10 @@ jobs:
           MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
           FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_OPS_WEBHOOK_URL: ${{ secrets.DISCORD_OPS_WEBHOOK_URL }}
 
       - name: Änderungen committen und pushen
+        id: commit
         run: |
           # Erst stagen, dann den Index prüfen. `git diff` allein sieht nur
           # getrackte Dateien - eine neu angelegte Datei (etwa die erste
@@ -67,8 +69,27 @@ jobs:
           git add -A -- public/arena-data src/arena/data/models.json
           if git diff --cached --quiet; then
             echo "Keine Änderungen - nichts zu committen."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "chore(arena): Daten aktualisieren (auto)"
             git pull --rebase origin "$GITHUB_REF_NAME" || true
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      # Community-Discord: Ranglisten mit Share-Karte, nur wenn sich Daten
+      # geaendert haben. Die Karten entstehen ausschliesslich im Site-Build
+      # (Vite-Globs), deshalb der Build hier - nach dem Push, damit der
+      # Lock-Beweis nicht auf den Build wartet.
+      - name: Seite bauen (Share-Karten)
+        if: steps.commit.outputs.changed == 'true'
+        run: npm run build
+
+      - name: Community-Discord
+        if: steps.commit.outputs.changed == 'true'
+        continue-on-error: true
+        run: node --experimental-strip-types scripts/arena/jobs/community.mts
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE: ${{ secrets.SUPABASE }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}

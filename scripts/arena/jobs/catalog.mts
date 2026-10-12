@@ -27,7 +27,7 @@
  */
 import { db, opsConfig, setOpsConfig, unwrap, type ModelRow, type ProviderRow } from '../lib/db.mts';
 import { getSecret } from '../lib/env.mts';
-import { notifyDiscord } from '../lib/notify.mts';
+import { notifyCommunity, notifyOps } from '../lib/notify.mts';
 import { isFrontRunner, labOf, planEnrollments, type Price } from '../lib/enroll.mts';
 import { appendFileSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -265,7 +265,7 @@ console.log(report);
 // bemerkt wird, sammelt das Leaderboard Ausfälle, die wie Modellschwäche
 // aussehen.
 if (missingCount > 0) {
-  await notifyDiscord(
+  await notifyOps(
     `Katalog-Abgleich: ${missingCount} aktive(s) Modell(e) nicht mehr im Katalog des Anbieters. ` +
       `Sie tippen weiter und schlagen dabei fehl. Details im Job-Protokoll.`,
   );
@@ -275,10 +275,20 @@ if (missingCount > 0) {
 // dabei zu sein. Nur beim ersten Auftauchen melden – danach steht es im
 // Bericht und muss nicht täglich wiederholt werden.
 if (enrolled.length > 0) {
-  await notifyDiscord(
+  await notifyOps(
     `Automatisch angelegt: ${enrolled.map((e) => e.text).join('; ')}. ` +
       `Der erste Vorhersagelauf startet jetzt; Start als early-access, eine erste Zahl gibt es nach den ersten aufgeloesten Ereignissen.`,
   );
+  // Die Oeffentlichkeit erfaehrt es auch – ohne Preise und Regelwerk, das
+  // ist Betrieb. Englisch wie Seite und Karten.
+  for (const entry of enrolled) {
+    const proposal = plan.proposals.find((p) => p.api_model === entry.api_model);
+    await notifyCommunity(
+      `🆕 **${proposal?.name ?? entry.api_model}** joins FutureBench. ` +
+        `It is now locking in predictions on every open event; first scores appear once those events resolve. ` +
+        `https://www.futurebench.ai/arena/leaderboards`,
+    );
+  }
   // Der Workflow liest diese Ausgabe und stoesst sofort einen Vorhersagelauf
   // an – sonst tippt das neue Modell erst beim naechsten Stundentakt, und der
   // laeuft wegen GitHubs Cron-Drosselung oft erst Stunden spaeter.
@@ -295,7 +305,7 @@ const unseen = noteworthy.filter((id) => !alreadySeen.includes(id) && !enrolledI
 if (unseen.length > 0) {
   const list = unseen.slice(0, 8).join(', ');
   const rest = unseen.length > 8 ? ` (+${unseen.length - 8} weitere)` : '';
-  await notifyDiscord(
+  await notifyOps(
     `Neu im Katalog bei einem Labor, das wir messen: ${list}${rest}. ` +
       `Wer früh benchmarkt, misst mit der Aufmerksamkeit – Eintragen bleibt eine bewusste Entscheidung.`,
   );

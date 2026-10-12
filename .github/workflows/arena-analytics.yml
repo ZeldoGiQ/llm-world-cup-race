@@ -54,6 +54,7 @@ jobs:
           MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
           FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_OPS_WEBHOOK_URL: ${{ secrets.DISCORD_OPS_WEBHOOK_URL }}
 
       # Katalog-Abgleich laeuft hier mit, nicht in einem eigenen Workflow:
       # GitHub sperrt den erstmaligen Lauf neu hinzugefuegter Workflows in
@@ -86,6 +87,7 @@ jobs:
           MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
           FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          DISCORD_OPS_WEBHOOK_URL: ${{ secrets.DISCORD_OPS_WEBHOOK_URL }}
 
       # Hat der Abgleich ein neues Modell angelegt, tippt es sofort mit statt
       # beim naechsten Stundentakt (den GitHub in diesem Repo oft um Stunden

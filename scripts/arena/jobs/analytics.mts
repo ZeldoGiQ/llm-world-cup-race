@@ -9,7 +9,7 @@
  */
 import { readBudget } from '../lib/budget.mts';
 import { db, fetchAll, unwrap } from '../lib/db.mts';
-import { notifyDiscord } from '../lib/notify.mts';
+import { notifyOps } from '../lib/notify.mts';
 import { runJob } from '../lib/runs.mts';
 
 /** Läuft länger als das? Dann ist der Actions-Job abgestürzt, nicht aktiv. */
@@ -155,7 +155,7 @@ async function main(): Promise<void> {
     }
     if (budget.warn) lines.push(`⚠️ Budget-Warnschwelle erreicht.`);
 
-    await notifyDiscord(lines.join('\n'));
+    await notifyOps(lines.join('\n'));
 
     return stats;
   });

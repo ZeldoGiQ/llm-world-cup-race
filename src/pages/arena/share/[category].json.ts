@@ -26,6 +26,7 @@ export const GET: APIRoute = ({ params }) => {
     title: card.title,
     subtitle: card.subtitle,
     footnote: card.footnote,
+    resolvedEvents: card.resolvedEvents,
     rows: card.rows.map(({ name, color, score, ciLow, ciHigh }) => ({
       name,
       color,
