@@ -73,6 +73,8 @@ export interface ModelRow {
   price_search_usd: number;
   max_output_tokens: number;
   extra: Record<string, unknown>;
+  /** Verwaltungsnotizen (autoEnrolled …) – geht nie in den API-Request */
+  origin: Record<string, unknown>;
   enabled: boolean;
   hidden: boolean;
   retired_at: string | null;

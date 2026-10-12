@@ -227,7 +227,10 @@ for (const provider of providers) {
       price_search_usd: 0,
       access: 'early-access',
       enabled: true,
-      extra: { autoEnrolled: true, priceSource: proposal.priceSource, enrolledAt: new Date().toISOString() },
+      release_date: new Date(proposal.created * 1000).toISOString().slice(0, 10),
+      // NICHT in `extra`: das streut jeder Adapter in den API-Request, und
+      // Anthropic lehnt unbekannte Felder mit 400 ab (so geschehen bei Opus 5.5).
+      origin: { autoEnrolled: true, priceSource: proposal.priceSource, enrolledAt: new Date().toISOString() },
     });
     if (error) {
       lines.push(`- ANLEGEN FEHLGESCHLAGEN ${proposal.api_model}: ${error.message}`);
