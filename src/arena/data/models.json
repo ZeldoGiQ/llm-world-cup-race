@@ -18,6 +18,14 @@
     "access": "early-access"
   },
   {
+    "id": "claude-opus-5-5",
+    "name": "Claude Opus 5.5",
+    "provider": "Anthropic",
+    "color": "#d97757",
+    "version": "claude-opus-5-5",
+    "access": "early-access"
+  },
+  {
     "id": "deepseek",
     "name": "DeepSeek V4 Pro",
     "provider": "DeepSeek",
@@ -74,6 +82,15 @@
     "provider": "OpenAI",
     "color": "#10a37f",
     "version": "gpt-5.6-sol",
+    "access": "early-access",
+    "retiredAt": "2026-10-12T07:56:02.359091+00:00"
+  },
+  {
+    "id": "gpt-6.1",
+    "name": "GPT-6.1 Sol",
+    "provider": "OpenAI",
+    "color": "#10a37f",
+    "version": "gpt-6.1-sol",
     "access": "early-access"
   },
   {

@@ -5084,6 +5084,13 @@
         },
         "createdAt": "2026-10-11T15:34:02.888Z"
       },
+      "claude-opus-5-5": {
+        "value": {
+          "kind": "numeric",
+          "value": 82904
+        },
+        "createdAt": "2026-10-12T08:19:41.305Z"
+      },
       "deepseek": {
         "value": {
           "kind": "numeric",
@@ -5111,6 +5118,13 @@
           "value": 82904
         },
         "createdAt": "2026-10-11T15:34:22.802Z"
+      },
+      "gpt-6.1": {
+        "value": {
+          "kind": "numeric",
+          "value": 82904
+        },
+        "createdAt": "2026-10-12T07:57:03.438Z"
       },
       "grok-4.7": {
         "value": {
@@ -5149,6 +5163,13 @@
         },
         "createdAt": "2026-10-11T15:34:57.570Z"
       },
+      "claude-opus-5-5": {
+        "value": {
+          "kind": "numeric",
+          "value": 2497.43
+        },
+        "createdAt": "2026-10-12T08:19:45.499Z"
+      },
       "deepseek": {
         "value": {
           "kind": "numeric",
@@ -5176,6 +5197,13 @@
           "value": 2497.43
         },
         "createdAt": "2026-10-11T15:35:35.492Z"
+      },
+      "gpt-6.1": {
+        "value": {
+          "kind": "numeric",
+          "value": 2497.43
+        },
+        "createdAt": "2026-10-12T07:57:07.258Z"
       },
       "grok-4.7": {
         "value": {

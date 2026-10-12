@@ -10308,6 +10308,14 @@
         },
         "createdAt": "2026-10-11T20:10:37.699Z"
       },
+      "claude-opus-5-5": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-12T08:19:56.890Z"
+      },
       "deepseek": {
         "value": {
           "away": 1,
@@ -10339,6 +10347,14 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-10-11T20:10:48.532Z"
+      },
+      "gpt-6.1": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-12T07:57:21.187Z"
       },
       "grok-4.7": {
         "value": {
@@ -10374,6 +10390,14 @@
         },
         "createdAt": "2026-10-11T20:13:15.119Z"
       },
+      "claude-opus-5-5": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-12T08:20:04.146Z"
+      },
       "deepseek": {
         "value": {
           "away": 1,
@@ -10405,6 +10429,14 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-10-11T20:13:33.525Z"
+      },
+      "gpt-6.1": {
+        "value": {
+          "away": 1,
+          "home": 0,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-12T07:57:32.135Z"
       },
       "grok-4.7": {
         "value": {
@@ -10440,6 +10472,14 @@
         },
         "createdAt": "2026-10-11T20:16:02.474Z"
       },
+      "claude-opus-5-5": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-12T08:20:07.932Z"
+      },
       "deepseek": {
         "value": {
           "away": 0,
@@ -10471,6 +10511,14 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-10-11T20:16:26.341Z"
+      },
+      "gpt-6.1": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-12T07:57:41.563Z"
       },
       "grok-4.7": {
         "value": {
@@ -10506,6 +10554,14 @@
         },
         "createdAt": "2026-10-11T20:18:26.923Z"
       },
+      "claude-opus-5-5": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-12T08:20:13.969Z"
+      },
       "deepseek": {
         "value": {
           "away": 1,
@@ -10537,6 +10593,14 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-10-11T20:18:43.296Z"
+      },
+      "gpt-6.1": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-12T07:57:47.600Z"
       },
       "grok-4.7": {
         "value": {
@@ -10572,6 +10636,14 @@
         },
         "createdAt": "2026-10-11T20:20:58.132Z"
       },
+      "claude-opus-5-5": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-12T08:20:18.550Z"
+      },
       "deepseek": {
         "value": {
           "away": 0,
@@ -10603,6 +10675,14 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-10-11T20:21:10.375Z"
+      },
+      "gpt-6.1": {
+        "value": {
+          "away": 0,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-12T07:57:54.889Z"
       },
       "grok-4.7": {
         "value": {
@@ -10638,6 +10718,14 @@
         },
         "createdAt": "2026-10-11T20:22:32.033Z"
       },
+      "claude-opus-5-5": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-12T08:20:22.951Z"
+      },
       "deepseek": {
         "value": {
           "away": 0,
@@ -10669,6 +10757,14 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-10-11T20:24:48.040Z"
+      },
+      "gpt-6.1": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-12T07:58:05.296Z"
       },
       "grok-4.7": {
         "value": {
@@ -10704,6 +10800,14 @@
         },
         "createdAt": "2026-10-11T20:27:22.966Z"
       },
+      "claude-opus-5-5": {
+        "value": {
+          "away": 3,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-12T08:20:31.194Z"
+      },
       "deepseek": {
         "value": {
           "away": 2,
@@ -10735,6 +10839,14 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-10-11T20:27:46.874Z"
+      },
+      "gpt-6.1": {
+        "value": {
+          "away": 3,
+          "home": 0,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-12T07:58:12.871Z"
       },
       "grok-4.7": {
         "value": {
@@ -10770,6 +10882,14 @@
         },
         "createdAt": "2026-10-11T20:34:47.204Z"
       },
+      "claude-opus-5-5": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-12T08:20:35.009Z"
+      },
       "deepseek": {
         "value": {
           "away": 1,
@@ -10801,6 +10921,14 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-10-11T20:34:59.745Z"
+      },
+      "gpt-6.1": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-12T07:58:19.434Z"
       },
       "grok-4.7": {
         "value": {
@@ -10836,6 +10964,14 @@
         },
         "createdAt": "2026-10-11T20:38:02.768Z"
       },
+      "claude-opus-5-5": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-12T08:20:49.778Z"
+      },
       "deepseek": {
         "value": {
           "away": 1,
@@ -10867,6 +11003,14 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-10-11T20:38:13.032Z"
+      },
+      "gpt-6.1": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-12T07:58:33.226Z"
       },
       "grok-4.7": {
         "value": {
