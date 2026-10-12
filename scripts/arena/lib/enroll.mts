@@ -42,6 +42,8 @@ export interface OwnModel {
   color: string;
   price_input_usd: number;
   price_output_usd: number;
+  /** false = stillgelegt; zählt als bekannt, setzt aber keine Schwelle */
+  enabled?: boolean;
 }
 
 export interface Price {
@@ -141,11 +143,17 @@ export function planEnrollments(params: {
 
   for (const lab of labs) {
     const oursHere = params.ours.filter((model) => labOf(model.api_model) === lab);
-    const known = oursHere
+    // Die Schwelle setzen nur Modelle, die wir wirklich betreiben. Stillgelegte
+    // Zeilen bleiben „bekannt" (damit sie nicht erneut angelegt werden), heben
+    // die Schwelle aber nicht – sonst verdeckt eine Fehlanlage vom Vortag den
+    // Nachfolger, der am selben Tag erschien. Genau das ist beim ersten
+    // Live-Lauf passiert: Haiku und Sonnet 5.5 verdeckten Opus 5.5.
+    const active = oursHere.filter((model) => model.enabled !== false);
+    const known = active
       .map((model) => byId.get(model.api_model)?.created)
       .filter((created): created is number => typeof created === 'number');
     if (known.length === 0) {
-      skipped.push(`${lab || 'direkt'}: keines unserer Modelle im Katalog mit Datum gefunden – keine Schwelle, nichts angelegt`);
+      skipped.push(`${lab || 'direkt'}: kein aktives Modell von uns im Katalog mit Datum – keine Schwelle, nichts angelegt`);
       continue;
     }
     const baseline = Math.max(...known);

@@ -66,7 +66,9 @@ describe('planEnrollments', () => {
     const plan = planEnrollments({
       ours,
       pricing: {},
-      catalog: [{ id: 'gpt-6.1-sol', created: T }, { id: 'gpt-6-terra', created: T + 1 }],
+      // "nova" ist kein bekanntes Stufenwort – terra/luna sind inzwischen
+      // bewusst ausgeschlossen und taugen hier nicht mehr als Beispiel.
+      catalog: [{ id: 'gpt-6.1-sol', created: T }, { id: 'gpt-6-nova', created: T + 1 }],
     });
     expect(plan.proposals[0]).toMatchObject({ price_input_usd: 5, price_output_usd: 30, priceSource: 'lab-max' });
   });
@@ -97,6 +99,27 @@ describe('planEnrollments', () => {
     // neueste zuerst
     expect(plan.proposals.map((p) => p.api_model)).toEqual(['gpt-6-a', 'gpt-6-b']);
     expect(plan.skipped.join(' ')).toMatch(/gpt-6-c.*Tageslimit/);
+  });
+
+  it('lässt stillgelegte Zeilen die Schwelle nicht anheben', () => {
+    // Regression aus dem ersten Live-Lauf: Die am selben Tag erschienenen,
+    // danach stillgelegten Haiku/Sonnet 5.5 hoben die Schwelle auf ihr
+    // Datum – und Opus 5.5 galt plötzlich nicht mehr als "neuer".
+    const withRetired: OwnModel[] = [
+      { id: 'claude-5.1', api_model: 'claude-fable-5-1', color: '#d97757', price_input_usd: 10, price_output_usd: 50 },
+      { id: 'claude-haiku-5-5', api_model: 'claude-haiku-5-5', color: '#d97757', price_input_usd: 10, price_output_usd: 50, enabled: false },
+    ];
+    const plan = planEnrollments({
+      ours: withRetired,
+      pricing: { 'claude-opus-5-5': { input: 4, output: 20 } },
+      catalog: [
+        { id: 'claude-fable-5-1', created: T },
+        { id: 'claude-haiku-5-5', created: T + 500 },
+        { id: 'claude-opus-5-5', created: T + 500 },
+      ],
+    });
+    expect(plan.proposals.map((p) => p.api_model)).toEqual(['claude-opus-5-5']);
+    expect(plan.proposals[0]).toMatchObject({ price_input_usd: 4, price_output_usd: 20, priceSource: 'pricing.json' });
   });
 
   it('legt nichts an, wenn keine Schwelle bestimmbar ist', () => {

@@ -208,6 +208,7 @@ for (const provider of providers) {
       color: model.color,
       price_input_usd: Number(model.price_input_usd),
       price_output_usd: Number(model.price_output_usd),
+      enabled: Boolean(model.enabled),
     })),
     pricing,
     maxPerRun: 2,
