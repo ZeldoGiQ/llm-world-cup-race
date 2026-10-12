@@ -14,6 +14,8 @@ import { runJob } from '../lib/runs.mts';
 
 /** Läuft länger als das? Dann ist der Actions-Job abgestürzt, nicht aktiv. */
 const STALE_RUN_HOURS = 6;
+/** Dünn getippte Events werden nur aus diesem Zeitraum gemeldet. */
+const THIN_WINDOW_DAYS = 7;
 
 async function main(): Promise<void> {
   await runJob('analytics', async () => {
@@ -62,13 +64,23 @@ async function main(): Promise<void> {
     });
 
     // 3. Abdeckung: aufgelöste Events mit auffällig wenigen Tipps.
+    //
+    // Nur die letzten THIN_WINDOW_DAYS: Eine Lücke ist nur dann ein Alarm,
+    // wenn noch etwas zu tun ist. Ältere Lücken sind Geschichte (etwa die 37
+    // Liga-Spiele aus der GitHub-Sperre im September) und würden sonst in
+    // jedem Digest wiederholt, bis die Warnung niemand mehr liest.
     const countByEvent = new Map<string, number>();
     for (const p of predictions) {
       const key = `${p.category} ${p.event_id}`;
       countByEvent.set(key, (countByEvent.get(key) ?? 0) + 1);
     }
     const resolvedEvents = events.filter((e) => e.status === 'RESOLVED');
-    const thin = resolvedEvents.filter((e) => (countByEvent.get(`${e.category} ${e.id}`) ?? 0) < 2);
+    const thinSince = Date.now() - THIN_WINDOW_DAYS * 86_400_000;
+    const thin = resolvedEvents.filter(
+      (e) =>
+        Date.parse(e.utc_date) >= thinSince &&
+        (countByEvent.get(`${e.category} ${e.id}`) ?? 0) < 2,
+    );
 
     // 4. Fehlerquote je Modell (letzte 24 h). Auch hier paginiert: an einem
     // Tag mit vollem Volumen liegen mehr als 1000 Calls im Fenster.
@@ -132,7 +144,7 @@ async function main(): Promise<void> {
       );
     }
     if (thin.length > 0) {
-      lines.push(`⚠️ ${thin.length} aufgelöste Events mit weniger als 2 Tipps.`);
+      lines.push(`⚠️ ${thin.length} aufgelöste Events der letzten ${THIN_WINDOW_DAYS} Tage mit weniger als 2 Tipps.`);
     }
     const badModels = Object.entries(byModel).filter(([, m]) => m.calls >= 3 && m.errors / m.calls > 0.3);
     if (badModels.length > 0) {
