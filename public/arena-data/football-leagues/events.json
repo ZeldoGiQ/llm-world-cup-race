@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-10-10T14:41:41.320Z",
+  "updatedAt": "2026-10-12T23:11:52.656Z",
   "events": [
     {
       "id": "fd-554940",
@@ -7079,6 +7079,90 @@
       }
     },
     {
+      "id": "fd-560603",
+      "title": "Everton – Chelsea",
+      "utcDate": "2026-10-17T11:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "CHE",
+          "name": "Chelsea"
+        },
+        "home": {
+          "tla": "EVE",
+          "name": "Everton"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 7",
+          "Home team: Everton",
+          "Away team: Chelsea"
+        ],
+        "matchday": 7,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560603. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560602",
+      "title": "Fulham – Hull City",
+      "utcDate": "2026-10-17T14:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "HUL",
+          "name": "Hull City"
+        },
+        "home": {
+          "tla": "FUL",
+          "name": "Fulham"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 7",
+          "Home team: Fulham",
+          "Away team: Hull City"
+        ],
+        "matchday": 7,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560602. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560610",
+      "title": "Man City – Ipswich Town",
+      "utcDate": "2026-10-17T14:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "IPS",
+          "name": "Ipswich Town"
+        },
+        "home": {
+          "tla": "MCI",
+          "name": "Man City"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 7",
+          "Home team: Man City",
+          "Away team: Ipswich Town"
+        ],
+        "matchday": 7,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560610. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
       "id": "fd-575359",
       "title": "Sabah FK – Dortmund",
       "utcDate": "2026-10-20T16:45:00.000Z",
@@ -7411,6 +7495,174 @@
         "matchday": 3,
         "competition": "UEFA Champions League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575370. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575371",
+      "title": "Inter – Shaktar",
+      "utcDate": "2026-10-21T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SHD",
+          "name": "Shaktar"
+        },
+        "home": {
+          "tla": "INT",
+          "name": "Inter"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 3",
+          "Home team: Inter",
+          "Away team: Shaktar"
+        ],
+        "matchday": 3,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575371. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575372",
+      "title": "Bayern – Arsenal",
+      "utcDate": "2026-10-21T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ARS",
+          "name": "Arsenal"
+        },
+        "home": {
+          "tla": "FCB",
+          "name": "Bayern"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 3",
+          "Home team: Bayern",
+          "Away team: Arsenal"
+        ],
+        "matchday": 3,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575372. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575373",
+      "title": "Club Brugge – RC Lens",
+      "utcDate": "2026-10-21T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "RCL",
+          "name": "RC Lens"
+        },
+        "home": {
+          "tla": "BRU",
+          "name": "Club Brugge"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 3",
+          "Home team: Club Brugge",
+          "Away team: RC Lens"
+        ],
+        "matchday": 3,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575373. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575374",
+      "title": "Aston Villa – Viking",
+      "utcDate": "2026-10-21T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "VIK",
+          "name": "Viking"
+        },
+        "home": {
+          "tla": "AVL",
+          "name": "Aston Villa"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 3",
+          "Home team: Aston Villa",
+          "Away team: Viking"
+        ],
+        "matchday": 3,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575374. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575375",
+      "title": "Sporting CP – LASK",
+      "utcDate": "2026-10-21T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "LIN",
+          "name": "LASK"
+        },
+        "home": {
+          "tla": "SPO",
+          "name": "Sporting CP"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 3",
+          "Home team: Sporting CP",
+          "Away team: LASK"
+        ],
+        "matchday": 3,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575375. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575376",
+      "title": "Real Betis – Feyenoord",
+      "utcDate": "2026-10-21T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FEY",
+          "name": "Feyenoord"
+        },
+        "home": {
+          "tla": "BET",
+          "name": "Real Betis"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 3",
+          "Home team: Real Betis",
+          "Away team: Feyenoord"
+        ],
+        "matchday": 3,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575376. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "CL"
       }
     }
