@@ -11,6 +11,8 @@ on:
 
 permissions:
   contents: read
+  # Zum Anstossen des Vorhersagelaufs, wenn der Katalog ein Modell angelegt hat.
+  actions: write
 
 concurrency:
   group: arena-analytics
@@ -61,6 +63,7 @@ jobs:
       # Faellt der Abgleich aus, soll der Snapshot trotzdem gruen bleiben -
       # deshalb continue-on-error.
       - name: Modellkatalog abgleichen
+        id: katalog
         continue-on-error: true
         run: node --experimental-strip-types scripts/arena/jobs/catalog.mts
         env:
@@ -83,3 +86,14 @@ jobs:
           MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
           FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+      # Hat der Abgleich ein neues Modell angelegt, tippt es sofort mit statt
+      # beim naechsten Stundentakt (den GitHub in diesem Repo oft um Stunden
+      # verschiebt). Ein per Token ausgeloester workflow_dispatch erzeugt
+      # regulaer einen Lauf.
+      - name: Vorhersagelauf fuer neue Modelle anstossen
+        if: steps.katalog.outputs.enrolled != ''
+        run: gh workflow run arena-predict.yml --ref "$GITHUB_REF_NAME"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}

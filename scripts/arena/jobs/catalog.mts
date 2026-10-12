@@ -29,7 +29,7 @@ import { db, opsConfig, setOpsConfig, unwrap, type ModelRow, type ProviderRow } 
 import { getSecret } from '../lib/env.mts';
 import { notifyDiscord } from '../lib/notify.mts';
 import { isFrontRunner, labOf, planEnrollments, type Price } from '../lib/enroll.mts';
-import { readFileSync } from 'node:fs';
+import { appendFileSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { ROOT } from '../lib/env.mts';
 
@@ -273,9 +273,16 @@ if (missingCount > 0) {
 // Bericht und muss nicht täglich wiederholt werden.
 if (enrolled.length > 0) {
   await notifyDiscord(
-    `Automatisch angelegt und ab dem naechsten Lauf dabei: ${enrolled.map((e) => e.text).join('; ')}. ` +
-      `Start als early-access; eine erste Zahl gibt es nach den ersten aufgeloesten Ereignissen.`,
+    `Automatisch angelegt: ${enrolled.map((e) => e.text).join('; ')}. ` +
+      `Der erste Vorhersagelauf startet jetzt; Start als early-access, eine erste Zahl gibt es nach den ersten aufgeloesten Ereignissen.`,
   );
+  // Der Workflow liest diese Ausgabe und stoesst sofort einen Vorhersagelauf
+  // an – sonst tippt das neue Modell erst beim naechsten Stundentakt, und der
+  // laeuft wegen GitHubs Cron-Drosselung oft erst Stunden spaeter.
+  if (process.env.GITHUB_OUTPUT) {
+    appendFileSync(process.env.GITHUB_OUTPUT, `enrolled=${enrolled.map((e) => e.api_model).join(',')}
+`);
+  }
 }
 
 const alreadySeen = await opsConfig<string[]>('catalog_announced', []);
