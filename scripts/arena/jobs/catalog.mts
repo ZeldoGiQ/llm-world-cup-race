@@ -1,40 +1,43 @@
 /**
- * Katalog-Abgleich: Was bietet das Gateway an, und was davon fehlt uns?
+ * Katalog-Abgleich: Was bietet der Anbieter an, und was davon fehlt uns?
  *
- * Der Grund, warum dieser Job existiert: Die Teilnehmerliste des Benchmarks
- * wurde einmal gesetzt und danach nie mit der Wirklichkeit verglichen. Sie
- * stammt aus dem Vorgängerprojekt, und beim Wechsel auf das Gateway wurde
- * geprüft, ob die BESTEHENDEN Teilnehmer dort verfügbar sind – nicht, was
- * der Katalog sonst hergibt. Ergebnis: Monate später messen wir Modelle,
- * die längst Nachfolger haben.
+ * Der Grund, warum dieser Job existiert: Die Teilnehmerliste wurde einmal
+ * gesetzt und danach nie mit der Wirklichkeit verglichen. Monate später
+ * massen wir Modelle, die längst Nachfolger hatten – und ein Modell, das
+ * beim Gateway verschwand, scheiterte wochenlang still.
  *
  * Was der Job tut:
- *   1. Fragt den Katalog des Anbieters ab (OpenAI-kompatibel: GET /models).
- *   2. Vergleicht ihn mit der Tabelle `models`.
- *   3. Meldet drei Dinge, die alle drei wehtun, wenn man sie nicht merkt:
- *        NEU        – im Katalog, aber nicht bei uns (verpasste Modelle)
- *        VERSCHWUNDEN – bei uns aktiv, aber nicht mehr im Katalog. Das ist
- *                     der teuerste Fall: Das Modell schweigt, und im
- *                     Leaderboard sieht es aus wie ein Ausfall des Modells,
- *                     nicht wie unser Konfigurationsfehler.
- *        DRIFT      – der Alias zeigt inzwischen auf eine andere Version,
- *                     erkennbar an der von der API zurückgemeldeten ID.
+ *   1. Fragt den Katalog jedes aktiven Anbieters ab (OpenAI-kompatibel
+ *      GET /models, bei OpenAI und Anthropic die nativen Endpunkte).
+ *   2. Vergleicht ihn mit der Tabelle `models`:
+ *        VERSCHWUNDEN – bei uns aktiv, nicht mehr im Katalog. Das Modell
+ *                       schweigt, und im Leaderboard sieht es aus wie
+ *                       Modellversagen, nicht wie unser Konfigurationsfehler.
+ *        NEU          – im Katalog, nicht bei uns.
+ *   3. Legt NEUE Modelle unter festen Regeln von selbst an (lib/enroll.mts):
+ *      nur bei Laboren, die wir schon messen; nur, was neuer ist als unser
+ *      neuestes Modell dort; nur die vordere Reihe; mit verifiziertem oder
+ *      konservativ geschätztem Preis; höchstens wenige pro Lauf; immer als
+ *      early-access, damit die Gesamtwertung der anderen unberührt bleibt.
+ *      Ab dem nächsten Vorhersagelauf tippt das Modell mit.
  *
- * Was der Job bewusst NICHT tut: Modelle anlegen oder aktivieren. Preise
- * sind aus einem Katalog oft nicht ablesbar, und ein automatisch
- * mittippendes Modell kostet Geld und verändert das Leaderboard. Vor allem
- * aber gilt die Regel „ein Eintrag = eine Modellversion": Ob ein neues
- * Modell eine neue Zeile oder den Nachfolger einer alten darstellt, ist eine
- * Entscheidung, keine Ableitung. Der Job schreibt einen Bericht; eintragen
- * bleibt ein bewusster Handgriff.
+ * Was eine Entscheidung bleibt: ein neues Labor (braucht einen Schlüssel),
+ * teure Sonderstufen (pro, cyber) und alles, was die Preis-Obergrenze reißt.
+ * Das wird gemeldet, nicht angelegt.
  */
 import { db, opsConfig, setOpsConfig, unwrap, type ModelRow, type ProviderRow } from '../lib/db.mts';
 import { getSecret } from '../lib/env.mts';
 import { notifyDiscord } from '../lib/notify.mts';
+import { isFrontRunner, labOf, planEnrollments, type Price } from '../lib/enroll.mts';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { ROOT } from '../lib/env.mts';
 
 interface CatalogEntry {
   id: string;
   ownedBy?: string;
+  /** Erstellungszeit in Unix-Sekunden – OpenAI/xAI liefern `created`, Anthropic `created_at` */
+  created?: number;
 }
 
 /**
@@ -86,10 +89,18 @@ async function fetchCatalog(provider: ProviderRow): Promise<CatalogEntry[]> {
   // unserer Modelle aus dem Katalog verschwunden.
   const entries = payload.data.flatMap((raw) => {
     if (typeof raw !== 'object' || raw === null) return [];
-    const row = raw as { id?: unknown; model_id?: unknown; owned_by?: unknown; name?: unknown };
+    const row = raw as {
+      id?: unknown; model_id?: unknown; owned_by?: unknown; created?: unknown; created_at?: unknown;
+    };
     const id = typeof row.id === 'string' ? row.id : typeof row.model_id === 'string' ? row.model_id : null;
     if (!id) return [];
-    return [{ id, ownedBy: typeof row.owned_by === 'string' ? row.owned_by : undefined }];
+    const created =
+      typeof row.created === 'number'
+        ? row.created
+        : typeof row.created_at === 'string' && !Number.isNaN(Date.parse(row.created_at))
+          ? Math.floor(Date.parse(row.created_at) / 1000)
+          : undefined;
+    return [{ id, ownedBy: typeof row.owned_by === 'string' ? row.owned_by : undefined, created }];
   });
 
   if (entries.length === 0) {
@@ -121,14 +132,22 @@ const models = unwrap(await db().from('models').select('*').order('id'), 'models
  * Gemeldet wird jeder Bezeichner genau einmal – wiederholte Meldungen werden
  * nach zwei Tagen nicht mehr gelesen.
  */
-const SIDE_VARIANT = /-(mini|nano|lite|preview|chat|image|audio|tts|embed|coder|search)\b/i;
-
-function isFrontRunner(id: string): boolean {
-  return !SIDE_VARIANT.test(id);
+const pricingFile = JSON.parse(
+  readFileSync(join(ROOT, 'scripts/arena/config/pricing.json'), 'utf8'),
+) as Record<string, unknown>;
+const pricing: Record<string, Price> = {};
+for (const [id, value] of Object.entries(pricingFile)) {
+  if (typeof value === 'object' && value !== null && 'input' in value && 'output' in value) {
+    pricing[id] = value as Price;
+  }
 }
+// Obergrenze fuer den Ausgabepreis, ab der NICHT mehr automatisch angelegt
+// wird. Im Studio aenderbar (ops_config), Standard knapp ueber Fable.
+const maxOutputPriceUsd = await opsConfig<number>('enroll_max_output_price_usd', 60);
 
 const lines: string[] = [];
 const noteworthy: string[] = [];
+const enrolled: { api_model: string; text: string }[] = [];
 let missingCount = 0;
 let newCount = 0;
 
@@ -166,14 +185,63 @@ for (const provider of providers) {
     // Nachfolger für einen bestehenden Teilnehmer bereitliegt.
     const byLab = new Map<string, string[]>();
     for (const entry of fresh) {
-      const lab = entry.id.includes('/') ? entry.id.split('/')[0]! : (entry.ownedBy ?? 'sonstige');
+      // Direktanbieter (OpenAI, Anthropic, xAI direkt) haben kein Praefix –
+      // dort IST der Anbieter das Labor.
+      const lab = labOf(entry.id) || provider.id;
       byLab.set(lab, [...(byLab.get(lab) ?? []), entry.id]);
     }
     for (const [lab, ids] of [...byLab].sort((a, b) => a[0].localeCompare(b[0]))) {
-      const known = ours.some((model) => model.api_model.startsWith(`${lab}/`));
+      const known = ours.some((model) => (labOf(model.api_model) || provider.id) === lab);
       lines.push(`- **${lab}**${known ? ' (Lab ist bei uns vertreten)' : ''}: ${ids.sort().join(', ')}`);
       if (known) noteworthy.push(...ids.filter(isFrontRunner));
     }
+  }
+
+  // Auto-Enrollment: die Regeln stehen in lib/enroll.mts, hier nur die
+  // Ausfuehrung. Vorschlaege werden als early-access angelegt und tippen ab
+  // dem naechsten Vorhersagelauf; alles Uebersprungene steht im Bericht.
+  const plan = planEnrollments({
+    catalog,
+    ours: ours.map((model) => ({
+      id: model.id,
+      api_model: model.api_model,
+      color: model.color,
+      price_input_usd: Number(model.price_input_usd),
+      price_output_usd: Number(model.price_output_usd),
+    })),
+    pricing,
+    maxPerRun: 2,
+    maxOutputPriceUsd,
+  });
+  for (const proposal of plan.proposals) {
+    const { error } = await db().from('models').insert({
+      id: proposal.id,
+      provider_id: provider.id,
+      api_model: proposal.api_model,
+      name: proposal.name,
+      color: proposal.color,
+      version: proposal.api_model,
+      price_input_usd: proposal.price_input_usd,
+      price_output_usd: proposal.price_output_usd,
+      price_search_usd: 0,
+      access: 'early-access',
+      enabled: true,
+      extra: { autoEnrolled: true, priceSource: proposal.priceSource, enrolledAt: new Date().toISOString() },
+    });
+    if (error) {
+      lines.push(`- ANLEGEN FEHLGESCHLAGEN ${proposal.api_model}: ${error.message}`);
+      continue;
+    }
+    enrolled.push({
+      api_model: proposal.api_model,
+      text: `${proposal.name} (${proposal.api_model}, ${proposal.price_input_usd}/${proposal.price_output_usd} $ via ${proposal.priceSource})`,
+    });
+    lines.push(
+      `- ANGELEGT ${proposal.api_model} als "${proposal.name}", early-access, Preis ${proposal.price_input_usd}/${proposal.price_output_usd} (${proposal.priceSource})`,
+    );
+  }
+  if (plan.skipped.length > 0) {
+    lines.push('', '### Nicht angelegt', ...plan.skipped.map((reason) => `- ${reason}`));
   }
 
   lines.push('');
@@ -202,8 +270,16 @@ if (missingCount > 0) {
 // Neues Modell bei einem Labor, das wir messen: Das ist die Gelegenheit, früh
 // dabei zu sein. Nur beim ersten Auftauchen melden – danach steht es im
 // Bericht und muss nicht täglich wiederholt werden.
+if (enrolled.length > 0) {
+  await notifyDiscord(
+    `Automatisch angelegt und ab dem naechsten Lauf dabei: ${enrolled.map((e) => e.text).join('; ')}. ` +
+      `Start als early-access; eine erste Zahl gibt es nach den ersten aufgeloesten Ereignissen.`,
+  );
+}
+
 const alreadySeen = await opsConfig<string[]>('catalog_announced', []);
-const unseen = noteworthy.filter((id) => !alreadySeen.includes(id)).sort();
+const enrolledIds = new Set(enrolled.map((e) => e.api_model));
+const unseen = noteworthy.filter((id) => !alreadySeen.includes(id) && !enrolledIds.has(id)).sort();
 
 if (unseen.length > 0) {
   const list = unseen.slice(0, 8).join(', ');
@@ -212,5 +288,5 @@ if (unseen.length > 0) {
     `Neu im Katalog bei einem Labor, das wir messen: ${list}${rest}. ` +
       `Wer früh benchmarkt, misst mit der Aufmerksamkeit – Eintragen bleibt eine bewusste Entscheidung.`,
   );
-  await setOpsConfig('catalog_announced', [...alreadySeen, ...unseen]);
+  await setOpsConfig('catalog_announced', [...alreadySeen, ...unseen, ...enrolledIds]);
 }
