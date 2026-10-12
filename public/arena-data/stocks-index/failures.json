@@ -1,0 +1,23 @@
+{
+  "category": "stocks-index",
+  "failures": {
+    "yf-gdaxi-2026-10-16": {
+      "qwen-3.8": {
+        "code": "api-error",
+        "createdAt": "2026-10-10T14:45:26.158Z"
+      }
+    },
+    "yf-gspc-2026-10-16": {
+      "qwen-3.8": {
+        "code": "api-error",
+        "createdAt": "2026-10-10T14:43:02.255Z"
+      }
+    },
+    "yf-ndx-2026-10-16": {
+      "qwen-3.8": {
+        "code": "api-error",
+        "createdAt": "2026-10-10T14:47:14.994Z"
+      }
+    }
+  }
+}

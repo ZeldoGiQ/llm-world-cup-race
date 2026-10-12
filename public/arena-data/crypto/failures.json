@@ -1,0 +1,17 @@
+{
+  "category": "crypto",
+  "failures": {
+    "cg-btc-2026-10-12": {
+      "qwen-3.8": {
+        "code": "api-error",
+        "createdAt": "2026-10-10T14:48:40.703Z"
+      }
+    },
+    "cg-eth-2026-10-12": {
+      "qwen-3.8": {
+        "code": "api-error",
+        "createdAt": "2026-10-10T14:50:31.369Z"
+      }
+    }
+  }
+}
