@@ -66,9 +66,16 @@ export interface EnrollmentPlan {
   skipped: string[];
 }
 
-/** Erkennbare Spar-, Sonder- und Hochpreis-Varianten: nie automatisch. */
+/**
+ * Erkennbare Spar-, Mittel-, Sonder- und Hochpreis-Varianten: nie automatisch.
+ *
+ * Die Labore nennen ihre Stufen verschieden: OpenAI mini/nano/luna/terra,
+ * Anthropic haiku/sonnet, Google flash. Die vordere Reihe ist jeweils nur
+ * die oberste Stufe. Der erste Live-Lauf hat genau das gelehrt – er legte
+ * Anthropics Haiku und Sonnet 5.5 an und schob Opus 5.5 aufs Tageslimit.
+ */
 export const SIDE_VARIANT =
-  /-(mini|nano|lite|preview|chat|image|audio|tts|transcribe|realtime|embed(ding)?s?|moderation|coder|codex|search|pro|cyber|build|imagine|vision|instruct)\b/i;
+  /-(mini|nano|lite|luna|terra|haiku|sonnet|flash|preview|chat|image|audio|tts|transcribe|realtime|embed(ding)?s?|moderation|coder|codex|search|pro|cyber|build|imagine|vision|instruct)\b/i;
 
 const SNAPSHOT = /-(\d{4}-\d{2}-\d{2}|\d{8}|\d{4})$/;
 

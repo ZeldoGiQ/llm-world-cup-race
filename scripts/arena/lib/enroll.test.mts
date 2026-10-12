@@ -27,6 +27,13 @@ describe('isFrontRunner', () => {
     for (const id of ['gpt-6-luna-mini', 'gpt-5.5-pro', 'gpt-5.6-cyber', 'gpt-realtime', 'text-embedding-4', 'gpt-6-astra-2026-10-01', 'grok-imagine-video']) {
       expect(isFrontRunner(id), id).toBe(false);
     }
+    // Mittel- und Sparstufen mit Labor-eigenen Namen: Regression aus dem
+    // ersten Live-Lauf, der Haiku und Sonnet 5.5 anlegte statt Opus 5.5.
+    for (const id of ['claude-haiku-5-5', 'claude-sonnet-5-5', 'gpt-5.6-luna', 'gpt-5.6-terra', 'gemini-3.6-flash']) {
+      expect(isFrontRunner(id), id).toBe(false);
+    }
+    expect(isFrontRunner('claude-opus-5-5')).toBe(true);
+    expect(isFrontRunner('claude-fable-5-1')).toBe(true);
   });
 });
 
