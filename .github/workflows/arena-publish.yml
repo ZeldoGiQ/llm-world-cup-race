@@ -82,11 +82,11 @@ jobs:
       # (Vite-Globs), deshalb der Build hier - nach dem Push, damit der
       # Lock-Beweis nicht auf den Build wartet.
       - name: Seite bauen (Share-Karten)
-        if: steps.commit.outputs.changed == 'true'
+        if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         run: npm run build
 
       - name: Community-Discord
-        if: steps.commit.outputs.changed == 'true'
+        if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         continue-on-error: true
         run: node --experimental-strip-types scripts/arena/jobs/community.mts
         env:

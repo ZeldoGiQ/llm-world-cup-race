@@ -48,8 +48,20 @@ export interface CategoryDescriptor {
   predictionType: PredictionTypeId;
   /** Metrik-IDs = Tabellenspalten in Anzeigereihenfolge */
   metricIds: string[];
-  /** Metrik, nach der gerankt wird (muss in metricIds stehen) */
+  /**
+   * Metrik, nach der gerankt wird – zugleich die Alltagszahl der Kategorie
+   * (src/arena/lib/plain): die eine Zahl, die Tabelle, Karte und Beitrag
+   * vorn zeigen. Muss das erste Element von metricIds sein.
+   */
   primaryMetric: string;
+  /**
+   * Alltagsname der Referenz, gegen die die Alltagszahl verglichen wird:
+   * „Immer Heimsieg", „Kurs bleibt gleich". Ohne diesen Vergleichswert sähe
+   * „58 % richtig" gut aus, obwohl eine stumpfe Regel fast dasselbe schafft.
+   * Fehlt er, fällt die Anzeige auf den Namen der Referenzregel bzw. des
+   * Referenz-Teilnehmers zurück (Test-Fixtures, Altbestand).
+   */
+  plainReference?: Localized<string>;
   /** Modell-ID des Referenz-Teilnehmers für den Skill-Score */
   baselineModelId?: string;
   /** Erläuterung der Baseline für die Methodik-Seite */

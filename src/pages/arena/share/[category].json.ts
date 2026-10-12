@@ -2,9 +2,10 @@
  * Die Zahlen der Share-Karte als JSON: /arena/share/<kategorie>.json
  *
  * Dieselbe Rangliste wie im Bild, nur maschinenlesbar. Damit kann alles,
- * was außerhalb des Builds läuft, die echten Werte übernehmen, statt sie
- * abzutippen oder – schlimmer – ein Modell raten zu lassen. Der
- * Prompt-Generator (scripts/arena/social-prompts.mts) liest genau das.
+ * was außerhalb des Builds läuft, die echten Werte und Sätze übernehmen,
+ * statt sie abzutippen oder – schlimmer – ein Modell raten zu lassen. Der
+ * Community-Discord (scripts/arena/jobs/community.mts) und der
+ * Prompt-Generator (scripts/arena/social-prompts.mts) lesen genau das.
  *
  * Das Logo-Markup bleibt draußen: Es gehört ins Bild, nicht in die Daten.
  */
@@ -24,13 +25,19 @@ export const GET: APIRoute = ({ params }) => {
   const payload = {
     id: card.id,
     title: card.title,
-    subtitle: card.subtitle,
-    footnote: card.footnote,
+    /** Die Alltagszahl, z. B. "Right outcome" */
+    label: card.subtitle,
+    headline: card.headline,
+    clear: card.clear,
+    closeCall: card.closeCall,
+    reference: card.reference ? { label: card.reference.label, formatted: card.reference.formatted } : null,
     resolvedEvents: card.resolvedEvents,
-    rows: card.rows.map(({ name, color, score, ciLow, ciHigh }) => ({
+    footnote: card.footnote,
+    rows: card.rows.map(({ name, color, value, formatted, ciLow, ciHigh }) => ({
       name,
       color,
-      score,
+      value,
+      formatted,
       ciLow,
       ciHigh,
     })),

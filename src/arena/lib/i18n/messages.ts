@@ -19,9 +19,9 @@ const MESSAGES = {
   'nav.brand': { en: 'FutureBench', de: 'FutureBench', es: 'FutureBench' },
   'home.next.pause': { en: 'Pause', de: 'Pause', es: 'Pausa' },
   'meta.ogImageAlt': {
-    en: 'Leaderboard: prediction scores of the leading AI models, with 90% confidence intervals.',
-    de: 'Leaderboard: Prediction Scores der führenden KI-Modelle, mit 90-%-Konfidenzintervallen.',
-    es: 'Clasificación: prediction scores de los principales modelos de IA, con intervalos de confianza del 90 %.',
+    en: 'Leaderboard: how often the leading AI models got it right, with every prediction published before the event.',
+    de: 'Leaderboard: wie oft die führenden KI-Modelle richtig lagen, jeder Tipp vor dem Ereignis veröffentlicht.',
+    es: 'Clasificación: con qué frecuencia acertaron los principales modelos de IA, con cada predicción publicada antes del evento.',
   },
   'nav.theme': { en: 'Color scheme', de: 'Darstellung', es: 'Apariencia' },
   'nav.themeLight': { en: 'Light', de: 'Tageslicht', es: 'Claro' },
@@ -1297,6 +1297,41 @@ const MESSAGES = {
     en: 'How FutureBench scores: metrics, baselines, proof of prior submission and the limits of interpretation.',
     de: 'Wie FutureBench wertet: Metriken, Baselines, Nachweis der vorherigen Abgabe und Grenzen der Aussagekraft.',
     es: 'Cómo evalúa FutureBench: métricas, líneas base, prueba de envío previo y límites de la interpretación.',
+  },
+
+  /* --- Alltagszahl (lib/plain): die Sätze, die jeder ohne Vorwissen versteht --- */
+  'plain.reference': { en: '{reference}: {value}', de: '{reference}: {value}', es: '{reference}: {value}' },
+  'plain.referenceTitle': {
+    en: 'What a naive rule gets without any model: the bar to beat.',
+    de: 'Was eine stumpfe Regel ganz ohne Modell schafft: die Latte, die es zu schlagen gilt.',
+    es: 'Lo que consigue una regla simple sin ningún modelo: el listón a superar.',
+  },
+  'plain.closeCall': {
+    en: 'Places 1 and 2 are close enough that the order may still flip.',
+    de: 'Platz 1 und 2 liegen so nah beieinander, dass die Reihenfolge noch kippen kann.',
+    es: 'Los puestos 1 y 2 están tan ajustados que el orden aún puede cambiar.',
+  },
+  'plain.promise': {
+    en: 'Every prediction was published before the event. The models had no internet access.',
+    de: 'Jeder Tipp wurde veröffentlicht, bevor das Ereignis stattfand. Die Modelle hatten keinen Internetzugang.',
+    es: 'Cada predicción se publicó antes del evento. Los modelos no tenían acceso a internet.',
+  },
+  'plain.overallLabel': { en: 'Beats the reference', de: 'Schlägt die Referenz', es: 'Supera la referencia' },
+  'plain.overallValue': { en: '{beats} of {counted}', de: '{beats} von {counted}', es: '{beats} de {counted}' },
+  'plain.overallHeadline': {
+    en: '{model} beats the simple reference in {beats} of {counted} categories',
+    de: '{model} schlägt die einfache Referenz in {beats} von {counted} Kategorien',
+    es: '{model} supera la referencia simple en {beats} de {counted} categorías',
+  },
+  'plain.overallTitle': {
+    en: 'Categories in which the model was better than the naive reference (loss ratio below 1). The categories measure in different units, so there is no single percentage.',
+    de: 'Kategorien, in denen das Modell besser war als die stumpfe Referenz (Verlust-Quotient unter 1). Die Kategorien messen in verschiedenen Einheiten, deshalb gibt es keine eine Prozentzahl.',
+    es: 'Categorías en las que el modelo fue mejor que la referencia simple (cociente de pérdida inferior a 1). Las categorías miden en unidades distintas, por eso no hay un único porcentaje.',
+  },
+  'plain.shareText': {
+    en: '{headline}. FutureBench, every prediction published before the event.',
+    de: '{headline}. FutureBench, jeder Tipp vor dem Ereignis veröffentlicht.',
+    es: '{headline}. FutureBench, cada predicción publicada antes del evento.',
   },
 } as const satisfies Record<string, Localized<string>>;
 

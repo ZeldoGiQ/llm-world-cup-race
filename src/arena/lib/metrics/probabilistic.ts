@@ -79,9 +79,9 @@ export const accuracyAtHalf: Metric = {
   id: 'accuracy-50',
   label: { en: 'Hit rate', de: 'Trefferquote', es: 'Acierto' },
   description: {
-    en: 'Share of correct yes/no calls at a 50 % threshold. Shown for orientation only — the ranking uses Brier and log loss, because hit rate does not penalise overconfidence.',
-    de: 'Anteil richtiger Ja/Nein-Aussagen bei Schwelle 50 %. Nur zur Einordnung – für das Ranking sind Brier und Log-Loss maßgeblich, weil die Trefferquote Overconfidence nicht bestraft.',
-    es: 'Proporción de aciertos en decisiones sí/no con umbral del 50 %. Se muestra solo como referencia: la clasificación usa Brier y pérdida logarítmica, porque el acierto no penaliza el exceso de confianza.',
+    en: 'Share of correct yes/no calls at a 50 % threshold. Easy to read, but it does not penalise overconfidence — Brier and log loss next to it do.',
+    de: 'Anteil richtiger Ja/Nein-Aussagen bei Schwelle 50 %. Leicht lesbar, bestraft Overconfidence aber nicht – das tun Brier und Log-Loss daneben.',
+    es: 'Proporción de aciertos en decisiones sí/no con umbral del 50 %. Fácil de leer, pero no penaliza el exceso de confianza; Brier y la pérdida logarítmica, al lado, sí lo hacen.',
   },
   appliesTo: ['binary'],
   betterDirection: 'higher',

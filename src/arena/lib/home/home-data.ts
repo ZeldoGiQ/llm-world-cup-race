@@ -14,6 +14,7 @@ import { categories, type CategoryDescriptor } from '../categories/index';
 import { formatDate } from '../i18n/format';
 import { pick, type Locale } from '../i18n/locales';
 import { metrics, type Metric } from '../metrics/index';
+import { plainLabel } from '../plain/index';
 import { predictionTypes } from '../prediction-types/index';
 import { references, type ReferenceRule } from '../references/index';
 import {
@@ -262,13 +263,15 @@ function referenceSamples(rule: ReferenceRule, events: ArenaEvent[]): Sample[] |
 }
 
 /**
- * Unsicherheit einer Kategorie – in Score-Einheiten, wo eine Referenz existiert.
+ * Unsicherheit einer Kategorie – in der Einheit der Alltagszahl.
  *
- * Der Bootstrap läuft bevorzugt über die Prediction-Score-Metrik, damit
- * Intervalle und Whisker in derselben Einheit stehen wie die Hero-Zahl. Ohne
- * Referenz (kein Quotient bildbar) fällt er auf die Ranking-Metrik der
- * Kategorie zurück – die Rangaussagen (P(#1), Intervalle) sind in beiden
- * Fällen identisch, weil Score und Verlust dieselbe Ordnung tragen.
+ * Der Bootstrap läuft über die Ranking-Metrik der Kategorie (= Alltagszahl,
+ * siehe lib/plain), damit Intervalle, Whisker und P(#1) in derselben Einheit
+ * und derselben Ordnung stehen wie die Zahl, die vorn gezeigt wird. Früher
+ * lief er über den Prediction Score; seit Fußball nach Tendenz statt nach
+ * Punkten sortiert, tragen Score und Ranking-Metrik NICHT mehr dieselbe
+ * Ordnung – ein P(#1) in Score-Ordnung neben einer Tendenz-Tabelle wäre
+ * eine Zahl unter falscher Überschrift.
  *
  * Exportiert, weil auch der Share-Karten-Endpunkt sie je Kategorie braucht.
  */
@@ -311,9 +314,10 @@ export function uncertaintyFor(entry: CategoryHome): CategoryUncertainty | null 
     if (samples.length === commonEvents.length) baseline = samples;
   }
 
-  const scoreMetric = metrics.find('prediction-score');
-  const useScore = Boolean(baseline && baseline.length === commonEvents.length && scoreMetric);
-  const metric = useScore ? scoreMetric! : (entry.primaryMetric ?? scoreMetric!);
+  const metric = entry.primaryMetric ?? metrics.get('prediction-score');
+  // Nur Metriken mit Referenzbedarf (Score, Skill) bekommen die Referenz;
+  // Tendenz, MAPE und Trefferquote rechnen ohne.
+  const useScore = Boolean(metric.requiresBaseline && baseline && baseline.length === commonEvents.length);
 
   const result = bootstrapCategory({
     samplesByModel: byModel,
@@ -484,11 +488,8 @@ export function loadHomeData(locale: Locale, now: Date = new Date()): HomeData {
             : 'armed';
 
     const leaderRow = standings?.rows.find((row) => row.rank === 1);
-    // Kachel-Anzeige in der Leitwährung, wenn die Kategorie einen Score trägt.
-    const leaderCell =
-      leaderRow?.cells.find(
-        (cell) => cell.metricId === 'prediction-score' && cell.value !== null,
-      ) ?? leaderRow?.cells.find((cell) => cell.metricId === descriptor.primaryMetric);
+    // Kachel-Anzeige in der Alltagszahl der Kategorie.
+    const leaderCell = leaderRow?.cells.find((cell) => cell.metricId === descriptor.primaryMetric);
 
     list.push({
       id: descriptor.id,
@@ -537,21 +538,16 @@ export function loadHomeData(locale: Locale, now: Date = new Date()): HomeData {
   /* --- Unsicherheit der Heldenkategorie --- */
   const uncertainty: CategoryUncertainty | null = featured ? uncertaintyFor(featured) : null;
 
-  /* --- Antwortzeile: spricht in der Leitwährung, dem Prediction Score --- */
+  /* --- Antwortzeile: spricht in der Alltagszahl der Heldenkategorie --- */
   let answer: HomeAnswer = { variant: 'coldStart' };
   if (featured?.standings && featured.primaryMetric) {
     const ranked = featured.standings.rows.filter((row) => row.rank > 0);
     const first = ranked[0];
     const second = ranked[1];
-    const scoreMetric = metrics.find('prediction-score');
-    // Score-Zelle bevorzugen; ohne Referenz fällt die Zeile auf die
-    // Ranking-Metrik der Kategorie zurück.
     const heroCellOf = (row: typeof first) =>
-      row?.cells.find((cell) => cell.metricId === 'prediction-score' && cell.value !== null) ??
       row?.cells.find((cell) => cell.metricId === featured.descriptor.primaryMetric);
     const firstCell = heroCellOf(first);
-    const usesScore = firstCell?.metricId === 'prediction-score' && scoreMetric !== undefined;
-    const heroMetric = usesScore ? scoreMetric! : featured.primaryMetric;
+    const heroMetric = featured.primaryMetric;
     const pFirst = first ? (uncertainty?.probabilityFirst[first.model.id] ?? 0) : 0;
 
     if (first && second) {
@@ -565,7 +561,7 @@ export function loadHomeData(locale: Locale, now: Date = new Date()): HomeData {
         // Ziehungen vorn liegt. Alles darunter ist eine Führung, kein Sieg.
         variant: pFirst >= 0.9 ? 'clear' : 'tied',
         category: featured,
-        metricLabel: pick(heroMetric.label, locale),
+        metricLabel: plainLabel(heroMetric, locale),
         leader: {
           model: first.model,
           formatted: firstCell?.formatted ?? '—',

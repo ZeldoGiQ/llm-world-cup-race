@@ -44,8 +44,11 @@ export const elections: CategoryDescriptor = {
   },
   accent: '#a78bfa',
   predictionType: 'binary',
-  metricIds: ['brier', 'log-loss', 'accuracy-50', 'skill-score'],
-  primaryMetric: 'brier',
+  // Alltagszahl: Treffer. Brier und Log-Loss bleiben als Spalten für die,
+  // die Overconfidence bestraft sehen wollen.
+  metricIds: ['accuracy-50', 'brier', 'log-loss', 'skill-score'],
+  primaryMetric: 'accuracy-50',
+  plainReference: { en: 'Latest poll', de: 'Letzte Umfrage', es: 'Última encuesta' },
   baselineModelId: 'baseline-poll',
   baselineNote: {
     en: 'Latest poll: the most recent published survey before the event, carried over unchanged as a probability.',

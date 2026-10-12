@@ -50,8 +50,11 @@ export const footballWorldCup: CategoryDescriptor = {
   // Referenzregel, deren Nachträglichkeit auf der Seite offengelegt wird.
   referenceRuleId: 'constant-1-0',
   predictionType: 'scoreline',
-  metricIds: ['prediction-score', 'kicktipp-points', 'points-per-event', 'exact-acc', 'tendency-acc'],
+  // Die WM bleibt bei Punkten: Ihr Endstand ist öffentlich verifiziert
+  // (llm-world-cup-race.vercel.app), eine andere Sortierung widerspräche ihm.
+  metricIds: ['kicktipp-points', 'tendency-acc', 'exact-acc', 'points-per-event', 'prediction-score'],
   primaryMetric: 'kicktipp-points',
+  plainReference: { en: 'Always 1–0', de: 'Immer 1:0', es: 'Siempre 1-0' },
 
   eventTitle(event, locale) {
     const { home, away } = meta(event);

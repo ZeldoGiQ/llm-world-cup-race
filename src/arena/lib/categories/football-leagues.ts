@@ -44,8 +44,10 @@ export const footballLeagues: CategoryDescriptor = {
   },
   accent: '#4ade80',
   predictionType: 'scoreline',
-  metricIds: ['prediction-score', 'points-per-event', 'exact-acc', 'tendency-acc', 'kicktipp-points'],
-  primaryMetric: 'points-per-event',
+  // Alltagszahl vorn: Tendenz richtig. Punkte bleiben als Spalte.
+  metricIds: ['tendency-acc', 'exact-acc', 'points-per-event', 'kicktipp-points', 'prediction-score'],
+  primaryMetric: 'tendency-acc',
+  plainReference: { en: 'Always home win', de: 'Immer Heimsieg', es: 'Siempre victoria local' },
 
   eventTitle(event, locale) {
     const { home, away } = meta(event);

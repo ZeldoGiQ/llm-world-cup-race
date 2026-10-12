@@ -5,7 +5,7 @@
  * Share-Karten (Bild + JSON) entstehen nur im Site-Build, weil ihre Daten
  * über Vite-Globs geladen werden. Der Job liest dist/arena/share/<id>.json
  * und hängt dist/arena/share/<id>.png an – dieselbe Karte, die auch die
- * Seite ausliefert.
+ * Seite ausliefert, mit denselben Sätzen.
  *
  * Was hier NICHT landet: Betriebsmeldungen. Dafür ist notifyOps da.
  *
@@ -35,14 +35,23 @@ async function loadCards(): Promise<CommunityCard[]> {
     const raw = JSON.parse(await readFile(join(SHARE_DIR, file), 'utf8')) as {
       id: string;
       title: string;
-      footnote: string;
-      resolvedEvents?: number;
-      rows: CommunityCard['rows'];
+      label: string;
+      headline: string | null;
+      closeCall: boolean;
+      reference: { label: string; formatted: string } | null;
+      resolvedEvents: number;
+      rows: { name: string; formatted: string }[];
     };
-    // Ältere Builds haben resolvedEvents noch nicht; die Fußnote beginnt
-    // immer mit der Zahl.
-    const resolvedEvents = raw.resolvedEvents ?? Number(/^(\d+) /.exec(raw.footnote)?.[1] ?? 0);
-    cards.push({ id: raw.id, title: raw.title, resolvedEvents, rows: raw.rows });
+    cards.push({
+      id: raw.id,
+      title: raw.title,
+      label: raw.label,
+      headline: raw.headline ?? null,
+      closeCall: raw.closeCall === true,
+      reference: raw.reference ?? null,
+      resolvedEvents: raw.resolvedEvents,
+      rows: raw.rows.map((row) => ({ name: row.name, formatted: row.formatted })),
+    });
   }
   // Gesamtwertung zuerst – sie ist der Beitrag, der am weitesten trägt.
   return cards.sort((a, b) =>

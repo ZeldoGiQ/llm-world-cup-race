@@ -4,7 +4,13 @@
  * Ein Bildmodell erfindet Zahlen und verhunzt Balkenlängen; für ein Benchmark
  * ist das genau die falsche Grafik. Diese Karte entsteht deshalb zur Bauzeit
  * aus denselben Werten wie das Leaderboard: Balkenlängen exakt proportional
- * zum Prediction Score, Whisker exakt auf den Bootstrap-Intervallen.
+ * zur Alltagszahl der Kategorie (lib/plain), Whisker exakt auf den
+ * Bootstrap-Intervallen, die Referenz als gestrichelte Linie genau dort, wo
+ * die stumpfe Regel landet.
+ *
+ * Die Karte zeigt die ALLTAGSZAHL, nicht den Prediction Score: „58 % der
+ * Spiele richtig" versteht jeder, „+7.4" niemand ohne die Formel. Der Score
+ * bleibt der Methodik-Seite und der letzten Tabellenspalte vorbehalten.
  *
  * Reiner String-Builder ohne Abhängigkeiten und ohne DOM – dadurch testbar
  * und in einem statischen Astro-Endpunkt nutzbar.
@@ -24,9 +30,11 @@
 export interface ShareRow {
   name: string;
   color: string;
-  /** Prediction Score (SCORE_V1) */
-  score: number;
-  /** 90-%-Intervall in Score-Einheiten; null = keine Unsicherheitsdaten */
+  /** Alltagszahl in ihrer Einheit (Anteil 0–1, Prozentfehler, Punkte) */
+  value: number;
+  /** Dieselbe Zahl, fertig formatiert: "58.2 %", "1.8 %", "190" */
+  formatted: string;
+  /** 90-%-Intervall in derselben Einheit; null = keine Unsicherheitsdaten */
   ciLow: number | null;
   ciHigh: number | null;
   /**
@@ -37,14 +45,27 @@ export interface ShareRow {
   logoMarkup?: string | null;
 }
 
+export interface ShareReference {
+  /** Alltagsname, z. B. "Always home win" */
+  label: string;
+  value: number;
+  formatted: string;
+}
+
 export interface ShareCardInput {
-  /** z. B. "FIFA World Cup 2026" */
+  /** z. B. "Football leagues" */
   title: string;
-  /** z. B. "Prediction Score · Knowledge Cap · SCORE_V1" */
+  /** Eyebrow: die Alltagszahl, z. B. "Right outcome" */
   subtitle: string;
   rows: ShareRow[];
-  /** z. B. "104 events · committed before each event · 90% CI" */
+  /** z. B. "201 events · every prediction published before the event · no internet access" */
   footnote: string;
+  /** Die Kernaussage in einem Satz; null = niemand liegt eindeutig vorn */
+  headline: string | null;
+  /** true = das führende Modell hält Platz eins nachweislich (≥ 90 % der Neuziehungen); nur dann Rot */
+  clear: boolean;
+  /** Die stumpfe Regel als Bezugslinie; null = keine Referenz verfügbar */
+  reference: ShareReference | null;
 }
 
 /**
@@ -83,12 +104,13 @@ const BAR = '#6e675b';
 /* — Schriftgrade. Untergrenze ist Lesbarkeit in der Zeitleiste, nicht
      Eleganz: Alles unter rund 3 % der Bildbreite ist dort Dekoration. — */
 const TYPE = {
-  eyebrow: 26,
-  title: 58,
-  headline: 34,
+  eyebrow: 22,
+  title: 50,
+  headline: 30,
   name: 34,
-  value: 46,
-  footnote: 26,
+  value: 44,
+  footnote: 22,
+  reference: 22,
 };
 
 const MONO = "'JetBrains Mono',ui-monospace,monospace";
@@ -119,48 +141,6 @@ function estimateWidth(text: string, fontSize: number, perChar = 0.52): number {
   return text.length * fontSize * perChar;
 }
 
-/**
- * Die Kernaussage in einem Satz – der einzige Teil der Karte, den jemand
- * beim Vorbeiscrollen wirklich liest.
- *
- * Sie muss ehrlich sein, sonst widerspricht die Karte sich selbst: Ein roter
- * Balken, der „X gewinnt" schreit, während die Fußnote „Intervalle
- * überlappen" flüstert, ist bei einem Benchmark, dessen Verkaufsargument
- * Korrektheit ist, der gefährlichste Fehler überhaupt. Deshalb entscheidet
- * die Trennschärfe der Intervalle über die Formulierung – und darüber, ob
- * überhaupt jemand rot markiert wird.
- */
-export interface ShareVerdict {
-  text: string;
-  /** true = ein Modell führt nachweislich; nur dann gibt es Rot */
-  clear: boolean;
-}
-
-export function verdictFor(rows: ShareRow[]): ShareVerdict | null {
-  if (rows.length === 0) return null;
-  const [lead, second] = rows;
-  if (!second) return { text: `${lead.name} at ${lead.score.toFixed(1)}`, clear: true };
-
-  // Ohne Intervalle wird kein Vorsprung behauptet. Ein höherer Wert allein
-  // belegt keine Überlegenheit – und eine Karte, die ohne Unsicherheitsdaten
-  // „führt mit 2,1 Punkten" sagt, verspricht mehr, als die Zahlen hergeben.
-  const haveIntervals = lead.ciLow !== null && second.ciHigh !== null;
-  const separated = haveIntervals && lead.ciLow! > second.ciHigh!;
-
-  if (!separated) {
-    return {
-      text: haveIntervals
-        ? `${lead.name} ahead — too close to call`
-        : `${lead.name} ahead`,
-      clear: false,
-    };
-  }
-  return {
-    text: `${lead.name} leads by ${(lead.score - second.score).toFixed(1)} points`,
-    clear: true,
-  };
-}
-
 export function buildShareCardSvg(
   input: ShareCardInput,
   formatId: ShareFormatId = 'og',
@@ -170,39 +150,34 @@ export function buildShareCardSvg(
   const rows = input.rows.slice(0, format.maxRows);
   const margin = Math.round(width * 0.06);
 
-  const verdict = verdictFor(rows);
   // Rot ist dem Spitzenwert vorbehalten – und nur dann, wenn es ihn wirklich
-  // gibt. Bei Gleichstand oder überlappenden Intervallen bleibt die Karte
-  // grau; früher verglich sie Werte statt Positionen und färbte bei
-  // Gleichstand jeden Balken rot.
-  const topIndex = verdict?.clear ? 0 : -1;
+  // gibt. Bei überlappenden Intervallen bleibt die Karte grau: Ein roter
+  // Balken, der „X gewinnt" schreit, während der Text „zu knapp" sagt, ist
+  // bei einem Benchmark, dessen Verkaufsargument Korrektheit ist, der
+  // gefährlichste Fehler überhaupt.
+  const topIndex = input.clear && rows.length > 0 ? 0 : -1;
 
-  /* — Waagerechte Skala. Sie muss die Null enthalten (die Referenzlinie) und
-       Platz nach unten lassen, wenn ein Modell schlechter ist als die
-       Referenz. Genau das ist die interessanteste Geschichte, die dieses
-       Benchmark erzählen kann – sie darf nicht unsichtbar sein. — */
-  const values = rows.flatMap((row) => [row.score, row.ciLow ?? row.score, row.ciHigh ?? row.score]);
-  const rawMin = Math.min(0, ...values);
-  const rawMax = Math.max(10, ...values);
-  const span = rawMax - rawMin || 1;
-  const pad = span * 0.06;
-  const min = rawMin - (rawMin < 0 ? pad : 0);
-  const max = rawMax + pad;
+  /* — Waagerechte Skala von null bis knapp über den größten Wert. Die
+       Referenz muss im Bild sein, sonst fehlt der Vergleich, der die Zahl
+       erst lesbar macht. — */
+  const values = rows.flatMap((row) => [row.value, row.ciLow ?? row.value, row.ciHigh ?? row.value]);
+  if (input.reference) values.push(input.reference.value);
+  const finite = values.filter((value) => Number.isFinite(value));
+  const rawMax = Math.max(1e-9, ...finite);
+  const max = rawMax * 1.06;
 
   const nameWidth = Math.round(width * 0.32);
-  const valueWidth = 140;
+  const valueWidth = 150;
   const barLeft = margin + nameWidth + 20;
   const barRight = width - margin - valueWidth - 20;
-  const xOf = (value: number) =>
-    barLeft + ((value - min) / (max - min)) * (barRight - barLeft);
-  const zeroX = xOf(0);
+  const xOf = (value: number) => barLeft + (Math.max(0, value) / max) * (barRight - barLeft);
 
   /* — Senkrechter Aufbau — */
   const top = safeTop + margin;
   const eyebrowY = top + TYPE.eyebrow;
-  const titleY = eyebrowY + TYPE.title + 10;
-  const headlineY = titleY + TYPE.headline + 14;
-  const ruleY = headlineY + 26;
+  const titleY = eyebrowY + TYPE.title + 6;
+  const headlineY = titleY + TYPE.headline + 10;
+  const ruleY = headlineY + 18;
   // Fußnote und Marke teilen sich eine Zeile, solange sie nebeneinander
   // passen. Im Hochformat tun sie das nicht – dort stapeln sie, statt sich
   // zu überschreiben.
@@ -216,11 +191,17 @@ export function buildShareCardSvg(
   const footnoteY = footerFits ? brandY : brandY - TYPE.footnote - 14;
 
   // Der Zeilenblock wird in der freien Fläche zentriert. Im Hochformat bliebe
-  // er sonst oben kleben und die untere Bildhälfte wäre leer.
-  const areaTop = ruleY + 34;
-  const areaBottom = footnoteY - 46;
+  // er sonst oben kleben und die untere Bildhälfte wäre leer. Über den
+  // Zeilen bleibt Platz für die Beschriftung der Referenzlinie.
+  const areaTop = ruleY + 20 + (input.reference ? TYPE.reference + 10 : 0);
+  const areaBottom = footnoteY - 40;
   const rowHeight = Math.min(140, (areaBottom - areaTop) / Math.max(rows.length, 1));
   const rowsTop = areaTop + Math.max(0, (areaBottom - areaTop - rowHeight * rows.length) / 2);
+  // Schriftgrade dürfen die Zeile nicht sprengen: Im Querformat mit fünf
+  // Zeilen bleiben rund 50 px je Zeile – ein 44-px-Wert passt, ein größerer
+  // würde in die Nachbarzeile ragen und die Zahlen unlesbar übereinanderlegen.
+  const nameSize = Math.min(TYPE.name, Math.round(rowHeight * 0.72));
+  const valueSize = Math.min(TYPE.value, Math.round(rowHeight * 0.9));
 
   const parts: string[] = [
     `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img">`,
@@ -230,9 +211,9 @@ export function buildShareCardSvg(
     `<text x="${margin}" y="${titleY}" font-family="${SERIF}" font-size="${TYPE.title}" font-weight="600" fill="${PAPER}">${escapeXml(input.title)}</text>`,
   ];
 
-  if (verdict) {
+  if (input.headline) {
     parts.push(
-      `<text x="${margin}" y="${headlineY}" font-family="${SERIF}" font-size="${TYPE.headline}" font-weight="600" fill="${verdict.clear ? RED : BRASS}">${escapeXml(verdict.text)}</text>`,
+      `<text x="${margin}" y="${headlineY}" font-family="${SERIF}" font-size="${TYPE.headline}" font-weight="600" fill="${input.clear ? RED : BRASS}">${escapeXml(truncate(input.headline, TYPE.headline, width - 2 * margin - 60))}</text>`,
     );
   }
 
@@ -243,17 +224,27 @@ export function buildShareCardSvg(
       `<g fill="none" stroke="${PAPER}" stroke-width="3.4" stroke-linecap="round">` +
       `<path d="M17 42C8 35 6.5 22 12 10"/><path d="M31 42C40 35 41.5 22 36 10"/></g>` +
       `<circle cx="24" cy="25" r="10" fill="${RED}"/></g>`,
-    // Referenzlinie: die Null, gegen die gemessen wird
-    `<line x1="${zeroX.toFixed(1)}" y1="${rowsTop - 14}" x2="${zeroX.toFixed(1)}" y2="${(rowsTop + rowHeight * rows.length).toFixed(1)}" stroke="${HAIR}" stroke-dasharray="6 6" stroke-width="2"/>`,
   );
+
+  /* — Referenzlinie: wo die stumpfe Regel landet. Beschriftet, damit niemand
+       raten muss, was die Linie bedeutet. Der Text steht links oder rechts
+       der Linie, je nachdem, wo mehr Platz ist. — */
+  if (input.reference) {
+    const refX = xOf(input.reference.value);
+    const label = `${input.reference.label} ${input.reference.formatted}`;
+    const anchorEnd = refX > (barLeft + barRight) / 2;
+    const labelY = rowsTop - 18;
+    parts.push(
+      `<line x1="${refX.toFixed(1)}" y1="${(rowsTop - 10).toFixed(1)}" x2="${refX.toFixed(1)}" y2="${(rowsTop + rowHeight * rows.length).toFixed(1)}" stroke="${HAIR}" stroke-dasharray="6 6" stroke-width="2"/>`,
+      `<text x="${(refX + (anchorEnd ? -10 : 10)).toFixed(1)}" y="${labelY.toFixed(1)}" text-anchor="${anchorEnd ? 'end' : 'start'}" font-family="${SANS}" font-size="${TYPE.reference}" fill="${MUTED}">${escapeXml(label)}</text>`,
+    );
+  }
 
   rows.forEach((row, index) => {
     const centerY = rowsTop + rowHeight * index + rowHeight / 2;
     const isTop = index === topIndex;
     const barHeight = Math.min(38, rowHeight * 0.46);
-    const scoreX = xOf(row.score);
-    const barX = Math.min(zeroX, scoreX);
-    const barW = Math.abs(scoreX - zeroX);
+    const barW = xOf(row.value) - barLeft;
 
     // Logo links, dann Name
     if (row.logoMarkup) {
@@ -267,8 +258,8 @@ export function buildShareCardSvg(
       );
     }
     parts.push(
-      `<text x="${margin + 54}" y="${(centerY + TYPE.name * 0.35).toFixed(1)}" font-family="${SANS}" font-size="${TYPE.name}" font-weight="600" fill="${PAPER}">${escapeXml(truncate(row.name, TYPE.name, nameWidth - 54))}</text>`,
-      `<rect x="${barX.toFixed(1)}" y="${(centerY - barHeight / 2).toFixed(1)}" width="${Math.max(barW, 2).toFixed(1)}" height="${barHeight.toFixed(1)}" rx="2" fill="${isTop ? RED : BAR}"/>`,
+      `<text x="${margin + 54}" y="${(centerY + nameSize * 0.35).toFixed(1)}" font-family="${SANS}" font-size="${nameSize}" font-weight="600" fill="${PAPER}">${escapeXml(truncate(row.name, nameSize, nameWidth - 54))}</text>`,
+      `<rect x="${barLeft.toFixed(1)}" y="${(centerY - barHeight / 2).toFixed(1)}" width="${Math.max(barW, 2).toFixed(1)}" height="${barHeight.toFixed(1)}" rx="2" fill="${isTop ? RED : BAR}"/>`,
     );
 
     if (row.ciLow !== null && row.ciHigh !== null) {
@@ -283,7 +274,7 @@ export function buildShareCardSvg(
     }
 
     parts.push(
-      `<text x="${width - margin}" y="${(centerY + TYPE.value * 0.35).toFixed(1)}" text-anchor="end" font-family="${MONO}" font-size="${TYPE.value}" font-weight="700" fill="${isTop ? RED : PAPER}">${row.score.toFixed(1)}</text>`,
+      `<text x="${width - margin}" y="${(centerY + valueSize * 0.35).toFixed(1)}" text-anchor="end" font-family="${MONO}" font-size="${valueSize}" font-weight="700" fill="${isTop ? RED : PAPER}">${escapeXml(row.formatted)}</text>`,
     );
   });
 

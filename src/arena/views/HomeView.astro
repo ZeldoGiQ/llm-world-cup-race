@@ -19,7 +19,8 @@ import { formatInteger, formatPercent } from '../lib/i18n/format';
 import { arenaPath, arenaUrl, pick, type Locale } from '../lib/i18n/locales';
 import { t, type MessageKey } from '../lib/i18n/messages';
 import { MIN_MODEL_COVERAGE, MIN_MODELS, MIN_RESOLVED } from '../lib/scoring/overall';
-import { SCORE_VERSION, TRACKS } from '../lib/scoring/score';
+import { plainBoard } from '../lib/plain/index';
+import { TRACKS } from '../lib/scoring/score';
 import '../lib/plugins';
 import ArenaLayout from '../layouts/ArenaLayout.astro';
 
@@ -45,17 +46,10 @@ const tickerRun = [...tickerBase, ...tickerBase];
 const { featured, uncertainty, answer, kpi, overall } = data;
 const board = featured?.standings ?? null;
 
-/** Hero-Währung: der Prediction Score; ohne Referenz die Kategorie-Metrik. */
-const scoreColumn = board?.columns.find((column) => column.metricId === 'prediction-score');
-const hasScore =
-  scoreColumn !== undefined &&
-  (board?.rows.some(
-    (row) => row.cells.find((c) => c.metricId === 'prediction-score')?.value !== null,
-  ) ?? false);
-const heroMetricId = hasScore ? 'prediction-score' : (featured?.descriptor.primaryMetric ?? '');
-const heroLabel = hasScore
-  ? (scoreColumn?.label ?? 'Prediction Score')
-  : (board?.columns.find((c) => c.metricId === heroMetricId)?.label ?? '');
+/** Hero-Zahl: die Alltagszahl der Kategorie (= Ranking-Metrik, siehe lib/plain). */
+const plain = featured ? plainBoard(featured, locale, uncertainty) : null;
+const heroMetricId = featured?.descriptor.primaryMetric ?? '';
+const heroLabel = plain?.label ?? '';
 
 const heroCellOf = (row: NonNullable<typeof board>['rows'][number]) =>
   row.cells.find((cell) => cell.metricId === heroMetricId);
@@ -77,16 +71,18 @@ function rankChipClass(rank: number): string {
  * Nullpunkt der Achse = Score 0 = die Referenz; kein abgeschnittener Ursprung.
  */
 const scoredRows = (board?.rows ?? []).filter((row) => row.scored > 0);
-const axisMax = hasScore
-  ? Math.max(
-      1,
-      ...scoredRows.map((row) => {
-        const value = heroCellOf(row)?.value?.value ?? 0;
-        const high = uncertainty?.valueInterval[row.model.id]?.[1] ?? value;
-        return Math.max(value, high);
-      }),
-    ) * 1.08
-  : 1;
+// Die Achse reicht von null bis knapp über den größten Wert – einschließlich
+// der Referenz, damit die Latte immer im Bild ist.
+const axisMax =
+  Math.max(
+    1e-9,
+    plain?.reference?.value ?? 0,
+    ...scoredRows.map((row) => {
+      const value = heroCellOf(row)?.value?.value ?? 0;
+      const high = uncertainty?.valueInterval[row.model.id]?.[1] ?? value;
+      return Math.max(value, high);
+    }),
+  ) * 1.08;
 const pct = (value: number) => `${Math.min(100, Math.max(0, (value / axisMax) * 100)).toFixed(2)}%`;
 
 /** Zweitspalten: höchstens zwei, ohne die Hero-Währung. */
@@ -113,12 +109,8 @@ const tabs = data.live.map((entry) => ({
 /** Teilen: Intent-URLs, keine Skripte. */
 const pageUrl = arenaUrl(locale);
 const shareText =
-  answer.leader && featured
-    ? translate('share.text', {
-        score: answer.leader.formatted,
-        leader: answer.leader.model.name,
-        category: pick(featured.descriptor.label, locale),
-      })
+  plain?.headline && !plain.closeCall
+    ? translate('plain.shareText', { headline: plain.headline })
     : translate('meta.siteDescription');
 const shareLinks = {
   x: `https://x.com/intent/post?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(pageUrl)}`,
@@ -281,6 +273,12 @@ void knowledgeTrack;
               </span>
             )}
           </div>
+          {plain?.headline && (
+            <p class="mt-2 font-display text-[17px] text-ink-100">{plain.headline}</p>
+          )}
+          {plain?.closeCall && (
+            <p class="mt-1 text-[13px] text-ink-400">{translate('plain.closeCall')}</p>
+          )}
           <p class="mt-1 text-[13px] text-ink-300">
             {translate('home.scope.single', {
               resolved: formatInteger(board.resolvedEvents, locale),
@@ -290,7 +288,7 @@ void knowledgeTrack;
             })}
             {' · '}
             <span class="font-mono text-[11px] text-ink-400">
-              {translate('score.scale')} · {SCORE_VERSION}
+              {translate('plain.promise')}
             </span>
           </p>
 
@@ -386,7 +384,7 @@ void knowledgeTrack;
                         <span class="font-mono tabular text-lg font-bold text-signal-300">
                           {hero?.formatted ?? '—'}
                         </span>
-                        {hasScore && value !== null && (
+                        {value !== null && (
                           <span class="relative mt-1 block h-[9px] w-full min-w-[120px]">
                             <span class="absolute inset-x-0 top-[3px] h-[3px] rounded-full bg-ink-800" />
                             <span
@@ -420,7 +418,7 @@ void knowledgeTrack;
                 })}
 
                 {/* Referenzzeile: Score 0 per Definition */}
-                {featured.reference && hasScore && (
+                {plain?.reference && (
                   <tr class="border-t border-ink-700 bg-ink-950/40">
                     <th scope="row" class="px-4 py-3 text-left font-normal">
                       <span class="flex items-center gap-2.5">
@@ -428,17 +426,17 @@ void knowledgeTrack;
                           ø
                         </span>
                         <span class="min-w-0">
-                          <span class="block truncate text-ink-200">{featured.reference.label}</span>
+                          <span class="block truncate text-ink-200" title={translate('plain.referenceTitle')}>{plain.reference.label}</span>
                           <span class="block text-[11px] text-ink-400">
                             {translate('home.board.reference')}
-                            {featured.reference.retroactive
+                            {featured.reference?.retroactive
                               ? ` · ${translate('home.board.retroactive')}`
                               : ''}
                           </span>
                         </span>
                       </span>
                     </th>
-                    <td class="px-4 py-3 text-right font-mono tabular text-ink-300">0.0</td>
+                    <td class="px-4 py-3 text-right font-mono tabular text-ink-300">{plain.reference.formatted}</td>
                     {secondaryColumns.map(() => (
                       <td class="hidden px-4 py-3 sm:table-cell" />
                     ))}

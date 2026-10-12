@@ -33,8 +33,9 @@ export const sportsMixed: CategoryDescriptor = {
   },
   accent: '#d97757',
   predictionType: 'scoreline',
-  metricIds: ['points-per-event', 'exact-acc', 'tendency-acc', 'skill-score'],
-  primaryMetric: 'points-per-event',
+  metricIds: ['tendency-acc', 'exact-acc', 'points-per-event', 'skill-score'],
+  primaryMetric: 'tendency-acc',
+  plainReference: { en: 'Bookmaker favourite', de: 'Buchmacher-Favorit', es: 'Favorito de las casas de apuestas' },
   baselineModelId: 'baseline-market',
   baselineNote: {
     en: 'Bookmaker consensus: the most likely score implied by the odds. Usually right on the outcome, rarely on the exact score.',

@@ -42,8 +42,11 @@ export const stocksIndex: CategoryDescriptor = {
   },
   accent: '#22d3ee',
   predictionType: 'numeric',
-  metricIds: ['prediction-score', 'mae', 'mape', 'rmse', 'skill-score'],
-  primaryMetric: 'mae',
+  // Alltagszahl in Prozent (MAPE) statt Indexpunkten (MAE): "1,8 % daneben"
+  // versteht jeder, "83 Punkte daneben" nur, wer den Index kennt.
+  metricIds: ['mape', 'mae', 'rmse', 'skill-score', 'prediction-score'],
+  primaryMetric: 'mape',
+  plainReference: { en: 'Index unchanged', de: 'Index bleibt gleich', es: 'Índice sin cambios' },
   baselineModelId: 'baseline-randomwalk',
   baselineNote: {
     en: 'Random walk: forecasts the last known closing price unchanged. The classic yardstick for financial forecasts.',

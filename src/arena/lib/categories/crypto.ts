@@ -37,8 +37,9 @@ export const crypto: CategoryDescriptor = {
   },
   accent: '#f7931a',
   predictionType: 'numeric',
-  metricIds: ['prediction-score', 'mae', 'mape', 'rmse', 'skill-score'],
+  metricIds: ['mape', 'mae', 'rmse', 'skill-score', 'prediction-score'],
   primaryMetric: 'mape',
+  plainReference: { en: 'Price unchanged', de: 'Kurs bleibt gleich', es: 'Precio sin cambios' },
   baselineModelId: 'baseline-randomwalk',
   baselineNote: {
     en: 'Random walk: forecasts the last known closing price unchanged. Hard to beat for crypto, where volatility is high and predictability is low.',

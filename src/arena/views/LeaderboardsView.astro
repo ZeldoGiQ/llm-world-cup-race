@@ -7,6 +7,10 @@
  * ist Teilen – deshalb hat jedes Board seine eigene Zeile mit Links zu X,
  * WhatsApp, LinkedIn und dem fertigen Bild.
  *
+ * Vorn steht die Alltagszahl (lib/plain): „58 % der Spiele richtig", mit
+ * dem Vergleichswert der stumpfen Regel darunter. Der Prediction Score
+ * bleibt als letzte Spalte für die, die ihn suchen.
+ *
  * Kein JavaScript. Die Bilder sind zur Bauzeit gerendert, die Teilen-Links
  * sind Intent-URLs.
  */
@@ -14,11 +18,11 @@ import { avatarTextColor, modelInitials } from '../../lib/format';
 import { loadHomeData, uncertaintyFor } from '../lib/home/home-data';
 import { formatInteger, formatPercent } from '../lib/i18n/format';
 import { arenaPath, arenaUrl, pick, type Locale } from '../lib/i18n/locales';
-import { t, type MessageKey } from '../lib/i18n/messages';
+import { t } from '../lib/i18n/messages';
 import { modelLogo } from '../lib/model-logos';
+import { overallPlain, plainBoard } from '../lib/plain/index';
 import { providerMark } from '../lib/provider-marks';
 import { MIN_MODEL_COVERAGE, MIN_MODELS, MIN_RESOLVED } from '../lib/scoring/overall';
-import { SCORE_VERSION } from '../lib/scoring/score';
 import '../lib/plugins';
 import ArenaLayout from '../layouts/ArenaLayout.astro';
 
@@ -42,9 +46,10 @@ interface BoardRow {
   name: string;
   color: string;
   provider: string;
+  /** Die Alltagszahl, fertig formatiert */
+  value: string;
+  /** Der Prediction Score – letzte Spalte, für Labore */
   score: number | null;
-  interval: [number, number] | null;
-  probabilityFirst: number | null;
   detail: string;
   /**
    * Zu wenige Ereignisse fuer einen Rang – aber mit einer echten Zahl.
@@ -59,6 +64,12 @@ interface Board {
   title: string;
   subtitle: string;
   href: string | null;
+  /** Spaltenkopf der Alltagszahl */
+  valueLabel: string;
+  valueTitle: string | null;
+  headline: string | null;
+  closeCall: boolean;
+  reference: { label: string; formatted: string } | null;
   rows: BoardRow[];
   /** Bild und Rohdaten; null, wenn es für dieses Board keine Karte gibt */
   cardSlug: string | null;
@@ -69,6 +80,9 @@ const boards: Board[] = [];
 
 /* — Gesamtwertung, sofern sie steht — */
 if (overall.status === 'ready') {
+  const ranked = overall.rows.filter((row) => row.rank > 0);
+  const first = ranked[0];
+  const firstPlain = first ? overallPlain(first) : null;
   boards.push({
     id: 'overall',
     title: translate('leaderboards.overallTitle'),
@@ -76,22 +90,38 @@ if (overall.status === 'ready') {
       categories: formatInteger(overall.qualifiedCount, locale),
     }),
     href: null,
-    rows: overall.rows
-      .filter((row) => row.rank > 0)
-      .map((row) => ({
+    valueLabel: translate('plain.overallLabel'),
+    valueTitle: translate('plain.overallTitle'),
+    headline:
+      first && firstPlain
+        ? translate('plain.overallHeadline', {
+            model: first.model.name,
+            beats: formatInteger(firstPlain.beats, locale),
+            counted: formatInteger(firstPlain.counted, locale),
+          })
+        : null,
+    // Kein Bootstrap über Kategorien hinweg – also weder „klar" noch „knapp".
+    closeCall: false,
+    reference: null,
+    rows: ranked.map((row) => {
+      const plain = overallPlain(row);
+      return {
         rank: row.rank,
         modelId: row.model.id,
         name: row.model.name,
         color: row.model.color,
         provider: row.model.provider,
+        value: translate('plain.overallValue', {
+          beats: formatInteger(plain.beats, locale),
+          counted: formatInteger(plain.counted, locale),
+        }),
         score: row.predictionScore,
-        interval: null,
-        probabilityFirst: null,
         detail: translate('leaderboards.categoriesCounted', {
           count: formatInteger(row.categoriesCounted, locale),
         }),
         provisional: false,
-      })),
+      };
+    }),
     cardSlug: 'overall',
     dataHref: null,
   });
@@ -100,37 +130,27 @@ if (overall.status === 'ready') {
 /* — Je echte Kategorie ein Board — */
 for (const entry of data.live) {
   if (!entry.standings || entry.scoredPairs === 0) continue;
-  const uncertainty = uncertaintyFor(entry);
-  // Das Wert-Intervall darf nur unter der Score-Überschrift stehen, wenn es
-  // auch in Score-Einheiten gerechnet ist. Fehlt einer Kategorie die
-  // Referenz, weicht der Bootstrap auf die Kategorie-Metrik aus – dann
-  // stünden dort Prozentwerte, bei „kleiner ist besser" sogar mit
-  // umgedrehter Richtung. Die Rang-Aussagen bleiben davon unberührt.
-  const scoreUncertainty = uncertainty?.metricId === 'prediction-score' ? uncertainty : null;
-  // Vorlaeufige Modelle bleiben drin. Sie tragen Rang 0, und ein Filter auf
-  // rank > 0 hat sie bisher vollstaendig verschwinden lassen – ein neu
-  // angebundenes Modell war damit unsichtbar, egal wie viele Ereignisse es
-  // schon getippt hatte. Die Sortierung aus computeStandings stellt die
-  // gewerteten Zeilen ohnehin nach vorn.
-  const rows = entry.standings.rows
-    .filter((row) => row.scored > 0)
-    .map((row) => {
-      const cell = row.cells.find((candidate) => candidate.metricId === 'prediction-score');
-      return {
-        rank: row.rank,
-        modelId: row.model.id,
-        name: row.model.name,
-        color: row.model.color,
-        provider: row.model.provider,
-        score: cell?.value?.value ?? null,
-        interval: scoreUncertainty?.valueInterval[row.model.id] ?? null,
-        probabilityFirst: uncertainty?.probabilityFirst[row.model.id] ?? null,
-        detail: translate('leaderboards.scoredEvents', {
-          count: formatInteger(row.scored, locale),
-        }),
-        provisional: row.provisional,
-      };
-    });
+  const plain = plainBoard(entry, locale, uncertaintyFor(entry));
+  if (!plain) continue;
+  const scoreOf = (modelId: string) =>
+    entry.standings!.rows
+      .find((row) => row.model.id === modelId)
+      ?.cells.find((cell) => cell.metricId === 'prediction-score')?.value?.value ?? null;
+  // Vorlaeufige Modelle bleiben drin: Sie tragen Rang 0 und das Abzeichen.
+  // Ein neu angebundenes Modell ist damit vom ersten Tipp an sichtbar.
+  const rows: BoardRow[] = plain.rows.map((row) => ({
+    rank: row.rank,
+    modelId: row.model.id,
+    name: row.model.name,
+    color: row.model.color,
+    provider: row.model.provider,
+    value: row.formatted,
+    score: scoreOf(row.model.id),
+    detail: translate('leaderboards.scoredEvents', {
+      count: formatInteger(row.scored, locale),
+    }),
+    provisional: row.provisional,
+  }));
   if (rows.length === 0) continue;
 
   boards.push({
@@ -141,6 +161,11 @@ for (const entry of data.live) {
       models: formatInteger(rows.length, locale),
     }),
     href: arenaPath(locale, entry.id),
+    valueLabel: plain.label,
+    valueTitle: entry.primaryMetric ? pick(entry.primaryMetric.description, locale) : null,
+    headline: plain.headline,
+    closeCall: plain.closeCall,
+    reference: plain.reference ? { label: plain.reference.label, formatted: plain.reference.formatted } : null,
     rows,
     // Dieselbe Bedingung wie in share/data.ts: Ohne genug aufgelöste
     // Ereignisse gibt es kein Bild, und dann darf hier auch keiner
@@ -156,21 +181,15 @@ const pageUrl = arenaUrl(locale, 'leaderboards');
  * Teilen-Links je Board – Intent-URLs, keine Skripte.
  *
  * Der Text darf nur dann eine Führung behaupten, wenn es sie nachweislich
- * gibt: genau eine Zeile auf Rang 1 UND ein Intervall, das sich vom zweiten
- * trennt. Sonst stünde neben einem Bild, auf dem „zu knapp" steht, ein
- * Beitragstext, der „führt" sagt – oder es würde ein alphabetisch erster
- * Name zum Sieger erklärt, obwohl sechs Modelle gleichauf liegen.
+ * gibt: genau eine Zeile auf Rang 1 UND kein knapper Ausgang. Sonst stünde
+ * neben einem Bild, auf dem „kann noch kippen" steht, ein Beitragstext,
+ * der einen Sieger ausruft.
  */
 function shareFor(board: Board) {
-  const leader = board.rows[0];
   const uniqueFirst = board.rows.filter((row) => row.rank === 1).length === 1;
-  const second = board.rows[1];
-  const separated = Boolean(
-    leader?.interval && second?.interval && leader.interval[0] > second.interval[1],
-  );
   const text =
-    leader && uniqueFirst && separated
-      ? translate('leaderboards.shareText', { leader: leader.name, board: board.title })
+    board.headline && uniqueFirst && !board.closeCall
+      ? translate('plain.shareText', { headline: board.headline })
       : translate('leaderboards.shareTextNeutral', { board: board.title });
   const url = board.href ? arenaUrl(locale, board.id) : pageUrl;
   return {
@@ -201,8 +220,8 @@ const linkClass =
     <p class="mt-3 max-w-2xl text-[15px] leading-relaxed text-ink-300">
       {translate('leaderboards.intro')}
     </p>
-    <p class="mt-2 font-mono text-[11px] text-ink-400">
-      {translate('score.scale')} · {SCORE_VERSION}
+    <p class="mt-2 text-[13px] text-ink-400">
+      {translate('plain.promise')}
     </p>
 
     {
@@ -248,6 +267,20 @@ const linkClass =
               </h2>
               <p class="font-mono text-[11px] text-ink-400">{board.subtitle}</p>
             </div>
+            {board.headline && (
+              <p class="mt-2 font-display text-[17px] text-ink-100">{board.headline}</p>
+            )}
+            {board.closeCall && (
+              <p class="mt-1 text-[13px] text-ink-400">{translate('plain.closeCall')}</p>
+            )}
+            {board.reference && (
+              <p class="mt-1 font-mono text-[12px] text-ink-300" title={translate('plain.referenceTitle')}>
+                {translate('plain.reference', {
+                  reference: board.reference.label,
+                  value: board.reference.formatted,
+                })}
+              </p>
+            )}
 
             <div class="mt-3 overflow-x-auto rounded-2xl border border-ink-700/70 bg-ink-900/80">
               <table class="w-full border-collapse text-sm">
@@ -256,14 +289,14 @@ const linkClass =
                     <th scope="col" class="px-4 py-3 font-medium">
                       {translate('standings.model')}
                     </th>
-                    <th scope="col" class="px-4 py-3 text-right font-medium">
-                      {translate('leaderboards.colScore')}
-                    </th>
-                    <th scope="col" class="hidden px-4 py-3 text-right font-medium sm:table-cell">
-                      {translate('leaderboards.colInterval')}
+                    <th scope="col" class="px-4 py-3 text-right font-medium" title={board.valueTitle ?? undefined}>
+                      {board.valueLabel}
                     </th>
                     <th scope="col" class="hidden px-4 py-3 text-right font-medium sm:table-cell">
                       {translate('leaderboards.colDetail')}
+                    </th>
+                    <th scope="col" class="hidden px-4 py-3 text-right font-medium sm:table-cell">
+                      {translate('leaderboards.colScore')}
                     </th>
                   </tr>
                 </thead>
@@ -306,15 +339,13 @@ const linkClass =
                         </span>
                       </th>
                       <td class="px-4 py-3 text-right font-mono font-semibold tabular text-ink-50">
-                        {row.score === null ? '–' : row.score.toFixed(1)}
-                      </td>
-                      <td class="hidden px-4 py-3 text-right font-mono text-[12px] tabular text-ink-400 sm:table-cell">
-                        {row.interval
-                          ? `${row.interval[0].toFixed(1)} – ${row.interval[1].toFixed(1)}`
-                          : '–'}
+                        {row.value}
                       </td>
                       <td class="hidden px-4 py-3 text-right text-[12px] text-ink-400 sm:table-cell">
                         {row.detail}
+                      </td>
+                      <td class="hidden px-4 py-3 text-right font-mono text-[12px] tabular text-ink-400 sm:table-cell">
+                        {row.score === null ? '–' : row.score.toFixed(1)}
                       </td>
                     </tr>
                   ))}

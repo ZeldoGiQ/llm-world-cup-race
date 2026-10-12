@@ -1,21 +1,26 @@
 import { describe, expect, it } from 'vitest';
-import { buildShareCardSvg, SHARE_FORMATS, verdictFor, type ShareRow } from './card';
+import { buildShareCardSvg, SHARE_FORMATS, type ShareCardInput, type ShareRow } from './card';
 import { innerSvgMarkup } from './model-logo-markup';
 
 const row = (over: Partial<ShareRow> = {}): ShareRow => ({
-  name: 'Grok 4.3',
+  name: 'GPT-5.5',
   color: '#9b59b6',
-  score: 21.5,
-  ciLow: 18.0,
-  ciHigh: 25.0,
+  value: 0.582,
+  formatted: '58.2 %',
+  ciLow: 0.52,
+  ciHigh: 0.64,
   ...over,
 });
 
-const input = (rows: ShareRow[]) => ({
-  title: 'FIFA World Cup 2026',
-  subtitle: 'Prediction Score · Knowledge Cap · SCORE_V1',
+const input = (rows: ShareRow[], over: Partial<ShareCardInput> = {}): ShareCardInput => ({
+  title: 'Football leagues',
+  subtitle: 'Right outcome',
   rows,
-  footnote: '104 events · 90% CI',
+  footnote: '201 events · every prediction published before the event · no internet access',
+  headline: 'GPT-5.5 called 58.2 % of matches right',
+  clear: false,
+  reference: { label: 'Always home win', value: 0.45, formatted: '45.0 %' },
+  ...over,
 });
 
 const RED = '#d94a52';
@@ -27,97 +32,81 @@ function bars(svg: string): { x: number; width: number; fill: string }[] {
   );
 }
 
-/** Die gestrichelte Senkrechte markiert die Referenz (Score 0). */
-function zeroX(svg: string): number {
-  return Number(svg.match(/<line x1="([\d.]+)"[^>]*stroke-dasharray/)![1]);
+/** Die gestrichelte Senkrechte markiert die Referenz. */
+function referenceX(svg: string): number | null {
+  const match = svg.match(/<line x1="([\d.]+)"[^>]*stroke-dasharray/);
+  return match ? Number(match[1]) : null;
 }
 
 describe('innerSvgMarkup', () => {
   it('schält den Inhalt aus einer Logo-Datei', () => {
-    const source = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">\n  <rect/>\n</svg>\n';
+    const source = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect/></svg>';
     expect(innerSvgMarkup(source)).toBe('<rect/>');
   });
 
   it('gibt null zurück, statt kaputtes Markup weiterzureichen', () => {
-    // Lieber der Farbpunkt als eine Karte, die kein gültiges SVG mehr ist.
     expect(innerSvgMarkup('kein svg')).toBeNull();
     expect(innerSvgMarkup('<svg viewBox="0 0 64 64"></svg>')).toBeNull();
   });
 });
 
-describe('verdictFor – die Karte muss sagen, was die Zahlen hergeben', () => {
-  it('nennt einen Vorsprung nur, wenn die Intervalle sich trennen', () => {
-    const verdict = verdictFor([
-      row({ name: 'A', score: 30, ciLow: 25, ciHigh: 35 }),
-      row({ name: 'B', score: 10, ciLow: 5, ciHigh: 15 }),
-    ]);
-    expect(verdict).toEqual({ text: 'A leads by 20.0 points', clear: true });
-  });
-
-  it('sagt bei Überlappung ausdrücklich, dass es zu knapp ist', () => {
-    // Die echten WM-Daten sind genau dieser Fall. Eine Karte, die hier
-    // „führt" behauptet, widerspricht ihrer eigenen Fußnote.
-    const verdict = verdictFor([
-      row({ name: 'A', score: 21.5, ciLow: 10.9, ciHigh: 31.3 }),
-      row({ name: 'B', score: 19.4, ciLow: 9.0, ciHigh: 29.1 }),
-    ]);
-    expect(verdict).toEqual({ text: 'A ahead — too close to call', clear: false });
-  });
-});
-
 describe('buildShareCardSvg', () => {
-  it('färbt bei Gleichstand keinen einzigen Balken rot', () => {
-    // Regression: Früher wurde per Wert verglichen (score === topScore),
-    // wodurch bei Gleichstand JEDER Balken zum Spitzenwert wurde – die
-    // Krypto-Karte hatte fünf rote Balken.
-    const svg = buildShareCardSvg(
-      input([row({ name: 'A', score: 14.2 }), row({ name: 'B', score: 14.2 })]),
-    );
+  it('zeigt die Alltagszahl formatiert, nicht den Score', () => {
+    const svg = buildShareCardSvg(input([row(), row({ name: 'Kimi K3', value: 0.57, formatted: '57.0 %' })]));
+    expect(svg).toContain('58.2 %');
+    expect(svg).toContain('57.0 %');
+    expect(svg).toContain('RIGHT OUTCOME');
+    expect(svg).toContain('GPT-5.5 called 58.2 % of matches right');
+  });
+
+  it('zeichnet die Referenz als beschriftete Linie zwischen null und dem Maximum', () => {
+    const svg = buildShareCardSvg(input([row(), row({ name: 'B', value: 0.3, formatted: '30.0 %' })]));
+    expect(svg).toContain('Always home win 45.0 %');
+    const refX = referenceX(svg)!;
+    const [first, second] = bars(svg);
+    // 45 % liegt zwischen 30 % und 58 %: die Linie zwischen den Balkenenden.
+    expect(refX).toBeGreaterThan(second!.x + second!.width);
+    expect(refX).toBeLessThan(first!.x + first!.width);
+  });
+
+  it('färbt bei knapper Entscheidung keinen einzigen Balken rot', () => {
+    const svg = buildShareCardSvg(input([row(), row({ name: 'B', value: 0.58, formatted: '58.0 %' })], { clear: false }));
     expect(bars(svg).filter((bar) => bar.fill === RED)).toHaveLength(0);
   });
 
   it('färbt genau einen Balken rot, wenn einer nachweislich führt', () => {
-    const svg = buildShareCardSvg(
-      input([
-        row({ name: 'A', score: 30, ciLow: 25, ciHigh: 35 }),
-        row({ name: 'B', score: 10, ciLow: 5, ciHigh: 15 }),
-      ]),
-    );
+    const svg = buildShareCardSvg(input([row(), row({ name: 'B', value: 0.4, formatted: '40.0 %' })], { clear: true }));
     expect(bars(svg).filter((bar) => bar.fill === RED)).toHaveLength(1);
+    expect(bars(svg)[0]!.fill).toBe(RED);
   });
 
-  it('zeichnet negative Scores sichtbar links der Referenz', () => {
-    // Regression: Die alte Skala kappte bei 0, negative Balken hatten Länge
-    // null. „Modell schlechter als der Würfel" ist die interessanteste
-    // Aussage des Benchmarks – sie darf nicht unsichtbar sein.
-    const svg = buildShareCardSvg(
-      input([
-        row({ name: 'Gut', score: 12, ciLow: 8, ciHigh: 16 }),
-        row({ name: 'Schlecht', score: -12.4, ciLow: -20, ciHigh: -4 }),
-      ]),
-    );
-    const negative = bars(svg).at(-1)!;
-    expect(negative.width).toBeGreaterThan(20);
-    expect(negative.x).toBeLessThan(zeroX(svg));
-    expect(svg).toContain('-12.4');
+  it('kommt ohne Referenz und ohne Überschrift aus', () => {
+    const svg = buildShareCardSvg(input([row(), row({ name: 'B' })], { reference: null, headline: null }));
+    expect(referenceX(svg)).toBeNull();
+    expect(svg).not.toContain('NaN');
+  });
+
+  it('macht Balken proportional: halber Wert, halbe Länge', () => {
+    const svg = buildShareCardSvg(input([row({ value: 0.8 }), row({ name: 'B', value: 0.4 })], { reference: null }));
+    const [a, b] = bars(svg);
+    expect(a!.width / b!.width).toBeCloseTo(2, 1);
   });
 
   it('setzt das Logo ein und fällt sonst auf den Farbpunkt zurück', () => {
     const withLogo = buildShareCardSvg(input([row({ logoMarkup: '<rect id="logo"/>' })]));
     expect(withLogo).toContain('<rect id="logo"/>');
-
-    const withoutLogo = buildShareCardSvg(input([row()]));
+    const withoutLogo = buildShareCardSvg(input([row({ logoMarkup: null })]));
     expect(withoutLogo).toContain('fill="#9b59b6"');
   });
 
   it('kürzt zu lange Modellnamen, statt die Zahl zu überschreiben', () => {
-    const svg = buildShareCardSvg(input([row({ name: 'Ein sehr langer Modellname der nicht passt' })]));
+    const svg = buildShareCardSvg(input([row({ name: 'Ein unfassbar langer Modellname mit Versionsnummer 12.3.4' })]));
     expect(svg).toContain('…');
   });
 
   it('liefert jedes Format in seiner Größe und gültig', () => {
     for (const [id, format] of Object.entries(SHARE_FORMATS)) {
-      const svg = buildShareCardSvg(input([row(), row({ name: 'B', score: 9 })]), id as never);
+      const svg = buildShareCardSvg(input(Array.from({ length: 9 }, (_, i) => row({ name: `M${i}`, value: 0.5 - i * 0.03 }))), id as keyof typeof SHARE_FORMATS);
       expect(svg).toContain(`width="${format.width}" height="${format.height}"`);
       expect(svg.startsWith('<svg')).toBe(true);
       expect(svg.trimEnd().endsWith('</svg>')).toBe(true);
@@ -127,11 +116,8 @@ describe('buildShareCardSvg', () => {
   });
 
   it('maskiert Sonderzeichen in Namen und Titel', () => {
-    const svg = buildShareCardSvg({
-      ...input([row({ name: 'A & B' })]),
-      title: 'Tom & Jerry <script>',
-    });
+    const svg = buildShareCardSvg(input([row({ name: 'A & B' })], { title: 'Crypto <24h>' }));
     expect(svg).toContain('A &amp; B');
-    expect(svg).toContain('Tom &amp; Jerry &lt;script&gt;');
+    expect(svg).toContain('Crypto &lt;24h&gt;');
   });
 });

@@ -158,14 +158,15 @@ function buildPrompt(preset: Preset, headlineOverride?: string): string {
  */
 interface ShareJson {
   title: string;
-  subtitle: string;
+  label: string;
+  headline: string | null;
   footnote: string;
-  rows: { name: string; score: number }[];
+  rows: { name: string; formatted: string }[];
 }
 
 function buildResultsPrompt(card: ShareJson, format: Preset): string {
   const table = card.rows
-    .map((row, index) => `${index + 1}. ${row.name} — ${row.score.toFixed(1)}`)
+    .map((row, index) => `${index + 1}. ${row.name} — ${row.formatted}`)
     .join('\n');
   const leader = card.rows[0];
 
@@ -180,13 +181,15 @@ function buildResultsPrompt(card: ShareJson, format: Preset): string {
     'exactly as written — do not translate, reorder, round, abbreviate, or add entries:',
     '',
     `Heading: "${card.title}"`,
-    `Sub-heading, smaller, in brass: "${card.subtitle}"`,
+    `Sub-heading, smaller, in brass: "${card.label}"`,
+    ...(card.headline ? [`Headline beneath it, serif, one line: "${card.headline}"`] : []),
+    ``,
     '',
     'Ranked list, one entry per line, names in the grotesque face, numbers in a monospaced face,',
     'numbers right-aligned in a single column so the decimal points line up:',
     table,
     '',
-    `Set the first line — "${leader.name} — ${leader.score.toFixed(1)}" — apart: its number in the deep red #a4232a,`,
+    `Set the first line — "${leader.name} — ${leader.formatted}" — apart: its number in the deep red #a4232a,`,
     'a thin brass rule beneath it. Every other number stays paper-white.',
     '',
     `Footer line, small and muted: "${card.footnote}"`,
