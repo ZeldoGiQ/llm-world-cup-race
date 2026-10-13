@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-10-13T19:30:31.889Z",
+  "updatedAt": "2026-10-13T23:25:07.061Z",
   "events": [
     {
       "id": "fd-554940",
@@ -6578,9 +6578,13 @@
       "id": "fd-575341",
       "title": "RC Lens – Sporting CP",
       "utcDate": "2026-10-13T16:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SPO",
@@ -6606,9 +6610,13 @@
       "id": "fd-575342",
       "title": "Sabah FK – Slavia Praha",
       "utcDate": "2026-10-13T16:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SLP",
