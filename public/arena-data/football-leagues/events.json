@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-10-13T23:25:07.061Z",
+  "updatedAt": "2026-10-14T02:08:26.737Z",
   "events": [
     {
       "id": "fd-554940",
@@ -6642,9 +6642,13 @@
       "id": "fd-575343",
       "title": "Inter – Club Brugge",
       "utcDate": "2026-10-13T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 4,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BRU",
@@ -6670,9 +6674,13 @@
       "id": "fd-575344",
       "title": "Galatasaray – Barça",
       "utcDate": "2026-10-13T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 4,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCB",
@@ -6698,9 +6706,13 @@
       "id": "fd-575345",
       "title": "Atleti – Man United",
       "utcDate": "2026-10-13T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "MUN",
@@ -6726,9 +6738,13 @@
       "id": "fd-575346",
       "title": "Arsenal – Lille",
       "utcDate": "2026-10-13T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LIL",
@@ -6754,9 +6770,13 @@
       "id": "fd-575347",
       "title": "Viking – Bayern",
       "utcDate": "2026-10-13T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCB",
@@ -6782,9 +6802,13 @@
       "id": "fd-575348",
       "title": "RB Leipzig – PSV",
       "utcDate": "2026-10-13T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "PSV",
@@ -6810,9 +6834,13 @@
       "id": "fd-575349",
       "title": "Villarreal – Napoli",
       "utcDate": "2026-10-13T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "NAP",
