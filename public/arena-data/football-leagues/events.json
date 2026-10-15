@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-10-14T02:08:26.737Z",
+  "updatedAt": "2026-10-15T00:49:24.096Z",
   "events": [
     {
       "id": "fd-554940",
@@ -6866,9 +6866,13 @@
       "id": "fd-575350",
       "title": "LASK – Liverpool",
       "utcDate": "2026-10-14T16:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 6,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LIV",
@@ -6894,9 +6898,13 @@
       "id": "fd-575351",
       "title": "Feyenoord – Como 1907",
       "utcDate": "2026-10-14T16:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "COM",
@@ -6922,9 +6930,13 @@
       "id": "fd-575352",
       "title": "Roma – Real Madrid",
       "utcDate": "2026-10-14T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 4,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "RMA",
@@ -6950,9 +6962,13 @@
       "id": "fd-575353",
       "title": "Man City – PSG",
       "utcDate": "2026-10-14T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 4,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "PSG",
@@ -6978,9 +6994,13 @@
       "id": "fd-575354",
       "title": "Bodø/Glimt – Dortmund",
       "utcDate": "2026-10-14T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BVB",
@@ -7006,9 +7026,13 @@
       "id": "fd-575355",
       "title": "Aston Villa – Fenerbahçe",
       "utcDate": "2026-10-14T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 6,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FEN",
@@ -7034,9 +7058,13 @@
       "id": "fd-575356",
       "title": "Real Betis – Porto",
       "utcDate": "2026-10-14T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCP",
@@ -7062,9 +7090,13 @@
       "id": "fd-575357",
       "title": "Shaktar – PAE AEK",
       "utcDate": "2026-10-14T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "AEK",
@@ -7090,9 +7122,13 @@
       "id": "fd-575358",
       "title": "Sl. Bratislava – Stuttgart",
       "utcDate": "2026-10-14T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "VFB",
