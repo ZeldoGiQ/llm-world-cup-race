@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-10-16T16:55:17.009Z",
+  "updatedAt": "2026-10-17T17:31:18.302Z",
   "events": [
     {
       "id": "fd-554940",
@@ -7154,9 +7154,13 @@
       "id": "fd-560603",
       "title": "Everton – Chelsea",
       "utcDate": "2026-10-17T11:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CHE",
@@ -7935,6 +7939,34 @@
       }
     },
     {
+      "id": "fd-565833",
+      "title": "Stuttgart – M'gladbach",
+      "utcDate": "2026-10-23T18:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BMG",
+          "name": "M'gladbach"
+        },
+        "home": {
+          "tla": "VFB",
+          "name": "Stuttgart"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 7",
+          "Home team: Stuttgart",
+          "Away team: M'gladbach"
+        ],
+        "matchday": 7,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565833. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
       "id": "fd-560620",
       "title": "Ipswich Town – Nottingham",
       "utcDate": "2026-10-23T19:00:00.000Z",
@@ -8127,6 +8159,90 @@
         "matchday": 8,
         "competition": "Premier League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560613. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560615",
+      "title": "Man United – Bournemouth",
+      "utcDate": "2026-10-25T14:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BOU",
+          "name": "Bournemouth"
+        },
+        "home": {
+          "tla": "MUN",
+          "name": "Man United"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 8",
+          "Home team: Man United",
+          "Away team: Bournemouth"
+        ],
+        "matchday": 8,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560615. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560619",
+      "title": "Hull City – Brentford",
+      "utcDate": "2026-10-25T14:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BRE",
+          "name": "Brentford"
+        },
+        "home": {
+          "tla": "HUL",
+          "name": "Hull City"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 8",
+          "Home team: Hull City",
+          "Away team: Brentford"
+        ],
+        "matchday": 8,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560619. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560621",
+      "title": "Sunderland – Leeds United",
+      "utcDate": "2026-10-25T16:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "LEE",
+          "name": "Leeds United"
+        },
+        "home": {
+          "tla": "SUN",
+          "name": "Sunderland"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 8",
+          "Home team: Sunderland",
+          "Away team: Leeds United"
+        ],
+        "matchday": 8,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560621. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PL"
       }
     }
