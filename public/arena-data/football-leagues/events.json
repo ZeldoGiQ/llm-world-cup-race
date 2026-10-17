@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-10-17T19:41:48.559Z",
+  "updatedAt": "2026-10-17T22:37:43.901Z",
   "events": [
     {
       "id": "fd-554940",
@@ -7282,9 +7282,13 @@
       "id": "fd-560607",
       "title": "Newcastle – Aston Villa",
       "utcDate": "2026-10-17T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "AVL",
