@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-10-17T22:37:43.901Z",
+  "updatedAt": "2026-10-18T19:38:58.071Z",
   "events": [
     {
       "id": "fd-554940",
@@ -7314,9 +7314,13 @@
       "id": "fd-560604",
       "title": "Bournemouth – Sunderland",
       "utcDate": "2026-10-18T13:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SUN",
@@ -7342,9 +7346,13 @@
       "id": "fd-560605",
       "title": "Leeds United – Man United",
       "utcDate": "2026-10-18T13:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "MUN",
@@ -7370,9 +7378,13 @@
       "id": "fd-560609",
       "title": "Brighton Hove – Crystal Palace",
       "utcDate": "2026-10-18T13:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 5,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CRY",
@@ -7398,9 +7410,13 @@
       "id": "fd-560608",
       "title": "Nottingham – Arsenal",
       "utcDate": "2026-10-18T15:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ARS",
