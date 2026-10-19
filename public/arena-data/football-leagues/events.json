@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-10-19T00:27:28.598Z",
+  "updatedAt": "2026-10-19T22:37:05.067Z",
   "events": [
     {
       "id": "fd-554940",
@@ -8079,6 +8079,62 @@
         "matchday": 7,
         "competition": "Bundesliga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565830. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565831",
+      "title": "1. FC Köln – Schalke",
+      "utcDate": "2026-10-24T13:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "S04",
+          "name": "Schalke"
+        },
+        "home": {
+          "tla": "KOE",
+          "name": "1. FC Köln"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 7",
+          "Home team: 1. FC Köln",
+          "Away team: Schalke"
+        ],
+        "matchday": 7,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565831. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565832",
+      "title": "RB Leipzig – Elversberg",
+      "utcDate": "2026-10-24T13:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ELV",
+          "name": "Elversberg"
+        },
+        "home": {
+          "tla": "RBL",
+          "name": "RB Leipzig"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 7",
+          "Home team: RB Leipzig",
+          "Away team: Elversberg"
+        ],
+        "matchday": 7,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565832. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BL1"
       }
     },
