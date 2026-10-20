@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-10-20T01:14:54.920Z",
+  "updatedAt": "2026-10-20T12:06:08.282Z",
   "events": [
     {
       "id": "fd-554940",
@@ -8560,6 +8560,230 @@
         "competition": "Bundesliga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565846. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-560626",
+      "title": "Chelsea – Man United",
+      "utcDate": "2026-10-31T12:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "MUN",
+          "name": "Man United"
+        },
+        "home": {
+          "tla": "CHE",
+          "name": "Chelsea"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 9",
+          "Home team: Chelsea",
+          "Away team: Man United"
+        ],
+        "matchday": 9,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560626. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560623",
+      "title": "Man City – Brighton Hove",
+      "utcDate": "2026-10-31T15:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BHA",
+          "name": "Brighton Hove"
+        },
+        "home": {
+          "tla": "MCI",
+          "name": "Man City"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 9",
+          "Home team: Man City",
+          "Away team: Brighton Hove"
+        ],
+        "matchday": 9,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560623. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560624",
+      "title": "Bournemouth – Leeds United",
+      "utcDate": "2026-10-31T15:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "LEE",
+          "name": "Leeds United"
+        },
+        "home": {
+          "tla": "BOU",
+          "name": "Bournemouth"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 9",
+          "Home team: Bournemouth",
+          "Away team: Leeds United"
+        ],
+        "matchday": 9,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560624. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560625",
+      "title": "Coventry City – Sunderland",
+      "utcDate": "2026-10-31T15:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SUN",
+          "name": "Sunderland"
+        },
+        "home": {
+          "tla": "COV",
+          "name": "Coventry City"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 9",
+          "Home team: Coventry City",
+          "Away team: Sunderland"
+        ],
+        "matchday": 9,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560625. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560629",
+      "title": "Hull City – Ipswich Town",
+      "utcDate": "2026-10-31T15:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "IPS",
+          "name": "Ipswich Town"
+        },
+        "home": {
+          "tla": "HUL",
+          "name": "Hull City"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 9",
+          "Home team: Hull City",
+          "Away team: Ipswich Town"
+        ],
+        "matchday": 9,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560629. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560630",
+      "title": "Brentford – Nottingham",
+      "utcDate": "2026-10-31T15:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "NOT",
+          "name": "Nottingham"
+        },
+        "home": {
+          "tla": "BRE",
+          "name": "Brentford"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 9",
+          "Home team: Brentford",
+          "Away team: Nottingham"
+        ],
+        "matchday": 9,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560630. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560627",
+      "title": "Tottenham – Crystal Palace",
+      "utcDate": "2026-10-31T17:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "CRY",
+          "name": "Crystal Palace"
+        },
+        "home": {
+          "tla": "TOT",
+          "name": "Tottenham"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 9",
+          "Home team: Tottenham",
+          "Away team: Crystal Palace"
+        ],
+        "matchday": 9,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560627. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560628",
+      "title": "Aston Villa – Fulham",
+      "utcDate": "2026-10-31T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FUL",
+          "name": "Fulham"
+        },
+        "home": {
+          "tla": "AVL",
+          "name": "Aston Villa"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 9",
+          "Home team: Aston Villa",
+          "Away team: Fulham"
+        ],
+        "matchday": 9,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560628. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
       }
     }
   ]
