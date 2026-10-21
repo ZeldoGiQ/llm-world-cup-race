@@ -13142,6 +13142,22 @@
         },
         "createdAt": "2026-10-19T19:15:05.028Z"
       },
+      "gemma-4-26b-a4b-it": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:41:32.626Z"
+      },
+      "gemma-4-31b-it": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:41:34.359Z"
+      },
       "glm": {
         "value": {
           "away": 2,
@@ -13215,6 +13231,22 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-10-19T19:19:11.847Z"
+      },
+      "gemma-4-26b-a4b-it": {
+        "value": {
+          "away": 1,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:41:41.357Z"
+      },
+      "gemma-4-31b-it": {
+        "value": {
+          "away": 1,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:41:43.281Z"
       },
       "glm": {
         "value": {
@@ -13290,6 +13322,22 @@
         },
         "createdAt": "2026-10-20T04:38:01.715Z"
       },
+      "gemma-4-26b-a4b-it": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:41:47.748Z"
+      },
+      "gemma-4-31b-it": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:41:49.470Z"
+      },
       "glm": {
         "value": {
           "away": 2,
@@ -13363,6 +13411,22 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-10-19T19:39:19.315Z"
+      },
+      "gemma-4-26b-a4b-it": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:42:51.338Z"
+      },
+      "gemma-4-31b-it": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:42:55.927Z"
       },
       "glm": {
         "value": {
@@ -13438,6 +13502,22 @@
         },
         "createdAt": "2026-10-19T19:23:04.396Z"
       },
+      "gemma-4-26b-a4b-it": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:41:55.004Z"
+      },
+      "gemma-4-31b-it": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:41:58.100Z"
+      },
       "glm": {
         "value": {
           "away": 0,
@@ -13511,6 +13591,22 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-10-19T19:26:40.747Z"
+      },
+      "gemma-4-26b-a4b-it": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:42:03.583Z"
+      },
+      "gemma-4-31b-it": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:42:06.099Z"
       },
       "glm": {
         "value": {
@@ -13586,6 +13682,22 @@
         },
         "createdAt": "2026-10-19T19:30:23.114Z"
       },
+      "gemma-4-26b-a4b-it": {
+        "value": {
+          "away": 1,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:42:11.684Z"
+      },
+      "gemma-4-31b-it": {
+        "value": {
+          "away": 1,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:42:10.921Z"
+      },
       "glm": {
         "value": {
           "away": 1,
@@ -13659,6 +13771,22 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-10-19T19:33:31.705Z"
+      },
+      "gemma-4-26b-a4b-it": {
+        "value": {
+          "away": 0,
+          "home": 3,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:42:19.085Z"
+      },
+      "gemma-4-31b-it": {
+        "value": {
+          "away": 0,
+          "home": 3,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:42:21.814Z"
       },
       "glm": {
         "value": {
@@ -13734,6 +13862,22 @@
         },
         "createdAt": "2026-10-19T19:34:58.674Z"
       },
+      "gemma-4-26b-a4b-it": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:42:29.003Z"
+      },
+      "gemma-4-31b-it": {
+        "value": {
+          "away": 0,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:42:34.222Z"
+      },
       "glm": {
         "value": {
           "away": 0,
@@ -13807,6 +13951,22 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-10-19T19:36:24.831Z"
+      },
+      "gemma-4-26b-a4b-it": {
+        "value": {
+          "away": 1,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:42:39.522Z"
+      },
+      "gemma-4-31b-it": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-21T13:42:46.223Z"
       },
       "glm": {
         "value": {
