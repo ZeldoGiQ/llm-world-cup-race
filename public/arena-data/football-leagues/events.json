@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-10-20T12:06:08.282Z",
+  "updatedAt": "2026-10-21T00:06:40.594Z",
   "events": [
     {
       "id": "fd-554940",
@@ -7474,9 +7474,13 @@
       "id": "fd-575359",
       "title": "Sabah FK – Dortmund",
       "utcDate": "2026-10-20T16:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BVB",
@@ -7502,9 +7506,13 @@
       "id": "fd-575360",
       "title": "Fenerbahçe – Slavia Praha",
       "utcDate": "2026-10-20T16:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SLP",
@@ -8588,6 +8596,62 @@
         "competition": "Premier League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560626. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-565839",
+      "title": "M'gladbach – SC Paderborn",
+      "utcDate": "2026-10-31T14:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SCP",
+          "name": "SC Paderborn"
+        },
+        "home": {
+          "tla": "BMG",
+          "name": "M'gladbach"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 8",
+          "Home team: M'gladbach",
+          "Away team: SC Paderborn"
+        ],
+        "matchday": 8,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565839. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565840",
+      "title": "Schalke – RB Leipzig",
+      "utcDate": "2026-10-31T14:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "RBL",
+          "name": "RB Leipzig"
+        },
+        "home": {
+          "tla": "S04",
+          "name": "Schalke"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 8",
+          "Home team: Schalke",
+          "Away team: RB Leipzig"
+        ],
+        "matchday": 8,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565840. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
       }
     },
     {
