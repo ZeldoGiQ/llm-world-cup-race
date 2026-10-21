@@ -51,6 +51,24 @@
     "access": "public"
   },
   {
+    "id": "gemma-4-26b-a4b-it",
+    "name": "Gemma 4 26b A4b It",
+    "provider": "Google",
+    "color": "#4285f4",
+    "version": "google/gemma-4-26b-a4b-it",
+    "releaseDate": "2026-08-17",
+    "access": "early-access"
+  },
+  {
+    "id": "gemma-4-31b-it",
+    "name": "Gemma 4 31b It",
+    "provider": "Google",
+    "color": "#4285f4",
+    "version": "google/gemma-4-31b-it",
+    "releaseDate": "2026-08-17",
+    "access": "early-access"
+  },
+  {
     "id": "glm",
     "name": "GLM-5.2",
     "provider": "Z.ai",
