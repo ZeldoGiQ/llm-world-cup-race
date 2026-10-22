@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-10-21T10:33:12.918Z",
+  "updatedAt": "2026-10-22T01:48:31.609Z",
   "events": [
     {
       "id": "fd-554940",
@@ -7762,9 +7762,13 @@
       "id": "fd-575368",
       "title": "Como 1907 – Man United",
       "utcDate": "2026-10-21T16:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "MUN",
@@ -7790,9 +7794,13 @@
       "id": "fd-575369",
       "title": "Lille – Galatasaray",
       "utcDate": "2026-10-21T16:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 4,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "GAL",
@@ -7818,9 +7826,13 @@
       "id": "fd-564685",
       "title": "Levante – Athletic",
       "utcDate": "2026-10-21T18:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ATH",
@@ -7846,9 +7858,13 @@
       "id": "fd-575370",
       "title": "Real Madrid – RB Leipzig",
       "utcDate": "2026-10-21T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "RBL",
@@ -7874,9 +7890,13 @@
       "id": "fd-575371",
       "title": "Inter – Shaktar",
       "utcDate": "2026-10-21T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SHD",
@@ -7902,9 +7922,13 @@
       "id": "fd-575372",
       "title": "Bayern – Arsenal",
       "utcDate": "2026-10-21T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ARS",
@@ -7930,9 +7954,13 @@
       "id": "fd-575373",
       "title": "Club Brugge – RC Lens",
       "utcDate": "2026-10-21T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "RCL",
@@ -7958,9 +7986,13 @@
       "id": "fd-575374",
       "title": "Aston Villa – Viking",
       "utcDate": "2026-10-21T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "VIK",
@@ -7986,9 +8018,13 @@
       "id": "fd-575375",
       "title": "Sporting CP – LASK",
       "utcDate": "2026-10-21T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LIN",
@@ -8014,9 +8050,13 @@
       "id": "fd-575376",
       "title": "Real Betis – Feyenoord",
       "utcDate": "2026-10-21T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FEY",
