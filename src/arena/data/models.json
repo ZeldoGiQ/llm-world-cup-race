@@ -85,6 +85,15 @@
     "access": "early-access"
   },
   {
+    "id": "glm-5.3-flashx",
+    "name": "GLM 5.3 Flashx",
+    "provider": "Z.ai",
+    "color": "#14b8a6",
+    "version": "z-ai/glm-5.3-flashx",
+    "releaseDate": "2026-10-20",
+    "access": "early-access"
+  },
+  {
     "id": "gpt",
     "name": "GPT-5.5",
     "provider": "OpenAI",
@@ -146,6 +155,15 @@
     "version": "kimi-k2.6",
     "releaseDate": "2026-04-02",
     "access": "public"
+  },
+  {
+    "id": "kimi-k2.7-code",
+    "name": "Kimi K2.7 Code",
+    "provider": "Moonshot AI",
+    "color": "#ec4899",
+    "version": "moonshotai/kimi-k2.7-code",
+    "releaseDate": "2026-08-17",
+    "access": "early-access"
   },
   {
     "id": "kimi-k3",
