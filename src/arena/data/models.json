@@ -200,6 +200,24 @@
     "retiredAt": "2026-10-10T14:55:21.939501+00:00"
   },
   {
+    "id": "qwen3.8-2.4t-a95b",
+    "name": "Qwen3.8 2.4t A95b",
+    "provider": "Alibaba",
+    "color": "#eab308",
+    "version": "qwen/qwen3.8-2.4t-a95b",
+    "releaseDate": "2026-10-20",
+    "access": "early-access"
+  },
+  {
+    "id": "qwen3.8-27b",
+    "name": "Qwen3.8 27b",
+    "provider": "Alibaba",
+    "color": "#eab308",
+    "version": "qwen/qwen3.8-27b",
+    "releaseDate": "2026-10-20",
+    "access": "early-access"
+  },
+  {
     "id": "baseline-market",
     "name": "Bookmaker consensus",
     "names": {
