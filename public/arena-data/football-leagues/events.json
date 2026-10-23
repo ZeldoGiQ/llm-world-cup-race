@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-10-23T13:47:12.865Z",
+  "updatedAt": "2026-10-23T18:41:31.822Z",
   "events": [
     {
       "id": "fd-554940",
@@ -8719,6 +8719,34 @@
         "matchday": 8,
         "competition": "Bundesliga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565840. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565842",
+      "title": "Augsburg – Freiburg",
+      "utcDate": "2026-10-31T14:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SCF",
+          "name": "Freiburg"
+        },
+        "home": {
+          "tla": "FCA",
+          "name": "Augsburg"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 8",
+          "Home team: Augsburg",
+          "Away team: Freiburg"
+        ],
+        "matchday": 8,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565842. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BL1"
       }
     },
