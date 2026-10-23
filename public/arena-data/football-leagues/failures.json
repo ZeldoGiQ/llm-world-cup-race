@@ -1,0 +1,11 @@
+{
+  "category": "football-leagues",
+  "failures": {
+    "fd-560620": {
+      "qwen3.8-27b": {
+        "code": "api-error",
+        "createdAt": "2026-10-23T14:00:08.945Z"
+      }
+    }
+  }
+}
