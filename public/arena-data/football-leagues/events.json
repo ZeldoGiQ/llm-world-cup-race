@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-10-23T18:41:31.822Z",
+  "updatedAt": "2026-10-24T01:01:19.927Z",
   "events": [
     {
       "id": "fd-554940",
@@ -8082,9 +8082,13 @@
       "id": "fd-565833",
       "title": "Stuttgart – M'gladbach",
       "utcDate": "2026-10-23T18:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BMG",
@@ -8110,9 +8114,13 @@
       "id": "fd-560620",
       "title": "Ipswich Town – Nottingham",
       "utcDate": "2026-10-23T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "NOT",
