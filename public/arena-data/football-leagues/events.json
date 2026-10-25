@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-10-25T12:45:09.873Z",
+  "updatedAt": "2026-10-25T22:47:10.742Z",
   "events": [
     {
       "id": "fd-554940",
@@ -8466,9 +8466,13 @@
       "id": "fd-560612",
       "title": "Liverpool – Brighton Hove",
       "utcDate": "2026-10-25T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BHA",
@@ -8494,9 +8498,13 @@
       "id": "fd-560613",
       "title": "Crystal Palace – Newcastle",
       "utcDate": "2026-10-25T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "NEW",
@@ -8522,9 +8530,13 @@
       "id": "fd-560615",
       "title": "Man United – Bournemouth",
       "utcDate": "2026-10-25T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BOU",
@@ -8550,9 +8562,13 @@
       "id": "fd-560619",
       "title": "Hull City – Brentford",
       "utcDate": "2026-10-25T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BRE",
@@ -8578,9 +8594,13 @@
       "id": "fd-565835",
       "title": "Hoffenheim – Leverkusen",
       "utcDate": "2026-10-25T14:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "B04",
@@ -8606,9 +8626,13 @@
       "id": "fd-560621",
       "title": "Sunderland – Leeds United",
       "utcDate": "2026-10-25T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LEE",
@@ -8634,9 +8658,13 @@
       "id": "fd-565836",
       "title": "Freiburg – Bayern",
       "utcDate": "2026-10-25T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCB",
