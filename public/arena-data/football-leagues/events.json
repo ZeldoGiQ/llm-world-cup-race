@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-10-24T11:34:38.839Z",
+  "updatedAt": "2026-10-25T12:45:09.873Z",
   "events": [
     {
       "id": "fd-554940",
@@ -8146,9 +8146,13 @@
       "id": "fd-560614",
       "title": "Aston Villa – Man City",
       "utcDate": "2026-10-24T11:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "MCI",
@@ -8174,9 +8178,13 @@
       "id": "fd-565830",
       "title": "Mainz – Bremen",
       "utcDate": "2026-10-24T13:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SVW",
@@ -8202,9 +8210,13 @@
       "id": "fd-565831",
       "title": "1. FC Köln – Schalke",
       "utcDate": "2026-10-24T13:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "S04",
@@ -8230,9 +8242,13 @@
       "id": "fd-565832",
       "title": "RB Leipzig – Elversberg",
       "utcDate": "2026-10-24T13:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ELV",
@@ -8258,9 +8274,13 @@
       "id": "fd-565834",
       "title": "SC Paderborn – HSV",
       "utcDate": "2026-10-24T13:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "HSV",
@@ -8286,9 +8306,13 @@
       "id": "fd-565838",
       "title": "Augsburg – Union Berlin",
       "utcDate": "2026-10-24T13:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "UNB",
@@ -8314,9 +8338,13 @@
       "id": "fd-560616",
       "title": "Arsenal – Everton",
       "utcDate": "2026-10-24T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "EVE",
@@ -8342,9 +8370,13 @@
       "id": "fd-560618",
       "title": "Coventry City – Fulham",
       "utcDate": "2026-10-24T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FUL",
@@ -8370,9 +8402,13 @@
       "id": "fd-560617",
       "title": "Chelsea – Tottenham",
       "utcDate": "2026-10-24T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "TOT",
@@ -8398,9 +8434,13 @@
       "id": "fd-565837",
       "title": "Dortmund – Frankfurt",
       "utcDate": "2026-10-24T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SGE",
