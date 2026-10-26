@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-10-25T22:47:10.742Z",
+  "updatedAt": "2026-10-26T14:32:18.159Z",
   "events": [
     {
       "id": "fd-554940",
@@ -9580,6 +9580,34 @@
         "competition": "UEFA Champions League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575394. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-560634",
+      "title": "Everton – Coventry City",
+      "utcDate": "2026-11-06T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "COV",
+          "name": "Coventry City"
+        },
+        "home": {
+          "tla": "EVE",
+          "name": "Everton"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 10",
+          "Home team: Everton",
+          "Away team: Coventry City"
+        ],
+        "matchday": 10,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560634. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
       }
     }
   ]
