@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-10-26T14:32:18.159Z",
+  "updatedAt": "2026-10-27T10:55:56.947Z",
   "events": [
     {
       "id": "fd-554940",
@@ -9607,6 +9607,34 @@
         "matchday": 10,
         "competition": "Premier League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560634. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560632",
+      "title": "Leeds United – Tottenham",
+      "utcDate": "2026-11-07T12:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "TOT",
+          "name": "Tottenham"
+        },
+        "home": {
+          "tla": "LEE",
+          "name": "Leeds United"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 10",
+          "Home team: Leeds United",
+          "Away team: Tottenham"
+        ],
+        "matchday": 10,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560632. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PL"
       }
     }
