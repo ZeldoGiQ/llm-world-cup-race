@@ -17651,6 +17651,14 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-10-29T22:22:44.998Z"
+      },
+      "qwen3.8-27b": {
+        "value": {
+          "away": 0,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-10-30T01:51:59.623Z"
       }
     },
     "fd-560628": {
