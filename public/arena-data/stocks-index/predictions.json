@@ -1877,6 +1877,104 @@
           "value": 7623.68
         },
         "createdAt": "2026-10-25T09:08:44.250Z"
+      },
+      "claude-5.1": {
+        "value": {
+          "kind": "numeric",
+          "value": 7645
+        },
+        "createdAt": "2026-10-31T00:40:47.421Z"
+      },
+      "claude-opus-5-5": {
+        "value": {
+          "kind": "numeric",
+          "value": 7640
+        },
+        "createdAt": "2026-10-31T00:40:46.404Z"
+      },
+      "deepseek": {
+        "value": {
+          "kind": "numeric",
+          "value": 7623.68
+        },
+        "createdAt": "2026-10-31T00:41:11.421Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "kind": "numeric",
+          "value": 7646
+        },
+        "createdAt": "2026-10-31T00:41:18.196Z"
+      },
+      "gemma-4-26b-a4b-it": {
+        "value": {
+          "kind": "numeric",
+          "value": 7635
+        },
+        "createdAt": "2026-10-31T00:41:15.949Z"
+      },
+      "gemma-4-31b-it": {
+        "value": {
+          "kind": "numeric",
+          "value": 7650
+        },
+        "createdAt": "2026-10-31T00:41:15.644Z"
+      },
+      "glm": {
+        "value": {
+          "kind": "numeric",
+          "value": 7649.6
+        },
+        "createdAt": "2026-10-31T00:41:43.892Z"
+      },
+      "glm-5.3-flashx": {
+        "value": {
+          "kind": "numeric",
+          "value": 7660
+        },
+        "createdAt": "2026-10-31T00:41:36.441Z"
+      },
+      "gpt-6.1": {
+        "value": {
+          "kind": "numeric",
+          "value": 7646.55
+        },
+        "createdAt": "2026-10-31T00:41:50.415Z"
+      },
+      "grok-4.7": {
+        "value": {
+          "kind": "numeric",
+          "value": 7647
+        },
+        "createdAt": "2026-10-31T00:58:00.044Z"
+      },
+      "kimi-k2.7-code": {
+        "value": {
+          "kind": "numeric",
+          "value": 7638.8
+        },
+        "createdAt": "2026-10-31T00:47:34.659Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "kind": "numeric",
+          "value": 7642.74
+        },
+        "createdAt": "2026-10-31T01:01:31.757Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "numeric",
+          "value": 7645.5
+        },
+        "createdAt": "2026-10-31T00:58:19.120Z"
+      },
+      "qwen3.8-2.4t-a95b": {
+        "value": {
+          "kind": "numeric",
+          "value": 7635
+        },
+        "createdAt": "2026-10-31T01:02:22.230Z"
       }
     },
     "yf-ndx-2026-11-06": {
