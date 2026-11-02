@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-01T02:32:21.382Z",
+  "updatedAt": "2026-11-02T01:00:21.489Z",
   "events": [
     {
       "id": "fd-554940",
@@ -9074,9 +9074,13 @@
       "id": "fd-560631",
       "title": "Liverpool – Arsenal",
       "utcDate": "2026-11-01T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ARS",
@@ -9712,6 +9716,34 @@
         "competition": "Premier League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560632. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-565848",
+      "title": "RB Leipzig – Augsburg",
+      "utcDate": "2026-11-07T14:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FCA",
+          "name": "Augsburg"
+        },
+        "home": {
+          "tla": "RBL",
+          "name": "RB Leipzig"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 9",
+          "Home team: RB Leipzig",
+          "Away team: Augsburg"
+        ],
+        "matchday": 9,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565848. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
       }
     },
     {
