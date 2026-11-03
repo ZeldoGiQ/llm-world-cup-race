@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-02T01:00:21.489Z",
+  "updatedAt": "2026-11-03T10:00:57.276Z",
   "events": [
     {
       "id": "fd-554940",
@@ -9106,9 +9106,13 @@
       "id": "fd-560622",
       "title": "Newcastle – Everton",
       "utcDate": "2026-11-02T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "EVE",
@@ -9691,6 +9695,34 @@
       }
     },
     {
+      "id": "fd-564740",
+      "title": "Sevilla FC – Alavés",
+      "utcDate": "2026-11-06T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ALA",
+          "name": "Alavés"
+        },
+        "home": {
+          "tla": "SEV",
+          "name": "Sevilla FC"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 12",
+          "Home team: Sevilla FC",
+          "Away team: Alavés"
+        ],
+        "matchday": 12,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564740. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
       "id": "fd-560632",
       "title": "Leeds United – Tottenham",
       "utcDate": "2026-11-07T12:30:00.000Z",
@@ -9719,6 +9751,34 @@
       }
     },
     {
+      "id": "fd-564744",
+      "title": "Málaga – Santander",
+      "utcDate": "2026-11-07T13:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SAN",
+          "name": "Santander"
+        },
+        "home": {
+          "tla": "MAL",
+          "name": "Málaga"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 12",
+          "Home team: Málaga",
+          "Away team: Santander"
+        ],
+        "matchday": 12,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564744. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
       "id": "fd-565848",
       "title": "RB Leipzig – Augsburg",
       "utcDate": "2026-11-07T14:30:00.000Z",
@@ -9743,6 +9803,90 @@
         "matchday": 9,
         "competition": "Bundesliga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565848. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565850",
+      "title": "Dortmund – Elversberg",
+      "utcDate": "2026-11-07T14:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ELV",
+          "name": "Elversberg"
+        },
+        "home": {
+          "tla": "BVB",
+          "name": "Dortmund"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 9",
+          "Home team: Dortmund",
+          "Away team: Elversberg"
+        ],
+        "matchday": 9,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565850. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565851",
+      "title": "Mainz – Bayern",
+      "utcDate": "2026-11-07T14:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FCB",
+          "name": "Bayern"
+        },
+        "home": {
+          "tla": "M05",
+          "name": "Mainz"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 9",
+          "Home team: Mainz",
+          "Away team: Bayern"
+        ],
+        "matchday": 9,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565851. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565853",
+      "title": "SC Paderborn – Frankfurt",
+      "utcDate": "2026-11-07T14:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SGE",
+          "name": "Frankfurt"
+        },
+        "home": {
+          "tla": "SCP",
+          "name": "SC Paderborn"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 9",
+          "Home team: SC Paderborn",
+          "Away team: Frankfurt"
+        ],
+        "matchday": 9,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565853. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BL1"
       }
     },
@@ -9828,6 +9972,34 @@
         "competition": "Premier League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560641. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-565849",
+      "title": "Stuttgart – Bremen",
+      "utcDate": "2026-11-07T17:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SVW",
+          "name": "Bremen"
+        },
+        "home": {
+          "tla": "VFB",
+          "name": "Stuttgart"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 9",
+          "Home team: Stuttgart",
+          "Away team: Bremen"
+        ],
+        "matchday": 9,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565849. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
       }
     },
     {
@@ -9943,6 +10115,34 @@
       }
     },
     {
+      "id": "fd-565855",
+      "title": "1. FC Köln – Leverkusen",
+      "utcDate": "2026-11-08T14:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "B04",
+          "name": "Leverkusen"
+        },
+        "home": {
+          "tla": "KOE",
+          "name": "1. FC Köln"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 9",
+          "Home team: 1. FC Köln",
+          "Away team: Leverkusen"
+        ],
+        "matchday": 9,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565855. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
       "id": "fd-560639",
       "title": "Man United – Aston Villa",
       "utcDate": "2026-11-08T16:30:00.000Z",
@@ -9968,6 +10168,62 @@
         "competition": "Premier League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560639. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-565854",
+      "title": "Freiburg – Union Berlin",
+      "utcDate": "2026-11-08T16:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "UNB",
+          "name": "Union Berlin"
+        },
+        "home": {
+          "tla": "SCF",
+          "name": "Freiburg"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 9",
+          "Home team: Freiburg",
+          "Away team: Union Berlin"
+        ],
+        "matchday": 9,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565854. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565856",
+      "title": "Hoffenheim – Schalke",
+      "utcDate": "2026-11-08T18:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "S04",
+          "name": "Schalke"
+        },
+        "home": {
+          "tla": "TSG",
+          "name": "Hoffenheim"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 9",
+          "Home team: Hoffenheim",
+          "Away team: Schalke"
+        ],
+        "matchday": 9,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565856. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
       }
     }
   ]
