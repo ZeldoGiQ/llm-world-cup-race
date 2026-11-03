@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-03T10:00:57.276Z",
+  "updatedAt": "2026-11-03T23:38:58.799Z",
   "events": [
     {
       "id": "fd-554940",
@@ -9947,6 +9947,34 @@
       }
     },
     {
+      "id": "fd-564745",
+      "title": "Espanyol – Deportivo",
+      "utcDate": "2026-11-07T15:15:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "DEP",
+          "name": "Deportivo"
+        },
+        "home": {
+          "tla": "ESP",
+          "name": "Espanyol"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 12",
+          "Home team: Espanyol",
+          "Away team: Deportivo"
+        ],
+        "matchday": 12,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564745. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
       "id": "fd-560641",
       "title": "Nottingham – Man City",
       "utcDate": "2026-11-07T17:30:00.000Z",
@@ -9972,6 +10000,34 @@
         "competition": "Premier League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560641. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-564739",
+      "title": "Osasuna – Athletic",
+      "utcDate": "2026-11-07T17:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ATH",
+          "name": "Athletic"
+        },
+        "home": {
+          "tla": "OSA",
+          "name": "Osasuna"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 12",
+          "Home team: Osasuna",
+          "Away team: Athletic"
+        ],
+        "matchday": 12,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564739. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
       }
     },
     {
