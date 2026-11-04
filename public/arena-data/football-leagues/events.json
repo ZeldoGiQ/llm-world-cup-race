@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-03T23:38:58.799Z",
+  "updatedAt": "2026-11-04T03:14:35.468Z",
   "events": [
     {
       "id": "fd-554940",
@@ -9138,9 +9138,13 @@
       "id": "fd-575377",
       "title": "Shaktar – Sporting CP",
       "utcDate": "2026-11-03T17:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SPO",
@@ -9166,9 +9170,13 @@
       "id": "fd-575378",
       "title": "Galatasaray – Stuttgart",
       "utcDate": "2026-11-03T17:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "VFB",
@@ -9194,9 +9202,13 @@
       "id": "fd-575379",
       "title": "Feyenoord – Inter",
       "utcDate": "2026-11-03T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "INT",
@@ -9222,9 +9234,13 @@
       "id": "fd-575380",
       "title": "Barça – Aston Villa",
       "utcDate": "2026-11-03T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "AVL",
@@ -9250,9 +9266,13 @@
       "id": "fd-575381",
       "title": "Atleti – Bayern",
       "utcDate": "2026-11-03T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCB",
@@ -9278,9 +9298,13 @@
       "id": "fd-575382",
       "title": "Villarreal – PSG",
       "utcDate": "2026-11-03T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 6,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "PSG",
@@ -9306,9 +9330,13 @@
       "id": "fd-575383",
       "title": "Man United – Roma",
       "utcDate": "2026-11-03T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ROM",
@@ -9334,9 +9362,13 @@
       "id": "fd-575384",
       "title": "Bodø/Glimt – Lille",
       "utcDate": "2026-11-03T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LIL",
@@ -9362,9 +9394,13 @@
       "id": "fd-575385",
       "title": "LASK – Sl. Bratislava",
       "utcDate": "2026-11-03T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SBA",
@@ -9664,6 +9700,34 @@
         "competition": "Bundesliga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565852. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-558537",
+      "title": "Venezia FC – Udinese",
+      "utcDate": "2026-11-06T19:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "UDI",
+          "name": "Udinese"
+        },
+        "home": {
+          "tla": "VEN",
+          "name": "Venezia FC"
+        },
+        "context": [
+          "Competition: Serie A",
+          "Matchday: 11",
+          "Home team: Venezia FC",
+          "Away team: Udinese"
+        ],
+        "matchday": 11,
+        "competition": "Serie A",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558537. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "SA"
       }
     },
     {
@@ -10059,6 +10123,62 @@
       }
     },
     {
+      "id": "fd-564741",
+      "title": "Valencia – Real Madrid",
+      "utcDate": "2026-11-07T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "RMA",
+          "name": "Real Madrid"
+        },
+        "home": {
+          "tla": "VAL",
+          "name": "Valencia"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 12",
+          "Home team: Valencia",
+          "Away team: Real Madrid"
+        ],
+        "matchday": 12,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564741. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-564738",
+      "title": "Elche – Real Betis",
+      "utcDate": "2026-11-08T13:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BET",
+          "name": "Real Betis"
+        },
+        "home": {
+          "tla": "ELC",
+          "name": "Elche"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 12",
+          "Home team: Elche",
+          "Away team: Real Betis"
+        ],
+        "matchday": 12,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564738. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
       "id": "fd-560635",
       "title": "Crystal Palace – Liverpool",
       "utcDate": "2026-11-08T14:00:00.000Z",
@@ -10199,6 +10319,34 @@
       }
     },
     {
+      "id": "fd-564743",
+      "title": "Real Sociedad – Rayo Vallecano",
+      "utcDate": "2026-11-08T15:15:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "RAY",
+          "name": "Rayo Vallecano"
+        },
+        "home": {
+          "tla": "RSO",
+          "name": "Real Sociedad"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 12",
+          "Home team: Real Sociedad",
+          "Away team: Rayo Vallecano"
+        ],
+        "matchday": 12,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564743. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
       "id": "fd-560639",
       "title": "Man United – Aston Villa",
       "utcDate": "2026-11-08T16:30:00.000Z",
@@ -10255,6 +10403,62 @@
       }
     },
     {
+      "id": "fd-564742",
+      "title": "Celta – Levante",
+      "utcDate": "2026-11-08T17:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "LEV",
+          "name": "Levante"
+        },
+        "home": {
+          "tla": "CEL",
+          "name": "Celta"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 12",
+          "Home team: Celta",
+          "Away team: Levante"
+        ],
+        "matchday": 12,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564742. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-564747",
+      "title": "Villarreal – Getafe",
+      "utcDate": "2026-11-08T17:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "GET",
+          "name": "Getafe"
+        },
+        "home": {
+          "tla": "VIL",
+          "name": "Villarreal"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 12",
+          "Home team: Villarreal",
+          "Away team: Getafe"
+        ],
+        "matchday": 12,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564747. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
       "id": "fd-565856",
       "title": "Hoffenheim – Schalke",
       "utcDate": "2026-11-08T18:30:00.000Z",
@@ -10280,6 +10484,34 @@
         "competition": "Bundesliga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565856. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-564746",
+      "title": "Atleti – Barça",
+      "utcDate": "2026-11-08T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FCB",
+          "name": "Barça"
+        },
+        "home": {
+          "tla": "ATL",
+          "name": "Atleti"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 12",
+          "Home team: Atleti",
+          "Away team: Barça"
+        ],
+        "matchday": 12,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564746. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
       }
     }
   ]
