@@ -94,6 +94,15 @@
     "access": "early-access"
   },
   {
+    "id": "glm-5.3-prime",
+    "name": "GLM 5.3 Prime",
+    "provider": "Z.ai",
+    "color": "#14b8a6",
+    "version": "z-ai/glm-5.3-prime",
+    "releaseDate": "2026-11-04",
+    "access": "early-access"
+  },
+  {
     "id": "gpt",
     "name": "GPT-5.5",
     "provider": "OpenAI",
