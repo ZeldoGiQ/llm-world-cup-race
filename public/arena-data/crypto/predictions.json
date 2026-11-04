@@ -9551,6 +9551,13 @@
         },
         "createdAt": "2026-11-03T11:12:28.469Z"
       },
+      "glm-5.3-prime": {
+        "value": {
+          "kind": "numeric",
+          "value": 76920
+        },
+        "createdAt": "2026-11-04T14:27:34.511Z"
+      },
       "gpt-6.1": {
         "value": {
           "kind": "numeric",
@@ -9664,6 +9671,13 @@
           "value": 2252.89
         },
         "createdAt": "2026-11-03T11:18:06.581Z"
+      },
+      "glm-5.3-prime": {
+        "value": {
+          "kind": "numeric",
+          "value": 2252.89
+        },
+        "createdAt": "2026-11-04T14:27:41.728Z"
       },
       "gpt-6.1": {
         "value": {
@@ -9779,6 +9793,13 @@
         },
         "createdAt": "2026-11-04T06:02:52.118Z"
       },
+      "glm-5.3-prime": {
+        "value": {
+          "kind": "numeric",
+          "value": 76904
+        },
+        "createdAt": "2026-11-04T14:28:19.048Z"
+      },
       "gpt-6.1": {
         "value": {
           "kind": "numeric",
@@ -9892,6 +9913,13 @@
           "value": 2260
         },
         "createdAt": "2026-11-04T06:06:55.172Z"
+      },
+      "glm-5.3-prime": {
+        "value": {
+          "kind": "numeric",
+          "value": 2263.02
+        },
+        "createdAt": "2026-11-04T14:28:26.905Z"
       },
       "gpt-6.1": {
         "value": {
