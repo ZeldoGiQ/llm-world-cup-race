@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-04T03:14:35.468Z",
+  "updatedAt": "2026-11-05T00:31:05.728Z",
   "events": [
     {
       "id": "fd-554940",
@@ -9426,9 +9426,13 @@
       "id": "fd-575386",
       "title": "PAE AEK – Real Madrid",
       "utcDate": "2026-11-04T17:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "RMA",
@@ -9454,9 +9458,13 @@
       "id": "fd-575387",
       "title": "Fenerbahçe – Liverpool",
       "utcDate": "2026-11-04T17:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LIV",
@@ -9482,9 +9490,13 @@
       "id": "fd-575388",
       "title": "RB Leipzig – Man City",
       "utcDate": "2026-11-04T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "MCI",
@@ -9510,9 +9522,13 @@
       "id": "fd-575389",
       "title": "Slavia Praha – Arsenal",
       "utcDate": "2026-11-04T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ARS",
@@ -9538,9 +9554,13 @@
       "id": "fd-575390",
       "title": "PSV – Club Brugge",
       "utcDate": "2026-11-04T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BRU",
@@ -9566,9 +9586,13 @@
       "id": "fd-575391",
       "title": "Dortmund – Real Betis",
       "utcDate": "2026-11-04T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BET",
@@ -9594,9 +9618,13 @@
       "id": "fd-575392",
       "title": "Porto – Napoli",
       "utcDate": "2026-11-04T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "NAP",
@@ -9622,9 +9650,13 @@
       "id": "fd-575393",
       "title": "RC Lens – Como 1907",
       "utcDate": "2026-11-04T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 9,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "COM",
@@ -9650,9 +9682,13 @@
       "id": "fd-575394",
       "title": "Viking – Sabah FK",
       "utcDate": "2026-11-04T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SAB",
