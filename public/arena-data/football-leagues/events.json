@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-05T00:31:05.728Z",
+  "updatedAt": "2026-11-06T02:47:49.515Z",
   "events": [
     {
       "id": "fd-554940",
@@ -9879,6 +9879,62 @@
       }
     },
     {
+      "id": "fd-558532",
+      "title": "Torino – Lecce",
+      "utcDate": "2026-11-07T14:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "USL",
+          "name": "Lecce"
+        },
+        "home": {
+          "tla": "TOR",
+          "name": "Torino"
+        },
+        "context": [
+          "Competition: Serie A",
+          "Matchday: 11",
+          "Home team: Torino",
+          "Away team: Lecce"
+        ],
+        "matchday": 11,
+        "competition": "Serie A",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558532. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "SA"
+      }
+    },
+    {
+      "id": "fd-558534",
+      "title": "Cagliari – Frosinone",
+      "utcDate": "2026-11-07T14:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FRO",
+          "name": "Frosinone"
+        },
+        "home": {
+          "tla": "CAG",
+          "name": "Cagliari"
+        },
+        "context": [
+          "Competition: Serie A",
+          "Matchday: 11",
+          "Home team: Cagliari",
+          "Away team: Frosinone"
+        ],
+        "matchday": 11,
+        "competition": "Serie A",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558534. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "SA"
+      }
+    },
+    {
       "id": "fd-565848",
       "title": "RB Leipzig – Augsburg",
       "utcDate": "2026-11-07T14:30:00.000Z",
@@ -10075,6 +10131,34 @@
       }
     },
     {
+      "id": "fd-558535",
+      "title": "Parma – Bologna",
+      "utcDate": "2026-11-07T17:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BOL",
+          "name": "Bologna"
+        },
+        "home": {
+          "tla": "PAR",
+          "name": "Parma"
+        },
+        "context": [
+          "Competition: Serie A",
+          "Matchday: 11",
+          "Home team: Parma",
+          "Away team: Bologna"
+        ],
+        "matchday": 11,
+        "competition": "Serie A",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558535. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "SA"
+      }
+    },
+    {
       "id": "fd-560641",
       "title": "Nottingham – Man City",
       "utcDate": "2026-11-07T17:30:00.000Z",
@@ -10156,6 +10240,34 @@
         "competition": "Bundesliga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565849. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-558531",
+      "title": "Roma – Sassuolo",
+      "utcDate": "2026-11-07T19:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SAS",
+          "name": "Sassuolo"
+        },
+        "home": {
+          "tla": "ROM",
+          "name": "Roma"
+        },
+        "context": [
+          "Competition: Serie A",
+          "Matchday: 11",
+          "Home team: Roma",
+          "Away team: Sassuolo"
+        ],
+        "matchday": 11,
+        "competition": "Serie A",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558531. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "SA"
       }
     },
     {
