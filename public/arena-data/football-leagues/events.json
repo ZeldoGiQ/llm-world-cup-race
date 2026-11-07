@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-07T16:37:22.974Z",
+  "updatedAt": "2026-11-07T20:28:50.176Z",
   "events": [
     {
       "id": "fd-554940",
@@ -10939,6 +10939,34 @@
       }
     },
     {
+      "id": "fd-567349",
+      "title": "Vitória SC – Porto",
+      "utcDate": "2026-11-08T18:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FCP",
+          "name": "Porto"
+        },
+        "home": {
+          "tla": "GUI",
+          "name": "Vitória SC"
+        },
+        "context": [
+          "Competition: Primeira Liga",
+          "Matchday: 11",
+          "Home team: Vitória SC",
+          "Away team: Porto"
+        ],
+        "matchday": 11,
+        "competition": "Primeira Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 567349. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PPL"
+      }
+    },
+    {
       "id": "fd-565856",
       "title": "Hoffenheim – Schalke",
       "utcDate": "2026-11-08T18:30:00.000Z",
@@ -10964,6 +10992,34 @@
         "competition": "Bundesliga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565856. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-558838",
+      "title": "Utrecht – NEC",
+      "utcDate": "2026-11-08T19:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "NEC",
+          "name": "NEC"
+        },
+        "home": {
+          "tla": "UTR",
+          "name": "Utrecht"
+        },
+        "context": [
+          "Competition: Eredivisie",
+          "Matchday: 12",
+          "Home team: Utrecht",
+          "Away team: NEC"
+        ],
+        "matchday": 12,
+        "competition": "Eredivisie",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558838. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "DED"
       }
     },
     {
@@ -11048,6 +11104,62 @@
         "competition": "La Liga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564746. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-567354",
+      "title": "Rio Ave – Braga",
+      "utcDate": "2026-11-08T20:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SCB",
+          "name": "Braga"
+        },
+        "home": {
+          "tla": "RIO",
+          "name": "Rio Ave"
+        },
+        "context": [
+          "Competition: Primeira Liga",
+          "Matchday: 11",
+          "Home team: Rio Ave",
+          "Away team: Braga"
+        ],
+        "matchday": 11,
+        "competition": "Primeira Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 567354. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PPL"
+      }
+    },
+    {
+      "id": "fd-567355",
+      "title": "Amadora – SL Benfica",
+      "utcDate": "2026-11-08T20:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BEN",
+          "name": "SL Benfica"
+        },
+        "home": {
+          "tla": "AMA",
+          "name": "Amadora"
+        },
+        "context": [
+          "Competition: Primeira Liga",
+          "Matchday: 11",
+          "Home team: Amadora",
+          "Away team: SL Benfica"
+        ],
+        "matchday": 11,
+        "competition": "Primeira Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 567355. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PPL"
       }
     },
     {
