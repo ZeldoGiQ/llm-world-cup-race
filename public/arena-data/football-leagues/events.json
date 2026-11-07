@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-07T03:11:01.991Z",
+  "updatedAt": "2026-11-07T16:37:22.974Z",
   "events": [
     {
       "id": "fd-554940",
@@ -9842,9 +9842,13 @@
       "id": "fd-560632",
       "title": "Leeds United – Tottenham",
       "utcDate": "2026-11-07T12:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "TOT",
@@ -9870,9 +9874,13 @@
       "id": "fd-564744",
       "title": "Málaga – Santander",
       "utcDate": "2026-11-07T13:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SAN",
