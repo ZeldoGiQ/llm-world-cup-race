@@ -10454,6 +10454,24 @@
         },
         "createdAt": "2026-11-06T07:28:14.197Z"
       }
+    },
+    "cg-btc-2026-11-09": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 75826
+        },
+        "createdAt": "2026-11-07T00:07:18.183Z"
+      }
+    },
+    "cg-eth-2026-11-09": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 2237.53
+        },
+        "createdAt": "2026-11-07T00:07:18.183Z"
+      }
     }
   }
 }

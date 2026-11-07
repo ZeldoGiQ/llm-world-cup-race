@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-06T23:29:33.045Z",
+  "updatedAt": "2026-11-07T03:11:01.991Z",
   "events": [
     {
       "id": "fd-554940",
@@ -9714,9 +9714,13 @@
       "id": "fd-565852",
       "title": "HSV – M'gladbach",
       "utcDate": "2026-11-06T19:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BMG",
@@ -9742,9 +9746,13 @@
       "id": "fd-558537",
       "title": "Venezia FC – Udinese",
       "utcDate": "2026-11-06T19:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "UDI",
@@ -9770,9 +9778,13 @@
       "id": "fd-560634",
       "title": "Everton – Coventry City",
       "utcDate": "2026-11-06T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "COV",
@@ -9798,9 +9810,13 @@
       "id": "fd-564740",
       "title": "Sevilla FC – Alavés",
       "utcDate": "2026-11-06T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ALA",
@@ -11051,6 +11067,118 @@
         "matchday": 35,
         "competition": "Brasileirão",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 555085. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-555081",
+      "title": "Coritiba – Santos",
+      "utcDate": "2026-11-18T22:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SAN",
+          "name": "Santos"
+        },
+        "home": {
+          "tla": "COR",
+          "name": "Coritiba"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 35",
+          "Home team: Coritiba",
+          "Away team: Santos"
+        ],
+        "matchday": 35,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 555081. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-555086",
+      "title": "Clube do Remo – Chapecoense",
+      "utcDate": "2026-11-18T23:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "CHA",
+          "name": "Chapecoense"
+        },
+        "home": {
+          "tla": "CRE",
+          "name": "Clube do Remo"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 35",
+          "Home team: Clube do Remo",
+          "Away team: Chapecoense"
+        ],
+        "matchday": 35,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 555086. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-555082",
+      "title": "Cruzeiro – Palmeiras",
+      "utcDate": "2026-11-18T23:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "PAL",
+          "name": "Palmeiras"
+        },
+        "home": {
+          "tla": "CRU",
+          "name": "Cruzeiro"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 35",
+          "Home team: Cruzeiro",
+          "Away team: Palmeiras"
+        ],
+        "matchday": 35,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 555082. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-555083",
+      "title": "Flamengo – Paranaense",
+      "utcDate": "2026-11-18T23:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "CAP",
+          "name": "Paranaense"
+        },
+        "home": {
+          "tla": "FLA",
+          "name": "Flamengo"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 35",
+          "Home team: Flamengo",
+          "Away team: Paranaense"
+        ],
+        "matchday": 35,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 555083. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BSA"
       }
     }
