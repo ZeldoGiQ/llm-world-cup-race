@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-07T20:28:50.176Z",
+  "updatedAt": "2026-11-07T23:55:36.762Z",
   "events": [
     {
       "id": "fd-554940",
@@ -9906,9 +9906,13 @@
       "id": "fd-558532",
       "title": "Torino – Lecce",
       "utcDate": "2026-11-07T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "USL",
@@ -9934,9 +9938,13 @@
       "id": "fd-558534",
       "title": "Cagliari – Frosinone",
       "utcDate": "2026-11-07T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FRO",
@@ -9962,9 +9970,13 @@
       "id": "fd-565848",
       "title": "RB Leipzig – Augsburg",
       "utcDate": "2026-11-07T14:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 5,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCA",
@@ -9990,9 +10002,13 @@
       "id": "fd-565850",
       "title": "Dortmund – Elversberg",
       "utcDate": "2026-11-07T14:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ELV",
@@ -10018,9 +10034,13 @@
       "id": "fd-565851",
       "title": "Mainz – Bayern",
       "utcDate": "2026-11-07T14:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCB",
@@ -10046,9 +10066,13 @@
       "id": "fd-565853",
       "title": "SC Paderborn – Frankfurt",
       "utcDate": "2026-11-07T14:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SGE",
@@ -10074,9 +10098,13 @@
       "id": "fd-560633",
       "title": "Fulham – Newcastle",
       "utcDate": "2026-11-07T15:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "NEW",
@@ -10102,9 +10130,13 @@
       "id": "fd-560640",
       "title": "Arsenal – Hull City",
       "utcDate": "2026-11-07T15:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "HUL",
@@ -10130,9 +10162,13 @@
       "id": "fd-564745",
       "title": "Espanyol – Deportivo",
       "utcDate": "2026-11-07T15:15:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "DEP",
@@ -10158,9 +10194,13 @@
       "id": "fd-558535",
       "title": "Parma – Bologna",
       "utcDate": "2026-11-07T17:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BOL",
@@ -10186,9 +10226,13 @@
       "id": "fd-560641",
       "title": "Nottingham – Man City",
       "utcDate": "2026-11-07T17:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "MCI",
@@ -10214,9 +10258,13 @@
       "id": "fd-564739",
       "title": "Osasuna – Athletic",
       "utcDate": "2026-11-07T17:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ATH",
@@ -10242,9 +10290,13 @@
       "id": "fd-565849",
       "title": "Stuttgart – Bremen",
       "utcDate": "2026-11-07T17:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SVW",
