@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-08T19:05:20.917Z",
+  "updatedAt": "2026-11-08T23:07:03.344Z",
   "events": [
     {
       "id": "fd-554940",
@@ -10514,9 +10514,13 @@
       "id": "fd-558536",
       "title": "Genoa – Milan",
       "utcDate": "2026-11-08T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "MIL",
@@ -10542,9 +10546,13 @@
       "id": "fd-558538",
       "title": "Monza – Atalanta",
       "utcDate": "2026-11-08T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ATA",
@@ -10570,9 +10578,13 @@
       "id": "fd-559636",
       "title": "Stade Rennais – Lille",
       "utcDate": "2026-11-08T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LIL",
@@ -10598,9 +10610,13 @@
       "id": "fd-560635",
       "title": "Crystal Palace – Liverpool",
       "utcDate": "2026-11-08T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LIV",
@@ -10626,9 +10642,13 @@
       "id": "fd-560636",
       "title": "Sunderland – Chelsea",
       "utcDate": "2026-11-08T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CHE",
@@ -10654,9 +10674,13 @@
       "id": "fd-560637",
       "title": "Ipswich Town – Bournemouth",
       "utcDate": "2026-11-08T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BOU",
@@ -10682,9 +10706,13 @@
       "id": "fd-560638",
       "title": "Brighton Hove – Brentford",
       "utcDate": "2026-11-08T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BRE",
@@ -10710,9 +10738,13 @@
       "id": "fd-565855",
       "title": "1. FC Köln – Leverkusen",
       "utcDate": "2026-11-08T14:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "B04",
@@ -10738,9 +10770,13 @@
       "id": "fd-564743",
       "title": "Real Sociedad – Rayo Vallecano",
       "utcDate": "2026-11-08T15:15:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "RAY",
@@ -10766,9 +10802,13 @@
       "id": "fd-559631",
       "title": "Le Mans – Monaco",
       "utcDate": "2026-11-08T16:15:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ASM",
@@ -10794,9 +10834,13 @@
       "id": "fd-559632",
       "title": "Brest – Olympique Lyon",
       "utcDate": "2026-11-08T16:15:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LYO",
@@ -10822,9 +10866,13 @@
       "id": "fd-559633",
       "title": "Le Havre – Lorient",
       "utcDate": "2026-11-08T16:15:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCL",
@@ -10850,9 +10898,13 @@
       "id": "fd-559634",
       "title": "Angers SCO – Nice",
       "utcDate": "2026-11-08T16:15:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "NIC",
@@ -10878,9 +10930,13 @@
       "id": "fd-560639",
       "title": "Man United – Aston Villa",
       "utcDate": "2026-11-08T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 4,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "AVL",
@@ -10906,9 +10962,13 @@
       "id": "fd-565854",
       "title": "Freiburg – Union Berlin",
       "utcDate": "2026-11-08T16:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "UNB",
@@ -10934,9 +10994,13 @@
       "id": "fd-558530",
       "title": "Inter – Como 1907",
       "utcDate": "2026-11-08T17:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "COM",
@@ -10962,9 +11026,13 @@
       "id": "fd-564742",
       "title": "Celta – Levante",
       "utcDate": "2026-11-08T17:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LEV",
@@ -10990,9 +11058,13 @@
       "id": "fd-564747",
       "title": "Villarreal – Getafe",
       "utcDate": "2026-11-08T17:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "GET",
@@ -11018,9 +11090,13 @@
       "id": "fd-567349",
       "title": "Vitória SC – Porto",
       "utcDate": "2026-11-08T18:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCP",
@@ -11046,9 +11122,13 @@
       "id": "fd-565856",
       "title": "Hoffenheim – Schalke",
       "utcDate": "2026-11-08T18:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "S04",
@@ -11074,9 +11154,13 @@
       "id": "fd-558838",
       "title": "Utrecht – NEC",
       "utcDate": "2026-11-08T19:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "NEC",
