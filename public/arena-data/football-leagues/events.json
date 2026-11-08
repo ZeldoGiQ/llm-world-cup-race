@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-08T06:40:05.277Z",
+  "updatedAt": "2026-11-08T13:51:35.444Z",
   "events": [
     {
       "id": "fd-554940",
@@ -11367,6 +11367,118 @@
         "matchday": 35,
         "competition": "Brasileirão",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 555083. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-555080",
+      "title": "Corinthians – Botafogo",
+      "utcDate": "2026-11-19T00:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BOT",
+          "name": "Botafogo"
+        },
+        "home": {
+          "tla": "COR",
+          "name": "Corinthians"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 35",
+          "Home team: Corinthians",
+          "Away team: Botafogo"
+        ],
+        "matchday": 35,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 555080. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-555084",
+      "title": "Grêmio – Bahia",
+      "utcDate": "2026-11-19T00:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BAH",
+          "name": "Bahia"
+        },
+        "home": {
+          "tla": "FBP",
+          "name": "Grêmio"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 35",
+          "Home team: Grêmio",
+          "Away team: Bahia"
+        ],
+        "matchday": 35,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 555084. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-555088",
+      "title": "Vasco da Gama – Internacional",
+      "utcDate": "2026-11-19T22:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SCI",
+          "name": "Internacional"
+        },
+        "home": {
+          "tla": "VAS",
+          "name": "Vasco da Gama"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 35",
+          "Home team: Vasco da Gama",
+          "Away team: Internacional"
+        ],
+        "matchday": 35,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 555088. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-555089",
+      "title": "Vitória – Bragantino",
+      "utcDate": "2026-11-19T22:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "RBB",
+          "name": "Bragantino"
+        },
+        "home": {
+          "tla": "VIT",
+          "name": "Vitória"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 35",
+          "Home team: Vitória",
+          "Away team: Bragantino"
+        ],
+        "matchday": 35,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 555089. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BSA"
       }
     }

@@ -1,6 +1,6 @@
 {
   "category": "stocks-index",
-  "updatedAt": "2026-11-07T03:11:01.991Z",
+  "updatedAt": "2026-11-08T13:51:35.444Z",
   "events": [
     {
       "id": "yf-gdaxi-2026-08-07",
@@ -1080,6 +1080,96 @@
         "previousClose": 28384.85,
         "resolutionRule": "Closing level of Nasdaq 100 (Yahoo Finance symbol ^NDX) on the last trading day of the week from 2026-11-09 to 2026-11-13, in USD, rounded to two decimals. Read from the daily series of https://query1.finance.yahoo.com/v8/finance/chart/^NDX?interval=1d, field indicators.quote[0].close, with the trading day derived in the exchange's own timezone. If 2026-11-13 is a market holiday, the last trading day of that same week counts. If no close is published for that week, the event is voided and scores nothing for anyone.",
         "previousCloseDate": "2026-10-30"
+      }
+    },
+    {
+      "id": "yf-gdaxi-2026-11-20",
+      "title": "DAX close on 2026-11-20",
+      "titles": {
+        "de": "DAX-Schlusskurs am 2026-11-20",
+        "en": "DAX close on 2026-11-20",
+        "es": "Cierre de DAX el 2026-11-20"
+      },
+      "utcDate": "2026-11-16T00:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "numeric",
+      "resolution": null,
+      "metadata": {
+        "period": "Week ending 2026-11-20",
+        "symbol": "DAX",
+        "context": [
+          "Index: DAX, quoted in EUR",
+          "Last close before lock: 25820.36 on 2026-11-06",
+          "Target: closing level on Friday 2026-11-20 (or the last trading day of that week)",
+          "Predictions lock on Monday 00:00 UTC, so the whole trading week is still ahead."
+        ],
+        "currency": "EUR",
+        "weekStart": "2026-11-16",
+        "targetDate": "2026-11-20",
+        "yahooSymbol": "^GDAXI",
+        "previousClose": 25820.36,
+        "resolutionRule": "Closing level of DAX (Yahoo Finance symbol ^GDAXI) on the last trading day of the week from 2026-11-16 to 2026-11-20, in EUR, rounded to two decimals. Read from the daily series of https://query1.finance.yahoo.com/v8/finance/chart/^GDAXI?interval=1d, field indicators.quote[0].close, with the trading day derived in the exchange's own timezone. If 2026-11-20 is a market holiday, the last trading day of that same week counts. If no close is published for that week, the event is voided and scores nothing for anyone.",
+        "previousCloseDate": "2026-11-06"
+      }
+    },
+    {
+      "id": "yf-gspc-2026-11-20",
+      "title": "S&P 500 close on 2026-11-20",
+      "titles": {
+        "de": "S&P 500-Schlusskurs am 2026-11-20",
+        "en": "S&P 500 close on 2026-11-20",
+        "es": "Cierre de S&P 500 el 2026-11-20"
+      },
+      "utcDate": "2026-11-16T00:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "numeric",
+      "resolution": null,
+      "metadata": {
+        "period": "Week ending 2026-11-20",
+        "symbol": "S&P 500",
+        "context": [
+          "Index: S&P 500, quoted in USD",
+          "Last close before lock: 7376.86 on 2026-11-06",
+          "Target: closing level on Friday 2026-11-20 (or the last trading day of that week)",
+          "Predictions lock on Monday 00:00 UTC, so the whole trading week is still ahead."
+        ],
+        "currency": "USD",
+        "weekStart": "2026-11-16",
+        "targetDate": "2026-11-20",
+        "yahooSymbol": "^GSPC",
+        "previousClose": 7376.86,
+        "resolutionRule": "Closing level of S&P 500 (Yahoo Finance symbol ^GSPC) on the last trading day of the week from 2026-11-16 to 2026-11-20, in USD, rounded to two decimals. Read from the daily series of https://query1.finance.yahoo.com/v8/finance/chart/^GSPC?interval=1d, field indicators.quote[0].close, with the trading day derived in the exchange's own timezone. If 2026-11-20 is a market holiday, the last trading day of that same week counts. If no close is published for that week, the event is voided and scores nothing for anyone.",
+        "previousCloseDate": "2026-11-06"
+      }
+    },
+    {
+      "id": "yf-ndx-2026-11-20",
+      "title": "Nasdaq 100 close on 2026-11-20",
+      "titles": {
+        "de": "Nasdaq 100-Schlusskurs am 2026-11-20",
+        "en": "Nasdaq 100 close on 2026-11-20",
+        "es": "Cierre de Nasdaq 100 el 2026-11-20"
+      },
+      "utcDate": "2026-11-16T00:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "numeric",
+      "resolution": null,
+      "metadata": {
+        "period": "Week ending 2026-11-20",
+        "symbol": "Nasdaq 100",
+        "context": [
+          "Index: Nasdaq 100, quoted in USD",
+          "Last close before lock: 26989.99 on 2026-11-06",
+          "Target: closing level on Friday 2026-11-20 (or the last trading day of that week)",
+          "Predictions lock on Monday 00:00 UTC, so the whole trading week is still ahead."
+        ],
+        "currency": "USD",
+        "weekStart": "2026-11-16",
+        "targetDate": "2026-11-20",
+        "yahooSymbol": "^NDX",
+        "previousClose": 26989.99,
+        "resolutionRule": "Closing level of Nasdaq 100 (Yahoo Finance symbol ^NDX) on the last trading day of the week from 2026-11-16 to 2026-11-20, in USD, rounded to two decimals. Read from the daily series of https://query1.finance.yahoo.com/v8/finance/chart/^NDX?interval=1d, field indicators.quote[0].close, with the trading day derived in the exchange's own timezone. If 2026-11-20 is a market holiday, the last trading day of that same week counts. If no close is published for that week, the event is voided and scores nothing for anyone.",
+        "previousCloseDate": "2026-11-06"
       }
     }
   ]
