@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-08T23:07:03.344Z",
+  "updatedAt": "2026-11-09T02:57:08.500Z",
   "events": [
     {
       "id": "fd-554940",
@@ -11186,9 +11186,13 @@
       "id": "fd-558529",
       "title": "Fiorentina – Juventus",
       "utcDate": "2026-11-08T19:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "JUV",
@@ -11214,9 +11218,13 @@
       "id": "fd-559630",
       "title": "RC Lens – Marseille",
       "utcDate": "2026-11-08T19:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "MAR",
@@ -11242,9 +11250,13 @@
       "id": "fd-564746",
       "title": "Atleti – Barça",
       "utcDate": "2026-11-08T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCB",
@@ -11270,9 +11282,13 @@
       "id": "fd-567354",
       "title": "Rio Ave – Braga",
       "utcDate": "2026-11-08T20:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SCB",
@@ -11298,9 +11314,13 @@
       "id": "fd-567355",
       "title": "Amadora – SL Benfica",
       "utcDate": "2026-11-08T20:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BEN",
