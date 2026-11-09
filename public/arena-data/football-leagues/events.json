@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-09T02:57:08.500Z",
+  "updatedAt": "2026-11-09T22:41:02.306Z",
   "events": [
     {
       "id": "fd-554940",
@@ -11592,6 +11592,118 @@
         "competition": "Brasileirão",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 555089. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-555087",
+      "title": "São Paulo – Fluminense",
+      "utcDate": "2026-11-20T00:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FLU",
+          "name": "Fluminense"
+        },
+        "home": {
+          "tla": "PAU",
+          "name": "São Paulo"
+        },
+        "context": [
+          "Competition: Brasileirão",
+          "Matchday: 35",
+          "Home team: São Paulo",
+          "Away team: Fluminense"
+        ],
+        "matchday": 35,
+        "competition": "Brasileirão",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 555087. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BSA"
+      }
+    },
+    {
+      "id": "fd-565859",
+      "title": "Bayern – 1. FC Köln",
+      "utcDate": "2026-11-20T19:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "KOE",
+          "name": "1. FC Köln"
+        },
+        "home": {
+          "tla": "FCB",
+          "name": "Bayern"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 10",
+          "Home team: Bayern",
+          "Away team: 1. FC Köln"
+        ],
+        "matchday": 10,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565859. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-559622",
+      "title": "Troyes – Le Havre",
+      "utcDate": "2026-11-20T19:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "HAC",
+          "name": "Le Havre"
+        },
+        "home": {
+          "tla": "ETR",
+          "name": "Troyes"
+        },
+        "context": [
+          "Competition: Ligue 1",
+          "Matchday: 11",
+          "Home team: Troyes",
+          "Away team: Le Havre"
+        ],
+        "matchday": 11,
+        "competition": "Ligue 1",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 559622. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "FL1"
+      }
+    },
+    {
+      "id": "fd-564748",
+      "title": "Athletic – Espanyol",
+      "utcDate": "2026-11-20T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ESP",
+          "name": "Espanyol"
+        },
+        "home": {
+          "tla": "ATH",
+          "name": "Athletic"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 13",
+          "Home team: Athletic",
+          "Away team: Espanyol"
+        ],
+        "matchday": 13,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564748. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
       }
     }
   ]
