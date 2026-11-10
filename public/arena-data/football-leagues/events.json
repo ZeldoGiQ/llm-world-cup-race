@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-09T22:41:02.306Z",
+  "updatedAt": "2026-11-10T04:19:20.135Z",
   "events": [
     {
       "id": "fd-554940",
@@ -11703,6 +11703,734 @@
         "matchday": 13,
         "competition": "La Liga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564748. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-560643",
+      "title": "Man City – Fulham",
+      "utcDate": "2026-11-21T12:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FUL",
+          "name": "Fulham"
+        },
+        "home": {
+          "tla": "MCI",
+          "name": "Man City"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 11",
+          "Home team: Man City",
+          "Away team: Fulham"
+        ],
+        "matchday": 11,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560643. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-564755",
+      "title": "Alavés – Deportivo",
+      "utcDate": "2026-11-21T13:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "DEP",
+          "name": "Deportivo"
+        },
+        "home": {
+          "tla": "ALA",
+          "name": "Alavés"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 13",
+          "Home team: Alavés",
+          "Away team: Deportivo"
+        ],
+        "matchday": 13,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564755. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-558525",
+      "title": "Como 1907 – Cagliari",
+      "utcDate": "2026-11-21T14:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "CAG",
+          "name": "Cagliari"
+        },
+        "home": {
+          "tla": "COM",
+          "name": "Como 1907"
+        },
+        "context": [
+          "Competition: Serie A",
+          "Matchday: 12",
+          "Home team: Como 1907",
+          "Away team: Cagliari"
+        ],
+        "matchday": 12,
+        "competition": "Serie A",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558525. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "SA"
+      }
+    },
+    {
+      "id": "fd-558528",
+      "title": "Lazio – Lecce",
+      "utcDate": "2026-11-21T14:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "USL",
+          "name": "Lecce"
+        },
+        "home": {
+          "tla": "LAZ",
+          "name": "Lazio"
+        },
+        "context": [
+          "Competition: Serie A",
+          "Matchday: 12",
+          "Home team: Lazio",
+          "Away team: Lecce"
+        ],
+        "matchday": 12,
+        "competition": "Serie A",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558528. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "SA"
+      }
+    },
+    {
+      "id": "fd-565857",
+      "title": "Leverkusen – SC Paderborn",
+      "utcDate": "2026-11-21T14:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SCP",
+          "name": "SC Paderborn"
+        },
+        "home": {
+          "tla": "B04",
+          "name": "Leverkusen"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 10",
+          "Home team: Leverkusen",
+          "Away team: SC Paderborn"
+        ],
+        "matchday": 10,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565857. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565858",
+      "title": "Union Berlin – RB Leipzig",
+      "utcDate": "2026-11-21T14:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "RBL",
+          "name": "RB Leipzig"
+        },
+        "home": {
+          "tla": "UNB",
+          "name": "Union Berlin"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 10",
+          "Home team: Union Berlin",
+          "Away team: RB Leipzig"
+        ],
+        "matchday": 10,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565858. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565860",
+      "title": "Elversberg – Freiburg",
+      "utcDate": "2026-11-21T14:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SCF",
+          "name": "Freiburg"
+        },
+        "home": {
+          "tla": "ELV",
+          "name": "Elversberg"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 10",
+          "Home team: Elversberg",
+          "Away team: Freiburg"
+        ],
+        "matchday": 10,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565860. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565862",
+      "title": "M'gladbach – Dortmund",
+      "utcDate": "2026-11-21T14:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BVB",
+          "name": "Dortmund"
+        },
+        "home": {
+          "tla": "BMG",
+          "name": "M'gladbach"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 10",
+          "Home team: M'gladbach",
+          "Away team: Dortmund"
+        ],
+        "matchday": 10,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565862. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565865",
+      "title": "Frankfurt – Hoffenheim",
+      "utcDate": "2026-11-21T14:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "TSG",
+          "name": "Hoffenheim"
+        },
+        "home": {
+          "tla": "SGE",
+          "name": "Frankfurt"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 10",
+          "Home team: Frankfurt",
+          "Away team: Hoffenheim"
+        ],
+        "matchday": 10,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565865. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-560642",
+      "title": "Chelsea – Leeds United",
+      "utcDate": "2026-11-21T15:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "LEE",
+          "name": "Leeds United"
+        },
+        "home": {
+          "tla": "CHE",
+          "name": "Chelsea"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 11",
+          "Home team: Chelsea",
+          "Away team: Leeds United"
+        ],
+        "matchday": 11,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560642. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560644",
+      "title": "Aston Villa – Sunderland",
+      "utcDate": "2026-11-21T15:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SUN",
+          "name": "Sunderland"
+        },
+        "home": {
+          "tla": "AVL",
+          "name": "Aston Villa"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 11",
+          "Home team: Aston Villa",
+          "Away team: Sunderland"
+        ],
+        "matchday": 11,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560644. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560647",
+      "title": "Bournemouth – Nottingham",
+      "utcDate": "2026-11-21T15:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "NOT",
+          "name": "Nottingham"
+        },
+        "home": {
+          "tla": "BOU",
+          "name": "Bournemouth"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 11",
+          "Home team: Bournemouth",
+          "Away team: Nottingham"
+        ],
+        "matchday": 11,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560647. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560648",
+      "title": "Tottenham – Ipswich Town",
+      "utcDate": "2026-11-21T15:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "IPS",
+          "name": "Ipswich Town"
+        },
+        "home": {
+          "tla": "TOT",
+          "name": "Tottenham"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 11",
+          "Home team: Tottenham",
+          "Away team: Ipswich Town"
+        ],
+        "matchday": 11,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560648. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560650",
+      "title": "Coventry City – Crystal Palace",
+      "utcDate": "2026-11-21T15:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "CRY",
+          "name": "Crystal Palace"
+        },
+        "home": {
+          "tla": "COV",
+          "name": "Coventry City"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 11",
+          "Home team: Coventry City",
+          "Away team: Crystal Palace"
+        ],
+        "matchday": 11,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560650. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-564751",
+      "title": "Rayo Vallecano – Valencia",
+      "utcDate": "2026-11-21T15:15:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "VAL",
+          "name": "Valencia"
+        },
+        "home": {
+          "tla": "RAY",
+          "name": "Rayo Vallecano"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 13",
+          "Home team: Rayo Vallecano",
+          "Away team: Valencia"
+        ],
+        "matchday": 13,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564751. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-559628",
+      "title": "Nice – PSG",
+      "utcDate": "2026-11-21T16:15:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "PSG",
+          "name": "PSG"
+        },
+        "home": {
+          "tla": "NIC",
+          "name": "Nice"
+        },
+        "context": [
+          "Competition: Ligue 1",
+          "Matchday: 11",
+          "Home team: Nice",
+          "Away team: PSG"
+        ],
+        "matchday": 11,
+        "competition": "Ligue 1",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 559628. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "FL1"
+      }
+    },
+    {
+      "id": "fd-558526",
+      "title": "Parma – Roma",
+      "utcDate": "2026-11-21T17:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ROM",
+          "name": "Roma"
+        },
+        "home": {
+          "tla": "PAR",
+          "name": "Parma"
+        },
+        "context": [
+          "Competition: Serie A",
+          "Matchday: 12",
+          "Home team: Parma",
+          "Away team: Roma"
+        ],
+        "matchday": 12,
+        "competition": "Serie A",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558526. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "SA"
+      }
+    },
+    {
+      "id": "fd-560651",
+      "title": "Newcastle – Arsenal",
+      "utcDate": "2026-11-21T17:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ARS",
+          "name": "Arsenal"
+        },
+        "home": {
+          "tla": "NEW",
+          "name": "Newcastle"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 11",
+          "Home team: Newcastle",
+          "Away team: Arsenal"
+        ],
+        "matchday": 11,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560651. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-564756",
+      "title": "Sevilla FC – Real Betis",
+      "utcDate": "2026-11-21T17:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BET",
+          "name": "Real Betis"
+        },
+        "home": {
+          "tla": "SEV",
+          "name": "Sevilla FC"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 13",
+          "Home team: Sevilla FC",
+          "Away team: Real Betis"
+        ],
+        "matchday": 13,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564756. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-565861",
+      "title": "Schalke – Stuttgart",
+      "utcDate": "2026-11-21T17:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "VFB",
+          "name": "Stuttgart"
+        },
+        "home": {
+          "tla": "S04",
+          "name": "Schalke"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 10",
+          "Home team: Schalke",
+          "Away team: Stuttgart"
+        ],
+        "matchday": 10,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565861. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-558527",
+      "title": "Napoli – Torino",
+      "utcDate": "2026-11-21T19:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "TOR",
+          "name": "Torino"
+        },
+        "home": {
+          "tla": "NAP",
+          "name": "Napoli"
+        },
+        "context": [
+          "Competition: Serie A",
+          "Matchday: 12",
+          "Home team: Napoli",
+          "Away team: Torino"
+        ],
+        "matchday": 12,
+        "competition": "Serie A",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 558527. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "SA"
+      }
+    },
+    {
+      "id": "fd-559621",
+      "title": "Monaco – Auxerre",
+      "utcDate": "2026-11-21T19:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "AJA",
+          "name": "Auxerre"
+        },
+        "home": {
+          "tla": "ASM",
+          "name": "Monaco"
+        },
+        "context": [
+          "Competition: Ligue 1",
+          "Matchday: 11",
+          "Home team: Monaco",
+          "Away team: Auxerre"
+        ],
+        "matchday": 11,
+        "competition": "Ligue 1",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 559621. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "FL1"
+      }
+    },
+    {
+      "id": "fd-559623",
+      "title": "RC Lens – Toulouse",
+      "utcDate": "2026-11-21T19:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "TOU",
+          "name": "Toulouse"
+        },
+        "home": {
+          "tla": "RCL",
+          "name": "RC Lens"
+        },
+        "context": [
+          "Competition: Ligue 1",
+          "Matchday: 11",
+          "Home team: RC Lens",
+          "Away team: Toulouse"
+        ],
+        "matchday": 11,
+        "competition": "Ligue 1",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 559623. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "FL1"
+      }
+    },
+    {
+      "id": "fd-559624",
+      "title": "Lille – Olympique Lyon",
+      "utcDate": "2026-11-21T19:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "LYO",
+          "name": "Olympique Lyon"
+        },
+        "home": {
+          "tla": "LIL",
+          "name": "Lille"
+        },
+        "context": [
+          "Competition: Ligue 1",
+          "Matchday: 11",
+          "Home team: Lille",
+          "Away team: Olympique Lyon"
+        ],
+        "matchday": 11,
+        "competition": "Ligue 1",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 559624. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "FL1"
+      }
+    },
+    {
+      "id": "fd-559627",
+      "title": "Strasbourg – Brest",
+      "utcDate": "2026-11-21T19:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BRE",
+          "name": "Brest"
+        },
+        "home": {
+          "tla": "RC ",
+          "name": "Strasbourg"
+        },
+        "context": [
+          "Competition: Ligue 1",
+          "Matchday: 11",
+          "Home team: Strasbourg",
+          "Away team: Brest"
+        ],
+        "matchday": 11,
+        "competition": "Ligue 1",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 559627. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "FL1"
+      }
+    },
+    {
+      "id": "fd-564754",
+      "title": "Real Madrid – Celta",
+      "utcDate": "2026-11-21T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "CEL",
+          "name": "Celta"
+        },
+        "home": {
+          "tla": "RMA",
+          "name": "Real Madrid"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 13",
+          "Home team: Real Madrid",
+          "Away team: Celta"
+        ],
+        "matchday": 13,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564754. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PD"
       }
     }
