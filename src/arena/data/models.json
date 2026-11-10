@@ -18,6 +18,15 @@
     "access": "early-access"
   },
   {
+    "id": "claude-fable-5-2",
+    "name": "Claude Fable 5.2",
+    "provider": "Anthropic",
+    "color": "#d97757",
+    "version": "claude-fable-5-2",
+    "releaseDate": "2026-11-09",
+    "access": "early-access"
+  },
+  {
     "id": "claude-opus-5-5",
     "name": "Claude Opus 5.5",
     "provider": "Anthropic",
