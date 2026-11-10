@@ -10954,6 +10954,13 @@
         },
         "createdAt": "2026-11-09T18:40:45.416Z"
       },
+      "claude-fable-5-2": {
+        "value": {
+          "kind": "numeric",
+          "value": 74802
+        },
+        "createdAt": "2026-11-10T17:39:57.605Z"
+      },
       "claude-opus-5-5": {
         "value": {
           "kind": "numeric",
@@ -11074,6 +11081,13 @@
           "value": 2124.63
         },
         "createdAt": "2026-11-09T18:48:17.451Z"
+      },
+      "claude-fable-5-2": {
+        "value": {
+          "kind": "numeric",
+          "value": 2124.63
+        },
+        "createdAt": "2026-11-10T17:40:03.003Z"
       },
       "claude-opus-5-5": {
         "value": {
@@ -11196,6 +11210,13 @@
         },
         "createdAt": "2026-11-10T09:38:07.014Z"
       },
+      "claude-fable-5-2": {
+        "value": {
+          "kind": "numeric",
+          "value": 74719
+        },
+        "createdAt": "2026-11-10T17:40:07.087Z"
+      },
       "claude-opus-5-5": {
         "value": {
           "kind": "numeric",
@@ -11316,6 +11337,13 @@
           "value": 2115.84
         },
         "createdAt": "2026-11-10T09:42:14.221Z"
+      },
+      "claude-fable-5-2": {
+        "value": {
+          "kind": "numeric",
+          "value": 2115.84
+        },
+        "createdAt": "2026-11-10T17:40:12.729Z"
       },
       "claude-opus-5-5": {
         "value": {
