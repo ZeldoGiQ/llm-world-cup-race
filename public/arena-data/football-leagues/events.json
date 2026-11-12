@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-11T00:52:22.094Z",
+  "updatedAt": "2026-11-12T04:09:44.839Z",
   "events": [
     {
       "id": "fd-554940",
@@ -12655,6 +12655,62 @@
         "matchday": 13,
         "competition": "La Liga",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564753. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PD"
+      }
+    },
+    {
+      "id": "fd-560649",
+      "title": "Brentford – Everton",
+      "utcDate": "2026-11-23T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "EVE",
+          "name": "Everton"
+        },
+        "home": {
+          "tla": "BRE",
+          "name": "Brentford"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 11",
+          "Home team: Brentford",
+          "Away team: Everton"
+        ],
+        "matchday": 11,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560649. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-564757",
+      "title": "Levante – Elche",
+      "utcDate": "2026-11-23T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ELC",
+          "name": "Elche"
+        },
+        "home": {
+          "tla": "LEV",
+          "name": "Levante"
+        },
+        "context": [
+          "Competition: La Liga",
+          "Matchday: 13",
+          "Home team: Levante",
+          "Away team: Elche"
+        ],
+        "matchday": 13,
+        "competition": "La Liga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 564757. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PD"
       }
     }
