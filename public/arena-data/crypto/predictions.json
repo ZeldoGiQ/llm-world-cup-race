@@ -11999,6 +11999,13 @@
         },
         "createdAt": "2026-11-13T07:47:53.936Z"
       },
+      "gemini-4-hydrogen": {
+        "value": {
+          "kind": "numeric",
+          "value": 70963
+        },
+        "createdAt": "2026-11-14T10:07:20.456Z"
+      },
       "gemini-flash": {
         "value": {
           "kind": "numeric",
@@ -12126,6 +12133,13 @@
           "value": 2008.12
         },
         "createdAt": "2026-11-13T07:52:35.896Z"
+      },
+      "gemini-4-hydrogen": {
+        "value": {
+          "kind": "numeric",
+          "value": 2008.12
+        },
+        "createdAt": "2026-11-14T10:07:27.018Z"
       },
       "gemini-flash": {
         "value": {
@@ -12255,6 +12269,13 @@
         },
         "createdAt": "2026-11-14T03:55:17.838Z"
       },
+      "gemini-4-hydrogen": {
+        "value": {
+          "kind": "numeric",
+          "value": 68319
+        },
+        "createdAt": "2026-11-14T10:08:10.041Z"
+      },
       "gemini-flash": {
         "value": {
           "kind": "numeric",
@@ -12382,6 +12403,13 @@
           "value": 1931.39
         },
         "createdAt": "2026-11-14T03:59:02.001Z"
+      },
+      "gemini-4-hydrogen": {
+        "value": {
+          "kind": "numeric",
+          "value": 1931.39
+        },
+        "createdAt": "2026-11-14T10:08:19.404Z"
       },
       "gemini-flash": {
         "value": {

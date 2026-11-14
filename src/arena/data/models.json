@@ -52,6 +52,15 @@
     "access": "public"
   },
   {
+    "id": "gemini-4-hydrogen",
+    "name": "Gemini 4 Hydrogen",
+    "provider": "Google",
+    "color": "#4285f4",
+    "version": "google/gemini-4-hydrogen",
+    "releaseDate": "2026-11-13",
+    "access": "early-access"
+  },
+  {
     "id": "gemini-flash",
     "name": "Gemini 3.5 Flash",
     "provider": "Google",
