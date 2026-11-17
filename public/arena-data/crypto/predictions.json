@@ -13276,6 +13276,41 @@
           "value": 1814.16
         },
         "createdAt": "2026-11-17T04:45:20.285Z"
+      },
+      "kimi-k2.7-code": {
+        "value": {
+          "kind": "numeric",
+          "value": 1814.16
+        },
+        "createdAt": "2026-11-17T04:46:36.305Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "kind": "numeric",
+          "value": 1814.16
+        },
+        "createdAt": "2026-11-17T04:46:42.519Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "numeric",
+          "value": 1814.16
+        },
+        "createdAt": "2026-11-17T04:46:45.634Z"
+      },
+      "qwen3.8-2.4t-a95b": {
+        "value": {
+          "kind": "numeric",
+          "value": 1814.16
+        },
+        "createdAt": "2026-11-17T04:47:25.686Z"
+      },
+      "qwen3.8-27b": {
+        "value": {
+          "kind": "numeric",
+          "value": 1814.16
+        },
+        "createdAt": "2026-11-17T04:48:30.806Z"
       }
     }
   }
