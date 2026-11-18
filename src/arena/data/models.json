@@ -148,6 +148,24 @@
     "access": "early-access"
   },
   {
+    "id": "gpt-6.2-astra",
+    "name": "GPT 6.2 Astra",
+    "provider": "OpenAI",
+    "color": "#10a37f",
+    "version": "gpt-6.2-astra",
+    "releaseDate": "2026-10-31",
+    "access": "early-access"
+  },
+  {
+    "id": "gpt-6.2-sol",
+    "name": "GPT 6.2 Sol",
+    "provider": "OpenAI",
+    "color": "#10a37f",
+    "version": "gpt-6.2-sol",
+    "releaseDate": "2026-11-02",
+    "access": "early-access"
+  },
+  {
     "id": "grok",
     "name": "Grok 4.3",
     "provider": "xAI",
