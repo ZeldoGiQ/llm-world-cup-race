@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-17T04:45:29.169Z",
+  "updatedAt": "2026-11-19T13:51:27.853Z",
   "events": [
     {
       "id": "fd-554940",
@@ -11378,9 +11378,13 @@
       "id": "fd-555081",
       "title": "Coritiba – Santos",
       "utcDate": "2026-11-18T22:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SAN",
@@ -11406,9 +11410,13 @@
       "id": "fd-555086",
       "title": "Clube do Remo – Chapecoense",
       "utcDate": "2026-11-18T23:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CHA",
@@ -11434,9 +11442,13 @@
       "id": "fd-555082",
       "title": "Cruzeiro – Palmeiras",
       "utcDate": "2026-11-18T23:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "PAL",
@@ -11462,9 +11474,13 @@
       "id": "fd-555083",
       "title": "Flamengo – Paranaense",
       "utcDate": "2026-11-18T23:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CAP",
@@ -11490,9 +11506,13 @@
       "id": "fd-555080",
       "title": "Corinthians – Botafogo",
       "utcDate": "2026-11-19T00:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BOT",
@@ -11518,9 +11538,13 @@
       "id": "fd-555084",
       "title": "Grêmio – Bahia",
       "utcDate": "2026-11-19T00:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BAH",

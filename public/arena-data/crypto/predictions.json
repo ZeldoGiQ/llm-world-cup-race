@@ -13384,6 +13384,13 @@
         },
         "createdAt": "2026-11-18T04:48:01.770Z"
       },
+      "gemini-4-neon": {
+        "value": {
+          "kind": "numeric",
+          "value": 64310
+        },
+        "createdAt": "2026-11-19T12:52:24.608Z"
+      },
       "gemini-flash": {
         "value": {
           "kind": "numeric",
@@ -13532,6 +13539,13 @@
           "value": 1800.99
         },
         "createdAt": "2026-11-18T04:59:49.304Z"
+      },
+      "gemini-4-neon": {
+        "value": {
+          "kind": "numeric",
+          "value": 1800.99
+        },
+        "createdAt": "2026-11-19T12:52:37.503Z"
       },
       "gemini-flash": {
         "value": {
@@ -13682,6 +13696,13 @@
         },
         "createdAt": "2026-11-19T03:11:10.769Z"
       },
+      "gemini-4-neon": {
+        "value": {
+          "kind": "numeric",
+          "value": 62664
+        },
+        "createdAt": "2026-11-19T12:56:14.925Z"
+      },
       "gemini-flash": {
         "value": {
           "kind": "numeric",
@@ -13830,6 +13851,13 @@
           "value": 1774.6
         },
         "createdAt": "2026-11-19T03:17:10.526Z"
+      },
+      "gemini-4-neon": {
+        "value": {
+          "kind": "numeric",
+          "value": 1774.6
+        },
+        "createdAt": "2026-11-19T12:56:30.789Z"
       },
       "gemini-flash": {
         "value": {

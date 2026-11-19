@@ -61,6 +61,15 @@
     "access": "early-access"
   },
   {
+    "id": "gemini-4-neon",
+    "name": "Gemini 4 Neon",
+    "provider": "Google",
+    "color": "#4285f4",
+    "version": "google/gemini-4-neon",
+    "releaseDate": "2026-11-19",
+    "access": "early-access"
+  },
+  {
     "id": "gemini-flash",
     "name": "Gemini 3.5 Flash",
     "provider": "Google",
