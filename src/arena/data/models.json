@@ -175,6 +175,15 @@
     "access": "early-access"
   },
   {
+    "id": "gpt-live-1.1",
+    "name": "GPT Live 1.1",
+    "provider": "OpenAI",
+    "color": "#10a37f",
+    "version": "gpt-live-1.1",
+    "releaseDate": "2026-11-18",
+    "access": "early-access"
+  },
+  {
     "id": "grok",
     "name": "Grok 4.3",
     "provider": "xAI",
