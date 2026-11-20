@@ -32073,6 +32073,30 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-11-20T13:19:38.737Z"
+      },
+      "grok-4.7": {
+        "value": {
+          "away": 1,
+          "home": 0,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-11-20T21:24:43.643Z"
+      },
+      "kimi-k2.7-code": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-11-20T21:26:24.796Z"
+      },
+      "qwen": {
+        "value": {
+          "away": 1,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-11-20T21:26:25.986Z"
       }
     }
   }
