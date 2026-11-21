@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-21T02:47:56.071Z",
+  "updatedAt": "2026-11-21T11:43:35.674Z",
   "events": [
     {
       "id": "fd-554940",
@@ -11666,9 +11666,13 @@
       "id": "fd-565859",
       "title": "Bayern – 1. FC Köln",
       "utcDate": "2026-11-20T19:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "KOE",
@@ -11694,9 +11698,13 @@
       "id": "fd-559622",
       "title": "Troyes – Le Havre",
       "utcDate": "2026-11-20T19:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "HAC",
@@ -11722,9 +11730,13 @@
       "id": "fd-564748",
       "title": "Athletic – Espanyol",
       "utcDate": "2026-11-20T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ESP",
