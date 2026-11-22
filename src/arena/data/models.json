@@ -281,6 +281,15 @@
     "access": "early-access"
   },
   {
+    "id": "qwen4-max",
+    "name": "Qwen4 Max",
+    "provider": "Alibaba",
+    "color": "#eab308",
+    "version": "qwen/qwen4-max",
+    "releaseDate": "2026-11-21",
+    "access": "early-access"
+  },
+  {
     "id": "baseline-market",
     "name": "Bookmaker consensus",
     "names": {

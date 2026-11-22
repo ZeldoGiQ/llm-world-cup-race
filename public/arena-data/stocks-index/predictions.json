@@ -3104,6 +3104,13 @@
           "value": 26749.95
         },
         "createdAt": "2026-11-22T04:21:47.109Z"
+      },
+      "qwen4-max": {
+        "value": {
+          "kind": "numeric",
+          "value": 26805
+        },
+        "createdAt": "2026-11-22T11:46:24.268Z"
       }
     },
     "yf-gspc-2026-11-27": {
@@ -3253,6 +3260,20 @@
           "value": 7578
         },
         "createdAt": "2026-11-22T03:39:28.251Z"
+      },
+      "qwen3.8-27b": {
+        "value": {
+          "kind": "numeric",
+          "value": 7580
+        },
+        "createdAt": "2026-11-22T11:38:34.517Z"
+      },
+      "qwen4-max": {
+        "value": {
+          "kind": "numeric",
+          "value": 7598
+        },
+        "createdAt": "2026-11-22T11:41:46.227Z"
       }
     },
     "yf-ndx-2026-11-27": {
@@ -3388,6 +3409,13 @@
           "value": 27943.74
         },
         "createdAt": "2026-11-22T04:39:17.922Z"
+      },
+      "qwen4-max": {
+        "value": {
+          "kind": "numeric",
+          "value": 28030
+        },
+        "createdAt": "2026-11-22T11:55:26.562Z"
       }
     },
     "yf-gdaxi-2026-12-04": {

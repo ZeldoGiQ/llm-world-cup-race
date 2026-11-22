@@ -184,6 +184,30 @@
         "code": "api-error",
         "createdAt": "2026-11-21T18:40:57.994Z"
       }
+    },
+    "fd-564749": {
+      "gpt-live-1.1": {
+        "code": "api-error",
+        "createdAt": "2026-11-22T03:03:08.230Z"
+      }
+    },
+    "fd-560646": {
+      "gpt-live-1.1": {
+        "code": "rate-limited",
+        "createdAt": "2026-11-22T11:08:12.105Z"
+      }
+    },
+    "fd-565864": {
+      "gpt-live-1.1": {
+        "code": "rate-limited",
+        "createdAt": "2026-11-22T11:12:59.180Z"
+      }
+    },
+    "fd-564750": {
+      "gpt-live-1.1": {
+        "code": "rate-limited",
+        "createdAt": "2026-11-22T11:17:42.965Z"
+      }
     }
   }
 }
