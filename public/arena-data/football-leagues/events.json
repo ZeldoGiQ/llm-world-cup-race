@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-22T00:39:04.811Z",
+  "updatedAt": "2026-11-22T07:26:31.668Z",
   "events": [
     {
       "id": "fd-554940",
@@ -12402,9 +12402,13 @@
       "id": "fd-558527",
       "title": "Napoli – Torino",
       "utcDate": "2026-11-21T19:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "TOR",
@@ -12430,9 +12434,13 @@
       "id": "fd-559621",
       "title": "Monaco – Auxerre",
       "utcDate": "2026-11-21T19:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "AJA",
@@ -12458,9 +12466,13 @@
       "id": "fd-559623",
       "title": "RC Lens – Toulouse",
       "utcDate": "2026-11-21T19:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "TOU",
@@ -12486,9 +12498,13 @@
       "id": "fd-559624",
       "title": "Lille – Olympique Lyon",
       "utcDate": "2026-11-21T19:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LYO",
@@ -12514,9 +12530,13 @@
       "id": "fd-559627",
       "title": "Strasbourg – Brest",
       "utcDate": "2026-11-21T19:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BRE",
@@ -12542,9 +12562,13 @@
       "id": "fd-564754",
       "title": "Real Madrid – Celta",
       "utcDate": "2026-11-21T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CEL",
