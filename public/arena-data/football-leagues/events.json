@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-22T07:26:31.668Z",
+  "updatedAt": "2026-11-22T21:15:36.815Z",
   "events": [
     {
       "id": "fd-554940",
@@ -12594,9 +12594,13 @@
       "id": "fd-564749",
       "title": "Barça – Villarreal",
       "utcDate": "2026-11-22T13:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "VIL",
@@ -12622,9 +12626,13 @@
       "id": "fd-560646",
       "title": "Hull City – Brighton Hove",
       "utcDate": "2026-11-22T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BHA",
@@ -12650,9 +12658,13 @@
       "id": "fd-565864",
       "title": "Augsburg – Mainz",
       "utcDate": "2026-11-22T14:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "M05",

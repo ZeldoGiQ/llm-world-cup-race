@@ -3063,6 +3063,27 @@
         },
         "createdAt": "2026-11-22T04:08:58.109Z"
       },
+      "gpt-6.1": {
+        "value": {
+          "kind": "numeric",
+          "value": 26820
+        },
+        "createdAt": "2026-11-22T18:30:27.735Z"
+      },
+      "gpt-6.2-astra": {
+        "value": {
+          "kind": "numeric",
+          "value": 26845
+        },
+        "createdAt": "2026-11-22T18:30:25.364Z"
+      },
+      "gpt-6.2-sol": {
+        "value": {
+          "kind": "numeric",
+          "value": 26815
+        },
+        "createdAt": "2026-11-22T18:30:31.112Z"
+      },
       "grok-4.7": {
         "value": {
           "kind": "numeric",
@@ -3367,6 +3388,27 @@
           "value": 28100
         },
         "createdAt": "2026-11-22T04:23:59.045Z"
+      },
+      "gpt-6.1": {
+        "value": {
+          "kind": "numeric",
+          "value": 28090
+        },
+        "createdAt": "2026-11-22T18:34:58.234Z"
+      },
+      "gpt-6.2-astra": {
+        "value": {
+          "kind": "numeric",
+          "value": 28139.35
+        },
+        "createdAt": "2026-11-22T18:34:55.594Z"
+      },
+      "gpt-6.2-sol": {
+        "value": {
+          "kind": "numeric",
+          "value": 28055.51
+        },
+        "createdAt": "2026-11-22T18:35:01.980Z"
       },
       "grok-4.7": {
         "value": {
