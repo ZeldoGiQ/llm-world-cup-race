@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-21T11:43:35.674Z",
+  "updatedAt": "2026-11-22T00:39:04.811Z",
   "events": [
     {
       "id": "fd-554940",
@@ -11762,9 +11762,13 @@
       "id": "fd-560643",
       "title": "Man City – Fulham",
       "utcDate": "2026-11-21T12:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FUL",
@@ -11790,9 +11794,13 @@
       "id": "fd-564755",
       "title": "Alavés – Deportivo",
       "utcDate": "2026-11-21T13:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "DEP",
@@ -11818,9 +11826,13 @@
       "id": "fd-558525",
       "title": "Como 1907 – Cagliari",
       "utcDate": "2026-11-21T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CAG",
@@ -11846,9 +11858,13 @@
       "id": "fd-558528",
       "title": "Lazio – Lecce",
       "utcDate": "2026-11-21T14:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "USL",
@@ -11874,9 +11890,13 @@
       "id": "fd-565857",
       "title": "Leverkusen – SC Paderborn",
       "utcDate": "2026-11-21T14:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 4,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SCP",
@@ -11902,9 +11922,13 @@
       "id": "fd-565858",
       "title": "Union Berlin – RB Leipzig",
       "utcDate": "2026-11-21T14:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 5,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "RBL",
@@ -11930,9 +11954,13 @@
       "id": "fd-565860",
       "title": "Elversberg – Freiburg",
       "utcDate": "2026-11-21T14:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SCF",
@@ -11958,9 +11986,13 @@
       "id": "fd-565862",
       "title": "M'gladbach – Dortmund",
       "utcDate": "2026-11-21T14:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BVB",
@@ -11986,9 +12018,13 @@
       "id": "fd-565865",
       "title": "Frankfurt – Hoffenheim",
       "utcDate": "2026-11-21T14:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "TSG",
@@ -12014,9 +12050,13 @@
       "id": "fd-560642",
       "title": "Chelsea – Leeds United",
       "utcDate": "2026-11-21T15:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 4,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LEE",
@@ -12042,9 +12082,13 @@
       "id": "fd-560644",
       "title": "Aston Villa – Sunderland",
       "utcDate": "2026-11-21T15:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "SUN",
@@ -12070,9 +12114,13 @@
       "id": "fd-560647",
       "title": "Bournemouth – Nottingham",
       "utcDate": "2026-11-21T15:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "NOT",
@@ -12098,9 +12146,13 @@
       "id": "fd-560648",
       "title": "Tottenham – Ipswich Town",
       "utcDate": "2026-11-21T15:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "IPS",
@@ -12126,9 +12178,13 @@
       "id": "fd-560650",
       "title": "Coventry City – Crystal Palace",
       "utcDate": "2026-11-21T15:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CRY",
@@ -12154,9 +12210,13 @@
       "id": "fd-564751",
       "title": "Rayo Vallecano – Valencia",
       "utcDate": "2026-11-21T15:15:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "VAL",
@@ -12182,9 +12242,13 @@
       "id": "fd-559628",
       "title": "Nice – PSG",
       "utcDate": "2026-11-21T16:15:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "PSG",
@@ -12210,9 +12274,13 @@
       "id": "fd-558526",
       "title": "Parma – Roma",
       "utcDate": "2026-11-21T17:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 5,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ROM",
@@ -12238,9 +12306,13 @@
       "id": "fd-560651",
       "title": "Newcastle – Arsenal",
       "utcDate": "2026-11-21T17:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ARS",
@@ -12266,9 +12338,13 @@
       "id": "fd-564756",
       "title": "Sevilla FC – Real Betis",
       "utcDate": "2026-11-21T17:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BET",
@@ -12294,9 +12370,13 @@
       "id": "fd-565861",
       "title": "Schalke – Stuttgart",
       "utcDate": "2026-11-21T17:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "VFB",
@@ -13519,6 +13599,62 @@
         "matchday": 12,
         "competition": "Premier League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560661. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560654",
+      "title": "Arsenal – Man City",
+      "utcDate": "2026-11-29T16:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "MCI",
+          "name": "Man City"
+        },
+        "home": {
+          "tla": "ARS",
+          "name": "Arsenal"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 12",
+          "Home team: Arsenal",
+          "Away team: Man City"
+        ],
+        "matchday": 12,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560654. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560668",
+      "title": "Coventry City – Ipswich Town",
+      "utcDate": "2026-12-01T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "IPS",
+          "name": "Ipswich Town"
+        },
+        "home": {
+          "tla": "COV",
+          "name": "Coventry City"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 13",
+          "Home team: Coventry City",
+          "Away team: Ipswich Town"
+        ],
+        "matchday": 13,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560668. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PL"
       }
     }
