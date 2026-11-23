@@ -232,6 +232,18 @@
         "code": "rate-limited",
         "createdAt": "2026-11-22T11:36:48.622Z"
       }
+    },
+    "fd-560649": {
+      "gpt-live-1.1": {
+        "code": "api-error",
+        "createdAt": "2026-11-23T08:57:48.097Z"
+      }
+    },
+    "fd-564757": {
+      "gpt-live-1.1": {
+        "code": "api-error",
+        "createdAt": "2026-11-23T09:02:10.653Z"
+      }
     }
   }
 }
