@@ -15580,6 +15580,332 @@
         },
         "createdAt": "2026-11-25T03:21:55.695Z"
       }
+    },
+    "cg-btc-2026-11-27": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T14:18:40.823Z"
+      },
+      "claude-5.1": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:23:35.864Z"
+      },
+      "claude-fable-5-2": {
+        "value": {
+          "kind": "numeric",
+          "value": 58200
+        },
+        "createdAt": "2026-11-25T22:23:35.142Z"
+      },
+      "claude-opus-5-5": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:23:35.171Z"
+      },
+      "deepseek": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:26:23.378Z"
+      },
+      "gemini-4-hydrogen": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:23:44.640Z"
+      },
+      "gemini-4-neon": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:23:56.416Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "kind": "numeric",
+          "value": 78000
+        },
+        "createdAt": "2026-11-25T22:26:46.146Z"
+      },
+      "gemma-4-26b-a4b-it": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:26:29.383Z"
+      },
+      "gemma-4-31b-it": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:26:25.299Z"
+      },
+      "glm": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:27:09.189Z"
+      },
+      "glm-5.3-flashx": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:26:57.983Z"
+      },
+      "glm-5.3-prime": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:27:31.215Z"
+      },
+      "gpt-6.1": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:27:13.635Z"
+      },
+      "gpt-6.2-astra": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:27:12.907Z"
+      },
+      "gpt-6.2-sol": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:27:33.296Z"
+      },
+      "grok-4.7": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:31:19.561Z"
+      },
+      "kimi-k2.7-code": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:32:11.247Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:32:09.686Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:32:05.715Z"
+      },
+      "qwen3.8-2.4t-a95b": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:32:32.216Z"
+      },
+      "qwen3.8-27b": {
+        "value": {
+          "kind": "numeric",
+          "value": 58218
+        },
+        "createdAt": "2026-11-25T22:34:27.077Z"
+      },
+      "qwen4-max": {
+        "value": {
+          "kind": "numeric",
+          "value": 58000
+        },
+        "createdAt": "2026-11-25T22:32:23.024Z"
+      }
+    },
+    "cg-eth-2026-11-27": {
+      "baseline-randomwalk": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T14:18:40.823Z"
+      },
+      "claude-5.1": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:34:31.082Z"
+      },
+      "claude-fable-5-2": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:34:30.041Z"
+      },
+      "claude-opus-5-5": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:34:29.649Z"
+      },
+      "deepseek": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:35:18.824Z"
+      },
+      "gemini-4-hydrogen": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:34:37.600Z"
+      },
+      "gemini-4-neon": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:34:51.651Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "kind": "numeric",
+          "value": 3250
+        },
+        "createdAt": "2026-11-25T22:35:29.863Z"
+      },
+      "gemma-4-26b-a4b-it": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:35:23.708Z"
+      },
+      "gemma-4-31b-it": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:35:21.069Z"
+      },
+      "glm": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:35:36.454Z"
+      },
+      "glm-5.3-flashx": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:35:38.342Z"
+      },
+      "glm-5.3-prime": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:35:45.640Z"
+      },
+      "gpt-6.1": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:35:42.311Z"
+      },
+      "gpt-6.2-astra": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:35:41.624Z"
+      },
+      "gpt-6.2-sol": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:35:47.891Z"
+      },
+      "grok-4.7": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:36:11.190Z"
+      },
+      "kimi-k2.7-code": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:40:16.704Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:40:22.659Z"
+      },
+      "qwen": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:40:18.840Z"
+      },
+      "qwen3.8-2.4t-a95b": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:40:40.419Z"
+      },
+      "qwen3.8-27b": {
+        "value": {
+          "kind": "numeric",
+          "value": 1632
+        },
+        "createdAt": "2026-11-25T22:41:28.290Z"
+      },
+      "qwen4-max": {
+        "value": {
+          "kind": "numeric",
+          "value": 1633.68
+        },
+        "createdAt": "2026-11-25T22:40:34.573Z"
+      }
     }
   }
 }
