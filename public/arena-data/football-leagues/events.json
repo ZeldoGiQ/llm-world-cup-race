@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-24T07:04:57.754Z",
+  "updatedAt": "2026-11-25T03:09:07.037Z",
   "events": [
     {
       "id": "fd-554940",
@@ -12914,9 +12914,13 @@
       "id": "fd-575395",
       "title": "Galatasaray – Aston Villa",
       "utcDate": "2026-11-24T17:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "AVL",
@@ -12942,9 +12946,13 @@
       "id": "fd-575396",
       "title": "Bodø/Glimt – LASK",
       "utcDate": "2026-11-24T17:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LIN",
@@ -12970,9 +12978,13 @@
       "id": "fd-575397",
       "title": "Real Madrid – PSV",
       "utcDate": "2026-11-24T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 5,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "PSV",
@@ -12998,9 +13010,13 @@
       "id": "fd-575398",
       "title": "Man City – Napoli",
       "utcDate": "2026-11-24T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "NAP",
@@ -13026,9 +13042,13 @@
       "id": "fd-575399",
       "title": "Arsenal – Dortmund",
       "utcDate": "2026-11-24T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BVB",
@@ -13054,9 +13074,13 @@
       "id": "fd-575400",
       "title": "Feyenoord – Porto",
       "utcDate": "2026-11-24T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCP",
@@ -13082,9 +13106,13 @@
       "id": "fd-575401",
       "title": "Sl. Bratislava – Real Betis",
       "utcDate": "2026-11-24T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BET",
@@ -13110,9 +13138,13 @@
       "id": "fd-575402",
       "title": "RB Leipzig – RC Lens",
       "utcDate": "2026-11-24T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "RCL",
@@ -13138,9 +13170,13 @@
       "id": "fd-575403",
       "title": "Como 1907 – PAE AEK",
       "utcDate": "2026-11-24T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "AEK",
@@ -13415,6 +13451,34 @@
       }
     },
     {
+      "id": "fd-565869",
+      "title": "Bremen – M'gladbach",
+      "utcDate": "2026-11-27T19:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BMG",
+          "name": "M'gladbach"
+        },
+        "home": {
+          "tla": "SVW",
+          "name": "Bremen"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 11",
+          "Home team: Bremen",
+          "Away team: M'gladbach"
+        ],
+        "matchday": 11,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565869. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
       "id": "fd-560658",
       "title": "Nottingham – Chelsea",
       "utcDate": "2026-11-27T20:00:00.000Z",
@@ -13440,6 +13504,62 @@
         "competition": "Premier League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560658. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-565866",
+      "title": "1. FC Köln – Elversberg",
+      "utcDate": "2026-11-28T14:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ELV",
+          "name": "Elversberg"
+        },
+        "home": {
+          "tla": "KOE",
+          "name": "1. FC Köln"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 11",
+          "Home team: 1. FC Köln",
+          "Away team: Elversberg"
+        ],
+        "matchday": 11,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565866. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
+      }
+    },
+    {
+      "id": "fd-565867",
+      "title": "Mainz – Union Berlin",
+      "utcDate": "2026-11-28T14:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "UNB",
+          "name": "Union Berlin"
+        },
+        "home": {
+          "tla": "M05",
+          "name": "Mainz"
+        },
+        "context": [
+          "Competition: Bundesliga",
+          "Matchday: 11",
+          "Home team: Mainz",
+          "Away team: Union Berlin"
+        ],
+        "matchday": 11,
+        "competition": "Bundesliga",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 565867. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "BL1"
       }
     },
     {
@@ -13999,6 +14119,174 @@
         "matchday": 14,
         "competition": "Premier League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560676. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560673",
+      "title": "Man United – Coventry City",
+      "utcDate": "2026-12-05T15:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "COV",
+          "name": "Coventry City"
+        },
+        "home": {
+          "tla": "MUN",
+          "name": "Man United"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 14",
+          "Home team: Man United",
+          "Away team: Coventry City"
+        ],
+        "matchday": 14,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560673. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560674",
+      "title": "Leeds United – Ipswich Town",
+      "utcDate": "2026-12-05T15:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "IPS",
+          "name": "Ipswich Town"
+        },
+        "home": {
+          "tla": "LEE",
+          "name": "Leeds United"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 14",
+          "Home team: Leeds United",
+          "Away team: Ipswich Town"
+        ],
+        "matchday": 14,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560674. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560678",
+      "title": "Bournemouth – Hull City",
+      "utcDate": "2026-12-05T15:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "HUL",
+          "name": "Hull City"
+        },
+        "home": {
+          "tla": "BOU",
+          "name": "Bournemouth"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 14",
+          "Home team: Bournemouth",
+          "Away team: Hull City"
+        ],
+        "matchday": 14,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560678. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560679",
+      "title": "Aston Villa – Crystal Palace",
+      "utcDate": "2026-12-05T15:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "CRY",
+          "name": "Crystal Palace"
+        },
+        "home": {
+          "tla": "AVL",
+          "name": "Aston Villa"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 14",
+          "Home team: Aston Villa",
+          "Away team: Crystal Palace"
+        ],
+        "matchday": 14,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560679. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560680",
+      "title": "Nottingham – Brighton Hove",
+      "utcDate": "2026-12-05T17:30:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "BHA",
+          "name": "Brighton Hove"
+        },
+        "home": {
+          "tla": "NOT",
+          "name": "Nottingham"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 14",
+          "Home team: Nottingham",
+          "Away team: Brighton Hove"
+        ],
+        "matchday": 14,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560680. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "PL"
+      }
+    },
+    {
+      "id": "fd-560677",
+      "title": "Brentford – Man City",
+      "utcDate": "2026-12-05T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "MCI",
+          "name": "Man City"
+        },
+        "home": {
+          "tla": "BRE",
+          "name": "Brentford"
+        },
+        "context": [
+          "Competition: Premier League",
+          "Matchday: 14",
+          "Home team: Brentford",
+          "Away team: Man City"
+        ],
+        "matchday": 14,
+        "competition": "Premier League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 560677. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "PL"
       }
     }
