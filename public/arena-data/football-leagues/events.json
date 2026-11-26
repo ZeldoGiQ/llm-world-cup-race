@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-25T22:43:33.552Z",
+  "updatedAt": "2026-11-26T05:25:26.291Z",
   "events": [
     {
       "id": "fd-554940",
@@ -13202,9 +13202,13 @@
       "id": "fd-575404",
       "title": "Sabah FK – Barça",
       "utcDate": "2026-11-25T17:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 4,
+        "home": 1,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCB",
@@ -13230,9 +13234,13 @@
       "id": "fd-575405",
       "title": "Slavia Praha – Villarreal",
       "utcDate": "2026-11-25T17:45:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "VIL",
@@ -13258,9 +13266,13 @@
       "id": "fd-575406",
       "title": "Inter – Stuttgart",
       "utcDate": "2026-11-25T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "VFB",
@@ -13286,9 +13298,13 @@
       "id": "fd-575407",
       "title": "Atleti – Viking",
       "utcDate": "2026-11-25T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 0,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "VIK",
@@ -13314,9 +13330,13 @@
       "id": "fd-575408",
       "title": "PSG – Roma",
       "utcDate": "2026-11-25T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "ROM",
@@ -13342,9 +13362,13 @@
       "id": "fd-575409",
       "title": "Club Brugge – Liverpool",
       "utcDate": "2026-11-25T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "LIV",
@@ -13370,9 +13394,13 @@
       "id": "fd-575410",
       "title": "Lille – Bayern",
       "utcDate": "2026-11-25T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FCB",
@@ -13398,9 +13426,13 @@
       "id": "fd-575411",
       "title": "Sporting CP – Man United",
       "utcDate": "2026-11-25T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 2,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "MUN",
@@ -13426,9 +13458,13 @@
       "id": "fd-575412",
       "title": "Shaktar – Fenerbahçe",
       "utcDate": "2026-11-25T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 1,
+        "home": 0,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "FEN",
