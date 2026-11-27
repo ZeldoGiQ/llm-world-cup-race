@@ -39212,6 +39212,14 @@
         },
         "createdAt": "2026-11-27T00:09:57.872Z"
       },
+      "gemini-flash": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-11-27T08:32:36.668Z"
+      },
       "gemma-4-26b-a4b-it": {
         "value": {
           "away": 1,
@@ -39381,6 +39389,14 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-11-27T00:27:44.840Z"
+      },
+      "gemini-flash": {
+        "value": {
+          "away": 1,
+          "home": 2,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-11-27T08:37:00.902Z"
       },
       "gemma-4-26b-a4b-it": {
         "value": {
@@ -39552,6 +39568,14 @@
         },
         "createdAt": "2026-11-27T00:41:05.261Z"
       },
+      "gemini-flash": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-11-27T08:41:37.696Z"
+      },
       "gemma-4-26b-a4b-it": {
         "value": {
           "away": 2,
@@ -39623,6 +39647,54 @@
           "kind": "scoreline"
         },
         "createdAt": "2026-11-27T00:44:18.552Z"
+      },
+      "kimi-k2.7-code": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-11-27T00:53:13.342Z"
+      },
+      "kimi-k3": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-11-27T00:48:00.569Z"
+      },
+      "qwen": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-11-27T00:47:46.554Z"
+      },
+      "qwen3.8-2.4t-a95b": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-11-27T00:55:31.399Z"
+      },
+      "qwen3.8-27b": {
+        "value": {
+          "away": 1,
+          "home": 0,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-11-27T08:58:18.525Z"
+      },
+      "qwen4-max": {
+        "value": {
+          "away": 2,
+          "home": 1,
+          "kind": "scoreline"
+        },
+        "createdAt": "2026-11-27T00:53:39.792Z"
       }
     }
   }
