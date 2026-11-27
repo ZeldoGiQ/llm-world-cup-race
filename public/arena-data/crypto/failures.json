@@ -84,6 +84,18 @@
         "code": "api-error",
         "createdAt": "2026-11-25T13:23:33.451Z"
       }
+    },
+    "cg-btc-2026-11-27": {
+      "gpt-live-1.1": {
+        "code": "api-error",
+        "createdAt": "2026-11-26T15:02:47.497Z"
+      }
+    },
+    "cg-eth-2026-11-27": {
+      "gpt-live-1.1": {
+        "code": "api-error",
+        "createdAt": "2026-11-26T15:07:12.597Z"
+      }
     }
   }
 }
