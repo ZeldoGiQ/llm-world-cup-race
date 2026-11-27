@@ -352,6 +352,12 @@
         "code": "api-error",
         "createdAt": "2026-11-25T13:14:47.751Z"
       }
+    },
+    "fd-565869": {
+      "gpt-live-1.1": {
+        "code": "api-error",
+        "createdAt": "2026-11-27T08:10:34.729Z"
+      }
     }
   }
 }
