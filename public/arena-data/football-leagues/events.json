@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-28T02:09:14.411Z",
+  "updatedAt": "2026-11-28T10:50:59.526Z",
   "events": [
     {
       "id": "fd-554940",
@@ -13522,9 +13522,13 @@
       "id": "fd-560658",
       "title": "Nottingham – Chelsea",
       "utcDate": "2026-11-27T20:00:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 2,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "CHE",
@@ -14663,6 +14667,258 @@
         "matchday": 6,
         "competition": "UEFA Champions League",
         "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575421. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575422",
+      "title": "Real Betis – Como 1907",
+      "utcDate": "2026-12-09T17:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "COM",
+          "name": "Como 1907"
+        },
+        "home": {
+          "tla": "BET",
+          "name": "Real Betis"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 6",
+          "Home team: Real Betis",
+          "Away team: Como 1907"
+        ],
+        "matchday": 6,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575422. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575423",
+      "title": "Sl. Bratislava – Shaktar",
+      "utcDate": "2026-12-09T17:45:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "SHD",
+          "name": "Shaktar"
+        },
+        "home": {
+          "tla": "SBA",
+          "name": "Sl. Bratislava"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 6",
+          "Home team: Sl. Bratislava",
+          "Away team: Shaktar"
+        ],
+        "matchday": 6,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575423. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575280",
+      "title": "Arsenal – Real Madrid",
+      "utcDate": "2026-12-09T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "RMA",
+          "name": "Real Madrid"
+        },
+        "home": {
+          "tla": "ARS",
+          "name": "Arsenal"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 6",
+          "Home team: Arsenal",
+          "Away team: Real Madrid"
+        ],
+        "matchday": 6,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575280. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575286",
+      "title": "Dortmund – Inter",
+      "utcDate": "2026-12-09T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "INT",
+          "name": "Inter"
+        },
+        "home": {
+          "tla": "BVB",
+          "name": "Dortmund"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 6",
+          "Home team: Dortmund",
+          "Away team: Inter"
+        ],
+        "matchday": 6,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575286. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575290",
+      "title": "PSV – Atleti",
+      "utcDate": "2026-12-09T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "ATL",
+          "name": "Atleti"
+        },
+        "home": {
+          "tla": "PSV",
+          "name": "PSV"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 6",
+          "Home team: PSV",
+          "Away team: Atleti"
+        ],
+        "matchday": 6,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575290. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575295",
+      "title": "Liverpool – Porto",
+      "utcDate": "2026-12-09T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FCP",
+          "name": "Porto"
+        },
+        "home": {
+          "tla": "LIV",
+          "name": "Liverpool"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 6",
+          "Home team: Liverpool",
+          "Away team: Porto"
+        ],
+        "matchday": 6,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575295. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575315",
+      "title": "RC Lens – Bodø/Glimt",
+      "utcDate": "2026-12-09T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FK",
+          "name": "Bodø/Glimt"
+        },
+        "home": {
+          "tla": "RCL",
+          "name": "RC Lens"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 6",
+          "Home team: RC Lens",
+          "Away team: Bodø/Glimt"
+        ],
+        "matchday": 6,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575315. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575317",
+      "title": "LASK – Fenerbahçe",
+      "utcDate": "2026-12-09T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "FEN",
+          "name": "Fenerbahçe"
+        },
+        "home": {
+          "tla": "LIN",
+          "name": "LASK"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 6",
+          "Home team: LASK",
+          "Away team: Fenerbahçe"
+        ],
+        "matchday": 6,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575317. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
+        "competitionCode": "CL"
+      }
+    },
+    {
+      "id": "fd-575322",
+      "title": "Stuttgart – Lille",
+      "utcDate": "2026-12-09T20:00:00.000Z",
+      "status": "UPCOMING",
+      "predictionType": "scoreline",
+      "resolution": null,
+      "metadata": {
+        "away": {
+          "tla": "LIL",
+          "name": "Lille"
+        },
+        "home": {
+          "tla": "VFB",
+          "name": "Stuttgart"
+        },
+        "context": [
+          "Competition: UEFA Champions League",
+          "Matchday: 6",
+          "Home team: Stuttgart",
+          "Away team: Lille"
+        ],
+        "matchday": 6,
+        "competition": "UEFA Champions League",
+        "resolutionRule": "Official full-time score after 90 minutes (plus stoppage time) as reported by football-data.org for match 575322. Extra time and penalty shootouts do not count. If the match is postponed, abandoned or cancelled, the event is voided.",
         "competitionCode": "CL"
       }
     }
