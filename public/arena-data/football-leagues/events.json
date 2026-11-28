@@ -1,6 +1,6 @@
 {
   "category": "football-leagues",
-  "updatedAt": "2026-11-27T10:05:54.258Z",
+  "updatedAt": "2026-11-28T02:09:14.411Z",
   "events": [
     {
       "id": "fd-554940",
@@ -13490,9 +13490,13 @@
       "id": "fd-565869",
       "title": "Bremen – M'gladbach",
       "utcDate": "2026-11-27T19:30:00.000Z",
-      "status": "UPCOMING",
+      "status": "RESOLVED",
       "predictionType": "scoreline",
-      "resolution": null,
+      "resolution": {
+        "away": 3,
+        "home": 3,
+        "kind": "scoreline"
+      },
       "metadata": {
         "away": {
           "tla": "BMG",
